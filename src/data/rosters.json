@@ -1,4 +1,6 @@
 {
+ "asOf": "2026-10-18T19:37+09:00",
+ "source": "ESPN League Rosters capture (user, 2026-10-18 19:37 KST)",
  "teams": {
   "Junyoung's Scary Team": {
    "active": [
@@ -14,7 +16,7 @@
     "Keyonte George",
     "Zion Williamson",
     "Stephon Castle",
-    "Reed Sheppard"
+    "Darius Acuff Jr."
    ],
    "ir": []
   },
@@ -51,7 +53,7 @@
     "Rudy Gobert",
     "Norman Powell",
     "Jaden McDaniels",
-    "Coby White"
+    "Zach Edey"
    ],
    "ir": []
   },
@@ -86,8 +88,8 @@
     "Ja Morant",
     "Miles Bridges",
     "Alex Sarr",
-    "DeMar DeRozan",
-    "RJ Barrett"
+    "Zach LaVine",
+    "Ryan Rollins"
    ],
    "ir": []
   },
@@ -140,38 +142,24 @@
     "Donovan Clingan",
     "Jaren Jackson Jr.",
     "Jalen Green",
-    "VJ Edgecombe"
+    "VJ Edgecombe",
+    "Dylan Harper"
    ],
-   "ir": []
+   "ir": [
+    "Brandon Ingram"
+   ]
   }
  },
  "status": {
-  "Domantas Sabonis": "DTD",
   "Dejounte Murray": "DTD",
-  "Onyeka Okongwu": "DTD",
-  "Myles Turner": "DTD",
-  "Kyrie Irving": "DTD",
-  "Tyler Herro": "DTD",
-  "Coby White": "DTD",
+  "Kristaps Porzingis": "O",
   "Chet Holmgren": "DTD",
-  "Dyson Daniels": "DTD",
+  "Franz Wagner": "DTD",
   "Josh Hart": "DTD",
-  "Luka Doncic": "DTD",
-  "Devin Booker": "DTD",
-  "Jaylen Brown": "DTD",
-  "Miles Bridges": "DTD",
-  "DeMar DeRozan": "DTD",
   "Kon Knueppel": "DTD",
-  "LeBron James": "DTD",
-  "Jalen Johnson": "DTD",
+  "AJ Dybantsa": "DTD",
   "Bam Adebayo": "DTD",
-  "Joel Embiid": "DTD",
-  "CJ McCollum": "DTD",
-  "Cooper Flagg": "DTD",
   "Fred VanVleet": "DTD",
-  "Jalen Green": "DTD",
-  "Kristaps Porzingis": "O"
- },
- "asOf": "2026-10-17T01:28+09:00",
- "source": "리그 화면 캡처 (드래프트 직후)"
+  "Brandon Ingram": "O"
+ }
 }
