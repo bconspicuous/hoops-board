@@ -78,9 +78,14 @@ tr.me td:first-child { font-weight: 600; }
 .chip.own { background: var(--card); color: var(--accent); border: 1px solid var(--accent); margin-left: 5px; white-space: nowrap; padding: 0 5px; }
 .trade { border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; display: grid; gap: 4px; font-size: 12.5px; }
 .b2bchk { padding-bottom: 6px; font-weight: 600; }
+.stsel { display: inline-flex; align-items: center; gap: 6px; padding-bottom: 6px; }
+.stsel select { width: auto; padding: 4px 8px; font-size: 12.5px; }
 .pill.b2b { border-color: var(--s2); color: var(--s2); }
 .tabbar .right { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 4px 16px; }
 td.why { white-space: normal; min-width: 180px; color: var(--muted); font-size: 12px; }
+td.stseq { white-space: normal; min-width: 300px; line-height: 1.55; }
+td.stseq .sl { display: block; }
+td.stseq .sn { display: inline-block; min-width: 18px; color: var(--muted); font-size: 11px; font-weight: 700; }
 .heat .rkd { font-size: 10px; font-weight: 700; margin-left: 3px; }
 .heat .rkd.up { color: var(--good); }
 .heat .rkd.down { color: var(--bad); }
@@ -128,7 +133,7 @@ footer { color: var(--muted); font-size: 12px; display: grid; gap: 4px; border-t
       <button class="tab" role="tab" id="tab-now" aria-selected="true" type="button">현황</button>
       <button class="tab" role="tab" id="tab-fc" aria-selected="false" type="button">예측</button>
     </nav>
-    <div class="right"><label class="chk b2bchk"><input type="checkbox" id="b2b-on"> 백투백 반영</label><div class="teamsel"><label for="team-sel">팀</label><select id="team-sel"></select></div></div>
+    <div class="right"><label class="chk b2bchk"><input type="checkbox" id="b2b-on"> 백투백 반영</label><span class="stsel"><label class="chk b2bchk" style="padding-bottom:0"><input type="checkbox" id="st-on"> 전 팀 스트리밍</label><select id="st-acq" aria-label="팀당 주간 영입 한도"><option value="5">주 5회</option><option value="6">주 6회</option><option value="7">주 7회</option></select><select id="st-mine" aria-label="선택 팀의 스트리밍 자리 수" title="선택한 팀만 적용, 다른 팀은 항상 2자리"><option value="2">내 팀 2자리</option><option value="1">내 팀 1자리</option></select></span><div class="teamsel"><label for="team-sel">팀</label><select id="team-sel"></select></div></div>
   </div>
 
   <div id="view-empty" class="empty" hidden><b id="empty-title">로스터를 불러오는 중입니다</b><span id="empty-text">잠시만 기다려 주세요.</span></div>
@@ -141,6 +146,7 @@ footer { color: var(--muted); font-size: 12px; display: grid; gap: 4px; border-t
         <div class="panel"><h2>리그 순위</h2><div class="tbl" id="standings"></div><p class="note">실제 기록은 매주 결과 캡처로 반영. 기대 승수·확률은 남은 경기 시뮬레이션(2만 회) 기준.</p></div>
       </div>
       <div class="panel"><h2 id="roster-title">로스터</h2><div class="tbl" id="roster"></div><p class="note" id="roster-note"></p></div>
+      <div class="panel" id="st-panel" hidden><h2 id="st-title">스트리밍 계획 · 전 팀</h2><div class="tbl" id="st-table"></div><p class="note" id="st-note"></p></div>
       <div class="panel" id="b2b-panel" hidden><h2 id="b2b-title">백투백 시뮬레이션</h2><div class="tbl" id="b2b-table"></div><p class="note" id="b2b-note"></p></div>
       <div class="panel"><h2>팀별 카테고리 예상 순위</h2><div class="tbl" id="heat"></div><p class="note">14주 평균 주간 기록 기준(1위 = 가장 유리, TO·PF는 적을수록 1위). 진할수록 상위.</p></div>
     </div>
@@ -182,7 +188,7 @@ footer { color: var(--muted); font-size: 12px; display: grid; gap: 4px; border-t
           <h2 id="rec-title">FA 추천</h2>
           <div class="row"><div class="field" style="flex:1 1 200px"><label for="rec-drop">방출 대상</label><select id="rec-drop"></select></div><button class="btn" id="rec-run" type="button">추천 계산</button><span class="busy" id="rec-busy"></span></div>
           <div class="tbl" id="rec-table"></div>
-          <p class="note">방출 대상 자리에 각 FA를 넣었을 때 남은 주차 기대 승수 변화. 영입 선수는 경기당 평균 기준.</p>
+          <p class="note">방출 대상 자리에 각 FA를 넣었을 때 남은 주차 기대 승수 변화. 영입 선수는 경기당 평균 기준. 전 팀 스트리밍을 켜면 영입 후에도 하위 2자리는 계속 스트리밍하고 상대도 스트리밍합니다.</p>
         </div>
       </div>
       <div class="panel"><h2 id="fc-heat-title">팀별 카테고리 예상 순위</h2><div class="tbl" id="fc-heat"></div><p class="note" id="fc-heat-note"></p></div>
@@ -192,6 +198,7 @@ footer { color: var(--muted); font-size: 12px; display: grid; gap: 4px; border-t
   <footer>
     <span>예측 모델: ESPN 300 프로젝션(PF·DD 모델 보완) × 2026-27 NBA 일별 실제 일정(14주 전체, 8주차 NBA컵 미정 2경기는 12/8·12/11 가정) × 매일 라인업(PG SG SF PF C G F UTIL×3, 벤치 3), 선수별 예상 출전(GP/82). 실제 스탯이 들어오면 경기 수만큼 가중해 프로젝션과 섞습니다(15경기 = 50%).</span>
     <span>백투백 반영: 팀이 전날도 경기한 날(2번째 경기)에 ① 결장 — 선수별 휴식 성향(35세 이상 휴식 규정 예외, 장기 부상 복귀, 2025-26·2024-25 출전 경기 수)을 예상 출전 경기 수 안에서 2번째 경기로 재배분, ② 기록 — 출전 시간·나이에 비례해 PTS·AST −5%, REB −2%, STL −4%, BLK −5%, 3PM −4%, TO −3%, PF +3%, FG% −1.0%p, FT% −0.5%p(출전 시간 34분 기준), ③ 변동성 — 경기별 표준편차 +5%. 리그 평균 효과는 RotoWire(2014-15)·Frontiers in Psychology(2016-17) 연구, 선수 정보는 Basketball-Reference 시즌 기록.</span>
+    <span>전 팀 스트리밍(기본 켜짐): 모든 팀이 시즌 가치 하위 2자리를 주간 영입 한도(기본 6회) 안에서 매일 라인업 빈칸을 채울 FA로 교체. 일정·출전확률·포지션 슬롯을 반영한 기대값 최적화(구간 DP) 후 같은 시뮬레이션에서 재생하며, FA는 팀 간 경합(주별 순환 우선순위, 보유·방출 후 2일 웨이버 동안 사용 불가)합니다. 각 주는 독립 계획으로, 방출된 원래 선수는 다음 주 로스터에 다시 있는 것으로 근사합니다.</span>
     <span>로스터·실제 스탯·경기 결과는 리그 화면 캡처와 공개 통계 사이트를 바탕으로 Claude가 갱신합니다. 이 페이지가 외부 사이트에 직접 접속하지는 않습니다.</span>
   </footer>
 </div>
@@ -216,8 +223,10 @@ const pct = (x, d = 0) => (x * 100).toFixed(d) + "%";
 const BASE = {};
 REF.players.forEach(a => { const o = {}; REF.fields.forEach((f, i) => o[f] = a[i]); o.mask = o.elig.split(",").reduce((m, p) => m | (POSB[p] || 0), POSB[o.pos] || 0); BASE[o.name] = o; });
 
-const state = { db: "pending", docs: {}, tab: "now", PL: {}, base: null, scen: null, simSel: { drop: new Set(), add: new Set() }, simOther: false, b2b: false, baseOff: null, rec: null };
+const state = { db: "pending", docs: {}, tab: "now", PL: {}, base: null, scen: null, simSel: { drop: new Set(), add: new Set() }, simOther: false, b2b: false, baseOff: null, baseNS: null, rec: null, stream: { on: true, acq: 6, mine: 2 } };
 try { state.b2b = localStorage.getItem("td22-b2b") === "1"; } catch (e) {}
+try { const s = JSON.parse(localStorage.getItem("td22-stream") || "null"); if (s && typeof s.on === "boolean" && [5, 6, 7].includes(s.acq)) state.stream = { on: s.on, acq: s.acq, mine: s.mine === 1 ? 1 : 2 }; } catch (e) {}
+const NOSTREAM = { on: false, acq: 0, mine: 2 };
 try { const t = localStorage.getItem("td-tab"); if (t === "fc" || t === "now") state.tab = t; } catch (e) {}
 try { const t = localStorage.getItem("td2-team"); if (t && REF.teams.includes(t)) ME = t; } catch (e) {}
 
@@ -243,10 +252,25 @@ function buildPlayers() {
     }
     PL[n] = p;
   }
-  state.PL = PL;
+  /* streaming weight = one game's value with the 11 categories weighted equally (per-game stat / top-150 average; TO, PF negative;
+     FG%·FT% as made-shot surplus over the league rate / its spread). Used only to rank who fills an open slot. */
+  const top = Object.values(PL).sort((a, b) => b.value - a.value).slice(0, 150), avg = k => top.reduce((s, p) => s + (p[k] || 0), 0) / top.length;
+  const POS = ["TPM", "REB", "AST", "STL", "BLK", "PTS", "DDg"], AV = {}; POS.concat(["TO", "PF"]).forEach(k => AV[k] = avg(k) || 1);
+  const lg = (m, a) => top.reduce((s, p) => s + p[m], 0) / Math.max(1e-9, top.reduce((s, p) => s + p[a], 0)), lfg = lg("FGM", "FGA"), lft = lg("FTM", "FTA");
+  const sdOf = f => { const v = top.map(f), m = v.reduce((s, x) => s + x, 0) / v.length; return Math.sqrt(v.reduce((s, x) => s + (x - m) * (x - m), 0) / v.length) || 1; };
+  const fgI = p => p.FGM - p.FGA * lfg, ftI = p => p.FTM - p.FTA * lft, sdF = sdOf(fgI), sdT = sdOf(ftI);
+  Object.values(PL).forEach(p => { p.sw = Math.max(.2, POS.reduce((s, k) => s + (p[k] || 0) / AV[k], 0) - (p.TO || 0) / AV.TO - (p.PF || 0) / AV.PF + fgI(p) / sdF + ftI(p) / sdT); });
+  state.PL = PL; PLAYC = new Map();
 }
 function rosters() { const r = state.docs["league/rosters"]; return r && r.teams ? r.teams : null; }
-function statusOf(n) { const r = state.docs["league/rosters"]; return (r && r.status && r.status[n]) || BASE[n] && BASE[n].status || ""; }
+function waOf(n) { const f = state.docs["league/fa"]; return f && f.players && f.players[n] && f.players[n].wa || ""; }
+function faDoc() { const f = state.docs["league/fa"]; return f && f.players ? f : null; }
+/* status: rostered players from the roster capture, free agents from the add-list capture, else the projection file */
+function statusOf(n) {
+  const r = state.docs["league/rosters"]; if (r && r.status && r.status[n]) return r.status[n];
+  const f = faDoc(); if (f && f.players[n]) return f.players[n].st || "";
+  return BASE[n] && BASE[n].status || "";
+}
 
 /* ---------- weekly team model ---------- */
 /* ---------- back-to-back layer ----------
@@ -273,34 +297,127 @@ function b2bVec(p, b2b) {
 }
 const XC = ["TPM", "REB", "AST", "STL", "BLK", "TO", "PTS", "PF"];
 /* ---------- weekly team model (real daily schedule; play state 1 = normal game, 2 = 2nd night of a back-to-back) ---------- */
-function teamWeek(names, w, opt = {}) {
-  const D = opt.draws || 150, b2b = opt.b2b != null ? opt.b2b : state.b2b, sched = REF.sched[w], B2 = REF.b2bd[w], days = sched.length;
-  const ps = names.map(n => state.PL[n]).filter(Boolean).sort((a, b) => b.value - a.value);
-  let b2bCnt = 0;
-  const plays = ps.map(p => {
-    const arr = new Uint8Array(D * days); if (!p.team) return arr;
+/* Common random numbers: a player's simulated games in week w depend only on (week, player, draws, flags), so they are cached
+   and shared by every roster/scenario that contains him. Cleared whenever the player table is rebuilt. */
+let PLAYC = new Map();
+function playsOf(p, w, D, perGame, b2b) {
+  const key = w + "|" + p.name + "|" + D + "|" + (perGame ? 1 : 0) + (b2b ? 1 : 0); let o = PLAYC.get(key); if (o) return o;
+  const sched = REF.sched[w], B2 = REF.b2bd[w], days = sched.length, arr = new Uint8Array(D * days); let nb = 0;
+  if (p.team) {
     const fixed = []; for (let d = 0; d < days; d++) if (sched[d].indexOf(p.team) >= 0) fixed.push(d);
-    const isB = fixed.map(d => B2[d].indexOf(p.team) >= 0); b2bCnt += isB.filter(Boolean).length;
-    const av = availOf(p, w, !!(opt.perGame && opt.perGame.has(p.name)), b2b), r = rng(hash(w + "|" + p.name));
+    const isB = fixed.map(d => B2[d].indexOf(p.team) >= 0); nb = isB.filter(Boolean).length;
+    const av = availOf(p, w, perGame, b2b), r = rng(hash(w + "|" + p.name));
     for (let k = 0; k < D; k++) for (let i = 0; i < fixed.length; i++) { const u = r(); if (u < (isB[i] ? av.pB : av.pN)) arr[k * days + fixed[i]] = isB[i] ? 2 : 1; }
-    return arr;
-  });
-  const NK = KEYS.length, tot = new Float64Array(D * NK), used = new Float64Array(ps.length), usedB = new Float64Array(ps.length);
-  const vec = ps.map(p => KEYS.map(k => p[k] || 0)), vecB = ps.map(p => b2bVec(p, b2b)), infl = ps.map(p => b2b ? Math.pow(1 + REF.b2bFx.sd * b2bOf(p).k, 2) - 1 : 0);
-  const xi = XC.map(c => KEYS.indexOf(c)), xv = new Float64Array(XC.length); let inflSum = 0;
-  for (let k = 0; k < D; k++) for (let d = 0; d < days; d++) {
-    let free = 1023;
-    for (let j = 0; j < ps.length; j++) {
-      const st = plays[j][k * days + d]; if (!st) continue;
-      const m = ps[j].mask;
-      for (let s = 0; s < 10; s++) if ((free >> s & 1) && (SLOTM[s] & m)) {
-        free &= ~(1 << s); used[j]++; const v = st === 2 ? vecB[j] : vec[j];
-        for (let q = 0; q < NK; q++) tot[k * NK + q] += v[q];
-        if (st === 2) { usedB[j]++; if (infl[j]) { for (let i = 0; i < XC.length; i++) { const g = CV[XC[i]] * v[xi[i]]; xv[i] += infl[j] * g * g; } inflSum += infl[j]; } }
+  }
+  o = { arr, nb }; PLAYC.set(key, o); return o;
+}
+/* ---------- streaming layer ----------
+   Each team frees its two lowest-value roster spots (or uses empty spots) and, within the weekly acquisition limit, cycles free
+   agents through them so they fill the lineup slots its 11 core players leave open each day. A plan is chosen on expected values
+   (P(plays) x P(a compatible slot is open) x streaming weight) by a segment DP over days, then replayed inside the same draws as the
+   core players. Free agents are contested: teams plan in a weekly rotating priority order, and a player another team holds — plus
+   the 2-day waiver period after he is dropped — is unavailable. A player a team drops cannot be re-added by it for 2 days.
+   Waiver-wire players from the add-list capture become available on their claim date. */
+const OKT = (() => { const t = new Uint8Array(1024 * 32); for (let f = 0; f < 1024; f++) for (let m = 1; m < 32; m++) for (let s = 0; s < 10; s++) if ((f >> s & 1) && (SLOTM[s] & m)) { t[f * 32 + m] = 1; break; } return t; })();
+const STREAM_SLOTS = 2;
+function dayOffset(w, iso) { return Math.round((new Date(iso + "T00:00:00") - new Date(REF.starts[w] + "T00:00:00")) / 864e5); }
+function firstOpenDay(w) { return w === currentWeek() ? Math.max(0, Math.min(REF.sched[w].length, dayOffset(w, todayStr()))) : 0; }
+const rangeMask = (a, b) => b < a ? 0 : ((1 << (b + 1)) - 1) & ~((1 << a) - 1);
+function openOf(F, D, days) { const o = new Float64Array(days * 32); for (let k = 0; k < D; k++) for (let d = 0; d < days; d++) { const b = F[k * days + d] * 32; for (let m = 1; m < 32; m++) o[d * 32 + m] += OKT[b + m]; } for (let i = 0; i < o.length; i++) o[i] /= D; return o; }
+/* expected-value candidates: pd[d] = P(plays on day d); blk = days he cannot be held (other teams, waiver period, not yet claimable) */
+function streamCands(w, ST, nameSet, b2b) {
+  const sched = REF.sched[w], B2 = REF.b2bd[w], days = sched.length, f = faDoc(), out = [];
+  for (const p of ST.pool) {
+    if (nameSet.has(p.name) || !p.team) continue;
+    const av = availOf(p, w, false, b2b), pd = new Float64Array(days); let any = 0;
+    for (let d = 0; d < days; d++) if (sched[d].indexOf(p.team) >= 0) { pd[d] = B2[d].indexOf(p.team) >= 0 ? av.pB : av.pN; any += pd[d]; }
+    if (any < .05) continue;
+    let blk = ST.occ.get(p.name) || 0; const wa = f && f.players[p.name] && f.players[p.name].wa;
+    if (wa) { const i = dayOffset(w, wa); if (i > 0) blk |= rangeMask(0, Math.min(days, i) - 1); }
+    out.push({ p, pd, blk });
+  }
+  return out;
+}
+/* best plan for one slot under each acquisition budget 0..A. orig = the slot's current holder (null = empty spot); he may keep the
+   slot for a prefix of the week at no cost. Returns best[j] = {v, segs:[{p,a,b,orig}]} with at most j adds. */
+function planSlot(cands, orig, origPd, open, days, d0, A) {
+  const val = cands.map(c => { const x = new Float64Array(days); for (let d = 0; d < days; d++) x[d] = c.pd[d] * open[d * 32 + c.p.mask] * c.p.sw; return x; });
+  const keep = new Set(); const tot = val.map((x, i) => [x.reduce((s, y) => s + y, 0), i]).sort((a, b) => b[0] - a[0]);
+  tot.slice(0, 20).forEach(x => keep.add(x[1]));
+  for (let d = d0; d < days; d++) val.map((x, i) => [x[d], i]).sort((a, b) => b[0] - a[0]).slice(0, 4).forEach(x => { if (x[0] > 0) keep.add(x[1]); });
+  const C = [...keep], pre = C.map(i => { const p = new Float64Array(days + 1); for (let d = 0; d < days; d++) p[d + 1] = p[d] + val[i][d]; return p; });
+  const seg = {};   /* seg[s|e] = top-3 [value, candidate] for holding days s..e-1 */
+  for (let s = d0; s < days; s++) for (let e = s + 1; e <= days; e++) {
+    const m = rangeMask(s, Math.min(days - 1, e + 1)), L = [];
+    C.forEach((ci, k) => { if (cands[ci].blk & m) return; const v = pre[k][e] - pre[k][s]; if (v > 1e-9) L.push([v, ci]); });
+    L.sort((a, b) => b[0] - a[0]); seg[s + "|" + e] = L.slice(0, 3);
+  }
+  const ov = new Float64Array(days + 1); if (orig) { const sw = orig.sw; for (let d = 0; d < days; d++) ov[d + 1] = ov[d] + origPd[d] * open[d * 32 + orig.mask] * sw; }
+  const f = []; for (let j = 0; j <= A; j++) f.push(new Array(days + 1).fill(null));
+  for (let e = d0; e <= days; e++) f[0][e] = { v: ov[e], segs: orig && e > 0 ? [{ p: orig, a: 0, b: e - 1, orig: true }] : [] };
+  for (let j = 1; j <= A; j++) for (let e = d0 + 1; e <= days; e++) {
+    let best = null;
+    for (let s = d0; s < e; s++) {
+      const prev = f[j - 1][s]; if (!prev) continue;
+      for (const [v, ci] of seg[s + "|" + e]) {
+        const p = cands[ci].p; if (prev.segs.some(g => g.p === p && s < g.b + 3)) continue;
+        if (!best || prev.v + v > best.v) best = { v: prev.v + v, segs: prev.segs.concat([{ p, a: s, b: e - 1 }]) };
         break;
       }
     }
+    f[j][e] = best;
   }
+  const out = []; let run = f[0][days];
+  for (let j = 0; j <= A; j++) { if (f[j][days] && f[j][days].v > run.v + 1e-9) run = f[j][days]; out.push(run); }
+  return out;
+}
+function teamWeek(names, w, opt = {}) {
+  const D = opt.draws || 150, b2b = opt.b2b != null ? opt.b2b : state.b2b, days = REF.sched[w].length, ST = opt.stream || null;
+  const all = names.map(n => state.PL[n]).filter(Boolean).sort((a, b) => b.value - a.value);
+  const S = ST ? (ST.slots || STREAM_SLOTS) : 0, nCore = ST ? Math.min(all.length, ROSTER_MAX - S) : all.length, ps = all.slice(0, nCore);
+  const pg = n => !!(opt.perGame && opt.perGame.has(n));
+  const NK = KEYS.length, tot = new Float64Array(D * NK), free = new Uint16Array(D * days).fill(1023), U = {}, UB = {};
+  const xi = XC.map(c => KEYS.indexOf(c)), xv = new Float64Array(XC.length); let inflSum = 0, b2bCnt = 0;
+  /* put p's games on days a..b into open lineup slots, draw by draw (players are placed in value order, so this is the same greedy
+     daily fill as before); acc = record stats */
+  const place = (p, a, b, F, acc) => {
+    const pl = playsOf(p, w, D, pg(p.name), b2b), arr = pl.arr, m = p.mask; if (!acc) { for (let k = 0; k < D; k++) for (let d = a; d <= b; d++) { const i = k * days + d; if (!arr[i]) continue; const f = F[i]; for (let s = 0; s < 10; s++) if ((f >> s & 1) && (SLOTM[s] & m)) { F[i] = f & ~(1 << s); break; } } return pl; }
+    const v = KEYS.map(k => p[k] || 0), vB = b2bVec(p, b2b), inf = b2b ? Math.pow(1 + REF.b2bFx.sd * b2bOf(p).k, 2) - 1 : 0; let u = 0, uB = 0;
+    for (let k = 0; k < D; k++) for (let d = a; d <= b; d++) {
+      const i = k * days + d, st = arr[i]; if (!st) continue; const f = F[i];
+      for (let s = 0; s < 10; s++) if ((f >> s & 1) && (SLOTM[s] & m)) {
+        F[i] = f & ~(1 << s); u++; const vv = st === 2 ? vB : v;
+        for (let q = 0; q < NK; q++) tot[k * NK + q] += vv[q];
+        if (st === 2) { uB++; if (inf) { for (let x = 0; x < XC.length; x++) { const g = CV[XC[x]] * vv[xi[x]]; xv[x] += inf * g * g; } inflSum += inf; } }
+        break;
+      }
+    }
+    U[p.name] = (U[p.name] || 0) + u / D; UB[p.name] = (UB[p.name] || 0) + uB / D; return pl;
+  };
+  ps.forEach(p => { b2bCnt += place(p, 0, days - 1, free, true).nb; });
+  let plan = null;
+  if (ST) {
+    const orig = all.slice(nCore), nameSet = new Set(names), d0 = firstOpenDay(w), A = ST.acq;
+    orig.forEach(p => { b2bCnt += playsOf(p, w, D, pg(p.name), b2b).nb; });
+    const opd = p => { const s = REF.sched[w], B2 = REF.b2bd[w], av = availOf(p, w, pg(p.name), b2b), x = new Float64Array(days); for (let d = 0; d < days; d++) if (p.team && s[d].indexOf(p.team) >= 0) x[d] = B2[d].indexOf(p.team) >= 0 ? av.pB : av.pN; return x; };
+    const oA = orig[0] || null, oB = orig[1] || null, oApd = oA ? opd(oA) : null, oBpd = oB ? opd(oB) : null;
+    const cands = streamCands(w, ST, nameSet, b2b), coreC = ps.filter(p => p.pos === "C").length;
+    const noC = c => c.p.pos !== "C";
+    const bestA = planSlot(coreC >= 4 ? cands.filter(noC) : cands, oA, oApd, openOf(free, D, days), days, d0, A);
+    let best = S === 1 ? { v: bestA[A].v, A: bestA[A], B: { v: 0, segs: [] } } : null;
+    for (let a1 = 0; S > 1 && a1 <= A; a1++) {
+      const pa = bestA[a1]; if (a1 > 0 && pa === bestA[a1 - 1]) continue;
+      const F2 = free.slice(); pa.segs.forEach(g => place(g.p, g.a, g.b, F2, false));
+      const usedA = new Set(pa.segs.map(g => g.p)), cC = coreC + (pa.segs.some(g => g.p.pos === "C") ? 1 : 0);
+      const cB = cands.filter(c => !usedA.has(c.p) && (cC < 4 || noC(c)));
+      const pb = planSlot(cB, oB, oBpd, openOf(F2, D, days), days, d0, A - a1)[A - a1];
+      if (!best || pa.v + pb.v > best.v + 1e-9) best = { v: pa.v + pb.v, A: pa, B: pb };
+    }
+    const segs = best.A.segs.map(g => Object.assign({ slot: 0 }, g)).concat(best.B.segs.map(g => Object.assign({ slot: 1 }, g)));
+    segs.forEach(g => place(g.p, g.a, g.b, free, true));
+    segs.forEach(g => { if (g.orig) return; const m = rangeMask(g.a, Math.min(days - 1, g.b === days - 1 ? g.b : g.b + 2)); ST.occ.set(g.p.name, (ST.occ.get(g.p.name) || 0) | m); });
+    plan = { segs, acq: segs.filter(g => !g.orig).length, ev: best.v, orig: orig.map(p => p.name), d0, slots: S };
+  } else all.slice(nCore).forEach(p => { b2bCnt += place(p, 0, days - 1, free, true).nb; });
   const mean = new Float64Array(NK); for (let k = 0; k < D; k++) for (let q = 0; q < NK; q++) mean[q] += tot[k * NK + q] / D;
   const ix = Object.fromEntries(KEYS.map((k, i) => [k, i])), c = {}, sv = {};
   const col = q => { const a = new Float64Array(D); for (let k = 0; k < D; k++) a[k] = tot[k * NK + q]; return a; };
@@ -310,10 +427,9 @@ function teamWeek(names, w, opt = {}) {
   c.FG = mean[ix.FGM] / Math.max(mean[ix.FGA], 1e-9); c.FT = mean[ix.FTM] / Math.max(mean[ix.FTA], 1e-9);
   const ratio = (a, b) => { const A = col(ix[a]), B = col(ix[b]), r = new Float64Array(D); for (let k = 0; k < D; k++) r[k] = A[k] / Math.max(B[k], 1e-9); return vr(r); };
   sv.FG = ratio("FGM", "FGA"); sv.FT = ratio("FTM", "FTA");
-  const n = used.reduce((s, x) => s + x, 0) / D, nB = usedB.reduce((s, x) => s + x, 0) / D, xvo = {};
+  const n = Object.values(U).reduce((s, x) => s + x, 0), nB = Object.values(UB).reduce((s, x) => s + x, 0), xvo = {};
   XC.forEach((c2, i) => xvo[c2] = xv[i] / D);
-  return { c, sv, n, nB, b2bCnt, xv: xvo, pi: n > 0 ? Math.sqrt(1 + inflSum / D / n) : 1,
-    used: Object.fromEntries(ps.map((p, j) => [p.name, used[j] / D])), usedB: Object.fromEntries(ps.map((p, j) => [p.name, usedB[j] / D])) };
+  return { c, sv, n, nB, b2bCnt, xv: xvo, pi: n > 0 ? Math.sqrt(1 + inflSum / D / n) : 1, used: U, usedB: UB, plan };
 }
 function msd(o, c) {
   const n = Math.max(o.n, 1), sv = o.sv[c] || 0, xv = (o.xv && o.xv[c]) || 0;
@@ -333,9 +449,23 @@ function rosterFor(team, w, scen) {
   return base;
 }
 function resultsFor(w) { const r = state.docs["league/results"]; return r && r.weeks && r.weeks[String(w + 1)] || null; }
-function computeAll(scen, b2b = state.b2b) {
-  const R = rosters(), T = REF.teams, TW = {}, cw = currentWeek();
-  for (const t of T) for (let w = 0; w < NW; w++) TW[t + "|" + w] = teamWeek(rosterFor(t, w, scen), w, { perGame: scen && scen.perGame && scen.moves[t] ? scen.moves[t].in : null, b2b });
+/* weekly waiver/streaming priority: rotates one place per week so every team gets each position over the season */
+function priorityOrder(w) { const T = REF.teams; return T.map((_, i) => T[(i + w) % T.length]); }
+function streamPoolFor(w, scen) {
+  const on = new Set(), R = rosters() || {};
+  for (const t of REF.teams) { rosterFor(t, w, scen).forEach(n => on.add(n)); ((R[t] || {}).ir || []).forEach(n => on.add(n)); }
+  return Object.values(state.PL).filter(p => p.team && !on.has(p.name)).sort((a, b) => b.sw - a.sw);
+}
+function computeAll(scen, b2b = state.b2b, stream = state.stream) {
+  const R = rosters(), T = REF.teams, TW = {}, cw = currentWeek(), stOn = !!(stream && stream.on);
+  for (let w = 0; w < NW; w++) {
+    const occ = new Map(), pool = stOn ? streamPoolFor(w, scen) : null;
+    for (const t of stOn ? priorityOrder(w) : T) {
+      const before = stOn ? new Map(occ) : null;
+      TW[t + "|" + w] = teamWeek(rosterFor(t, w, scen), w, { perGame: scen && scen.perGame && scen.moves[t] ? scen.moves[t].in : null, b2b, stream: stOn ? { acq: stream.acq, pool, occ, slots: t === ME ? stream.mine : STREAM_SLOTS } : null });
+      if (stOn) { TW[t + "|" + w].occBefore = before; TW[t + "|" + w].prio = priorityOrder(w).indexOf(t) + 1; }
+    }
+  }
   const games = [];
   REF.matchups.forEach((ms, w) => ms.forEach(([a, b]) => {
     const A = TW[a + "|" + w], B = TW[b + "|" + w], res = (resultsFor(w) || []).find(x => x.away === a && x.home === b);
@@ -380,6 +510,24 @@ function renderB2BPanel(rowsP, cw, A, Ao) {
       return `<tr><td>${esc(p.name)}</td><td>${esc(p.team || "—")}</td><td>${ds.length ? ds.map(d => dayLabel(cw, d)).join(", ") : '<span class="note">없음</span>'}</td><td class="r num">${pct(av.pN)}</td><td class="r num">${ds.length ? pct(av.pB) : "—"}</td><td class="r num">${pc(k * fx.PTS)}</td><td class="r num">${pc(k * fx.REB)}</td><td class="r num">${pc(k * fx.AST)}</td><td class="r num">${pc(k * fx.TPM)}</td><td class="r num">${(k * fx.FGp * 100).toFixed(1).replace("-", "−")}%p</td><td class="r num">${(A.used[p.name] || 0).toFixed(2)} / ${(Ao.used[p.name] || 0).toFixed(2)}</td><td class="why">${esc(bi.why)}${hist ? `<br>${esc(hist)}` : ""}</td></tr>`; }).join("") + `</tbody></table>`;
   $("b2b-note").textContent = "평소·2번째 경기 출전 = 시즌 예상 출전률(GP/82)을 유지하면서 휴식 성향만큼 결장을 백투백 2번째 경기로 옮긴 확률. 기록 변화는 2번째 경기 1경기 기준(출전 시간·나이 비례). 휴식 성향 수치는 규정·이력 기반 추정치이며 실제 선수별 백투백 기록이 아닙니다.";
 }
+function segText(w, g, days) {
+  if (g.orig) return `${esc(g.p.name)} <span class="note">유지${g.b < days - 1 ? " ~" + dayLabel(w, g.b) : ""}</span>`;
+  const wa = waOf(g.p.name), st = statusOf(g.p.name);
+  return `<b>${esc(g.p.name)}</b> <span class="note">${dayLabel(w, g.a)}${g.b > g.a ? "–" + dayLabel(w, g.b) : ""}${wa && w === currentWeek() ? " · 웨이버" : ""}${st && w === currentWeek() ? " · " + esc(st) : ""}</span>`;
+}
+function renderStreamPanel(R, cw) {
+  const on = state.stream.on; $("st-panel").hidden = !on; if (!on) return;
+  const days = REF.sched[cw].length, f = faDoc(), order = priorityOrder(cw);
+  $("st-title").textContent = `${cw + 1}주차 스트리밍 계획 · 전 팀 (주 ${state.stream.acq}회)`;
+  $("st-table").innerHTML = `<table><thead><tr><th class="r">우선</th><th>팀</th><th>스트리밍 순서 (자리별, 날짜 = 보유 기간)</th><th class="r">영입</th><th class="r">사용 경기</th><th class="r">이번 주 승리확률</th></tr></thead><tbody>` +
+    order.map(t => { const A = R.TW[t + "|" + cw], N = state.baseNS.TW[t + "|" + cw], pl = A.plan || { segs: [], acq: 0, orig: [] };
+      const slot = k => { const g = pl.segs.filter(x => x.slot === k); if (k >= (pl.slots || 2)) return `<span class="note">스트리밍 안 함</span>`; const lead = pl.orig[k] && g.length && !g[0].orig ? `${esc(pl.orig[k])} <span class="note">첫날 방출</span> → ` : ""; return g.length ? lead + g.map(x => segText(cw, x, days)).join(" → ") : `<span class="note">${pl.orig[k] ? esc(pl.orig[k]) + " 방출 후 비움" : "빈 자리"}</span>`; };
+      const p1 = wp(R, t, cw), p0 = wp(state.baseNS, t, cw);
+      return `<tr class="${t === ME ? "me" : ""}"><td class="r num">${A.prio}</td><td>${esc(sh(t))}</td><td class="stseq"><span class="sl"><span class="sn">①</span>${slot(0)}</span><span class="sl"><span class="sn">②</span>${slot(1)}</span></td><td class="r num">${pl.acq}</td><td class="r num">${A.n.toFixed(1)} <span class="note">(${dlt(A.n - N.n, 1)})</span></td><td class="r num">${pct(p1)} <span class="note">(${dlt((p1 - p0) * 100, 0)}%p)</span></td></tr>`; }).join("") + `</tbody></table>`;
+  $("st-note").textContent = `각 팀은 시즌 가치 하위 2명 자리(빈 자리 포함${state.stream.mine === 1 ? `, ${sh(ME)}는 설정에 따라 최하위 1자리` : ""})를 주 ${state.stream.acq}회 영입 한도 안에서 그날 라인업 빈칸을 채울 FA로 교체한다고 가정합니다. 우선순위는 매주 한 칸씩 순환(가정)하며, 앞 순위 팀이 보유 중이거나 방출 후 2일(웨이버) 이내인 선수는 쓸 수 없습니다. 같은 팀이 방출한 선수의 재영입도 2일 뒤부터. ` +
+    (f ? `FA 목록: ${(f.asOf || "").slice(0, 16).replace("T", " ")} 캡처(프로젝션 보유 ${Object.keys(f.players).length}명${f.unprojected && f.unprojected.length ? ", 프로젝션 없는 " + f.unprojected.length + "명 제외" : ""}), 웨이버 선수는 클레임일부터, 상태(O·DTD)는 이번 주에만 반영.` : "FA 목록 캡처가 없어 프로젝션 풀의 미보유 선수 전체를 FA로 간주합니다.") +
+    ` 괄호 = 스트리밍 미반영 대비 변화.`;
+}
 function oppOf(team, w) { const m = REF.matchups[w].find(([a, b]) => a === team || b === team); return m ? { opp: m[0] === team ? m[1] : m[0], away: m[0] === team } : null; }
 function gameOf(R, team, w) { return R.games.find(g => g.w === w && (g.a === team || g.b === team)); }
 function fmtCat(c, v) { return c === "FG" || c === "FT" ? v.toFixed(3).replace(/^0/, "") : v.toFixed(c === "DD" ? 1 : 0); }
@@ -389,9 +537,9 @@ function renderNow() {
   const ranks = REF.teams.slice().sort((a, b) => R.season[b].ew - R.season[a].ew);
   $("kpis").innerHTML = `
     <div class="kpi"><span class="l">${started ? "이번" : "첫"} 매치업 · ${cw + 1}주차</span><span class="v">${esc(sh(o.opp))}</span><span class="d">${md(REF.starts[cw])}–${md(REF.ends[cw])} · ${o.away ? "원정" : "홈"}</span></div>
-    <div class="kpi"><span class="l">이번 주 승리확률</span><span class="v num">${pct(pMe)}</span><span class="d">기대 카테고리 ${(CATS.reduce((a, c) => a + (g.a === ME ? g.pc[c] : 1 - g.pc[c]), 0)).toFixed(1)} / 11${state.b2b ? ` · 백투백 미반영 ${pct(wp(state.baseOff, ME, cw))}` : ""}</span></div>
+    <div class="kpi"><span class="l">이번 주 승리확률</span><span class="v num">${pct(pMe)}</span><span class="d">기대 카테고리 ${(CATS.reduce((a, c) => a + (g.a === ME ? g.pc[c] : 1 - g.pc[c]), 0)).toFixed(1)} / 11${state.b2b ? ` · 백투백 미반영 ${pct(wp(state.baseOff, ME, cw))}` : ""}${state.stream.on ? ` · 스트리밍 미반영 ${pct(wp(state.baseNS, ME, cw))}` : ""}</span></div>
     <div class="kpi"><span class="l">시즌 기록</span><span class="v num">${rec.w}-${rec.l}-${rec.t}</span><span class="d">${started ? "실제 결과 반영" : "시즌 시작 전"}</span></div>
-    <div class="kpi"><span class="l">예상 최종</span><span class="v num">${s.ew.toFixed(1)}<small>승 · ${ranks.indexOf(ME) + 1}위</small></span><span class="d">4강 ${pct(s.p4)} · 1위 ${pct(s.p1)}${state.b2b ? ` · 미반영 ${state.baseOff.season[ME].ew.toFixed(1)}승` : ""}</span></div>`;
+    <div class="kpi"><span class="l">예상 최종</span><span class="v num">${s.ew.toFixed(1)}<small>승 · ${ranks.indexOf(ME) + 1}위</small></span><span class="d">4강 ${pct(s.p4)} · 1위 ${pct(s.p1)}${state.b2b ? ` · B2B 미반영 ${state.baseOff.season[ME].ew.toFixed(1)}승` : ""}${state.stream.on ? ` · 스트리밍 미반영 ${state.baseNS.season[ME].ew.toFixed(1)}승` : ""}</span></div>`;
   $("mu-title").textContent = `${cw + 1}주차 매치업 · vs ${sh(o.opp)}`;
   const A = R.TW[ME + "|" + cw], B = R.TW[o.opp + "|" + cw], pc = pcat(A, B), live = state.docs["league/live"];
   const bb = state.b2b, Ao = state.baseOff.TW[ME + "|" + cw], Bo = state.baseOff.TW[o.opp + "|" + cw];
@@ -400,8 +548,8 @@ function renderNow() {
     CATS.map(c => { const p = pc[c], k = p >= .6 ? "good" : p <= .4 ? "bad" : "mid", kl = p >= .6 ? "우세" : p <= .4 ? "열세" : "박빙";
       return `<tr><td>${LAB[c]}${LOW[c] ? " ↓" : ""}</td><td class="r num">${fmtCat(c, A.c[c])}</td><td class="r num">${fmtCat(c, B.c[c])}</td>${lv ? `<td class="r num">${esc(lv[ME] && lv[ME][c] != null ? lv[ME][c] : "—")}</td><td class="r num">${esc(lv[o.opp] && lv[o.opp][c] != null ? lv[o.opp][c] : "—")}</td>` : ""}${bb ? `<td class="r num">${fmtD(c, A.c[c] - Ao.c[c])}</td><td class="r num">${fmtD(c, B.c[c] - Bo.c[c])}</td>` : ""}<td><div class="bar mid" title="${pct(p)}"><span style="width:${(p * 100).toFixed(1)}%;background:var(--${k === "bad" ? "bad" : k === "good" ? "good" : "s1"})"></span></div></td><td><span class="chip ${k}">${kl} ${pct(p)}</span></td></tr>`; }).join("") + `</tbody></table>`;
   $("mu-note").textContent = `${bb ? "Δ = 백투백 반영 전후 주간 합계 차이. " : ""}예상 주간 합계(${sh(ME)} ${A.n.toFixed(1)}경기 · 상대 ${B.n.toFixed(1)}경기 사용). 백투백 2번째 경기 노출: ${sh(ME)} ${A.b2bCnt}회 · ${sh(o.opp)} ${B.b2bCnt}회(선수×경기)${bb ? `, 실제 사용 ${A.nB.toFixed(1)} · ${B.nB.toFixed(1)}경기` : ""}. ${lv ? "실제 진행값: " + (live.asOf || "") : "진행 중 실제값은 매치업 화면 캡처를 주시면 표시됩니다."}`;
-  $("standings").innerHTML = `<table><thead><tr><th>예상</th><th>팀</th><th class="r">기록</th><th class="r">기대 승수</th>${state.b2b ? '<th class="r">B2B 영향</th>' : ""}<th class="r">80% 범위</th><th class="r">4강</th><th class="r">1위</th></tr></thead><tbody>` +
-    ranks.map((t, i) => { const x = R.season[t], r = record(t); return `<tr class="${t === ME ? "me" : ""}"><td class="num">${i + 1}</td><td>${esc(sh(t))}</td><td class="r num">${r.w}-${r.l}-${r.t}</td><td class="r num">${x.ew.toFixed(2)}</td>${state.b2b ? `<td class="r num">${dlt(x.ew - state.baseOff.season[t].ew)}</td>` : ""}<td class="r num">${x.p10}–${x.p90}</td><td class="r num">${pct(x.p4)}</td><td class="r num">${pct(x.p1)}</td></tr>`; }).join("") + `</tbody></table>`;
+  $("standings").innerHTML = `<table><thead><tr><th>예상</th><th>팀</th><th class="r">기록</th><th class="r">기대 승수</th>${state.b2b ? '<th class="r">B2B 영향</th>' : ""}${state.stream.on ? '<th class="r" title="전 팀 스트리밍 반영 전후 기대 승수 차이">스트리밍 영향</th>' : ""}<th class="r">80% 범위</th><th class="r">4강</th><th class="r">1위</th></tr></thead><tbody>` +
+    ranks.map((t, i) => { const x = R.season[t], r = record(t); return `<tr class="${t === ME ? "me" : ""}"><td class="num">${i + 1}</td><td>${esc(sh(t))}</td><td class="r num">${r.w}-${r.l}-${r.t}</td><td class="r num">${x.ew.toFixed(2)}</td>${state.b2b ? `<td class="r num">${dlt(x.ew - state.baseOff.season[t].ew)}</td>` : ""}${state.stream.on ? `<td class="r num">${dlt(x.ew - state.baseNS.season[t].ew)}</td>` : ""}<td class="r num">${x.p10}–${x.p90}</td><td class="r num">${pct(x.p4)}</td><td class="r num">${pct(x.p1)}</td></tr>`; }).join("") + `</tbody></table>`;
   const ros = rosters()[ME], ir = ros.ir || [];
   const act = state.docs["league/actuals"];
   const rowsP = ros.active.map(n => state.PL[n]).filter(Boolean).sort((a, b) => b.value - a.value);
@@ -411,7 +559,8 @@ function renderNow() {
     rowsP.map(p => `<tr><td>${esc(p.name)}</td><td>${esc(p.elig)}</td><td>${esc(p.team || "—")}</td><td>${st(p.name)}</td><td class="r num">${gw(p.name)}</td><td class="r num">${(A.used[p.name] || 0).toFixed(1)}</td><td class="r num">${p.PTS.toFixed(1)}</td><td class="r num">${p.REB.toFixed(1)}</td><td class="r num">${p.AST.toFixed(1)}</td><td class="r num">${p.STL.toFixed(1)}</td><td class="r num">${p.BLK.toFixed(1)}</td><td class="r num">${p.TPM.toFixed(1)}</td><td class="r num">${(p.FGM / p.FGA).toFixed(3).replace(/^0/, "")}</td><td class="r num">${(p.FTA ? p.FTM / p.FTA : 0).toFixed(3).replace(/^0/, "")}</td><td class="r num">${p.TO.toFixed(1)}</td><td class="r num">${p.actual ? p.actual.g : "—"}</td>${state.b2b ? (() => { const bi = b2bOf(p), av = availOf(p, cw, false, true); return `<td class="r num">${b2bDays(p, cw).length}</td><td class="r num" title="${esc(bi.why)}">${pct(av.rEff)}</td><td class="r num">${dlt((A.used[p.name] || 0) - (Ao.used[p.name] || 0), 1)}</td>`; })() : ""}</tr>`).join("") +
     ir.map(n => `<tr><td>${esc(n)}</td><td colspan="${state.b2b ? 18 : 15}" class="note">IR — 시뮬레이션 제외</td></tr>`).join("") + `</tbody></table>`;
   renderB2BPanel(rowsP, cw, A, Ao);
-  $("roster-note").textContent = `경기당 수치는 ${act ? "프로젝션과 실제 기록(" + (act.asOf || "") + ")을 섞은 값" : "ESPN 300 프로젝션"}입니다. 사용 예상 = 슬롯 한도와 결장 가능성을 반영해 이번 주 실제로 기록에 들어갈 경기 수.`;
+  renderStreamPanel(R, cw);
+  $("roster-note").textContent = (state.stream.on ? "사용 예상은 스트리밍 계획(아래 표)에서 방출되기 전까지의 경기만 셉니다. " : "") + `경기당 수치는 ${act ? "프로젝션과 실제 기록(" + (act.asOf || "") + ")을 섞은 값" : "ESPN 300 프로젝션"}입니다. 사용 예상 = 슬롯 한도와 결장 가능성을 반영해 이번 주 실제로 기록에 들어갈 경기 수.`;
   $("heat").innerHTML = heatTable(R, 0, null, null);
 }
 /* Category rank board: average weekly totals over weeks [from, NW) -> rank 1..8 per category (TO/PF: fewer is better).
@@ -452,7 +601,7 @@ function renderSimControls() {
   const own = ownerMap();
   $("sim-other").checked = state.simOther; $("sim-add-label").textContent = state.simOther ? "영입할 선수 (FA · 다른 팀)" : "영입할 선수 (FA)"; $("sim-q").placeholder = state.simOther ? "이름·NBA팀·포지션·판타지팀 검색" : "이름·팀·포지션 검색";
   const pool = addPool().filter(p => !q || (p.name + " " + p.team + " " + p.elig + " " + (own[p.name] ? sh(own[p.name]) + " " + own[p.name] : "FA")).toLowerCase().includes(q)).slice(0, 80);
-  $("sim-add").innerHTML = pool.map(p => `<label class="${state.simSel.add.has(p.name) ? "on" : ""}"><input type="checkbox" data-add="${esc(p.name)}"${state.simSel.add.has(p.name) ? " checked" : ""}><span>${esc(p.name)}${own[p.name] ? `<span class="chip own">${esc(sh(own[p.name]))}</span>` : ""} <span class="m">${esc(p.elig)} · ${esc(p.team)} · ESPN ${p.espn || "—"}${p.status ? " · " + esc(p.status) : ""}</span></span><span class="m num">${REF.grid[cw][COLI[p.team]]}경기 · ${p.value.toFixed(2)}</span></label>`).join("") || `<div class="note" style="padding:10px">검색 결과가 없습니다.</div>`;
+  $("sim-add").innerHTML = pool.map(p => `<label class="${state.simSel.add.has(p.name) ? "on" : ""}"><input type="checkbox" data-add="${esc(p.name)}"${state.simSel.add.has(p.name) ? " checked" : ""}><span>${esc(p.name)}${own[p.name] ? `<span class="chip own">${esc(sh(own[p.name]))}</span>` : ""} <span class="m">${esc(p.elig)} · ${esc(p.team)} · ESPN ${p.espn || "—"}${statusOf(p.name) ? " · " + esc(statusOf(p.name)) : ""}${waOf(p.name) ? " · 웨이버 " + md(waOf(p.name)) : ""}</span></span><span class="m num">${REF.grid[cw][COLI[p.team]]}경기 · ${p.value.toFixed(2)}</span></label>`).join("") || `<div class="note" style="padding:10px">검색 결과가 없습니다.</div>`;
   renderTradeBox();
   const recSel = $("rec-drop"), mine = ((R[ME] || {}).active || []).map(n => state.PL[n]).filter(Boolean).sort((a, b) => a.value - b.value);
   const keep = recSel.value; recSel.innerHTML = (mine.length < ROSTER_MAX ? `<option value="">빈 자리 채우기 (방출 없음, ${ROSTER_MAX - mine.length}자리)</option>` : "") + mine.map(p => `<option value="${esc(p.name)}">${esc(p.name)} (가치 ${p.value.toFixed(2)})</option>`).join(""); if (mine.some(p => p.name === keep) || (keep === "" && mine.length < ROSTER_MAX)) recSel.value = keep;
@@ -461,10 +610,10 @@ function renderForecast() {
   const B = state.base, S = state.scen, team = S ? S.team : ME;
   const ranks = REF.teams.slice().sort((a, b) => (S ? S.R : B).season[b].ew - (S ? S.R : B).season[a].ew);
   const dl = (x, d = 2, p = false) => { const v = p ? x * 100 : x; if (Math.abs(v) < (p ? .5 : .005)) return `<span class="note">±0</span>`; return `<span class="delta ${v > 0 ? "up" : "down"}">${v > 0 ? "+" : ""}${v.toFixed(p ? 0 : d)}${p ? "%p" : ""}</span>`; };
-  $("fc-table").innerHTML = `<table><thead><tr><th>순위</th><th>팀</th><th class="r">기대 승수</th>${S ? '<th class="r">변화</th>' : ""}${state.b2b ? '<th class="r">B2B 영향</th>' : ""}<th class="r">80% 범위</th><th class="r">4강</th>${S ? '<th class="r">변화</th>' : ""}<th class="r">1위</th>${S ? '<th class="r">변화</th>' : ""}</tr></thead><tbody>` +
-    ranks.map((t, i) => { const b = B.season[t], s = S ? S.R.season[t] : b; return `<tr class="${t === ME ? "me" : ""}"><td class="num">${i + 1}</td><td>${esc(sh(t))}</td><td class="r num">${s.ew.toFixed(2)}</td>${S ? `<td class="r num">${dl(s.ew - b.ew)}</td>` : ""}${state.b2b ? `<td class="r num">${dlt(b.ew - state.baseOff.season[t].ew)}</td>` : ""}<td class="r num">${s.p10}–${s.p90}</td><td class="r num">${pct(s.p4)}</td>${S ? `<td class="r num">${dl(s.p4 - b.p4, 0, true)}</td>` : ""}<td class="r num">${pct(s.p1)}</td>${S ? `<td class="r num">${dl(s.p1 - b.p1, 0, true)}</td>` : ""}</tr>`; }).join("") + `</tbody></table>`;
+  $("fc-table").innerHTML = `<table><thead><tr><th>순위</th><th>팀</th><th class="r">기대 승수</th>${S ? '<th class="r">변화</th>' : ""}${state.b2b ? '<th class="r">B2B 영향</th>' : ""}${state.stream.on ? '<th class="r" title="전 팀 스트리밍 반영 전후 기대 승수 차이(현재 로스터)">스트리밍 영향</th>' : ""}<th class="r">80% 범위</th><th class="r">4강</th>${S ? '<th class="r">변화</th>' : ""}<th class="r">1위</th>${S ? '<th class="r">변화</th>' : ""}</tr></thead><tbody>` +
+    ranks.map((t, i) => { const b = B.season[t], s = S ? S.R.season[t] : b; return `<tr class="${t === ME ? "me" : ""}"><td class="num">${i + 1}</td><td>${esc(sh(t))}</td><td class="r num">${s.ew.toFixed(2)}</td>${S ? `<td class="r num">${dl(s.ew - b.ew)}</td>` : ""}${state.b2b ? `<td class="r num">${dlt(b.ew - state.baseOff.season[t].ew)}</td>` : ""}${state.stream.on ? `<td class="r num">${dlt(b.ew - state.baseNS.season[t].ew)}</td>` : ""}<td class="r num">${s.p10}–${s.p90}</td><td class="r num">${pct(s.p4)}</td>${S ? `<td class="r num">${dl(s.p4 - b.p4, 0, true)}</td>` : ""}<td class="r num">${pct(s.p1)}</td>${S ? `<td class="r num">${dl(s.p1 - b.p1, 0, true)}</td>` : ""}</tr>`; }).join("") + `</tbody></table>`;
   const own0 = rosters() ? (() => { const o = {}; for (const t in rosters()) (rosters()[t].active || []).forEach(n => o[n] = t); return o; })() : {};
-  $("fc-note").textContent = (state.b2b ? "백투백 반영 · " : "") + (S ? `시나리오: ${sh(S.team)} — 방출 ${[...S.drop].join(", ") || "없음"} / 영입 ${[...S.add].map(n => n + (own0[n] && own0[n] !== S.team ? `(${sh(own0[n])})` : "")).join(", ") || "없음"}` +
+  $("fc-note").textContent = (state.b2b ? "백투백 반영 · " : "") + (state.stream.on ? `전 팀 스트리밍(주 ${state.stream.acq}회) 반영 · ` : "") + (S ? `시나리오: ${sh(S.team)} — 방출 ${[...S.drop].join(", ") || "없음"} / 영입 ${[...S.add].map(n => n + (own0[n] && own0[n] !== S.team ? `(${sh(own0[n])})` : "")).join(", ") || "없음"}` +
     (S.partners.length ? (S.trade ? ` · 트레이드: 방출 선수는 ${sh(S.partners[0])}로 이동` : ` · 방출 선수는 FA, ${S.partners.map(sh).join(", ")}는 해당 선수만 잃음`) : "") +
     ` (${S.from + 1}주차부터${S.perGame ? ", 이동 선수 경기당 기준" : ""})` : "현재 로스터 기준. 위 Simul에서 교체안을 넣으면 변화가 함께 표시됩니다.");
   const bs = B.season[team], ss = S ? S.R.season[team] : null;
@@ -477,8 +626,8 @@ function renderForecast() {
   $("wk-title").textContent = `${sh(team)} 주별 승리확률`;
   $("wk-legend").innerHTML = `<span><i style="background:var(--s1)"></i>현재 로스터</span>` + (S ? `<span><i style="background:var(--s2)"></i>시나리오</span>` : "");
   drawWeekly(team);
-  $("wk-table").innerHTML = `<table><thead><tr><th>주</th><th>기간</th><th>상대</th><th class="r">현재</th>${S ? '<th class="r">시나리오</th><th class="r">변화</th>' : ""}<th class="r" title="로스터 선수들이 맞는 백투백 2번째 경기 수(선수×경기)">B2B 노출</th>${state.b2b ? '<th class="r">B2B 영향</th>' : ""}</tr></thead><tbody>` +
-    REF.matchups.map((_, w) => { const o = oppOf(team, w), b = wp(B, team, w), s = S ? wp(S.R, team, w) : b; return `<tr><td class="num">${w + 1}</td><td class="num">${md(REF.starts[w])}–${md(REF.ends[w])}</td><td>${esc(sh(o.opp))} ${o.away ? "@" : ""}</td><td class="r num">${pct(b)}</td>${S ? `<td class="r num">${pct(s)}</td><td class="r num">${dl(s - b, 0, true)}</td>` : ""}<td class="r num">${(S ? S.R : B).TW[team + "|" + w].b2bCnt} / ${B.TW[o.opp + "|" + w].b2bCnt}</td>${state.b2b ? `<td class="r num">${dl(b - wp(state.baseOff, team, w), 0, true)}</td>` : ""}</tr>`; }).join("") + `</tbody></table>`;
+  $("wk-table").innerHTML = `<table><thead><tr><th>주</th><th>기간</th><th>상대</th><th class="r">현재</th>${S ? '<th class="r">시나리오</th><th class="r">변화</th>' : ""}<th class="r" title="로스터 선수들이 맞는 백투백 2번째 경기 수(선수×경기)">B2B 노출</th>${state.b2b ? '<th class="r">B2B 영향</th>' : ""}${state.stream.on ? '<th class="r" title="전 팀 스트리밍 반영 전후 승리확률 차이">스트리밍 영향</th>' : ""}</tr></thead><tbody>` +
+    REF.matchups.map((_, w) => { const o = oppOf(team, w), b = wp(B, team, w), s = S ? wp(S.R, team, w) : b; return `<tr><td class="num">${w + 1}</td><td class="num">${md(REF.starts[w])}–${md(REF.ends[w])}</td><td>${esc(sh(o.opp))} ${o.away ? "@" : ""}</td><td class="r num">${pct(b)}</td>${S ? `<td class="r num">${pct(s)}</td><td class="r num">${dl(s - b, 0, true)}</td>` : ""}<td class="r num">${(S ? S.R : B).TW[team + "|" + w].b2bCnt} / ${B.TW[o.opp + "|" + w].b2bCnt}</td>${state.b2b ? `<td class="r num">${dl(b - wp(state.baseOff, team, w), 0, true)}</td>` : ""}${state.stream.on ? `<td class="r num">${dl(b - wp(state.baseNS, team, w), 0, true)}</td>` : ""}</tr>`; }).join("") + `</tbody></table>`;
   const from = S ? S.from : currentWeek(), avgC = (R) => { const o = {}; CATS.forEach(c => { let s = 0, k = 0; for (let w = from; w < NW; w++) { const g = gameOf(R, team, w); s += g.a === team ? g.pc[c] : 1 - g.pc[c]; k++; } o[c] = s / k; }); return o; };
   const cb = avgC(B), cs = S ? avgC(S.R) : null;
   $("cat-effect").innerHTML = `<table><thead><tr><th>카테고리</th><th class="r">현재</th>${S ? '<th class="r">시나리오</th><th class="r">변화</th>' : ""}<th></th></tr></thead><tbody>` +
@@ -518,16 +667,19 @@ function recommend() {
   const nC = mine.filter(n => n !== drop && state.PL[n] && state.PL[n].pos === "C").length;
   const base = rosterFor(ME, from, null).filter(n => n !== drop);
   const opp = w => state.base.TW[oppOf(ME, w).opp + "|" + w];
-  const evalRos = (ros, pg) => { let s = 0; for (let w = from; w < NW; w++) s += pmatch(teamWeek(ros, w, { draws: 80, perGame: pg }), opp(w)); return s; };
+  const ST = state.stream.on, pools = {}; if (ST) for (let w = from; w < NW; w++) pools[w] = streamPoolFor(w, null);
+  /* with streaming on, the candidate takes a core spot and the team keeps streaming its two lowest spots, at its own priority that week */
+  const stw = w => ST ? { acq: state.stream.acq, slots: state.stream.mine, pool: pools[w], occ: new Map(state.base.TW[ME + "|" + w].occBefore || []) } : null;
+  const evalRos = (ros, pg) => { let s = 0; for (let w = from; w < NW; w++) s += pmatch(teamWeek(ros, w, { draws: 80, perGame: pg, stream: stw(w) }), opp(w)); return s; };
   const b0 = evalRos(drop ? base.concat([drop]) : base, null);
   const cands = faPool().filter(p => !(p.pos === "C" && nC >= 4)).slice(0, 25);
-  const rows = cands.map(p => ({ p, d: evalRos(base.concat([p.name]), new Set([p.name])) - b0 })).sort((a, b) => b.d - a.d).slice(0, 10);
+  const rows = cands.map(p => ({ p, d: evalRos(base.concat([p.name]), statusOf(p.name) === "O" ? null : new Set([p.name])) - b0 })).sort((a, b) => b.d - a.d).slice(0, 10);
   state.rec = { drop, rows };
 }
 function renderRec() {
   if (!state.rec) { $("rec-table").innerHTML = ""; return; }
   $("rec-table").innerHTML = `<table><thead><tr><th>순위</th><th>선수</th><th>포지션·팀</th><th class="r">ESPN</th><th class="r">기대 승수 변화</th></tr></thead><tbody>` +
-    state.rec.rows.map((r, i) => `<tr><td class="num">${i + 1}</td><td>${esc(r.p.name)}${r.p.status ? ` <span class="stat-o">${esc(r.p.status)}</span>` : ""}</td><td>${esc(r.p.elig)} · ${esc(r.p.team)}</td><td class="r num">${r.p.espn || "—"}</td><td class="r num"><span class="delta ${r.d >= 0 ? "up" : "down"}">${r.d >= 0 ? "+" : ""}${r.d.toFixed(2)}</span></td></tr>`).join("") + `</tbody></table>`;
+    state.rec.rows.map((r, i) => `<tr><td class="num">${i + 1}</td><td>${esc(r.p.name)}${statusOf(r.p.name) ? ` <span class="${statusOf(r.p.name) === "O" ? "stat-o" : "stat-dtd"}">${esc(statusOf(r.p.name))}</span>` : ""}</td><td>${esc(r.p.elig)} · ${esc(r.p.team)}</td><td class="r num">${r.p.espn || "—"}</td><td class="r num"><span class="delta ${r.d >= 0 ? "up" : "down"}">${r.d >= 0 ? "+" : ""}${r.d.toFixed(2)}</span></td></tr>`).join("") + `</tbody></table>`;
 }
 
 /* ---------- orchestration ---------- */
@@ -535,13 +687,13 @@ function renderFresh() {
   const r = state.docs["league/rosters"], a = state.docs["league/actuals"], res = state.docs["league/results"];
   const done = res && res.weeks ? Object.keys(res.weeks).length : 0;
   $("fresh").innerHTML = (state.db === "none" ? `<span class="pill warn">저장소에 연결되지 않음</span>` : state.db === "snapshot" ? `<span class="pill warn" title="실시간 저장소 대신 페이지에 내장된 데이터로 계산">스냅샷 데이터 · ${esc((EMBED.asOf || "").slice(0, 10))}</span>` : "") +
-    `<span class="pill">로스터 ${esc(r && r.asOf ? r.asOf.slice(0, 16).replace("T", " ") : "—")}</span><span class="pill">실제 스탯 ${esc(a && a.asOf ? a.asOf.slice(0, 10) : "시즌 시작 전")}</span><span class="pill">결과 반영 ${done}주</span>${state.b2b ? '<span class="pill b2b">백투백 반영 중</span>' : ""}${state.busy ? '<span class="pill">계산 중…</span>' : ""}`;
+    `<span class="pill">로스터 ${esc(r && r.asOf ? r.asOf.slice(0, 16).replace("T", " ") : "—")}</span><span class="pill">실제 스탯 ${esc(a && a.asOf ? a.asOf.slice(0, 10) : "시즌 시작 전")}</span><span class="pill">결과 반영 ${done}주</span>${state.stream.on ? `<span class="pill" title="FA 목록 ${esc(faDoc() ? (faDoc().asOf || "").slice(0, 16).replace("T", " ") : "없음")}">전 팀 스트리밍 · 주 ${state.stream.acq}회</span>` : ""}${state.b2b ? '<span class="pill b2b">백투백 반영 중</span>' : ""}${state.busy ? '<span class="pill">계산 중…</span>' : ""}`;
 }
 function setTab(t) { state.tab = t; try { localStorage.setItem("td-tab", t); } catch (e) {} $("tab-now").setAttribute("aria-selected", String(t === "now")); $("tab-fc").setAttribute("aria-selected", String(t === "fc")); render(); }
 function renderTeamUI() {
   const sel = $("team-sel");
   if (!sel.options.length) sel.innerHTML = REF.teams.map(t => `<option value="${esc(t)}">${esc(t)}${t === OWN ? " (내 팀)" : ""}</option>`).join("");
-  sel.value = ME; $("b2b-on").checked = state.b2b;
+  sel.value = ME; $("b2b-on").checked = state.b2b; $("st-on").checked = state.stream.on; $("st-acq").value = String(state.stream.acq); $("st-mine").value = String(state.stream.mine); $("st-acq").disabled = $("st-mine").disabled = !state.stream.on;
   $("h1-team").textContent = sh(ME); document.title = `${sh(ME)} · 리그 팀별 대시보드 v2.2`;
   $("roster-title").textContent = `${sh(ME)} 로스터`; $("rec-title").textContent = `FA 추천 (${sh(ME)})`;
 }
@@ -550,6 +702,7 @@ function setTeam(t) {
   if (!REF.teams.includes(t) || t === ME) return;
   ME = t; try { localStorage.setItem("td2-team", t); } catch (e) {}
   state.scen = null; state.rec = null; state.simSel.drop.clear(); state.simSel.add.clear(); $("sim-msg").textContent = ""; $("sim-q").value = "";
+  if (state.stream.on && state.stream.mine !== STREAM_SLOTS) { state.busy = true; renderTeamUI(); renderFresh(); recompute(); return; }
   render();
 }
 function render() {
@@ -573,6 +726,7 @@ function recompute() {
   timer = setTimeout(() => {
     if (!rosters()) { render(); return; }
     buildPlayers(); state.base = computeAll(null); state.baseOff = state.b2b ? computeAll(null, false) : state.base;
+    state.baseNS = state.stream.on ? computeAll(null, state.b2b, NOSTREAM) : state.base;
     if (state.scen) state.scen.R = computeAll(state.scen);
     state.busy = false; render();
   }, 30);
@@ -604,6 +758,7 @@ document.addEventListener("change", e => {
   else if (t.dataset && t.dataset.add != null) { t.checked ? state.simSel.add.add(t.dataset.add) : state.simSel.add.delete(t.dataset.add); t.closest("label").classList.toggle("on", t.checked); renderTradeBox(); }
   else if (t.id === "team-sel") setTeam(t.value);
   else if (t.id === "b2b-on") { state.b2b = t.checked; try { localStorage.setItem("td22-b2b", t.checked ? "1" : "0"); } catch (e) {} state.rec = null; state.busy = true; renderFresh(); recompute(); }
+  else if (t.id === "st-on" || t.id === "st-acq" || t.id === "st-mine") { state.stream = { on: $("st-on").checked, acq: +$("st-acq").value, mine: +$("st-mine").value === 1 ? 1 : 2 }; try { localStorage.setItem("td22-stream", JSON.stringify(state.stream)); } catch (e) {} state.rec = null; state.busy = true; renderTeamUI(); renderFresh(); recompute(); }
   else if (t.id === "sim-other") { state.simOther = t.checked; if (!t.checked) { const own = ownerMap(); [...state.simSel.add].forEach(n => { if (own[n]) state.simSel.add.delete(n); }); } renderSimControls(); }
   else if (t.id === "sim-week") renderSimControls();
 });
@@ -621,12 +776,12 @@ const EMBED = __EMBED__;   /* league snapshot used when the live store is unavai
   let db = null;
   try { db = window.claude && window.claude.use ? await window.claude.use("db") : null; } catch (e) { db = null; }
   if (!db) { state.docs = Object.assign({}, EMBED.docs); state.db = "snapshot"; recompute(); return; }
-  const paths = ["league/rosters", "league/actuals", "league/results", "league/live", "league/meta"];
+  const paths = ["league/rosters", "league/actuals", "league/results", "league/live", "league/fa", "league/meta"];
   let pending = new Set(paths);
   paths.forEach(path => db.doc(path).onSnapshot(snap => {
     state.docs[path] = snap.exists ? snap.data() : null;
     pending.delete(path); if (!pending.size) state.db = "ready";
-    if (path === "league/rosters" || path === "league/actuals" || path === "league/results" || path === "league/live" || !pending.size) recompute(); else renderFresh();
+    if (path !== "league/meta" || !pending.size) recompute(); else renderFresh();
   }, () => { pending.delete(path); if (!pending.size) { state.db = "ready"; recompute(); } }));
 })();
 </script>
