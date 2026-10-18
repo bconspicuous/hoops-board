@@ -85,7 +85,18 @@ def pwin(a, b):
         for k, q in enumerate(dist): nd[k] += q * (1 - p); nd[k + 1] += q * p
         dist = nd
     return sum(dist[6:])
-def pmatch(a, b): x, y = pwin(a, b), pwin(b, a); return x / (x + y)
+INTC = {"TPM", "REB", "AST", "STL", "BLK", "TO", "DD", "PTS", "PF"}
+def pcat3(a, b):
+    """per category (P(win), P(tie), P(loss)) for a; integer totals tie when |diff| < 0.5 (continuity correction), FG%/FT% never tie"""
+    P = lambda x: .5 * (1 + math.erf(x / math.sqrt(2))); out = {}
+    for c in CATS:
+        (ma, sa), (mb, sb) = msd(a, c), msd(b, c); s = math.sqrt(sa * sa + sb * sb + 1e-12); d = ma - mb
+        hi, lo = ((1 - P((.5 - d) / s), P((-.5 - d) / s)) if c in INTC else (P(d / s), 1 - P(d / s)))
+        ti = max(0.0, 1 - hi - lo); out[c] = (lo, ti, hi) if c in LOW else (hi, ti, lo)
+    return out
+def pmatch(a, b):
+    """objective = expected category win share for the week, (W + T/2) / 11 — the league ranks by cumulative category win%"""
+    return sum(w + t / 2 for w, t, l in pcat3(a, b).values()) / len(CATS)
 
 # ---------------- planner ----------------
 def optimize(keep, slot, opp_sum, pool, A, avail_from, topc=16, beam_w=120, regap=2):
