@@ -25,6 +25,9 @@ for n in src.get("status", {}):
 print("ERRORS:", errs or "none"); print("WARNINGS:", warns or "none")
 print({t: (len(r.get('active', [])), len(r.get('ir', []))) for t, r in src["teams"].items()})
 if not errs:
-    os.makedirs(out, exist_ok=True); json.dump(src, open(os.path.join(out, "rosters.json"), "w"), ensure_ascii=False, indent=1)
-    meta = json.load(open("seed_meta.json")); meta["asOf"] = src["asOf"]; json.dump(meta, open(os.path.join(out, "meta.json"), "w"), ensure_ascii=False)
+    os.makedirs(out, exist_ok=True)
+    if os.path.abspath(sys.argv[1]) != os.path.abspath(os.path.join(out, "rosters.json")): json.dump(src, open(os.path.join(out, "rosters.json"), "w"), ensure_ascii=False, indent=1)
+    mp = os.path.join(out, "meta.json"); meta = json.load(open(mp if os.path.exists(mp) else "seed_meta.json"))
+    import datetime as dt; meta["asOf"] = dt.datetime.now(dt.timezone(dt.timedelta(hours=9))).strftime("%Y-%m-%dT%H:%M+09:00"); meta["rosterAsOf"] = src["asOf"]
+    json.dump(meta, open(mp, "w"), ensure_ascii=False)
     print("staged ->", out)
