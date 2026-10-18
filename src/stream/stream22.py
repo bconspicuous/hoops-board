@@ -88,79 +88,82 @@ def pwin(a, b):
 def pmatch(a, b): x, y = pwin(a, b), pwin(b, a); return x / (x + y)
 
 # ---------------- planner ----------------
-if __name__ == "__main__":
-    ME, SLOT = "Garak Twindragons", os.environ.get("SLOT", "John Collins")
-    GADD = [x for x in os.environ.get("OPP_ADD", "Derik Queen").split("|") if x]
-    A = int(os.environ.get("ACQ", 6)); TOPC = int(os.environ.get("TOPC", 14)); BEAM = int(os.environ.get("BEAM", 60))
-    WAIVER = {n: 1 for n in os.environ.get("WAIVER", "Coby White|Jaden McDaniels|Reed Sheppard|DeMar DeRozan|RJ Barrett").split("|") if n}
-    opp_team = next(b if a == ME else a for a, b in REF["matchups"][W] if ME in (a, b))
-    T = ROS["teams"]; mine = [n for n in T[ME]["active"] if n != SLOT]
-    opp = T[opp_team]["active"] + GADD
-    rostered = {n for t in T.values() for n in t["active"] + t.get("ir", [])} | set(GADD)
-    CMAX = int(os.environ.get("CMAX", 4)); c_base = sum(1 for n in mine if PL[n]["pos"] == "C")
-    pool = [n for n, p in PL.items() if n not in rostered and p["team"] and (STATUS.get(n) or p.get("status") or "") != "O"
-            and not (p["pos"] == "C" and c_base >= CMAX)] + [SLOT]
-    print("centers kept:", c_base, "-> C streamers allowed:", c_base < CMAX, flush=True)
-    to, no, _ = fill_base(opp); OPP = summarize(to, no)
-    tb, nb, free = fill_base(mine)
-    CON, GMS = {}, {}
-    for n in pool:
+def optimize(keep, slot, opp_sum, pool, A, avail_from, topc=16, beam_w=120, regap=2):
+    """Best day-by-day holder sequence for one slot. keep = the other roster players; slot = current holder.
+    Re-adding a player we dropped is allowed `regap` days after the drop (league waiver rule); players with
+    avail_from[d] > d are still on waivers (claim not assumed). Returns (p, seq, acq, summary, n_slot_games)."""
+    tb, nb, free = fill_base(keep); CON, GMS = {}, {}
+    for n in set(pool) | {slot}:
         p = PL[n]; pl = plays(p, per_game=True); ok = slot_open(free, mask(p)); v0, v1 = vecs(p)
-        use = (pl > 0) & ok; CON[n] = use[:, :, None] * np.where((pl == 2)[:, :, None], v1, v0)[:, :, :]; GMS[n] = use.mean(0)
+        use = (pl > 0) & ok; CON[n] = use[:, :, None] * np.where((pl == 2)[:, :, None], v1, v0); GMS[n] = use.mean(0)
     def evaluate(h):
         tot = tb.copy(); n = nb
         for d, x in enumerate(h):
             if x: tot += CON[x][:, d, :]; n += GMS[x][d]
         return summarize(tot, n)
-    def score(h): return pmatch(evaluate(h), OPP)
-    base_h = [SLOT] * ND; base = score(base_h); none = score([None] * ND)
-    # per-day candidate shortlist by single-day marginal effect
+    sc = lambda h: pmatch(evaluate(h), opp_sum)
     short = {}
     for d in range(ND):
-        sc = []
+        lst = []
         for n in pool:
-            if n == SLOT or GMS[n][d] < .05 or WAIVER.get(n, 0) > d: continue
-            h = [None] * ND; h[d] = n; sc.append((score(h), n))
-        short[d] = [n for _, n in sorted(sc, reverse=True)[:TOPC]]
-    # beam search over day-by-day holders (contiguous holding, no re-adds, <= A changes)
-    beam = [(base, (SLOT,), 0)]
-    for d in range(1, ND + 1):
-        pass
-    states = [((SLOT,), 0)]  # holders for days [0..d)
-    beam = []
+            if n == slot or GMS[n][d] < .05 or avail_from.get(n, 0) > d: continue
+            h = [None] * ND; h[d] = n; lst.append((sc(h), n))
+        short[d] = [n for _, n in sorted(lst, reverse=True)[:topc]]
+    def can_add(c, hist, d):
+        if avail_from.get(c, 0) > d: return False
+        if c not in hist: return True
+        last = max(i for i, x in enumerate(hist) if x == c)          # last day held (hist index = day)
+        return d >= last + 1 + regap                                  # dropped on last+1, back after regap days
+    states = [((), 0)]
     for d in range(ND):
-        nxt = {}
+        nxt = set()
         for hist, acq in states:
-            prev = hist[-1] if hist else SLOT
-            opts = [(prev, acq)] + [(c, acq + 1) for c in short[d] if c not in hist and c != prev and acq + 1 <= A]
-            for c, a2 in opts:
-                h = list(hist[1:] if hist and hist[0] == SLOT and len(hist) == d + 1 else hist)
-                nxt[(tuple(hist) + (c,), a2)] = None
-        cand = []
-        for (hist, a2) in nxt:
-            seq = list(hist[1:]) + [None] * (ND - d - 1)          # hist[0] is the initial holder marker
-            cand.append((score(seq), hist, a2))
-        cand.sort(key=lambda x: -x[0]); states = [(h, a) for _, h, a in cand[:BEAM]]
-        best_partial = cand[0]
-    final = []
-    for hist, a2 in states:
-        seq = list(hist[1:]); final.append((score(seq), seq, a2))
-    final.sort(key=lambda x: -x[0])
-    best_by_a = {}
-    for s, seq, a2 in final:
-        if a2 not in best_by_a: best_by_a[a2] = (s, seq)
-    days = []
+            prev = hist[-1] if hist else slot
+            nxt.add((hist + (prev,), acq))
+            if acq < A:
+                for c in short[d]:
+                    if c != prev and (c != slot or hist) and can_add(c, list(hist) if hist else [slot], d): nxt.add((hist + (c,), acq + 1))
+        cand = sorted(((sc(list(h) + [None] * (ND - d - 1)), h, a) for h, a in nxt), key=lambda x: -x[0])
+        states = [(h, a) for _, h, a in cand[:beam_w]]
+    fin = sorted(((sc(list(h)), list(h), a) for h, a in states), key=lambda x: -x[0])
+    byA = {}
+    for s, h, a in fin: byA.setdefault(a, (s, h))
+    s, h, a = fin[0]; ev = evaluate(h)
+    return dict(p=s, seq=h, acq=a, sum=ev, byA=byA, short=short, gms={x: GMS[x] for x in set(h)}, base=sc([slot] * ND), none=sc([None] * ND), evaluate=evaluate)
+
+if __name__ == "__main__":
     import datetime as dt
-    d0 = dt.date.fromisoformat(REF["starts"][W])
-    for d in range(ND): days.append((d0 + dt.timedelta(days=d)).strftime("%m/%d %a"))
-    bs, bseq, ba = final[0]; ev = evaluate(bseq); evb = evaluate(base_h)
-    out = dict(week=W + 1, opp=opp_team, opp_add=GADD, days=days, base=base, empty_slot=none, best=dict(p=bs, seq=bseq, acq=ba),
-               by_acq={a: dict(p=s, seq=q) for a, (s, q) in sorted(best_by_a.items())},
-               cats_base=pcat(evb, OPP), cats_best=pcat(ev, OPP), games_base=evb["n"], games_best=ev["n"], opp_games=OPP["n"],
-               slot_games_base=[float(GMS[SLOT][d]) for d in range(ND)], slot_games_best=[float(GMS[x][d]) if x else 0 for d, x in enumerate(bseq)],
-               open_slot_rate=[float(np.mean(free[:, d] > 0)) for d in range(ND)], teams_playing=[len(s) for s in sched],
-               shortlist={days[d]: [(n, PL[n]["team"], PL[n]["pos"], round(float(GMS[n][d]), 2)) for n in short[d][:6]] for d in range(ND)},
-               means_base={c: float(evb["c"][c]) for c in CATS}, means_best={c: float(ev["c"][c]) for c in CATS}, means_opp={c: float(OPP["c"][c]) for c in CATS})
-    json.dump(out, open(os.environ.get("OUT", "/home/claude/nba/stream22/plan.json"), "w"), ensure_ascii=False, indent=1)
-    print(json.dumps({k: out[k] for k in ("base", "empty_slot", "best", "open_slot_rate", "teams_playing")}, ensure_ascii=False))
-    for a, v in out["by_acq"].items(): print(a, round(v["p"] * 100, 1), v["seq"])
+    ME, SLOT = "Garak Twindragons", os.environ.get("SLOT", "John Collins")
+    GADD = [x for x in os.environ.get("OPP_ADD", "Derik Queen").split("|") if x]
+    A = int(os.environ.get("ACQ", 6)); OA = int(os.environ.get("OPP_ACQ", 6))
+    AVAIL = {n: int(d) for n, d in (x.split("=") for x in os.environ.get("AVAIL_FROM", "Coby White=1|Jaden McDaniels=1|Reed Sheppard=1|DeMar DeRozan=1|RJ Barrett=1").split("|") if x)}
+    opp_team = next(b if a == ME else a for a, b in REF["matchups"][W] if ME in (a, b))
+    T = ROS["teams"]; mine = [n for n in T[ME]["active"] if n != SLOT]; opp_all = T[opp_team]["active"] + GADD
+    OSLOT = os.environ.get("OPP_SLOT") or min(opp_all, key=lambda n: PL[n]["value"]); opp_keep = [n for n in opp_all if n != OSLOT]
+    rostered = {n for t in T.values() for n in t["active"] + t.get("ir", [])} | set(GADD)
+    def pool_for(keep, cmax=4):
+        cb = sum(1 for n in keep if PL[n]["pos"] == "C")
+        return [n for n, p in PL.items() if n not in rostered and p["team"] and (STATUS.get(n) or p.get("status") or "") != "O" and not (p["pos"] == "C" and cb >= cmax)]
+    # 1) opponent without streaming, 2) our plan vs that, 3) opponent best-response streaming vs our plan, 4) our plan vs streaming opponent
+    to, no, _ = fill_base(opp_all); OPP0 = summarize(to, no)
+    r0 = optimize(mine, SLOT, OPP0, pool_for(mine), A, AVAIL)
+    ours0 = r0["sum"]; base_static = pmatch(summarize(*fill_base(mine + [SLOT])[:2]), OPP0)
+    ro = optimize(opp_keep, OSLOT, ours0, [n for n in pool_for(opp_keep)], OA, AVAIL)
+    OPP1 = ro["sum"]
+    r1 = optimize(mine, SLOT, OPP1, pool_for(mine), A, AVAIL)
+    keep_vs_stream = pmatch(summarize(*fill_base(mine + [SLOT])[:2]), OPP1)
+    d0 = dt.date.fromisoformat(REF["starts"][W]); days = [(d0 + dt.timedelta(days=d)).strftime("%m/%d %a") for d in range(ND)]
+    nm = lambda s: [x if x else "-" for x in s]
+    out = dict(week=W + 1, days=days, opp=opp_team, opp_add=GADD, opp_slot=OSLOT,
+               static=dict(keep=base_static, plan=r0["p"], seq=r0["seq"], acq=r0["acq"]),
+               opp_stream=dict(seq=ro["seq"], acq=ro["acq"], opp_p_vs_our_plan=ro["p"]),
+               vs_streaming_opp=dict(keep=keep_vs_stream, plan=r1["p"], seq=r1["seq"], acq=r1["acq"], byA={a: dict(p=s, seq=h) for a, (s, h) in sorted(r1["byA"].items())}),
+               cats_keep_vs_stream=pcat(summarize(*fill_base(mine + [SLOT])[:2]), OPP1), cats_plan_vs_stream=pcat(r1["sum"], OPP1), cats_plan_vs_static=pcat(r0["sum"], OPP0),
+               overlap=[(days[d], r1["seq"][d]) for d in range(ND) if r1["seq"][d] and r1["seq"][d] == ro["seq"][d]],
+               shortlist={days[d]: [(n, PL[n]["team"], PL[n]["pos"], PL[n]["AST"], PL[n]["STL"]) for n in r1["short"][d][:6]] for d in range(ND)})
+    json.dump(out, open(os.environ.get("OUT", "/home/claude/nba/stream22/plan2.json"), "w"), ensure_ascii=False, indent=1, default=float)
+    print("opp slot:", OSLOT, "| static: keep %.1f -> plan %.1f" % (base_static * 100, r0["p"] * 100), nm(r0["seq"]))
+    print("opp streams:", nm(ro["seq"]), "acq", ro["acq"])
+    print("vs streaming opp: keep %.1f -> plan %.1f" % (keep_vs_stream * 100, r1["p"] * 100), nm(r1["seq"]), "acq", r1["acq"])
+    for a, (s, h) in sorted(r1["byA"].items()): print("  acq", a, round(s * 100, 1), nm(h))
+    print("overlap:", out["overlap"])
