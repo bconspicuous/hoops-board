@@ -1,0 +1,18 @@
+{
+ "asOf": "2026-10-19T07:07+09:00",
+ "source": "ESPN League Settings 캡처 (G League)",
+ "league": "G League",
+ "teams": 8,
+ "scoring": "Head to Head Each Category",
+ "cats": ["FG%", "FT%", "3PM", "REB", "AST", "STL", "BLK", "TO", "PF", "DD", "PTS"],
+ "roster": { "size": 13, "starters": 10, "bench": 3, "ir": 2, "slots": { "PG": 1, "SG": 1, "SF": 1, "PF": 1, "C": 1, "G": 1, "F": 1, "UTIL": 3 }, "maxC": 4, "gamesLimit": null },
+ "lineup": { "changes": "daily, locks individually at scheduled game time", "protection": true },
+ "acquisition": { "system": "waivers", "seasonLimit": null, "perMatchup": 7, "perDays": 7, "waiverDays": 1, "waiverOrder": "move to last after claim, never reset" },
+ "trade": { "limit": null, "deadline": "2027-02-20T02:00+09:00", "reviewDays": 1, "vetoVotes": 3 },
+ "season": { "start": "NBA week 1", "matchups": 14, "weeksPerMatchup": 1, "catTieBreaker": "none" },
+ "playoffs": { "teams": 6, "roundWeeks": [1, 2, 2], "seedTieBreaker": "head-to-head record", "reseed": false, "consolation": true, "lockEliminated": false },
+ "draft": { "type": "snake", "date": "2026-10-16T23:45+09:00", "order": "manual (league manager)", "pickTrading": false },
+ "keepers": false,
+ "observeUndroppables": true,
+ "undroppable": ["Shai Gilgeous-Alexander", "James Harden", "Devin Booker", "Donovan Mitchell", "Kevin Durant", "Nikola Jokic", "Victor Wembanyama", "Karl-Anthony Towns"]
+}

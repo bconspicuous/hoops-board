@@ -131,7 +131,7 @@ footer { color: var(--muted); font-size: 12px; display: grid; gap: 4px; border-t
   <header class="top">
     <div>
       <h1><span id="h1-team">Twindragons</span> 시즌 대시보드 <small class="ver">v2.2</small></h1>
-      <p class="sub">8팀 H2H 카테고리별 승패 11개(FG% FT% 3PM REB AST STL BLK TO↓ DD PTS PF↓) · 순위 = 누적 카테고리 승률(무 = 0.5승) · 정규시즌 14주</p>
+      <p class="sub">8팀 H2H 카테고리별 승패 11개(FG% FT% 3PM REB AST STL BLK TO↓ DD PTS PF↓) · 순위 = 누적 카테고리 승률(무 = 0.5승) · 정규시즌 14주 · 플레이오프 6팀(1·2·2주)</p>
     </div>
     <div class="fresh" id="fresh"></div>
   </header>
@@ -140,7 +140,7 @@ footer { color: var(--muted); font-size: 12px; display: grid; gap: 4px; border-t
       <button class="tab" role="tab" id="tab-now" aria-selected="true" type="button">현황</button>
       <button class="tab" role="tab" id="tab-fc" aria-selected="false" type="button">예측</button>
     </nav>
-    <div class="right"><label class="chk b2bchk"><input type="checkbox" id="b2b-on"> 백투백 반영</label><span class="stsel"><label class="chk b2bchk" style="padding-bottom:0"><input type="checkbox" id="st-on"> 전 팀 스트리밍</label><select id="st-acq" aria-label="팀당 주간 영입 한도"><option value="5">주 5회</option><option value="6">주 6회</option><option value="7">주 7회</option></select><select id="st-mine" aria-label="선택 팀의 스트리밍 자리 수" title="선택한 팀만 적용, 다른 팀은 항상 2자리"><option value="2">내 팀 2자리</option><option value="1">내 팀 1자리</option></select></span><div class="teamsel"><label for="team-sel">팀</label><select id="team-sel"></select></div></div>
+    <div class="right"><label class="chk b2bchk"><input type="checkbox" id="b2b-on"> 백투백 반영</label><span class="stsel"><label class="chk b2bchk" style="padding-bottom:0"><input type="checkbox" id="st-on"> 전 팀 스트리밍</label><select id="st-acq" aria-label="팀당 주간 영입 한도"><option value="0">규정 한도</option><option value="5">주 5회</option><option value="6">주 6회</option><option value="7">주 7회</option></select><select id="st-mine" aria-label="선택 팀의 스트리밍 자리 수" title="선택한 팀만 적용, 다른 팀은 항상 2자리"><option value="2">내 팀 2자리</option><option value="1">내 팀 1자리</option></select></span><div class="teamsel"><label for="team-sel">팀</label><select id="team-sel"></select></div></div>
   </div>
 
   <div id="view-empty" class="empty" hidden><b id="empty-title">로스터를 불러오는 중입니다</b><span id="empty-text">잠시만 기다려 주세요.</span></div>
@@ -150,7 +150,7 @@ footer { color: var(--muted); font-size: 12px; display: grid; gap: 4px; border-t
       <div class="kpis" id="kpis"></div>
       <div class="grid2">
         <div class="panel"><h2 id="mu-title">이번 주 매치업</h2><div class="tbl" id="mu-table"></div><p class="note" id="mu-note"></p></div>
-        <div class="panel"><h2>리그 순위</h2><div class="tbl" id="standings"></div><p class="note">순위 = 누적 카테고리 승률 (승 + 무/2) ÷ (승+패+무). 기록·W-L-T는 카테고리 단위. 실제 기록은 매주 결과 캡처로 반영, 기대 승률·확률은 남은 주차를 카테고리 단위로 시뮬레이션(2만 회).</p></div>
+        <div class="panel"><h2>리그 순위</h2><div class="tbl" id="standings"></div><p class="note">순위 = 누적 카테고리 승률 (승 + 무/2) ÷ (승+패+무). 기록·W-L-T는 카테고리 단위. 실제 기록은 매주 결과 캡처로 반영, 기대 승률·확률은 남은 주차를 카테고리 단위로 시뮬레이션(2만 회). PO = 상위 6팀 진출, 우승 = 플레이오프(3v6·4v5 → 1·2시드와 2주 준결승 → 2주 결승) 우승.</p></div>
       </div>
       <div class="panel"><h2 id="roster-title">로스터</h2><div class="tbl" id="roster"></div><p class="note" id="roster-note"></p></div>
       <div class="panel" id="st-panel" hidden><h2 id="st-title">스트리밍 계획 · 전 팀</h2><div class="tbl" id="st-table"></div><p class="note" id="st-note"></p></div>
@@ -205,7 +205,8 @@ footer { color: var(--muted); font-size: 12px; display: grid; gap: 4px; border-t
   <footer>
     <span>예측 모델: ESPN 300 프로젝션(PF·DD 모델 보완) × 2026-27 NBA 일별 실제 일정(14주 전체, 8주차 NBA컵 미정 2경기는 12/8·12/11 가정) × 매일 라인업(PG SG SF PF C G F UTIL×3, 벤치 3), 선수별 예상 출전(GP/82). 실제 스탯이 들어오면 경기 수만큼 가중해 프로젝션과 섞습니다(15경기 = 50%).</span>
     <span>백투백 반영: 팀이 전날도 경기한 날(2번째 경기)에 ① 결장 — 선수별 휴식 성향(35세 이상 휴식 규정 예외, 장기 부상 복귀, 2025-26·2024-25 출전 경기 수)을 예상 출전 경기 수 안에서 2번째 경기로 재배분, ② 기록 — 출전 시간·나이에 비례해 PTS·AST −5%, REB −2%, STL −4%, BLK −5%, 3PM −4%, TO −3%, PF +3%, FG% −1.0%p, FT% −0.5%p(출전 시간 34분 기준), ③ 변동성 — 경기별 표준편차 +5%. 리그 평균 효과는 RotoWire(2014-15)·Frontiers in Psychology(2016-17) 연구, 선수 정보는 Basketball-Reference 시즌 기록.</span>
-    <span>순위 방식: 매주 11개 카테고리별 승·패·무를 누적해 승률 (승 + 무/2) ÷ (승+패+무)로 정렬. 무승부 확률은 정수 카테고리(3PM·REB·AST·STL·BLK·TO·DD·PTS·PF)는 양 팀 주간 합계 차이가 0.5 미만일 확률(정규 근사·연속성 보정), FG%·FT%는 0으로 계산하며, 카테고리 결과는 서로 독립으로 가정합니다. 동률 시 무작위.</span>
+    <span>순위 방식: 매주 11개 카테고리별 승·패·무를 누적해 승률 (승 + 무/2) ÷ (승+패+무)로 정렬. 무승부 확률은 정수 카테고리(3PM·REB·AST·STL·BLK·TO·DD·PTS·PF)는 양 팀 주간 합계 차이가 0.5 미만일 확률(정규 근사·연속성 보정), FG%·FT%는 0으로 계산하며, 카테고리 결과는 서로 독립으로 가정합니다. 시드 동률은 상대 전적(맞대결 카테고리 기록), 그다음 무작위. 플레이오프: 6팀, 1라운드 1주(3v6·4v5, 1·2시드 부전승) → 준결승 2주(1 v 4/5 승자, 2 v 3/6 승자, 재시드 없음) → 결승 2주. 라운드 기간 합산 카테고리 승수가 많은 팀이 승리, 동수면 상위 시드 진출(가정). 플레이오프 기간 전력 = 정규시즌 평균 주간 전력 × 라운드 주수(해당 기간 NBA 일정 미반영).</span>
+    <span>리그 규정(ESPN 설정 캡처 2026-10-19): 로스터 13(선발 10·벤치 3, IR 2), C 최대 4, 매일 라인업(경기 시작 시 개별 잠금, 라인업 보호 켜짐), 영입 한도 7회/7일 매치업(주 길이 비례, 1주차 6회), 웨이버 1일(방출 후 이틀째부터 영입 가능), 웨이버 순위 클레임 시 맨 뒤로, ESPN 방출 불가 선수 적용, 트레이드 마감 2027-02-20.</span>
     <span>전 팀 스트리밍(기본 켜짐): 모든 팀이 시즌 가치 하위 2자리를 주간 영입 한도(기본 6회) 안에서 매일 라인업 빈칸을 채울 FA로 교체. 일정·출전확률·포지션 슬롯을 반영한 기대값 최적화(구간 DP) 후 같은 시뮬레이션에서 재생하며, FA는 팀 간 경합(주별 순환 우선순위, 보유·방출 후 2일 웨이버 동안 사용 불가)합니다. 각 주는 독립 계획으로, 방출된 원래 선수는 다음 주 로스터에 다시 있는 것으로 근사합니다.</span>
     <span>로스터·실제 스탯·경기 결과는 리그 화면 캡처와 공개 통계 사이트를 바탕으로 Claude가 갱신합니다. 이 페이지가 외부 사이트에 직접 접속하지는 않습니다.</span>
   </footer>
@@ -231,9 +232,9 @@ const pct = (x, d = 0) => (x * 100).toFixed(d) + "%";
 const BASE = {};
 REF.players.forEach(a => { const o = {}; REF.fields.forEach((f, i) => o[f] = a[i]); o.mask = o.elig.split(",").reduce((m, p) => m | (POSB[p] || 0), POSB[o.pos] || 0); BASE[o.name] = o; });
 
-const state = { db: "pending", docs: {}, tab: "now", PL: {}, base: null, scen: null, simSel: { drop: new Set(), add: new Set() }, simOther: false, b2b: false, baseOff: null, baseNS: null, rec: null, stream: { on: true, acq: 6, mine: 2 } };
+const state = { db: "pending", docs: {}, tab: "now", PL: {}, base: null, scen: null, simSel: { drop: new Set(), add: new Set() }, simOther: false, b2b: false, baseOff: null, baseNS: null, rec: null, stream: { on: true, acq: 0, mine: 2 } };
 try { state.b2b = localStorage.getItem("td22-b2b") === "1"; } catch (e) {}
-try { const s = JSON.parse(localStorage.getItem("td22-stream") || "null"); if (s && typeof s.on === "boolean" && [5, 6, 7].includes(s.acq)) state.stream = { on: s.on, acq: s.acq, mine: s.mine === 1 ? 1 : 2 }; } catch (e) {}
+try { const s = JSON.parse(localStorage.getItem("td22-stream2") || "null"); if (s && typeof s.on === "boolean" && [0, 5, 6, 7].includes(s.acq)) state.stream = { on: s.on, acq: s.acq, mine: s.mine === 1 ? 1 : 2 }; } catch (e) {}
 const NOSTREAM = { on: false, acq: 0, mine: 2 };
 try { const t = localStorage.getItem("td-tab"); if (t === "fc" || t === "now") state.tab = t; } catch (e) {}
 try { const t = localStorage.getItem("td2-team"); if (t && REF.teams.includes(t)) ME = t; } catch (e) {}
@@ -271,6 +272,14 @@ function buildPlayers() {
   state.PL = PL; PLAYC = new Map();
 }
 function rosters() { const r = state.docs["league/rosters"]; return r && r.teams ? r.teams : null; }
+/* league rules: league/rules doc (ESPN League Settings capture), with the same values as fallback */
+const RULES_DEF = { acquisition: { perMatchup: 7, perDays: 7 }, playoffs: { teams: 6, roundWeeks: [1, 2, 2] }, roster: { maxC: 4 },
+  undroppable: ["Shai Gilgeous-Alexander", "James Harden", "Devin Booker", "Donovan Mitchell", "Kevin Durant", "Nikola Jokic", "Victor Wembanyama", "Karl-Anthony Towns"] };
+function rules() { const r = state.docs["league/rules"]; return r && r.acquisition && r.playoffs ? r : RULES_DEF; }
+function undroppable() { return new Set(rules().undroppable || []); }
+/* weekly add limit: the setting, or the league rule prorated by matchup length (7 per 7-day matchup -> 6 in the 6-day week 1) */
+function acqFor(w) { if (state.stream.acq) return state.stream.acq; const a = rules().acquisition; return Math.max(1, Math.round(a.perMatchup * REF.sched[w].length / a.perDays)); }
+function acqLabel() { return state.stream.acq ? `주 ${state.stream.acq}회` : `규정 ${rules().acquisition.perMatchup}회/${rules().acquisition.perDays}일`; }
 function waOf(n) { const f = state.docs["league/fa"]; return f && f.players && f.players[n] && f.players[n].wa || ""; }
 function faDoc() { const f = state.docs["league/fa"]; return f && f.players ? f : null; }
 /* status: rostered players from the roster capture, free agents from the add-list capture, else the projection file */
@@ -382,7 +391,12 @@ function planSlot(cands, orig, origPd, open, days, d0, A) {
 function teamWeek(names, w, opt = {}) {
   const D = opt.draws || 150, b2b = opt.b2b != null ? opt.b2b : state.b2b, days = REF.sched[w].length, ST = opt.stream || null;
   const all = names.map(n => state.PL[n]).filter(Boolean).sort((a, b) => b.value - a.value);
-  const S = ST ? (ST.slots || STREAM_SLOTS) : 0, nCore = ST ? Math.min(all.length, ROSTER_MAX - S) : all.length, ps = all.slice(0, nCore);
+  const S = ST ? (ST.slots || STREAM_SLOTS) : 0, nCore = ST ? Math.min(all.length, ROSTER_MAX - S) : all.length;
+  if (ST && nCore < all.length) {   /* ESPN undroppables cannot be streamed out: the slots go to the lowest droppable players */
+    const und = undroppable(), out = all.slice().reverse().filter(p => !und.has(p.name)).slice(0, all.length - nCore);
+    all.sort((a, b) => (out.includes(a) - out.includes(b)) || (b.value - a.value));
+  }
+  const ps = all.slice(0, nCore);
   const pg = n => !!(opt.perGame && opt.perGame.has(n));
   const NK = KEYS.length, tot = new Float64Array(D * NK), free = new Uint16Array(D * days).fill(1023), U = {}, UB = {};
   const xi = XC.map(c => KEYS.indexOf(c)), xv = new Float64Array(XC.length); let inflSum = 0, b2bCnt = 0;
@@ -483,7 +497,7 @@ function computeAll(scen, b2b = state.b2b, stream = state.stream) {
     const occ = new Map(), pool = stOn ? streamPoolFor(w, scen) : null;
     for (const t of stOn ? priorityOrder(w) : T) {
       const before = stOn ? new Map(occ) : null;
-      TW[t + "|" + w] = teamWeek(rosterFor(t, w, scen), w, { perGame: scen && scen.perGame && scen.moves[t] ? scen.moves[t].in : null, b2b, stream: stOn ? { acq: stream.acq, pool, occ, slots: t === ME ? stream.mine : STREAM_SLOTS } : null });
+      TW[t + "|" + w] = teamWeek(rosterFor(t, w, scen), w, { perGame: scen && scen.perGame && scen.moves[t] ? scen.moves[t].in : null, b2b, stream: stOn ? { acq: stream.acq || acqFor(w), pool, occ, slots: t === ME ? stream.mine : STREAM_SLOTS } : null });
       if (stOn) { TW[t + "|" + w].occBefore = before; TW[t + "|" + w].prio = priorityOrder(w).indexOf(t) + 1; }
     }
   }
@@ -493,35 +507,63 @@ function computeAll(scen, b2b = state.b2b, stream = state.stream) {
     const pc3 = pcat3(A, B), pc = {}; CATS.forEach(c => pc[c] = pc3[c].w + pc3[c].t / 2);
     games.push({ w, a, b, pc3, pc, ex: CATS.reduce((s, c) => s + pc[c], 0), res: res && Array.isArray(res.a) ? res.a : null });
   }));
-  return { TW, games, season: seasonSim(games), cw };
+  return { TW, games, season: seasonSim(games, 20000, TW), cw };
 }
-/* Standings = cumulative category record. Each week every category is a win, loss or tie (tie = 0.5 win + 0.5 loss);
-   win% = (W + T/2) / (W + L + T). Remaining weeks are simulated category by category (20k seasons); categories are
-   treated as independent. Actual results (league/results: a = away team's [W, L, T]) are fixed. Equal win% -> random order. */
-function seasonSim(games, S = 20000) {
+/* Standings = cumulative category record. Each week every category is a win, loss or tie (tie = 0.5 win + 0.5 loss; the league
+   has no category tie-breaker); win% = (W + T/2) / (W + L + T). Remaining weeks are simulated category by category (20k seasons),
+   categories independent. Actual results (league/results: a = away team's [W, L, T]) are fixed. Seeding ties: head-to-head
+   category record between the tied teams, then random. Playoffs (league rule: 6 teams; round weeks 1-2-2, no reseeding):
+   3v6, 4v5 -> 1 v winner(4/5), 2 v winner(3/6) -> final. A playoff matchup is won on categories over the whole round (more
+   category wins); a tied matchup goes to the higher seed. Playoff strength = the team's average regular-season week x round length. */
+function profileOf(TW, t, k) {
+  const ws = []; for (let w = 0; w < NW; w++) ws.push(TW[t + "|" + w]);
+  const avg = f => ws.reduce((s, o) => s + f(o), 0) / ws.length, c = {}, sv = {}, xv = {};
+  CATS.forEach(cat => { const pc = !!PCT_SD[cat]; c[cat] = avg(o => o.c[cat]) * (pc ? 1 : k); sv[cat] = avg(o => o.sv[cat] || 0) * (pc ? 1 / k : k); xv[cat] = avg(o => (o.xv && o.xv[cat]) || 0) * k; });
+  return { c, sv, xv, n: avg(o => o.n) * k, pi: avg(o => o.pi || 1) };
+}
+/* P(a wins more categories than b) and P(equal) for one matchup */
+function pMatchCats(A, B) {
+  const q = pcat3(A, B), NC = CATS.length; let d = new Float64Array(2 * NC + 1); d[NC] = 1;
+  CATS.forEach(c => { const x = q[c], nd = new Float64Array(d.length); for (let i = 0; i < d.length; i++) if (d[i]) { nd[i + 1] += d[i] * x.w; nd[i] += d[i] * x.t; nd[i - 1] += d[i] * x.l; } d = nd; });
+  let w = 0; for (let i = NC + 1; i < d.length; i++) w += d[i]; return { w, t: d[NC] };
+}
+function seasonSim(games, S = 20000, TW = null) {
   const T = REF.teams, ix = Object.fromEntries(T.map((t, i) => [t, i])), n = T.length, r = rng(20261020), NC = CATS.length;
-  const fW = new Float64Array(n), fL = new Float64Array(n), fT = new Float64Array(n), tot = new Float64Array(n), eW = new Float64Array(n), eL = new Float64Array(n), eT = new Float64Array(n);
+  const fW = new Float64Array(n), fL = new Float64Array(n), fT = new Float64Array(n), tot = new Float64Array(n), eW = new Float64Array(n), eL = new Float64Array(n), eT = new Float64Array(n), H0 = new Float64Array(n * n);
   const live = [];
   games.forEach(g => {
     const a = ix[g.a], b = ix[g.b]; tot[a] += NC; tot[b] += NC;
-    if (g.res) { const [w, l, ti] = g.res; fW[a] += w; fL[a] += l; fT[a] += ti; fW[b] += l; fL[b] += w; fT[b] += ti; return; }
+    if (g.res) { const [w, l, ti] = g.res; fW[a] += w; fL[a] += l; fT[a] += ti; fW[b] += l; fL[b] += w; fT[b] += ti; H0[a * n + b] += w + ti / 2; H0[b * n + a] += l + ti / 2; return; }
     const th = new Float64Array(NC * 2); CATS.forEach((c, k) => { const q = g.pc3[c]; th[2 * k] = q.w; th[2 * k + 1] = q.w + q.t; eW[a] += q.w; eL[a] += q.l; eT[a] += q.t; eW[b] += q.l; eL[b] += q.w; eT[b] += q.t; });
     live.push({ a, b, th });
   });
+  /* playoff matchup probabilities by round length */
+  const PO = rules().playoffs || RULES_DEF.playoffs, nPO = Math.min(n, PO.teams || 6), RW = PO.roundWeeks || [1, 2, 2], PM = {};
+  if (TW) [...new Set(RW)].forEach(k => { const pr = T.map(t => profileOf(TW, t, k)), m = new Array(n * n); for (let a = 0; a < n; a++) for (let b = 0; b < n; b++) if (a !== b) m[a * n + b] = pMatchCats(pr[a], pr[b]); PM[k] = m; });
+  const play = (hi, lo, k) => { const q = PM[k][hi * n + lo]; return r() < q.w + q.t ? hi : lo; };   /* hi = higher seed: wins ties */
   const base = new Float64Array(n); for (let i = 0; i < n; i++) base[i] = fW[i] + fT[i] / 2;
-  const rankCnt = T.map(() => new Float64Array(n)), pctAll = T.map(() => new Float64Array(S)), P = new Float64Array(n), key = new Float64Array(n);
+  const rankCnt = T.map(() => new Float64Array(n)), pctAll = T.map(() => new Float64Array(S)), P = new Float64Array(n), H = new Float64Array(n * n), pc = new Float64Array(n), key = new Float64Array(n);
+  const champ = new Float64Array(n), fin = new Float64Array(n);
   for (let s = 0; s < S; s++) {
-    P.set(base);
-    for (const g of live) for (let k = 0; k < NC; k++) { const u = r(); if (u < g.th[2 * k]) P[g.a] += 1; else if (u < g.th[2 * k + 1]) { P[g.a] += .5; P[g.b] += .5; } else P[g.b] += 1; }
-    for (let i = 0; i < n; i++) { const pc = tot[i] ? P[i] / tot[i] : 0; pctAll[i][s] = pc; key[i] = pc + r() * 1e-9; }
-    const order = T.map((_, i) => i).sort((x, y) => key[y] - key[x]);
+    P.set(base); H.set(H0);
+    for (const g of live) { const ab = g.a * n + g.b, ba = g.b * n + g.a; for (let k = 0; k < NC; k++) { const u = r(); if (u < g.th[2 * k]) { P[g.a] += 1; H[ab] += 1; } else if (u < g.th[2 * k + 1]) { P[g.a] += .5; P[g.b] += .5; H[ab] += .5; H[ba] += .5; } else { P[g.b] += 1; H[ba] += 1; } } }
+    for (let i = 0; i < n; i++) { pc[i] = tot[i] ? P[i] / tot[i] : 0; pctAll[i][s] = pc[i]; key[i] = r(); }
+    const order = T.map((_, i) => i).sort((x, y) => { const d = pc[y] - pc[x]; if (Math.abs(d) > 1e-12) return d; const h = H[y * n + x] - H[x * n + y]; return h || (key[y] - key[x]); });
     order.forEach((t, k) => rankCnt[t][k]++);
+    if (TW && nPO === 6) {
+      const sd = order; const w36 = play(sd[2], sd[5], RW[0]), w45 = play(sd[3], sd[4], RW[0]);
+      const f1 = play(sd[0], w45, RW[1]), f2 = play(sd[1], w36, RW[1]); fin[f1]++; fin[f2]++;
+      champ[play(order.indexOf(f1) < order.indexOf(f2) ? f1 : f2, order.indexOf(f1) < order.indexOf(f2) ? f2 : f1, RW[2])]++;
+    } else if (TW && nPO === 4) {
+      const sd = order, f1 = play(sd[0], sd[3], RW[0]), f2 = play(sd[1], sd[2], RW[0]); fin[f1]++; fin[f2]++;
+      champ[play(order.indexOf(f1) < order.indexOf(f2) ? f1 : f2, order.indexOf(f1) < order.indexOf(f2) ? f2 : f1, RW[RW.length - 1])]++;
+    }
   }
   const out = {};
   T.forEach((t, i) => {
-    const ps = Array.from(pctAll[i]).sort((a, b) => a - b), W = fW[i] + eW[i], L = fL[i] + eL[i], Ti = fT[i] + eT[i];
+    const ps = Array.from(pctAll[i]).sort((a, b) => a - b), W = fW[i] + eW[i], L = fL[i] + eL[i], Ti = fT[i] + eT[i], top = k => { let s = 0; for (let j = 0; j < k; j++) s += rankCnt[i][j]; return s / S; };
     out[t] = { eW: W, eL: L, eT: Ti, epct: tot[i] ? (W + Ti / 2) / tot[i] : 0, p10: ps[Math.floor(S * .1)], p90: ps[Math.floor(S * .9)],
-      p4: (rankCnt[i][0] + rankCnt[i][1] + rankCnt[i][2] + rankCnt[i][3]) / S, p1: rankCnt[i][0] / S, erank: rankCnt[i].reduce((s, c, k) => s + c * (k + 1), 0) / S };
+      po: top(nPO), p2: top(2), p4: top(4), p1: rankCnt[i][0] / S, fin: fin[i] / S, champ: champ[i] / S, erank: rankCnt[i].reduce((s, c, k) => s + c * (k + 1), 0) / S };
   });
   return out;
 }
@@ -554,13 +596,13 @@ function segText(w, g, days) {
 function renderStreamPanel(R, cw) {
   const on = state.stream.on; $("st-panel").hidden = !on; if (!on) return;
   const days = REF.sched[cw].length, f = faDoc(), order = priorityOrder(cw);
-  $("st-title").textContent = `${cw + 1}주차 스트리밍 계획 · 전 팀 (주 ${state.stream.acq}회)`;
+  $("st-title").textContent = `${cw + 1}주차 스트리밍 계획 · 전 팀 (팀당 ${acqFor(cw)}회)`;
   $("st-table").innerHTML = `<table><thead><tr><th class="r">우선</th><th>팀</th><th>스트리밍 순서 (자리별, 날짜 = 보유 기간)</th><th class="r">영입</th><th class="r">사용 경기</th><th class="r">주간 카테고리 승률</th></tr></thead><tbody>` +
     order.map(t => { const A = R.TW[t + "|" + cw], N = state.baseNS.TW[t + "|" + cw], pl = A.plan || { segs: [], acq: 0, orig: [] };
       const slot = k => { const g = pl.segs.filter(x => x.slot === k); if (k >= (pl.slots || 2)) return `<span class="note">스트리밍 안 함</span>`; const lead = pl.orig[k] && g.length && !g[0].orig ? `${esc(pl.orig[k])} <span class="note">첫날 방출</span> → ` : ""; return g.length ? lead + g.map(x => segText(cw, x, days)).join(" → ") : `<span class="note">${pl.orig[k] ? esc(pl.orig[k]) + " 방출 후 비움" : "빈 자리"}</span>`; };
       const p1 = wp(R, t, cw), p0 = wp(state.baseNS, t, cw);
       return `<tr class="${t === ME ? "me" : ""}"><td class="r num">${A.prio}</td><td>${esc(sh(t))}</td><td class="stseq"><span class="sl"><span class="sn">①</span>${slot(0)}</span><span class="sl"><span class="sn">②</span>${slot(1)}</span></td><td class="r num">${pl.acq}</td><td class="r num">${A.n.toFixed(1)} <span class="note">(${dlt(A.n - N.n, 1)})</span></td><td class="r num">${pctP(p1)} <span class="note">(${dpp(p1 - p0)})</span></td></tr>`; }).join("") + `</tbody></table>`;
-  $("st-note").textContent = `각 팀은 시즌 가치 하위 2명 자리(빈 자리 포함${state.stream.mine === 1 ? `, ${sh(ME)}는 설정에 따라 최하위 1자리` : ""})를 주 ${state.stream.acq}회 영입 한도 안에서 그날 라인업 빈칸을 채울 FA로 교체한다고 가정합니다. 우선순위는 매주 한 칸씩 순환(가정)하며, 앞 순위 팀이 보유 중이거나 방출 후 2일(웨이버) 이내인 선수는 쓸 수 없습니다. 같은 팀이 방출한 선수의 재영입도 2일 뒤부터. ` +
+  $("st-note").textContent = `각 팀은 시즌 가치 하위 2명 자리(빈 자리 포함${state.stream.mine === 1 ? `, ${sh(ME)}는 설정에 따라 최하위 1자리` : ""})를 주간 영입 한도(${acqLabel()}, 이번 주 ${acqFor(cw)}회) 안에서 그날 라인업 빈칸을 채울 FA로 교체한다고 가정합니다. 우선순위는 매주 한 칸씩 순환(가정)하며, 앞 순위 팀이 보유 중이거나 방출 후 2일(웨이버) 이내인 선수는 쓸 수 없습니다. 같은 팀이 방출한 선수의 재영입도 2일 뒤부터. ` +
     (f ? `FA 목록: ${(f.asOf || "").slice(0, 16).replace("T", " ")} 캡처(프로젝션 보유 ${Object.keys(f.players).length}명${f.unprojected && f.unprojected.length ? ", 프로젝션 없는 " + f.unprojected.length + "명 제외" : ""}), 웨이버 선수는 클레임일부터, 상태(O·DTD)는 이번 주에만 반영.` : "FA 목록 캡처가 없어 프로젝션 풀의 미보유 선수 전체를 FA로 간주합니다.") +
     ` 괄호 = 스트리밍 미반영 대비 변화.`;
 }
@@ -575,7 +617,7 @@ function renderNow() {
     <div class="kpi"><span class="l">${started ? "이번" : "첫"} 매치업 · ${cw + 1}주차</span><span class="v">${esc(sh(o.opp))}</span><span class="d">${md(REF.starts[cw])}–${md(REF.ends[cw])} · ${o.away ? "원정" : "홈"}</span></div>
     <div class="kpi"><span class="l">이번 주 예상 카테고리 W-L-T</span><span class="v num">${wlt(wk[0], wk[1], wk[2])}</span><span class="d">주간 승률 ${pctP(wp(R, ME, cw))}${state.b2b ? ` · 백투백 미반영 ${pctP(wp(state.baseOff, ME, cw))}` : ""}${state.stream.on ? ` · 스트리밍 미반영 ${pctP(wp(state.baseNS, ME, cw))}` : ""}</span></div>
     <div class="kpi"><span class="l">시즌 기록 (카테고리)</span><span class="v num">${rec.w}-${rec.l}-${rec.t}</span><span class="d">${rec.pct != null ? "승률 " + pctP(rec.pct) : started ? "결과 캡처 대기" : "시즌 시작 전"}</span></div>
-    <div class="kpi"><span class="l">예상 최종 승률</span><span class="v num">${pctP(s.epct)}<small> · ${ranks.indexOf(ME) + 1}위</small></span><span class="d">W-L-T ${wlt(s.eW, s.eL, s.eT, 0)} · 4강 ${pct(s.p4)} · 1위 ${pct(s.p1)}${state.b2b ? ` · B2B 미반영 ${pctP(state.baseOff.season[ME].epct)}` : ""}${state.stream.on ? ` · 스트리밍 미반영 ${pctP(state.baseNS.season[ME].epct)}` : ""}</span></div>`;
+    <div class="kpi"><span class="l">예상 최종 승률</span><span class="v num">${pctP(s.epct)}<small> · ${ranks.indexOf(ME) + 1}위</small></span><span class="d">W-L-T ${wlt(s.eW, s.eL, s.eT, 0)} · PO ${pct(s.po)} · 1위 ${pct(s.p1)} · 우승 ${pct(s.champ)}${state.b2b ? ` · B2B 미반영 ${pctP(state.baseOff.season[ME].epct)}` : ""}${state.stream.on ? ` · 스트리밍 미반영 ${pctP(state.baseNS.season[ME].epct)}` : ""}</span></div>`;
   $("mu-title").textContent = `${cw + 1}주차 매치업 · vs ${sh(o.opp)}`;
   const A = R.TW[ME + "|" + cw], B = R.TW[o.opp + "|" + cw], pc3 = pcat3(A, B), pc = pcat(A, B), live = state.docs["league/live"];
   const bb = state.b2b, Ao = state.baseOff.TW[ME + "|" + cw], Bo = state.baseOff.TW[o.opp + "|" + cw];
@@ -584,8 +626,8 @@ function renderNow() {
     CATS.map(c => { const p = pc[c], q = pc3[c], k = p >= .6 ? "good" : p <= .4 ? "bad" : "mid", kl = p >= .6 ? "우세" : p <= .4 ? "열세" : "박빙";
       return `<tr><td>${LAB[c]}${LOW[c] ? " ↓" : ""}</td><td class="r num">${fmtCat(c, A.c[c])}</td><td class="r num">${fmtCat(c, B.c[c])}</td>${lv ? `<td class="r num">${esc(lv[ME] && lv[ME][c] != null ? lv[ME][c] : "—")}</td><td class="r num">${esc(lv[o.opp] && lv[o.opp][c] != null ? lv[o.opp][c] : "—")}</td>` : ""}${bb ? `<td class="r num">${fmtD(c, A.c[c] - Ao.c[c])}</td><td class="r num">${fmtD(c, B.c[c] - Bo.c[c])}</td>` : ""}<td><div class="bar mid" title="승 ${pct(q.w)} · 무 ${pct(q.t)} · 패 ${pct(q.l)}"><span style="width:${(p * 100).toFixed(1)}%;background:var(--${k === "bad" ? "bad" : k === "good" ? "good" : "s1"})"></span></div></td><td><span class="chip ${k}">${kl} ${pct(p)}</span>${q.t >= .015 ? ` <span class="note" title="무승부 확률">무 ${pct(q.t)}</span>` : ""}</td></tr>`; }).join("") + `</tbody></table>`;
   $("mu-note").textContent = `${bb ? "Δ = 백투백 반영 전후 주간 합계 차이. " : ""}예상 주간 합계(${sh(ME)} ${A.n.toFixed(1)}경기 · 상대 ${B.n.toFixed(1)}경기 사용). 백투백 2번째 경기 노출: ${sh(ME)} ${A.b2bCnt}회 · ${sh(o.opp)} ${B.b2bCnt}회(선수×경기)${bb ? `, 실제 사용 ${A.nB.toFixed(1)} · ${B.nB.toFixed(1)}경기` : ""}. ${lv ? "실제 진행값: " + (live.asOf || "") : "진행 중 실제값은 매치업 화면 캡처를 주시면 표시됩니다."}`;
-  $("standings").innerHTML = `<table><thead><tr><th>예상</th><th>팀</th><th class="r" title="카테고리 승-패-무">기록</th><th class="r" title="시즌 최종 기대 승률 (마우스를 올리면 예상 W-L-T)">기대 승률</th>${state.b2b ? '<th class="r">B2B 영향</th>' : ""}${state.stream.on ? '<th class="r" title="전 팀 스트리밍 반영 전후 기대 승률 차이">스트리밍 영향</th>' : ""}<th class="r" title="시즌 최종 승률 10~90 백분위">80% 범위</th><th class="r">4강</th><th class="r">1위</th></tr></thead><tbody>` +
-    ranks.map((t, i) => { const x = R.season[t], r = record(t); return `<tr class="${t === ME ? "me" : ""}"><td class="num">${i + 1}</td><td>${esc(sh(t))}</td><td class="r num">${r.w}-${r.l}-${r.t}</td><td class="r num" title="예상 W-L-T ${wlt(x.eW, x.eL, x.eT, 1)}">${pctP(x.epct)}</td>${state.b2b ? `<td class="r num">${dpp(x.epct - state.baseOff.season[t].epct)}</td>` : ""}${state.stream.on ? `<td class="r num">${dpp(x.epct - state.baseNS.season[t].epct)}</td>` : ""}<td class="r num">${Math.round(x.p10 * 100)}–${Math.round(x.p90 * 100)}%</td><td class="r num">${pct(x.p4)}</td><td class="r num">${pct(x.p1)}</td></tr>`; }).join("") + `</tbody></table>`;
+  $("standings").innerHTML = `<table><thead><tr><th>예상</th><th>팀</th><th class="r" title="카테고리 승-패-무">기록</th><th class="r" title="시즌 최종 기대 승률 (마우스를 올리면 예상 W-L-T)">기대 승률</th>${state.b2b ? '<th class="r">B2B 영향</th>' : ""}${state.stream.on ? '<th class="r" title="전 팀 스트리밍 반영 전후 기대 승률 차이">스트리밍 영향</th>' : ""}<th class="r" title="플레이오프 진출(상위 ${(rules().playoffs || {}).teams || 6}팀)">PO</th><th class="r" title="정규시즌 1위">1위</th><th class="r" title="플레이오프 우승">우승</th></tr></thead><tbody>` +
+    ranks.map((t, i) => { const x = R.season[t], r = record(t); return `<tr class="${t === ME ? "me" : ""}"><td class="num">${i + 1}</td><td>${esc(sh(t))}</td><td class="r num">${r.w}-${r.l}-${r.t}</td><td class="r num" title="예상 W-L-T ${wlt(x.eW, x.eL, x.eT, 1)} · 80% 범위 ${Math.round(x.p10 * 100)}–${Math.round(x.p90 * 100)}%">${pctP(x.epct)}</td>${state.b2b ? `<td class="r num">${dpp(x.epct - state.baseOff.season[t].epct)}</td>` : ""}${state.stream.on ? `<td class="r num">${dpp(x.epct - state.baseNS.season[t].epct)}</td>` : ""}<td class="r num" title="상위 2시드(1라운드 부전승) ${pct(x.p2)}">${pct(x.po)}</td><td class="r num">${pct(x.p1)}</td><td class="r num" title="결승 진출 ${pct(x.fin)}">${pct(x.champ)}</td></tr>`; }).join("") + `</tbody></table>`;
   const ros = rosters()[ME], ir = ros.ir || [];
   const act = state.docs["league/actuals"];
   const rowsP = ros.active.map(n => state.PL[n]).filter(Boolean).sort((a, b) => b.value - a.value);
@@ -639,24 +681,24 @@ function renderSimControls() {
   const pool = addPool().filter(p => !q || (p.name + " " + p.team + " " + p.elig + " " + (own[p.name] ? sh(own[p.name]) + " " + own[p.name] : "FA")).toLowerCase().includes(q)).slice(0, 80);
   $("sim-add").innerHTML = pool.map(p => `<label class="${state.simSel.add.has(p.name) ? "on" : ""}"><input type="checkbox" data-add="${esc(p.name)}"${state.simSel.add.has(p.name) ? " checked" : ""}><span>${esc(p.name)}${own[p.name] ? `<span class="chip own">${esc(sh(own[p.name]))}</span>` : ""} <span class="m">${esc(p.elig)} · ${esc(p.team)} · ESPN ${p.espn || "—"}${statusOf(p.name) ? " · " + esc(statusOf(p.name)) : ""}${waOf(p.name) ? " · 웨이버 " + md(waOf(p.name)) : ""}</span></span><span class="m num">${REF.grid[cw][COLI[p.team]]}경기 · ${p.value.toFixed(2)}</span></label>`).join("") || `<div class="note" style="padding:10px">검색 결과가 없습니다.</div>`;
   renderTradeBox();
-  const recSel = $("rec-drop"), mine = ((R[ME] || {}).active || []).map(n => state.PL[n]).filter(Boolean).sort((a, b) => a.value - b.value);
-  const keep = recSel.value; recSel.innerHTML = (mine.length < ROSTER_MAX ? `<option value="">빈 자리 채우기 (방출 없음, ${ROSTER_MAX - mine.length}자리)</option>` : "") + mine.map(p => `<option value="${esc(p.name)}">${esc(p.name)} (가치 ${p.value.toFixed(2)})</option>`).join(""); if (mine.some(p => p.name === keep) || (keep === "" && mine.length < ROSTER_MAX)) recSel.value = keep;
+  const recSel = $("rec-drop"), undS = undroppable(), mine = ((R[ME] || {}).active || []).map(n => state.PL[n]).filter(p => p && !undS.has(p.name)).sort((a, b) => a.value - b.value);
+  const nAct = ((R[ME] || {}).active || []).length, keep = recSel.value; recSel.innerHTML = (nAct < ROSTER_MAX ? `<option value="">빈 자리 채우기 (방출 없음, ${ROSTER_MAX - nAct}자리)</option>` : "") + mine.map(p => `<option value="${esc(p.name)}">${esc(p.name)} (가치 ${p.value.toFixed(2)})</option>`).join(""); if (mine.some(p => p.name === keep) || (keep === "" && nAct < ROSTER_MAX)) recSel.value = keep;
 }
 function renderForecast() {
   const B = state.base, S = state.scen, team = S ? S.team : ME;
   const ranks = REF.teams.slice().sort((a, b) => (S ? S.R : B).season[b].epct - (S ? S.R : B).season[a].epct);
   const dl = (x, d = 2, p = false) => { const v = p ? x * 100 : x; if (Math.abs(v) < (p ? .5 : .005)) return `<span class="note">±0</span>`; return `<span class="delta ${v > 0 ? "up" : "down"}">${v > 0 ? "+" : ""}${v.toFixed(p ? 0 : d)}${p ? "%p" : ""}</span>`; };
-  $("fc-table").innerHTML = `<table><thead><tr><th>순위</th><th>팀</th><th class="r">기대 승률</th>${S ? '<th class="r">변화</th>' : ""}<th class="r" title="시즌 최종 예상 카테고리 승-패-무">예상 W-L-T</th>${state.b2b ? '<th class="r">B2B 영향</th>' : ""}${state.stream.on ? '<th class="r" title="전 팀 스트리밍 반영 전후 기대 승률 차이(현재 로스터)">스트리밍 영향</th>' : ""}<th class="r" title="시즌 최종 승률 10~90 백분위">80% 범위</th><th class="r">4강</th>${S ? '<th class="r">변화</th>' : ""}<th class="r">1위</th>${S ? '<th class="r">변화</th>' : ""}</tr></thead><tbody>` +
-    ranks.map((t, i) => { const b = B.season[t], s = S ? S.R.season[t] : b; return `<tr class="${t === ME ? "me" : ""}"><td class="num">${i + 1}</td><td>${esc(sh(t))}</td><td class="r num">${pctP(s.epct)}</td>${S ? `<td class="r num">${dpp(s.epct - b.epct)}</td>` : ""}<td class="r num">${wlt(s.eW, s.eL, s.eT, 0)}</td>${state.b2b ? `<td class="r num">${dpp(b.epct - state.baseOff.season[t].epct)}</td>` : ""}${state.stream.on ? `<td class="r num">${dpp(b.epct - state.baseNS.season[t].epct)}</td>` : ""}<td class="r num">${Math.round(s.p10 * 100)}–${Math.round(s.p90 * 100)}%</td><td class="r num">${pct(s.p4)}</td>${S ? `<td class="r num">${dl(s.p4 - b.p4, 0, true)}</td>` : ""}<td class="r num">${pct(s.p1)}</td>${S ? `<td class="r num">${dl(s.p1 - b.p1, 0, true)}</td>` : ""}</tr>`; }).join("") + `</tbody></table>`;
+  $("fc-table").innerHTML = `<table><thead><tr><th>순위</th><th>팀</th><th class="r">기대 승률</th>${S ? '<th class="r">변화</th>' : '<th class="r" title="시즌 최종 예상 카테고리 승-패-무">예상 W-L-T</th>'}${state.b2b && !S ? '<th class="r">B2B 영향</th>' : ""}${state.stream.on && !S ? '<th class="r" title="전 팀 스트리밍 반영 전후 기대 승률 차이(현재 로스터)">스트리밍 영향</th>' : ""}<th class="r" title="플레이오프 진출(상위 ${(rules().playoffs || {}).teams || 6}팀)">PO</th>${S ? '<th class="r">변화</th>' : ""}<th class="r">1위</th>${S ? '<th class="r">변화</th>' : ""}<th class="r" title="플레이오프 우승">우승</th>${S ? '<th class="r">변화</th>' : ""}</tr></thead><tbody>` +
+    ranks.map((t, i) => { const b = B.season[t], s = S ? S.R.season[t] : b; return `<tr class="${t === ME ? "me" : ""}"><td class="num">${i + 1}</td><td>${esc(sh(t))}</td><td class="r num" title="80% 범위 ${Math.round(s.p10 * 100)}–${Math.round(s.p90 * 100)}%">${pctP(s.epct)}</td>${S ? `<td class="r num">${dpp(s.epct - b.epct)}</td>` : `<td class="r num">${wlt(s.eW, s.eL, s.eT, 0)}</td>`}${state.b2b && !S ? `<td class="r num">${dpp(b.epct - state.baseOff.season[t].epct)}</td>` : ""}${state.stream.on && !S ? `<td class="r num">${dpp(b.epct - state.baseNS.season[t].epct)}</td>` : ""}<td class="r num" title="상위 2시드(1라운드 부전승) ${pct(s.p2)} · 결승 진출 ${pct(s.fin)}">${pct(s.po)}</td>${S ? `<td class="r num">${dl(s.po - b.po, 0, true)}</td>` : ""}<td class="r num">${pct(s.p1)}</td>${S ? `<td class="r num">${dl(s.p1 - b.p1, 0, true)}</td>` : ""}<td class="r num">${pct(s.champ)}</td>${S ? `<td class="r num">${dl(s.champ - b.champ, 0, true)}</td>` : ""}</tr>`; }).join("") + `</tbody></table>`;
   const own0 = rosters() ? (() => { const o = {}; for (const t in rosters()) (rosters()[t].active || []).forEach(n => o[n] = t); return o; })() : {};
-  $("fc-note").textContent = (state.b2b ? "백투백 반영 · " : "") + (state.stream.on ? `전 팀 스트리밍(주 ${state.stream.acq}회) 반영 · ` : "") + (S ? `시나리오: ${sh(S.team)} — 방출 ${[...S.drop].join(", ") || "없음"} / 영입 ${[...S.add].map(n => n + (own0[n] && own0[n] !== S.team ? `(${sh(own0[n])})` : "")).join(", ") || "없음"}` +
+  $("fc-note").textContent = (state.b2b ? "백투백 반영 · " : "") + (state.stream.on ? `전 팀 스트리밍(${acqLabel()}) 반영 · ` : "") + (S ? `시나리오: ${sh(S.team)} — 방출 ${[...S.drop].join(", ") || "없음"} / 영입 ${[...S.add].map(n => n + (own0[n] && own0[n] !== S.team ? `(${sh(own0[n])})` : "")).join(", ") || "없음"}` +
     (S.partners.length ? (S.trade ? ` · 트레이드: 방출 선수는 ${sh(S.partners[0])}로 이동` : ` · 방출 선수는 FA, ${S.partners.map(sh).join(", ")}는 해당 선수만 잃음`) : "") +
     ` (${S.from + 1}주차부터${S.perGame ? ", 이동 선수 경기당 기준" : ""})` : "현재 로스터 기준. 위 Simul에서 교체안을 넣으면 변화가 함께 표시됩니다.");
   const bs = B.season[team], ss = S ? S.R.season[team] : null;
   $("sim-kpis").innerHTML = S ? `
     <div class="kpi"><span class="l">${esc(sh(team))} 기대 승률</span><span class="v num">${pctP(ss.epct)}<small>${(ss.epct - bs.epct >= 0 ? "+" : "−") + Math.abs((ss.epct - bs.epct) * 100).toFixed(1)}%p</small></span><span class="d">현재 ${pctP(bs.epct)} · 카테고리 승 ${(ss.eW + ss.eT / 2 - bs.eW - bs.eT / 2 >= 0 ? "+" : "−") + Math.abs(ss.eW + ss.eT / 2 - bs.eW - bs.eT / 2).toFixed(1)}${S.partners.map(p => ` · ${esc(sh(p))} ${pctP(B.season[p].epct)}→${pctP(S.R.season[p].epct)}`).join("")}</span></div>
-    <div class="kpi"><span class="l">4강 확률</span><span class="v num">${pct(ss.p4)}</span><span class="d">현재 ${pct(bs.p4)}</span></div>
-    <div class="kpi"><span class="l">1위 확률</span><span class="v num">${pct(ss.p1)}</span><span class="d">현재 ${pct(bs.p1)}</span></div>
+    <div class="kpi"><span class="l">PO 진출 · 1위</span><span class="v num">${pct(ss.po)}<small> · ${pct(ss.p1)}</small></span><span class="d">현재 ${pct(bs.po)} · ${pct(bs.p1)}</span></div>
+    <div class="kpi"><span class="l">우승 확률</span><span class="v num">${pct(ss.champ)}</span><span class="d">현재 ${pct(bs.champ)}</span></div>
     <div class="kpi"><span class="l">${S.from + 1}주차 카테고리 승률</span><span class="v num">${pctP(wp(S.R, team, S.from))}</span><span class="d">현재 ${pctP(wp(B, team, S.from))} · W-L-T ${wlt(...wkWLT(S.R, team, S.from))}</span></div>` : "";
   $("sim-kpis").hidden = !S;
   $("wk-title").textContent = `${sh(team)} 주별 카테고리 승률`;
@@ -711,7 +753,7 @@ function recommend() {
   const opp = w => state.base.TW[oppOf(ME, w).opp + "|" + w];
   const ST = state.stream.on, pools = {}; if (ST) for (let w = from; w < NW; w++) pools[w] = streamPoolFor(w, null);
   /* with streaming on, the candidate takes a core spot and the team keeps streaming its two lowest spots, at its own priority that week */
-  const stw = w => ST ? { acq: state.stream.acq, slots: state.stream.mine, pool: pools[w], occ: new Map(state.base.TW[ME + "|" + w].occBefore || []) } : null;
+  const stw = w => ST ? { acq: acqFor(w), slots: state.stream.mine, pool: pools[w], occ: new Map(state.base.TW[ME + "|" + w].occBefore || []) } : null;
   const evalRos = (ros, pg) => { let s = 0; for (let w = from; w < NW; w++) s += ptsOf(teamWeek(ros, w, { draws: 80, perGame: pg, stream: stw(w) }), opp(w)); return s; };
   const b0 = evalRos(drop ? base.concat([drop]) : base, null);
   const cands = faPool().filter(p => !(p.pos === "C" && nC >= 4)).slice(0, 25);
@@ -729,7 +771,7 @@ function renderFresh() {
   const r = state.docs["league/rosters"], a = state.docs["league/actuals"], res = state.docs["league/results"];
   const done = res && res.weeks ? Object.keys(res.weeks).length : 0;
   $("fresh").innerHTML = (state.db === "none" ? `<span class="pill warn">저장소에 연결되지 않음</span>` : state.db === "snapshot" ? `<span class="pill warn" title="실시간 저장소 대신 페이지에 내장된 데이터로 계산">스냅샷 데이터 · ${esc((EMBED.asOf || "").slice(0, 10))}</span>` : "") +
-    `<span class="pill">로스터 ${esc(r && r.asOf ? r.asOf.slice(0, 16).replace("T", " ") : "—")}</span><span class="pill">실제 스탯 ${esc(a && a.asOf ? a.asOf.slice(0, 10) : "시즌 시작 전")}</span><span class="pill">결과 반영 ${done}주</span>${state.stream.on ? `<span class="pill" title="FA 목록 ${esc(faDoc() ? (faDoc().asOf || "").slice(0, 16).replace("T", " ") : "없음")}">전 팀 스트리밍 · 주 ${state.stream.acq}회</span>` : ""}${state.b2b ? '<span class="pill b2b">백투백 반영 중</span>' : ""}${state.busy ? '<span class="pill">계산 중…</span>' : ""}`;
+    `<span class="pill">로스터 ${esc(r && r.asOf ? r.asOf.slice(0, 16).replace("T", " ") : "—")}</span><span class="pill">실제 스탯 ${esc(a && a.asOf ? a.asOf.slice(0, 10) : "시즌 시작 전")}</span><span class="pill">결과 반영 ${done}주</span>${state.stream.on ? `<span class="pill" title="FA 목록 ${esc(faDoc() ? (faDoc().asOf || "").slice(0, 16).replace("T", " ") : "없음")}">전 팀 스트리밍 · ${acqLabel()}</span>` : ""}${state.b2b ? '<span class="pill b2b">백투백 반영 중</span>' : ""}${state.busy ? '<span class="pill">계산 중…</span>' : ""}`;
 }
 function setTab(t) { state.tab = t; try { localStorage.setItem("td-tab", t); } catch (e) {} $("tab-now").setAttribute("aria-selected", String(t === "now")); $("tab-fc").setAttribute("aria-selected", String(t === "fc")); render(); }
 function renderTeamUI() {
@@ -781,11 +823,13 @@ function runSim() {
   drop.forEach(n => mv(team).out.add(n));
   add.forEach(n => { mv(team).in.add(n); if (own[n] && own[n] !== team) mv(own[n]).out.add(n); });
   const partners = partnersOf(add), trade = partners.length === 1 && $("sim-trade").checked;
+  const und = [...drop].filter(n => undroppable().has(n));
+  if (und.length && !trade) { msg.className = "msg err"; msg.textContent = `${und.join(", ")}: ESPN 방출 불가 선수(리그 규정)입니다. 트레이드로만 이동할 수 있습니다.`; return; }
   if (trade) drop.forEach(n => mv(partners[0]).in.add(n));
   for (const t in moves) {
     const cur = rosters()[t].active, after = cur.filter(n => !moves[t].out.has(n)).concat([...moves[t].in]);
     if (after.length > ROSTER_MAX) { msg.className = "msg err"; msg.textContent = `${sh(t)} 로스터가 IR 제외 ${after.length}명이 됩니다 (최대 ${ROSTER_MAX}명, 현재 ${cur.length}명). 조합을 바꿔 주세요.`; return; }
-    if (after.filter(n => state.PL[n] && state.PL[n].pos === "C").length > 4) { msg.className = "msg err"; msg.textContent = `${sh(t)}의 센터가 4명을 넘습니다. 조합을 바꿔 주세요.`; return; }
+    if (after.filter(n => state.PL[n] && state.PL[n].pos === "C").length > ((rules().roster || {}).maxC || 4)) { msg.className = "msg err"; msg.textContent = `${sh(t)}의 센터가 4명을 넘습니다. 조합을 바꿔 주세요.`; return; }
   }
   msg.textContent = "계산 중…"; $("sim-run").disabled = true;
   setTimeout(() => {
@@ -800,7 +844,7 @@ document.addEventListener("change", e => {
   else if (t.dataset && t.dataset.add != null) { t.checked ? state.simSel.add.add(t.dataset.add) : state.simSel.add.delete(t.dataset.add); t.closest("label").classList.toggle("on", t.checked); renderTradeBox(); }
   else if (t.id === "team-sel") setTeam(t.value);
   else if (t.id === "b2b-on") { state.b2b = t.checked; try { localStorage.setItem("td22-b2b", t.checked ? "1" : "0"); } catch (e) {} state.rec = null; state.busy = true; renderFresh(); recompute(); }
-  else if (t.id === "st-on" || t.id === "st-acq" || t.id === "st-mine") { state.stream = { on: $("st-on").checked, acq: +$("st-acq").value, mine: +$("st-mine").value === 1 ? 1 : 2 }; try { localStorage.setItem("td22-stream", JSON.stringify(state.stream)); } catch (e) {} state.rec = null; state.busy = true; renderTeamUI(); renderFresh(); recompute(); }
+  else if (t.id === "st-on" || t.id === "st-acq" || t.id === "st-mine") { state.stream = { on: $("st-on").checked, acq: +$("st-acq").value, mine: +$("st-mine").value === 1 ? 1 : 2 }; try { localStorage.setItem("td22-stream2", JSON.stringify(state.stream)); } catch (e) {} state.rec = null; state.busy = true; renderTeamUI(); renderFresh(); recompute(); }
   else if (t.id === "sim-other") { state.simOther = t.checked; if (!t.checked) { const own = ownerMap(); [...state.simSel.add].forEach(n => { if (own[n]) state.simSel.add.delete(n); }); } renderSimControls(); }
   else if (t.id === "sim-week") renderSimControls();
 });
@@ -813,12 +857,12 @@ $("rec-run").addEventListener("click", () => { $("rec-busy").textContent = "계�
 let rw = 0; window.addEventListener("resize", () => { clearTimeout(rw); rw = setTimeout(() => { if (state.tab === "fc" && state.base) drawWeekly(state.scen ? state.scen.team : ME); }, 150); });
 setTab(state.tab);
 
-const EMBED = {"asOf":"2026-10-18T21:51+09:00","docs":{"league/rosters":{"asOf":"2026-10-18T21:51+09:00","source":"ESPN League Rosters capture (user, 2026-10-18 21:51 KST)","teams":{"Junyoung's Scary Team":{"active":["Tyrese Maxey","Derrick White","Mikal Bridges","Giannis Antetokounmpo","Domantas Sabonis","Dejounte Murray","Naz Reid","Paolo Banchero","Damian Lillard","Keyonte George","Zion Williamson","Stephon Castle","Darius Acuff Jr."],"ir":[]},"Gatori Team":{"active":["Stephen Curry","Trey Murphy III","Amen Thompson","Evan Mobley","Nikola Jokic","De'Aaron Fox","Jalen Williams","Lauri Markkanen","Onyeka Okongwu","Brandin Podziemski","Immanuel Quickley","Myles Turner"],"ir":["Kristaps Porzingis"]},"Garak Twindragons":{"active":["Shai Gilgeous-Alexander","James Harden","Michael Porter Jr.","John Collins","Karl-Anthony Towns","Austin Reaves","Anthony Davis","Kyrie Irving","Brandon Miller","Rudy Gobert","Tyler Herro","Norman Powell","Zach Edey"],"ir":[]},"Zero Sugar":{"active":["Jalen Brunson","Desmond Bane","Scottie Barnes","Chet Holmgren","Victor Wembanyama","Trae Young","Franz Wagner","Dyson Daniels","Josh Hart","Isaiah Hartenstein","Keegan Murray","Herbert Jones","Alex Caruso"],"ir":[]},"ChaRDaddy":{"active":["Luka Doncic","Donovan Mitchell","Deni Avdija","Pascal Siakam","Alperen Sengun","Devin Booker","Jaylen Brown","Julius Randle","Ja Morant","Miles Bridges","Alex Sarr","Zach LaVine","Ryan Rollins"],"ir":[]},"Kunhyo's Chokeslam":{"active":["Cade Cunningham","Anthony Edwards","Kawhi Leonard","OG Anunoby","Jalen Duren","Darius Garland","Kon Knueppel","Walker Kessler","Matas Buzelis","Cameron Boozer","Andrew Wiggins","AJ Dybantsa","Ausar Thompson"],"ir":[]},"Songpa Park Kezhang":{"active":["Tyrese Haliburton","Josh Giddey","LeBron James","Jalen Johnson","Bam Adebayo","Jamal Murray","Caleb Wilson","Nickeil Alexander-Walker","Jarrett Allen","Joel Embiid","Payton Pritchard","Paul George","CJ McCollum"],"ir":[]},"Brand_New_Neo_HJ":{"active":["LaMelo Ball","Ty Jerome","Cooper Flagg","Jayson Tatum","Kel'el Ware","Fred VanVleet","Kevin Durant","Ivica Zubac","Donovan Clingan","Jaren Jackson Jr.","Jalen Green","VJ Edgecombe","Dylan Harper"],"ir":["Brandon Ingram"]}},"status":{"Dejounte Murray":"DTD","Kristaps Porzingis":"O","Chet Holmgren":"DTD","Franz Wagner":"DTD","Josh Hart":"DTD","Kon Knueppel":"DTD","AJ Dybantsa":"DTD","Bam Adebayo":"DTD","Fred VanVleet":"DTD","Brandon Ingram":"O"}},"league/meta":{"asOf":"2026-10-19T01:22+09:00","acqLimitNote":"주차별 5~7회","notes":"시즌 시작 전. 실제 스탯은 Basketball-Reference 시즌 페이지(시즌 시작 후) 또는 ESPN 화면 캡처로 갱신.","rosterAsOf":"2026-10-18T21:51+09:00"},"league/fa":{"asOf":"2026-10-18T23:28+09:00","source":"ESPN Players(Add) 화면 캡처","players":{"DeMar DeRozan":{"wa":"2026-10-20"},"Jaden McDaniels":{"wa":"2026-10-20"},"Coby White":{"wa":"2026-10-19","st":"DTD"},"Reed Sheppard":{"wa":"2026-10-19"},"RJ Barrett":{"wa":"2026-10-20"},"Nikola Vucevic":{},"Darryn Peterson":{},"Kevin Porter Jr.":{},"Derik Queen":{},"Tobias Harris":{"st":"DTD"},"Jabari Smith Jr.":{},"Ayo Dosunmu":{},"Nic Claxton":{"st":"DTD"},"Jakob Poeltl":{},"Andrew Nembhard":{},"Yaxel Lendeborg":{},"Jaime Jaquez Jr.":{},"Egor Demin":{},"Jeremiah Fears":{},"Peyton Watson":{},"Aaron Gordon":{},"Cedric Coward":{},"Jimmy Butler III":{"st":"O"},"Quentin Grimes":{},"Collin Gillespie":{},"Ace Bailey":{},"Devin Vassell":{},"Kyshawn George":{},"Dillon Brooks":{},"Collin Sexton":{"st":"DTD"},"Draymond Green":{},"Jrue Holiday":{"st":"DTD"},"Daniel Gafford":{},"Jalen Suggs":{},"Neemias Queta":{},"Julian Champagnie":{},"Anthony Black":{"st":"DTD"},"Jonathan Kuminga":{},"Toumani Camara":{},"Mitchell Robinson":{},"Oso Ighodaro":{"st":"DTD"},"Malik Monk":{"st":"DTD"},"Rui Hachimura":{},"Jordan Poole":{},"Cason Wallace":{"st":"DTD"},"Bennedict Mathurin":{},"Saddiq Bey":{},"Anfernee Simons":{"st":"DTD"},"Deandre Ayton":{},"Christian Braun":{},"Scotty Pippen Jr.":{},"Day'Ron Sharpe":{},"Collin Murray-Boyles":{},"Bobby Portis":{},"Jerami Grant":{"st":"DTD"},"T.J. McConnell":{"st":"DTD"},"Davion Mitchell":{},"Jared McCain":{},"Klay Thompson":{},"Brook Lopez":{},"P.J. Washington":{},"Cameron Johnson":{},"Scoot Henderson":{},"Keldon Johnson":{},"Santi Aldama":{"st":"DTD"},"Keaton Wagler":{},"Jake LaRavia":{},"Kyle Filipowski":{"st":"DTD"},"Ajay Mitchell":{},"Moussa Diabate":{"st":"DTD"},"Mikel Brown Jr.":{},"Tari Eason":{},"Jusuf Nurkic":{"st":"O"},"Khaman Maluach":{},"Grayson Allen":{"st":"DTD"},"Dereck Lively II":{"st":"DTD"},"Kelly Oubre Jr.":{},"Tre Jones":{},"Tim Hardaway Jr.":{},"Wendell Carter Jr.":{},"Precious Achiuwa":{},"Morez Johnson Jr.":{},"Isaiah Collier":{},"Isaiah Stewart":{"st":"O"},"Duncan Robinson":{},"Kyle Kuzma":{},"Yves Missi":{},"Aaron Nesmith":{"st":"DTD"},"Kingston Flemings":{},"Danny Wolf":{},"Dennis Schroder":{},"Brayden Burries":{},"Donte DiVincenzo":{"st":"O"},"Naji Marshall":{},"Sandro Mamukelashvili":{},"De'Andre Hunter":{},"Zaccharie Risacher":{},"Bub Carrington":{},"Bilal Coulibaly":{},"Luguentz Dort":{},"Jamal Shead":{},"Jaylon Tyson":{},"Obi Toppin":{},"Max Christie":{},"GG Jackson":{"st":"DTD"},"Brice Sensabaugh":{},"Bradley Beal":{"st":"O"},"Robert Williams III":{},"Gui Santos":{},"Royce O'Neale":{},"Sam Hauser":{},"Isaiah Jackson":{},"Walter Clayton Jr.":{},"Jalen Smith":{},"Gradey Dick":{},"Tre Johnson":{},"Ryan Kalkbrenner":{},"Nikola Jovic":{},"Andre Drummond":{},"Jaylin Williams":{"st":"DTD"},"Cam Spencer":{},"De'Anthony Melton":{},"Maxime Raynaud":{"st":"O"},"Kevin Huerter":{},"Al Horford":{},"Jose Alvarado":{},"Aaron Wiggins":{},"Marcus Smart":{},"Isaiah Joe":{},"Paul Reed":{},"Nique Clifford":{},"Luke Kennard":{"st":"DTD"},"Hannes Steinbach":{},"Hugo Gonzalez":{},"Miles McBride":{},"Jaylen Wells":{}},"unprojected":["Ben Simmons","Shaedon Sharpe","Aday Mara","Mark Williams","Cam Thomas","D'Angelo Russell","Bronny James","Russell Westbrook","Chris Paul","Labaron Philon Jr.","Carter Bryant","Pelle Larsson","Cameron Carr","Meleek Thomas"]}}};   /* league snapshot used when the live store is unavailable */
+const EMBED = {"asOf":"2026-10-18T21:51+09:00","docs":{"league/rosters":{"asOf":"2026-10-18T21:51+09:00","source":"ESPN League Rosters capture (user, 2026-10-18 21:51 KST)","teams":{"Junyoung's Scary Team":{"active":["Tyrese Maxey","Derrick White","Mikal Bridges","Giannis Antetokounmpo","Domantas Sabonis","Dejounte Murray","Naz Reid","Paolo Banchero","Damian Lillard","Keyonte George","Zion Williamson","Stephon Castle","Darius Acuff Jr."],"ir":[]},"Gatori Team":{"active":["Stephen Curry","Trey Murphy III","Amen Thompson","Evan Mobley","Nikola Jokic","De'Aaron Fox","Jalen Williams","Lauri Markkanen","Onyeka Okongwu","Brandin Podziemski","Immanuel Quickley","Myles Turner"],"ir":["Kristaps Porzingis"]},"Garak Twindragons":{"active":["Shai Gilgeous-Alexander","James Harden","Michael Porter Jr.","John Collins","Karl-Anthony Towns","Austin Reaves","Anthony Davis","Kyrie Irving","Brandon Miller","Rudy Gobert","Tyler Herro","Norman Powell","Zach Edey"],"ir":[]},"Zero Sugar":{"active":["Jalen Brunson","Desmond Bane","Scottie Barnes","Chet Holmgren","Victor Wembanyama","Trae Young","Franz Wagner","Dyson Daniels","Josh Hart","Isaiah Hartenstein","Keegan Murray","Herbert Jones","Alex Caruso"],"ir":[]},"ChaRDaddy":{"active":["Luka Doncic","Donovan Mitchell","Deni Avdija","Pascal Siakam","Alperen Sengun","Devin Booker","Jaylen Brown","Julius Randle","Ja Morant","Miles Bridges","Alex Sarr","Zach LaVine","Ryan Rollins"],"ir":[]},"Kunhyo's Chokeslam":{"active":["Cade Cunningham","Anthony Edwards","Kawhi Leonard","OG Anunoby","Jalen Duren","Darius Garland","Kon Knueppel","Walker Kessler","Matas Buzelis","Cameron Boozer","Andrew Wiggins","AJ Dybantsa","Ausar Thompson"],"ir":[]},"Songpa Park Kezhang":{"active":["Tyrese Haliburton","Josh Giddey","LeBron James","Jalen Johnson","Bam Adebayo","Jamal Murray","Caleb Wilson","Nickeil Alexander-Walker","Jarrett Allen","Joel Embiid","Payton Pritchard","Paul George","CJ McCollum"],"ir":[]},"Brand_New_Neo_HJ":{"active":["LaMelo Ball","Ty Jerome","Cooper Flagg","Jayson Tatum","Kel'el Ware","Fred VanVleet","Kevin Durant","Ivica Zubac","Donovan Clingan","Jaren Jackson Jr.","Jalen Green","VJ Edgecombe","Dylan Harper"],"ir":["Brandon Ingram"]}},"status":{"Dejounte Murray":"DTD","Kristaps Porzingis":"O","Chet Holmgren":"DTD","Franz Wagner":"DTD","Josh Hart":"DTD","Kon Knueppel":"DTD","AJ Dybantsa":"DTD","Bam Adebayo":"DTD","Fred VanVleet":"DTD","Brandon Ingram":"O"}},"league/meta":{"asOf":"2026-10-19T07:13+09:00","acqLimitNote":"주차별 5~7회","notes":"시즌 시작 전. 실제 스탯은 Basketball-Reference 시즌 페이지(시즌 시작 후) 또는 ESPN 화면 캡처로 갱신.","rosterAsOf":"2026-10-18T21:51+09:00"},"league/fa":{"asOf":"2026-10-18T23:28+09:00","source":"ESPN Players(Add) 화면 캡처","players":{"DeMar DeRozan":{"wa":"2026-10-20"},"Jaden McDaniels":{"wa":"2026-10-20"},"Coby White":{"wa":"2026-10-19","st":"DTD"},"Reed Sheppard":{"wa":"2026-10-19"},"RJ Barrett":{"wa":"2026-10-20"},"Nikola Vucevic":{},"Darryn Peterson":{},"Kevin Porter Jr.":{},"Derik Queen":{},"Tobias Harris":{"st":"DTD"},"Jabari Smith Jr.":{},"Ayo Dosunmu":{},"Nic Claxton":{"st":"DTD"},"Jakob Poeltl":{},"Andrew Nembhard":{},"Yaxel Lendeborg":{},"Jaime Jaquez Jr.":{},"Egor Demin":{},"Jeremiah Fears":{},"Peyton Watson":{},"Aaron Gordon":{},"Cedric Coward":{},"Jimmy Butler III":{"st":"O"},"Quentin Grimes":{},"Collin Gillespie":{},"Ace Bailey":{},"Devin Vassell":{},"Kyshawn George":{},"Dillon Brooks":{},"Collin Sexton":{"st":"DTD"},"Draymond Green":{},"Jrue Holiday":{"st":"DTD"},"Daniel Gafford":{},"Jalen Suggs":{},"Neemias Queta":{},"Julian Champagnie":{},"Anthony Black":{"st":"DTD"},"Jonathan Kuminga":{},"Toumani Camara":{},"Mitchell Robinson":{},"Oso Ighodaro":{"st":"DTD"},"Malik Monk":{"st":"DTD"},"Rui Hachimura":{},"Jordan Poole":{},"Cason Wallace":{"st":"DTD"},"Bennedict Mathurin":{},"Saddiq Bey":{},"Anfernee Simons":{"st":"DTD"},"Deandre Ayton":{},"Christian Braun":{},"Scotty Pippen Jr.":{},"Day'Ron Sharpe":{},"Collin Murray-Boyles":{},"Bobby Portis":{},"Jerami Grant":{"st":"DTD"},"T.J. McConnell":{"st":"DTD"},"Davion Mitchell":{},"Jared McCain":{},"Klay Thompson":{},"Brook Lopez":{},"P.J. Washington":{},"Cameron Johnson":{},"Scoot Henderson":{},"Keldon Johnson":{},"Santi Aldama":{"st":"DTD"},"Keaton Wagler":{},"Jake LaRavia":{},"Kyle Filipowski":{"st":"DTD"},"Ajay Mitchell":{},"Moussa Diabate":{"st":"DTD"},"Mikel Brown Jr.":{},"Tari Eason":{},"Jusuf Nurkic":{"st":"O"},"Khaman Maluach":{},"Grayson Allen":{"st":"DTD"},"Dereck Lively II":{"st":"DTD"},"Kelly Oubre Jr.":{},"Tre Jones":{},"Tim Hardaway Jr.":{},"Wendell Carter Jr.":{},"Precious Achiuwa":{},"Morez Johnson Jr.":{},"Isaiah Collier":{},"Isaiah Stewart":{"st":"O"},"Duncan Robinson":{},"Kyle Kuzma":{},"Yves Missi":{},"Aaron Nesmith":{"st":"DTD"},"Kingston Flemings":{},"Danny Wolf":{},"Dennis Schroder":{},"Brayden Burries":{},"Donte DiVincenzo":{"st":"O"},"Naji Marshall":{},"Sandro Mamukelashvili":{},"De'Andre Hunter":{},"Zaccharie Risacher":{},"Bub Carrington":{},"Bilal Coulibaly":{},"Luguentz Dort":{},"Jamal Shead":{},"Jaylon Tyson":{},"Obi Toppin":{},"Max Christie":{},"GG Jackson":{"st":"DTD"},"Brice Sensabaugh":{},"Bradley Beal":{"st":"O"},"Robert Williams III":{},"Gui Santos":{},"Royce O'Neale":{},"Sam Hauser":{},"Isaiah Jackson":{},"Walter Clayton Jr.":{},"Jalen Smith":{},"Gradey Dick":{},"Tre Johnson":{},"Ryan Kalkbrenner":{},"Nikola Jovic":{},"Andre Drummond":{},"Jaylin Williams":{"st":"DTD"},"Cam Spencer":{},"De'Anthony Melton":{},"Maxime Raynaud":{"st":"O"},"Kevin Huerter":{},"Al Horford":{},"Jose Alvarado":{},"Aaron Wiggins":{},"Marcus Smart":{},"Isaiah Joe":{},"Paul Reed":{},"Nique Clifford":{},"Luke Kennard":{"st":"DTD"},"Hannes Steinbach":{},"Hugo Gonzalez":{},"Miles McBride":{},"Jaylen Wells":{}},"unprojected":["Ben Simmons","Shaedon Sharpe","Aday Mara","Mark Williams","Cam Thomas","D'Angelo Russell","Bronny James","Russell Westbrook","Chris Paul","Labaron Philon Jr.","Carter Bryant","Pelle Larsson","Cameron Carr","Meleek Thomas"]},"league/rules":{"asOf":"2026-10-19T07:07+09:00","source":"ESPN League Settings 캡처 (G League)","league":"G League","teams":8,"scoring":"Head to Head Each Category","cats":["FG%","FT%","3PM","REB","AST","STL","BLK","TO","PF","DD","PTS"],"roster":{"size":13,"starters":10,"bench":3,"ir":2,"slots":{"PG":1,"SG":1,"SF":1,"PF":1,"C":1,"G":1,"F":1,"UTIL":3},"maxC":4,"gamesLimit":null},"lineup":{"changes":"daily, locks individually at scheduled game time","protection":true},"acquisition":{"system":"waivers","seasonLimit":null,"perMatchup":7,"perDays":7,"waiverDays":1,"waiverOrder":"move to last after claim, never reset"},"trade":{"limit":null,"deadline":"2027-02-20T02:00+09:00","reviewDays":1,"vetoVotes":3},"season":{"start":"NBA week 1","matchups":14,"weeksPerMatchup":1,"catTieBreaker":"none"},"playoffs":{"teams":6,"roundWeeks":[1,2,2],"seedTieBreaker":"head-to-head record","reseed":false,"consolation":true,"lockEliminated":false},"draft":{"type":"snake","date":"2026-10-16T23:45+09:00","order":"manual (league manager)","pickTrading":false},"keepers":false,"observeUndroppables":true,"undroppable":["Shai Gilgeous-Alexander","James Harden","Devin Booker","Donovan Mitchell","Kevin Durant","Nikola Jokic","Victor Wembanyama","Karl-Anthony Towns"]}}};   /* league snapshot used when the live store is unavailable */
 (async () => {
   let db = null;
   try { db = window.claude && window.claude.use ? await window.claude.use("db") : null; } catch (e) { db = null; }
   if (!db) { state.docs = Object.assign({}, EMBED.docs); state.db = "snapshot"; recompute(); return; }
-  const paths = ["league/rosters", "league/actuals", "league/results", "league/live", "league/fa", "league/meta"];
+  const paths = ["league/rosters", "league/actuals", "league/results", "league/live", "league/fa", "league/rules", "league/meta"];
   let pending = new Set(paths);
   paths.forEach(path => db.doc(path).onSnapshot(snap => {
     state.docs[path] = snap.exists ? snap.data() : null;
