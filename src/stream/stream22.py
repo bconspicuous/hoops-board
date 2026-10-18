@@ -146,7 +146,8 @@ if __name__ == "__main__":
     import datetime as dt
     ME, SLOT = "Garak Twindragons", os.environ.get("SLOT", "John Collins")
     GADD = [x for x in os.environ.get("OPP_ADD", "Derik Queen").split("|") if x]
-    A = int(os.environ.get("ACQ", 6)); OA = int(os.environ.get("OPP_ACQ", 6))
+    RULE_ACQ = round(7 * len(REF["sched"][int(os.environ.get("WEEK", 0))]) / 7)   # league rule: 7 adds per 7-day matchup, prorated
+    A = int(os.environ.get("ACQ", RULE_ACQ)); OA = int(os.environ.get("OPP_ACQ", RULE_ACQ))
     AVAIL = {n: int(d) for n, d in (x.split("=") for x in os.environ.get("AVAIL_FROM", "Coby White=1|Jaden McDaniels=1|Reed Sheppard=1|DeMar DeRozan=1|RJ Barrett=1").split("|") if x)}
     opp_team = next(b if a == ME else a for a, b in REF["matchups"][W] if ME in (a, b))
     T = ROS["teams"]; mine = [n for n in T[ME]["active"] if n != SLOT]; opp_all = T[opp_team]["active"] + GADD

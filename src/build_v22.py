@@ -9,7 +9,7 @@ def load(name, seed):
     p = os.path.join(D, name + ".json") if D else seed
     return json.load(open(p)) if p and os.path.exists(p) else None
 docs = {"league/rosters": load("rosters", "seed_rosters.json"), "league/meta": load("meta", "seed_meta.json")}
-for k in ("actuals", "results", "live", "fa"):
+for k in ("actuals", "results", "live", "fa", "rules"):
     v = load(k, None)
     if v is not None: docs["league/" + k] = v
 emb = {"asOf": docs["league/rosters"]["asOf"], "docs": docs}
