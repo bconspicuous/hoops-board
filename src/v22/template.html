@@ -198,6 +198,7 @@ footer { color: var(--muted); font-size: 12px; display: grid; gap: 4px; border-t
   <footer>
     <span>예측 모델: ESPN 300 프로젝션(PF·DD 모델 보완) × 2026-27 NBA 일별 실제 일정(14주 전체, 8주차 NBA컵 미정 2경기는 12/8·12/11 가정) × 매일 라인업(PG SG SF PF C G F UTIL×3, 벤치 3), 선수별 예상 출전(GP/82). 실제 스탯이 들어오면 경기 수만큼 가중해 프로젝션과 섞습니다(15경기 = 50%).</span>
     <span>백투백 반영: 팀이 전날도 경기한 날(2번째 경기)에 ① 결장 — 선수별 휴식 성향(35세 이상 휴식 규정 예외, 장기 부상 복귀, 2025-26·2024-25 출전 경기 수)을 예상 출전 경기 수 안에서 2번째 경기로 재배분, ② 기록 — 출전 시간·나이에 비례해 PTS·AST −5%, REB −2%, STL −4%, BLK −5%, 3PM −4%, TO −3%, PF +3%, FG% −1.0%p, FT% −0.5%p(출전 시간 34분 기준), ③ 변동성 — 경기별 표준편차 +5%. 리그 평균 효과는 RotoWire(2014-15)·Frontiers in Psychology(2016-17) 연구, 선수 정보는 Basketball-Reference 시즌 기록.</span>
+    <span id="neutral-note"></span>
     <span>순위 방식: 매주 11개 카테고리별 승·패·무를 누적해 승률 (승 + 무/2) ÷ (승+패+무)로 정렬. 무승부 확률은 정수 카테고리(3PM·REB·AST·STL·BLK·TO·DD·PTS·PF)는 양 팀 주간 합계 차이가 0.5 미만일 확률(정규 근사·연속성 보정), FG%·FT%는 0으로 계산하며, 카테고리 결과는 서로 독립으로 가정합니다. 시드 동률은 상대 전적(맞대결 카테고리 기록), 그다음 무작위. 플레이오프: 6팀, 1라운드 1주(3v6·4v5, 1·2시드 부전승) → 준결승 2주(1 v 4/5 승자, 2 v 3/6 승자, 재시드 없음) → 결승 2주. 라운드 기간 합산 카테고리 승수가 많은 팀이 승리, 동수면 상위 시드 진출(가정). 플레이오프 기간 전력 = 정규시즌 평균 주간 전력 × 라운드 주수(해당 기간 NBA 일정 미반영).</span>
     <span>리그 규정(ESPN 설정 캡처 2026-10-19): 로스터 13(선발 10·벤치 3, IR 2), C 최대 4, 매일 라인업(경기 시작 시 개별 잠금, 라인업 보호 켜짐), 영입 한도 7회/7일 매치업(주 길이 비례, 1주차 6회), 웨이버 1일(방출 후 이틀째부터 영입 가능), 웨이버 순위 클레임 시 맨 뒤로, ESPN 방출 불가 선수 적용, 트레이드 마감 2027-02-20.</span>
     <span>전 팀 스트리밍(기본 켜짐): 모든 팀이 시즌 가치 하위 2자리를 주간 영입 한도(기본 6회) 안에서 매일 라인업 빈칸을 채울 FA로 교체. 일정·출전확률·포지션 슬롯을 반영한 기대값 최적화(구간 DP) 후 같은 시뮬레이션에서 재생하며, FA는 팀 간 경합(주별 순환 우선순위, 보유·방출 후 2일 웨이버 동안 사용 불가)합니다. 각 주는 독립 계획으로, 방출된 원래 선수는 다음 주 로스터에 다시 있는 것으로 근사합니다.</span>
@@ -225,7 +226,7 @@ const pct = (x, d = 0) => (x * 100).toFixed(d) + "%";
 const BASE = {};
 REF.players.forEach(a => { const o = {}; REF.fields.forEach((f, i) => o[f] = a[i]); o.mask = o.elig.split(",").reduce((m, p) => m | (POSB[p] || 0), POSB[o.pos] || 0); BASE[o.name] = o; });
 
-const state = { db: "pending", docs: {}, tab: "now", PL: {}, base: null, scen: null, simSel: { drop: new Set(), add: new Set() }, simOther: false, b2b: false, baseOff: null, baseNS: null, rec: null, stream: { on: true, acq: 0, mine: 2 } };
+const state = { db: "pending", docs: {}, tab: "now", PL: {}, base: null, scen: null, simSel: { drop: new Set(), add: new Set() }, simOther: false, b2b: false, baseOff: null, baseNS: null, rec: null, stream: { on: true, acq: 0, mine: 2 }, restB2B: new Set() };
 try { state.b2b = localStorage.getItem("td22-b2b") === "1"; } catch (e) {}
 try { const s = JSON.parse(localStorage.getItem("td22-stream2") || "null"); if (s && typeof s.on === "boolean" && [0, 5, 6, 7].includes(s.acq)) state.stream = { on: s.on, acq: s.acq, mine: s.mine === 1 ? 1 : 2 }; } catch (e) {}
 const NOSTREAM = { on: false, acq: 0, mine: 2 };
@@ -262,7 +263,7 @@ function buildPlayers() {
   const sdOf = f => { const v = top.map(f), m = v.reduce((s, x) => s + x, 0) / v.length; return Math.sqrt(v.reduce((s, x) => s + (x - m) * (x - m), 0) / v.length) || 1; };
   const fgI = p => p.FGM - p.FGA * lfg, ftI = p => p.FTM - p.FTA * lft, sdF = sdOf(fgI), sdT = sdOf(ftI);
   Object.values(PL).forEach(p => { p.sw = Math.max(.2, POS.reduce((s, k) => s + (p[k] || 0) / AV[k], 0) - (p.TO || 0) / AV.TO - (p.PF || 0) / AV.PF + fgI(p) / sdF + ftI(p) / sdT); });
-  state.PL = PL; PLAYC = new Map();
+  state.PL = PL; PLAYC = new Map(); state.restB2B = new Set(((state.docs["league/meta"] || {}).restB2B) || []);
 }
 function rosters() { const r = state.docs["league/rosters"]; return r && r.teams ? r.teams : null; }
 /* league rules: league/rules doc (ESPN League Settings capture), with the same values as fallback */
@@ -287,6 +288,7 @@ function statusOf(n) {
    r = P(sits the 2nd night of a team back-to-back | otherwise available), bounded so season availability stays = projected GP/82;
    k = intensity of the 2nd-night production drop (minutes load x age). Per-game (perGame) adds never rest but still lose production. */
 function b2bOf(p) { const x = REF.b2bp[p.name]; return x ? { r: x[0], k: x[1], age: x[2], g26: x[3], mp26: x[4], g25: x[5], why: x[6] } : { r: .02, k: .5, why: "기본값(기록 없음)" }; }
+let REST_KEEP_GP = true;
 function availOf(p, w, perGame, b2b) {
   const g = perGame ? 1 : Math.min(1, p.gp / 82); let pN = g, pB = g, rEff = 0;
   if (b2b && p.team) {
@@ -294,6 +296,9 @@ function availOf(p, w, perGame, b2b) {
     if (h > 1) { h = 1; r = Math.max(0, (1 - g) / s); }
     pN = h; pB = h * (1 - r); rEff = r;
   }
+  /* planned rest (league/meta.restB2B, the manager's decision): out on every 2nd night of a team back-to-back. Season availability is
+     kept at the projected GP/82 (same principle as the back-to-back layer); REST_KEEP_GP = false treats the rest as extra absences. */
+  if (p.team && state.restB2B.has(p.name)) { const s = REF.b2bShare[p.team] || .18; pN = REST_KEEP_GP ? Math.min(1, g / (1 - s)) : g; pB = 0; rEff = 1; }
   if (w === currentWeek()) { const st = statusOf(p.name); if (st === "O") { pN = pB = 0; } else if (st === "DTD") { pN *= .8; pB *= .8; } }
   return { pN, pB, rEff };
 }
@@ -625,10 +630,10 @@ function renderNow() {
   const act = state.docs["league/actuals"];
   const rowsP = ros.active.map(n => state.PL[n]).filter(Boolean).sort((a, b) => b.value - a.value);
   const gw = n => { const p = state.PL[n]; return p && p.team ? REF.grid[cw][COLI[p.team]] : 0; };
-  const st = n => { const s = statusOf(n); return s === "O" ? '<span class="stat-o">O</span>' : s === "DTD" ? '<span class="stat-dtd">DTD</span>' : ""; };
-  $("roster").innerHTML = `<table><thead><tr><th>선수</th><th>포지션</th><th>NBA</th><th>상태</th><th class="r">이번 주 경기</th><th class="r">사용 예상</th><th class="r">PTS</th><th class="r">REB</th><th class="r">AST</th><th class="r">STL</th><th class="r">BLK</th><th class="r">3PM</th><th class="r">FG%</th><th class="r">FT%</th><th class="r">TO</th><th class="r">실제 경기</th>${state.b2b ? '<th class="r">B2B 경기</th><th class="r">B2B 휴식확률</th><th class="r">사용 Δ</th>' : ""}</tr></thead><tbody>` +
-    rowsP.map(p => `<tr><td>${esc(p.name)}</td><td>${esc(p.elig)}</td><td>${esc(p.team || "—")}</td><td>${st(p.name)}</td><td class="r num">${gw(p.name)}</td><td class="r num">${(A.used[p.name] || 0).toFixed(1)}</td><td class="r num">${p.PTS.toFixed(1)}</td><td class="r num">${p.REB.toFixed(1)}</td><td class="r num">${p.AST.toFixed(1)}</td><td class="r num">${p.STL.toFixed(1)}</td><td class="r num">${p.BLK.toFixed(1)}</td><td class="r num">${p.TPM.toFixed(1)}</td><td class="r num">${(p.FGM / p.FGA).toFixed(3).replace(/^0/, "")}</td><td class="r num">${(p.FTA ? p.FTM / p.FTA : 0).toFixed(3).replace(/^0/, "")}</td><td class="r num">${p.TO.toFixed(1)}</td><td class="r num">${p.actual ? p.actual.g : "—"}</td>${state.b2b ? (() => { const bi = b2bOf(p), av = availOf(p, cw, false, true); return `<td class="r num">${b2bDays(p, cw).length}</td><td class="r num" title="${esc(bi.why)}">${pct(av.rEff)}</td><td class="r num">${dlt((A.used[p.name] || 0) - (Ao.used[p.name] || 0), 1)}</td>`; })() : ""}</tr>`).join("") +
-    ir.map(n => `<tr><td>${esc(n)}</td><td colspan="${state.b2b ? 18 : 15}" class="note">IR — 시뮬레이션 제외</td></tr>`).join("") + `</tbody></table>`;
+  const st = n => { const s = statusOf(n); return (s === "O" ? '<span class="stat-o">O</span>' : s === "DTD" ? '<span class="stat-dtd">DTD</span>' : "") + (state.restB2B.has(n) ? ' <span class="chip" title="백투백 2번째 경기 결장(운영 가정)">B2B 휴식</span>' : ""); };
+  $("roster").innerHTML = `<table><thead><tr><th>선수</th><th>포지션</th><th>NBA</th><th>상태</th><th class="r" title="중립 보정 예상 출전 경기(괄호 없음). 마우스를 올리면 ESPN 원 프로젝션">예상 GP</th><th class="r">이번 주 경기</th><th class="r">사용 예상</th><th class="r">PTS</th><th class="r">REB</th><th class="r">AST</th><th class="r">STL</th><th class="r">BLK</th><th class="r">3PM</th><th class="r">FG%</th><th class="r">FT%</th><th class="r">TO</th><th class="r">실제 경기</th>${state.b2b ? '<th class="r">B2B 경기</th><th class="r">B2B 휴식확률</th><th class="r">사용 Δ</th>' : ""}</tr></thead><tbody>` +
+    rowsP.map(p => `<tr><td>${esc(p.name)}</td><td>${esc(p.elig)}</td><td>${esc(p.team || "—")}</td><td>${st(p.name)}</td><td class="r num" title="ESPN ${p.gpE != null ? p.gpE : p.gp}경기">${Math.round(p.gp)}</td><td class="r num">${gw(p.name)}</td><td class="r num">${(A.used[p.name] || 0).toFixed(1)}</td><td class="r num">${p.PTS.toFixed(1)}</td><td class="r num">${p.REB.toFixed(1)}</td><td class="r num">${p.AST.toFixed(1)}</td><td class="r num">${p.STL.toFixed(1)}</td><td class="r num">${p.BLK.toFixed(1)}</td><td class="r num">${p.TPM.toFixed(1)}</td><td class="r num">${(p.FGM / p.FGA).toFixed(3).replace(/^0/, "")}</td><td class="r num">${(p.FTA ? p.FTM / p.FTA : 0).toFixed(3).replace(/^0/, "")}</td><td class="r num">${p.TO.toFixed(1)}</td><td class="r num">${p.actual ? p.actual.g : "—"}</td>${state.b2b ? (() => { const bi = b2bOf(p), av = availOf(p, cw, false, true); return `<td class="r num">${b2bDays(p, cw).length}</td><td class="r num" title="${esc(bi.why)}">${pct(av.rEff)}</td><td class="r num">${dlt((A.used[p.name] || 0) - (Ao.used[p.name] || 0), 1)}</td>`; })() : ""}</tr>`).join("") +
+    ir.map(n => `<tr><td>${esc(n)}</td><td colspan="${state.b2b ? 19 : 16}" class="note">IR — 시뮬레이션 제외</td></tr>`).join("") + `</tbody></table>`;
   renderB2BPanel(rowsP, cw, A, Ao);
   renderStreamPanel(R, cw);
   $("roster-note").textContent = (state.stream.on ? "사용 예상은 스트리밍 계획(아래 표)에서 방출되기 전까지의 경기만 셉니다. " : "") + `경기당 수치는 ${act ? "프로젝션과 실제 기록(" + (act.asOf || "") + ")을 섞은 값" : "ESPN 300 프로젝션"}입니다. 사용 예상 = 슬롯 한도와 결장 가능성을 반영해 이번 주 실제로 기록에 들어갈 경기 수.`;
@@ -767,6 +772,11 @@ function renderFresh() {
     `<span class="pill">로스터 ${esc(r && r.asOf ? r.asOf.slice(0, 16).replace("T", " ") : "—")}</span><span class="pill">실제 스탯 ${esc(a && a.asOf ? a.asOf.slice(0, 10) : "시즌 시작 전")}</span><span class="pill">결과 반영 ${done}주</span>${state.stream.on ? `<span class="pill" title="FA 목록 ${esc(faDoc() ? (faDoc().asOf || "").slice(0, 16).replace("T", " ") : "없음")}">전 팀 스트리밍 · ${acqLabel()}</span>` : ""}${state.b2b ? '<span class="pill b2b">백투백 반영 중</span>' : ""}${state.busy ? '<span class="pill">계산 중…</span>' : ""}`;
 }
 function setTab(t) { state.tab = t; try { localStorage.setItem("td-tab", t); } catch (e) {} $("tab-now").setAttribute("aria-selected", String(t === "now")); $("tab-fc").setAttribute("aria-selected", String(t === "fc")); render(); }
+function renderNeutralNote() {
+  const n = REF.neutral, rs = [...state.restB2B];
+  $("neutral-note").textContent = (n ? `중립 보정: 모든 선수(8팀·FA 동일 규칙)의 ESPN 프로젝션을 최근 실적 쪽으로 회귀 — 출전 경기 = ESPN ${Math.round((1 - n.wGP) * 100)}% + 최근 시즌 실제 ${Math.round(n.wGP * 100)}%(2025-26 10경기 이상, 없으면 2024-25), 경기당 기록 = ESPN ${Math.round((1 - n.wPG) * 100)}% + 2025-26 실제 ${Math.round(n.wPG * 100)}%(20경기 이상). 신인·기록 없는 선수는 ESPN 그대로. ` : "중립 보정 미적용(ESPN 프로젝션 그대로). ") +
+    (rs.length ? `운영 가정: ${rs.join(", ")} — 팀 백투백 2번째 경기 결장, 시즌 예상 출전 수는 유지(나머지 경기 출전확률 상향), 빈자리는 스트리밍으로 보강.` : "");
+}
 function renderTeamUI() {
   const sel = $("team-sel");
   if (!sel.options.length) sel.innerHTML = REF.teams.map(t => `<option value="${esc(t)}">${esc(t)}${t === OWN ? " (내 팀)" : ""}</option>`).join("");
@@ -784,7 +794,7 @@ function setTeam(t) {
 }
 function render() {
   renderTeamUI();
-  renderFresh();
+  renderFresh(); renderNeutralNote();
   const ready = !!(rosters() && state.base);
   $("view-empty").hidden = ready;
   if (!ready) {
@@ -860,7 +870,7 @@ const EMBED = __EMBED__;   /* league snapshot used when the live store is unavai
   paths.forEach(path => db.doc(path).onSnapshot(snap => {
     state.docs[path] = snap.exists ? snap.data() : null;
     pending.delete(path); if (!pending.size) state.db = "ready";
-    if (path !== "league/meta" || !pending.size) recompute(); else renderFresh();
+    recompute();
   }, () => { pending.delete(path); if (!pending.size) { state.db = "ready"; recompute(); } }));
 })();
 </script>
