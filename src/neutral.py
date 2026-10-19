@@ -8,6 +8,10 @@
 import json, sys, statistics as st
 W_GP = float(sys.argv[1]) if len(sys.argv) > 1 else 1 / 3
 W_PG = float(sys.argv[2]) if len(sys.argv) > 2 else 0.2
+import os
+KEEP = set(x for x in os.environ.get("KEEP_GP", "").split("|") if x)        # players whose GP stays at the ESPN projection
+KEEP_LT = float(os.environ.get("KEEP_GP_LT", "0"))                           # ...or every player whose recent GP is below this
+OUT = os.environ.get("OUT", "ref22.json")
 ref = json.load(open("ref22_espn.json")); F = ref["fields"]; H = json.load(open("data/hist.json"))["players"]
 K = ["FGM", "FGA", "FTM", "FTA", "TPM", "REB", "AST", "STL", "BLK", "TO", "PTS", "PF", "DDg"]
 P = [dict(zip(F, r)) for r in ref["players"]]
@@ -25,14 +29,14 @@ nG = nP = 0
 for p in P:
     h = H.get(p["name"], {}); e = dict(p); p["gpE"] = p["gp"]
     rec = h.get("gp26") if (h.get("gp26") or 0) >= 10 else h.get("gp25") if (h.get("gp25") or 0) >= 10 else None
-    if rec is not None and p["gp"]: p["gp"] = round((1 - W_GP) * p["gp"] + W_GP * rec, 1); nG += 1
+    if rec is not None and p["gp"] and p["name"] not in KEEP and not (rec < KEEP_LT): p["gp"] = round((1 - W_GP) * p["gp"] + W_GP * rec, 1); nG += 1
     if h.get("pg26") and (h.get("gpPG") or 0) >= 20:
         for k in K: p[k] = round((1 - W_PG) * p[k] + W_PG * h["pg26"][k], 3)
         nP += 1
     p["vpg"] = round(p["vpg"] + vpg(p) - vpg(e), 3); p["value"] = round(p["value"] + val(p) - val(e), 3)
 F2 = F + ["gpE"]
 ref["fields"] = F2; ref["players"] = [[p[f] for f in F2] for p in P]
-ref["neutral"] = {"wGP": round(W_GP, 3), "wPG": W_PG, "gpAdjusted": nG, "pgAdjusted": nP, "source": "2025-26 실제(ESPN) · 2024-25 출전(BR)"}
+ref["neutral"] = {"wGP": round(W_GP, 3), "wPG": W_PG, "gpAdjusted": nG, "pgAdjusted": nP, "source": "2025-26 실제(ESPN) · 2024-25 출전(BR)", "keepGP": sorted(KEEP), "keepGpBelow": KEEP_LT}
 s = json.dumps(ref, ensure_ascii=False, separators=(",", ":")); assert "</script" not in s.lower()
-open("ref22.json", "w").write(s)
+open(OUT, "w").write(s)
 print(f"neutral: GP weight {W_GP:.2f} on recent record ({nG} players), per-game weight {W_PG:.2f} on 2025-26 ({nP} players)")
