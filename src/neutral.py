@@ -36,8 +36,10 @@ for p in P:
         nP += 1
     k = dict(p); k["gp"] = p["gpE"]                                   # same player with the ESPN games kept (dashboard GP-assumption switch)
     p["vKeep"] = round(p["value"] + val(k) - val(e), 3)
+    f = dict(p); f["gp"] = 82.0                                       # every game played (dashboard "full availability" mode)
+    p["vFull"] = round(p["value"] + val(f) - val(e), 3) if p["gpE"] else p["value"]
     p["vpg"] = round(p["vpg"] + vpg(p) - vpg(e), 3); p["value"] = round(p["value"] + val(p) - val(e), 3)
-F2 = F + ["gpE", "gpR", "vKeep"]
+F2 = F + ["gpE", "gpR", "vKeep", "vFull"]
 ref["fields"] = F2; ref["players"] = [[p[f] for f in F2] for p in P]
 ref["neutral"] = {"wGP": round(W_GP, 3), "wPG": W_PG, "gpAdjusted": nG, "pgAdjusted": nP, "source": "2025-26 실제(ESPN) · 2024-25 출전(BR)", "keepGP": sorted(KEEP), "keepGpBelow": KEEP_LT}
 s = json.dumps(ref, ensure_ascii=False, separators=(",", ":")); assert "</script" not in s.lower()
