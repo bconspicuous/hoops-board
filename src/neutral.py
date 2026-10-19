@@ -29,12 +29,15 @@ nG = nP = 0
 for p in P:
     h = H.get(p["name"], {}); e = dict(p); p["gpE"] = p["gp"]
     rec = h.get("gp26") if (h.get("gp26") or 0) >= 10 else h.get("gp25") if (h.get("gp25") or 0) >= 10 else None
+    p["gpR"] = rec
     if rec is not None and p["gp"] and p["name"] not in KEEP and not (rec < KEEP_LT): p["gp"] = round((1 - W_GP) * p["gp"] + W_GP * rec, 1); nG += 1
     if h.get("pg26") and (h.get("gpPG") or 0) >= 20:
         for k in K: p[k] = round((1 - W_PG) * p[k] + W_PG * h["pg26"][k], 3)
         nP += 1
+    k = dict(p); k["gp"] = p["gpE"]                                   # same player with the ESPN games kept (dashboard GP-assumption switch)
+    p["vKeep"] = round(p["value"] + val(k) - val(e), 3)
     p["vpg"] = round(p["vpg"] + vpg(p) - vpg(e), 3); p["value"] = round(p["value"] + val(p) - val(e), 3)
-F2 = F + ["gpE"]
+F2 = F + ["gpE", "gpR", "vKeep"]
 ref["fields"] = F2; ref["players"] = [[p[f] for f in F2] for p in P]
 ref["neutral"] = {"wGP": round(W_GP, 3), "wPG": W_PG, "gpAdjusted": nG, "pgAdjusted": nP, "source": "2025-26 실제(ESPN) · 2024-25 출전(BR)", "keepGP": sorted(KEEP), "keepGpBelow": KEEP_LT}
 s = json.dumps(ref, ensure_ascii=False, separators=(",", ":")); assert "</script" not in s.lower()

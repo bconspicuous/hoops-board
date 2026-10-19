@@ -133,7 +133,7 @@ footer { color: var(--muted); font-size: 12px; display: grid; gap: 4px; border-t
       <button class="tab" role="tab" id="tab-now" aria-selected="true" type="button">현황</button>
       <button class="tab" role="tab" id="tab-fc" aria-selected="false" type="button">예측</button>
     </nav>
-    <div class="right"><label class="chk b2bchk"><input type="checkbox" id="b2b-on"> 백투백 반영</label><span class="stsel"><label class="chk b2bchk" style="padding-bottom:0"><input type="checkbox" id="st-on"> 전 팀 스트리밍</label><select id="st-acq" aria-label="팀당 주간 영입 한도"><option value="0">규정 한도</option><option value="5">주 5회</option><option value="6">주 6회</option><option value="7">주 7회</option></select><select id="st-mine" aria-label="선택 팀의 스트리밍 자리 수" title="선택한 팀만 적용, 다른 팀은 항상 2자리"><option value="2">내 팀 2자리</option><option value="1">내 팀 1자리</option></select></span><div class="teamsel"><label for="team-sel">팀</label><select id="team-sel"></select></div></div>
+    <div class="right"><label class="chk b2bchk"><input type="checkbox" id="b2b-on"> 백투백 반영</label><span class="stsel"><label class="chk b2bchk" style="padding-bottom:0"><input type="checkbox" id="st-on"> 전 팀 스트리밍</label><select id="st-acq" aria-label="팀당 주간 영입 한도"><option value="0">규정 한도</option><option value="5">주 5회</option><option value="6">주 6회</option><option value="7">주 7회</option></select><select id="st-mine" aria-label="선택 팀의 스트리밍 자리 수" title="선택한 팀만 적용, 다른 팀은 항상 2자리"><option value="2">내 팀 2자리</option><option value="1">내 팀 1자리</option></select></span><span class="stsel"><select id="gp-mode" aria-label="출전 경기(GP) 가정" title="출전 경기 가정: 지정 선수만 ESPN 유지 / 부상 시즌 선수 전원 ESPN 유지 / 전원 중립 보정"><option value="mine">GP: 지정 선수 ESPN 유지</option><option value="fair">GP: 부상 시즌 전원 ESPN 유지</option><option value="neutral">GP: 전원 중립 보정</option></select></span><div class="teamsel"><label for="team-sel">팀</label><select id="team-sel"></select></div></div>
   </div>
 
   <div id="view-empty" class="empty" hidden><b id="empty-title">로스터를 불러오는 중입니다</b><span id="empty-text">잠시만 기다려 주세요.</span></div>
@@ -228,6 +228,7 @@ REF.players.forEach(a => { const o = {}; REF.fields.forEach((f, i) => o[f] = a[i
 
 const state = { db: "pending", docs: {}, tab: "now", PL: {}, base: null, scen: null, simSel: { drop: new Set(), add: new Set() }, simOther: false, b2b: false, baseOff: null, baseNS: null, rec: null, stream: { on: true, acq: 0, mine: 2 }, restB2B: new Set() };
 try { state.b2b = localStorage.getItem("td22-b2b") === "1"; } catch (e) {}
+try { const g = localStorage.getItem("td22-gpmode"); if (["neutral", "mine", "fair"].includes(g)) state.gpModeUser = g; } catch (e) {}
 try { const s = JSON.parse(localStorage.getItem("td22-stream2") || "null"); if (s && typeof s.on === "boolean" && [0, 5, 6, 7].includes(s.acq)) state.stream = { on: s.on, acq: s.acq, mine: s.mine === 1 ? 1 : 2 }; } catch (e) {}
 const NOSTREAM = { on: false, acq: 0, mine: 2 };
 try { const t = localStorage.getItem("td-tab"); if (t === "fc" || t === "now") state.tab = t; } catch (e) {}
@@ -248,6 +249,7 @@ function buildPlayers() {
   const act = (state.docs["league/actuals"] || {}).players || {}, K = 15, PL = {};
   for (const n in BASE) {
     const b = BASE[n], a = act[n], p = Object.assign({}, b);
+    if (keepGP(b)) { p.gp = b.gpE; p.value = b.vKeep; p.gpKept = true; }
     if (a && a.g > 0) {
       const w = a.g / (a.g + K), A = { FGM: a.fgm, FGA: a.fga, FTM: a.ftm, FTA: a.fta, TPM: a.tpm, REB: a.reb, AST: a.ast, STL: a.stl, BLK: a.blk, TO: a.to, PTS: a.pts, PF: a.pf, DDg: a.dd != null ? a.dd / a.g : null };
       KEYS.forEach(k => { if (A[k] != null && isFinite(A[k])) p[k] = (1 - w) * b[k] + w * A[k]; });
@@ -266,6 +268,16 @@ function buildPlayers() {
   state.PL = PL; PLAYC = new Map(); state.restB2B = new Set(((state.docs["league/meta"] || {}).restB2B) || []);
 }
 function rosters() { const r = state.docs["league/rosters"]; return r && r.teams ? r.teams : null; }
+/* GP assumption: "neutral" = regressed GP for everyone; "mine" = players listed in league/meta.keepGP keep the ESPN GP;
+   "fair" = every player whose latest season was cut below league/meta.keepGpBelow games (default 40) keeps the ESPN GP */
+function gpMode() { const m = state.docs["league/meta"] || {}; return state.gpModeUser || m.gpModeDefault || "neutral"; }
+function keepGP(b) {
+  if (b.gpE == null || b.vKeep == null) return false;
+  const m = state.docs["league/meta"] || {}, mode = gpMode();
+  if (mode === "mine") return (m.keepGP || []).includes(b.name);
+  if (mode === "fair") return b.gpR != null && b.gpR < (m.keepGpBelow || 40);
+  return false;
+}
 /* league rules: league/rules doc (ESPN League Settings capture), with the same values as fallback */
 const RULES_DEF = { acquisition: { perMatchup: 7, perDays: 7 }, playoffs: { teams: 6, roundWeeks: [1, 2, 2] }, roster: { maxC: 4 },
   undroppable: ["Shai Gilgeous-Alexander", "James Harden", "Devin Booker", "Donovan Mitchell", "Kevin Durant", "Nikola Jokic", "Victor Wembanyama", "Karl-Anthony Towns"] };
@@ -632,7 +644,7 @@ function renderNow() {
   const gw = n => { const p = state.PL[n]; return p && p.team ? REF.grid[cw][COLI[p.team]] : 0; };
   const st = n => { const s = statusOf(n); return (s === "O" ? '<span class="stat-o">O</span>' : s === "DTD" ? '<span class="stat-dtd">DTD</span>' : "") + (state.restB2B.has(n) ? ' <span class="chip" title="백투백 2번째 경기 결장(운영 가정)">B2B 휴식</span>' : ""); };
   $("roster").innerHTML = `<table><thead><tr><th>선수</th><th>포지션</th><th>NBA</th><th>상태</th><th class="r" title="중립 보정 예상 출전 경기(괄호 없음). 마우스를 올리면 ESPN 원 프로젝션">예상 GP</th><th class="r">이번 주 경기</th><th class="r">사용 예상</th><th class="r">PTS</th><th class="r">REB</th><th class="r">AST</th><th class="r">STL</th><th class="r">BLK</th><th class="r">3PM</th><th class="r">FG%</th><th class="r">FT%</th><th class="r">TO</th><th class="r">실제 경기</th>${state.b2b ? '<th class="r">B2B 경기</th><th class="r">B2B 휴식확률</th><th class="r">사용 Δ</th>' : ""}</tr></thead><tbody>` +
-    rowsP.map(p => `<tr><td>${esc(p.name)}</td><td>${esc(p.elig)}</td><td>${esc(p.team || "—")}</td><td>${st(p.name)}</td><td class="r num" title="ESPN ${p.gpE != null ? p.gpE : p.gp}경기">${Math.round(p.gp)}</td><td class="r num">${gw(p.name)}</td><td class="r num">${(A.used[p.name] || 0).toFixed(1)}</td><td class="r num">${p.PTS.toFixed(1)}</td><td class="r num">${p.REB.toFixed(1)}</td><td class="r num">${p.AST.toFixed(1)}</td><td class="r num">${p.STL.toFixed(1)}</td><td class="r num">${p.BLK.toFixed(1)}</td><td class="r num">${p.TPM.toFixed(1)}</td><td class="r num">${(p.FGM / p.FGA).toFixed(3).replace(/^0/, "")}</td><td class="r num">${(p.FTA ? p.FTM / p.FTA : 0).toFixed(3).replace(/^0/, "")}</td><td class="r num">${p.TO.toFixed(1)}</td><td class="r num">${p.actual ? p.actual.g : "—"}</td>${state.b2b ? (() => { const bi = b2bOf(p), av = availOf(p, cw, false, true); return `<td class="r num">${b2bDays(p, cw).length}</td><td class="r num" title="${esc(bi.why)}">${pct(av.rEff)}</td><td class="r num">${dlt((A.used[p.name] || 0) - (Ao.used[p.name] || 0), 1)}</td>`; })() : ""}</tr>`).join("") +
+    rowsP.map(p => `<tr><td>${esc(p.name)}</td><td>${esc(p.elig)}</td><td>${esc(p.team || "—")}</td><td>${st(p.name)}</td><td class="r num" title="ESPN ${p.gpE != null ? p.gpE : p.gp}경기 · 중립 ${BASE[p.name].gp}경기${p.gpKept ? " · 현재 ESPN 유지" : ""}">${Math.round(p.gp)}${p.gpKept ? "*" : ""}</td><td class="r num">${gw(p.name)}</td><td class="r num">${(A.used[p.name] || 0).toFixed(1)}</td><td class="r num">${p.PTS.toFixed(1)}</td><td class="r num">${p.REB.toFixed(1)}</td><td class="r num">${p.AST.toFixed(1)}</td><td class="r num">${p.STL.toFixed(1)}</td><td class="r num">${p.BLK.toFixed(1)}</td><td class="r num">${p.TPM.toFixed(1)}</td><td class="r num">${(p.FGM / p.FGA).toFixed(3).replace(/^0/, "")}</td><td class="r num">${(p.FTA ? p.FTM / p.FTA : 0).toFixed(3).replace(/^0/, "")}</td><td class="r num">${p.TO.toFixed(1)}</td><td class="r num">${p.actual ? p.actual.g : "—"}</td>${state.b2b ? (() => { const bi = b2bOf(p), av = availOf(p, cw, false, true); return `<td class="r num">${b2bDays(p, cw).length}</td><td class="r num" title="${esc(bi.why)}">${pct(av.rEff)}</td><td class="r num">${dlt((A.used[p.name] || 0) - (Ao.used[p.name] || 0), 1)}</td>`; })() : ""}</tr>`).join("") +
     ir.map(n => `<tr><td>${esc(n)}</td><td colspan="${state.b2b ? 19 : 16}" class="note">IR — 시뮬레이션 제외</td></tr>`).join("") + `</tbody></table>`;
   renderB2BPanel(rowsP, cw, A, Ao);
   renderStreamPanel(R, cw);
@@ -769,18 +781,21 @@ function renderFresh() {
   const r = state.docs["league/rosters"], a = state.docs["league/actuals"], res = state.docs["league/results"];
   const done = res && res.weeks ? Object.keys(res.weeks).length : 0;
   $("fresh").innerHTML = (state.db === "none" ? `<span class="pill warn">저장소에 연결되지 않음</span>` : state.db === "snapshot" ? `<span class="pill warn" title="실시간 저장소 대신 페이지에 내장된 데이터로 계산">스냅샷 데이터 · ${esc((EMBED.asOf || "").slice(0, 10))}</span>` : "") +
-    `<span class="pill">로스터 ${esc(r && r.asOf ? r.asOf.slice(0, 16).replace("T", " ") : "—")}</span><span class="pill">실제 스탯 ${esc(a && a.asOf ? a.asOf.slice(0, 10) : "시즌 시작 전")}</span><span class="pill">결과 반영 ${done}주</span>${state.stream.on ? `<span class="pill" title="FA 목록 ${esc(faDoc() ? (faDoc().asOf || "").slice(0, 16).replace("T", " ") : "없음")}">전 팀 스트리밍 · ${acqLabel()}</span>` : ""}${state.b2b ? '<span class="pill b2b">백투백 반영 중</span>' : ""}${state.busy ? '<span class="pill">계산 중…</span>' : ""}`;
+    `<span class="pill">로스터 ${esc(r && r.asOf ? r.asOf.slice(0, 16).replace("T", " ") : "—")}</span><span class="pill">실제 스탯 ${esc(a && a.asOf ? a.asOf.slice(0, 10) : "시즌 시작 전")}</span><span class="pill">결과 반영 ${done}주</span>${state.stream.on ? `<span class="pill" title="FA 목록 ${esc(faDoc() ? (faDoc().asOf || "").slice(0, 16).replace("T", " ") : "없음")}">전 팀 스트리밍 · ${acqLabel()}</span>` : ""}${(() => { const m = state.docs["league/meta"] || {}, g = gpMode(); return g === "mine" && (m.keepGP || []).length ? `<span class="pill warn" title="이 선수들만 ESPN 출전 경기 유지 — 다른 팀 부상 시즌 선수는 중립 보정">GP 가정: ${esc((m.keepGP || []).map(n => n.split(" ").slice(-1)[0]).join("·"))} ESPN 유지</span>` : g === "fair" ? `<span class="pill">GP 가정: 부상 시즌 전원 ESPN 유지</span>` : `<span class="pill">GP 가정: 전원 중립</span>`; })()}${state.b2b ? '<span class="pill b2b">백투백 반영 중</span>' : ""}${state.busy ? '<span class="pill">계산 중…</span>' : ""}`;
 }
 function setTab(t) { state.tab = t; try { localStorage.setItem("td-tab", t); } catch (e) {} $("tab-now").setAttribute("aria-selected", String(t === "now")); $("tab-fc").setAttribute("aria-selected", String(t === "fc")); render(); }
 function renderNeutralNote() {
   const n = REF.neutral, rs = [...state.restB2B];
   $("neutral-note").textContent = (n ? `중립 보정: 모든 선수(8팀·FA 동일 규칙)의 ESPN 프로젝션을 최근 실적 쪽으로 회귀 — 출전 경기 = ESPN ${Math.round((1 - n.wGP) * 100)}% + 최근 시즌 실제 ${Math.round(n.wGP * 100)}%(2025-26 10경기 이상, 없으면 2024-25), 경기당 기록 = ESPN ${Math.round((1 - n.wPG) * 100)}% + 2025-26 실제 ${Math.round(n.wPG * 100)}%(20경기 이상). 신인·기록 없는 선수는 ESPN 그대로. ` : "중립 보정 미적용(ESPN 프로젝션 그대로). ") +
+    (() => { const m = state.docs["league/meta"] || {}, g = gpMode(), kept = Object.values(state.PL).filter(p => p.gpKept).length;
+      return g === "mine" ? `GP 가정: 지정 선수(${(m.keepGP || []).join(", ")})는 ESPN 출전 경기 유지(사용자 지정), 나머지는 중립 보정 — 다른 팀의 부상 시즌 선수에는 적용되지 않음. ` :
+        g === "fair" ? `GP 가정: 직전 시즌 ${m.keepGpBelow || 40}경기 미만(부상 시즌) 선수 ${kept}명 전원 ESPN 출전 경기 유지, 나머지는 중립 보정. ` : "GP 가정: 전원 중립 보정. "; })() +
     (rs.length ? `운영 가정: ${rs.join(", ")} — 팀 백투백 2번째 경기 결장, 시즌 예상 출전 수는 유지(나머지 경기 출전확률 상향), 빈자리는 스트리밍으로 보강.` : "");
 }
 function renderTeamUI() {
   const sel = $("team-sel");
   if (!sel.options.length) sel.innerHTML = REF.teams.map(t => `<option value="${esc(t)}">${esc(t)}${t === OWN ? " (내 팀)" : ""}</option>`).join("");
-  sel.value = ME; $("b2b-on").checked = state.b2b; $("st-on").checked = state.stream.on; $("st-acq").value = String(state.stream.acq); $("st-mine").value = String(state.stream.mine); $("st-acq").disabled = $("st-mine").disabled = !state.stream.on;
+  sel.value = ME; $("b2b-on").checked = state.b2b; $("st-on").checked = state.stream.on; $("st-acq").value = String(state.stream.acq); $("st-mine").value = String(state.stream.mine); $("gp-mode").value = gpMode(); $("st-acq").disabled = $("st-mine").disabled = !state.stream.on;
   $("h1-team").textContent = sh(ME); document.title = `${sh(ME)} · 리그 팀별 대시보드 v2.2`;
   $("roster-title").textContent = `${sh(ME)} 로스터`; $("rec-title").textContent = `FA 추천 (${sh(ME)})`;
 }
@@ -848,6 +863,7 @@ document.addEventListener("change", e => {
   else if (t.id === "team-sel") setTeam(t.value);
   else if (t.id === "b2b-on") { state.b2b = t.checked; try { localStorage.setItem("td22-b2b", t.checked ? "1" : "0"); } catch (e) {} state.rec = null; state.busy = true; renderFresh(); recompute(); }
   else if (t.id === "st-on" || t.id === "st-acq" || t.id === "st-mine") { state.stream = { on: $("st-on").checked, acq: +$("st-acq").value, mine: +$("st-mine").value === 1 ? 1 : 2 }; try { localStorage.setItem("td22-stream2", JSON.stringify(state.stream)); } catch (e) {} state.rec = null; state.busy = true; renderTeamUI(); renderFresh(); recompute(); }
+  else if (t.id === "gp-mode") { state.gpModeUser = t.value; try { localStorage.setItem("td22-gpmode", t.value); } catch (e) {} state.rec = null; state.scen = null; state.busy = true; renderFresh(); recompute(); }
   else if (t.id === "sim-other") { state.simOther = t.checked; if (!t.checked) { const own = ownerMap(); [...state.simSel.add].forEach(n => { if (own[n]) state.simSel.add.delete(n); }); } renderSimControls(); }
   else if (t.id === "sim-week") renderSimControls();
 });
