@@ -1,0 +1,19 @@
+{
+ "asOf": "2026-10-23 06:10 KST",
+ "week": 1,
+ "through": "2026-10-21",
+ "source": "ESPN Scoreboard capture (user, 2026-10-23 06:10 KST) — games through 10/21 (US)",
+ "cats": {
+  "Garak Twindragons": {"FG": 0.4762, "FT": 0.7419, "TPM": 24, "REB": 91, "AST": 33, "STL": 15, "BLK": 12, "TO": 32, "PF": 33, "DD": 2, "PTS": 230},
+  "Gatori Team": {"FG": 0.4123, "FT": 0.8537, "TPM": 14, "REB": 58, "AST": 38, "STL": 8, "BLK": 3, "TO": 15, "PF": 24, "DD": 1, "PTS": 143},
+  "Junyoung's Scary Team": {"FG": 0.4949, "FT": 0.7606, "TPM": 31, "REB": 72, "AST": 65, "STL": 17, "BLK": 7, "TO": 36, "PF": 35, "DD": 3, "PTS": 281},
+  "ChaRDaddy": {"FG": 0.4938, "FT": 0.7636, "TPM": 19, "REB": 74, "AST": 45, "STL": 10, "BLK": 4, "TO": 26, "PF": 23, "DD": 1, "PTS": 221},
+  "Songpa Park Kezhang": {"FG": 0.4340, "FT": 0.7797, "TPM": 24, "REB": 69, "AST": 51, "STL": 16, "BLK": 6, "TO": 34, "PF": 33, "DD": 3, "PTS": 208},
+  "Kunhyo's Chokeslam": {"FG": 0.4778, "FT": 0.8228, "TPM": 17, "REB": 88, "AST": 34, "STL": 13, "BLK": 9, "TO": 28, "PF": 26, "DD": 3, "PTS": 254},
+  "Brand_New_Neo_HJ": {"FG": 0.4780, "FT": 0.7308, "TPM": 21, "REB": 69, "AST": 53, "STL": 12, "BLK": 9, "TO": 25, "PF": 50, "DD": 2, "PTS": 233},
+  "Zero Sugar": {"FG": 0.3800, "FT": 0.8056, "TPM": 12, "REB": 68, "AST": 43, "STL": 17, "BLK": 12, "TO": 21, "PF": 36, "DD": 2, "PTS": 184}
+ },
+ "record": {"Garak Twindragons": [7, 4, 0], "Gatori Team": [4, 7, 0], "Junyoung's Scary Team": [7, 4, 0], "ChaRDaddy": [4, 7, 0], "Songpa Park Kezhang": [3, 7, 1], "Kunhyo's Chokeslam": [7, 3, 1], "Brand_New_Neo_HJ": [5, 5, 1], "Zero Sugar": [5, 5, 1]},
+ "adds": {"Junyoung's Scary Team": 1, "Gatori Team": 2, "Garak Twindragons": 3, "Zero Sugar": 0, "ChaRDaddy": 1, "Kunhyo's Chokeslam": 2, "Songpa Park Kezhang": 0, "Brand_New_Neo_HJ": 4},
+ "addsNote": "roster changes since the 10/18 21:51 capture, all counted against the week-1 limit (timing not visible in the capture)"
+}
