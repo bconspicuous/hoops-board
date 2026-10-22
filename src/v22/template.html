@@ -117,6 +117,11 @@ select, input[type="search"] { border: 1px solid var(--line); background: var(--
 .chart svg { display: block; width: 100%; height: auto; overflow: visible; }
 .tip { position: absolute; pointer-events: none; background: var(--ink); color: var(--bg); font-size: 12px; padding: 6px 9px; border-radius: 6px; white-space: nowrap; transform: translate(-50%, -100%); }
 .busy { font-size: 12.5px; color: var(--accent); }
+td.pjv small { display: block; color: var(--muted); font-size: 10.5px; line-height: 1.2; }
+td.pjv { line-height: 1.25; }
+.pj-steps { margin: 0; padding-left: 20px; display: grid; gap: 8px; font-size: 13px; }
+.pj-steps b { font-weight: 600; }
+.chip.tag { background: var(--soft); color: var(--muted); font-weight: 500; }
 footer { color: var(--muted); font-size: 12px; display: grid; gap: 4px; border-top: 1px solid var(--line); padding-top: 12px; }
 </style>
 
@@ -132,6 +137,7 @@ footer { color: var(--muted); font-size: 12px; display: grid; gap: 4px; border-t
     <nav class="tabs" role="tablist">
       <button class="tab" role="tab" id="tab-now" aria-selected="true" type="button">현황</button>
       <button class="tab" role="tab" id="tab-fc" aria-selected="false" type="button">예측</button>
+      <button class="tab" role="tab" id="tab-proj" aria-selected="false" type="button">프로젝션 근거</button>
     </nav>
     <div class="right"><label class="chk b2bchk"><input type="checkbox" id="b2b-on"> 백투백 반영</label><span class="stsel"><label class="chk b2bchk" style="padding-bottom:0"><input type="checkbox" id="st-on"> 전 팀 스트리밍</label><select id="st-acq" aria-label="팀당 주간 영입 한도"><option value="0">규정 한도</option><option value="5">주 5회</option><option value="6">주 6회</option><option value="7">주 7회</option></select><select id="st-mine" aria-label="선택 팀의 스트리밍 자리 수" title="선택한 팀만 적용, 다른 팀은 항상 2자리"><option value="2">내 팀 2자리</option><option value="1">내 팀 1자리</option></select></span><span class="stsel"><select id="gp-mode" aria-label="출전 경기(GP) 가정" title="출전 경기 가정: 지정 선수만 ESPN 유지 / 부상 시즌 선수 전원 ESPN 유지 / 전원 중립 보정"><option value="full">GP: 전 경기 출전(백투백만 반영)</option><option value="mine">GP: 지정 선수 ESPN 유지</option><option value="fair">GP: 부상 시즌 전원 ESPN 유지</option><option value="neutral">GP: 전원 중립 보정</option></select></span><div class="teamsel"><label for="team-sel">팀</label><select id="team-sel"></select></div></div>
   </div>
@@ -195,8 +201,22 @@ footer { color: var(--muted); font-size: 12px; display: grid; gap: 4px; border-t
     </div>
   </section>
 
+  <section id="view-proj" hidden>
+    <div style="display:grid;gap:16px">
+      <div class="kpis" id="pj-kpis"></div>
+      <div class="panel"><h2>팀별 프로젝션 변화 · ESPN 대비</h2><div class="tbl" id="pj-teams"></div><p class="note" id="pj-teams-note"></p></div>
+      <div class="panel"><h2 id="pj-title">선수별 프로젝션 근거</h2>
+        <div class="row"><div class="field" style="flex:1 1 180px"><label for="pj-filter">범위</label><select id="pj-filter"></select></div><div class="field" style="flex:1 1 220px"><label for="pj-act">2026-27 실적 반영 방식</label><select id="pj-act"><option value="fixed">주차 고정 가중(사용자 지정)</option><option value="sample">표본 보정(10경기 미만은 비례 축소)</option></select></div><div class="field" style="flex:2 1 220px"><label for="pj-q">검색</label><input type="search" id="pj-q" placeholder="이름·NBA 팀"></div></div>
+        <div class="tbl" id="pj-table"></div><p class="note" id="pj-note"></p></div>
+      <div class="grid2">
+        <div class="panel"><h2>산출 방법</h2><ol class="pj-steps" id="pj-method"></ol></div>
+        <div class="panel"><h2>회귀 백테스트 · 2020-21~2024-25 → 2025-26</h2><div class="tbl" id="pj-bt"></div><p class="note" id="pj-bt-note"></p></div>
+      </div>
+    </div>
+  </section>
+
   <footer>
-    <span>예측 모델: ESPN 300 프로젝션(PF·DD 모델 보완) × 2026-27 NBA 일별 실제 일정(14주 전체, 8주차 NBA컵 미정 2경기는 12/8·12/11 가정) × 매일 라인업(PG SG SF PF C G F UTIL×3, 벤치 3), 선수별 예상 출전(GP/82). 실제 스탯이 들어오면 경기 수만큼 가중해 프로젝션과 섞습니다(15경기 = 50%).</span>
+    <span>예측 모델: ESPN 300 프로젝션 × Basketball-Reference 6시즌(2020-21~2025-26) 가중 선형회귀를 역분산으로 결합한 경기당 기록(근거는 '프로젝션 근거' 탭) × 2026-27 NBA 일별 실제 일정(14주 전체, 8주차 NBA컵 미정 2경기는 12/8·12/11 가정) × 매일 라인업(PG SG SF PF C G F UTIL×3, 벤치 3), 선수별 예상 출전(GP/82). 2026-27 실제 경기당 기록은 주차별 고정 가중(1–3주 10%, 4–6주 30%, 7–9주 50%, 10–12주 70%, 13주~ 90%)으로 섞고, 진행 중인 주는 스코어보드 실제 합계 + 남은 일정 예측으로 계산합니다.</span>
     <span>백투백 반영: 팀이 전날도 경기한 날(2번째 경기)에 ① 결장 — 선수별 휴식 성향(35세 이상 휴식 규정 예외, 장기 부상 복귀, 2025-26·2024-25 출전 경기 수)을 예상 출전 경기 수 안에서 2번째 경기로 재배분, ② 기록 — 출전 시간·나이에 비례해 PTS·AST −5%, REB −2%, STL −4%, BLK −5%, 3PM −4%, TO −3%, PF +3%, FG% −1.0%p, FT% −0.5%p(출전 시간 34분 기준), ③ 변동성 — 경기별 표준편차 +5%. 리그 평균 효과는 RotoWire(2014-15)·Frontiers in Psychology(2016-17) 연구, 선수 정보는 Basketball-Reference 시즌 기록.</span>
     <span id="neutral-note"></span>
     <span>순위 방식: 매주 11개 카테고리별 승·패·무를 누적해 승률 (승 + 무/2) ÷ (승+패+무)로 정렬. 무승부 확률은 정수 카테고리(3PM·REB·AST·STL·BLK·TO·DD·PTS·PF)는 양 팀 주간 합계 차이가 0.5 미만일 확률(정규 근사·연속성 보정), FG%·FT%는 0으로 계산하며, 카테고리 결과는 서로 독립으로 가정합니다. 시드 동률은 상대 전적(맞대결 카테고리 기록), 그다음 무작위. 플레이오프: 6팀, 1라운드 1주(3v6·4v5, 1·2시드 부전승) → 준결승 2주(1 v 4/5 승자, 2 v 3/6 승자, 재시드 없음) → 결승 2주. 라운드 기간 합산 카테고리 승수가 많은 팀이 승리, 동수면 상위 시드 진출(가정). 플레이오프 기간 전력 = 정규시즌 평균 주간 전력 × 라운드 주수(해당 기간 NBA 일정 미반영).</span>
@@ -228,10 +248,11 @@ REF.players.forEach(a => { const o = {}; REF.fields.forEach((f, i) => o[f] = a[i
 
 const state = { db: "pending", docs: {}, tab: "now", PL: {}, base: null, scen: null, simSel: { drop: new Set(), add: new Set() }, simOther: false, b2b: false, baseOff: null, baseNS: null, rec: null, stream: { on: true, acq: 0, mine: 2 }, restB2B: new Set() };
 state.b2b = true; try { const v = localStorage.getItem("td22-b2b2"); if (v != null) state.b2b = v === "1"; } catch (e) {}
+try { const a = localStorage.getItem("td27-actmode"); if (a === "fixed" || a === "sample") state.actMode = a; } catch (e) {}
 try { const g = localStorage.getItem("td22-gpmode2"); if (["full", "neutral", "mine", "fair"].includes(g)) state.gpModeUser = g; } catch (e) {}
 try { const s = JSON.parse(localStorage.getItem("td22-stream2") || "null"); if (s && typeof s.on === "boolean" && [0, 5, 6, 7].includes(s.acq)) state.stream = { on: s.on, acq: s.acq, mine: s.mine === 1 ? 1 : 2 }; } catch (e) {}
 const NOSTREAM = { on: false, acq: 0, mine: 2 };
-try { const t = localStorage.getItem("td-tab"); if (t === "fc" || t === "now") state.tab = t; } catch (e) {}
+try { const t = localStorage.getItem("td-tab"); if (t === "fc" || t === "now" || t === "proj") state.tab = t; } catch (e) {}
 try { const t = localStorage.getItem("td2-team"); if (t && REF.teams.includes(t)) ME = t; } catch (e) {}
 
 /* ---------- random numbers (common random numbers per player-week) ---------- */
@@ -240,21 +261,32 @@ function rng(seed) { let a = seed >>> 0; return () => { a = (a + 0x6D2B79F5) >>>
 function erf(x) { const s = x < 0 ? -1 : 1; x = Math.abs(x); const t = 1 / (1 + .3275911 * x); const y = 1 - (((((1.061405429 * t - 1.453152027) * t) + 1.421413741) * t - .284496736) * t + .254829592) * t * Math.exp(-x * x); return s * y; }
 
 /* ---------- calendar ---------- */
-function todayStr() { const d = new Date(); return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); }
+/* game dates are US dates: "today" is the US Eastern date (a KST morning is still the previous game night in the US) */
+function todayStr() { const d = new Date(); try { return new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit" }).format(d); } catch (e) { return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); } }
 function currentWeek() { const t = todayStr(); for (let i = 0; i < NW; i++) if (t <= REF.ends[i]) return i; return NW - 1; }
 const md = s => s.slice(5).replace("-", "/");
 
 /* ---------- player table (projection blended with actual stats) ---------- */
+/* 2026-27 actual per-game stats enter with a fixed weight by week (league/meta.actualWeights or the projection file's schedule):
+   weeks 1-3 10%, 4-6 30%, 7-9 50%, 10-12 70%, 13+ 90% — the same weight for every player with at least one game */
+function actWeight(w) {
+  const sch = ((state.docs["league/meta"] || {}).actualWeights) || (REF.projMeta && REF.projMeta.inSeason) || [[1, 3, .1], [4, 6, .3], [7, 9, .5], [10, 12, .7], [13, 99, .9]];
+  const k = w + 1; for (const [a, b, x] of sch) if (k >= a && k <= b) return x; return sch[sch.length - 1][2];
+}
+/* "fixed" (user rule, default): every player with >= 1 game gets the week's weight. "sample" (alternative): the weight is scaled by
+   games played up to ACT_G_FULL, so a one-game sample enters at a tenth of the week's weight */
+const ACT_G_FULL = 10;
+function actMode() { return state.actMode || ((state.docs["league/meta"] || {}).actualWeightMode) || "fixed"; }
 function buildPlayers() {
-  const act = (state.docs["league/actuals"] || {}).players || {}, K = 15, PL = {};
+  const act = (state.docs["league/actuals"] || {}).players || {}, wA = actWeight(currentWeek()), sm = actMode() === "sample", PL = {};
   for (const n in BASE) {
     const b = BASE[n], a = act[n], p = Object.assign({}, b);
     if (gpMode() === "full" && b.vFull != null) { p.gp = 82; p.value = b.vFull; p.gpFull = true; }
     else if (keepGP(b)) { p.gp = b.gpE; p.value = b.vKeep; p.gpKept = true; }
     if (a && a.g > 0) {
-      const w = a.g / (a.g + K), A = { FGM: a.fgm, FGA: a.fga, FTM: a.ftm, FTA: a.fta, TPM: a.tpm, REB: a.reb, AST: a.ast, STL: a.stl, BLK: a.blk, TO: a.to, PTS: a.pts, PF: a.pf, DDg: a.dd != null ? a.dd / a.g : null };
+      const w = sm ? wA * Math.min(1, a.g / ACT_G_FULL) : wA, A = { FGM: a.fgm, FGA: a.fga, FTM: a.ftm, FTA: a.fta, TPM: a.tpm, REB: a.reb, AST: a.ast, STL: a.stl, BLK: a.blk, TO: a.to, PTS: a.pts, PF: a.pf, DDg: a.dd != null ? a.dd / a.g : null };
       KEYS.forEach(k => { if (A[k] != null && isFinite(A[k])) p[k] = (1 - w) * b[k] + w * A[k]; });
-      p.actual = a;
+      p.actual = a; p.actW = w;
     }
     PL[n] = p;
   }
@@ -402,7 +434,7 @@ function planSlot(cands, orig, origPd, open, days, d0, A) {
   return out;
 }
 function teamWeek(names, w, opt = {}) {
-  const D = opt.draws || 150, b2b = opt.b2b != null ? opt.b2b : state.b2b, days = REF.sched[w].length, ST = opt.stream || null;
+  const D = opt.draws || 150, b2b = opt.b2b != null ? opt.b2b : state.b2b, days = REF.sched[w].length, ST = opt.stream || null, from = opt.from || 0;
   const all = names.map(n => state.PL[n]).filter(Boolean).sort((a, b) => b.value - a.value);
   const S = ST ? (ST.slots || STREAM_SLOTS) : 0, nCore = ST ? Math.min(all.length, ROSTER_MAX - S) : all.length;
   if (ST && nCore < all.length) {   /* ESPN undroppables cannot be streamed out: the slots go to the lowest droppable players */
@@ -429,10 +461,10 @@ function teamWeek(names, w, opt = {}) {
     }
     U[p.name] = (U[p.name] || 0) + u / D; UB[p.name] = (UB[p.name] || 0) + uB / D; return pl;
   };
-  ps.forEach(p => { b2bCnt += place(p, 0, days - 1, free, true).nb; });
+  ps.forEach(p => { b2bCnt += place(p, from, days - 1, free, true).nb; });
   let plan = null;
   if (ST) {
-    const orig = all.slice(nCore), nameSet = new Set(names), d0 = firstOpenDay(w), A = ST.acq;
+    const orig = all.slice(nCore), nameSet = new Set(names), d0 = Math.max(firstOpenDay(w), from), A = ST.acq;
     orig.forEach(p => { b2bCnt += playsOf(p, w, D, pg(p.name), b2b).nb; });
     const opd = p => { const s = REF.sched[w], B2 = REF.b2bd[w], av = availOf(p, w, pg(p.name), b2b), x = new Float64Array(days); for (let d = 0; d < days; d++) if (p.team && s[d].indexOf(p.team) >= 0) x[d] = B2[d].indexOf(p.team) >= 0 ? av.pB : av.pN; return x; };
     const oA = orig[0] || null, oB = orig[1] || null, oApd = oA ? opd(oA) : null, oBpd = oB ? opd(oB) : null;
@@ -449,10 +481,10 @@ function teamWeek(names, w, opt = {}) {
       if (!best || pa.v + pb.v > best.v + 1e-9) best = { v: pa.v + pb.v, A: pa, B: pb };
     }
     const segs = best.A.segs.map(g => Object.assign({ slot: 0 }, g)).concat(best.B.segs.map(g => Object.assign({ slot: 1 }, g)));
-    segs.forEach(g => place(g.p, g.a, g.b, free, true));
+    segs.forEach(g => place(g.p, Math.max(g.a, from), g.b, free, true));
     segs.forEach(g => { if (g.orig) return; const m = rangeMask(g.a, Math.min(days - 1, g.b === days - 1 ? g.b : g.b + 2)); ST.occ.set(g.p.name, (ST.occ.get(g.p.name) || 0) | m); });
     plan = { segs, acq: segs.filter(g => !g.orig).length, ev: best.v, orig: orig.map(p => p.name), d0, slots: S };
-  } else all.slice(nCore).forEach(p => { b2bCnt += place(p, 0, days - 1, free, true).nb; });
+  } else all.slice(nCore).forEach(p => { b2bCnt += place(p, from, days - 1, free, true).nb; });
   const mean = new Float64Array(NK); for (let k = 0; k < D; k++) for (let q = 0; q < NK; q++) mean[q] += tot[k * NK + q] / D;
   const ix = Object.fromEntries(KEYS.map((k, i) => [k, i])), c = {}, sv = {};
   const col = q => { const a = new Float64Array(D); for (let k = 0; k < D; k++) a[k] = tot[k * NK + q]; return a; };
@@ -464,13 +496,38 @@ function teamWeek(names, w, opt = {}) {
   sv.FG = ratio("FGM", "FGA"); sv.FT = ratio("FTM", "FTA");
   const n = Object.values(U).reduce((s, x) => s + x, 0), nB = Object.values(UB).reduce((s, x) => s + x, 0), xvo = {};
   XC.forEach((c2, i) => xvo[c2] = xv[i] / D);
-  return { c, sv, n, nB, b2bCnt, xv: xvo, pi: n > 0 ? Math.sqrt(1 + inflSum / D / n) : 1, used: U, usedB: UB, plan };
+  return { c, sv, n, nB, b2bCnt, xv: xvo, pi: n > 0 ? Math.sqrt(1 + inflSum / D / n) : 1, used: U, usedB: UB, plan, from, m: { FGM: mean[ix.FGM], FGA: mean[ix.FGA], FTM: mean[ix.FTM], FTA: mean[ix.FTA] } };
+}
+/* ---------- current week conditioned on the live scoreboard (league/live) ----------
+   Totals = actual through live.through + model for the remaining days. The scoreboard has FG%/FT% but not attempts: FGA is solved
+   from PTS = 2*FGM + 3PM + FTM with FTA/FGA taken from the model (FGA = (PTS - 3PM) / (2*FG% + FT% * FTA/FGA)). Uncertainty comes
+   only from the remaining days; the weekly add limit is reduced by the adds already made (live.adds). */
+function liveFor(w) {
+  const l = state.docs["league/live"]; if (!l || l.week !== w + 1 || !l.cats || !l.through) return null;
+  return { from: Math.max(0, Math.min(REF.sched[w].length, dayOffset(w, l.through) + 1)), cats: l.cats, adds: l.adds || {}, asOf: l.asOf, through: l.through };
+}
+function condition(o, a) {
+  const rc = Object.assign({}, o.c), m = o.m, r = m.FGA > 0 ? m.FTA / m.FGA : .28;
+  const fga = Math.max(1, (a.PTS - a.TPM) / Math.max(.5, 2 * a.FG + a.FT * r)), fta = r * fga, A = { FGM: a.FG * fga, FGA: fga, FTM: a.FT * fta, FTA: fta };
+  const c = {}; XC.forEach(k => c[k] = (+a[k] || 0) + rc[k]); c.DD = (+a.DD || 0) + rc.DD;
+  const FGA = A.FGA + m.FGA, FTA = A.FTA + m.FTA;
+  c.FG = (A.FGM + m.FGM) / Math.max(FGA, 1e-9); c.FT = (A.FTM + m.FTM) / Math.max(FTA, 1e-9);
+  o.rc = rc; o.c = c; o.shFG = m.FGA / Math.max(FGA, 1e-9); o.shFT = m.FTA / Math.max(FTA, 1e-9); o.act = a; o.actA = A;
+  o.sv = Object.assign({}, o.sv, { FG: o.sv.FG * o.shFG * o.shFG, FT: o.sv.FT * o.shFT * o.shFT });
+  return o;
+}
+function teamWeekL(team, names, w, opt = {}) {
+  const L = liveFor(w), a = L && L.cats[team];
+  if (!a) return teamWeek(names, w, opt);
+  const o2 = Object.assign({}, opt, { from: L.from });
+  if (o2.stream) o2.stream = Object.assign({}, o2.stream, { acq: Math.max(0, o2.stream.acq - (L.adds[team] || 0)) });
+  return condition(teamWeek(names, w, o2), a);
 }
 function msd(o, c) {
-  const n = Math.max(o.n, 1), sv = o.sv[c] || 0, xv = (o.xv && o.xv[c]) || 0;
-  if (PCT_SD[c]) return [o.c[c], Math.sqrt(Math.pow(PCT_SD[c] * (o.pi || 1) * Math.sqrt(35 / n), 2) + sv)];
-  if (c === "DD") return [o.c[c], Math.sqrt(Math.max(o.c[c], 1e-6) + sv)];
-  return [o.c[c], Math.sqrt(Math.pow(CV[c] * o.c[c] / Math.sqrt(n), 2) + sv + xv)];
+  const n = Math.max(o.n, 1), sv = o.sv[c] || 0, xv = (o.xv && o.xv[c]) || 0, rem = o.rc || o.c;   /* conditioned week: noise from the remaining days only */
+  if (PCT_SD[c]) { const sh = o.rc ? (c === "FG" ? o.shFG : o.shFT) : 1; return [o.c[c], Math.sqrt(Math.pow(PCT_SD[c] * (o.pi || 1) * Math.sqrt(35 / n) * sh, 2) + sv + 1e-10)]; }
+  if (c === "DD") return [o.c[c], Math.sqrt(Math.max(rem[c], 1e-6) + sv)];
+  return [o.c[c], Math.sqrt(Math.pow(CV[c] * rem[c] / Math.sqrt(n), 2) + sv + xv + 1e-6)];
 }
 /* One category, one week: P(win), P(tie), P(loss) for team a. Integer weekly totals (counting categories, DD) tie when the
    difference is 0 — normal approximation with continuity correction (|diff| < 0.5); FG%·FT% are treated as never tied. */
@@ -510,7 +567,7 @@ function computeAll(scen, b2b = state.b2b, stream = state.stream) {
     const occ = new Map(), pool = stOn ? streamPoolFor(w, scen) : null;
     for (const t of stOn ? priorityOrder(w) : T) {
       const before = stOn ? new Map(occ) : null;
-      TW[t + "|" + w] = teamWeek(rosterFor(t, w, scen), w, { perGame: scen && scen.perGame && scen.moves[t] ? scen.moves[t].in : null, b2b, stream: stOn ? { acq: stream.acq || acqFor(w), pool, occ, slots: t === ME ? stream.mine : STREAM_SLOTS } : null });
+      TW[t + "|" + w] = teamWeekL(t, rosterFor(t, w, scen), w, { perGame: scen && scen.perGame && scen.moves[t] ? scen.moves[t].in : null, b2b, stream: stOn ? { acq: stream.acq || acqFor(w), pool, occ, slots: t === ME ? stream.mine : STREAM_SLOTS } : null });
       if (stOn) { TW[t + "|" + w].occBefore = before; TW[t + "|" + w].prio = priorityOrder(w).indexOf(t) + 1; }
     }
   }
@@ -638,7 +695,7 @@ function renderNow() {
   $("mu-table").innerHTML = `<table><thead><tr><th>카테고리</th><th class="r">${esc(sh(ME))}</th><th class="r">${esc(sh(o.opp))}</th>${lv ? `<th class="r">실제(${esc(sh(ME))})</th><th class="r">실제(상대)</th>` : ""}${bb ? `<th class="r" title="백투백 반영 전후 주간 합계 차이">Δ ${esc(sh(ME))}</th><th class="r" title="백투백 반영 전후 주간 합계 차이">Δ ${esc(sh(o.opp))}</th>` : ""}<th title="승 + 무/2">${esc(sh(ME))} 기대 득점(승+무/2)</th><th></th></tr></thead><tbody>` +
     CATS.map(c => { const p = pc[c], q = pc3[c], k = p >= .6 ? "good" : p <= .4 ? "bad" : "mid", kl = p >= .6 ? "우세" : p <= .4 ? "열세" : "박빙";
       return `<tr><td>${LAB[c]}${LOW[c] ? " ↓" : ""}</td><td class="r num">${fmtCat(c, A.c[c])}</td><td class="r num">${fmtCat(c, B.c[c])}</td>${lv ? `<td class="r num">${esc(lv[ME] && lv[ME][c] != null ? lv[ME][c] : "—")}</td><td class="r num">${esc(lv[o.opp] && lv[o.opp][c] != null ? lv[o.opp][c] : "—")}</td>` : ""}${bb ? `<td class="r num">${fmtD(c, A.c[c] - Ao.c[c])}</td><td class="r num">${fmtD(c, B.c[c] - Bo.c[c])}</td>` : ""}<td><div class="bar mid" title="승 ${pct(q.w)} · 무 ${pct(q.t)} · 패 ${pct(q.l)}"><span style="width:${(p * 100).toFixed(1)}%;background:var(--${k === "bad" ? "bad" : k === "good" ? "good" : "s1"})"></span></div></td><td><span class="chip ${k}">${kl} ${pct(p)}</span>${q.t >= .015 ? ` <span class="note" title="무승부 확률">무 ${pct(q.t)}</span>` : ""}</td></tr>`; }).join("") + `</tbody></table>`;
-  $("mu-note").textContent = `${bb ? "Δ = 백투백 반영 전후 주간 합계 차이. " : ""}예상 주간 합계(${sh(ME)} ${A.n.toFixed(1)}경기 · 상대 ${B.n.toFixed(1)}경기 사용). 백투백 2번째 경기 노출: ${sh(ME)} ${A.b2bCnt}회 · ${sh(o.opp)} ${B.b2bCnt}회(선수×경기)${bb ? `, 실제 사용 ${A.nB.toFixed(1)} · ${B.nB.toFixed(1)}경기` : ""}. ${lv ? "실제 진행값: " + (live.asOf || "") : "진행 중 실제값은 매치업 화면 캡처를 주시면 표시됩니다."}`;
+  $("mu-note").textContent = `${bb ? "Δ = 백투백 반영 전후 주간 합계 차이. " : ""}예상 주간 합계(${sh(ME)} ${A.n.toFixed(1)}경기 · 상대 ${B.n.toFixed(1)}경기 사용). 백투백 2번째 경기 노출: ${sh(ME)} ${A.b2bCnt}회 · ${sh(o.opp)} ${B.b2bCnt}회(선수×경기)${bb ? `, 실제 사용 ${A.nB.toFixed(1)} · ${B.nB.toFixed(1)}경기` : ""}. ${lv ? `예상 합계 = 실제(${md(live.through || "")}까지, 스코어보드 ${esc(live.asOf || "")}) + 남은 일정 예측. 사용 예상은 남은 경기만 셉니다.` : "진행 중 실제값은 매치업 화면 캡처를 주시면 표시됩니다."}`;
   $("standings").innerHTML = `<table><thead><tr><th>예상</th><th>팀</th><th class="r" title="카테고리 승-패-무">기록</th><th class="r" title="시즌 최종 기대 승률 (마우스를 올리면 예상 W-L-T)">기대 승률</th>${state.b2b ? '<th class="r">B2B 영향</th>' : ""}${state.stream.on ? '<th class="r" title="전 팀 스트리밍 반영 전후 기대 승률 차이">스트리밍 영향</th>' : ""}<th class="r" title="플레이오프 진출(상위 ${(rules().playoffs || {}).teams || 6}팀)">PO</th><th class="r" title="정규시즌 1위">1위</th><th class="r" title="플레이오프 우승">우승</th></tr></thead><tbody>` +
     ranks.map((t, i) => { const x = R.season[t], r = record(t); return `<tr class="${t === ME ? "me" : ""}"><td class="num">${i + 1}</td><td>${esc(sh(t))}</td><td class="r num">${r.w}-${r.l}-${r.t}</td><td class="r num" title="예상 W-L-T ${wlt(x.eW, x.eL, x.eT, 1)} · 80% 범위 ${Math.round(x.p10 * 100)}–${Math.round(x.p90 * 100)}%">${pctP(x.epct)}</td>${state.b2b ? `<td class="r num">${dpp(x.epct - state.baseOff.season[t].epct)}</td>` : ""}${state.stream.on ? `<td class="r num">${dpp(x.epct - state.baseNS.season[t].epct)}</td>` : ""}<td class="r num" title="상위 2시드(1라운드 부전승) ${pct(x.p2)}">${pct(x.po)}</td><td class="r num">${pct(x.p1)}</td><td class="r num" title="결승 진출 ${pct(x.fin)}">${pct(x.champ)}</td></tr>`; }).join("") + `</tbody></table>`;
   const ros = rosters()[ME], ir = ros.ir || [];
@@ -651,7 +708,7 @@ function renderNow() {
     ir.map(n => `<tr><td>${esc(n)}</td><td colspan="${state.b2b ? 19 : 16}" class="note">IR — 시뮬레이션 제외</td></tr>`).join("") + `</tbody></table>`;
   renderB2BPanel(rowsP, cw, A, Ao);
   renderStreamPanel(R, cw);
-  $("roster-note").textContent = (state.stream.on ? "사용 예상은 스트리밍 계획(아래 표)에서 방출되기 전까지의 경기만 셉니다. " : "") + `경기당 수치는 ${act ? "프로젝션과 실제 기록(" + (act.asOf || "") + ")을 섞은 값" : "ESPN 300 프로젝션"}입니다. 사용 예상 = 슬롯 한도와 결장 가능성을 반영해 이번 주 실제로 기록에 들어갈 경기 수.`;
+  $("roster-note").textContent = (state.stream.on ? "사용 예상은 스트리밍 계획(아래 표)에서 방출되기 전까지의 경기만 셉니다. " : "") + `경기당 수치는 ESPN·6시즌 회귀 결합 프로젝션${act ? `에 2026-27 실제 기록(${act.asOf || ""})을 ${pct(actWeight(cw))} 섞은 값` : ""}입니다(근거: 프로젝션 근거 탭). 사용 예상 = 슬롯 한도와 결장 가능성을 반영해 이번 주 실제로 기록에 들어갈 경기 수.`;
   $("heat").innerHTML = heatTable(R, 0, null, null);
 }
 /* Category rank board: average weekly totals over weeks [from, NW) -> rank 1..8 per category (TO/PF: fewer is better).
@@ -767,7 +824,7 @@ function recommend() {
   const ST = state.stream.on, pools = {}; if (ST) for (let w = from; w < NW; w++) pools[w] = streamPoolFor(w, null);
   /* with streaming on, the candidate takes a core spot and the team keeps streaming its two lowest spots, at its own priority that week */
   const stw = w => ST ? { acq: acqFor(w), slots: state.stream.mine, pool: pools[w], occ: new Map(state.base.TW[ME + "|" + w].occBefore || []) } : null;
-  const evalRos = (ros, pg) => { let s = 0; for (let w = from; w < NW; w++) s += ptsOf(teamWeek(ros, w, { draws: 80, perGame: pg, stream: stw(w) }), opp(w)); return s; };
+  const evalRos = (ros, pg) => { let s = 0; for (let w = from; w < NW; w++) s += ptsOf(teamWeekL(ME, ros, w, { draws: 80, perGame: pg, stream: stw(w) }), opp(w)); return s; };
   const b0 = evalRos(drop ? base.concat([drop]) : base, null);
   const cands = faPool().filter(p => !(p.pos === "C" && nC >= 4)).slice(0, 25);
   const rows = cands.map(p => ({ p, d: evalRos(base.concat([p.name]), statusOf(p.name) === "O" ? null : new Set([p.name])) - b0 })).sort((a, b) => b.d - a.d).slice(0, 10);
@@ -779,17 +836,76 @@ function renderRec() {
     state.rec.rows.map((r, i) => `<tr><td class="num">${i + 1}</td><td>${esc(r.p.name)}${statusOf(r.p.name) ? ` <span class="${statusOf(r.p.name) === "O" ? "stat-o" : "stat-dtd"}">${esc(statusOf(r.p.name))}</span>` : ""}</td><td>${esc(r.p.elig)} · ${esc(r.p.team)}</td><td class="r num">${r.p.espn || "—"}</td><td class="r num"><span class="delta ${r.d >= 0 ? "up" : "down"}">${r.d >= 0 ? "+" : ""}${r.d.toFixed(2)}</span></td><td class="r num">${dpp(r.d / (CATS.length * NW))}</td></tr>`).join("") + `</tbody></table>`;
 }
 
+/* ---------- rendering: 프로젝션 근거 ---------- */
+const PCAT = [["PTS", "PTS"], ["REB", "REB"], ["AST", "AST"], ["TPM", "3PM"], ["STL", "STL"], ["BLK", "BLK"], ["FGp", "FG%"], ["FTp", "FT%"], ["DDg", "DD/G"]];
+const AKEY = { PTS: "pts", REB: "reb", AST: "ast", TPM: "tpm", STL: "stl", BLK: "blk" };
+const finalOf = (p, k) => k === "FGp" ? p.FGM / Math.max(p.FGA, 1e-9) : k === "FTp" ? (p.FTA ? p.FTM / p.FTA : 0) : p[k];
+const actOf = (a, k) => !a ? null : k === "FGp" ? (a.fga ? a.fgm / a.fga : null) : k === "FTp" ? (a.fta ? a.ftm / a.fta : null) : k === "DDg" ? (a.dd != null ? a.dd / a.g : null) : a[AKEY[k]];
+const fv = (k, v) => v == null || !isFinite(v) ? "—" : k === "FGp" || k === "FTp" ? v.toFixed(3).replace(/^0/, "") : k === "DDg" ? v.toFixed(2) : v.toFixed(1);
+const fd = (k, v) => { if (v == null || !isFinite(v)) return "—"; const a = Math.abs(v), s = v > 0 ? "+" : v < 0 ? "−" : "±"; return k === "FGp" || k === "FTp" ? (a < .0005 ? "±0" : s + a.toFixed(3).replace(/^0/, "")) : k === "DDg" ? (a < .005 ? "±0" : s + a.toFixed(2)) : (a < .05 ? "±0" : s + a.toFixed(1)); };
+function renderProj() {
+  const PJ = REF.proj || {}, PM = REF.projMeta, own = ownerMap(), irs = irSet(), R = rosters() || {}, cw = currentWeek(), wA = actWeight(cw), act = state.docs["league/actuals"];
+  if (!PM) { $("pj-kpis").innerHTML = ""; $("pj-table").innerHTML = '<p class="note">이 버전의 기준 데이터에는 프로젝션 근거가 없습니다.</p>'; return; }
+  const ros = Object.values(R).flatMap(t => (t.active || [])), wr = ros.map(n => PJ[n] && PJ[n].wR && PJ[n].wR.PTS).filter(x => x != null).sort((a, b) => a - b), med = wr.length ? wr[Math.floor(wr.length / 2)] : 0;
+  const nAct = act && act.players ? Object.values(act.players).filter(a => a.g > 0).length : 0, bt = PM.backtest || {}, b = bt.PTS || {};
+  $("pj-kpis").innerHTML = `
+    <div class="kpi"><span class="l">프로젝션 방식 · ${Object.keys(PJ).length}명</span><span class="v num">${PM.counts.reg}<small>회귀+ESPN</small></span><span class="d">신인 NCAA+ESPN ${PM.counts.ncaa} · ESPN 단독 ${PM.counts.espn}</span></div>
+    <div class="kpi"><span class="l">회귀 가중 w<sub>R</sub> (로스터 중앙값)</span><span class="v num">${pct(med)}</span><span class="d">나머지 ${pct(1 - med)} = ESPN · 범위 ${pct(PM.wMin)}–${pct(PM.wMax)}</span></div>
+    <div class="kpi"><span class="l">회귀 백테스트 · PTS 상대오차</span><span class="v num">${pct(b.reg || 0, 1)}</span><span class="d">직전 시즌 그대로 ${pct(b.naive || 0, 1)} · ${b.N || 0}명 검증</span></div>
+    <div class="kpi"><span class="l">2026-27 실제 기록 반영 · ${cw + 1}주차${actMode() === "sample" ? " · 표본 보정" : ""}</span><span class="v num">${pct(wA)}${actMode() === "sample" ? `<small>× 경기/${ACT_G_FULL}</small>` : ""}</span><span class="d">${nAct ? `${nAct}명 · ${esc(act.asOf || "")}${act.through ? " · " + md(act.through) + "까지" : ""}` : "실제 기록 대기"}</span></div>`;
+  /* team impact: active roster sums of (final - ESPN) per game; value change = projection only */
+  const tRows = REF.teams.map(t => { const a = ((R[t] || {}).active || []).filter(n => PJ[n] && state.PL[n]); const o = { t, dv: a.reduce((s, n) => s + (PJ[n].dv || 0), 0) };
+    PCAT.forEach(([k]) => { if (k === "FGp" || k === "FTp") { const M = k === "FGp" ? ["FGM", "FGA"] : ["FTM", "FTA"]; const fin = a.reduce((s, n) => s + state.PL[n][M[0]], 0) / Math.max(1e-9, a.reduce((s, n) => s + state.PL[n][M[1]], 0)), es = a.reduce((s, n) => s + PJ[n].E[k] * BASE[n][M[1]], 0) / Math.max(1e-9, a.reduce((s, n) => s + BASE[n][M[1]], 0)); o[k] = fin - es; } else o[k] = a.reduce((s, n) => s + finalOf(state.PL[n], k) - PJ[n].E[k], 0); });
+    return o; }).sort((x, y) => y.dv - x.dv);
+  $("pj-teams").innerHTML = `<table><thead><tr><th>팀</th><th class="r" title="회귀 결합에 따른 시즌 가치 합계 변화(z 점수, 실제 기록 반영 전)">가치 Δ</th>${PCAT.map(([k, l]) => `<th class="r">${l}</th>`).join("")}</tr></thead><tbody>` +
+    tRows.map(o => `<tr class="${o.t === ME ? "me" : ""}"><td>${esc(sh(o.t))}</td><td class="r num">${dlt(o.dv, 2)}</td>${PCAT.map(([k]) => `<td class="r num">${fd(k, o[k])}</td>`).join("")}</tr>`).join("") + `</tbody></table>`;
+  $("pj-teams-note").textContent = `활성 로스터 13명의 경기당 기록 합계 변화(최종 − ESPN 원 프로젝션). 최종 = 회귀 결합 + 2026-27 실제 ${pct(wA)}. FG%·FT%는 시도 수 가중. 가치 Δ는 회귀 결합만의 효과(z 점수 합). 같은 규칙을 8팀·FA 전원에 적용해 특정 팀에 유리한 보정은 없습니다.`;
+  /* player table */
+  $("pj-act").value = actMode();
+  const sel = $("pj-filter"), cur = state.pjFilter || "me";
+  const opts = [["me", `${sh(ME)} (선택 팀)`], ["all", "전체 로스터 8팀"], ["fa", "FA 상위 60"]].concat(REF.teams.filter(t => t !== ME).map(t => ["t:" + t, sh(t)]));
+  sel.innerHTML = opts.map(([v, l]) => `<option value="${esc(v)}"${v === cur ? " selected" : ""}>${esc(l)}</option>`).join("");
+  let names = cur === "me" ? ((R[ME] || {}).active || []).concat((R[ME] || {}).ir || []) : cur === "all" ? Object.values(R).flatMap(t => (t.active || []).concat(t.ir || [])) : cur === "fa" ? faPool().slice(0, 60).map(p => p.name) : (((R[cur.slice(2)] || {}).active || []).concat((R[cur.slice(2)] || {}).ir || []));
+  const q = (state.pjQ || "").trim().toLowerCase();
+  if (q) names = Object.keys(PJ).filter(n => n.toLowerCase().includes(q) || ((state.PL[n] || {}).team || "").toLowerCase() === q);
+  names = names.filter(n => PJ[n] && state.PL[n]).sort((x, y) => state.PL[y].value - state.PL[x].value);
+  $("pj-title").textContent = `선수별 프로젝션 근거 · ${names.length}명`;
+  const yr = y => "’" + String(y).slice(2);
+  $("pj-table").innerHTML = `<table><thead><tr><th>선수</th><th>소속</th><th>NBA</th><th>방법</th><th title="회귀에 쓴 시즌(10경기 이상)">표본</th><th class="r" title="회귀 가중(PTS 기준). 나머지는 ESPN. 마우스를 올리면 카테고리별">w<sub>R</sub></th>${PCAT.map(([k, l]) => `<th class="r" title="굵게 = 최종(회귀 결합 + 실제 기록 가중). 아래 = ESPN · 회귀">${l}</th>`).join("")}<th class="r" title="2026-27 실제 출전 경기 · 이번 주 반영 가중">26-27 실제</th><th class="r" title="회귀 결합으로 바뀐 시즌 가치(z 점수)">가치 Δ</th></tr></thead><tbody>` +
+    names.map(n => { const p = state.PL[n], j = PJ[n], a = p.actual, ow = own[n] ? sh(own[n]) : irs.has(n) ? "IR" : "FA", R2 = j.R || {};
+      const tags = (j.moved ? ` <span class="chip tag" title="직전 시즌 ${esc(j.lastTeam || "")} → ${esc(p.team || "")}: 회귀 분산 ×${PM.teamVar}">이적</span>` : "") + (j.gap ? ` <span class="chip tag" title="최근 ${j.gap}시즌 기록 없음: 회귀 분산 +${Math.round(PM.gapVar * 100 * j.gap)}%">공백 ${j.gap}</span>` : "");
+      const wt = Object.entries(j.wR || {}).map(([k, v]) => `${(PCAT.find(x => x[0] === k) || [k, k])[1]} ${pct(v)}`).join(" · ");
+      return `<tr class="${own[n] === ME ? "me" : ""}"><td>${esc(n)}${statusOf(n) ? ` <span class="${statusOf(n) === "O" ? "stat-o" : "stat-dtd"}">${esc(statusOf(n))}</span>` : ""}</td><td>${esc(ow)}</td><td>${esc(p.team || "—")}</td><td>${esc(j.method)}${tags}</td><td class="num">${j.yrs && j.yrs.length ? `${j.yrs.length}시즌 ${yr(j.yrs[0])}–${yr(j.yrs[j.yrs.length - 1])}` : j.ncaa ? `NCAA ${esc(j.ncaa.school || "")}` : "—"}</td><td class="r num" title="${esc(wt)}">${pct(j.wR.PTS || 0)}</td>` +
+        PCAT.map(([k]) => { const av = actOf(a, k), sl = j.slope && j.slope[k]; return `<td class="r num pjv" title="ESPN ${fv(k, j.E[k])} · 회귀 ${fv(k, R2[k])}${sl != null ? ` (추세 ${sl >= 0 ? "+" : ""}${sl}/시즌)` : ""} · 결합 ${fv(k, j.B[k])}${av != null ? ` · 26-27 실제 ${fv(k, av)}(${pct(p.actW || 0)})` : ""} → 최종 ${fv(k, finalOf(p, k))}"><b>${fv(k, finalOf(p, k))}</b><small>${fv(k, j.E[k])} · ${j.R ? fv(k, R2[k]) : "—"}</small></td>`; }).join("") +
+        `<td class="r num">${a ? `${a.g}G · ${pct(p.actW || 0)}` : "—"}</td><td class="r num">${dlt(j.dv || 0, 2)}</td></tr>`; }).join("") + `</tbody></table>`;
+  $("pj-note").textContent = `굵은 숫자 = 최종 경기당 기록(시뮬레이션 입력, 백투백 효과 제외), 아래 작은 숫자 = ESPN 원 프로젝션 · 회귀 예측. 이적 = 직전 시즌과 NBA 팀이 다름(역할 변화를 회귀가 모르므로 ESPN 비중 상향). 공백 = 최근 시즌 결장으로 마지막 기록 시즌에서 외삽.`;
+  /* method + backtest */
+  const ins = (PM.inSeason || []).map(([a2, b2, x]) => `${a2}–${b2 > 17 ? "" : b2}주 ${pct(x)}`).join(" · ");
+  $("pj-method").innerHTML = [
+    `<b>과거 실적 선형회귀</b> — Basketball-Reference 시즌별 경기당 기록(2020-21~2025-26, 10경기 이상 시즌). 카테고리마다 가중최소제곱(가중치 = 출전 경기 × ${PM.delta}<sup>경과 시즌</sup>), 추세 기울기는 표본 수로 축소(×(n−1)/(n−1+${PM.kShrink})) 후 2026-27로 외삽. FG%·FT%는 시도 수 가중 비율을 회귀해 성공 수로 환산. 2025-26 기록이 없는 선수는 마지막 기록 시즌까지로 회귀.`,
+    `<b>ESPN 결합(역분산)</b> — 회귀 오차 σ<sub>R</sub>는 같은 방법으로 2025-26을 예측한 백테스트 오차(시즌 수 n에 따라 √(1+1/n) 비례), ESPN 오차 σ<sub>E</sub><sup>2</sup> = ${PM.kappa} × 회귀 평균 오차<sup>2</sup>[가정]. w<sub>R</sub> = σ<sub>E</sub><sup>2</sup>/(σ<sub>E</sub><sup>2</sup>+σ<sub>R</sub><sup>2</sup>), ${pct(PM.wMin)}–${pct(PM.wMax)}로 제한. 이적 선수 σ<sub>R</sub><sup>2</sup> ×${PM.teamVar}, 기록 공백 1시즌당 +${Math.round(PM.gapVar * 100)}%[가정].`,
+    `<b>더블더블</b> — PTS·REB·AST 경기당 평균에서 10 이상 확률(정규 근사, 2025-26 ${PM.ddFit.N}명으로 적합, 오차 ${PM.ddFit.rmse})로 회귀 쪽 DD 비율을 만들고, 선수별 2025-26 실제 DD 비율로 보정 후 ESPN과 같은 비중으로 결합.`,
+    `<b>신인(NBA 기록 없음)</b> — NCAA 2025-26 경기당 기록을 NBA 환산 계수로 변환해 ESPN과 ${pct(PM.wNcaa)} : ${pct(1 - PM.wNcaa)} 가중평균. NCAA 기록 미확보 선수는 ESPN 그대로(${PM.counts.espn}명).`,
+    `<b>2026-27 실제 기록</b> — 출전 기록이 생긴 선수는 주차별 고정 가중으로 결합: ${ins}(사용자 지정). 대안 '표본 보정'은 이 가중에 min(1, 경기 수/${ACT_G_FULL})을 곱해 1–2경기 표본의 잡음을 줄입니다. 진행 중인 주는 스코어보드 실제 합계 + 남은 일정 예측.`,
+    `<b>출전 경기</b> — 이 결합은 경기당 기록에만 적용. 출전 경기는 상단 GP 가정(기본: 전 경기 출전, 백투백만 반영)을 따릅니다.`].map(x => `<li>${x}</li>`).join("");
+  const bl = [["PTS", "PTS"], ["REB", "REB"], ["AST", "AST"], ["TPM", "3PM"], ["STL", "STL"], ["BLK", "BLK"], ["TO", "TO"], ["PF", "PF"], ["FGp", "FG%"], ["FTp", "FT%"]];
+  const wOf = (k, x) => PM.kappa / (PM.kappa + Math.pow(x / (bt[k].reg || 1), 2));
+  $("pj-bt").innerHTML = `<table><thead><tr><th>카테고리</th><th class="r" title="회귀 예측의 상대 RMSE">회귀 오차</th><th class="r" title="2024-25 기록을 그대로 쓴 경우">직전 시즌 오차</th><th class="r">개선</th><th class="r" title="6시즌 · 이적 없음">w<sub>R</sub> n=6</th><th class="r" title="1시즌 · 이적 없음">w<sub>R</sub> n=1</th></tr></thead><tbody>` +
+    bl.filter(([k]) => bt[k]).map(([k, l]) => { const x = bt[k], imp = x.naive - x.reg; return `<tr><td>${l}</td><td class="r num">${k === "FGp" || k === "FTp" ? (x.reg * 100).toFixed(1) + "%p" : pct(x.reg, 1)}</td><td class="r num">${k === "FGp" || k === "FTp" ? (x.naive * 100).toFixed(1) + "%p" : pct(x.naive, 1)}</td><td class="r num"><span class="delta ${imp >= 0 ? "up" : "down"}">${imp >= 0 ? "−" : "+"}${(Math.abs(imp) * 100).toFixed(1)}${k === "FGp" || k === "FTp" ? "%p" : "%"}</span></td><td class="r num">${pct(Math.min(PM.wMax, Math.max(PM.wMin, wOf(k, x.n6))))}</td><td class="r num">${pct(Math.min(PM.wMax, Math.max(PM.wMin, wOf(k, x.n1))))}</td></tr>`; }).join("") + `</tbody></table>`;
+  $("pj-bt-note").textContent = `2025-26에 25경기 이상 뛴 선수 ${(bt.PTS || {}).N || 0}명을 2020-21~2024-25 기록만으로 예측한 결과(상대오차 = 오차 ÷ 실제값, FG%·FT%는 %p). 회귀는 '직전 시즌 그대로'보다 소폭 정확하지만 차이가 작아, 단독 사용 대신 ESPN과 결합합니다. 2020-21~2024-25 시즌 페이지는 득점 상위 약 250명까지만 확보돼 저득점 시즌은 표본에서 빠집니다(2025-26은 전원).`;
+}
+
 /* ---------- orchestration ---------- */
 function renderFresh() {
   const r = state.docs["league/rosters"], a = state.docs["league/actuals"], res = state.docs["league/results"];
   const done = res && res.weeks ? Object.keys(res.weeks).length : 0;
   $("fresh").innerHTML = (state.db === "none" ? `<span class="pill warn">저장소에 연결되지 않음</span>` : state.db === "snapshot" ? `<span class="pill warn" title="실시간 저장소 대신 페이지에 내장된 데이터로 계산">스냅샷 데이터 · ${esc((EMBED.asOf || "").slice(0, 10))}</span>` : "") +
-    `<span class="pill">로스터 ${esc(r && r.asOf ? r.asOf.slice(0, 16).replace("T", " ") : "—")}</span><span class="pill">실제 스탯 ${esc(a && a.asOf ? a.asOf.slice(0, 10) : "시즌 시작 전")}</span><span class="pill">결과 반영 ${done}주</span>${state.stream.on ? `<span class="pill" title="FA 목록 ${esc(faDoc() ? (faDoc().asOf || "").slice(0, 16).replace("T", " ") : "없음")}">전 팀 스트리밍 · ${acqLabel()}</span>` : ""}${(() => { const m = state.docs["league/meta"] || {}, g = gpMode(); return g === "full" ? `<span class="pill" title="ESPN 예상 출전 경기와 무관하게 전 경기 출전, 백투백 휴식·피로만 반영">GP 가정: 전 경기 출전</span>` : g === "mine" && (m.keepGP || []).length ? `<span class="pill warn" title="이 선수들만 ESPN 출전 경기 유지 — 다른 팀 부상 시즌 선수는 중립 보정">GP 가정: ${esc((m.keepGP || []).map(n => n.split(" ").slice(-1)[0]).join("·"))} ESPN 유지</span>` : g === "fair" ? `<span class="pill">GP 가정: 부상 시즌 전원 ESPN 유지</span>` : `<span class="pill">GP 가정: 전원 중립</span>`; })()}${state.b2b ? '<span class="pill b2b">백투백 반영 중</span>' : ""}${state.busy ? '<span class="pill">계산 중…</span>' : ""}`;
+    `<span class="pill">로스터 ${esc(r && r.asOf ? r.asOf.slice(0, 16).replace("T", " ") : "—")}</span><span class="pill" title="${a && a.source ? esc(a.source) : ""}">실제 스탯 ${esc(a && a.asOf ? a.asOf.slice(0, 10) : "시즌 시작 전")}${a ? ` · ${pct(actWeight(currentWeek()))}${actMode() === "sample" ? " 표본 보정" : ""}` : ""}</span>${state.docs["league/live"] && state.docs["league/live"].through ? `<span class="pill" title="${esc(state.docs["league/live"].source || "")}">진행 주 실제 ${esc(md(state.docs["league/live"].through))}까지</span>` : ""}<span class="pill">결과 반영 ${done}주</span>${state.stream.on ? `<span class="pill" title="FA 목록 ${esc(faDoc() ? (faDoc().asOf || "").slice(0, 16).replace("T", " ") : "없음")}">전 팀 스트리밍 · ${acqLabel()}</span>` : ""}${(() => { const m = state.docs["league/meta"] || {}, g = gpMode(); return g === "full" ? `<span class="pill" title="ESPN 예상 출전 경기와 무관하게 전 경기 출전, 백투백 휴식·피로만 반영">GP 가정: 전 경기 출전</span>` : g === "mine" && (m.keepGP || []).length ? `<span class="pill warn" title="이 선수들만 ESPN 출전 경기 유지 — 다른 팀 부상 시즌 선수는 중립 보정">GP 가정: ${esc((m.keepGP || []).map(n => n.split(" ").slice(-1)[0]).join("·"))} ESPN 유지</span>` : g === "fair" ? `<span class="pill">GP 가정: 부상 시즌 전원 ESPN 유지</span>` : `<span class="pill">GP 가정: 전원 중립</span>`; })()}${state.b2b ? '<span class="pill b2b">백투백 반영 중</span>' : ""}${state.busy ? '<span class="pill">계산 중…</span>' : ""}`;
 }
-function setTab(t) { state.tab = t; try { localStorage.setItem("td-tab", t); } catch (e) {} $("tab-now").setAttribute("aria-selected", String(t === "now")); $("tab-fc").setAttribute("aria-selected", String(t === "fc")); render(); }
+function setTab(t) { state.tab = t; try { localStorage.setItem("td-tab", t); } catch (e) {} $("tab-now").setAttribute("aria-selected", String(t === "now")); $("tab-fc").setAttribute("aria-selected", String(t === "fc")); $("tab-proj").setAttribute("aria-selected", String(t === "proj")); render(); }
 function renderNeutralNote() {
   const n = REF.neutral, rs = [...state.restB2B];
-  $("neutral-note").textContent = (n ? `중립 보정: 모든 선수(8팀·FA 동일 규칙)의 ESPN 프로젝션을 최근 실적 쪽으로 회귀 — 출전 경기 = ESPN ${Math.round((1 - n.wGP) * 100)}% + 최근 시즌 실제 ${Math.round(n.wGP * 100)}%(2025-26 10경기 이상, 없으면 2024-25), 경기당 기록 = ESPN ${Math.round((1 - n.wPG) * 100)}% + 2025-26 실제 ${Math.round(n.wPG * 100)}%(20경기 이상). 신인·기록 없는 선수는 ESPN 그대로. ` : "중립 보정 미적용(ESPN 프로젝션 그대로). ") +
+  $("neutral-note").textContent = (REF.projMeta ? `경기당 기록: 모든 선수(8팀·FA 동일 규칙)에 ESPN 프로젝션과 Basketball-Reference 6시즌 가중 선형회귀를 역분산으로 결합(회귀 가중 ${Math.round(REF.projMeta.wMin * 100)}–${Math.round(REF.projMeta.wMax * 100)}%, 신인은 NCAA 환산 ${Math.round(REF.projMeta.wNcaa * 100)}%) — 선수별 근거는 '프로젝션 근거' 탭. ${n ? `출전 경기 중립 보정(GP 가정이 '중립'·'지정'·'부상 시즌'일 때 사용) = ESPN ${Math.round((1 - n.wGP) * 100)}% + 최근 시즌 실제 ${Math.round(n.wGP * 100)}%. ` : ""}` : n ? `중립 보정: 모든 선수(8팀·FA 동일 규칙)의 ESPN 프로젝션을 최근 실적 쪽으로 회귀 — 출전 경기 = ESPN ${Math.round((1 - n.wGP) * 100)}% + 최근 시즌 실제 ${Math.round(n.wGP * 100)}%(2025-26 10경기 이상, 없으면 2024-25), 경기당 기록 = ESPN ${Math.round((1 - n.wPG) * 100)}% + 2025-26 실제 ${Math.round(n.wPG * 100)}%(20경기 이상). 신인·기록 없는 선수는 ESPN 그대로. ` : "중립 보정 미적용(ESPN 프로젝션 그대로). ") +
     (() => { const m = state.docs["league/meta"] || {}, g = gpMode(), kept = Object.values(state.PL).filter(p => p.gpKept).length;
       return g === "full" ? `GP 가정: 전 경기 출전 — 모든 선수(8팀·FA)가 판타지 시즌(정규 14주 + 플레이오프 3주) 경기를 모두 뛰고, 백투백 2번째 경기만 선수별 휴식 성향만큼 결장·기록 하락(백투백 반영 체크 시). 이번 주 O·DTD 상태는 반영. ` : g === "mine" ? `GP 가정: 지정 선수(${(m.keepGP || []).join(", ")})는 ESPN 출전 경기 유지(사용자 지정), 나머지는 중립 보정 — 다른 팀의 부상 시즌 선수에는 적용되지 않음. ` :
         g === "fair" ? `GP 가정: 직전 시즌 ${m.keepGpBelow || 40}경기 미만(부상 시즌) 선수 ${kept}명 전원 ESPN 출전 경기 유지, 나머지는 중립 보정. ` : "GP 가정: 전원 중립 보정. "; })() +
@@ -816,14 +932,14 @@ function render() {
   const ready = !!(rosters() && state.base);
   $("view-empty").hidden = ready;
   if (!ready) {
-    $("view-now").hidden = $("view-fc").hidden = true;
+    $("view-now").hidden = $("view-fc").hidden = $("view-proj").hidden = true;
     if (state.db === "none") { $("empty-title").textContent = "로스터 데이터에 접근할 수 없습니다"; $("empty-text").textContent = "이 페이지는 Claude가 갱신하는 리그 저장소에서 로스터를 읽습니다. 로그인한 상태로 열어 주세요."; }
     else if (state.db === "ready" && !rosters()) { $("empty-title").textContent = "아직 로스터가 없습니다"; $("empty-text").textContent = "리그 로스터 화면 캡처를 Claude에게 보내면 여기에 반영됩니다."; }
     else { $("empty-title").textContent = "로스터를 불러오는 중입니다"; $("empty-text").textContent = "시즌 시뮬레이션을 준비하고 있습니다."; }
     return;
   }
-  $("view-now").hidden = state.tab !== "now"; $("view-fc").hidden = state.tab !== "fc";
-  if (state.tab === "now") renderNow(); else { renderSimControls(); renderForecast(); renderRec(); }
+  $("view-now").hidden = state.tab !== "now"; $("view-fc").hidden = state.tab !== "fc"; $("view-proj").hidden = state.tab !== "proj";
+  if (state.tab === "now") renderNow(); else if (state.tab === "proj") renderProj(); else { renderSimControls(); renderForecast(); renderRec(); }
 }
 let timer = null;
 function recompute() {
@@ -873,6 +989,10 @@ document.addEventListener("change", e => {
 $("sim-q").addEventListener("input", () => renderSimControls());
 $("tab-now").addEventListener("click", () => setTab("now"));
 $("tab-fc").addEventListener("click", () => setTab("fc"));
+$("tab-proj").addEventListener("click", () => setTab("proj"));
+$("pj-filter").addEventListener("change", e => { state.pjFilter = e.target.value; renderProj(); });
+$("pj-act").addEventListener("change", e => { state.actMode = e.target.value; try { localStorage.setItem("td27-actmode", e.target.value); } catch (x) {} state.rec = null; state.scen = null; state.busy = true; renderFresh(); recompute(); });
+$("pj-q").addEventListener("input", e => { state.pjQ = e.target.value; clearTimeout(state.pjT); state.pjT = setTimeout(renderProj, 120); });
 $("sim-run").addEventListener("click", runSim);
 $("sim-reset").addEventListener("click", () => { state.scen = null; state.simSel.drop.clear(); state.simSel.add.clear(); $("sim-msg").textContent = ""; renderSimControls(); renderForecast(); });
 $("rec-run").addEventListener("click", () => { $("rec-busy").textContent = "계산 중…"; $("rec-run").disabled = true; setTimeout(() => { recommend(); $("rec-busy").textContent = ""; $("rec-run").disabled = false; renderRec(); }, 20); });

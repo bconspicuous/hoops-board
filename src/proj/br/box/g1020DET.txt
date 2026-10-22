@@ -1,0 +1,28 @@
+BOS|Jayson Tatum|37:49|6|23|0|1|1|4|11|0|0|2|3|13
+BOS|Derrick White|35:55|7|13|3|0|0|1|8|1|0|4|2|17
+BOS|Paul George|30:35|12|21|7|7|8|5|3|5|0|3|5|38
+BOS|Mitchell Robinson|18:06|2|2|0|0|2|3|1|1|2|2|2|4
+BOS|Jordan Walsh|13:28|0|2|0|0|0|6|1|1|1|0|0|0
+BOS|Payton Pritchard|27:30|4|9|2|7|8|4|1|0|0|0|2|17
+BOS|Neemias Queta|22:07|1|3|0|1|2|4|2|1|2|1|4|3
+BOS|Baylor Scheierman|18:14|3|4|2|0|0|3|0|1|0|1|1|8
+BOS|Sam Hauser|18:10|4|7|3|0|0|4|1|0|0|0|3|11
+BOS|Hugo González|9:43|0|1|0|0|0|3|0|0|0|0|0|0
+BOS|Luka Garza|8:21|1|3|0|0|0|2|0|0|0|1|4|2
+BOS|Chris Cenac Jr.|DNP
+BOS|Mike Conley|DNP
+BOS|Ron Harper Jr.|DNP
+DET|Cade Cunningham|35:17|8|18|1|5|5|4|8|1|1|5|0|22
+DET|Ausar Thompson|33:15|4|8|0|3|3|11|5|1|0|3|3|11
+DET|Jalen Duren|28:02|8|13|0|6|7|9|1|1|1|1|2|22
+DET|Duncan Robinson|27:48|5|10|5|6|8|2|2|1|0|3|4|21
+DET|John Collins|25:27|3|7|0|0|0|5|1|1|1|0|0|6
+DET|Isaiah Joe|19:17|2|9|2|2|3|2|2|1|1|1|0|8
+DET|Kevin Huerter|18:16|1|4|1|0|0|3|2|0|0|0|2|3
+DET|Javonte Green|17:49|5|10|5|4|4|4|0|0|0|0|2|19
+DET|Paul Reed|16:42|2|3|0|2|2|6|2|1|0|2|3|6
+DET|Daniss Jenkins|15:20|1|3|1|0|0|2|3|0|0|1|4|3
+DET|Ron Holland|2:45|0|1|0|0|0|1|1|0|1|1|2|0
+DET|Chaz Lanier|DNP
+DET|Ebuka Okorie|DNP
+DET|Tolu Smith|DNP

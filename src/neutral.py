@@ -12,7 +12,8 @@ import os
 KEEP = set(x for x in os.environ.get("KEEP_GP", "").split("|") if x)        # players whose GP stays at the ESPN projection
 KEEP_LT = float(os.environ.get("KEEP_GP_LT", "0"))                           # ...or every player whose recent GP is below this
 OUT = os.environ.get("OUT", "ref22.json")
-ref = json.load(open("ref22_espn.json")); F = ref["fields"]; H = json.load(open("data/hist.json"))["players"]
+IN = os.environ.get("IN", "ref22_espn.json")                                 # ESPN file, or ref27_base.json (regression-blended per-game)
+ref = json.load(open(IN)); F = ref["fields"]; H = json.load(open("data/hist.json"))["players"]
 K = ["FGM", "FGA", "FTM", "FTA", "TPM", "REB", "AST", "STL", "BLK", "TO", "PTS", "PF", "DDg"]
 P = [dict(zip(F, r)) for r in ref["players"]]
 # valuation used for the shift (same structure as the draft-prep value: 50% per-game z + 50% season-total z, pool = top 150)
