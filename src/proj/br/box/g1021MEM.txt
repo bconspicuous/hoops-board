@@ -1,0 +1,29 @@
+UTA|Lauri Markkanen|36:20|4|13|1|9|10|9|3|0|1|3|1|18
+UTA|Darryn Peterson|31:06|3|7|0|3|4|4|3|0|0|1|2|9
+UTA|Keyonte George|28:36|7|12|4|4|7|3|5|1|0|2|4|22
+UTA|Jaren Jackson Jr.|28:05|6|10|2|1|2|5|2|1|2|5|6|15
+UTA|Jaxson Hayes|26:18|2|3|0|1|4|5|3|2|6|1|4|5
+UTA|Ace Bailey|24:18|5|11|2|0|0|5|3|0|3|1|3|12
+UTA|Svi Mykhailiuk|19:26|4|5|2|0|0|1|2|3|0|0|1|10
+UTA|Isaiah Collier|15:42|2|7|0|3|5|3|3|1|0|3|0|7
+UTA|Brice Sensabaugh|13:34|1|4|0|0|0|2|1|0|0|2|1|2
+UTA|Kyle Filipowski|8:58|1|2|0|1|1|0|0|1|0|0|0|3
+UTA|Josh Okogie|7:36|0|1|0|0|0|1|0|0|0|0|1|0
+UTA|Mo Bamba|DNP
+UTA|Josh Green|DNP
+UTA|Harrison Ingram|DNP
+MEM|Cameron Boozer|33:06|2|15|0|3|4|11|5|0|0|1|1|7
+MEM|Ty Jerome|31:43|17|25|5|6|7|7|6|0|1|1|4|45
+MEM|Cedric Coward|27:49|3|6|1|0|0|7|2|0|1|0|5|7
+MEM|Jaylen Wells|27:44|5|10|1|1|3|5|0|4|0|0|3|12
+MEM|Zach Edey|21:05|3|5|0|0|0|9|0|0|2|0|3|6
+MEM|Jerami Grant|24:01|4|9|2|5|6|2|3|0|1|3|2|15
+MEM|Scotty Pippen Jr.|20:11|2|7|0|5|6|2|5|3|0|2|1|9
+MEM|Quinten Post|19:22|3|4|1|0|0|1|0|0|0|1|4|7
+MEM|GG Jackson II|18:41|4|8|2|2|2|8|0|0|2|4|2|12
+MEM|Cam Spencer|16:17|1|4|1|0|0|3|2|1|0|1|1|3
+MEM|Taylor Hendricks|DNP
+MEM|Karim López|DNP
+MEM|Jahmai Mashack|DNP
+MEM|Kris Murray|DNP
+MEM|Olivier-Maxence Prosper|DNP

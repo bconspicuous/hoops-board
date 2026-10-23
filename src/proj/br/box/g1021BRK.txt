@@ -1,0 +1,28 @@
+CHO|Brandon Miller|35:39|7|21|3|1|2|3|1|0|1|3|3|18
+CHO|Dennis Schröder|34:41|7|13|0|5|5|4|6|0|0|3|1|19
+CHO|Moussa Diabaté|33:38|7|11|0|3|3|8|3|5|0|4|4|17
+CHO|Naz Reid|32:41|8|19|4|0|1|11|7|0|0|1|4|20
+CHO|Sion James|26:48|1|7|1|0|0|3|0|1|0|1|4|3
+CHO|Grayson Allen|28:48|6|9|5|4|4|3|4|0|0|4|0|21
+CHO|Royce O'Neale|17:09|3|6|2|0|0|4|0|1|1|1|1|8
+CHO|Ryan Kalkbrenner|13:58|2|3|0|0|0|5|3|0|2|1|4|4
+CHO|Christian Anderson Jr.|13:19|0|3|0|0|0|2|2|2|0|2|1|0
+CHO|Liam McNeeley|3:18|0|1|0|0|0|1|0|0|0|0|1|0
+CHO|PJ Hall|DNP
+CHO|Tidjane Salaün|DNP
+CHO|Hannes Steinbach|DNP
+BRK|Julius Randle|37:50|11|18|3|8|11|8|7|0|1|4|4|33
+BRK|Michael Porter Jr.|34:14|10|21|5|1|2|7|1|3|0|4|2|26
+BRK|Keon Ellis|33:54|3|7|1|0|0|2|4|2|1|1|2|7
+BRK|Day'Ron Sharpe|29:40|4|5|0|0|1|8|3|0|3|2|4|8
+BRK|Egor Dëmin|26:47|2|10|0|0|0|4|2|1|0|3|1|4
+BRK|Noah Clowney|21:30|3|3|1|2|2|3|1|1|0|0|6|9
+BRK|Mikel Brown Jr.|19:48|2|8|1|1|1|3|3|0|0|1|2|6
+BRK|Moritz Wagner|15:49|1|3|1|4|4|0|1|0|0|2|3|7
+BRK|Nolan Traoré|15:31|0|4|0|3|4|2|0|0|0|2|1|3
+BRK|Chaney Johnson|4:57|0|1|0|0|0|1|0|0|0|3|0|0
+BRK|Terance Mann|DNP
+BRK|Josh Minott|DNP
+BRK|Drake Powell|DNP
+BRK|Ben Saraf|DNP
+BRK|Danny Wolf|DNP

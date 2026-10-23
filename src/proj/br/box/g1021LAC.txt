@@ -1,0 +1,25 @@
+SAC|Darius Acuff Jr.|34:55|5|24|0|2|5|3|3|3|0|4|2|12
+SAC|Zach LaVine|34:13|10|19|3|5|8|4|4|0|0|4|2|28
+SAC|Domantas Sabonis|33:34|5|5|0|4|4|18|8|1|0|3|3|14
+SAC|Keegan Murray|28:22|1|8|0|0|0|4|0|1|0|0|2|2
+SAC|De'Andre Hunter|19:44|2|5|2|0|4|3|1|0|0|0|4|6
+SAC|Precious Achiuwa|28:44|5|8|1|4|5|5|2|2|0|1|1|15
+SAC|Emanuel Sharp|17:16|3|6|2|0|0|1|0|1|0|1|5|8
+SAC|Nique Clifford|16:45|3|7|0|0|0|1|3|1|0|3|2|6
+SAC|Daeqwon Plowden|13:13|2|3|0|0|0|2|1|1|0|0|1|4
+SAC|Jonathan Mogbo|7:58|0|0|0|0|0|0|0|0|0|1|1|0
+SAC|Alex Karaban|5:15|0|0|0|1|2|1|0|0|0|0|0|1
+SAC|Leaky Black|DNP
+LAC|Darius Garland|32:06|11|19|3|5|8|1|4|1|0|3|1|30
+LAC|Rui Hachimura|31:34|3|13|2|2|5|8|2|1|1|3|2|10
+LAC|Kris Dunn|26:51|2|5|2|1|2|5|7|3|2|2|3|7
+LAC|Derrick Jones Jr.|25:38|3|4|1|1|2|6|5|1|0|1|2|8
+LAC|Isaiah Jackson|14:52|6|8|0|1|2|5|0|1|0|1|4|13
+LAC|Keaton Wagler|28:54|4|8|3|4|4|5|5|2|0|1|3|15
+LAC|Brook Lopez|27:07|7|12|1|2|2|11|1|1|1|2|2|17
+LAC|Gradey Dick|18:57|3|4|1|5|6|4|0|0|1|2|4|12
+LAC|Kobe Sanders|18:44|1|5|0|0|0|0|3|3|0|1|3|2
+LAC|Baba Miller|9:23|2|2|0|0|0|3|1|0|0|1|0|4
+LAC|Jalen Pickett|1:58|1|1|1|0|0|0|0|1|0|0|0|3
+LAC|Cam Christie|1:58|0|0|0|0|0|0|0|0|0|0|0|0
+LAC|Nick Martinelli|1:58|0|1|0|0|0|1|1|0|0|0|0|0
