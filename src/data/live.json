@@ -1,19 +1,19 @@
 {
- "asOf": "2026-10-23 06:10 KST",
+ "asOf": "2026-10-24 20:07 KST",
  "week": 1,
- "through": "2026-10-21",
- "source": "ESPN Scoreboard capture (user, 2026-10-23 06:10 KST) — games through 10/21 (US)",
+ "through": "2026-10-23",
+ "source": "ESPN Scoreboard capture (user, 2026-10-24 20:07 KST) — games through 10/23 (US); 10/24·10/25 remaining",
  "cats": {
-  "Garak Twindragons": {"FG": 0.4762, "FT": 0.7419, "TPM": 24, "REB": 91, "AST": 33, "STL": 15, "BLK": 12, "TO": 32, "PF": 33, "DD": 2, "PTS": 230},
-  "Gatori Team": {"FG": 0.4123, "FT": 0.8537, "TPM": 14, "REB": 58, "AST": 38, "STL": 8, "BLK": 3, "TO": 15, "PF": 24, "DD": 1, "PTS": 143},
-  "Junyoung's Scary Team": {"FG": 0.4949, "FT": 0.7606, "TPM": 31, "REB": 72, "AST": 65, "STL": 17, "BLK": 7, "TO": 36, "PF": 35, "DD": 3, "PTS": 281},
-  "ChaRDaddy": {"FG": 0.4938, "FT": 0.7636, "TPM": 19, "REB": 74, "AST": 45, "STL": 10, "BLK": 4, "TO": 26, "PF": 23, "DD": 1, "PTS": 221},
-  "Songpa Park Kezhang": {"FG": 0.4340, "FT": 0.7797, "TPM": 24, "REB": 69, "AST": 51, "STL": 16, "BLK": 6, "TO": 34, "PF": 33, "DD": 3, "PTS": 208},
-  "Kunhyo's Chokeslam": {"FG": 0.4778, "FT": 0.8228, "TPM": 17, "REB": 88, "AST": 34, "STL": 13, "BLK": 9, "TO": 28, "PF": 26, "DD": 3, "PTS": 254},
-  "Brand_New_Neo_HJ": {"FG": 0.4780, "FT": 0.7308, "TPM": 21, "REB": 69, "AST": 53, "STL": 12, "BLK": 9, "TO": 25, "PF": 50, "DD": 2, "PTS": 233},
-  "Zero Sugar": {"FG": 0.3800, "FT": 0.8056, "TPM": 12, "REB": 68, "AST": 43, "STL": 17, "BLK": 12, "TO": 21, "PF": 36, "DD": 2, "PTS": 184}
+  "Garak Twindragons": {"FG": 0.4642, "FT": 0.7542, "TPM": 53, "REB": 151, "AST": 73, "STL": 24, "BLK": 19, "TO": 70, "PF": 65, "DD": 4, "PTS": 466},
+  "Gatori Team": {"FG": 0.4209, "FT": 0.8608, "TPM": 36, "REB": 125, "AST": 87, "STL": 21, "BLK": 11, "TO": 39, "PF": 62, "DD": 2, "PTS": 338},
+  "Junyoung's Scary Team": {"FG": 0.5027, "FT": 0.7500, "TPM": 48, "REB": 142, "AST": 122, "STL": 36, "BLK": 10, "TO": 71, "PF": 65, "DD": 6, "PTS": 506},
+  "ChaRDaddy": {"FG": 0.4825, "FT": 0.7778, "TPM": 36, "REB": 132, "AST": 91, "STL": 22, "BLK": 11, "TO": 70, "PF": 52, "DD": 2, "PTS": 431},
+  "Songpa Park Kezhang": {"FG": 0.4299, "FT": 0.7624, "TPM": 36, "REB": 144, "AST": 101, "STL": 31, "BLK": 15, "TO": 63, "PF": 61, "DD": 4, "PTS": 383},
+  "Kunhyo's Chokeslam": {"FG": 0.4647, "FT": 0.8033, "TPM": 34, "REB": 146, "AST": 79, "STL": 29, "BLK": 20, "TO": 64, "PF": 49, "DD": 5, "PTS": 422},
+  "Brand_New_Neo_HJ": {"FG": 0.4894, "FT": 0.7870, "TPM": 41, "REB": 144, "AST": 100, "STL": 24, "BLK": 19, "TO": 54, "PF": 79, "DD": 3, "PTS": 448},
+  "Zero Sugar": {"FG": 0.3962, "FT": 0.7632, "TPM": 27, "REB": 157, "AST": 90, "STL": 35, "BLK": 25, "TO": 53, "PF": 76, "DD": 7, "PTS": 362}
  },
- "record": {"Garak Twindragons": [7, 4, 0], "Gatori Team": [4, 7, 0], "Junyoung's Scary Team": [7, 4, 0], "ChaRDaddy": [4, 7, 0], "Songpa Park Kezhang": [3, 7, 1], "Kunhyo's Chokeslam": [7, 3, 1], "Brand_New_Neo_HJ": [5, 5, 1], "Zero Sugar": [5, 5, 1]},
- "adds": {"Junyoung's Scary Team": 1, "Gatori Team": 2, "Garak Twindragons": 3, "Zero Sugar": 0, "ChaRDaddy": 1, "Kunhyo's Chokeslam": 2, "Songpa Park Kezhang": 0, "Brand_New_Neo_HJ": 4},
- "addsNote": "roster changes since the 10/18 21:51 capture, all counted against the week-1 limit (timing not visible in the capture)"
+ "record": {"Garak Twindragons": [7, 4, 0], "Gatori Team": [4, 7, 0], "Junyoung's Scary Team": [7, 4, 0], "ChaRDaddy": [4, 7, 0], "Songpa Park Kezhang": [4, 7, 0], "Kunhyo's Chokeslam": [7, 4, 0], "Brand_New_Neo_HJ": [5, 6, 0], "Zero Sugar": [6, 5, 0]},
+ "adds": {"Junyoung's Scary Team": 2, "Gatori Team": 2, "Garak Twindragons": 4, "Zero Sugar": 0, "ChaRDaddy": 2, "Kunhyo's Chokeslam": 2, "Songpa Park Kezhang": 0, "Brand_New_Neo_HJ": 4},
+ "addsNote": "new players since the 10/18 21:51 capture (incl. ones dropped again), all counted against the week-1 limit (6)"
 }
