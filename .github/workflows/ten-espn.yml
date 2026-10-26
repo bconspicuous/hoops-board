@@ -1,0 +1,35 @@
+name: ten · ESPN league sync
+# Pulls the 10-team league (ESPN league 504060248) into ten/data/. Touches nothing outside ten/data.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 */6 * * *"   # every 6 hours (UTC)
+permissions:
+  contents: write
+concurrency:
+  group: ten-espn
+  cancel-in-progress: false
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch ESPN league data
+        env:
+          ESPN_LEAGUE_ID: "504060248"
+          ESPN_SEASON: "2027"
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          ESPN_SWID: ${{ secrets.ESPN_SWID }}
+        run: python ten/espn/fetch_espn.py
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ten/data
+          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
+          git commit -m "ten: ESPN league sync $(TZ=Asia/Seoul date +'%Y-%m-%d %H:%M KST')"
+          git pull --rebase origin main
+          git push
