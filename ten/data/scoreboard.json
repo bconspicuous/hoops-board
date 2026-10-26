@@ -1,0 +1,1986 @@
+{
+ "asOf": "2026-10-26T16:20+09:00",
+ "currentMatchupPeriod": 2,
+ "matchups": [
+  {
+   "period": 1,
+   "winner": "AWAY",
+   "home": {
+    "team": "Doo",
+    "wins": 3,
+    "losses": 8,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "SMS",
+    "wins": 8,
+    "losses": 3,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 1,
+   "winner": "HOME",
+   "home": {
+    "team": "JYP",
+    "wins": 6,
+    "losses": 5,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "GTD",
+    "wins": 5,
+    "losses": 6,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 1,
+   "winner": "HOME",
+   "home": {
+    "team": "TBG",
+    "wins": 8,
+    "losses": 3,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "IYH",
+    "wins": 3,
+    "losses": 8,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 1,
+   "winner": "AWAY",
+   "home": {
+    "team": "GGAM",
+    "wins": 5,
+    "losses": 6,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "KOO",
+    "wins": 6,
+    "losses": 5,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 1,
+   "winner": "HOME",
+   "home": {
+    "team": "KWNG",
+    "wins": 5,
+    "losses": 4,
+    "ties": 2,
+    "cats": {}
+   },
+   "away": {
+    "team": "SONG",
+    "wins": 4,
+    "losses": 5,
+    "ties": 2,
+    "cats": {}
+   }
+  },
+  {
+   "period": 2,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "SMS",
+    "wins": 0,
+    "losses": 0,
+    "ties": 11,
+    "cats": {}
+   },
+   "away": {
+    "team": "GTD",
+    "wins": 0,
+    "losses": 0,
+    "ties": 11,
+    "cats": {}
+   }
+  },
+  {
+   "period": 2,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "IYH",
+    "wins": 0,
+    "losses": 0,
+    "ties": 11,
+    "cats": {}
+   },
+   "away": {
+    "team": "Doo",
+    "wins": 0,
+    "losses": 0,
+    "ties": 11,
+    "cats": {}
+   }
+  },
+  {
+   "period": 2,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "KOO",
+    "wins": 0,
+    "losses": 0,
+    "ties": 11,
+    "cats": {}
+   },
+   "away": {
+    "team": "JYP",
+    "wins": 0,
+    "losses": 0,
+    "ties": 11,
+    "cats": {}
+   }
+  },
+  {
+   "period": 2,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "SONG",
+    "wins": 0,
+    "losses": 0,
+    "ties": 11,
+    "cats": {}
+   },
+   "away": {
+    "team": "TBG",
+    "wins": 0,
+    "losses": 0,
+    "ties": 11,
+    "cats": {}
+   }
+  },
+  {
+   "period": 2,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "KWNG",
+    "wins": 0,
+    "losses": 0,
+    "ties": 11,
+    "cats": {}
+   },
+   "away": {
+    "team": "GGAM",
+    "wins": 0,
+    "losses": 0,
+    "ties": 11,
+    "cats": {}
+   }
+  },
+  {
+   "period": 3,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "IYH",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "SMS",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 3,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "GTD",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "KOO",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 3,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Doo",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "SONG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 3,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "JYP",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "KWNG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 3,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "TBG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "GGAM",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 4,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "SMS",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "KOO",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 4,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "SONG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "IYH",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 4,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "KWNG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "GTD",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 4,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "GGAM",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "Doo",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 4,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "TBG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "JYP",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 5,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "SONG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "SMS",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 5,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "KOO",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "KWNG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 5,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "IYH",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "GGAM",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 5,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "GTD",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "TBG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 5,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Doo",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "JYP",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 6,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "SMS",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "KWNG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 6,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "GGAM",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "SONG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 6,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "TBG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "KOO",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 6,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "JYP",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "IYH",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 6,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Doo",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "GTD",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 7,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "GGAM",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "SMS",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 7,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "KWNG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "TBG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 7,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "SONG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "JYP",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 7,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "KOO",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "Doo",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 7,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "IYH",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "GTD",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 8,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "SMS",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "TBG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 8,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "JYP",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "GGAM",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 8,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Doo",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "KWNG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 8,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "GTD",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "SONG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 8,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "IYH",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "KOO",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 9,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "JYP",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "SMS",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 9,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "TBG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "Doo",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 9,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "GGAM",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "GTD",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 9,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "KWNG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "IYH",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 9,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "SONG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "KOO",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 10,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "SMS",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "Doo",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 10,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "GTD",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "JYP",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 10,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "IYH",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "TBG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 10,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "KOO",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "GGAM",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 10,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "SONG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "KWNG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 11,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "GTD",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "SMS",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 11,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Doo",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "IYH",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 11,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "JYP",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "KOO",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 11,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "TBG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "SONG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 11,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "GGAM",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "KWNG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 12,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "SMS",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "IYH",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 12,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "KOO",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "GTD",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 12,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "SONG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "Doo",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 12,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "KWNG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "JYP",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 12,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "GGAM",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "TBG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 13,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "KOO",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "SMS",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 13,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "IYH",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "SONG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 13,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "GTD",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "KWNG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 13,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Doo",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "GGAM",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 13,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "JYP",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "TBG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 14,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "SMS",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "SONG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 14,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "KWNG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "KOO",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 14,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "GGAM",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "IYH",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 14,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "TBG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "GTD",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 14,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "JYP",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "Doo",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 15,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "KWNG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "SMS",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 15,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "SONG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "GGAM",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 15,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "KOO",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "TBG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 15,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "IYH",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "JYP",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 15,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "GTD",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "Doo",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 16,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "SMS",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "GGAM",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 16,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "TBG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "KWNG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 16,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "JYP",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "SONG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 16,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Doo",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "KOO",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 16,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "GTD",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "IYH",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 17,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "TBG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "SMS",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 17,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "GGAM",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "JYP",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 17,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "KWNG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "Doo",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 17,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "SONG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "GTD",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 17,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "KOO",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "IYH",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 18,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "SMS",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "JYP",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 18,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Doo",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "TBG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 18,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "GTD",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "GGAM",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 18,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "IYH",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "KWNG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 18,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "KOO",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "SONG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 19,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Doo",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "SMS",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 19,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "JYP",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "GTD",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 19,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "TBG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "IYH",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 19,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "GGAM",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "KOO",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 19,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "KWNG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "SONG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 20,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "SMS",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "GTD",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 20,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "IYH",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "Doo",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 20,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "KOO",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "JYP",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 20,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "SONG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "TBG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 20,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "KWNG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "GGAM",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 21,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "IYH",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "SMS",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 21,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "GTD",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "KOO",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 21,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Doo",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "SONG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 21,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "JYP",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "KWNG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 21,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "TBG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "GGAM",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 22,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "SMS",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "KOO",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 22,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "SONG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "IYH",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 22,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "KWNG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "GTD",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 22,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "GGAM",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "Doo",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  },
+  {
+   "period": 22,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "TBG",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   },
+   "away": {
+    "team": "JYP",
+    "wins": null,
+    "losses": null,
+    "ties": null,
+    "cats": {}
+   }
+  }
+ ]
+}

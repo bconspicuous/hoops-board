@@ -1,0 +1,357 @@
+{
+ "asOf": "2026-10-26T16:20+09:00",
+ "leagueId": "504060248",
+ "season": 2027,
+ "teams": [
+  {
+   "name": "Jongno Karina",
+   "abbr": "IYH",
+   "espnId": 1,
+   "me": false,
+   "players": [
+    "Jayson Tatum",
+    "Scottie Barnes",
+    "Amen Thompson",
+    "Evan Mobley",
+    "Stephon Castle",
+    "Darius Garland",
+    "Jaren Jackson Jr.",
+    "Brandin Podziemski",
+    "Ryan Rollins",
+    "Day'Ron Sharpe",
+    "Collin Murray-Boyles",
+    "Andrew Nembhard",
+    "Ace Bailey"
+   ],
+   "ir": [],
+   "record": {
+    "wins": 3,
+    "losses": 8,
+    "ties": 0,
+    "percentage": 0.2727272727272727
+   }
+  },
+  {
+   "name": "Samseong Homeless",
+   "abbr": "SMS",
+   "espnId": 2,
+   "me": false,
+   "players": [
+    "Nikola Jokic",
+    "Jalen Brunson",
+    "Trae Young",
+    "Joel Embiid",
+    "Ja Morant",
+    "Caleb Wilson",
+    "Keyonte George",
+    "Ausar Thompson",
+    "Fred VanVleet",
+    "Jakob Poeltl",
+    "Peyton Watson",
+    "Devin Vassell",
+    "Isaiah Hartenstein"
+   ],
+   "ir": [
+    "Paolo Banchero"
+   ],
+   "record": {
+    "wins": 8,
+    "losses": 3,
+    "ties": 0,
+    "percentage": 0.7272727272727273
+   }
+  },
+  {
+   "name": "Kfinco_ThePianist",
+   "abbr": "SONG",
+   "espnId": 3,
+   "me": false,
+   "players": [
+    "Victor Wembanyama",
+    "Anthony Davis",
+    "Austin Reaves",
+    "Michael Porter Jr.",
+    "Kyrie Irving",
+    "Desmond Bane",
+    "Ty Jerome",
+    "OG Anunoby",
+    "Miles Bridges",
+    "Davion Mitchell",
+    "Jonathan Kuminga",
+    "Kyshawn George",
+    "Jalen Smith"
+   ],
+   "ir": [
+    "Brandon Ingram"
+   ],
+   "record": {
+    "wins": 4,
+    "losses": 5,
+    "ties": 2,
+    "percentage": 0.45454545454545453
+   }
+  },
+  {
+   "name": "Garibong CHaRdaddy",
+   "abbr": "GGAM",
+   "espnId": 4,
+   "me": false,
+   "players": [
+    "Domantas Sabonis",
+    "Devin Booker",
+    "Pascal Siakam",
+    "Lauri Markkanen",
+    "De'Aaron Fox",
+    "Franz Wagner",
+    "Zion Williamson",
+    "Darius Acuff Jr.",
+    "Myles Turner",
+    "Jaime Jaquez Jr.",
+    "Keon Ellis",
+    "Wendell Carter Jr.",
+    "Kris Dunn"
+   ],
+   "ir": [
+    "Cooper Flagg"
+   ],
+   "record": {
+    "wins": 5,
+    "losses": 6,
+    "ties": 0,
+    "percentage": 0.45454545454545453
+   }
+  },
+  {
+   "name": "Seoul Dreamers",
+   "abbr": "KOO",
+   "espnId": 5,
+   "me": false,
+   "players": [
+    "Luka Doncic",
+    "Tyrese Haliburton",
+    "Kevin Durant",
+    "Derrick White",
+    "Walker Kessler",
+    "Donovan Clingan",
+    "Onyeka Okongwu",
+    "Nickeil Alexander-Walker",
+    "Paul George",
+    "Jaden McDaniels",
+    "Jabari Smith Jr.",
+    "Cason Wallace",
+    "Andre Drummond"
+   ],
+   "ir": [],
+   "record": {
+    "wins": 6,
+    "losses": 5,
+    "ties": 0,
+    "percentage": 0.5454545454545454
+   }
+  },
+  {
+   "name": "Helio honeymoons",
+   "abbr": "Doo",
+   "espnId": 6,
+   "me": false,
+   "players": [
+    "Alperen Sengun",
+    "Josh Giddey",
+    "Brandon Miller",
+    "Cameron Boozer",
+    "AJ Dybantsa",
+    "Darryn Peterson",
+    "Norman Powell",
+    "RJ Barrett",
+    "Aaron Gordon",
+    "Moussa Diabate",
+    "P.J. Washington",
+    "Cade Cunningham",
+    "Chet Holmgren"
+   ],
+   "ir": [
+    "Jalen Duren"
+   ],
+   "record": {
+    "wins": 3,
+    "losses": 8,
+    "ties": 0,
+    "percentage": 0.2727272727272727
+   }
+  },
+  {
+   "name": "Team Bbang Guns",
+   "abbr": "TBG",
+   "espnId": 7,
+   "me": false,
+   "players": [
+    "Anthony Edwards",
+    "Karl-Anthony Towns",
+    "Jamal Murray",
+    "Jaylen Brown",
+    "Tyler Herro",
+    "Kel'el Ware",
+    "Dyson Daniels",
+    "Dylan Harper",
+    "Immanuel Quickley",
+    "John Collins",
+    "Precious Achiuwa",
+    "Paul Reed",
+    "Obi Toppin"
+   ],
+   "ir": [
+    "Yves Missi"
+   ],
+   "record": {
+    "wins": 8,
+    "losses": 3,
+    "ties": 0,
+    "percentage": 0.7272727272727273
+   }
+  },
+  {
+   "name": "Garak Twindragons",
+   "abbr": "GTD",
+   "espnId": 8,
+   "me": true,
+   "players": [
+    "Donovan Mitchell",
+    "Julius Randle",
+    "Dejounte Murray",
+    "Ivica Zubac",
+    "Josh Hart",
+    "Matas Buzelis",
+    "Ajay Mitchell",
+    "Jared McCain",
+    "Rudy Gobert",
+    "Giannis Antetokounmpo",
+    "Duncan Robinson",
+    "Aaron Wiggins",
+    "Toumani Camara"
+   ],
+   "ir": [
+    "Kawhi Leonard"
+   ],
+   "record": {
+    "wins": 5,
+    "losses": 6,
+    "ties": 0,
+    "percentage": 0.45454545454545453
+   }
+  },
+  {
+   "name": "PaloAlto Wenoja",
+   "abbr": "JYP",
+   "espnId": 9,
+   "me": false,
+   "players": [
+    "Jalen Johnson",
+    "Tyrese Maxey",
+    "LaMelo Ball",
+    "Stephen Curry",
+    "LeBron James",
+    "Jarrett Allen",
+    "Alex Sarr",
+    "Damian Lillard",
+    "CJ McCollum",
+    "Tobias Harris",
+    "Alex Caruso",
+    "Yaxel Lendeborg",
+    "Quentin Grimes"
+   ],
+   "ir": [
+    "Kon Knueppel"
+   ],
+   "record": {
+    "wins": 6,
+    "losses": 5,
+    "ties": 0,
+    "percentage": 0.5454545454545454
+   }
+  },
+  {
+   "name": "Saving PakPaks",
+   "abbr": "KWNG",
+   "espnId": 10,
+   "me": false,
+   "players": [
+    "Shai Gilgeous-Alexander",
+    "Bam Adebayo",
+    "James Harden",
+    "Deni Avdija",
+    "Naz Reid",
+    "Trey Murphy III",
+    "Mikal Bridges",
+    "VJ Edgecombe",
+    "Zach Edey",
+    "Derik Queen",
+    "Zach LaVine",
+    "Jerami Grant",
+    "Ayo Dosunmu"
+   ],
+   "ir": [],
+   "record": {
+    "wins": 5,
+    "losses": 4,
+    "ties": 2,
+    "percentage": 0.5454545454545454
+   }
+  }
+ ],
+ "status": {
+  "O": [
+   "Joel Embiid",
+   "Paolo Banchero",
+   "Ausar Thompson",
+   "Brandon Ingram",
+   "Cooper Flagg",
+   "Jalen Duren",
+   "AJ Dybantsa",
+   "Yves Missi",
+   "Kawhi Leonard",
+   "Kon Knueppel",
+   "Tobias Harris",
+   "VJ Edgecombe",
+   "Zach Edey",
+   "Coby White",
+   "Kristaps Porzingis",
+   "Nic Claxton",
+   "Keegan Murray",
+   "Jimmy Butler III",
+   "Naji Marshall",
+   "T.J. McConnell",
+   "Shaedon Sharpe",
+   "Mark Williams",
+   "Jusuf Nurkic",
+   "Mikel Brown Jr.",
+   "Santi Aldama",
+   "Dereck Lively II",
+   "Donte DiVincenzo",
+   "Bradley Beal",
+   "Jose Alvarado",
+   "Maxime Raynaud",
+   "Ben Simmons",
+   "Max Strus",
+   "Cameron Carr",
+   "Tacko Fall",
+   "Steven Adams",
+   "Yanic Konan Niederhauser",
+   "Jayden Quaintance",
+   "Moses Moody"
+  ],
+  "DTD": [
+   "Cason Wallace",
+   "Ivica Zubac",
+   "Jalen Williams",
+   "Jalen Suggs",
+   "Oso Ighodaro",
+   "Cameron Johnson",
+   "Jaylin Williams",
+   "Gui Santos",
+   "Marcus Smart",
+   "Isaiah Joe",
+   "Brandon Williams",
+   "Rob Dillingham"
+  ]
+ }
+}
