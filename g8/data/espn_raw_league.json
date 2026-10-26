@@ -1,0 +1,931 @@
+{
+ "id": 751654965,
+ "seasonId": 2027,
+ "scoringPeriodId": 7,
+ "status": {
+  "activatedDate": 1791950491863,
+  "createdAsLeagueType": 3,
+  "creationInfo": {
+   "clientAddress": null,
+   "platform": "espn-fantasy-web",
+   "source": "{7B5886BF-7290-43F1-BF8F-7FF0BC6D576C}"
+  },
+  "currentLeagueType": 0,
+  "currentMatchupPeriod": 2,
+  "finalScoringPeriod": 139,
+  "firstScoringPeriod": 1,
+  "isActive": true,
+  "isExpired": false,
+  "isFull": true,
+  "isPlayoffMatchupEdited": false,
+  "isToBeDeleted": false,
+  "isViewable": false,
+  "isWaiverOrderEdited": false,
+  "lastUpdateInfo": {
+   "clientAddress": null,
+   "platform": "lm-processor",
+   "source": "NightlyLeagueUpdateTaskProcessor"
+  },
+  "latestScoringPeriod": 7,
+  "previousSeasons": [],
+  "standingsUpdateDate": 1792999558455,
+  "teamsJoined": 8,
+  "transactionScoringPeriod": 7,
+  "waiverLastExecutionDate": 1792999558441,
+  "waiverProcessStatus": {
+   "2026-10-18T07:35:08.893+00:00": 2,
+   "2026-10-22T07:38:00.423+00:00": 1
+  }
+ },
+ "samplePlayer": {
+  "fullName": "Giannis Antetokounmpo",
+  "injuryStatus": "ACTIVE",
+  "stats": [
+   {
+    "averageStats": {
+     "0": 28.333333333333332,
+     "1": 0.3333333333333333,
+     "2": 1.3333333333333333,
+     "3": 3.0,
+     "4": 3.6666666666666665,
+     "5": 4.333333333333333,
+     "6": 8.0,
+     "7": 0.0,
+     "8": 0.3333333333333333,
+     "9": 4.666666666666667,
+     "10": 0.0,
+     "11": 3.0,
+     "12": 0.3333333333333333,
+     "13": 10.666666666666666,
+     "14": 18.666666666666668,
+     "15": 6.666666666666667,
+     "16": 10.0,
+     "17": 0.3333333333333333,
+     "18": 2.0,
+     "19": 0.57142857,
+     "20": 0.66666667,
+     "21": 0.16666667,
+     "22": 0.58035714,
+     "23": 8.0,
+     "24": 3.3333333333333335,
+     "25": 1.6666666666666667,
+     "26": 3.0,
+     "27": 0.33333333,
+     "28": 29.33333333,
+     "29": 28.33333333,
+     "30": 8.0,
+     "31": 1.33333333,
+     "32": 3.0,
+     "33": 0.33333333,
+     "34": 0.96590909,
+     "35": 1.0,
+     "36": 0.44444444,
+     "37": 0.3333333333333333,
+     "38": 0.0,
+     "39": 0.0,
+     "40": 29.333333333333332,
+     "41": 1.0,
+     "42": 3.0,
+     "43": 0.0,
+     "44": 0.53571429
+    },
+    "externalId": "2027",
+    "id": "032027",
+    "proTeamId": 0,
+    "scoringPeriodId": 0,
+    "seasonId": 2027,
+    "statSourceId": 0,
+    "statSplitTypeId": 3,
+    "stats": {
+     "0": 85.0,
+     "1": 1.0,
+     "2": 4.0,
+     "3": 9.0,
+     "4": 11.0,
+     "5": 13.0,
+     "6": 24.0,
+     "7": 0.0,
+     "8": 1.0,
+     "9": 14.0,
+     "10": 0.0,
+     "11": 9.0,
+     "12": 1.0,
+     "13": 32.0,
+     "14": 56.0,
+     "15": 20.0,
+     "16": 30.0,
+     "17": 1.0,
+     "18": 6.0,
+     "19": 0.57142857,
+     "20": 0.66666667,
+     "21": 0.16666667,
+     "22": 0.58035714,
+     "23": 24.0,
+     "24": 10.0,
+     "25": 5.0,
+     "26": 3.0,
+     "27": 0.33333333,
+     "28": 29.33333333,
+     "29": 28.33333333,
+     "30": 8.0,
+     "31": 1.33333333,
+     "32": 3.0,
+     "33": 0.33333333,
+     "34": 0.96590909,
+     "35": 1.0,
+     "36": 0.44444444,
+     "37": 1.0,
+     "38": 0.0,
+     "39": 0.0,
+     "40": 88.0,
+     "41": 3.0,
+     "42": 3.0,
+     "43": 0.0,
+     "44": 0.53571429
+    }
+   },
+   {
+    "averageStats": {
+     "0": 28.333333333333332,
+     "1": 0.3333333333333333,
+     "2": 1.3333333333333333,
+     "3": 3.0,
+     "4": 3.6666666666666665,
+     "5": 4.333333333333333,
+     "6": 8.0,
+     "7": 0.0,
+     "8": 0.3333333333333333,
+     "9": 4.666666666666667,
+     "10": 0.0,
+     "11": 3.0,
+     "12": 0.3333333333333333,
+     "13": 10.666666666666666,
+     "14": 18.666666666666668,
+     "15": 6.666666666666667,
+     "16": 10.0,
+     "17": 0.3333333333333333,
+     "18": 2.0,
+     "19": 0.57142857,
+     "20": 0.66666667,
+     "21": 0.16666667,
+     "22": 0.58035714,
+     "23": 8.0,
+     "24": 3.3333333333333335,
+     "25": 1.6666666666666667,
+     "26": 3.0,
+     "27": 0.33333333,
+     "28": 29.33333333,
+     "29": 28.33333333,
+     "30": 8.0,
+     "31": 1.33333333,
+     "32": 3.0,
+     "33": 0.33333333,
+     "34": 0.96590909,
+     "35": 1.0,
+     "36": 0.44444444,
+     "37": 0.3333333333333333,
+     "38": 0.0,
+     "39": 0.0,
+     "40": 29.333333333333332,
+     "41": 1.0,
+     "42": 3.0,
+     "43": 0.0,
+     "44": 0.53571429
+    },
+    "externalId": "2027",
+    "id": "022027",
+    "proTeamId": 0,
+    "scoringPeriodId": 0,
+    "seasonId": 2027,
+    "statSourceId": 0,
+    "statSplitTypeId": 2,
+    "stats": {
+     "0": 85.0,
+     "1": 1.0,
+     "2": 4.0,
+     "3": 9.0,
+     "4": 11.0,
+     "5": 13.0,
+     "6": 24.0,
+     "7": 0.0,
+     "8": 1.0,
+     "9": 14.0,
+     "10": 0.0,
+     "11": 9.0,
+     "12": 1.0,
+     "13": 32.0,
+     "14": 56.0,
+     "15": 20.0,
+     "16": 30.0,
+     "17": 1.0,
+     "18": 6.0,
+     "19": 0.57142857,
+     "20": 0.66666667,
+     "21": 0.16666667,
+     "22": 0.58035714,
+     "23": 24.0,
+     "24": 10.0,
+     "25": 5.0,
+     "26": 3.0,
+     "27": 0.33333333,
+     "28": 29.33333333,
+     "29": 28.33333333,
+     "30": 8.0,
+     "31": 1.33333333,
+     "32": 3.0,
+     "33": 0.33333333,
+     "34": 0.96590909,
+     "35": 1.0,
+     "36": 0.44444444,
+     "37": 1.0,
+     "38": 0.0,
+     "39": 0.0,
+     "40": 88.0,
+     "41": 3.0,
+     "42": 3.0,
+     "43": 0.0,
+     "44": 0.53571429
+    }
+   },
+   {
+    "averageStats": {
+     "0": 28.333333333333332,
+     "1": 0.3333333333333333,
+     "2": 1.3333333333333333,
+     "3": 3.0,
+     "4": 3.6666666666666665,
+     "5": 4.333333333333333,
+     "6": 8.0,
+     "7": 0.0,
+     "8": 0.3333333333333333,
+     "9": 4.666666666666667,
+     "10": 0.0,
+     "11": 3.0,
+     "12": 0.3333333333333333,
+     "13": 10.666666666666666,
+     "14": 18.666666666666668,
+     "15": 6.666666666666667,
+     "16": 10.0,
+     "17": 0.3333333333333333,
+     "18": 2.0,
+     "19": 0.57142857,
+     "20": 0.66666667,
+     "21": 0.16666667,
+     "22": 0.58035714,
+     "23": 8.0,
+     "24": 3.3333333333333335,
+     "25": 1.6666666666666667,
+     "26": 3.0,
+     "27": 0.33333333,
+     "28": 29.33333333,
+     "29": 28.33333333,
+     "30": 8.0,
+     "31": 1.33333333,
+     "32": 3.0,
+     "33": 0.33333333,
+     "34": 0.96590909,
+     "35": 1.0,
+     "36": 0.44444444,
+     "37": 0.3333333333333333,
+     "38": 0.0,
+     "39": 0.0,
+     "40": 29.333333333333332,
+     "41": 1.0,
+     "42": 3.0,
+     "43": 0.0,
+     "44": 0.53571429
+    },
+    "externalId": "2027",
+    "id": "012027",
+    "proTeamId": 0,
+    "scoringPeriodId": 0,
+    "seasonId": 2027,
+    "statSourceId": 0,
+    "statSplitTypeId": 1,
+    "stats": {
+     "0": 85.0,
+     "1": 1.0,
+     "2": 4.0,
+     "3": 9.0,
+     "4": 11.0,
+     "5": 13.0,
+     "6": 24.0,
+     "7": 0.0,
+     "8": 1.0,
+     "9": 14.0,
+     "10": 0.0,
+     "11": 9.0,
+     "12": 1.0,
+     "13": 32.0,
+     "14": 56.0,
+     "15": 20.0,
+     "16": 30.0,
+     "17": 1.0,
+     "18": 6.0,
+     "19": 0.57142857,
+     "20": 0.66666667,
+     "21": 0.16666667,
+     "22": 0.58035714,
+     "23": 24.0,
+     "24": 10.0,
+     "25": 5.0,
+     "26": 3.0,
+     "27": 0.33333333,
+     "28": 29.33333333,
+     "29": 28.33333333,
+     "30": 8.0,
+     "31": 1.33333333,
+     "32": 3.0,
+     "33": 0.33333333,
+     "34": 0.96590909,
+     "35": 1.0,
+     "36": 0.44444444,
+     "37": 1.0,
+     "38": 0.0,
+     "39": 0.0,
+     "40": 88.0,
+     "41": 3.0,
+     "42": 3.0,
+     "43": 0.0,
+     "44": 0.53571429
+    }
+   },
+   {
+    "averageStats": {
+     "0": 28.333333333333332,
+     "1": 0.3333333333333333,
+     "2": 1.3333333333333333,
+     "3": 3.0,
+     "4": 3.6666666666666665,
+     "5": 4.333333333333333,
+     "6": 8.0,
+     "7": 0.0,
+     "8": 0.3333333333333333,
+     "9": 4.666666666666667,
+     "10": 0.0,
+     "11": 3.0,
+     "12": 0.3333333333333333,
+     "13": 10.666666666666666,
+     "14": 18.666666666666668,
+     "15": 6.666666666666667,
+     "16": 10.0,
+     "17": 0.3333333333333333,
+     "18": 2.0,
+     "19": 0.57142857,
+     "20": 0.66666667,
+     "21": 0.16666667,
+     "22": 0.58035714,
+     "23": 8.0,
+     "24": 3.3333333333333335,
+     "25": 1.6666666666666667,
+     "26": 3.0,
+     "27": 0.33333333,
+     "28": 29.33333333,
+     "29": 28.33333333,
+     "30": 8.0,
+     "31": 1.33333333,
+     "32": 3.0,
+     "33": 0.33333333,
+     "34": 0.96590909,
+     "35": 1.0,
+     "36": 0.44444444,
+     "37": 0.3333333333333333,
+     "38": 0.0,
+     "39": 0.0,
+     "40": 29.333333333333332,
+     "41": 1.0,
+     "42": 3.0,
+     "43": 0.0,
+     "44": 0.53571429
+    },
+    "externalId": "2027",
+    "id": "002027",
+    "proTeamId": 0,
+    "scoringPeriodId": 0,
+    "seasonId": 2027,
+    "statSourceId": 0,
+    "statSplitTypeId": 0,
+    "stats": {
+     "0": 85.0,
+     "1": 1.0,
+     "2": 4.0,
+     "3": 9.0,
+     "4": 11.0,
+     "5": 13.0,
+     "6": 24.0,
+     "7": 0.0,
+     "8": 1.0,
+     "9": 14.0,
+     "10": 0.0,
+     "11": 9.0,
+     "12": 1.0,
+     "13": 32.0,
+     "14": 56.0,
+     "15": 20.0,
+     "16": 30.0,
+     "17": 1.0,
+     "18": 6.0,
+     "19": 0.57142857,
+     "20": 0.66666667,
+     "21": 0.16666667,
+     "22": 0.58035714,
+     "23": 24.0,
+     "24": 10.0,
+     "25": 5.0,
+     "26": 3.0,
+     "27": 0.33333333,
+     "28": 29.33333333,
+     "29": 28.33333333,
+     "30": 8.0,
+     "31": 1.33333333,
+     "32": 3.0,
+     "33": 0.33333333,
+     "34": 0.96590909,
+     "35": 1.0,
+     "36": 0.44444444,
+     "37": 1.0,
+     "38": 0.0,
+     "39": 0.0,
+     "40": 88.0,
+     "41": 3.0,
+     "42": 3.0,
+     "43": 0.0,
+     "44": 0.53571429
+    }
+   }
+  ]
+ },
+ "sampleMatchup": {
+  "away": {
+   "adjustment": 0.0,
+   "cumulativeScore": {
+    "losses": 6,
+    "scoreByStat": {
+     "0": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "LOSS",
+      "score": 735.0
+     },
+     "1": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "LOSS",
+      "score": 18.0
+     },
+     "2": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "WIN",
+      "score": 51.0
+     },
+     "3": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "WIN",
+      "score": 174.0
+     },
+     "37": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "WIN",
+      "score": 8.0
+     },
+     "6": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "WIN",
+      "score": 217.0
+     },
+     "9": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "LOSS",
+      "score": 107.0
+     },
+     "11": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "LOSS",
+      "score": 105.0
+     },
+     "13": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": null,
+      "score": 273.0
+     },
+     "14": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": null,
+      "score": 549.0
+     },
+     "15": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": null,
+      "score": 122.0
+     },
+     "16": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": null,
+      "score": 161.0
+     },
+     "17": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "LOSS",
+      "score": 67.0
+     },
+     "19": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "WIN",
+      "score": 0.49726776
+     },
+     "20": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "LOSS",
+      "score": 0.75776398
+     }
+    },
+    "statBySlot": null,
+    "ties": 0,
+    "wins": 5
+   },
+   "eliminationMatchupPeriod": 0,
+   "pointsByScoringPeriod": {
+    "1": 0.0,
+    "2": 0.0,
+    "3": 0.0,
+    "4": 0.0,
+    "5": 0.0,
+    "6": 0.0
+   },
+   "teamId": 1,
+   "tiebreak": 0.0,
+   "totalPoints": 0.0
+  },
+  "home": {
+   "adjustment": 0.0,
+   "cumulativeScore": {
+    "losses": 5,
+    "scoreByStat": {
+     "0": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "WIN",
+      "score": 756.0
+     },
+     "1": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "WIN",
+      "score": 19.0
+     },
+     "2": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "LOSS",
+      "score": 35.0
+     },
+     "3": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "LOSS",
+      "score": 162.0
+     },
+     "37": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "LOSS",
+      "score": 4.0
+     },
+     "6": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "LOSS",
+      "score": 213.0
+     },
+     "9": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "WIN",
+      "score": 91.0
+     },
+     "11": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "WIN",
+      "score": 102.0
+     },
+     "13": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": null,
+      "score": 264.0
+     },
+     "14": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": null,
+      "score": 543.0
+     },
+     "15": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": null,
+      "score": 159.0
+     },
+     "16": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": null,
+      "score": 198.0
+     },
+     "17": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "WIN",
+      "score": 69.0
+     },
+     "19": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "LOSS",
+      "score": 0.48618785
+     },
+     "20": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "WIN",
+      "score": 0.8030303
+     }
+    },
+    "statBySlot": null,
+    "ties": 0,
+    "wins": 6
+   },
+   "eliminationMatchupPeriod": 0,
+   "pointsByScoringPeriod": {
+    "1": 0.0,
+    "2": 0.0,
+    "3": 0.0,
+    "4": 0.0,
+    "5": 0.0,
+    "6": 0.0
+   },
+   "teamId": 5,
+   "tiebreak": 0.0,
+   "totalPoints": 0.0
+  },
+  "id": 1,
+  "matchupPeriodId": 1,
+  "playoffTierType": "NONE",
+  "winner": "HOME"
+ },
+ "settings": {
+  "name": "G League",
+  "scoringSettings": {
+   "allowOutOfPositionScoring": false,
+   "homeTeamBonus": 0,
+   "matchupTieRule": "NONE",
+   "matchupTieRuleBy": 0,
+   "playerRankType": "ROTO",
+   "playoffHomeTeamBonus": 0,
+   "playoffMatchupTieRule": "NONE",
+   "playoffMatchupTieRuleBy": 0,
+   "scoringItems": [
+    {
+     "isReverseItem": false,
+     "leagueRanking": 0.0,
+     "leagueTotal": 0.0,
+     "points": 1.0,
+     "pointsOverrides": {},
+     "statId": 20
+    },
+    {
+     "isReverseItem": false,
+     "leagueRanking": 0.0,
+     "leagueTotal": 0.0,
+     "points": 1.0,
+     "statId": 37
+    },
+    {
+     "isReverseItem": false,
+     "leagueRanking": 0.0,
+     "leagueTotal": 0.0,
+     "points": 1.0,
+     "pointsOverrides": {},
+     "statId": 6
+    },
+    {
+     "isReverseItem": true,
+     "leagueRanking": 0.0,
+     "leagueTotal": 0.0,
+     "points": 1.0,
+     "statId": 9
+    },
+    {
+     "isReverseItem": false,
+     "leagueRanking": 0.0,
+     "leagueTotal": 0.0,
+     "points": 1.0,
+     "pointsOverrides": {},
+     "statId": 0
+    },
+    {
+     "isReverseItem": false,
+     "leagueRanking": 0.0,
+     "leagueTotal": 0.0,
+     "points": 1.0,
+     "pointsOverrides": {},
+     "statId": 1
+    },
+    {
+     "isReverseItem": false,
+     "leagueRanking": 0.0,
+     "leagueTotal": 0.0,
+     "points": 1.0,
+     "pointsOverrides": {},
+     "statId": 17
+    },
+    {
+     "isReverseItem": false,
+     "leagueRanking": 0.0,
+     "leagueTotal": 0.0,
+     "points": 1.0,
+     "pointsOverrides": {},
+     "statId": 2
+    },
+    {
+     "isReverseItem": true,
+     "leagueRanking": 0.0,
+     "leagueTotal": 0.0,
+     "points": 1.0,
+     "statId": 11
+    },
+    {
+     "isReverseItem": false,
+     "leagueRanking": 0.0,
+     "leagueTotal": 0.0,
+     "points": 1.0,
+     "pointsOverrides": {},
+     "statId": 3
+    },
+    {
+     "isReverseItem": false,
+     "leagueRanking": 0.0,
+     "leagueTotal": 0.0,
+     "points": 1.0,
+     "pointsOverrides": {},
+     "statId": 19
+    }
+   ],
+   "scoringType": "H2H_CATEGORY"
+  },
+  "rosterSettings": {
+   "autoPilotTypeSupported": "INACTIVE_SUBSTITUTION_ONLY",
+   "isBenchUnlimited": true,
+   "isUsingUndroppableList": true,
+   "lineupLocktimeType": "INDIVIDUAL_GAME",
+   "lineupSlotCounts": {
+    "0": 1,
+    "1": 1,
+    "2": 1,
+    "3": 1,
+    "4": 1,
+    "5": 1,
+    "6": 1,
+    "7": 0,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 3,
+    "12": 3,
+    "13": 2,
+    "14": 0
+   },
+   "lineupSlotStatLimits": {},
+   "moveLimit": -1,
+   "positionLimits": {
+    "0": 0,
+    "1": -1,
+    "2": -1,
+    "3": -1,
+    "4": -1,
+    "5": 4
+   },
+   "rosterLocktimeType": "FIRSTGAME_SCORINGPERIOD",
+   "universeIds": [
+    0
+   ]
+  },
+  "scheduleSettings": {
+   "consolationLadderDisabled": false,
+   "divisions": [
+    {
+     "id": 0,
+     "name": "League Standings",
+     "size": 8
+    }
+   ],
+   "matchupPeriodCount": 14,
+   "matchupPeriodLength": 1,
+   "matchupPeriods": {
+    "1": [
+     1
+    ],
+    "2": [
+     2
+    ],
+    "3": [
+     3
+    ],
+    "4": [
+     4
+    ],
+    "5": [
+     5
+    ],
+    "6": [
+     6
+    ],
+    "7": [
+     7
+    ],
+    "8": [
+     8
+    ],
+    "9": [
+     9
+    ],
+    "10": [
+     10
+    ],
+    "11": [
+     11
+    ],
+    "12": [
+     12
+    ],
+    "13": [
+     13
+    ],
+    "14": [
+     14
+    ],
+    "15": [
+     15
+    ],
+    "16": [
+     16,
+     17
+    ],
+    "17": [
+     18,
+     19
+    ]
+   },
+   "periodTypeId": 2,
+   "playoffMatchupPeriodLength": 0,
+   "playoffMatchupPeriodLengthByRound": {
+    "1": 1,
+    "2": 2,
+    "3": 2
+   },
+   "playoffReseed": false,
+   "playoffSeedingRule": "H2H_RECORD",
+   "playoffSeedingRuleBy": 0,
+   "playoffTeamCount": 6,
+   "variablePlayoffMatchupPeriodLength": true
+  },
+  "tradeSettings": {
+   "allowOutOfUniverse": false,
+   "deadlineDate": 1803056400000,
+   "max": -1,
+   "revisionHours": 24,
+   "vetoVotesRequired": 3
+  },
+  "acquisitionSettings": {
+   "acquisitionBudget": 100,
+   "acquisitionLimit": -1,
+   "acquisitionType": "WAIVERS_TRADITIONAL",
+   "finalPlaceTransactionEligible": 0,
+   "isUsingAcquisitionBudget": false,
+   "matchupAcquisitionLimit": 1.0,
+   "matchupLimitPerScoringPeriod": true,
+   "minimumBid": 1,
+   "transactionLockingEnabled": false,
+   "waiverHours": 24,
+   "waiverOrderReset": false,
+   "waiverProcessDays": [
+    "SUNDAY"
+   ],
+   "waiverProcessHour": 8
+  }
+ }
+}

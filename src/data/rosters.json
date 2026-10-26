@@ -1,22 +1,22 @@
 {
- "asOf": "2026-10-26T12:58+09:00",
- "source": "ESPN League Rosters capture (user, 2026-10-26 12:58 KST) — after week 1",
+ "asOf": "2026-10-26T22:13+09:00",
+ "source": "ESPN API sync (GitHub Actions g8-espn)",
  "teams": {
   "Junyoung's Scary Team": {
    "active": [
-    "Keyonte George",
-    "Ayo Dosunmu",
-    "Domantas Sabonis",
-    "Wendell Carter Jr.",
-    "Tyrese Maxey",
-    "Naz Reid",
-    "Derrick White",
-    "Dejounte Murray",
-    "Darius Acuff Jr.",
     "Giannis Antetokounmpo",
+    "Tyrese Maxey",
+    "Domantas Sabonis",
+    "Derrick White",
+    "Naz Reid",
+    "Dejounte Murray",
     "Damian Lillard",
+    "Keyonte George",
     "Zion Williamson",
-    "Stephon Castle"
+    "Stephon Castle",
+    "Darius Acuff Jr.",
+    "Ayo Dosunmu",
+    "Wendell Carter Jr."
    ],
    "ir": [
     "Paolo Banchero",
@@ -25,79 +25,78 @@
   },
   "Gatori Team": {
    "active": [
-    "Stephen Curry",
-    "Immanuel Quickley",
-    "Lauri Markkanen",
-    "Jalen Williams",
     "Nikola Jokic",
-    "Keon Ellis",
     "Amen Thompson",
-    "De'Aaron Fox",
-    "Myles Turner",
-    "VJ Edgecombe",
+    "Stephen Curry",
     "Evan Mobley",
+    "Jalen Williams",
+    "Lauri Markkanen",
     "Trey Murphy III",
-    "Onyeka Okongwu"
+    "Onyeka Okongwu",
+    "De'Aaron Fox",
+    "Brandin Podziemski",
+    "Immanuel Quickley",
+    "Myles Turner",
+    "Keon Ellis"
    ],
    "ir": [
-    "Brandin Podziemski",
-    "Kristaps Porzingis"
+    "Kristaps Porzingis",
+    "VJ Edgecombe"
    ]
   },
   "Garak Twindragons": {
    "active": [
     "Shai Gilgeous-Alexander",
-    "Austin Reaves",
-    "Michael Porter Jr.",
-    "Anthony Davis",
     "Karl-Anthony Towns",
+    "Anthony Davis",
     "James Harden",
+    "Austin Reaves",
+    "Kyrie Irving",
+    "Michael Porter Jr.",
     "Brandon Miller",
     "Tyler Herro",
     "Rudy Gobert",
-    "Ajay Mitchell",
     "Norman Powell",
     "Jaime Jaquez Jr.",
     "Davion Mitchell"
    ],
    "ir": [
-    "Kyrie Irving",
     "Coby White"
    ]
   },
   "Zero Sugar": {
    "active": [
-    "Jalen Brunson",
-    "Scottie Barnes",
-    "Desmond Bane",
-    "Chet Holmgren",
-    "Isaiah Hartenstein",
-    "Josh Hart",
-    "Franz Wagner",
     "Victor Wembanyama",
-    "Keegan Murray",
-    "Alex Caruso",
+    "Scottie Barnes",
+    "Jalen Brunson",
     "Trae Young",
+    "Chet Holmgren",
+    "Desmond Bane",
+    "Franz Wagner",
     "Dyson Daniels",
-    "Herbert Jones"
+    "Josh Hart",
+    "Isaiah Hartenstein",
+    "Herbert Jones",
+    "Grayson Allen",
+    "Reed Sheppard"
    ],
    "ir": []
   },
   "ChaRDaddy": {
    "active": [
     "Luka Doncic",
-    "Jaylen Brown",
-    "Zach LaVine",
-    "Pascal Siakam",
-    "Alperen Sengun",
     "Donovan Mitchell",
-    "Julius Randle",
-    "Deni Avdija",
-    "Mikal Bridges",
-    "Ziaire Williams",
+    "Alperen Sengun",
     "Devin Booker",
+    "Pascal Siakam",
+    "Deni Avdija",
+    "Jaylen Brown",
+    "Julius Randle",
     "Ja Morant",
-    "Miles Bridges"
+    "Miles Bridges",
+    "Zach LaVine",
+    "Mikal Bridges",
+    "Ziaire Williams"
    ],
    "ir": [
     "Zach Edey",
@@ -106,19 +105,19 @@
   },
   "Kunhyo's Chokeslam": {
    "active": [
-    "Darius Garland",
     "Anthony Edwards",
-    "Kawhi Leonard",
-    "OG Anunoby",
-    "Walker Kessler",
     "Cade Cunningham",
-    "Cameron Boozer",
-    "Ausar Thompson",
-    "John Collins",
-    "RJ Barrett",
+    "Kawhi Leonard",
+    "Walker Kessler",
+    "Darius Garland",
+    "OG Anunoby",
     "Matas Buzelis",
+    "Cameron Boozer",
     "AJ Dybantsa",
-    "Dylan Harper"
+    "Ausar Thompson",
+    "Dylan Harper",
+    "John Collins",
+    "RJ Barrett"
    ],
    "ir": [
     "Jalen Duren",
@@ -127,15 +126,15 @@
   },
   "Songpa Park Kezhang": {
    "active": [
-    "Tyrese Haliburton",
-    "Nickeil Alexander-Walker",
-    "LeBron James",
     "Jalen Johnson",
-    "Joel Embiid",
-    "Jamal Murray",
+    "Tyrese Haliburton",
     "Bam Adebayo",
     "Josh Giddey",
+    "Jamal Murray",
+    "Nickeil Alexander-Walker",
+    "LeBron James",
     "Jarrett Allen",
+    "Joel Embiid",
     "Caleb Wilson",
     "Payton Pritchard",
     "Paul George",
@@ -145,18 +144,19 @@
   },
   "Brand_New_Neo_HJ": {
    "active": [
-    "LaMelo Ball",
-    "Andrew Nembhard",
-    "DeMar DeRozan",
-    "Jaren Jackson Jr.",
-    "Ivica Zubac",
-    "Ty Jerome",
-    "Aaron Gordon",
     "Jayson Tatum",
+    "LaMelo Ball",
     "Kevin Durant",
-    "Jaden McDaniels",
+    "Ty Jerome",
+    "Ivica Zubac",
     "Donovan Clingan",
-    "Jalen Green"
+    "Jaren Jackson Jr.",
+    "Jaden McDaniels",
+    "Andrew Nembhard",
+    "Yaxel Lendeborg",
+    "Paul Reed",
+    "Quentin Grimes",
+    "Fred VanVleet"
    ],
    "ir": [
     "Cooper Flagg",
@@ -167,26 +167,20 @@
  "status": {
   "Paolo Banchero": "O",
   "Yves Missi": "O",
-  "Jalen Williams": "O",
-  "VJ Edgecombe": "O",
   "Kristaps Porzingis": "O",
-  "Kyrie Irving": "O",
+  "VJ Edgecombe": "O",
   "Coby White": "O",
-  "Keegan Murray": "O",
   "Zach Edey": "O",
   "Nic Claxton": "O",
-  "Kawhi Leonard": "O",
-  "Ausar Thompson": "O",
-  "AJ Dybantsa": "O",
   "Jalen Duren": "O",
+  "Kawhi Leonard": "O",
   "Kon Knueppel": "O",
+  "AJ Dybantsa": "O",
+  "Ausar Thompson": "O",
   "Joel Embiid": "O",
-  "Ivica Zubac": "DTD",
   "Cooper Flagg": "O",
-  "Brandon Ingram": "O"
- },
- "statusNote": {
-  "Jalen Williams": "ESPN DTD, user instruction 2026-10-26: treat as OUT",
-  "Kyrie Irving": "on IR in capture (knee management)"
+  "Brandon Ingram": "O",
+  "Jalen Williams": "DTD",
+  "Ivica Zubac": "DTD"
  }
 }

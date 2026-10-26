@@ -1,22 +1,152 @@
 {
- "asOf": "2026-10-26 12:58 KST",
- "source": "ESPN Scoreboard capture (user) — final category results",
+ "asOf": "2026-10-26T22:13+09:00",
+ "source": "ESPN API sync — final category results",
  "weeks": {
   "1": [
-   {"away": "Junyoung's Scary Team", "home": "ChaRDaddy", "a": [5, 6, 0]},
-   {"away": "Songpa Park Kezhang", "home": "Kunhyo's Chokeslam", "a": [6, 4, 1]},
-   {"away": "Brand_New_Neo_HJ", "home": "Zero Sugar", "a": [5, 5, 1]},
-   {"away": "Garak Twindragons", "home": "Gatori Team", "a": [7, 4, 0]}
+   {
+    "away": "Junyoung's Scary Team",
+    "home": "ChaRDaddy",
+    "a": [
+     5,
+     6,
+     0
+    ]
+   },
+   {
+    "away": "Songpa Park Kezhang",
+    "home": "Kunhyo's Chokeslam",
+    "a": [
+     6,
+     4,
+     1
+    ]
+   },
+   {
+    "away": "Brand_New_Neo_HJ",
+    "home": "Zero Sugar",
+    "a": [
+     5,
+     5,
+     1
+    ]
+   },
+   {
+    "away": "Garak Twindragons",
+    "home": "Gatori Team",
+    "a": [
+     7,
+     4,
+     0
+    ]
+   }
   ]
  },
- "totals": {"1": {
-  "Garak Twindragons": {"FG": 0.4635, "FT": 0.7783, "TPM": 76, "REB": 238, "AST": 126, "STL": 43, "BLK": 27, "TO": 105, "PF": 95, "DD": 6, "PTS": 754},
-  "Gatori Team": {"FG": 0.4382, "FT": 0.8516, "TPM": 59, "REB": 200, "AST": 141, "STL": 42, "BLK": 22, "TO": 66, "PF": 91, "DD": 5, "PTS": 544},
-  "Junyoung's Scary Team": {"FG": 0.4973, "FT": 0.7578, "TPM": 67, "REB": 217, "AST": 174, "STL": 51, "BLK": 18, "TO": 105, "PF": 107, "DD": 8, "PTS": 735},
-  "ChaRDaddy": {"FG": 0.4871, "FT": 0.8030, "TPM": 69, "REB": 213, "AST": 162, "STL": 35, "BLK": 19, "TO": 103, "PF": 91, "DD": 4, "PTS": 756},
-  "Songpa Park Kezhang": {"FG": 0.4472, "FT": 0.7640, "TPM": 60, "REB": 218, "AST": 170, "STL": 48, "BLK": 19, "TO": 83, "PF": 81, "DD": 8, "PTS": 636},
-  "Kunhyo's Chokeslam": {"FG": 0.4625, "FT": 0.7848, "TPM": 53, "REB": 203, "AST": 114, "STL": 37, "BLK": 27, "TO": 90, "PF": 80, "DD": 8, "PTS": 609},
-  "Brand_New_Neo_HJ": {"FG": 0.4919, "FT": 0.8112, "TPM": 57, "REB": 173, "AST": 132, "STL": 30, "BLK": 24, "TO": 76, "PF": 107, "DD": 3, "PTS": 597},
-  "Zero Sugar": {"FG": 0.4068, "FT": 0.7742, "TPM": 46, "REB": 235, "AST": 132, "STL": 50, "BLK": 35, "TO": 79, "PF": 106, "DD": 9, "PTS": 550}
- }}
+ "totals": {
+  "1": {
+   "Junyoung's Scary Team": {
+    "PTS": 735.0,
+    "BLK": 18.0,
+    "STL": 51.0,
+    "AST": 174.0,
+    "DD": 8.0,
+    "REB": 217.0,
+    "PF": 107.0,
+    "TO": 105.0,
+    "TPM": 67.0,
+    "FG": 0.49726776,
+    "FT": 0.75776398
+   },
+   "ChaRDaddy": {
+    "PTS": 756.0,
+    "BLK": 19.0,
+    "STL": 35.0,
+    "AST": 162.0,
+    "DD": 4.0,
+    "REB": 213.0,
+    "PF": 91.0,
+    "TO": 102.0,
+    "TPM": 69.0,
+    "FG": 0.48618785,
+    "FT": 0.8030303
+   },
+   "Songpa Park Kezhang": {
+    "PTS": 636.0,
+    "BLK": 20.0,
+    "STL": 47.0,
+    "AST": 170.0,
+    "DD": 8.0,
+    "REB": 218.0,
+    "PF": 81.0,
+    "TO": 83.0,
+    "TPM": 60.0,
+    "FG": 0.44715447,
+    "FT": 0.76404494
+   },
+   "Kunhyo's Chokeslam": {
+    "PTS": 609.0,
+    "BLK": 27.0,
+    "STL": 37.0,
+    "AST": 114.0,
+    "DD": 8.0,
+    "REB": 203.0,
+    "PF": 80.0,
+    "TO": 90.0,
+    "TPM": 53.0,
+    "FG": 0.46252677,
+    "FT": 0.78481013
+   },
+   "Brand_New_Neo_HJ": {
+    "PTS": 597.0,
+    "BLK": 24.0,
+    "STL": 31.0,
+    "AST": 132.0,
+    "DD": 3.0,
+    "REB": 173.0,
+    "PF": 107.0,
+    "TO": 76.0,
+    "TPM": 57.0,
+    "FG": 0.49187935,
+    "FT": 0.81118881
+   },
+   "Zero Sugar": {
+    "PTS": 550.0,
+    "BLK": 35.0,
+    "STL": 49.0,
+    "AST": 132.0,
+    "DD": 9.0,
+    "REB": 235.0,
+    "PF": 106.0,
+    "TO": 79.0,
+    "TPM": 46.0,
+    "FG": 0.40677966,
+    "FT": 0.77419355
+   },
+   "Garak Twindragons": {
+    "PTS": 754.0,
+    "BLK": 27.0,
+    "STL": 43.0,
+    "AST": 126.0,
+    "DD": 6.0,
+    "REB": 239.0,
+    "PF": 95.0,
+    "TO": 106.0,
+    "TPM": 76.0,
+    "FG": 0.46345811,
+    "FT": 0.77832512
+   },
+   "Gatori Team": {
+    "PTS": 544.0,
+    "BLK": 22.0,
+    "STL": 42.0,
+    "AST": 141.0,
+    "DD": 5.0,
+    "REB": 200.0,
+    "PF": 91.0,
+    "TO": 66.0,
+    "TPM": 59.0,
+    "FG": 0.43822844,
+    "FT": 0.8515625
+   }
+  }
+ }
 }

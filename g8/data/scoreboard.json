@@ -1,0 +1,1271 @@
+{
+ "asOf": "2026-10-26T22:13+09:00",
+ "currentMatchupPeriod": 2,
+ "scoringPeriodId": 7,
+ "matchups": [
+  {
+   "period": 1,
+   "winner": "HOME",
+   "home": {
+    "team": "ChaRDaddy",
+    "wins": 6,
+    "losses": 5,
+    "ties": 0,
+    "cats": {
+     "PTS": 756.0,
+     "BLK": 19.0,
+     "STL": 35.0,
+     "AST": 162.0,
+     "DD": 4.0,
+     "REB": 213.0,
+     "PF": 91.0,
+     "TO": 102.0,
+     "FGM": 264.0,
+     "FGA": 543.0,
+     "FTM": 159.0,
+     "FTA": 198.0,
+     "3PM": 69.0,
+     "FG%": 0.48618785,
+     "FT%": 0.8030303
+    }
+   },
+   "away": {
+    "team": "Junyoung's Scary Team",
+    "wins": 5,
+    "losses": 6,
+    "ties": 0,
+    "cats": {
+     "PTS": 735.0,
+     "BLK": 18.0,
+     "STL": 51.0,
+     "AST": 174.0,
+     "DD": 8.0,
+     "REB": 217.0,
+     "PF": 107.0,
+     "TO": 105.0,
+     "FGM": 273.0,
+     "FGA": 549.0,
+     "FTM": 122.0,
+     "FTA": 161.0,
+     "3PM": 67.0,
+     "FG%": 0.49726776,
+     "FT%": 0.75776398
+    }
+   }
+  },
+  {
+   "period": 1,
+   "winner": "AWAY",
+   "home": {
+    "team": "Kunhyo's Chokeslam",
+    "wins": 4,
+    "losses": 6,
+    "ties": 1,
+    "cats": {
+     "PTS": 609.0,
+     "BLK": 27.0,
+     "STL": 37.0,
+     "AST": 114.0,
+     "DD": 8.0,
+     "REB": 203.0,
+     "PF": 80.0,
+     "TO": 90.0,
+     "FGM": 216.0,
+     "FGA": 467.0,
+     "FTM": 124.0,
+     "FTA": 158.0,
+     "3PM": 53.0,
+     "FG%": 0.46252677,
+     "FT%": 0.78481013
+    }
+   },
+   "away": {
+    "team": "Songpa Park kezhang",
+    "wins": 6,
+    "losses": 4,
+    "ties": 1,
+    "cats": {
+     "PTS": 636.0,
+     "BLK": 20.0,
+     "STL": 47.0,
+     "AST": 170.0,
+     "DD": 8.0,
+     "REB": 218.0,
+     "PF": 81.0,
+     "TO": 83.0,
+     "FGM": 220.0,
+     "FGA": 492.0,
+     "FTM": 136.0,
+     "FTA": 178.0,
+     "3PM": 60.0,
+     "FG%": 0.44715447,
+     "FT%": 0.76404494
+    }
+   }
+  },
+  {
+   "period": 1,
+   "winner": "TIE",
+   "home": {
+    "team": "Zero Sugar",
+    "wins": 5,
+    "losses": 5,
+    "ties": 1,
+    "cats": {
+     "PTS": 550.0,
+     "BLK": 35.0,
+     "STL": 49.0,
+     "AST": 132.0,
+     "DD": 9.0,
+     "REB": 235.0,
+     "PF": 106.0,
+     "TO": 79.0,
+     "FGM": 192.0,
+     "FGA": 472.0,
+     "FTM": 120.0,
+     "FTA": 155.0,
+     "3PM": 46.0,
+     "FG%": 0.40677966,
+     "FT%": 0.77419355
+    }
+   },
+   "away": {
+    "team": "Brand_New_Neo_HJ",
+    "wins": 5,
+    "losses": 5,
+    "ties": 1,
+    "cats": {
+     "PTS": 597.0,
+     "BLK": 24.0,
+     "STL": 31.0,
+     "AST": 132.0,
+     "DD": 3.0,
+     "REB": 173.0,
+     "PF": 107.0,
+     "TO": 76.0,
+     "FGM": 212.0,
+     "FGA": 431.0,
+     "FTM": 116.0,
+     "FTA": 143.0,
+     "3PM": 57.0,
+     "FG%": 0.49187935,
+     "FT%": 0.81118881
+    }
+   }
+  },
+  {
+   "period": 1,
+   "winner": "AWAY",
+   "home": {
+    "team": "Gatori Team",
+    "wins": 4,
+    "losses": 7,
+    "ties": 0,
+    "cats": {
+     "PTS": 544.0,
+     "BLK": 22.0,
+     "STL": 42.0,
+     "AST": 141.0,
+     "DD": 5.0,
+     "REB": 200.0,
+     "PF": 91.0,
+     "TO": 66.0,
+     "FGM": 188.0,
+     "FGA": 429.0,
+     "FTM": 109.0,
+     "FTA": 128.0,
+     "3PM": 59.0,
+     "FG%": 0.43822844,
+     "FT%": 0.8515625
+    }
+   },
+   "away": {
+    "team": "Garak Twindragons",
+    "wins": 7,
+    "losses": 4,
+    "ties": 0,
+    "cats": {
+     "PTS": 754.0,
+     "BLK": 27.0,
+     "STL": 43.0,
+     "AST": 126.0,
+     "DD": 6.0,
+     "REB": 239.0,
+     "PF": 95.0,
+     "TO": 106.0,
+     "FGM": 260.0,
+     "FGA": 561.0,
+     "FTM": 158.0,
+     "FTA": 203.0,
+     "3PM": 76.0,
+     "FG%": 0.46345811,
+     "FT%": 0.77832512
+    }
+   }
+  },
+  {
+   "period": 2,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Junyoung's Scary Team",
+    "wins": 0,
+    "losses": 0,
+    "ties": 11,
+    "cats": {
+     "PTS": 0.0,
+     "BLK": 0.0,
+     "STL": 0.0,
+     "AST": 0.0,
+     "DD": 0.0,
+     "REB": 0.0,
+     "PF": 0.0,
+     "TO": 0.0,
+     "FGM": 0.0,
+     "FGA": 0.0,
+     "FTM": 0.0,
+     "FTA": 0.0,
+     "3PM": 0.0,
+     "FG%": 0.0,
+     "FT%": 0.0
+    }
+   },
+   "away": {
+    "team": "Songpa Park kezhang",
+    "wins": 0,
+    "losses": 0,
+    "ties": 11,
+    "cats": {
+     "PTS": 0.0,
+     "BLK": 0.0,
+     "STL": 0.0,
+     "AST": 0.0,
+     "DD": 0.0,
+     "REB": 0.0,
+     "PF": 0.0,
+     "TO": 0.0,
+     "FGM": 0.0,
+     "FGA": 0.0,
+     "FTM": 0.0,
+     "FTA": 0.0,
+     "3PM": 0.0,
+     "FG%": 0.0,
+     "FT%": 0.0
+    }
+   }
+  },
+  {
+   "period": 2,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Brand_New_Neo_HJ",
+    "wins": 0,
+    "losses": 0,
+    "ties": 11,
+    "cats": {
+     "PTS": 0.0,
+     "BLK": 0.0,
+     "STL": 0.0,
+     "AST": 0.0,
+     "DD": 0.0,
+     "REB": 0.0,
+     "PF": 0.0,
+     "TO": 0.0,
+     "FGM": 0.0,
+     "FGA": 0.0,
+     "FTM": 0.0,
+     "FTA": 0.0,
+     "3PM": 0.0,
+     "FG%": 0.0,
+     "FT%": 0.0
+    }
+   },
+   "away": {
+    "team": "ChaRDaddy",
+    "wins": 0,
+    "losses": 0,
+    "ties": 11,
+    "cats": {
+     "PTS": 0.0,
+     "BLK": 0.0,
+     "STL": 0.0,
+     "AST": 0.0,
+     "DD": 0.0,
+     "REB": 0.0,
+     "PF": 0.0,
+     "TO": 0.0,
+     "FGM": 0.0,
+     "FGA": 0.0,
+     "FTM": 0.0,
+     "FTA": 0.0,
+     "3PM": 0.0,
+     "FG%": 0.0,
+     "FT%": 0.0
+    }
+   }
+  },
+  {
+   "period": 2,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Garak Twindragons",
+    "wins": 0,
+    "losses": 0,
+    "ties": 11,
+    "cats": {
+     "PTS": 0.0,
+     "BLK": 0.0,
+     "STL": 0.0,
+     "AST": 0.0,
+     "DD": 0.0,
+     "REB": 0.0,
+     "PF": 0.0,
+     "TO": 0.0,
+     "FGM": 0.0,
+     "FGA": 0.0,
+     "FTM": 0.0,
+     "FTA": 0.0,
+     "3PM": 0.0,
+     "FG%": 0.0,
+     "FT%": 0.0
+    }
+   },
+   "away": {
+    "team": "Kunhyo's Chokeslam",
+    "wins": 0,
+    "losses": 0,
+    "ties": 11,
+    "cats": {
+     "PTS": 0.0,
+     "BLK": 0.0,
+     "STL": 0.0,
+     "AST": 0.0,
+     "DD": 0.0,
+     "REB": 0.0,
+     "PF": 0.0,
+     "TO": 0.0,
+     "FGM": 0.0,
+     "FGA": 0.0,
+     "FTM": 0.0,
+     "FTA": 0.0,
+     "3PM": 0.0,
+     "FG%": 0.0,
+     "FT%": 0.0
+    }
+   }
+  },
+  {
+   "period": 2,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Gatori Team",
+    "wins": 0,
+    "losses": 0,
+    "ties": 11,
+    "cats": {
+     "PTS": 0.0,
+     "BLK": 0.0,
+     "STL": 0.0,
+     "AST": 0.0,
+     "DD": 0.0,
+     "REB": 0.0,
+     "PF": 0.0,
+     "TO": 0.0,
+     "FGM": 0.0,
+     "FGA": 0.0,
+     "FTM": 0.0,
+     "FTA": 0.0,
+     "3PM": 0.0,
+     "FG%": 0.0,
+     "FT%": 0.0
+    }
+   },
+   "away": {
+    "team": "Zero Sugar",
+    "wins": 0,
+    "losses": 0,
+    "ties": 11,
+    "cats": {
+     "PTS": 0.0,
+     "BLK": 0.0,
+     "STL": 0.0,
+     "AST": 0.0,
+     "DD": 0.0,
+     "REB": 0.0,
+     "PF": 0.0,
+     "TO": 0.0,
+     "FGM": 0.0,
+     "FGA": 0.0,
+     "FTM": 0.0,
+     "FTA": 0.0,
+     "3PM": 0.0,
+     "FG%": 0.0,
+     "FT%": 0.0
+    }
+   }
+  },
+  {
+   "period": 3,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Brand_New_Neo_HJ",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Junyoung's Scary Team",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 3,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Songpa Park kezhang",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Garak Twindragons",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 3,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "ChaRDaddy",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Gatori Team",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 3,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Kunhyo's Chokeslam",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Zero Sugar",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 4,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Junyoung's Scary Team",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Garak Twindragons",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 4,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Gatori Team",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Brand_New_Neo_HJ",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 4,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Zero Sugar",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Songpa Park kezhang",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 4,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Kunhyo's Chokeslam",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "ChaRDaddy",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 5,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Gatori Team",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Junyoung's Scary Team",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 5,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Garak Twindragons",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Zero Sugar",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 5,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Brand_New_Neo_HJ",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Kunhyo's Chokeslam",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 5,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Songpa Park kezhang",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "ChaRDaddy",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 6,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Junyoung's Scary Team",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Zero Sugar",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 6,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Kunhyo's Chokeslam",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Gatori Team",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 6,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "ChaRDaddy",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Garak Twindragons",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 6,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Songpa Park kezhang",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Brand_New_Neo_HJ",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 7,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Kunhyo's Chokeslam",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Junyoung's Scary Team",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 7,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Zero Sugar",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "ChaRDaddy",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 7,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Gatori Team",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Songpa Park kezhang",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 7,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Garak Twindragons",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Brand_New_Neo_HJ",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 8,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Junyoung's Scary Team",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "ChaRDaddy",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 8,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Songpa Park kezhang",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Kunhyo's Chokeslam",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 8,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Brand_New_Neo_HJ",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Zero Sugar",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 8,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Garak Twindragons",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Gatori Team",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 9,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Songpa Park kezhang",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Junyoung's Scary Team",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 9,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "ChaRDaddy",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Brand_New_Neo_HJ",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 9,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Kunhyo's Chokeslam",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Garak Twindragons",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 9,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Zero Sugar",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Gatori Team",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 10,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Junyoung's Scary Team",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Brand_New_Neo_HJ",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 10,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Garak Twindragons",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Songpa Park kezhang",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 10,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Gatori Team",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "ChaRDaddy",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 10,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Zero Sugar",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Kunhyo's Chokeslam",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 11,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Garak Twindragons",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Junyoung's Scary Team",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 11,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Brand_New_Neo_HJ",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Gatori Team",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 11,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Songpa Park kezhang",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Zero Sugar",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 11,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "ChaRDaddy",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Kunhyo's Chokeslam",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 12,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Junyoung's Scary Team",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Gatori Team",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 12,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Zero Sugar",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Garak Twindragons",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 12,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Kunhyo's Chokeslam",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Brand_New_Neo_HJ",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 12,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "ChaRDaddy",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Songpa Park kezhang",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 13,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Zero Sugar",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Junyoung's Scary Team",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 13,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Gatori Team",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Kunhyo's Chokeslam",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 13,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Garak Twindragons",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "ChaRDaddy",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 13,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Brand_New_Neo_HJ",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Songpa Park kezhang",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 14,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Junyoung's Scary Team",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Kunhyo's Chokeslam",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 14,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "ChaRDaddy",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Zero Sugar",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 14,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Songpa Park kezhang",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Gatori Team",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  },
+  {
+   "period": 14,
+   "winner": "UNDECIDED",
+   "home": {
+    "team": "Brand_New_Neo_HJ",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   },
+   "away": {
+    "team": "Garak Twindragons",
+    "wins": 0,
+    "losses": 0,
+    "ties": 0,
+    "cats": {}
+   }
+  }
+ ]
+}

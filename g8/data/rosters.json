@@ -1,0 +1,334 @@
+{
+ "asOf": "2026-10-26T22:13+09:00",
+ "leagueId": "751654965",
+ "season": 2027,
+ "teams": [
+  {
+   "name": "Junyoung's Scary Team",
+   "abbr": "Junyoung's Scary Team",
+   "espnId": 1,
+   "me": false,
+   "players": [
+    "Giannis Antetokounmpo",
+    "Tyrese Maxey",
+    "Domantas Sabonis",
+    "Derrick White",
+    "Naz Reid",
+    "Dejounte Murray",
+    "Damian Lillard",
+    "Keyonte George",
+    "Zion Williamson",
+    "Stephon Castle",
+    "Darius Acuff Jr.",
+    "Ayo Dosunmu",
+    "Wendell Carter Jr."
+   ],
+   "ir": [
+    "Paolo Banchero",
+    "Yves Missi"
+   ],
+   "record": {
+    "wins": 5,
+    "losses": 6,
+    "ties": 0,
+    "percentage": 0.45454545454545453
+   },
+   "acqByPeriod": {
+    "1": 4
+   },
+   "acqTotal": 4
+  },
+  {
+   "name": "Gatori Team",
+   "abbr": "Gatori Team",
+   "espnId": 2,
+   "me": false,
+   "players": [
+    "Nikola Jokic",
+    "Amen Thompson",
+    "Stephen Curry",
+    "Evan Mobley",
+    "Jalen Williams",
+    "Lauri Markkanen",
+    "Trey Murphy III",
+    "Onyeka Okongwu",
+    "De'Aaron Fox",
+    "Brandin Podziemski",
+    "Immanuel Quickley",
+    "Myles Turner",
+    "Keon Ellis"
+   ],
+   "ir": [
+    "Kristaps Porzingis",
+    "VJ Edgecombe"
+   ],
+   "record": {
+    "wins": 4,
+    "losses": 7,
+    "ties": 0,
+    "percentage": 0.36363636363636365
+   },
+   "acqByPeriod": {
+    "1": 4
+   },
+   "acqTotal": 4
+  },
+  {
+   "name": "Garak Twindragons",
+   "abbr": "Garak Twindragons",
+   "espnId": 3,
+   "me": true,
+   "players": [
+    "Shai Gilgeous-Alexander",
+    "Karl-Anthony Towns",
+    "Anthony Davis",
+    "James Harden",
+    "Austin Reaves",
+    "Kyrie Irving",
+    "Michael Porter Jr.",
+    "Brandon Miller",
+    "Tyler Herro",
+    "Rudy Gobert",
+    "Norman Powell",
+    "Jaime Jaquez Jr.",
+    "Davion Mitchell"
+   ],
+   "ir": [
+    "Coby White"
+   ],
+   "record": {
+    "wins": 7,
+    "losses": 4,
+    "ties": 0,
+    "percentage": 0.6363636363636364
+   },
+   "acqByPeriod": {
+    "1": 6
+   },
+   "acqTotal": 6
+  },
+  {
+   "name": "Zero Sugar",
+   "abbr": "Zero Sugar",
+   "espnId": 4,
+   "me": false,
+   "players": [
+    "Victor Wembanyama",
+    "Scottie Barnes",
+    "Jalen Brunson",
+    "Trae Young",
+    "Chet Holmgren",
+    "Desmond Bane",
+    "Franz Wagner",
+    "Dyson Daniels",
+    "Josh Hart",
+    "Isaiah Hartenstein",
+    "Herbert Jones",
+    "Grayson Allen",
+    "Reed Sheppard"
+   ],
+   "ir": [],
+   "record": {
+    "wins": 5,
+    "losses": 5,
+    "ties": 1,
+    "percentage": 0.5
+   },
+   "acqByPeriod": {
+    "2": 2
+   },
+   "acqTotal": 2
+  },
+  {
+   "name": "ChaRDaddy",
+   "abbr": "ChaRDaddy",
+   "espnId": 5,
+   "me": false,
+   "players": [
+    "Luka Doncic",
+    "Donovan Mitchell",
+    "Alperen Sengun",
+    "Devin Booker",
+    "Pascal Siakam",
+    "Deni Avdija",
+    "Jaylen Brown",
+    "Julius Randle",
+    "Ja Morant",
+    "Miles Bridges",
+    "Zach LaVine",
+    "Mikal Bridges",
+    "Ziaire Williams"
+   ],
+   "ir": [
+    "Zach Edey",
+    "Nic Claxton"
+   ],
+   "record": {
+    "wins": 6,
+    "losses": 5,
+    "ties": 0,
+    "percentage": 0.5454545454545454
+   },
+   "acqByPeriod": {
+    "1": 6
+   },
+   "acqTotal": 6
+  },
+  {
+   "name": "Kunhyo's Chokeslam",
+   "abbr": "Kunhyo's Chokeslam",
+   "espnId": 6,
+   "me": false,
+   "players": [
+    "Anthony Edwards",
+    "Cade Cunningham",
+    "Kawhi Leonard",
+    "Walker Kessler",
+    "Darius Garland",
+    "OG Anunoby",
+    "Matas Buzelis",
+    "Cameron Boozer",
+    "AJ Dybantsa",
+    "Ausar Thompson",
+    "Dylan Harper",
+    "John Collins",
+    "RJ Barrett"
+   ],
+   "ir": [
+    "Jalen Duren",
+    "Kon Knueppel"
+   ],
+   "record": {
+    "wins": 4,
+    "losses": 6,
+    "ties": 1,
+    "percentage": 0.4090909090909091
+   },
+   "acqByPeriod": {
+    "1": 6
+   },
+   "acqTotal": 6
+  },
+  {
+   "name": "Songpa Park kezhang",
+   "abbr": "Songpa Park kezhang",
+   "espnId": 7,
+   "me": false,
+   "players": [
+    "Jalen Johnson",
+    "Tyrese Haliburton",
+    "Bam Adebayo",
+    "Josh Giddey",
+    "Jamal Murray",
+    "Nickeil Alexander-Walker",
+    "LeBron James",
+    "Jarrett Allen",
+    "Joel Embiid",
+    "Caleb Wilson",
+    "Payton Pritchard",
+    "Paul George",
+    "CJ McCollum"
+   ],
+   "ir": [],
+   "record": {
+    "wins": 6,
+    "losses": 4,
+    "ties": 1,
+    "percentage": 0.5909090909090909
+   },
+   "acqByPeriod": {},
+   "acqTotal": 0
+  },
+  {
+   "name": "Brand_New_Neo_HJ",
+   "abbr": "Brand_New_Neo_HJ",
+   "espnId": 8,
+   "me": false,
+   "players": [
+    "Jayson Tatum",
+    "LaMelo Ball",
+    "Kevin Durant",
+    "Ty Jerome",
+    "Ivica Zubac",
+    "Donovan Clingan",
+    "Jaren Jackson Jr.",
+    "Jaden McDaniels",
+    "Andrew Nembhard",
+    "Yaxel Lendeborg",
+    "Paul Reed",
+    "Quentin Grimes",
+    "Fred VanVleet"
+   ],
+   "ir": [
+    "Cooper Flagg",
+    "Brandon Ingram"
+   ],
+   "record": {
+    "wins": 5,
+    "losses": 5,
+    "ties": 1,
+    "percentage": 0.5
+   },
+   "acqByPeriod": {
+    "1": 6,
+    "2": 4
+   },
+   "acqTotal": 10
+  }
+ ],
+ "status": {
+  "O": [
+   "Paolo Banchero",
+   "Yves Missi",
+   "Kristaps Porzingis",
+   "VJ Edgecombe",
+   "Coby White",
+   "Zach Edey",
+   "Nic Claxton",
+   "Jalen Duren",
+   "Kawhi Leonard",
+   "Kon Knueppel",
+   "AJ Dybantsa",
+   "Ausar Thompson",
+   "Joel Embiid",
+   "Cooper Flagg",
+   "Brandon Ingram",
+   "Tobias Harris",
+   "Keegan Murray",
+   "Jimmy Butler III",
+   "Naji Marshall",
+   "T.J. McConnell",
+   "Shaedon Sharpe",
+   "Mark Williams",
+   "Jusuf Nurkic",
+   "Mikel Brown Jr.",
+   "Santi Aldama",
+   "Dereck Lively II",
+   "Donte DiVincenzo",
+   "Bradley Beal",
+   "Jose Alvarado",
+   "Maxime Raynaud",
+   "Ben Simmons",
+   "Max Strus",
+   "Cameron Carr",
+   "Tacko Fall",
+   "Yanic Konan Niederhauser",
+   "Steven Adams",
+   "Jayden Quaintance"
+  ],
+  "DTD": [
+   "Jalen Williams",
+   "Ivica Zubac",
+   "Jalen Suggs",
+   "Cason Wallace",
+   "Oso Ighodaro",
+   "Cameron Johnson",
+   "Jaylin Williams",
+   "Gui Santos",
+   "Marcus Smart",
+   "Isaiah Joe",
+   "Brandon Williams",
+   "Rob Dillingham"
+  ]
+ }
+}
