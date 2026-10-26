@@ -23,7 +23,7 @@ PATH = f"/apis/v3/games/fba/seasons/{SEASON}/segments/0/leagues/{LEAGUE_ID}"
 
 # ESPN basketball stat ids (community-documented; unknown ids are kept as "s<id>")
 STAT = {0: "PTS", 1: "BLK", 2: "STL", 3: "AST", 4: "OREB", 5: "DREB", 6: "REB", 11: "TO", 13: "FGM", 14: "FGA",
-        15: "FTM", 16: "FTA", 17: "3PM", 18: "3PA", 19: "FG%", 20: "FT%", 21: "3P%", 37: "DD", 38: "TD", 40: "MIN", 41: "GS", 42: "GP"}
+        15: "FTM", 16: "FTA", 17: "3PM", 18: "3PA", 19: "FG%", 20: "FT%", 21: "3P%", 37: "DD", 38: "TD", 40: "MIN", 41: "GS", 42: "GP", 43: "TW"}
 SLOT = {0: "PG", 1: "SG", 2: "SF", 3: "PF", 4: "C", 5: "G", 6: "F", 7: "SG/SF", 8: "G/F", 9: "PF/C", 10: "F/C", 11: "UTIL", 12: "BE", 13: "IR"}
 PRO = {1: "ATL", 2: "BOS", 3: "NOP", 4: "CHI", 5: "CLE", 6: "DAL", 7: "DEN", 8: "DET", 9: "GSW", 10: "HOU", 11: "IND", 12: "LAC", 13: "LAL", 14: "MIA",
        15: "MIL", 16: "MIN", 17: "BKN", 18: "NYK", 19: "ORL", 20: "PHI", 21: "PHX", 22: "POR", 23: "SAC", 24: "SAS", 25: "OKC", 26: "UTA", 27: "WAS",
@@ -95,12 +95,12 @@ def player_row(p, owner, slot=None, status=None):
             "Status": status or INJ.get(p.get("injuryStatus") or "", ""), "G": a.get("GP", ""), "MP": a.get("MIN", ""),
             "FG": a.get("FGM", ""), "FGA": a.get("FGA", ""), "3P": a.get("3PM", ""), "FT": a.get("FTM", ""), "FTA": a.get("FTA", ""),
             "TRB": a.get("REB", ""), "AST": a.get("AST", ""), "STL": a.get("STL", ""), "BLK": a.get("BLK", ""), "TOV": a.get("TO", ""),
-            "PTS": a.get("PTS", ""), "DD": a.get("DD", "")}
+            "PTS": a.get("PTS", ""), "DD": a.get("DD", ""), "TW": a.get("TW", ""), "espnId": p.get("id"), "elig": "/".join(SLOT[x] for x in (p.get("eligibleSlots") or []) if x in (0, 1, 2, 3, 4))}
 
 
 def main():
     os.makedirs(OUT, exist_ok=True)
-    lg = get(["mSettings", "mTeam", "mRoster", "mMatchupScore", "mStatus"])
+    lg = get(["mSettings", "mTeam", "mRoster", "mMatchupScore", "mScoreboard", "mStatus"])
     teams = lg.get("teams") or []
     if not teams:
         die("No teams in response - check league id / season / cookies")
