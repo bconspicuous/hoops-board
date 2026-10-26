@@ -150,4 +150,10 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except SystemExit:
+        raise
+    except Exception:
+        import traceback
+        die("crash: " + traceback.format_exc()[-900:])
