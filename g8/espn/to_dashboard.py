@@ -73,6 +73,10 @@ def main(build=True):
         for n in names: status[pname(n)] = st
     on = {n for t in teams.values() for n in t["active"] + t["ir"]}
     status = {n: s for n, s in status.items() if n in on}
+    ov = (load(os.path.join(DATA, "meta.json"), {}) or {}).get("statusOverride") or {}   # user-set statuses beat ESPN's
+    for n, s in ov.items():
+        if n in on: status[n] = s
+        elif s: note("notice", f"statusOverride for {n} ignored (not on a roster)")
     if len(teams) != len(TEAMS): note("warning", f"{len(teams)} of {len(TEAMS)} teams matched")
     if unknown: note("notice", "no projection (ignored by the simulation): " + ", ".join(sorted(set(unknown))[:15]))
     if dump("rosters", {"asOf": asOf, "source": "ESPN API sync (GitHub Actions g8-espn)", "teams": teams, "status": status}): changed.append("rosters")

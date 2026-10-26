@@ -518,7 +518,7 @@ function condition(o, a) {
   return o;
 }
 function teamWeekL(team, names, w, opt = {}) {
-  const L = liveFor(w), a = L && L.cats[team];
+  const L = liveFor(w), a0 = L && L.cats[team], a = a0 && (+a0.PTS || +a0.REB || +a0.AST) ? a0 : null;   /* no game played yet = no conditioning */
   if (!a) return teamWeek(names, w, opt);
   const o2 = Object.assign({}, opt, { from: L.from });
   if (o2.stream) o2.stream = Object.assign({}, o2.stream, { acq: Math.max(0, o2.stream.acq - (L.adds[team] || 0)) });
