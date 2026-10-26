@@ -1,0 +1,42 @@
+name: g8 · ESPN league sync (8-team G League)
+# Pulls the 8-team league (ESPN league 751654965) and refreshes the 8-team dashboard (index.html).
+# Writes only g8/data, src/data and index.html — never ten/ (the 10-team league has its own workflow and secrets).
+on:
+  workflow_dispatch:
+  schedule:
+    # 3 runs a day inside 03:00-13:00 US Eastern, when no NBA game is in progress
+    # (live matchup totals are then complete through the previous night)
+    - cron: "17 8,12,16 * * *"
+permissions:
+  contents: write
+concurrency:
+  group: g8-espn
+  cancel-in-progress: false
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Fetch ESPN league data (8-team)
+        env:
+          ESPN_LEAGUE_ID: "751654965"
+          ESPN_SEASON: "2027"
+          ESPN_S2: ${{ secrets.G8_ESPN_S2 }}
+          ESPN_SWID: ${{ secrets.G8_ESPN_SWID }}
+        run: |
+          if [ -z "$ESPN_S2" ] || [ -z "$ESPN_SWID" ]; then echo "::notice title=g8 ESPN sync::G8_ESPN_S2 / G8_ESPN_SWID secrets not set - skipping"; exit 0; fi
+          python g8/espn/fetch_g8.py
+      - name: Update dashboard data and rebuild index.html
+        run: python g8/espn/to_dashboard.py
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add g8/data src/data index.html
+          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
+          git commit -m "g8: ESPN league sync $(TZ=Asia/Seoul date +'%Y-%m-%d %H:%M KST')"
+          for i in 1 2 3; do git pull --rebase origin main && git push && exit 0; sleep 5; done
+          exit 1
