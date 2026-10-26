@@ -35,6 +35,11 @@ CODE = {"Garak Twindragons": "GTD", "PaloAlto Wenoja": "JYP", "Samseong Homeless
 MY_TEAM = os.environ.get("ESPN_MY_TEAM", "Garak Twindragons")
 
 
+def die(msg):
+    print("::error title=ESPN sync::" + msg.replace("\n", " "))   # visible as a run annotation
+    sys.exit(1)
+
+
 def get(views, extra_headers=None):
     q = "&".join("view=" + v for v in views)
     hdr = {"User-Agent": "Mozilla/5.0 (hoops-board ten fetcher)", "Accept": "application/json"}
@@ -56,11 +61,11 @@ def get(views, extra_headers=None):
             except urllib.error.HTTPError as e:
                 last = f"{host} HTTP {e.code}: {e.read()[:300]!r}"
                 if e.code in (401, 403):
-                    sys.exit(f"ESPN denied access ({e.code}). Private league: set ESPN_S2 and ESPN_SWID secrets. {last}")
+                    die(f"ESPN denied access ({e.code}). Private league: set ESPN_S2 and ESPN_SWID secrets. {last}")
             except Exception as e:  # network / JSON
                 last = f"{host}: {e}"
             time.sleep(2 * (attempt + 1))
-    sys.exit("ESPN fetch failed: " + str(last))
+    die("ESPN fetch failed: " + str(last))
 
 
 def team_name(t):
@@ -92,7 +97,7 @@ def main():
     lg = get(["mSettings", "mTeam", "mRoster", "mMatchupScore", "mStatus"])
     teams = lg.get("teams") or []
     if not teams:
-        sys.exit("No teams in response - check league id / season / cookies")
+        die("No teams in response - check league id / season / cookies")
     tname = {t["id"]: team_name(t) for t in teams}
     tcode = {t["id"]: CODE.get(team_name(t), t.get("abbrev") or str(t["id"])) for t in teams}
 
