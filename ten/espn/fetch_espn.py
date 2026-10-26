@@ -68,6 +68,31 @@ def get(views, extra_headers=None):
     die("ESPN fetch failed: " + str(last))
 
 
+def fetch_injuries():
+    """League-wide NBA injury report from ESPN's public site API (includes estimated return dates)."""
+    out, errs = [], []
+    for url in ["https://site.api.espn.com/apis/site/v2/sports/basketball/nba/injuries",
+                "https://site.web.api.espn.com/apis/site/v2/sports/basketball/nba/injuries"]:
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (hoops-board ten fetcher)", "Accept": "application/json"})
+            with urllib.request.urlopen(req, timeout=30) as r:
+                data = json.loads(r.read().decode("utf-8"))
+            for team in data.get("injuries") or []:
+                for inj in team.get("injuries") or []:
+                    a = inj.get("athlete") or {}
+                    d = inj.get("details") or {}
+                    out.append({"player": a.get("displayName"), "team": (a.get("team") or {}).get("abbreviation") or team.get("displayName"),
+                                "status": inj.get("status"), "date": inj.get("date"), "type": inj.get("type", {}).get("description") if isinstance(inj.get("type"), dict) else inj.get("type"),
+                                "returnDate": d.get("returnDate"), "detail": d.get("detail"), "side": d.get("side"), "injury": d.get("type"),
+                                "fantasyStatus": (d.get("fantasyStatus") or {}).get("description"),
+                                "short": inj.get("shortComment"), "long": inj.get("longComment")})
+            if out:
+                return out, None
+        except Exception as e:
+            errs.append(f"{url}: {e}")
+    return out, "; ".join(errs)
+
+
 def team_name(t):
     if t.get("name"):
         return t["name"].strip()
@@ -158,6 +183,9 @@ def main():
     json.dump(trim, open(os.path.join(OUT, "espn_raw_league.json"), "w"), ensure_ascii=False, indent=1)
     json.dump({"asOf": now, "scoringPeriodId": lg.get("scoringPeriodId"), "currentMatchupPeriod": sp, "teams": len(teams), "players": len(rows),
                "auth": bool(os.environ.get("ESPN_S2"))}, open(os.path.join(OUT, "meta.json"), "w"), indent=1)
+    inj, ierr = fetch_injuries()
+    json.dump({"asOf": now, "source": "site.api.espn.com nba/injuries", "error": ierr, "injuries": inj}, open(os.path.join(OUT, "injuries.json"), "w"), ensure_ascii=False, indent=1)
+    print(f"injuries: {len(inj)} {ierr or ''}")
     print(f"ok: {len(teams)} teams, {len(rows)} players, matchup period {sp}, asOf {now}")
 
 
