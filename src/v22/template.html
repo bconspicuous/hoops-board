@@ -115,6 +115,18 @@ select, input[type="search"] { border: 1px solid var(--line); background: var(--
 .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
 .chart { position: relative; }
 .chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.rd-card { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 16px; align-items: start; }
+@media (max-width: 860px) { .rd-card { grid-template-columns: minmax(0, 1fr); } }
+.rd-chart { position: relative; max-width: 440px; width: 100%; justify-self: center; }
+.rd-chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.rd-chart .tip { white-space: normal; width: max-content; max-width: min(280px, 90vw); text-align: center; }
+.rd-legend { display: flex; flex-wrap: wrap; gap: 6px 16px; justify-content: center; font-size: 12.5px; color: var(--muted); }
+.rd-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+.rd-legend i.dash { background: none; border: 2px dashed var(--muted); width: 8px; height: 8px; border-radius: 50%; }
+.rd-controls { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: end; }
+.rd-controls .field { flex: 1 1 180px; }
+.rd-sum { display: flex; flex-wrap: wrap; gap: 6px; }
+td.rd-win { color: var(--good); font-weight: 600; } td.rd-lose { color: var(--bad); font-weight: 600; }
 .tip { position: absolute; pointer-events: none; background: var(--ink); color: var(--bg); font-size: 12px; padding: 6px 9px; border-radius: 6px; white-space: nowrap; transform: translate(-50%, -100%); }
 .busy { font-size: 12.5px; color: var(--accent); }
 td.pjv small { display: block; color: var(--muted); font-size: 10.5px; line-height: 1.2; }
@@ -150,6 +162,19 @@ footer { color: var(--muted); font-size: 12px; display: grid; gap: 4px; border-t
       <div class="grid2">
         <div class="panel"><h2 id="mu-title">이번 주 매치업</h2><div class="tbl" id="mu-table"></div><p class="note" id="mu-note"></p></div>
         <div class="panel"><h2>리그 순위</h2><div class="tbl" id="standings"></div><p class="note">순위 = 누적 카테고리 승률 (승 + 무/2) ÷ (승+패+무). 기록·W-L-T는 카테고리 단위. 실제 기록은 매주 결과 캡처로 반영, 기대 승률·확률은 남은 주차를 카테고리 단위로 시뮬레이션(2만 회). PO = 상위 6팀 진출, 우승 = 플레이오프(3v6·4v5 → 1·2시드와 2주 준결승 → 2주 결승) 우승.</p></div>
+      </div>
+      <div class="panel" id="rd-panel">
+        <div style="display:grid;gap:4px"><h2>카테고리 레이더 · 팀 비교</h2><p class="note" id="rd-desc"></p></div>
+        <div class="rd-controls">
+          <div class="field"><label for="rd-opp">비교 팀</label><select id="rd-opp"></select></div>
+          <div class="field"><label for="rd-mode">기준</label><select id="rd-mode"></select></div>
+          <label class="chk" style="padding-bottom:6px"><input type="checkbox" id="rd-avg"> 리그 평균 표시</label>
+        </div>
+        <div class="rd-card">
+          <div style="display:grid;gap:8px"><div class="rd-chart" id="rd-chart"></div><div class="rd-legend" id="rd-legend"></div><div class="rd-sum" id="rd-sum"></div></div>
+          <div class="tbl" id="rd-table"></div>
+        </div>
+        <p class="note" id="rd-note"></p>
       </div>
       <div class="panel"><h2 id="roster-title">로스터</h2><div class="tbl" id="roster"></div><p class="note" id="roster-note"></p></div>
       <div class="panel" id="st-panel" hidden><h2 id="st-title">스트리밍 계획 · 전 팀</h2><div class="tbl" id="st-table"></div><p class="note" id="st-note"></p></div>
@@ -717,7 +742,81 @@ function renderNow() {
   renderStreamPanel(R, cw);
   $("roster-note").textContent = (state.stream.on ? "사용 예상은 스트리밍 계획(아래 표)에서 방출되기 전까지의 경기만 셉니다. " : "") + `경기당 수치는 ESPN·6시즌 회귀 결합 프로젝션${act ? `에 2026-27 실제 기록(${act.asOf || ""})을 ${pct(actWeight(cw))} 섞은 값` : ""}입니다(근거: 프로젝션 근거 탭). 사용 예상 = 슬롯 한도와 결장 가능성을 반영해 이번 주 실제로 기록에 들어갈 경기 수.`;
   $("heat").innerHTML = heatTable(R, 0, null, null);
+  renderRadar();
 }
+/* ---------- category radar (shadcn chart-radar look, plain SVG) ----------
+   Axis value = the team's position among the 8 teams for that category in the chosen period: 0 = league worst, 100 = league best
+   (TO·PF: fewer is better). Periods: remaining-season expected weekly average, the current week's expected total, or a completed
+   week's actual totals (league/results.totals). Head-to-head column = expected category win share if the two teams met (weekly
+   pcat, averaged over the remaining weeks) or, for a completed week, the actual comparison. */
+const RD_OPTS = () => { const cw = state.base.cw, res = state.docs["league/results"], o = [["rest", `잔여 시즌 평균 (${cw + 1}–${NW}주 예상)`], ["cw", `${cw + 1}주차 예상 합계`]];
+  Object.keys((res && res.totals) || {}).sort((a, b) => a - b).forEach(k => o.push(["w" + k, `${k}주차 실제`])); return o; };
+function rdValues(mode) {
+  const R = state.base, cw = R.cw, out = {};
+  if (mode === "rest") { const a = catAvg(R, cw); REF.teams.forEach(t => out[t] = a[t]); }
+  else if (mode === "cw") REF.teams.forEach(t => { out[t] = {}; CATS.forEach(c => out[t][c] = R.TW[t + "|" + cw].c[c]); });
+  else { const tot = ((state.docs["league/results"] || {}).totals || {})[mode.slice(1)] || {}; REF.teams.forEach(t => { if (tot[t]) { out[t] = {}; CATS.forEach(c => out[t][c] = +tot[t][c]); } }); }
+  return out;
+}
+function renderRadar() {
+  const R = state.base; if (!R) return;
+  const cw = R.cw, oppNow = (oppOf(ME, cw) || {}).opp, opts = RD_OPTS();
+  if (!state.rdMode || !opts.some(o => o[0] === state.rdMode)) state.rdMode = "rest";
+  const oppList = REF.teams.filter(t => t !== ME);
+  if (!state.rdOpp || (state.rdOpp !== "avg" && !oppList.includes(state.rdOpp))) state.rdOpp = oppNow || oppList[0];
+  $("rd-opp").innerHTML = oppList.map(t => `<option value="${esc(t)}"${t === state.rdOpp ? " selected" : ""}>${esc(sh(t))}${t === oppNow ? ` (${cw + 1}주차 상대)` : ""}</option>`).join("") + `<option value="avg"${state.rdOpp === "avg" ? " selected" : ""}>리그 평균 (나머지 7팀)</option>`;
+  $("rd-mode").innerHTML = opts.map(([v, l]) => `<option value="${v}"${v === state.rdMode ? " selected" : ""}>${esc(l)}</option>`).join("");
+  $("rd-avg").checked = !!state.rdAvg;
+  const V = rdValues(state.rdMode), teams = Object.keys(V);
+  if (!V[ME]) { $("rd-chart").innerHTML = '<p class="note">이 기준의 데이터가 없습니다.</p>'; return; }
+  const others = teams.filter(t => t !== ME), avgOf = c => others.reduce((s, t) => s + V[t][c], 0) / Math.max(1, others.length);
+  const val = (t, c) => t === "avg" ? avgOf(c) : V[t] ? V[t][c] : null;
+  const score = (c, v) => { const xs = teams.map(t => V[t][c]), lo = Math.min(...xs), hi = Math.max(...xs); if (v == null || hi - lo < 1e-9) return 50; const z = (v - lo) / (hi - lo); return 100 * (LOW[c] ? 1 - z : z); };
+  const rank = (t, c) => { if (t === "avg") return null; const srt = teams.slice().sort((a, b) => LOW[c] ? V[a][c] - V[b][c] : V[b][c] - V[a][c]); return srt.indexOf(t) + 1; };
+  const opp = state.rdOpp, oppLab = opp === "avg" ? "리그 평균" : sh(opp);
+  /* head-to-head */
+  let h2h = null;
+  if (opp !== "avg" && state.rdMode !== "rest" && state.rdMode !== "cw") h2h = Object.fromEntries(CATS.map(c => { const a = val(ME, c), b = val(opp, c); return [c, a === b ? .5 : (LOW[c] ? a < b : a > b) ? 1 : 0]; }));
+  else if (opp !== "avg") { h2h = {}; const ws = state.rdMode === "cw" ? [cw] : Array.from({ length: NW - cw }, (_, i) => cw + i);
+    CATS.forEach(c => h2h[c] = 0); ws.forEach(w => { const pc = pcat(R.TW[ME + "|" + w], R.TW[opp + "|" + w]); CATS.forEach(c => h2h[c] += pc[c] / ws.length); }); }
+  /* SVG */
+  const W = 420, H = 380, cx = W / 2, cy = H / 2 + 4, rr = 132, n = CATS.length, ang = i => -Math.PI / 2 + 2 * Math.PI * i / n;
+  const pt = (i, sc) => [cx + Math.cos(ang(i)) * rr * sc / 100, cy + Math.sin(ang(i)) * rr * sc / 100];
+  const poly = sc => sc.map((v, i) => pt(i, v).map(x => x.toFixed(1)).join(",")).join(" ");
+  let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(sh(ME))}와 ${esc(oppLab)}의 카테고리별 리그 내 위치 레이더 차트">`;
+  [20, 40, 60, 80, 100].forEach(g => { s += `<polygon points="${poly(CATS.map(() => g))}" fill="none" stroke="var(--line)" stroke-width="1"/>`; });
+  CATS.forEach((c, i) => { const [x, y] = pt(i, 100); s += `<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="var(--line)" stroke-width="1"/>`; });
+  [50, 100].forEach(g => { const [x, y] = pt(0, g); s += `<text x="${x + 4}" y="${y + 3}" font-size="9" fill="var(--muted)">${g}</text>`; });
+  const sMe = CATS.map(c => score(c, val(ME, c))), sOp = CATS.map(c => score(c, val(opp, c)));
+  if (state.rdAvg && opp !== "avg") s += `<polygon points="${poly(CATS.map(c => score(c, avgOf(c))))}" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-dasharray="4 4"/>`;
+  s += `<polygon points="${poly(sOp)}" fill="var(--s2)" fill-opacity=".22" stroke="var(--s2)" stroke-width="2" stroke-linejoin="round"/>`;
+  s += `<polygon points="${poly(sMe)}" fill="var(--s1)" fill-opacity=".32" stroke="var(--s1)" stroke-width="2" stroke-linejoin="round"/>`;
+  [[sOp, "var(--s2)"], [sMe, "var(--s1)"]].forEach(([sc, col]) => sc.forEach((v, i) => { const [x, y] = pt(i, v); s += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="4" fill="${col}" stroke="var(--card)" stroke-width="2"/>`; }));
+  CATS.forEach((c, i) => { const [x, y] = pt(i, 116), a = Math.cos(ang(i)); s += `<text x="${x.toFixed(1)}" y="${(y + 4).toFixed(1)}" text-anchor="${Math.abs(a) < .2 ? "middle" : a > 0 ? "start" : "end"}" font-size="12" font-weight="600" fill="var(--ink)">${LAB[c]}${LOW[c] ? "↓" : ""}</text>`; });
+  CATS.forEach((c, i) => { const a0 = ang(i - .5), a1 = ang(i + .5), R2 = rr + 34; s += `<path data-c="${c}" d="M${cx},${cy} L${(cx + Math.cos(a0) * R2).toFixed(1)},${(cy + Math.sin(a0) * R2).toFixed(1)} A${R2},${R2} 0 0 1 ${(cx + Math.cos(a1) * R2).toFixed(1)},${(cy + Math.sin(a1) * R2).toFixed(1)} Z" fill="transparent"/>`; });
+  s += `</svg><div class="tip" hidden></div>`;
+  const box = $("rd-chart"); box.innerHTML = s;
+  const tip = box.querySelector(".tip");
+  box.querySelectorAll("path[data-c]").forEach(el => {
+    el.addEventListener("mousemove", e => { const c = el.dataset.c, rb = box.getBoundingClientRect(), rm = rank(ME, c), ro = rank(opp, c);
+      tip.textContent = `${LAB[c]} · ${sh(ME)} ${fmtCat(c, val(ME, c))}${rm ? ` (${rm}위)` : ""} · ${oppLab} ${fmtCat(c, val(opp, c))}${ro ? ` (${ro}위)` : ""}${h2h ? ` · 맞대결 ${pct(h2h[c])}` : ""}`;
+      tip.hidden = false; const hw = Math.min(140, rb.width / 2); tip.style.left = Math.min(Math.max(e.clientX - rb.left, hw), rb.width - hw) + "px"; tip.style.top = (e.clientY - rb.top - 10) + "px"; });
+    el.addEventListener("mouseleave", () => { tip.hidden = true; });
+  });
+  $("rd-legend").innerHTML = `<span><i style="background:var(--s1)"></i>${esc(sh(ME))}</span><span><i style="background:var(--s2)"></i>${esc(oppLab)}</span>${state.rdAvg && opp !== "avg" ? '<span><i class="dash"></i>리그 평균</span>' : ""}`;
+  const ahead = CATS.filter(c => sMe[CATS.indexOf(c)] > sOp[CATS.indexOf(c)] + 1e-9).length, exp = h2h ? CATS.reduce((x, c) => x + h2h[c], 0) : null;
+  $("rd-sum").innerHTML = `<span class="pill">우위 카테고리 ${ahead}/${n}</span>${exp != null ? `<span class="pill" title="카테고리 승 기대값(무 = 0.5)">맞대결 기대 ${exp.toFixed(1)}–${(n - exp).toFixed(1)}</span>` : ""}`;
+  $("rd-table").innerHTML = `<table><thead><tr><th>카테고리</th><th class="r">${esc(sh(ME))}</th><th class="r">${esc(oppLab)}</th><th class="r" title="8팀 중 순위 (TO·PF는 적을수록 1위)">순위</th><th class="r" title="${state.rdMode.startsWith("w") ? "실제 비교" : "맞대결 시 카테고리 승률 (무 = 0.5)"}">맞대결</th></tr></thead><tbody>` +
+    CATS.map(c => { const a = val(ME, c), b = val(opp, c), rm = rank(ME, c), ro = rank(opp, c), hv = h2h ? h2h[c] : null;
+      return `<tr><td>${LAB[c]}${LOW[c] ? " ↓" : ""}</td><td class="r num">${fmtCat(c, a)}</td><td class="r num">${fmtCat(c, b)}</td><td class="r num">${rm}위${ro ? ` · ${ro}위` : ""}</td><td class="r num ${hv == null ? "" : hv > .55 ? "rd-win" : hv < .45 ? "rd-lose" : ""}">${hv == null ? "—" : state.rdMode.startsWith("w") ? (hv === 1 ? "승" : hv === 0 ? "패" : "무") : pct(hv)}</td></tr>`; }).join("") + `</tbody></table>`;
+  const ml = opts.find(o => o[0] === state.rdMode)[1];
+  $("rd-desc").textContent = `${ml} · 축 = 8팀 중 위치(최하 0 ~ 최고 100, TO·PF는 적을수록 높음). 마우스를 올리면 실제 값·순위·맞대결 승률.`;
+  $("rd-note").textContent = state.rdMode === "rest" ? "잔여 시즌 = 남은 주차의 예상 주간 합계 평균(스트리밍·백투백·운영 가정 반영). 맞대결 = 두 팀이 매주 만난다고 가정한 카테고리 승률의 평균." : state.rdMode === "cw" ? `${cw + 1}주차 예상 = 진행 중 실제 합계 + 남은 일정 예측. 맞대결 = 이번 주 두 팀이 만났다고 가정한 카테고리 승률.` : "완료된 주의 실제 카테고리 합계(ESPN). 맞대결 = 두 팀 실제 합계 비교.";
+}
+$("rd-opp").addEventListener("change", e => { state.rdOpp = e.target.value; renderRadar(); });
+$("rd-mode").addEventListener("change", e => { state.rdMode = e.target.value; renderRadar(); });
+$("rd-avg").addEventListener("change", e => { state.rdAvg = e.target.checked; renderRadar(); });
+
 /* Category rank board: average weekly totals over weeks [from, NW) -> rank 1..8 per category (TO/PF: fewer is better).
    With a baseline B, each cell also shows the rank change vs B (▲ = better) and the hover shows both weekly values. */
 function catAvg(R, from) { const avg = {}; REF.teams.forEach(t => { avg[t] = {}; CATS.forEach(c => { let s = 0; for (let w = from; w < NW; w++) s += R.TW[t + "|" + w].c[c]; avg[t][c] = s / (NW - from); }); }); return avg; }
