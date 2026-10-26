@@ -4,9 +4,9 @@ name: g8 · ESPN league sync (8-team G League)
 on:
   workflow_dispatch:
   schedule:
-    # 3 runs a day inside 03:00-13:00 US Eastern, when no NBA game is in progress
-    # (live matchup totals are then complete through the previous night)
-    - cron: "17 8,12,16 * * *"
+    # every 6 hours, offset from the 10-team sync (:23). Rosters/results/stats update on every run; the in-progress
+    # matchup totals (live) only on runs between 03:00 and 13:00 US Eastern, when no NBA game is being played
+    - cron: "47 */6 * * *"
 permissions:
   contents: write
 concurrency:
