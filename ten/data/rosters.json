@@ -1,5 +1,5 @@
 {
- "asOf": "2026-10-26T16:36+09:00",
+ "asOf": "2026-10-26T22:19+09:00",
  "leagueId": "504060248",
  "season": 2027,
  "teams": [
@@ -75,11 +75,11 @@
     "Desmond Bane",
     "Ty Jerome",
     "OG Anunoby",
-    "Miles Bridges",
     "Davion Mitchell",
     "Jonathan Kuminga",
     "Kyshawn George",
-    "Jalen Smith"
+    "Jalen Smith",
+    "Cedric Coward"
    ],
    "ir": [
     "Brandon Ingram"
@@ -334,8 +334,8 @@
    "Max Strus",
    "Cameron Carr",
    "Tacko Fall",
-   "Steven Adams",
    "Yanic Konan Niederhauser",
+   "Steven Adams",
    "Jayden Quaintance",
    "Moses Moody"
   ],

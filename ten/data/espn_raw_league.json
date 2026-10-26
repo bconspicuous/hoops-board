@@ -23,8 +23,8 @@
   "isWaiverOrderEdited": false,
   "lastUpdateInfo": {
    "clientAddress": null,
-   "platform": "espncom-favorites",
-   "source": "{B501DD34-C95D-428E-AD3C-B82D4A93004A}"
+   "platform": "lm-processor",
+   "source": "NightlyLeagueUpdateTaskProcessor"
   },
   "latestScoringPeriod": 7,
   "previousSeasons": [
@@ -35,10 +35,10 @@
    2025,
    2026
   ],
-  "standingsUpdateDate": 1792998268621,
+  "standingsUpdateDate": 1793001702148,
   "teamsJoined": 10,
   "transactionScoringPeriod": 7,
-  "waiverLastExecutionDate": 1792914601770,
+  "waiverLastExecutionDate": 1793001702146,
   "waiverProcessStatus": {
    "2026-10-22T07:20:10.595+00:00": 8
   }
