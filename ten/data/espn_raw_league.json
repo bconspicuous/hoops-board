@@ -466,6 +466,98 @@
    "adjustment": 0.0,
    "cumulativeScore": {
     "losses": 3,
+    "scoreByStat": {
+     "0": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "WIN",
+      "score": 553.0
+     },
+     "1": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "WIN",
+      "score": 23.0
+     },
+     "2": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "WIN",
+      "score": 44.0
+     },
+     "3": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "WIN",
+      "score": 182.0
+     },
+     "37": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "WIN",
+      "score": 11.0
+     },
+     "6": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "LOSS",
+      "score": 190.0
+     },
+     "11": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "LOSS",
+      "score": 91.0
+     },
+     "43": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "LOSS",
+      "score": 20.0
+     },
+     "13": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": null,
+      "score": 185.0
+     },
+     "14": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": null,
+      "score": 428.0
+     },
+     "15": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": null,
+      "score": 137.0
+     },
+     "16": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": null,
+      "score": 180.0
+     },
+     "17": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "WIN",
+      "score": 46.0
+     },
+     "19": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "WIN",
+      "score": 0.43224299
+     },
+     "20": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "WIN",
+      "score": 0.76111111
+     }
+    },
     "statBySlot": null,
     "ties": 0,
     "wins": 8
@@ -487,6 +579,98 @@
    "adjustment": 0.0,
    "cumulativeScore": {
     "losses": 8,
+    "scoreByStat": {
+     "0": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "LOSS",
+      "score": 518.0
+     },
+     "1": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "LOSS",
+      "score": 18.0
+     },
+     "2": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "LOSS",
+      "score": 33.0
+     },
+     "3": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "LOSS",
+      "score": 117.0
+     },
+     "37": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "LOSS",
+      "score": 4.0
+     },
+     "6": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "WIN",
+      "score": 214.0
+     },
+     "11": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "WIN",
+      "score": 69.0
+     },
+     "43": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "WIN",
+      "score": 21.0
+     },
+     "13": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": null,
+      "score": 179.0
+     },
+     "14": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": null,
+      "score": 431.0
+     },
+     "15": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": null,
+      "score": 120.0
+     },
+     "16": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": null,
+      "score": 160.0
+     },
+     "17": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "LOSS",
+      "score": 40.0
+     },
+     "19": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "LOSS",
+      "score": 0.41531323
+     },
+     "20": {
+      "ineligible": false,
+      "rank": 0.0,
+      "result": "LOSS",
+      "score": 0.75
+     }
+    },
     "statBySlot": null,
     "ties": 0,
     "wins": 3
