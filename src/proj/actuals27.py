@@ -38,10 +38,21 @@ if not only_complete and os.path.exists(pg_path):          # season per-game row
         G, MP, FG, FGA, P3, FT, FTA, TRB, AST, STL, BLK, TOV, PF, PTS = [float(y) for y in x[3:]]
         tot[pm[k]] = {"g": G, "min": MP * G, "fgm": FG * G, "fga": FGA * G, "ftm": FT * G, "fta": FTA * G, "tpm": P3 * G, "reb": TRB * G, "ast": AST * G, "stl": STL * G, "blk": BLK * G, "to": TOV * G, "pf": PF * G, "pts": PTS * G,
                       "dd": (1 if sum(1 for s in (PTS, TRB, AST, STL, BLK) if s >= 10) >= 2 else 0) if G == 1 else None, "team": team}; extra += 1
+tp = 0                                                       # BR team pages (season per-game, all games to date): used when they cover more games
+for f in sorted(glob.glob(os.path.join(BR, "team27", "*.txt"))):
+    team = TEAMMAP.get(os.path.basename(f)[:3], os.path.basename(f)[:3])
+    for line in open(f, encoding="utf-8"):
+        x = line.strip().split("|")
+        if len(x) != 15 or x[0] == "Player": continue
+        k = ALIAS.get(norm(x[0]), norm(x[0]))
+        if k not in pm: continue
+        G, MP, FG, FGA, P3, FT, FTA, TRB, AST, STL, BLK, TOV, PF, PTS = [float(y) for y in x[1:]]
+        if G <= 0 or (pm[k] in tot and tot[pm[k]]["g"] >= G): continue
+        tot[pm[k]] = {"g": G, "min": MP * G, "fgm": FG * G, "fga": FGA * G, "ftm": FT * G, "fta": FTA * G, "tpm": P3 * G, "reb": TRB * G, "ast": AST * G, "stl": STL * G, "blk": BLK * G, "to": TOV * G, "pf": PF * G, "pts": PTS * G, "dd": None, "team": team}; tp += 1
 players = {}
 for n, t in tot.items():
     g = t["g"]; players[n] = {"g": int(g), "min": round(t["min"] / g, 1), **{k: round(t[k] / g, 3) for k in ["fgm", "fga", "ftm", "fta", "tpm", "reb", "ast", "stl", "blk", "to", "pf", "pts"]}, "dd": t["dd"]}
-doc = {"asOf": f"{through} (BR)", "through": through, "source": f"Basketball-Reference box scores ({games} games{', + season per-game page for teams without a box score' if extra else ''})",
+doc = {"asOf": f"{through} (BR)", "through": through, "source": f"Basketball-Reference box scores ({games} games) + team pages ({tp} players with more games; DD n/a)",
        "teamsComplete": sorted(teams_box), "players": players}
 json.dump(doc, open("data/actuals.json", "w"), ensure_ascii=False, indent=0)
-print(f"actuals: {len(players)} pool players ({games} box scores, {len(teams_box)} teams complete, {extra} from per-game page)")
+print(f"actuals: {len(players)} pool players ({games} box scores, {tp} from team pages)")

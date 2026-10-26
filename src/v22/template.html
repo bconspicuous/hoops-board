@@ -263,7 +263,8 @@ function erf(x) { const s = x < 0 ? -1 : 1; x = Math.abs(x); const t = 1 / (1 + 
 /* ---------- calendar ---------- */
 /* game dates are US dates: "today" is the US Eastern date (a KST morning is still the previous game night in the US) */
 function todayStr() { const d = new Date(); try { return new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit" }).format(d); } catch (e) { return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); } }
-function currentWeek() { const t = todayStr(); for (let i = 0; i < NW; i++) if (t <= REF.ends[i]) return i; return NW - 1; }
+/* a week whose final result is recorded (league/results) is over even if its last US date is today: the next week is current */
+function currentWeek() { const t = todayStr(); let i = 0; while (i < NW - 1 && t > REF.ends[i]) i++; while (i < NW - 1 && resultsFor(i)) i++; return i; }
 const md = s => s.slice(5).replace("-", "/");
 
 /* ---------- player table (projection blended with actual stats) ---------- */
