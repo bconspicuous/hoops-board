@@ -79,7 +79,13 @@ def season_avg(player):
     for s in player.get("stats") or []:
         if s.get("seasonId") == SEASON and s.get("statSourceId") == 0 and s.get("statSplitTypeId") == 0:
             avg = s.get("averageStats") or {}
-            return {STAT.get(int(k), f"s{k}"): round(v, 3) for k, v in avg.items() if v is not None}
+            out = {}
+            for k, v in avg.items():
+                try:
+                    out[STAT.get(int(k), f"s{k}")] = round(float(v), 3)
+                except (TypeError, ValueError):
+                    pass
+            return out
     return {}
 
 
@@ -142,6 +148,12 @@ def main():
     with open(os.path.join(OUT, "players_2027.csv"), "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0].keys())); w.writeheader(); w.writerows(rows)
     trim = {k: lg.get(k) for k in ("id", "seasonId", "scoringPeriodId", "status")}
+    try:
+        e0 = teams[0]["roster"]["entries"][0]["playerPoolEntry"]["player"]
+        trim["samplePlayer"] = {"fullName": e0.get("fullName"), "injuryStatus": e0.get("injuryStatus"), "stats": [x for x in e0.get("stats") or [] if x.get("seasonId") == SEASON][:4]}
+        trim["sampleMatchup"] = (lg.get("schedule") or [None])[0]
+    except Exception:
+        pass
     trim["settings"] = {k: (lg.get("settings") or {}).get(k) for k in ("name", "scoringSettings", "rosterSettings", "scheduleSettings", "tradeSettings", "acquisitionSettings")}
     json.dump(trim, open(os.path.join(OUT, "espn_raw_league.json"), "w"), ensure_ascii=False, indent=1)
     json.dump({"asOf": now, "scoringPeriodId": lg.get("scoringPeriodId"), "currentMatchupPeriod": sp, "teams": len(teams), "players": len(rows),
