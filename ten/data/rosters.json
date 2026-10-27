@@ -1,5 +1,5 @@
 {
- "asOf": "2026-10-27T17:01+09:00",
+ "asOf": "2026-10-27T18:00+09:00",
  "leagueId": "504060248",
  "season": 2027,
  "teams": [
@@ -31,6 +31,21 @@
     "losses": 8,
     "ties": 0,
     "percentage": 0.2727272727272727
+   },
+   "transactions": {
+    "acquisitionBudgetSpent": 0,
+    "acquisitions": 4,
+    "drops": 3,
+    "matchupAcquisitionTotals": {
+     "1": 2,
+     "2": 2
+    },
+    "misc": 0,
+    "moveToActive": 40,
+    "moveToIR": 2,
+    "paid": 0.0,
+    "teamCharges": 0.0,
+    "trades": 0
    }
   },
   {
@@ -61,6 +76,21 @@
     "losses": 3,
     "ties": 0,
     "percentage": 0.7272727272727273
+   },
+   "transactions": {
+    "acquisitionBudgetSpent": 0,
+    "acquisitions": 4,
+    "drops": 3,
+    "matchupAcquisitionTotals": {
+     "1": 3,
+     "2": 1
+    },
+    "misc": 0,
+    "moveToActive": 22,
+    "moveToIR": 1,
+    "paid": 0.0,
+    "teamCharges": 0.0,
+    "trades": 0
    }
   },
   {
@@ -91,6 +121,21 @@
     "losses": 5,
     "ties": 2,
     "percentage": 0.45454545454545453
+   },
+   "transactions": {
+    "acquisitionBudgetSpent": 0,
+    "acquisitions": 8,
+    "drops": 7,
+    "matchupAcquisitionTotals": {
+     "1": 4,
+     "2": 4
+    },
+    "misc": 0,
+    "moveToActive": 25,
+    "moveToIR": 1,
+    "paid": 0.0,
+    "teamCharges": 0.0,
+    "trades": 0
    }
   },
   {
@@ -119,6 +164,20 @@
     "losses": 6,
     "ties": 0,
     "percentage": 0.45454545454545453
+   },
+   "transactions": {
+    "acquisitionBudgetSpent": 0,
+    "acquisitions": 6,
+    "drops": 6,
+    "matchupAcquisitionTotals": {
+     "1": 6
+    },
+    "misc": 0,
+    "moveToActive": 22,
+    "moveToIR": 2,
+    "paid": 0.0,
+    "teamCharges": 0.0,
+    "trades": 0
    }
   },
   {
@@ -149,6 +208,21 @@
     "losses": 5,
     "ties": 0,
     "percentage": 0.5454545454545454
+   },
+   "transactions": {
+    "acquisitionBudgetSpent": 0,
+    "acquisitions": 3,
+    "drops": 2,
+    "matchupAcquisitionTotals": {
+     "1": 1,
+     "2": 2
+    },
+    "misc": 0,
+    "moveToActive": 21,
+    "moveToIR": 1,
+    "paid": 0.0,
+    "teamCharges": 0.0,
+    "trades": 0
    }
   },
   {
@@ -179,6 +253,20 @@
     "losses": 8,
     "ties": 0,
     "percentage": 0.2727272727272727
+   },
+   "transactions": {
+    "acquisitionBudgetSpent": 0,
+    "acquisitions": 3,
+    "drops": 2,
+    "matchupAcquisitionTotals": {
+     "1": 3
+    },
+    "misc": 0,
+    "moveToActive": 25,
+    "moveToIR": 2,
+    "paid": 0.0,
+    "teamCharges": 0.0,
+    "trades": 1
    }
   },
   {
@@ -209,6 +297,21 @@
     "losses": 3,
     "ties": 0,
     "percentage": 0.7272727272727273
+   },
+   "transactions": {
+    "acquisitionBudgetSpent": 0,
+    "acquisitions": 4,
+    "drops": 3,
+    "matchupAcquisitionTotals": {
+     "1": 3,
+     "2": 1
+    },
+    "misc": 0,
+    "moveToActive": 22,
+    "moveToIR": 1,
+    "paid": 0.0,
+    "teamCharges": 0.0,
+    "trades": 0
    }
   },
   {
@@ -239,6 +342,21 @@
     "losses": 6,
     "ties": 0,
     "percentage": 0.45454545454545453
+   },
+   "transactions": {
+    "acquisitionBudgetSpent": 0,
+    "acquisitions": 5,
+    "drops": 4,
+    "matchupAcquisitionTotals": {
+     "1": 4,
+     "2": 1
+    },
+    "misc": 0,
+    "moveToActive": 27,
+    "moveToIR": 3,
+    "paid": 0.0,
+    "teamCharges": 0.0,
+    "trades": 1
    }
   },
   {
@@ -269,6 +387,20 @@
     "losses": 5,
     "ties": 0,
     "percentage": 0.5454545454545454
+   },
+   "transactions": {
+    "acquisitionBudgetSpent": 0,
+    "acquisitions": 4,
+    "drops": 3,
+    "matchupAcquisitionTotals": {
+     "1": 4
+    },
+    "misc": 0,
+    "moveToActive": 21,
+    "moveToIR": 2,
+    "paid": 0.0,
+    "teamCharges": 0.0,
+    "trades": 0
    }
   },
   {
@@ -299,6 +431,20 @@
     "losses": 4,
     "ties": 2,
     "percentage": 0.5454545454545454
+   },
+   "transactions": {
+    "acquisitionBudgetSpent": 0,
+    "acquisitions": 1,
+    "drops": 0,
+    "matchupAcquisitionTotals": {
+     "2": 1
+    },
+    "misc": 0,
+    "moveToActive": 17,
+    "moveToIR": 1,
+    "paid": 0.0,
+    "teamCharges": 0.0,
+    "trades": 0
    }
   }
  ],
@@ -333,9 +479,9 @@
    "Ben Simmons",
    "Max Strus",
    "Tacko Fall",
-   "Steven Adams",
    "Jayden Quaintance",
    "Yanic Konan Niederhauser",
+   "Steven Adams",
    "Moses Moody"
   ],
   "DTD": [
