@@ -1,5 +1,5 @@
 {
- "asOf": "2026-10-27T21:41+09:00",
+ "asOf": "2026-10-28T03:18+09:00",
  "leagueId": "751654965",
  "season": 2027,
  "teams": [
@@ -259,8 +259,8 @@
     "Yaxel Lendeborg",
     "Paul Reed",
     "Quentin Grimes",
-    "Fred VanVleet",
-    "Kyshawn George"
+    "Kyshawn George",
+    "Ajay Mitchell"
    ],
    "ir": [
     "Ivica Zubac",
@@ -274,9 +274,9 @@
    },
    "acqByPeriod": {
     "1": 6,
-    "2": 5
+    "2": 6
    },
-   "acqTotal": 11
+   "acqTotal": 12
   }
  ],
  "status": {
@@ -285,9 +285,9 @@
    "Yves Missi",
    "Jalen Williams",
    "Coby White",
-   "Chet Holmgren",
    "Nic Claxton",
    "Jalen Duren",
+   "Kawhi Leonard",
    "Kon Knueppel",
    "AJ Dybantsa",
    "Brandon Ingram",
@@ -312,9 +312,10 @@
    "Tacko Fall"
   ],
   "DTD": [
+   "Derrick White",
    "Lauri Markkanen",
    "VJ Edgecombe",
-   "Kawhi Leonard",
+   "Chet Holmgren",
    "Ausar Thompson",
    "Joel Embiid",
    "Ivica Zubac",

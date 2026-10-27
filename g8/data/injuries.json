@@ -1,5 +1,5 @@
 {
- "asOf": "2026-10-27T21:41+09:00",
+ "asOf": "2026-10-28T03:18+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -30,6 +30,20 @@
    "fantasyStatus": "OFS",
    "short": "Veesaar was diagnosed with a torn right ACL and is expected to miss the 2026-27 season, the Hawks announced Monday.",
    "long": "Veesaar suffered the injury during a workout on Sept. 15, and an MRI confirmed the diagnosis. The No. 52 overall pick in the 2026 NBA Draft, Veesaar was expected to spend a lot of time with Atlanta's G League affiliate this season."
+  },
+  {
+   "player": "Derrick White",
+   "team": "BOS",
+   "status": "Day-To-Day",
+   "date": "2026-10-27T16:58Z",
+   "type": "day-to-day",
+   "returnDate": "2026-10-27",
+   "detail": null,
+   "side": "Right",
+   "injury": "Hip",
+   "fantasyStatus": "GTD",
+   "short": "White (right hip) is probable for Tuesday's game against the Nets.",
+   "long": "White is a little banged up from Monday's game against the Bulls in which he turned the ball over six times in 18 minutes. However, the veteran guard intends to play through the issue for the second leg of this back-to-back set."
   },
   {
    "player": "Devin Carter",
@@ -65,7 +79,7 @@
    "status": "Out",
    "date": "2026-10-26T22:41Z",
    "type": "out",
-   "returnDate": "2026-10-31",
+   "returnDate": "2026-11-02",
    "detail": "Strain",
    "side": "Left",
    "injury": "Calf",
@@ -79,7 +93,7 @@
    "status": "Out",
    "date": "2026-10-26T22:35Z",
    "type": "out",
-   "returnDate": "2026-10-31",
+   "returnDate": "2026-11-02",
    "detail": null,
    "side": "Left",
    "injury": "Hamstring",
@@ -93,7 +107,7 @@
    "status": "Out",
    "date": "2026-10-26T22:34Z",
    "type": "out",
-   "returnDate": "2026-10-31",
+   "returnDate": "2026-11-02",
    "detail": null,
    "side": "Right",
    "injury": "Hamstring",
@@ -142,6 +156,20 @@
    "fantasyStatus": "OUT",
    "short": "Claxton (hamstring) participated in individual drills Monday morning and hopes to join the team for practice next week, Joe Cowley of the Chicago Sun-Times reports.",
    "long": "The Bulls reported one week ago that the big man would be re-evaluated in two weeks, so he appears to be right on track with his recovery from a hamstring injury. He'll presumably need to take part in 5-on-5 drills before getting the green light to return to game action."
+  },
+  {
+   "player": "Santi Aldama",
+   "team": "DAL",
+   "status": "Out",
+   "date": "2026-10-27T14:43Z",
+   "type": "out",
+   "returnDate": "2026-11-02",
+   "detail": "Surgery",
+   "side": "Right",
+   "injury": "Knee",
+   "fantasyStatus": "OUT",
+   "short": "The Mavericks assigned Aldama (knee) to the G League's Texas Legends on Tuesday, Marc Stein of The Stein Line reports.",
+   "long": "This is all part of Aldama's return-to-play protocol. The forward is still considered week-to-week, but this is a sign that he's trending in the right direction. Look for him to be recalled shortly."
   },
   {
    "player": "Naji Marshall",
@@ -198,20 +226,6 @@
    "fantasyStatus": "OUT",
    "short": "Biberovic (heel) has been ruled out for Saturday's game against San Antonio.",
    "long": "Biberovic has been recovering from right heel bursitis stemming from training camp in mid-October. He'll end up missing the first three games of the regular season, and he can be considered week-to-week until the Mavericks provide a clearer timetable for the 2023 second-rounder."
-  },
-  {
-   "player": "Santi Aldama",
-   "team": "DAL",
-   "status": "Out",
-   "date": "2026-10-24T18:18Z",
-   "type": "out",
-   "returnDate": "2026-11-02",
-   "detail": "Surgery",
-   "side": "Right",
-   "injury": "Knee",
-   "fantasyStatus": "OUT",
-   "short": "Aldama (knee) has been ruled out for Saturday's game against the Spurs.",
-   "long": "Aldama continues to ramp up in his recovery from a right knee procedure that he underwent in March. His next chance to make his 2026-27 debut is Monday against the Heat, but he should be considered week-to-week until his practice participation increases."
   },
   {
    "player": "Dereck Lively II",
@@ -284,6 +298,20 @@
    "long": "Strawther suffered the injury in Wednesday's preseason game against the Clippers. The 24-year-old has appeared in 172 regular-season games for the Nuggets since entering the league in 2023, averaging 7.1 points, 2.0 rebounds and 1.1 assists over 16.2 minutes per contest. He was in line to compete for an expanded role during the 2026-27 campaign. While that may be the case once Strawther is cleared to suit up, Tyus Jones and potentially Ryan Nembhard are candidates to receive more minutes in the interim."
   },
   {
+   "player": "Ausar Thompson",
+   "team": "DET",
+   "status": "Day-To-Day",
+   "date": "2026-10-27T15:24Z",
+   "type": "day-to-day",
+   "returnDate": "2026-10-27",
+   "detail": "Sprain",
+   "side": "Right",
+   "injury": "Ankle",
+   "fantasyStatus": "GTD",
+   "short": "Thompson (ankle) was a full participant at Tuesday's shootaround, Coty M. Davis of The Detroit News reports.",
+   "long": "Thompson remains questionable on the latest injury report, but he seems to be trending in the right direction. If he's unable to give it a go, the Pistons could turn to guys like Daniss Jenkins, Javonte Green and Kevin Huerter."
+  },
+  {
    "player": "Isaiah Joe",
    "team": "DET",
    "status": "Day-To-Day",
@@ -296,20 +324,6 @@
    "fantasyStatus": "GTD",
    "short": "Joe (hip) is questionable for Tuesday's game against the Knicks.",
    "long": "Joe remains day-to-day after failing to return to Sunday's game against the 76ers. If Joe is unavailable for the front end of this back-to-back set, the team could rely more on Ronald Holland, Kevin Huerter and Javonte Green."
-  },
-  {
-   "player": "Ausar Thompson",
-   "team": "DET",
-   "status": "Day-To-Day",
-   "date": "2026-10-26T20:50Z",
-   "type": "day-to-day",
-   "returnDate": "2026-10-27",
-   "detail": "Sprain",
-   "side": "Right",
-   "injury": "Ankle",
-   "fantasyStatus": "GTD",
-   "short": "Thompson (ankle) is listed as questionable for Tuesday's game against New York.",
-   "long": "Thompson is in danger of missing a second straight game due to the right ankle sprain he sustained in Friday's win over Miami. If the 23-year-old swingman is ruled out, Daniss Jenkins, Javonte Green and Kevin Huerter would likely see additional minutes, especially if Isaiah Joe (hip) is also downgraded from questionable to out."
   },
   {
    "player": "Jalen Duren",
@@ -592,6 +606,20 @@
    "long": "Alvarado is missing a second consecutive game with a sprained ankle. Tyler Kolek entered the New York rotation in Sunday's loss to the Magic and should continue to play a bench role while Alvarado is sidelined."
   },
   {
+   "player": "Chet Holmgren",
+   "team": "OKC",
+   "status": "Day-To-Day",
+   "date": "2026-10-27T14:03Z",
+   "type": "day-to-day",
+   "returnDate": "2026-10-28",
+   "detail": null,
+   "side": null,
+   "injury": "Knee",
+   "fantasyStatus": "GTD",
+   "short": "Holmgren (knee) is out for Monday's game versus the Suns.",
+   "long": "The star big man is sitting out the second part of this back-to-back set. Jaylin Williams and Kenrich Williams should help pick up the slack at power forward for the Thunder on Monday, with Shai Gilgeous-Alexander likely soaking up all the usage he can handle."
+  },
+  {
    "player": "Alex Caruso",
    "team": "OKC",
    "status": "Day-To-Day",
@@ -660,20 +688,6 @@
    "fantasyStatus": "GTD",
    "short": "Sorber (knee) is out for Monday's game versus the Suns, per Andrew Schlecht of The Athletic.",
    "long": "It appeared earlier Monday on the Thunder's injury report that Sorber was ready to make his season debut, but it was a clerical error. Sorber's return timeline remains in the dark due to offseason knee surgery."
-  },
-  {
-   "player": "Chet Holmgren",
-   "team": "OKC",
-   "status": "Out",
-   "date": "2026-10-26T18:22Z",
-   "type": "out",
-   "returnDate": "2026-10-28",
-   "detail": null,
-   "side": null,
-   "injury": "Knee",
-   "fantasyStatus": "OUT",
-   "short": "Holmgren (knee) is out for Monday's game versus the Suns.",
-   "long": "The star big man is sitting out the second part of this back-to-back set. Jaylin Williams and Kenrich Williams should help pick up the slack at power forward for the Thunder on Monday, with Shai Gilgeous-Alexander likely soaking up all the usage he can handle."
   },
   {
    "player": "Otega Oweh",
@@ -760,6 +774,34 @@
    "long": "With Nelson still in recovery mode from the left ankle surgery he underwent this summer, his path back to game action remains delayed for the early part of the season. The rookie big man is on a two-way contract with the Magic, so his short-term absence mainly affects his developmental timeline rather than Orlando's regular rotation."
   },
   {
+   "player": "Tacko Fall",
+   "team": "PHI",
+   "status": "Out",
+   "date": "2026-10-27T17:04Z",
+   "type": "out",
+   "returnDate": "2026-10-28",
+   "detail": "Strain",
+   "side": "Left",
+   "injury": "Quadriceps",
+   "fantasyStatus": "GTD",
+   "short": "Fall (quadriceps) was able to practice on Tuesday, Keith Pompey of The Philadelphia Inquirer reports.",
+   "long": "Fall, who is on a two-way contract, is nearing a return to the floor for Philadelphia. He projects as an emergency depth option when the 76ers are shorthanded."
+  },
+  {
+   "player": "VJ Edgecombe",
+   "team": "PHI",
+   "status": "Day-To-Day",
+   "date": "2026-10-27T17:03Z",
+   "type": "day-to-day",
+   "returnDate": "2026-10-28",
+   "detail": "Bruise",
+   "side": null,
+   "injury": "Abdomen",
+   "fantasyStatus": "GTD",
+   "short": "Edgecombe (abdomen) practiced in full Tuesday, Keith Pompey of The Philadelphia Inquirer reports.",
+   "long": "This is a good sign ahead of Wednesday's game against the Pacers. The second-year guard was unable to suit up Sunday, and if he's unable to return Wednesday, guys like Anfernee Simons and Kentavious Caldwell-Pope could see increased run."
+  },
+  {
    "player": "Jabari Walker",
    "team": "PHI",
    "status": "Day-To-Day",
@@ -774,20 +816,6 @@
    "long": "It was reported after Saturday's win over the Bucks that Walker exited the contest early due to a right knee injury, though he's now listed on the injury report with left knee soreness. With the 24-year-old sidelined, Dean Wade and Kentavious Caldwell-Pope may see increased minutes, while Justin Edwards could enter the rotation."
   },
   {
-   "player": "VJ Edgecombe",
-   "team": "PHI",
-   "status": "Day-To-Day",
-   "date": "2026-10-26T14:05Z",
-   "type": "day-to-day",
-   "returnDate": "2026-10-28",
-   "detail": "Bruise",
-   "side": null,
-   "injury": "Abdomen",
-   "fantasyStatus": "GTD",
-   "short": "Edgecombe (abdomen) is out for Sunday's game against the Pistons, Adam Aaronson of PhillyVoice.com reports.",
-   "long": "Edgecombe sustained an abdominal contusion during Saturday's game against the Bucks, and although he was able to return, he has been ruled out for Sunday's game due to the injury. Kentavious Caldwell-Pope and Anfernee Simons figure to see larger roles in his absence."
-  },
-  {
    "player": "Joel Embiid",
    "team": "PHI",
    "status": "Day-To-Day",
@@ -800,20 +828,6 @@
    "fantasyStatus": "GTD",
    "short": "Embiid has been ruled out for Sunday's game against Detroit due to right plantar fasciitis management.",
    "long": "Embiid will be held out of the second leg of this back-to-back set after posting a 28-point triple-double in Saturday's win over Milwaukee. Adem Bona will likely see a significant bump in minutes in Embiid's stead."
-  },
-  {
-   "player": "Tacko Fall",
-   "team": "PHI",
-   "status": "Out",
-   "date": "2026-10-25T17:13Z",
-   "type": "out",
-   "returnDate": "2026-10-28",
-   "detail": "Strain",
-   "side": "Left",
-   "injury": "Quadriceps",
-   "fantasyStatus": "GTD",
-   "short": "Fall (quadriceps) has been ruled out for Sunday's game against Detroit.",
-   "long": "Fall will miss a fourth consecutive contest due to a left quadriceps strain. However, the big man's absence shouldn't cause any waves in the rotation."
   },
   {
    "player": "Dominick Barlow",
@@ -1014,16 +1028,16 @@
   {
    "player": "Kawhi Leonard",
    "team": "TOR",
-   "status": "Day-To-Day",
-   "date": "2026-10-26T14:01Z",
-   "type": "day-to-day",
-   "returnDate": "2026-10-28",
+   "status": "Out",
+   "date": "2026-10-27T15:31Z",
+   "type": "out",
+   "returnDate": "2026-11-23",
    "detail": "Inflammation",
    "side": "Left",
    "injury": "Knee",
-   "fantasyStatus": "GTD",
-   "short": "Leonard is out for Sunday's game against the Timberwolves due to left knee swelling, Blake Murphy of Sportsnet.ca reports.",
-   "long": "Leonard wasn't listed on the injury report for Sunday's game, and this late scratch is a huge blow for Toronto since Leonard is a key piece on both ends of the court for the Raptors. Leonard is averaging 19.5 points, 7.5 rebounds, 1.5 assists and 3.5 steals per game in his first two appearances. With the star forward out, Allen Graves is expected to take his place in the starting lineup."
+   "fantasyStatus": "OUT",
+   "short": "Leonard (knee) is expected to miss multiple weeks due to swelling in his left knee, Shams Charania of ESPN reports.",
+   "long": "An MRI revealed no structural damage, but the Raptors will take a cautious approach with Leonard's recovery following interruptions to his offseason preparation. The veteran forward was a late scratch for Sunday's loss to Minnesota and now faces an extended absence just two games into the 2026-27 campaign. Allen Graves, who started in Leonard's place Sunday, figures to benefit from additional playing time, while RJ Barrett and Scottie Barnes could absorb more offensive responsibility."
   },
   {
    "player": "Nate Bittle",
@@ -1091,7 +1105,7 @@
    "detail": "Bruise",
    "side": "Left",
    "injury": "Knee",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Alexander won't play Wednesday against the Grizzlies due to a left knee bone bruise.",
    "long": "Alexander sat out Friday's preseason finale with what the team initially described as a left knee injury, but we now know he's dealing with a bone bruise. Don't be surprised if Alexander misses Friday's game against the Pelicans as well."
   },
