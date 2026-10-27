@@ -145,7 +145,7 @@ def main():
             rows.append(player_row(p, tcode[t["id"]], slot, st))
         rec = ((t.get("record") or {}).get("overall") or {})
         rosters.append({"name": tname[t["id"]], "abbr": tcode[t["id"]], "espnId": t["id"], "me": tname[t["id"]] == MY_TEAM,
-                        "players": players, "ir": ir, "record": {k: rec.get(k) for k in ("wins", "losses", "ties", "percentage")}})
+                        "players": players, "ir": ir, "record": {k: rec.get(k) for k in ("wins", "losses", "ties", "percentage")}, "transactions": t.get("transactionCounter")})
 
     sp = (lg.get("status") or {}).get("currentMatchupPeriod") or lg.get("scoringPeriodId")
     games = []
