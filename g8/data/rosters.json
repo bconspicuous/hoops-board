@@ -1,5 +1,5 @@
 {
- "asOf": "2026-10-27T14:38+09:00",
+ "asOf": "2026-10-27T16:34+09:00",
  "leagueId": "751654965",
  "season": 2027,
  "teams": [
@@ -48,7 +48,6 @@
     "Amen Thompson",
     "Stephen Curry",
     "Evan Mobley",
-    "Jalen Williams",
     "Lauri Markkanen",
     "Trey Murphy III",
     "Onyeka Okongwu",
@@ -56,10 +55,11 @@
     "Brandin Podziemski",
     "Immanuel Quickley",
     "Myles Turner",
-    "Keon Ellis"
+    "Keon Ellis",
+    "Jrue Holiday"
    ],
    "ir": [
-    "Kristaps Porzingis",
+    "Jalen Williams",
     "VJ Edgecombe"
    ],
    "record": {
@@ -69,9 +69,10 @@
     "percentage": 0.36363636363636365
    },
    "acqByPeriod": {
-    "1": 4
+    "1": 4,
+    "2": 1
    },
-   "acqTotal": 4
+   "acqTotal": 5
   },
   {
    "name": "Garak Twindragons",
@@ -90,8 +91,8 @@
     "Tyler Herro",
     "Rudy Gobert",
     "Norman Powell",
-    "Jaime Jaquez Jr.",
-    "Davion Mitchell"
+    "Duncan Robinson",
+    "Toumani Camara"
    ],
    "ir": [
     "Coby White"
@@ -282,7 +283,6 @@
    "Paolo Banchero",
    "Yves Missi",
    "Jalen Williams",
-   "Kristaps Porzingis",
    "Coby White",
    "Chet Holmgren",
    "Nic Claxton",
@@ -291,6 +291,7 @@
    "AJ Dybantsa",
    "Brandon Ingram",
    "Tobias Harris",
+   "Kristaps Porzingis",
    "Keegan Murray",
    "Jimmy Butler III",
    "Jalen Suggs",
@@ -303,8 +304,8 @@
    "Dereck Lively II",
    "Donte DiVincenzo",
    "Bradley Beal",
-   "Jose Alvarado",
    "Maxime Raynaud",
+   "Jose Alvarado",
    "Ben Simmons",
    "Max Strus",
    "Tacko Fall"
