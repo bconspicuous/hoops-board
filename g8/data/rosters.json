@@ -1,5 +1,5 @@
 {
- "asOf": "2026-10-28T03:18+09:00",
+ "asOf": "2026-10-28T07:38+09:00",
  "leagueId": "751654965",
  "season": 2027,
  "teams": [
@@ -149,7 +149,6 @@
    "players": [
     "Luka Doncic",
     "Donovan Mitchell",
-    "Alperen Sengun",
     "Devin Booker",
     "Pascal Siakam",
     "Deni Avdija",
@@ -159,9 +158,11 @@
     "Miles Bridges",
     "Zach LaVine",
     "Mikal Bridges",
-    "Precious Achiuwa"
+    "Precious Achiuwa",
+    "Julian Champagnie"
    ],
    "ir": [
+    "Alperen Sengun",
     "Nic Claxton"
    ],
    "record": {
@@ -172,9 +173,9 @@
    },
    "acqByPeriod": {
     "1": 6,
-    "2": 1
+    "2": 2
    },
-   "acqTotal": 7
+   "acqTotal": 8
   },
   {
    "name": "Kunhyo's Chokeslam",
@@ -285,17 +286,23 @@
    "Yves Missi",
    "Jalen Williams",
    "Coby White",
+   "Chet Holmgren",
+   "Alperen Sengun",
    "Nic Claxton",
    "Jalen Duren",
    "Kawhi Leonard",
    "Kon Knueppel",
    "AJ Dybantsa",
+   "Ivica Zubac",
+   "Jaren Jackson Jr.",
    "Brandon Ingram",
    "Tobias Harris",
    "Kristaps Porzingis",
    "Keegan Murray",
    "Jimmy Butler III",
+   "Alex Caruso",
    "Jalen Suggs",
+   "Rui Hachimura",
    "Cason Wallace",
    "T.J. McConnell",
    "Shaedon Sharpe",
@@ -303,34 +310,38 @@
    "Jusuf Nurkic",
    "Santi Aldama",
    "Dereck Lively II",
+   "Justin Champagnie",
    "Donte DiVincenzo",
    "Bradley Beal",
    "Maxime Raynaud",
    "Jose Alvarado",
    "Ben Simmons",
    "Max Strus",
+   "Sergio de Larrea",
    "Tacko Fall"
   ],
   "DTD": [
    "Derrick White",
    "Lauri Markkanen",
-   "VJ Edgecombe",
-   "Chet Holmgren",
+   "Kyrie Irving",
+   "Anthony Edwards",
    "Ausar Thompson",
-   "Joel Embiid",
-   "Ivica Zubac",
-   "Jaren Jackson Jr.",
+   "Tyrese Haliburton",
+   "Yaxel Lendeborg",
+   "Ajay Mitchell",
    "Andrew Nembhard",
-   "Alex Caruso",
+   "Aaron Wiggins",
    "Jaxson Hayes",
    "Oso Ighodaro",
+   "Obi Toppin",
    "Naji Marshall",
+   "Jordan Poole",
    "Cameron Johnson",
    "Scoot Henderson",
-   "Justin Champagnie",
+   "Aaron Nesmith",
+   "Pelle Larsson",
    "Marcus Smart",
    "Isaiah Joe",
-   "Sergio de Larrea",
    "Rob Dillingham"
   ]
  }

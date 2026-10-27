@@ -1,5 +1,5 @@
 {
- "asOf": "2026-10-28T03:18+09:00",
+ "asOf": "2026-10-28T07:38+09:00",
  "source": "ESPN API sync (GitHub Actions g8-espn)",
  "teams": {
   "Junyoung's Scary Team": {
@@ -86,7 +86,6 @@
    "active": [
     "Luka Doncic",
     "Donovan Mitchell",
-    "Alperen Sengun",
     "Devin Booker",
     "Pascal Siakam",
     "Deni Avdija",
@@ -96,9 +95,11 @@
     "Miles Bridges",
     "Zach LaVine",
     "Mikal Bridges",
-    "Precious Achiuwa"
+    "Precious Achiuwa",
+    "Julian Champagnie"
    ],
    "ir": [
+    "Alperen Sengun",
     "Nic Claxton"
    ]
   },
@@ -168,19 +169,23 @@
   "Yves Missi": "O",
   "Jalen Williams": "O",
   "Coby White": "O",
+  "Chet Holmgren": "O",
+  "Alperen Sengun": "O",
   "Nic Claxton": "O",
   "Jalen Duren": "O",
   "Kawhi Leonard": "O",
   "Kon Knueppel": "O",
   "AJ Dybantsa": "O",
+  "Ivica Zubac": "O",
+  "Jaren Jackson Jr.": "O",
   "Brandon Ingram": "O",
   "Derrick White": "DTD",
   "Lauri Markkanen": "DTD",
-  "VJ Edgecombe": "DTD",
-  "Chet Holmgren": "DTD",
+  "Kyrie Irving": "DTD",
+  "Anthony Edwards": "DTD",
   "Ausar Thompson": "DTD",
-  "Joel Embiid": "DTD",
-  "Ivica Zubac": "DTD",
-  "Jaren Jackson Jr.": "DTD"
+  "Tyrese Haliburton": "DTD",
+  "Yaxel Lendeborg": "DTD",
+  "Ajay Mitchell": "DTD"
  }
 }
