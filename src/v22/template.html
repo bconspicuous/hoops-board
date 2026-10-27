@@ -120,6 +120,16 @@ select, input[type="search"] { border: 1px solid var(--line); background: var(--
 .rd-chart { position: relative; max-width: 440px; width: 100%; justify-self: center; }
 .rd-chart svg { display: block; width: 100%; height: auto; overflow: visible; }
 .rd-chart .tip { white-space: normal; width: max-content; max-width: min(280px, 90vw); text-align: center; }
+.sc-chart { width: 100%; }
+.sc-chart .recharts-surface { overflow: visible; }
+.sc-tip { min-width: 9rem; display: grid; gap: 6px; border: 1px solid var(--line); background: var(--card); color: var(--ink); border-radius: 8px; padding: 8px 10px; font-size: 12px; box-shadow: 0 8px 24px rgba(0,0,0,.12); }
+.sc-tip-title { font-weight: 600; }
+.sc-tip-row { display: flex; align-items: center; gap: 8px; }
+.sc-ind { width: 4px; height: 14px; border-radius: 2px; flex: none; }
+.sc-ind[data-dash] { width: 0; border-left: 2px dashed; border-radius: 0; background: none; }
+.sc-name { color: var(--muted); flex: 1; }
+.sc-val { font-variant-numeric: tabular-nums; font-weight: 600; }
+.sc-tip-foot { border-top: 1px solid var(--line); padding-top: 5px; color: var(--muted); }
 .rd-legend { display: flex; flex-wrap: wrap; gap: 6px 16px; justify-content: center; font-size: 12.5px; color: var(--muted); }
 .rd-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
 .rd-legend i.dash { background: none; border: 2px dashed var(--muted); width: 8px; height: 8px; border-radius: 50%; }
@@ -795,14 +805,19 @@ function renderRadar() {
   CATS.forEach((c, i) => { const [x, y] = pt(i, 116), a = Math.cos(ang(i)); s += `<text x="${x.toFixed(1)}" y="${(y + 4).toFixed(1)}" text-anchor="${Math.abs(a) < .2 ? "middle" : a > 0 ? "start" : "end"}" font-size="12" font-weight="600" fill="var(--ink)">${LAB[c]}${LOW[c] ? "↓" : ""}</text>`; });
   CATS.forEach((c, i) => { const a0 = ang(i - .5), a1 = ang(i + .5), R2 = rr + 34; s += `<path data-c="${c}" d="M${cx},${cy} L${(cx + Math.cos(a0) * R2).toFixed(1)},${(cy + Math.sin(a0) * R2).toFixed(1)} A${R2},${R2} 0 0 1 ${(cx + Math.cos(a1) * R2).toFixed(1)},${(cy + Math.sin(a1) * R2).toFixed(1)} Z" fill="transparent"/>`; });
   s += `</svg><div class="tip" hidden></div>`;
-  const box = $("rd-chart"); box.innerHTML = s;
+  const box = $("rd-chart"); if (state.rdLib !== "ok") { box.innerHTML = s; rdRoot = null; }
   const tip = box.querySelector(".tip");
-  box.querySelectorAll("path[data-c]").forEach(el => {
+  if (tip) box.querySelectorAll("path[data-c]").forEach(el => {
     el.addEventListener("mousemove", e => { const c = el.dataset.c, rb = box.getBoundingClientRect(), rm = rank(ME, c), ro = rank(opp, c);
       tip.textContent = `${LAB[c]} · ${sh(ME)} ${fmtCat(c, val(ME, c))}${rm ? ` (${rm}위)` : ""} · ${oppLab} ${fmtCat(c, val(opp, c))}${ro ? ` (${ro}위)` : ""}${h2h ? ` · 맞대결 ${pct(h2h[c])}` : ""}`;
       tip.hidden = false; const hw = Math.min(140, rb.width / 2); tip.style.left = Math.min(Math.max(e.clientX - rb.left, hw), rb.width - hw) + "px"; tip.style.top = (e.clientY - rb.top - 10) + "px"; });
     el.addEventListener("mouseleave", () => { tip.hidden = true; });
   });
+  /* shadcn/ui radar chart = Recharts RadarChart inside ChartContainer (card, CSS-variable colours, ChartTooltipContent). Loaded
+     from the CDN on first use; the SVG above stays as the fallback if the libraries cannot load or throw. */
+  const rows = CATS.map((c, i) => ({ cat: LAB[c] + (LOW[c] ? "↓" : ""), c, me: +sMe[i].toFixed(1), opp: +sOp[i].toFixed(1), avg: +score(c, avgOf(c)).toFixed(1) }));
+  rdShadcn(box, rows, { me: sh(ME), opp: oppLab, showAvg: !!(state.rdAvg && opp !== "avg"),
+    tipFor: c => ({ me: `${fmtCat(c, val(ME, c))}${rank(ME, c) ? ` · ${rank(ME, c)}위` : ""}`, opp: `${fmtCat(c, val(opp, c))}${rank(opp, c) ? ` · ${rank(opp, c)}위` : ""}`, h2h: h2h ? pct(h2h[c]) : null }) });
   $("rd-legend").innerHTML = `<span><i style="background:var(--s1)"></i>${esc(sh(ME))}</span><span><i style="background:var(--s2)"></i>${esc(oppLab)}</span>${state.rdAvg && opp !== "avg" ? '<span><i class="dash"></i>리그 평균</span>' : ""}`;
   const ahead = CATS.filter(c => sMe[CATS.indexOf(c)] > sOp[CATS.indexOf(c)] + 1e-9).length, exp = h2h ? CATS.reduce((x, c) => x + h2h[c], 0) : null;
   $("rd-sum").innerHTML = `<span class="pill">우위 카테고리 ${ahead}/${n}</span>${exp != null ? `<span class="pill" title="카테고리 승 기대값(무 = 0.5)">맞대결 기대 ${exp.toFixed(1)}–${(n - exp).toFixed(1)}</span>` : ""}`;
@@ -812,6 +827,45 @@ function renderRadar() {
   const ml = opts.find(o => o[0] === state.rdMode)[1];
   $("rd-desc").textContent = `${ml} · 축 = 8팀 중 위치(최하 0 ~ 최고 100, TO·PF는 적을수록 높음). 마우스를 올리면 실제 값·순위·맞대결 승률.`;
   $("rd-note").textContent = state.rdMode === "rest" ? "잔여 시즌 = 남은 주차의 예상 주간 합계 평균(스트리밍·백투백·운영 가정 반영). 맞대결 = 두 팀이 매주 만난다고 가정한 카테고리 승률의 평균." : state.rdMode === "cw" ? `${cw + 1}주차 예상 = 진행 중 실제 합계 + 남은 일정 예측. 맞대결 = 이번 주 두 팀이 만났다고 가정한 카테고리 승률.` : "완료된 주의 실제 카테고리 합계(ESPN). 맞대결 = 두 팀 실제 합계 비교.";
+}
+/* ---- shadcn chart-radar (React 18 + Recharts 2, UMD from jsDelivr) ---- */
+const RD_LIBS = ["https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js", "https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js",
+  "https://cdn.jsdelivr.net/npm/prop-types@15.8.1/prop-types.min.js", "https://cdn.jsdelivr.net/npm/recharts@2.12.7/umd/Recharts.js"];
+let rdLib = null, rdRoot = null, rdRootEl = null;
+function rdLoad() {
+  if (rdLib) return rdLib;
+  rdLib = RD_LIBS.reduce((pr, src) => pr.then(() => new Promise((ok, no) => { const sc = document.createElement("script"); sc.src = src; sc.crossOrigin = "anonymous"; sc.onload = ok; sc.onerror = () => no(new Error(src)); document.head.appendChild(sc); })), Promise.resolve())
+    .then(() => { if (!window.Recharts || !window.React || !window.ReactDOM) throw new Error("globals"); state.rdLib = "ok"; })
+    .catch(e => { state.rdLib = "fail"; console.warn("radar: shadcn/Recharts unavailable, SVG fallback", e && e.message); });
+  rdLib.then(() => { if (state.rdLib === "ok" && state.base) renderRadar(); });
+  return rdLib;
+}
+function rdShadcn(box, rows, o) {
+  if (state.rdLib !== "ok") { rdLoad(); $("rd-chart").dataset.engine = "svg"; return; }
+  try {
+    const R = window.React, h = R.createElement, RC = window.Recharts;
+    const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+    const c1 = css("--s1"), c2 = css("--s2"), mut = css("--muted"), line = css("--line"), ink = css("--ink"), card = css("--card");
+    const Tip = ({ active, payload }) => {
+      if (!active || !payload || !payload.length) return null;
+      const r = payload[0].payload, t = o.tipFor(r.c);
+      const item = (col, name, v, dash) => h("div", { className: "sc-tip-row" }, h("span", { className: "sc-ind", style: dash ? { borderColor: col } : { background: col }, "data-dash": dash ? "1" : null }), h("span", { className: "sc-name" }, name), h("span", { className: "sc-val" }, v));
+      return h("div", { className: "sc-tip" }, h("div", { className: "sc-tip-title" }, r.cat),
+        item(c1, o.me, t.me), item(c2, o.opp, t.opp), o.showAvg ? item(mut, "리그 평균", r.avg.toFixed(0) + "점", true) : null,
+        t.h2h ? h("div", { className: "sc-tip-foot" }, "맞대결 승률 " + t.h2h) : null);
+    };
+    const chart = h(RC.ResponsiveContainer, { width: "100%", aspect: 1.08 },
+      h(RC.RadarChart, { data: rows, outerRadius: "72%", margin: { top: 8, right: 24, bottom: 8, left: 24 } },
+        h(RC.Tooltip, { cursor: false, content: h(Tip), wrapperStyle: { outline: "none" } }),
+        h(RC.PolarGrid, { stroke: line }),
+        h(RC.PolarAngleAxis, { dataKey: "cat", tick: { fill: ink, fontSize: 12, fontWeight: 600 } }),
+        h(RC.PolarRadiusAxis, { domain: [0, 100], tick: false, axisLine: false }),
+        o.showAvg ? h(RC.Radar, { name: "리그 평균", dataKey: "avg", stroke: mut, strokeDasharray: "4 4", fill: "none", isAnimationActive: false }) : null,
+        h(RC.Radar, { name: o.opp, dataKey: "opp", stroke: c2, strokeWidth: 2, fill: c2, fillOpacity: .25, dot: { r: 4, fillOpacity: 1, fill: c2, stroke: card, strokeWidth: 2 } }),
+        h(RC.Radar, { name: o.me, dataKey: "me", stroke: c1, strokeWidth: 2, fill: c1, fillOpacity: .5, dot: { r: 4, fillOpacity: 1, fill: c1, stroke: card, strokeWidth: 2 } })));
+    if (!rdRoot || rdRootEl !== box) { box.innerHTML = ""; const el = document.createElement("div"); el.className = "sc-chart"; box.appendChild(el); rdRoot = window.ReactDOM.createRoot(el); rdRootEl = box; }
+    rdRoot.render(chart); box.dataset.engine = "shadcn";
+  } catch (e) { console.warn("radar: shadcn render failed, SVG fallback", e); state.rdLib = "fail"; rdRoot = null; renderRadar(); }
 }
 $("rd-opp").addEventListener("change", e => { state.rdOpp = e.target.value; renderRadar(); });
 $("rd-mode").addEventListener("change", e => { state.rdMode = e.target.value; renderRadar(); });
