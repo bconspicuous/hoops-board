@@ -1,5 +1,5 @@
 {
- "asOf": "2026-10-27T18:00+09:00",
+ "asOf": "2026-10-27T23:40+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -592,6 +592,20 @@
    "long": "Alvarado is missing a second consecutive game with a sprained ankle. Tyler Kolek entered the New York rotation in Sunday's loss to the Magic and should continue to play a bench role while Alvarado is sidelined."
   },
   {
+   "player": "Chet Holmgren",
+   "team": "OKC",
+   "status": "Day-To-Day",
+   "date": "2026-10-27T14:03Z",
+   "type": "day-to-day",
+   "returnDate": "2026-10-28",
+   "detail": null,
+   "side": null,
+   "injury": "Knee",
+   "fantasyStatus": "GTD",
+   "short": "Holmgren (knee) is out for Monday's game versus the Suns.",
+   "long": "The star big man is sitting out the second part of this back-to-back set. Jaylin Williams and Kenrich Williams should help pick up the slack at power forward for the Thunder on Monday, with Shai Gilgeous-Alexander likely soaking up all the usage he can handle."
+  },
+  {
    "player": "Alex Caruso",
    "team": "OKC",
    "status": "Day-To-Day",
@@ -660,20 +674,6 @@
    "fantasyStatus": "GTD",
    "short": "Sorber (knee) is out for Monday's game versus the Suns, per Andrew Schlecht of The Athletic.",
    "long": "It appeared earlier Monday on the Thunder's injury report that Sorber was ready to make his season debut, but it was a clerical error. Sorber's return timeline remains in the dark due to offseason knee surgery."
-  },
-  {
-   "player": "Chet Holmgren",
-   "team": "OKC",
-   "status": "Out",
-   "date": "2026-10-26T18:22Z",
-   "type": "out",
-   "returnDate": "2026-10-28",
-   "detail": null,
-   "side": null,
-   "injury": "Knee",
-   "fantasyStatus": "OUT",
-   "short": "Holmgren (knee) is out for Monday's game versus the Suns.",
-   "long": "The star big man is sitting out the second part of this back-to-back set. Jaylin Williams and Kenrich Williams should help pick up the slack at power forward for the Thunder on Monday, with Shai Gilgeous-Alexander likely soaking up all the usage he can handle."
   },
   {
    "player": "Otega Oweh",
@@ -1091,7 +1091,7 @@
    "detail": "Bruise",
    "side": "Left",
    "injury": "Knee",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Alexander won't play Wednesday against the Grizzlies due to a left knee bone bruise.",
    "long": "Alexander sat out Friday's preseason finale with what the team initially described as a left knee injury, but we now know he's dealing with a bone bruise. Don't be surprised if Alexander misses Friday's game against the Pelicans as well."
   },
