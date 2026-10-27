@@ -1,5 +1,5 @@
 {
- "asOf": "2026-10-26T22:19+09:00",
+ "asOf": "2026-10-27T10:32+09:00",
  "leagueId": "504060248",
  "season": 2027,
  "teams": [
@@ -20,10 +20,12 @@
     "Ryan Rollins",
     "Day'Ron Sharpe",
     "Collin Murray-Boyles",
-    "Andrew Nembhard",
-    "Ace Bailey"
+    "Ace Bailey",
+    "Payton Pritchard"
    ],
-   "ir": [],
+   "ir": [
+    "Andrew Nembhard"
+   ],
    "record": {
     "wins": 3,
     "losses": 8,
@@ -97,6 +99,7 @@
    "espnId": 4,
    "me": false,
    "players": [
+    "Cooper Flagg",
     "Domantas Sabonis",
     "Devin Booker",
     "Pascal Siakam",
@@ -107,13 +110,10 @@
     "Darius Acuff Jr.",
     "Myles Turner",
     "Jaime Jaquez Jr.",
-    "Keon Ellis",
     "Wendell Carter Jr.",
     "Kris Dunn"
    ],
-   "ir": [
-    "Cooper Flagg"
-   ],
+   "ir": [],
    "record": {
     "wins": 5,
     "losses": 6,
@@ -138,10 +138,12 @@
     "Paul George",
     "Jaden McDaniels",
     "Jabari Smith Jr.",
-    "Cason Wallace",
-    "Andre Drummond"
+    "Justin Champagnie",
+    "Grayson Allen"
    ],
-   "ir": [],
+   "ir": [
+    "Cason Wallace"
+   ],
    "record": {
     "wins": 6,
     "losses": 5,
@@ -282,14 +284,16 @@
     "Naz Reid",
     "Trey Murphy III",
     "Mikal Bridges",
-    "VJ Edgecombe",
     "Zach Edey",
     "Derik Queen",
     "Zach LaVine",
     "Jerami Grant",
-    "Ayo Dosunmu"
+    "Ayo Dosunmu",
+    "Reed Sheppard"
    ],
-   "ir": [],
+   "ir": [
+    "VJ Edgecombe"
+   ],
    "record": {
     "wins": 5,
     "losses": 4,
@@ -300,36 +304,39 @@
  ],
  "status": {
   "O": [
-   "Joel Embiid",
+   "Andrew Nembhard",
    "Paolo Banchero",
-   "Ausar Thompson",
    "Brandon Ingram",
-   "Cooper Flagg",
+   "Cason Wallace",
    "Jalen Duren",
    "AJ Dybantsa",
+   "Chet Holmgren",
    "Yves Missi",
-   "Kawhi Leonard",
+   "Ivica Zubac",
    "Kon Knueppel",
    "Tobias Harris",
-   "VJ Edgecombe",
-   "Zach Edey",
+   "Jalen Williams",
    "Coby White",
    "Kristaps Porzingis",
    "Nic Claxton",
    "Keegan Murray",
    "Jimmy Butler III",
+   "Jalen Suggs",
+   "Jaxson Hayes",
+   "Oso Ighodaro",
    "Naji Marshall",
+   "Cameron Johnson",
    "T.J. McConnell",
    "Shaedon Sharpe",
    "Mark Williams",
    "Jusuf Nurkic",
-   "Mikel Brown Jr.",
    "Santi Aldama",
    "Dereck Lively II",
    "Donte DiVincenzo",
    "Bradley Beal",
    "Jose Alvarado",
    "Maxime Raynaud",
+   "Marcus Smart",
    "Ben Simmons",
    "Max Strus",
    "Cameron Carr",
@@ -340,17 +347,17 @@
    "Moses Moody"
   ],
   "DTD": [
-   "Cason Wallace",
-   "Ivica Zubac",
-   "Jalen Williams",
-   "Jalen Suggs",
-   "Oso Ighodaro",
-   "Cameron Johnson",
-   "Jaylin Williams",
-   "Gui Santos",
-   "Marcus Smart",
+   "Joel Embiid",
+   "Ausar Thompson",
+   "Lauri Markkanen",
+   "Justin Champagnie",
+   "Kawhi Leonard",
+   "Alex Caruso",
+   "VJ Edgecombe",
+   "Scoot Henderson",
+   "Mikel Brown Jr.",
    "Isaiah Joe",
-   "Brandon Williams",
+   "Sergio de Larrea",
    "Rob Dillingham"
   ]
  }
