@@ -1,5 +1,5 @@
 {
- "asOf": "2026-10-28T23:13+09:00",
+ "asOf": "2026-10-29T07:52+09:00",
  "leagueId": "751654965",
  "season": 2027,
  "teams": [
@@ -146,7 +146,6 @@
    "espnId": 5,
    "me": false,
    "players": [
-    "Luka Doncic",
     "Donovan Mitchell",
     "Devin Booker",
     "Pascal Siakam",
@@ -158,11 +157,12 @@
     "Zach LaVine",
     "Mikal Bridges",
     "Julian Champagnie",
-    "Derik Queen"
+    "Derik Queen",
+    "Jabari Smith Jr."
    ],
    "ir": [
-    "Alperen Sengun",
-    "Nic Claxton"
+    "Luka Doncic",
+    "Alperen Sengun"
    ],
    "record": {
     "wins": 6,
@@ -172,9 +172,9 @@
    },
    "acqByPeriod": {
     "1": 6,
-    "2": 3
+    "2": 4
    },
-   "acqTotal": 9
+   "acqTotal": 10
   },
   {
    "name": "Kunhyo's Chokeslam",
@@ -286,18 +286,19 @@
    "Jalen Williams",
    "Coby White",
    "Chet Holmgren",
+   "Luka Doncic",
    "Alperen Sengun",
-   "Nic Claxton",
    "Anthony Edwards",
    "Jalen Duren",
    "Kawhi Leonard",
    "Kon Knueppel",
-   "AJ Dybantsa",
+   "Tyrese Haliburton",
    "Ivica Zubac",
    "Brandon Ingram",
    "Jaren Jackson Jr.",
    "Tobias Harris",
    "Kristaps Porzingis",
+   "Nic Claxton",
    "Keegan Murray",
    "Jimmy Butler III",
    "Alex Caruso",
@@ -306,14 +307,19 @@
    "Cason Wallace",
    "T.J. McConnell",
    "Shaedon Sharpe",
+   "Ziaire Williams",
    "Mark Williams",
    "Jusuf Nurkic",
    "Santi Aldama",
    "Dereck Lively II",
    "Justin Champagnie",
+   "Tre Johnson",
    "Donte DiVincenzo",
    "Bradley Beal",
    "Maxime Raynaud",
+   "Jose Alvarado",
+   "Marcus Smart",
+   "Isaiah Joe",
    "Ben Simmons",
    "Max Strus",
    "Cameron Carr",
@@ -323,23 +329,14 @@
   "DTD": [
    "Lauri Markkanen",
    "Kyrie Irving",
-   "Tyrese Haliburton",
-   "Yaxel Lendeborg",
+   "Ausar Thompson",
    "Ajay Mitchell",
-   "Andrew Nembhard",
    "Egor Demin",
-   "Aaron Wiggins",
-   "Jaxson Hayes",
    "Oso Ighodaro",
+   "Jaxson Hayes",
    "Obi Toppin",
    "Naji Marshall",
-   "Jordan Poole",
-   "Cameron Johnson",
-   "Pelle Larsson",
-   "Aaron Nesmith",
-   "Jose Alvarado",
-   "Marcus Smart",
-   "Isaiah Joe"
+   "Cameron Johnson"
   ]
  }
 }
