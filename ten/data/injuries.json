@@ -1,5 +1,5 @@
 {
- "asOf": "2026-10-28T08:51+09:00",
+ "asOf": "2026-10-28T14:55+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -58,6 +58,20 @@
    "fantasyStatus": "OUT",
    "short": "Carter has been diagnosed with mononucleosis and is without a timetable for a return, Gary Washburn of The Boston Globe reports.",
    "long": "Carter missed Boston's final three preseason games with the illness and is now expected to miss time to begin the regular season. He can be considered week-to-week until Boston provides an update on his progress. The 2024 first-rounder signed a two-way pact with the Celtics on Saturday and will provide backcourt depth for the club."
+  },
+  {
+   "player": "Egor Demin",
+   "team": "BKN",
+   "status": "Day-To-Day",
+   "date": "2026-10-28T03:46Z",
+   "type": "day-to-day",
+   "returnDate": "2026-10-30",
+   "detail": "Bruise",
+   "side": "Right",
+   "injury": "Leg",
+   "fantasyStatus": "GTD",
+   "short": "Demin (leg) stated he isn't sure if he will be able to play in Friday's game against Detroit, Erik Slater of ClutchPoints.com reports.",
+   "long": "Demin exited Tuesday's 125-124 overtime loss to the Celtics in the first half and didn't return. He isn't sure if he will play Friday versus the Pistons, though he indicated that the injury is \"nothing serious,\" adding that he was kneed in the \"muscle/bone area.\" The 20-year-old has had a slow start to the 2026-27 campaign, averaging 7.8 points, 2.3 rebounds, 2.8 assists and 1.0 steals while shooting 28.6 percent from deep. If Demin isn't out there against Detroit, Nolan Traore, who also didn't return to Tuesday's meeting with the Celtics due to cramps, Mikel Brown and Keon Ellis are candidates for more minutes, with two of those players in line to start."
   },
   {
    "player": "Tyler Bilodeau",
@@ -172,6 +186,20 @@
    "long": "The Bulls reported one week ago that the big man would be re-evaluated in two weeks, so he appears to be right on track with his recovery from a hamstring injury. He'll presumably need to take part in 5-on-5 drills before getting the green light to return to game action."
   },
   {
+   "player": "Santi Aldama",
+   "team": "DAL",
+   "status": "Out",
+   "date": "2026-10-28T01:05Z",
+   "type": "out",
+   "returnDate": "2026-10-28",
+   "detail": "Surgery",
+   "side": "Right",
+   "injury": "Knee",
+   "fantasyStatus": "GTD",
+   "short": "The Mavericks recalled Aldama (knee) from the G League's Texas Legends on Tuesday.",
+   "long": "Aldama presumably got some practice reps in with the Legends after being assigned to the squad earlier in the day. He's still working his way back from right knee surgery he underwent in March, and he's listed as doubtful for Wednesday's matchup with the Thunder."
+  },
+  {
    "player": "Tarik Biberovic",
    "team": "DAL",
    "status": "Out",
@@ -184,20 +212,6 @@
    "fantasyStatus": "GTD",
    "short": "Biberovic is listed as doubtful for Wednesday's game against the Thunder.",
    "long": "Biberovic isn't expected to play Wednesday due to right heel bursitis, though the doubtful tag represents a step in the right direction. However, his potential absence wouldn't affect the rotation."
-  },
-  {
-   "player": "Santi Aldama",
-   "team": "DAL",
-   "status": "Out",
-   "date": "2026-10-27T22:09Z",
-   "type": "out",
-   "returnDate": "2026-10-28",
-   "detail": "Surgery",
-   "side": "Right",
-   "injury": "Knee",
-   "fantasyStatus": "OUT",
-   "short": "Aldama (knee) is doubtful for Wednesday's game against the Thunder.",
-   "long": "While Aldama is unlikely to play Wednesday, he appears to be making progress after being sent down to Dallas' G League affiliate on a rehab assignment. Aldama is not expected to have a significant role in the Mavs' rotation this season."
   },
   {
    "player": "Sergio de Larrea",
@@ -328,14 +342,14 @@
   {
    "player": "Isaiah Joe",
    "team": "DET",
-   "status": "Out",
-   "date": "2026-10-27T23:21Z",
-   "type": "out",
+   "status": "Day-To-Day",
+   "date": "2026-10-28T05:11Z",
+   "type": "day-to-day",
    "returnDate": "2026-10-28",
    "detail": "Bruise",
    "side": "Right",
    "injury": "Hip",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Joe (hip) has been ruled out for Tuesday's game against the Knicks.",
    "long": "Joe will miss the front end of this back-to-back set due to a right hip contusion. With the 27-year-old wing sidelined, Javonte Green, Kevin Huerter and Ronald Holland are all candidates to see a bump in minutes off the bench."
   },
@@ -648,6 +662,20 @@
    "long": "It's a tough break for Miller, who had an opportunity to battle for a reserve role during training camp in the fall. The timeline for a return is likely to keep him on the shelf until after the All-Star break. Miller's extended stay on the sidelines gives Kobe Sanders a chance to crack the Clippers' rotation."
   },
   {
+   "player": "Cameron Carr",
+   "team": "LAL",
+   "status": "Out",
+   "date": "2026-10-27T23:42Z",
+   "type": "out",
+   "returnDate": "2026-10-28",
+   "detail": "Strain",
+   "side": "Right",
+   "injury": "Oblique",
+   "fantasyStatus": "OUT",
+   "short": "The Lakers recalled Carr (oblique) from the G League's Coachella Valley Lakers on Tuesday, Mark Medina of TheSportingTribune.com reports.",
+   "long": "Carr presumably joined the G League Lakers to get some practice reps in while working his way back from an oblique strain. His next chance to play for the parent club will come Wednesday against the Clippers in the second leg of the Lakers' back-to-back set."
+  },
+  {
    "player": "Adou Thiero",
    "team": "LAL",
    "status": "Out",
@@ -748,14 +776,14 @@
   {
    "player": "Jose Alvarado",
    "team": "NY",
-   "status": "Out",
-   "date": "2026-10-26T20:50Z",
-   "type": "out",
+   "status": "Day-To-Day",
+   "date": "2026-10-28T05:12Z",
+   "type": "day-to-day",
    "returnDate": "2026-10-28",
    "detail": "Sprain",
    "side": "Left",
    "injury": "Ankle",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Alvarado (ankle) is out for Tuesday's game against the Pistons.",
    "long": "Alvarado is missing a second consecutive game with a sprained ankle. Tyler Kolek entered the New York rotation in Sunday's loss to the Magic and should continue to play a bench role while Alvarado is sidelined."
   },
@@ -1001,15 +1029,15 @@
    "player": "Oso Ighodaro",
    "team": "PHX",
    "status": "Day-To-Day",
-   "date": "2026-10-27T04:24Z",
+   "date": "2026-10-28T00:23Z",
    "type": "day-to-day",
    "returnDate": "2026-10-30",
    "detail": "Strain",
    "side": "Not Specified",
    "injury": "Oblique",
    "fantasyStatus": "GTD",
-   "short": "Ighodaro (oblique) is out for Monday's matchup with the Thunder.",
-   "long": "Ighodaro remains sidelined with an oblique strain. Khaman Maluach should continue to start at center for the Suns and offer enhanced fantasy value as long as Ighodaro is out."
+   "short": "Ighodaro (oblique) is feeling better and considered day-to-day ahead of Friday's game against the Nuggets, John Gambadoro of Arizona Sports 98.7 FM reports.",
+   "long": "Ighodaro hasn't played since the regular-season opener due to an oblique strain, and he can be considered questionable for Friday until the Suns offer an update on his status. If the Marquette product remains sidelined against Denver, Khaman Maluach and Duop Reath would likely continue seeing increased playing time."
   },
   {
    "player": "Mark Williams",
@@ -1038,20 +1066,6 @@
    "fantasyStatus": "OUT",
    "short": "Youngblood (ankle/two-way player) is out for Tuesday's game against the Lakers.",
    "long": "It's unclear at this time whether Youngblood is still dealing with an ankle injury, or if this decision is simply because he's on a two-way contract. Either way, he's yet to make his 2026-27 debut and will need to wait at least until Thursday against the Grizzlies to do so."
-  },
-  {
-   "player": "Scoot Henderson",
-   "team": "POR",
-   "status": "Day-To-Day",
-   "date": "2026-10-27T00:04Z",
-   "type": "day-to-day",
-   "returnDate": "2026-10-27",
-   "detail": "Soreness",
-   "side": "Left",
-   "injury": "Ankle",
-   "fantasyStatus": "GTD",
-   "short": "Henderson is questionable for Tuesday's game against the Lakers due to left ankle soreness.",
-   "long": "Henderson is evidently dealing with some soreness following Friday's matchup in Sacramento. The Blazers should have a better idea of his availability after watching him go through shootaround and warmups ahead of Tuesday's tipoff."
   },
   {
    "player": "Shaedon Sharpe",
@@ -1133,7 +1147,7 @@
    "detail": "Strain",
    "side": "Left",
    "injury": "Calf",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Harris (calf) has been ruled out for Tuesday's game against the Kings.",
    "long": "Harris is still ramping up from a left calf strain and will miss a fourth consecutive contest to begin the regular season. His next opportunity to make his season debut will come Wednesday at Utah in the second leg of this back-to-back set. Julian Champagnie and Keldon Johnson will likely continue seeing increased playing time while Harris is sidelined."
   },

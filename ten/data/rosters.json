@@ -1,5 +1,5 @@
 {
- "asOf": "2026-10-28T08:51+09:00",
+ "asOf": "2026-10-28T14:55+09:00",
  "leagueId": "504060248",
  "season": 2027,
  "teams": [
@@ -300,15 +300,15 @@
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
-    "acquisitions": 4,
-    "drops": 3,
+    "acquisitions": 5,
+    "drops": 4,
     "matchupAcquisitionTotals": {
      "1": 3,
-     "2": 1
+     "2": 2
     },
     "misc": 0,
-    "moveToActive": 22,
-    "moveToIR": 1,
+    "moveToActive": 27,
+    "moveToIR": 2,
     "paid": 0.0,
     "teamCharges": 0.0,
     "trades": 0
@@ -436,12 +436,12 @@
    "transactions": {
     "acquisitionBudgetSpent": 0,
     "acquisitions": 1,
-    "drops": 0,
+    "drops": 1,
     "matchupAcquisitionTotals": {
      "2": 1
     },
     "misc": 0,
-    "moveToActive": 17,
+    "moveToActive": 20,
     "moveToIR": 1,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -484,15 +484,13 @@
    "Donte DiVincenzo",
    "Bradley Beal",
    "Maxime Raynaud",
-   "Jose Alvarado",
-   "Isaiah Joe",
    "Ben Simmons",
    "Max Strus",
    "Sergio de Larrea",
    "Cameron Carr",
    "Tacko Fall",
-   "Jayden Quaintance",
    "Steven Adams",
+   "Jayden Quaintance",
    "Yanic Konan Niederhauser",
    "Moses Moody"
   ],
@@ -504,16 +502,19 @@
    "Obi Toppin",
    "Ajay Mitchell",
    "Yaxel Lendeborg",
+   "Egor Demin",
    "Aaron Wiggins",
-   "Jaxson Hayes",
    "Oso Ighodaro",
+   "Jaxson Hayes",
+   "Obi Toppin",
    "Naji Marshall",
    "Jordan Poole",
    "Cameron Johnson",
-   "Scoot Henderson",
-   "Aaron Nesmith",
    "Pelle Larsson",
+   "Aaron Nesmith",
+   "Jose Alvarado",
    "Marcus Smart",
+   "Isaiah Joe",
    "Rob Dillingham"
   ]
  }
