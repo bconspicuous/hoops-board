@@ -1,5 +1,5 @@
 {
- "asOf": "2026-10-28T22:27+09:00",
+ "asOf": "2026-10-28T23:36+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -83,7 +83,7 @@
    "detail": "Sprain",
    "side": "Right",
    "injury": "Shoulder",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Bilodeau (shoulder) has been ruled out for Sunday's game against Indiana.",
    "long": "Bilodeau will miss a third straight game to begin the regular season due to a right shoulder sprain. The two-way player's absence shouldn't affect the rotation."
   },
@@ -368,6 +368,20 @@
    "long": "Duren suffered the hamstring injury in Friday's win over Miami and is set to miss an extended period. Paul Reed is expected to join the starting five and carries significant fantasy value until Duren returns. John Collins and Tolu Smith are also candidates to see a bump in minutes in Duren's stead."
   },
   {
+   "player": "Kristaps Porzingis",
+   "team": "GS",
+   "status": "Out",
+   "date": "2026-10-28T14:25Z",
+   "type": "out",
+   "returnDate": "2026-12-01",
+   "detail": null,
+   "side": null,
+   "injury": "Illness",
+   "fantasyStatus": "OUT",
+   "short": "The Warriors are exploring potential trades involving Porzingis (personal), who remains away from the team indefinitely while dealing with ongoing health concerns, Anthony Slater of ESPN.com reports.",
+   "long": "Porzingis is reportedly contemplating his future in basketball as he continues to battle health issues that have plagued him for nearly two years. Golden State isn't expecting the veteran center to rejoin the team anytime soon, and his contract structure could make him an attractive trade piece despite the uncertainty surrounding his playing future. With no timetable for his return and retirement potentially on the table, Porzingis remains a highly speculative fantasy stash, even in leagues with injured reserve spots."
+  },
+  {
    "player": "Yaxel Lendeborg",
    "team": "GS",
    "status": "Day-To-Day",
@@ -380,20 +394,6 @@
    "fantasyStatus": "GTD",
    "short": "Lendeborg (foot) is questionable for Wednesday's game against Minnesota.",
    "long": "The rookie standout is in danger of missing his first game of the season Wednesday with foot soreness. With the Warriors already short on forward options, Georges Niang could be thrust into a starting role if Lendeborg cannot play."
-  },
-  {
-   "player": "Kristaps Porzingis",
-   "team": "GS",
-   "status": "Out",
-   "date": "2026-10-21T18:27Z",
-   "type": "out",
-   "returnDate": "2026-12-01",
-   "detail": null,
-   "side": null,
-   "injury": "Illness",
-   "fantasyStatus": "OUT",
-   "short": "Porzingis is contemplating his future in basketball as he deals with recurring symptoms from the autoimmune condition termed as postural orthostatic tachycardia syndrome, per Shams Charania of ESPN.",
-   "long": "Charania also notes Golden State has started exploring trade routes for Porzingis, who is already considered out indefinitely to begin the 2026-27 season. Fantasy managers shouldn't expect the big man to get back on the floor anytime soon, whether it be for the Warriors or perhaps another team, and it sounds like stepping away from the game is on the table for Porzingis at this point."
   },
   {
    "player": "Moses Moody",
@@ -671,7 +671,7 @@
    "detail": "Strain",
    "side": "Right",
    "injury": "Oblique",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "The Lakers recalled Carr (oblique) from the G League's Coachella Valley Lakers on Tuesday, Mark Medina of TheSportingTribune.com reports.",
    "long": "Carr presumably joined the G League Lakers to get some practice reps in while working his way back from an oblique strain. His next chance to play for the parent club will come Wednesday against the Clippers in the second leg of the Lakers' back-to-back set."
   },
@@ -685,7 +685,7 @@
    "detail": "Inflammation",
    "side": "Left",
    "injury": "Knee",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Thiero (knee) is out for Tuesday's game against Portland.",
    "long": "Thiero continues to miss time due to swelling in his left knee. His next opportunity to take the court will arrive Wednesday against the Clippers."
   },
@@ -1063,7 +1063,7 @@
    "detail": "Soreness",
    "side": "Left",
    "injury": "Ankle",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Youngblood (ankle/two-way player) is out for Tuesday's game against the Lakers.",
    "long": "It's unclear at this time whether Youngblood is still dealing with an ankle injury, or if this decision is simply because he's on a two-way contract. Either way, he's yet to make his 2026-27 debut and will need to wait at least until Thursday against the Grizzlies to do so."
   },
