@@ -1,5 +1,5 @@
 {
- "asOf": "2026-10-28T14:55+09:00",
+ "asOf": "2026-10-28T22:13+09:00",
  "leagueId": "504060248",
  "season": 2027,
  "teams": [
@@ -41,7 +41,7 @@
      "2": 2
     },
     "misc": 0,
-    "moveToActive": 41,
+    "moveToActive": 50,
     "moveToIR": 3,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -86,7 +86,7 @@
      "2": 1
     },
     "misc": 0,
-    "moveToActive": 22,
+    "moveToActive": 24,
     "moveToIR": 1,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -131,7 +131,7 @@
      "2": 4
     },
     "misc": 0,
-    "moveToActive": 25,
+    "moveToActive": 32,
     "moveToIR": 1,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -173,7 +173,7 @@
      "1": 6
     },
     "misc": 0,
-    "moveToActive": 22,
+    "moveToActive": 25,
     "moveToIR": 2,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -218,7 +218,7 @@
      "2": 3
     },
     "misc": 0,
-    "moveToActive": 22,
+    "moveToActive": 25,
     "moveToIR": 2,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -262,7 +262,7 @@
      "1": 3
     },
     "misc": 0,
-    "moveToActive": 25,
+    "moveToActive": 28,
     "moveToIR": 2,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -275,7 +275,6 @@
    "espnId": 7,
    "me": false,
    "players": [
-    "Anthony Edwards",
     "Karl-Anthony Towns",
     "Jamal Murray",
     "Jaylen Brown",
@@ -285,12 +284,13 @@
     "Dylan Harper",
     "Immanuel Quickley",
     "John Collins",
+    "Yves Missi",
     "Precious Achiuwa",
     "Paul Reed",
-    "Obi Toppin"
+    "Jaylen Wells"
    ],
    "ir": [
-    "Yves Missi"
+    "Anthony Edwards"
    ],
    "record": {
     "wins": 8,
@@ -307,7 +307,7 @@
      "2": 2
     },
     "misc": 0,
-    "moveToActive": 27,
+    "moveToActive": 29,
     "moveToIR": 2,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -352,7 +352,7 @@
      "2": 2
     },
     "misc": 0,
-    "moveToActive": 28,
+    "moveToActive": 31,
     "moveToIR": 4,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -397,7 +397,7 @@
      "2": 1
     },
     "misc": 0,
-    "moveToActive": 22,
+    "moveToActive": 24,
     "moveToIR": 2,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -417,16 +417,14 @@
     "Naz Reid",
     "Trey Murphy III",
     "Mikal Bridges",
+    "VJ Edgecombe",
     "Zach Edey",
     "Derik Queen",
     "Zach LaVine",
-    "Jerami Grant",
     "Ayo Dosunmu",
     "Reed Sheppard"
    ],
-   "ir": [
-    "VJ Edgecombe"
-   ],
+   "ir": [],
    "record": {
     "wins": 5,
     "losses": 4,
@@ -441,7 +439,7 @@
      "2": 1
     },
     "misc": 0,
-    "moveToActive": 20,
+    "moveToActive": 22,
     "moveToIR": 1,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -486,12 +484,12 @@
    "Maxime Raynaud",
    "Ben Simmons",
    "Max Strus",
-   "Sergio de Larrea",
    "Cameron Carr",
+   "Sergio de Larrea",
    "Tacko Fall",
-   "Steven Adams",
    "Jayden Quaintance",
    "Yanic Konan Niederhauser",
+   "Steven Adams",
    "Moses Moody"
   ],
   "DTD": [
@@ -499,13 +497,12 @@
    "Kyrie Irving",
    "Lauri Markkanen",
    "Tyrese Haliburton",
-   "Obi Toppin",
    "Ajay Mitchell",
    "Yaxel Lendeborg",
    "Egor Demin",
    "Aaron Wiggins",
-   "Oso Ighodaro",
    "Jaxson Hayes",
+   "Oso Ighodaro",
    "Obi Toppin",
    "Naji Marshall",
    "Jordan Poole",
