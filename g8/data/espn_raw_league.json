@@ -1,7 +1,7 @@
 {
  "id": 751654965,
  "seasonId": 2027,
- "scoringPeriodId": 8,
+ "scoringPeriodId": 9,
  "status": {
   "activatedDate": 1791950491863,
   "createdAsLeagueType": 3,
@@ -26,15 +26,16 @@
    "platform": "lm-processor",
    "source": "NightlyLeagueUpdateTaskProcessor"
   },
-  "latestScoringPeriod": 8,
+  "latestScoringPeriod": 9,
   "previousSeasons": [],
-  "standingsUpdateDate": 1793084820479,
+  "standingsUpdateDate": 1793174633777,
   "teamsJoined": 8,
   "transactionScoringPeriod": 9,
-  "waiverLastExecutionDate": 1793084820478,
+  "waiverLastExecutionDate": 1793174633775,
   "waiverProcessStatus": {
    "2026-10-18T07:35:08.893+00:00": 2,
-   "2026-10-22T07:38:00.423+00:00": 1
+   "2026-10-22T07:38:00.423+00:00": 1,
+   "2026-10-28T08:03:53.773+00:00": 1
   }
  },
  "samplePlayer": {

@@ -1,5 +1,5 @@
 {
- "asOf": "2026-10-28T15:19+09:00",
+ "asOf": "2026-10-28T22:33+09:00",
  "leagueId": "751654965",
  "season": 2027,
  "teams": [
@@ -55,12 +55,11 @@
     "Brandin Podziemski",
     "Immanuel Quickley",
     "Myles Turner",
-    "Keon Ellis",
+    "VJ Edgecombe",
     "Jrue Holiday"
    ],
    "ir": [
-    "Jalen Williams",
-    "VJ Edgecombe"
+    "Jalen Williams"
    ],
    "record": {
     "wins": 4,
@@ -132,9 +131,9 @@
    "ir": [],
    "record": {
     "wins": 5,
-    "losses": 5,
-    "ties": 1,
-    "percentage": 0.5
+    "losses": 6,
+    "ties": 0,
+    "percentage": 0.45454545454545453
    },
    "acqByPeriod": {
     "2": 2
@@ -158,8 +157,8 @@
     "Miles Bridges",
     "Zach LaVine",
     "Mikal Bridges",
-    "Precious Achiuwa",
-    "Julian Champagnie"
+    "Julian Champagnie",
+    "Derik Queen"
    ],
    "ir": [
     "Alperen Sengun",
@@ -255,29 +254,29 @@
     "Kevin Durant",
     "Ty Jerome",
     "Donovan Clingan",
-    "Jaren Jackson Jr.",
     "Jaden McDaniels",
     "Yaxel Lendeborg",
     "Paul Reed",
     "Quentin Grimes",
     "Kyshawn George",
-    "Ajay Mitchell"
+    "Ajay Mitchell",
+    "Davion Mitchell"
    ],
    "ir": [
     "Ivica Zubac",
     "Brandon Ingram"
    ],
    "record": {
-    "wins": 5,
+    "wins": 6,
     "losses": 5,
-    "ties": 1,
-    "percentage": 0.5
+    "ties": 0,
+    "percentage": 0.5454545454545454
    },
    "acqByPeriod": {
     "1": 6,
-    "2": 6
+    "2": 7
    },
-   "acqTotal": 12
+   "acqTotal": 13
   }
  ],
  "status": {
@@ -295,8 +294,8 @@
    "Kon Knueppel",
    "AJ Dybantsa",
    "Ivica Zubac",
-   "Jaren Jackson Jr.",
    "Brandon Ingram",
+   "Jaren Jackson Jr.",
    "Tobias Harris",
    "Kristaps Porzingis",
    "Keegan Murray",
@@ -317,8 +316,8 @@
    "Maxime Raynaud",
    "Ben Simmons",
    "Max Strus",
-   "Sergio de Larrea",
    "Cameron Carr",
+   "Sergio de Larrea",
    "Tacko Fall"
   ],
   "DTD": [
@@ -330,8 +329,8 @@
    "Andrew Nembhard",
    "Egor Demin",
    "Aaron Wiggins",
-   "Oso Ighodaro",
    "Jaxson Hayes",
+   "Oso Ighodaro",
    "Obi Toppin",
    "Naji Marshall",
    "Jordan Poole",
