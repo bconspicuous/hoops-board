@@ -1,5 +1,5 @@
 {
- "asOf": "2026-10-28T07:38+09:00",
+ "asOf": "2026-10-28T15:19+09:00",
  "leagueId": "751654965",
  "season": 2027,
  "teams": [
@@ -173,9 +173,9 @@
    },
    "acqByPeriod": {
     "1": 6,
-    "2": 2
+    "2": 3
    },
-   "acqTotal": 8
+   "acqTotal": 9
   },
   {
    "name": "Kunhyo's Chokeslam",
@@ -289,6 +289,7 @@
    "Chet Holmgren",
    "Alperen Sengun",
    "Nic Claxton",
+   "Anthony Edwards",
    "Jalen Duren",
    "Kawhi Leonard",
    "Kon Knueppel",
@@ -314,35 +315,32 @@
    "Donte DiVincenzo",
    "Bradley Beal",
    "Maxime Raynaud",
-   "Jose Alvarado",
    "Ben Simmons",
    "Max Strus",
    "Sergio de Larrea",
+   "Cameron Carr",
    "Tacko Fall"
   ],
   "DTD": [
-   "Derrick White",
    "Lauri Markkanen",
    "Kyrie Irving",
-   "Anthony Edwards",
-   "Ausar Thompson",
    "Tyrese Haliburton",
    "Yaxel Lendeborg",
    "Ajay Mitchell",
    "Andrew Nembhard",
+   "Egor Demin",
    "Aaron Wiggins",
-   "Jaxson Hayes",
    "Oso Ighodaro",
+   "Jaxson Hayes",
    "Obi Toppin",
    "Naji Marshall",
    "Jordan Poole",
    "Cameron Johnson",
-   "Scoot Henderson",
-   "Aaron Nesmith",
    "Pelle Larsson",
+   "Aaron Nesmith",
+   "Jose Alvarado",
    "Marcus Smart",
-   "Isaiah Joe",
-   "Rob Dillingham"
+   "Isaiah Joe"
   ]
  }
 }
