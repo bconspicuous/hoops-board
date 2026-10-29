@@ -1,5 +1,5 @@
 {
- "asOf": "2026-10-29T11:32+09:00",
+ "asOf": "2026-10-29T19:12+09:00",
  "leagueId": "504060248",
  "season": 2027,
  "teams": [
@@ -86,7 +86,7 @@
      "2": 1
     },
     "misc": 0,
-    "moveToActive": 24,
+    "moveToActive": 26,
     "moveToIR": 1,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -117,10 +117,10 @@
     "Brandon Ingram"
    ],
    "record": {
-    "wins": 4,
+    "wins": 5,
     "losses": 5,
-    "ties": 2,
-    "percentage": 0.45454545454545453
+    "ties": 1,
+    "percentage": 0.5
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
@@ -131,7 +131,7 @@
      "2": 4
     },
     "misc": 0,
-    "moveToActive": 32,
+    "moveToActive": 34,
     "moveToIR": 1,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -148,7 +148,6 @@
     "Domantas Sabonis",
     "Devin Booker",
     "Pascal Siakam",
-    "Lauri Markkanen",
     "De'Aaron Fox",
     "Franz Wagner",
     "Zion Williamson",
@@ -156,9 +155,12 @@
     "Myles Turner",
     "Jaime Jaquez Jr.",
     "Wendell Carter Jr.",
-    "Kris Dunn"
+    "Kris Dunn",
+    "Jrue Holiday"
    ],
-   "ir": [],
+   "ir": [
+    "Lauri Markkanen"
+   ],
    "record": {
     "wins": 5,
     "losses": 6,
@@ -174,7 +176,7 @@
      "2": 1
     },
     "misc": 0,
-    "moveToActive": 25,
+    "moveToActive": 29,
     "moveToIR": 3,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -219,7 +221,7 @@
      "2": 4
     },
     "misc": 0,
-    "moveToActive": 26,
+    "moveToActive": 29,
     "moveToIR": 3,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -263,7 +265,7 @@
      "1": 3
     },
     "misc": 0,
-    "moveToActive": 28,
+    "moveToActive": 31,
     "moveToIR": 2,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -285,10 +287,10 @@
     "Dylan Harper",
     "Immanuel Quickley",
     "John Collins",
-    "Yves Missi",
     "Precious Achiuwa",
     "Paul Reed",
-    "Jaylen Wells"
+    "Jaylen Wells",
+    "Robert Williams III"
    ],
    "ir": [
     "Anthony Edwards"
@@ -301,14 +303,14 @@
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
-    "acquisitions": 5,
-    "drops": 4,
+    "acquisitions": 6,
+    "drops": 5,
     "matchupAcquisitionTotals": {
      "1": 3,
-     "2": 2
+     "2": 3
     },
     "misc": 0,
-    "moveToActive": 29,
+    "moveToActive": 32,
     "moveToIR": 2,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -353,7 +355,7 @@
      "2": 3
     },
     "misc": 0,
-    "moveToActive": 32,
+    "moveToActive": 34,
     "moveToIR": 4,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -377,8 +379,8 @@
     "CJ McCollum",
     "Tobias Harris",
     "Yaxel Lendeborg",
-    "Quentin Grimes",
-    "Julian Champagnie"
+    "Julian Champagnie",
+    "Cam Spencer"
    ],
    "ir": [
     "Kon Knueppel"
@@ -398,7 +400,7 @@
      "2": 2
     },
     "misc": 0,
-    "moveToActive": 25,
+    "moveToActive": 28,
     "moveToIR": 2,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -428,9 +430,9 @@
    "ir": [],
    "record": {
     "wins": 5,
-    "losses": 4,
-    "ties": 2,
-    "percentage": 0.5454545454545454
+    "losses": 5,
+    "ties": 1,
+    "percentage": 0.5
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
@@ -440,7 +442,7 @@
      "2": 1
     },
     "misc": 0,
-    "moveToActive": 22,
+    "moveToActive": 25,
     "moveToIR": 1,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -453,16 +455,10 @@
    "Jaren Jackson Jr.",
    "Paolo Banchero",
    "Brandon Ingram",
-   "Lauri Markkanen",
-   "Luka Doncic",
    "Tyrese Haliburton",
-   "Alperen Sengun",
    "Jalen Duren",
-   "Chet Holmgren",
    "Anthony Edwards",
-   "Yves Missi",
    "Kawhi Leonard",
-   "Ivica Zubac",
    "Kon Knueppel",
    "Tobias Harris",
    "Coby White",
@@ -473,40 +469,46 @@
    "Jimmy Butler III",
    "Alex Caruso",
    "Jalen Suggs",
-   "Rui Hachimura",
-   "Naji Marshall",
+   "Yves Missi",
    "Cason Wallace",
    "Cameron Johnson",
    "T.J. McConnell",
    "Shaedon Sharpe",
    "Mark Williams",
    "Jusuf Nurkic",
-   "Ziaire Williams",
    "Santi Aldama",
    "Dereck Lively II",
    "Justin Champagnie",
-   "Tre Johnson",
    "Donte DiVincenzo",
    "Bradley Beal",
-   "Gui Santos",
    "Maxime Raynaud",
    "Jose Alvarado",
    "Marcus Smart",
    "Ben Simmons",
-   "Isaiah Joe",
    "Max Strus",
    "Cameron Carr",
-   "Sergio de Larrea",
    "Tacko Fall",
-   "Steven Adams",
    "Jayden Quaintance",
    "Yanic Konan Niederhauser",
+   "Steven Adams",
    "Moses Moody"
   ],
   "DTD": [
+   "Lauri Markkanen",
+   "Luka Doncic",
+   "Alperen Sengun",
+   "Chet Holmgren",
+   "Ivica Zubac",
    "Egor Demin",
    "Oso Ighodaro",
+   "Rui Hachimura",
    "Jordan Poole",
+   "Naji Marshall",
+   "Ziaire Williams",
+   "Tre Johnson",
+   "Gui Santos",
+   "Isaiah Joe",
+   "Sergio de Larrea",
    "Rob Dillingham"
   ]
  }
