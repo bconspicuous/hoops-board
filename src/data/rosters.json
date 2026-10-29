@@ -1,5 +1,5 @@
 {
- "asOf": "2026-10-29T22:45+09:00",
+ "asOf": "2026-10-30T07:59+09:00",
  "source": "ESPN API sync (GitHub Actions g8-espn)",
  "teams": {
   "Junyoung's Scary Team": {
@@ -165,20 +165,24 @@
   }
  },
  "status": {
+  "Dejounte Murray": "O",
   "Paolo Banchero": "O",
   "Yves Missi": "O",
   "Jalen Williams": "O",
   "Coby White": "O",
+  "Reed Sheppard": "O",
   "Anthony Edwards": "O",
   "Jalen Duren": "O",
   "Kawhi Leonard": "O",
   "Kon Knueppel": "O",
   "Tyrese Haliburton": "O",
+  "Ivica Zubac": "O",
   "Brandon Ingram": "O",
+  "Robert Williams III": "DTD",
   "Lauri Markkanen": "DTD",
   "Chet Holmgren": "DTD",
   "Luka Doncic": "DTD",
   "Alperen Sengun": "DTD",
-  "Ivica Zubac": "DTD"
+  "Jaylen Brown": "DTD"
  }
 }
