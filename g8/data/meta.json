@@ -1,9 +1,9 @@
 {
- "asOf": "2026-10-29T15:29+09:00",
- "scoringPeriodId": 9,
+ "asOf": "2026-10-29T22:45+09:00",
+ "scoringPeriodId": 10,
  "currentMatchupPeriod": 2,
  "teams": 8,
- "players": 314,
+ "players": 315,
  "auth": true,
  "league": "g8"
 }

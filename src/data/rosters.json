@@ -1,5 +1,5 @@
 {
- "asOf": "2026-10-29T15:29+09:00",
+ "asOf": "2026-10-29T22:45+09:00",
  "source": "ESPN API sync (GitHub Actions g8-espn)",
  "teams": {
   "Junyoung's Scary Team": {
@@ -13,10 +13,10 @@
     "Damian Lillard",
     "Keyonte George",
     "Zion Williamson",
-    "Stephon Castle",
     "Darius Acuff Jr.",
     "Ayo Dosunmu",
-    "Wendell Carter Jr."
+    "Wendell Carter Jr.",
+    "Robert Williams III"
    ],
    "ir": [
     "Paolo Banchero",
@@ -29,7 +29,6 @@
     "Amen Thompson",
     "Stephen Curry",
     "Evan Mobley",
-    "Lauri Markkanen",
     "Trey Murphy III",
     "Onyeka Okongwu",
     "De'Aaron Fox",
@@ -37,10 +36,12 @@
     "Immanuel Quickley",
     "Myles Turner",
     "VJ Edgecombe",
-    "Jrue Holiday"
+    "Jrue Holiday",
+    "Cedric Coward"
    ],
    "ir": [
-    "Jalen Williams"
+    "Jalen Williams",
+    "Lauri Markkanen"
    ]
   },
   "Garak Twindragons": {
@@ -57,7 +58,7 @@
     "Rudy Gobert",
     "Norman Powell",
     "Toumani Camara",
-    "Kel'el Ware"
+    "Precious Achiuwa"
    ],
    "ir": [
     "Coby White"
@@ -93,9 +94,9 @@
     "Miles Bridges",
     "Zach LaVine",
     "Mikal Bridges",
-    "Julian Champagnie",
     "Derik Queen",
-    "Jabari Smith Jr."
+    "Jabari Smith Jr.",
+    "Peyton Watson"
    ],
    "ir": [
     "Luka Doncic",
