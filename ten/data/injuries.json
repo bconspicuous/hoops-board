@@ -1,5 +1,5 @@
 {
- "asOf": "2026-10-31T01:01+09:00",
+ "asOf": "2026-10-31T05:53+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -158,6 +158,20 @@
    "long": "Boswell continues to rehab after right knee surgery. The hope in early October was that he would be cleared for basketball activities prior to the start of the G League season, which begins in early November."
   },
   {
+   "player": "Dailyn Swain",
+   "team": "CHI",
+   "status": "Day-To-Day",
+   "date": "2026-10-30T20:38Z",
+   "type": "day-to-day",
+   "returnDate": "2026-10-30",
+   "detail": "Soreness",
+   "side": null,
+   "injury": "Back",
+   "fantasyStatus": "GTD",
+   "short": "Swain is listed as questionable for Friday's game at Boston due to lower-back soreness.",
+   "long": "Swain was a late addition to the injury report. He's been a healthy scratch in three of the last four games, so his potential absence wouldn't cause any significant waves in the rotation."
+  },
+  {
    "player": "Jalen Smith",
    "team": "CHI",
    "status": "Day-To-Day",
@@ -200,6 +214,20 @@
    "long": "The Bulls reported one week ago that the big man would be re-evaluated in two weeks, so he appears to be right on track with his recovery from a hamstring injury. He'll presumably need to take part in 5-on-5 drills before getting the green light to return to game action."
   },
   {
+   "player": "Jaylon Tyson",
+   "team": "CLE",
+   "status": "Out",
+   "date": "2026-10-30T20:50Z",
+   "type": "out",
+   "returnDate": "2026-11-02",
+   "detail": "Sprain",
+   "side": "Right",
+   "injury": "Ankle",
+   "fantasyStatus": "OUT",
+   "short": "Tyson (neck) has been cleared to play Thursday night against Atlanta.",
+   "long": "Tyson was initially added to the injury report as questionable due to a neck strain, but the issue won't prevent him from taking the court Thursday evening. He's averaging 9.0 points, 3.0 rebounds and 3.3 assists in 21.5 minutes in his first four appearances of the 2026-27 campaign."
+  },
+  {
    "player": "Meleek Thomas",
    "team": "CLE",
    "status": "Day-To-Day",
@@ -212,6 +240,20 @@
    "fantasyStatus": "GTD",
    "short": "Thomas (foot) has been ruled out for Thursday's game against the Hawks, Serena Winters of FanDuel Sports Network Ohio reports.",
    "long": "Thomas will be sidelined for the second leg of the Cavaliers' back-to-back set while nursing a foot injury, and his next opportunity to play is Saturday against the Bucks. The rookie second-rounder averaged 19.5 minutes per game over his last two outings, and that playing time should be absorbed by Sam Merrill and Mario Hezonja."
+  },
+  {
+   "player": "Naji Marshall",
+   "team": "DAL",
+   "status": "Day-To-Day",
+   "date": "2026-10-30T20:24Z",
+   "type": "day-to-day",
+   "returnDate": "2026-10-30",
+   "detail": null,
+   "side": null,
+   "injury": "Illness",
+   "fantasyStatus": "GTD",
+   "short": "Marshall (illness) is probable for Friday's game against the Rockets.",
+   "long": "Marshall is likely to return from a two-game absence Friday. Fewer minutes will likely be open for Zaccharie Risacher off the bench."
   },
   {
    "player": "Tarik Biberovic",
@@ -256,20 +298,6 @@
    "long": "De Larrea remains sidelined with a knee sprain, which he suffered during Monday's win in Miami. His next chance to play comes Monday against the Kings."
   },
   {
-   "player": "Naji Marshall",
-   "team": "DAL",
-   "status": "Day-To-Day",
-   "date": "2026-10-29T22:03Z",
-   "type": "day-to-day",
-   "returnDate": "2026-10-30",
-   "detail": null,
-   "side": null,
-   "injury": "Illness",
-   "fantasyStatus": "GTD",
-   "short": "Marshall is questionable for Friday's game against the Rockets with an illness.",
-   "long": "Marshall has a chance to return from a two-game absence Friday. Fewer minutes would be open for Zaccharie Risacher off the bench if Marshall is able to return."
-  },
-  {
    "player": "Dereck Lively II",
    "team": "DAL",
    "status": "Out",
@@ -287,29 +315,29 @@
    "player": "Alpha Diallo",
    "team": "DEN",
    "status": "Out",
-   "date": "2026-10-29T23:50Z",
+   "date": "2026-10-30T20:30Z",
    "type": "out",
    "returnDate": "2026-10-30",
    "detail": null,
    "side": "Right",
    "injury": "Personal",
    "fantasyStatus": "GTD",
-   "short": "Diallo (personal) is listed as questionable for Friday's game against the Suns.",
-   "long": "Diallo was held out of Wednesday's win over the Pelicans due to personal reasons, and he missed each of the two prior games while nursing a wrist injury. Bryce Hopkins and DeMar DeRozan would continue to see more playing time if Diallo is held out of Friday's contest."
+   "short": "Diallo (personal) is doubtful for Friday's game against the Suns.",
+   "long": "Diallo is not expected to rejoin the Nuggets in time for Friday's action. Assuming he's eventually ruled out, his next chance to return comes Monday against Portland."
   },
   {
    "player": "Cameron Johnson",
    "team": "DEN",
    "status": "Out",
-   "date": "2026-10-29T23:49Z",
+   "date": "2026-10-30T18:41Z",
    "type": "out",
    "returnDate": "2026-10-30",
    "detail": "Sprain",
    "side": "Right",
    "injury": "Ankle",
    "fantasyStatus": "GTD",
-   "short": "Johnson (ankle) is questionable for Friday's game against Phoenix.",
-   "long": "The fact that Johnson has been upgraded to questionable is a sign he's nearing a return, as he was added to the injury report as doubtful ahead of Wednesday's clash before being downgraded to out ahead of tipoff. He hasn't been able to take the floor since suffering a right ankle sprain Oct. 22 against the Thunder."
+   "short": "Johnson (ankle) is expected to play in Friday's game against the Suns, per John Gambadoro of Arizona Sports 98.7 FM.",
+   "long": "Johnson appears to be primed to end a three-game absence with an ankle sprain. Less playing time should be open to Trevon Brazile and Bryce Hopkins on Friday."
   },
   {
    "player": "Spencer Jones",
@@ -342,16 +370,16 @@
   {
    "player": "Isaiah Joe",
    "team": "DET",
-   "status": "Day-To-Day",
-   "date": "2026-10-29T20:34Z",
-   "type": "day-to-day",
-   "returnDate": "2026-10-30",
+   "status": "Out",
+   "date": "2026-10-30T20:35Z",
+   "type": "out",
+   "returnDate": "2026-11-02",
    "detail": "Bruise",
    "side": "Right",
    "injury": "Hip",
-   "fantasyStatus": "GTD",
-   "short": "Joe (hip) is listed as questionable for Friday's game against Brooklyn.",
-   "long": "Joe has missed Detroit's last two games due to a right hip contusion, but his questionable designation suggests he could return Friday. The 27-year-old guard has appeared in three games this season, averaging 7.3 points in 13.9 minutes per contest. If Joe remains sidelined, Kevin Huerter, Ronald Holland and Javonte Green could continue seeing additional opportunities off the bench."
+   "fantasyStatus": "OUT",
+   "short": "Joe (hip) has been ruled out for Friday's game against the Nets.",
+   "long": "Joe will miss a third straight game due to a right hip contusion, and his next chance to return will come Monday at Charlotte. With the 27-year-old swingman sidelined, Kevin Huerter, Javonte Green and Ronald Holland are candidates to see increased burn."
   },
   {
    "player": "Jalen Duren",
@@ -371,15 +399,15 @@
    "player": "Gui Santos",
    "team": "GS",
    "status": "Day-To-Day",
-   "date": "2026-10-30T00:06Z",
+   "date": "2026-10-30T20:37Z",
    "type": "day-to-day",
    "returnDate": "2026-10-30",
    "detail": "Tendinitis",
    "side": "Left",
    "injury": "Knee",
    "fantasyStatus": "GTD",
-   "short": "Santos (knee) is listed as doubtful for Friday's game against the Warriors.",
-   "long": "Santos is expected to miss a second straight game while dealing with left knee tendinitis. If the 24-year-old forward remains sidelined, Georges Niang would likely continue seeing increased playing time."
+   "short": "Santos (knee) is questionable for Friday's game against the Lakers.",
+   "long": "After being listed as doubtful, Santos now has a better chance of playing Friday. He could test out his knee during pregame warmups before the Warriors come to a final decision."
   },
   {
    "player": "Kristaps Porzingis",
@@ -427,15 +455,15 @@
    "player": "Reed Sheppard",
    "team": "HOU",
    "status": "Out",
-   "date": "2026-10-29T20:36Z",
+   "date": "2026-10-30T19:19Z",
    "type": "out",
    "returnDate": "2026-10-31",
    "detail": null,
    "side": null,
    "injury": "Back",
    "fantasyStatus": "OUT",
-   "short": "Sheppard (back) is out for Friday's game against the Mavericks.",
-   "long": "The combo guard is sitting out the front end of this back-to-back set. With Sheppard getting Friday night off, Tari Eason should be able to maintain a prominent role off the bench even if Alperen Sengun (back) returns to action."
+   "short": "Houston picked up Sheppard's (back) fourth-year team option Friday, per Lachard Binkley of SI.com.",
+   "long": "This decision is a no-brainer after the Rockets chose Sheppard in the first round of the 2024 NBA Draft. Sheppard, who remains out for Friday's game versus Dallas, is a key cog in the backcourt rotation when healthy."
   },
   {
    "player": "Marcus Smart",
@@ -480,6 +508,48 @@
    "long": "The veteran big man can be considered week-to-week until the Rockets offer another update on his status. In the meantime, Clint Capela will likely see increased playing time behind Alperen Sengun."
   },
   {
+   "player": "Obi Toppin",
+   "team": "IND",
+   "status": "Day-To-Day",
+   "date": "2026-10-30T20:27Z",
+   "type": "day-to-day",
+   "returnDate": "2026-10-30",
+   "detail": null,
+   "side": null,
+   "injury": "Back",
+   "fantasyStatus": "GTD",
+   "short": "Toppin (back) is questionable for Friday's game against the Heat.",
+   "long": "Toppin is a late addition to the injury report with a back issue. Kelly Oubre and Jarace Walker would in line for more playing time if Toppin sits outs Friday."
+  },
+  {
+   "player": "T.J. McConnell",
+   "team": "IND",
+   "status": "Out",
+   "date": "2026-10-30T19:09Z",
+   "type": "out",
+   "returnDate": "2026-11-02",
+   "detail": "Strain",
+   "side": "Right",
+   "injury": "Hamstring",
+   "fantasyStatus": "OUT",
+   "short": "McConnell (hamstring) is practicing in the G League at Noblesville Boom training camp, per Alex Golden of SI.com.",
+   "long": "McConnell appears to closing in on making his season debut for the Pacers, though it won't come Friday in Miami. Indiana returns home for a back-to-back set Sunday against the Nets and Monday versus the Hawks, so the veteran floor general's return could come at some point then."
+  },
+  {
+   "player": "Johnny Furphy",
+   "team": "IND",
+   "status": "Out",
+   "date": "2026-10-30T19:06Z",
+   "type": "out",
+   "returnDate": "2027-01-02",
+   "detail": "Surgery",
+   "side": "Right",
+   "injury": "Knee",
+   "fantasyStatus": "OUT",
+   "short": "Furphy (knee) is practicing with the G League's Noblesville Boom, per Alex Golden of SI.com.",
+   "long": "The Pacers have been pretty quiet regarding Furphy's ACL recovery since the offseason, but it's encouraging to hear some form of progress as the forward begins to ramp up his activity. Although Furphy still lacks a firm timetable for a return and is likely to be brought back slowly, it appears a season debut before the start of the new calendar year is in the cards."
+  },
+  {
    "player": "Andrew Nembhard",
    "team": "IND",
    "status": "Day-To-Day",
@@ -522,20 +592,6 @@
    "long": "The Pacers continue to view the veteran big man as day-to-day due to an ankle sprain. Jay Huff figures to continue to start at center for the Pacers on Friday, while Obi Toppin could see a larger share of the frontcourt minutes."
   },
   {
-   "player": "T.J. McConnell",
-   "team": "IND",
-   "status": "Out",
-   "date": "2026-10-28T21:43Z",
-   "type": "out",
-   "returnDate": "2026-11-02",
-   "detail": "Strain",
-   "side": "Right",
-   "injury": "Hamstring",
-   "fantasyStatus": "OUT",
-   "short": "Pacers head coach Rick Carlisle stated McConnell (hamstring) is \"doing better\" and \"getting closer\" to a return, Alex Golden of SI.com reports.",
-   "long": "McConnell hasn't played this season due to a hamstring injury. While Carlisle didn't give a specific date on when McConnell will be cleared to suit up, it appears his return will come sooner rather than later. With Tyrese Haliburton (hamstring) sidelined, McConnell could work his way into the starting lineup at some point, though it may take him at least a few games before he receives a full workload."
-  },
-  {
    "player": "Ben Sheppard",
    "team": "IND",
    "status": "Out",
@@ -564,32 +620,18 @@
    "long": "Given the tricky nature of hamstring injuries, the Pacers will likely take their time bringing Haliburton back to the court, so don't be surprised if his absence extends beyond this two-week window. Andrew Nembhard (neck) and Pascal Siakam should each get a usage bump as they take over more of the playmaking duties sans Haliburton and there will be more minutes available for Quenton Jackson."
   },
   {
-   "player": "Johnny Furphy",
-   "team": "IND",
-   "status": "Out",
-   "date": "2026-02-09T21:43Z",
-   "type": "out",
-   "returnDate": "2027-01-02",
-   "detail": "Surgery",
-   "side": "Right",
-   "injury": "Knee",
-   "fantasyStatus": "OUT",
-   "short": "Furphy was diagnosed with a torn right ACL on Monday and will miss the remainder of the season, Michael Scotto of USA Today reports.",
-   "long": "Furphy started in 21 of 35 regular-season appearances for the Pacers, posting averages of 5.1 points, 4.4 rebounds, 1.2 assists and 0.7 three-pointers in 18.4 minutes per contest. While no timetable has been announced, Furphy's absence could extend through the beginning of the 2026-27 season. With this news, the Pacers will likely lean more on Ben Sheppard, Kam Jones and Quenton Jackson moving forward."
-  },
-  {
    "player": "Rui Hachimura",
    "team": "LAC",
    "status": "Day-To-Day",
-   "date": "2026-10-29T22:13Z",
+   "date": "2026-10-30T18:00Z",
    "type": "day-to-day",
    "returnDate": "2026-10-30",
    "detail": "Soreness",
    "side": "Left",
    "injury": "Quadriceps",
    "fantasyStatus": "GTD",
-   "short": "Hachimura (quadriceps) is questionable for Friday's game against Minnesota, Tomer Azarly of ClutchPoints.com reports.",
-   "long": "Hachimura is in jeopardy of missing a second straight game due to left quad soreness. If the 28-year-old forward is ultimately ruled out, Kobe Sanders, Gradey Dick and Baba Miller would be candidates to see an uptick in minutes."
+   "short": "Hachimura (quadriceps) is probable for Friday's game against Minnesota, per Ohm Youngmisuk of ESPN.com.",
+   "long": "Hachimura is set to return from a two-game absence with quadriceps soreness. Kobe Sanders is likely to revert back to a bench role Friday, and fewer minutes should be available to Gradey Dick as well."
   },
   {
    "player": "Yanic Konan Niederhauser",
@@ -662,18 +704,18 @@
    "long": "It's a tough break for Miller, who had an opportunity to battle for a reserve role during training camp in the fall. The timeline for a return is likely to keep him on the shelf until after the All-Star break. Miller's extended stay on the sidelines gives Kobe Sanders a chance to crack the Clippers' rotation."
   },
   {
-   "player": "Cameron Carr",
+   "player": "Ziaire Williams",
    "team": "LAL",
    "status": "Out",
-   "date": "2026-10-30T00:07Z",
+   "date": "2026-10-30T20:05Z",
    "type": "out",
    "returnDate": "2026-11-01",
-   "detail": "Strain",
-   "side": "Right",
-   "injury": "Oblique",
+   "detail": null,
+   "side": "Left",
+   "injury": "Foot",
    "fantasyStatus": "OUT",
-   "short": "Carr (oblique) has been ruled out for Friday's game against Golden State.",
-   "long": "Carr has yet to make his NBA debut while tending to a right oblique strain. His next opportunity to take the court will arrive Sunday against Toronto."
+   "short": "Williams has been ruled out for Friday's game against the Warriors due to left foot injury management, Mark Medina of TheSportingTribune.com reports.",
+   "long": "Williams will miss a second consecutive contest due to a left foot issue, and his next chance to play will come Sunday against Toronto. Quentin Grimes will likely continue seeing increased playing time in Williams' absence."
   },
   {
    "player": "Adou Thiero",
@@ -688,20 +730,6 @@
    "fantasyStatus": "OUT",
    "short": "Thiero (knee) has been ruled out for Friday's game against the Warriors.",
    "long": "Thiero has yet to appear in a regular-season game due to a left knee injury that he picked up during preseason action in early October. His next chance to play is Sunday against the Raptors, but it's unclear when the second-year pro will be cleared to make his 2026-27 debut."
-  },
-  {
-   "player": "Ziaire Williams",
-   "team": "LAL",
-   "status": "Day-To-Day",
-   "date": "2026-10-30T00:02Z",
-   "type": "day-to-day",
-   "returnDate": "2026-10-30",
-   "detail": null,
-   "side": null,
-   "injury": "Foot",
-   "fantasyStatus": "GTD",
-   "short": "Williams (foot) is questionable for Friday's game against Golden State.",
-   "long": "Williams started in each of the first four games of the regular season but was unable to play in Wednesday's 103-87 win over the Clippers due to a foot injury. Jake LaRavia would likely remain in the Lakers' starting five if Williams is not cleared to play Friday."
   },
   {
    "player": "Quinten Post",
@@ -721,15 +749,15 @@
    "player": "Simone Fontecchio",
    "team": "MIA",
    "status": "Day-To-Day",
-   "date": "2026-10-29T20:48Z",
+   "date": "2026-10-30T20:28Z",
    "type": "day-to-day",
    "returnDate": "2026-10-30",
    "detail": null,
    "side": null,
    "injury": "Illness",
    "fantasyStatus": "GTD",
-   "short": "Fontecchio (illness) is listed as questionable for Friday's game against Indiana.",
-   "long": "Fontecchio is still under the weather and could hit the inactive list for a second straight game. However, his potential absence wouldn't cause any significant waves in the rotation."
+   "short": "Fontecchio (illness) is probable for Friday's against the Pacers.",
+   "long": "Fontecchio is expected to be available off the bench Friday. However, he may not see a meaningful role."
   },
   {
    "player": "Anthony Edwards",
@@ -800,6 +828,20 @@
    "fantasyStatus": "OUT",
    "short": "Missi has been diagnosed with a left knee bone bruise and he will miss an extended period of time, Brett Siegel of ClutchPoints.com reports.",
    "long": "Missi currently has no official timetable for his return, but he appears likely to miss significant time. Derik Queen could be elevated into a starting role while Missi is sidelined, so make sure he's not floating around on your waiver wire. Missi doesn't offer enough upside to warrant holding onto in re-draft fantasy leagues."
+  },
+  {
+   "player": "Karl-Anthony Towns",
+   "team": "NY",
+   "status": "Day-To-Day",
+   "date": "2026-10-30T20:33Z",
+   "type": "day-to-day",
+   "returnDate": "2026-10-30",
+   "detail": "Sprain",
+   "side": "Left",
+   "injury": "Wrist",
+   "fantasyStatus": "GTD",
+   "short": "Towns (wrist) is listed as probable for Friday's game against Philadelphia.",
+   "long": "Towns is dealing with a left wrist sprain he sustained in Wednesday's win over the Bulls, though he's still expected to suit up for Friday's contest. Over five regular-season outings, he's averaging 21.8 points, 13.8 rebounds and 3.2 assists in 31.0 minutes per tilt."
   },
   {
    "player": "Jose Alvarado",
@@ -970,6 +1012,20 @@
    "long": "With Nelson still in recovery mode from the left ankle surgery he underwent this summer, his path back to game action remains delayed for the early part of the season. The rookie big man is on a two-way contract with the Magic, so his short-term absence mainly affects his developmental timeline rather than Orlando's regular rotation."
   },
   {
+   "player": "Jaylen Brown",
+   "team": "PHI",
+   "status": "Day-To-Day",
+   "date": "2026-10-30T20:23Z",
+   "type": "day-to-day",
+   "returnDate": "2026-10-30",
+   "detail": null,
+   "side": null,
+   "injury": "Knee",
+   "fantasyStatus": "GTD",
+   "short": "Brown (knee) is doubtful for Friday's game against the Knicks.",
+   "long": "The star forward is expected to sit out the front end of this back-to-back set. Kentavious Caldwell-Pope and Dean Wade should both pick up more playing time Friday."
+  },
+  {
    "player": "Jabari Walker",
    "team": "PHI",
    "status": "Out",
@@ -982,20 +1038,6 @@
    "fantasyStatus": "OUT",
    "short": "Walker (knee) has been ruled out for Friday's game versus New York.",
    "long": "Walker will miss a third consecutive contest due to a left knee issue. His next opportunity to suit up will come Saturday at Charlotte in the second leg of this back-to-back set."
-  },
-  {
-   "player": "Jaylen Brown",
-   "team": "PHI",
-   "status": "Day-To-Day",
-   "date": "2026-10-29T21:34Z",
-   "type": "day-to-day",
-   "returnDate": "2026-10-30",
-   "detail": null,
-   "side": null,
-   "injury": "Knee",
-   "fantasyStatus": "GTD",
-   "short": "Brown (knee) is questionable for Friday's game against the Knicks.",
-   "long": "Brown is in danger of sitting out Friday's showdown with the defending champions, which is the front end of a back-to-back set. More pressure would fall on Tyrese Maxey, Joel Embiid and LeBron James if Brown is out, while Kentavious Caldwell-Pope would be the most likely choice to enter the starting lineup."
   },
   {
    "player": "Tacko Fall",
@@ -1068,6 +1110,20 @@
    "long": "This is a tough blow for the center with training camp right around the corner. With his status for Opening Night in jeopardy, this will put a lot of eyes on Oso Ighodaro and Khaman Maluach, with the latter already drawing buzz during the Summer League. More clarity on Williams' timeline should be known in the coming weeks."
   },
   {
+   "player": "Ja Morant",
+   "team": "POR",
+   "status": "Out",
+   "date": "2026-10-30T18:45Z",
+   "type": "out",
+   "returnDate": "2026-12-01",
+   "detail": "Not Specified",
+   "side": "Left",
+   "injury": "Hamstring",
+   "fantasyStatus": "OUT",
+   "short": "Morant has been diagnosed with a Grade 2 left hamstring strain and is expected to miss four weeks, Portland announced Friday.",
+   "long": "Morant left Thursday's game early with a hamstring injury, which has since been revealed to be a strain that will result in a monthlong absence. The star guard leaves a major void in the Trail Blazers' starting backcourt, one that figures to be filled by Jrue Holiday for the foreseeable future."
+  },
+  {
    "player": "Robert Williams III",
    "team": "POR",
    "status": "Day-To-Day",
@@ -1080,20 +1136,6 @@
    "fantasyStatus": "GTD",
    "short": "Williams (knee) has been ruled out for Thursday's game against Memphis, Casey Holdahl of the Trail Blazers' official site reports.",
    "long": "Williams was initially added to the injury report as doubtful due to a left knee injury, so the fact that he's been ruled out is no surprise. Micah Potter and Yang Hansen could pick up a few additional minutes behind starter Donovan Clingan in Williams' absence."
-  },
-  {
-   "player": "Ja Morant",
-   "team": "POR",
-   "status": "Day-To-Day",
-   "date": "2026-10-30T04:17Z",
-   "type": "day-to-day",
-   "returnDate": "2026-10-31",
-   "detail": "Not Specified",
-   "side": "Left",
-   "injury": "Hamstring",
-   "fantasyStatus": "GTD",
-   "short": "Morant won't return to Thursday's game against the Grizzlies due to a left hamstring injury. He'll end with 14 points (6-14 FG, 2-5 3Pt), two rebounds and three assists in 23 minutes.",
-   "long": "The game was already out of reach when Morant was ruled out for the remainder of the fourth quarter. The severity of his injury is unclear at this time. The 27-year-old can be considered questionable for Saturday's matchup in Utah until further notice."
   },
   {
    "player": "Chris Youngblood",
