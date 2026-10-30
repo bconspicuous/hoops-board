@@ -1,5 +1,5 @@
 {
- "asOf": "2026-10-30T17:45+09:00",
+ "asOf": "2026-10-31T01:01+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -46,6 +46,20 @@
    "long": "Carter missed Boston's final three preseason games with the illness and is now expected to miss time to begin the regular season. He can be considered week-to-week until Boston provides an update on his progress. The 2024 first-rounder signed a two-way pact with the Celtics on Saturday and will provide backcourt depth for the club."
   },
   {
+   "player": "Noah Clowney",
+   "team": "BKN",
+   "status": "Day-To-Day",
+   "date": "2026-10-30T14:16Z",
+   "type": "day-to-day",
+   "returnDate": "2026-10-30",
+   "detail": null,
+   "side": null,
+   "injury": "Illness",
+   "fantasyStatus": "GTD",
+   "short": "Clowney (illness) was downgraded to questionable for Friday's game versus Detroit, Erik Slater of ClutchPoints.com reports.",
+   "long": "Clowney woke up under the weather and could be a game-time call Friday. He's played a modest role so far with 21.5 minutes per contest. If he's unable to play, the team could rely more on Josh Minott."
+  },
+  {
    "player": "Egor Demin",
    "team": "BKN",
    "status": "Out",
@@ -77,29 +91,29 @@
    "player": "Dennis Schroder",
    "team": "CHA",
    "status": "Day-To-Day",
-   "date": "2026-10-29T21:37Z",
+   "date": "2026-10-30T15:34Z",
    "type": "day-to-day",
    "returnDate": "2026-10-30",
    "detail": null,
    "side": null,
    "injury": "Foot",
    "fantasyStatus": "GTD",
-   "short": "Schroder (foot) is questionable for Friday's game against the Wizards.",
-   "long": "The journeyman floor general is in jeopardy of missing the first leg of this back-to-back set. With Coby White still nursing a hamstring strain, the Hornets would be down to rookie first-rounder Christian Anderson as their lone true point guard if Schroder winds up sitting out."
+   "short": "Schroder (foot) is probable for Friday against the Wizards.",
+   "long": "Schroder was previously listed as questionable, so he's trending in the right direction. Through five games, he's averaging 14.0 points, 4.6 assists, 4.0 rebounds and 1.0 three-pointers."
   },
   {
    "player": "Kon Knueppel",
    "team": "CHA",
    "status": "Out",
-   "date": "2026-10-29T18:26Z",
+   "date": "2026-10-30T15:12Z",
    "type": "out",
    "returnDate": "2026-11-02",
    "detail": null,
    "side": "Left",
    "injury": "Hamstring",
    "fantasyStatus": "OUT",
-   "short": "Knueppel (hamstring) will practice with the G League's Greensboro Swarm on Thursday, the Hornets announced.",
-   "long": "Although the second-year sharpshooter hasn't been given an official timetable, this suggests that he's progressing towards a return. Knueppel will almost certainly be recalled shortly after practice, though an update on his progress may not be given immediately."
+   "short": "Knueppel (hamstring) was recalled from the G League's Greensboro Swarm on Friday. He remains out for Friday's contest against the Wizards.",
+   "long": "Knueppel was able to log a practice with the Swarm on Thursday. While there's been no official update on his progress, it's safe to assume he's at least trending in the right direction. A timetable for his return has yet to be announced."
   },
   {
    "player": "Coby White",
@@ -142,20 +156,6 @@
    "fantasyStatus": "OUT",
    "short": "Boswell (knee) is out for Wednesday's season opener against the Nets.",
    "long": "Boswell continues to rehab after right knee surgery. The hope in early October was that he would be cleared for basketball activities prior to the start of the G League season, which begins in early November."
-  },
-  {
-   "player": "Patrick Williams",
-   "team": "CHI",
-   "status": "Out",
-   "date": "2026-10-29T18:55Z",
-   "type": "out",
-   "returnDate": "2026-10-30",
-   "detail": "Soreness",
-   "side": "Right",
-   "injury": "Groin",
-   "fantasyStatus": "GTD",
-   "short": "Williams (adductor) is questionable for Friday's game in Boston.",
-   "long": "Williams is looking to be available for his season debut Friday. The forward could test out the issue prior to Friday's contest before Chicago clarifies his status."
   },
   {
    "player": "Jalen Smith",
