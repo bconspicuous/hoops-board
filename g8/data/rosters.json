@@ -1,5 +1,5 @@
 {
- "asOf": "2026-10-31T07:40+09:00",
+ "asOf": "2026-10-31T08:41+09:00",
  "leagueId": "751654965",
  "season": 2027,
  "teams": [
@@ -308,6 +308,7 @@
    "Jimmy Butler III",
    "Alex Caruso",
    "Jalen Suggs",
+   "Obi Toppin",
    "Jordan Poole",
    "Cason Wallace",
    "T.J. McConnell",
@@ -324,7 +325,6 @@
    "Bradley Beal",
    "Maxime Raynaud",
    "Jose Alvarado",
-   "Marcus Smart",
    "Isaiah Joe",
    "Ben Simmons",
    "Max Strus",
@@ -334,12 +334,9 @@
   "DTD": [
    "Lauri Markkanen",
    "Ty Jerome",
-   "Andrew Nembhard",
    "Oso Ighodaro",
-   "Obi Toppin",
    "Scotty Pippen Jr.",
    "Robert Williams III",
-   "Aaron Nesmith",
    "Meleek Thomas",
    "Gui Santos"
   ]
