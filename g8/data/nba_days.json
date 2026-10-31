@@ -1,5 +1,112 @@
 {
- "asOfET": "2026-10-31T03:21-04:00",
- "days": {},
- "error": "2026-10-30: HTTP Error 403: Forbidden; 2026-10-31: HTTP Error 403: Forbidden"
+ "asOfET": "2026-10-31T03:22-04:00",
+ "days": {
+  "2026-10-30": [
+   {
+    "id": "401909277",
+    "start": "2026-10-30T23:00Z",
+    "name": "CHA @ WSH",
+    "state": "post"
+   },
+   {
+    "id": "401909278",
+    "start": "2026-10-30T23:30Z",
+    "name": "CHI @ BOS",
+    "state": "post"
+   },
+   {
+    "id": "401909279",
+    "start": "2026-10-30T23:30Z",
+    "name": "DET @ BKN",
+    "state": "post"
+   },
+   {
+    "id": "401909280",
+    "start": "2026-10-30T23:30Z",
+    "name": "NY @ PHI",
+    "state": "post"
+   },
+   {
+    "id": "401909281",
+    "start": "2026-10-30T23:30Z",
+    "name": "ORL @ TOR",
+    "state": "post"
+   },
+   {
+    "id": "401909282",
+    "start": "2026-10-31T00:00Z",
+    "name": "IND @ MIA",
+    "state": "post"
+   },
+   {
+    "id": "401909283",
+    "start": "2026-10-31T00:00Z",
+    "name": "HOU @ DAL",
+    "state": "post"
+   },
+   {
+    "id": "401909284",
+    "start": "2026-10-31T00:00Z",
+    "name": "LAC @ MIN",
+    "state": "post"
+   },
+   {
+    "id": "401909285",
+    "start": "2026-10-31T02:00Z",
+    "name": "LAL @ GS",
+    "state": "post"
+   },
+   {
+    "id": "401909286",
+    "start": "2026-10-31T02:00Z",
+    "name": "DEN @ PHX",
+    "state": "post"
+   }
+  ],
+  "2026-10-31": [
+   {
+    "id": "401909896",
+    "start": "2026-10-31T19:00Z",
+    "name": "POR @ UTAH",
+    "state": "pre"
+   },
+   {
+    "id": "401909897",
+    "start": "2026-10-31T22:00Z",
+    "name": "PHI @ CHA",
+    "state": "pre"
+   },
+   {
+    "id": "401909898",
+    "start": "2026-10-31T23:00Z",
+    "name": "ATL @ NO",
+    "state": "pre"
+   },
+   {
+    "id": "401909899",
+    "start": "2026-11-01T00:00Z",
+    "name": "SAC @ MEM",
+    "state": "pre"
+   },
+   {
+    "id": "401909900",
+    "start": "2026-11-01T00:00Z",
+    "name": "CLE @ MIL",
+    "state": "pre"
+   },
+   {
+    "id": "401909901",
+    "start": "2026-11-01T00:00Z",
+    "name": "MIN @ SA",
+    "state": "pre"
+   },
+   {
+    "id": "401909902",
+    "start": "2026-11-01T00:30Z",
+    "name": "OKC @ HOU",
+    "state": "pre"
+   }
+  ]
+ },
+ "source": "https://site.web.api.espn.com"
 }
