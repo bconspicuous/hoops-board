@@ -1,0 +1,258 @@
+<title>10팀 리그 시즌 전망</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap">
+<style>
+/* Layout: same identity as the 8-team team dashboard — key message, power ranking, my action plan, team detail (selector), heat tables */
+:root {
+  --bg: #EEF0F3; --card: #FFFFFF; --ink: #15203A; --muted: #5C6578; --line: #D6DAE2; --soft: #E7EAF0;
+  --accent: #C4501C; --accent-soft: #F7E3D8; --good: #1E7653; --good-soft: #DDF0E6; --bad: #A8383A; --bad-soft: #F5E0E0;
+  --s1: #2a78d6; --heat: 42, 120, 214;
+  --display: "Barlow Condensed", "Arial Narrow", "Helvetica Neue", sans-serif;
+  --body: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0D1220; --card: #151C2D; --ink: #E5E9F1; --muted: #98A2B6; --line: #283149; --soft: #1D2539;
+  --accent: #F0804B; --accent-soft: #3A2419; --good: #52C292; --good-soft: #15302A; --bad: #E07B7B; --bad-soft: #3A1E22;
+  --s1: #3987e5; --heat: 57, 135, 229; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0D1220; --card: #151C2D; --ink: #E5E9F1; --muted: #98A2B6; --line: #283149; --soft: #1D2539;
+  --accent: #F0804B; --accent-soft: #3A2419; --good: #52C292; --good-soft: #15302A; --bad: #E07B7B; --bad-soft: #3A1E22;
+  --s1: #3987e5; --heat: 57, 135, 229; color-scheme: dark }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 14px; line-height: 1.5; margin: 0; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 18px 40px; display: grid; gap: 16px; }
+.num { font-variant-numeric: tabular-nums; }
+button, select { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+header.top { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: flex-end; justify-content: space-between; }
+h1 { word-break: keep-all; font-family: var(--display); font-weight: 700; font-size: clamp(28px, 5vw, 40px); line-height: 1; margin: 0; letter-spacing: .005em; text-wrap: balance; }
+.sub { margin: 6px 0 0; color: var(--muted); font-size: 13px; max-width: 90ch; }
+.fresh { display: flex; flex-wrap: wrap; gap: 6px; }
+.pill { font-size: 12px; padding: 2px 9px; border-radius: 999px; background: var(--soft); border: 1px solid var(--line); white-space: nowrap; }
+.pill.warn { border-color: var(--accent); color: var(--accent); }
+.panel { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 16px; display: grid; gap: 12px; min-width: 0; align-content: start; }
+.panel h2 { font-family: var(--display); font-weight: 600; font-size: 18px; letter-spacing: .04em; text-transform: uppercase; margin: 0; color: var(--muted); }
+.phead { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; justify-content: space-between; }
+.note { color: var(--muted); font-size: 12px; margin: 0; }
+.grid2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
+.grid2.wide { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); }
+@media (max-width: 900px) { .grid2, .grid2.wide { grid-template-columns: minmax(0, 1fr); } }
+.kpis { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 900px) { .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.kpi { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: grid; gap: 4px; align-content: start; }
+.kpi .l { font-size: 12px; color: var(--muted); letter-spacing: .03em; }
+.kpi .v { font-family: var(--display); font-weight: 700; font-size: 32px; line-height: 1.05; }
+.kpi .v small { font-size: 16px; font-weight: 500; color: var(--muted); margin-left: 4px; }
+.kpi .d { font-size: 12.5px; color: var(--muted); }
+.kpi .d b.up { color: var(--good); } .kpi .d b.down { color: var(--bad); }
+.msgband { background: var(--card); border: 1px solid var(--accent); border-radius: 10px; padding: 14px 16px; display: grid; gap: 6px; }
+.msgband p { margin: 0; max-width: 100ch; }
+.msgband .k { font-family: var(--display); font-weight: 700; font-size: 15px; letter-spacing: .06em; color: var(--accent); text-transform: uppercase; }
+.tbl { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 13px; }
+th, td { padding: 6px 8px; border-bottom: 1px solid var(--line); text-align: left; white-space: nowrap; }
+th { font-size: 11.5px; color: var(--muted); font-weight: 600; letter-spacing: .03em; }
+td.r, th.r { text-align: right; } td.c, th.c { text-align: center; }
+tr.me td { background: var(--accent-soft); }
+tr.me td:first-child { font-weight: 600; }
+tr.sel td { box-shadow: inset 0 -2px 0 var(--accent); }
+tbody tr.click { cursor: pointer; }
+tbody tr.click:hover td { background: var(--soft); }
+tbody tr.click.me:hover td { background: var(--accent-soft); }
+td.why { white-space: normal; min-width: 260px; color: var(--muted); font-size: 12px; line-height: 1.45; }
+tr.click td { border-bottom: none; padding-bottom: 2px; }
+tr.noterow td { padding-top: 0; padding-bottom: 8px; }
+tr.noterow { cursor: pointer; }
+.bar { position: relative; height: 8px; background: var(--soft); border-radius: 4px; min-width: 70px; }
+.bar > span { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 4px; background: var(--s1); }
+.bar.mid::after { content: ""; position: absolute; left: 50%; top: -2px; bottom: -2px; width: 1px; background: var(--muted); opacity: .6; }
+tr.me .bar > span { background: var(--accent); }
+.chip { font-size: 11px; font-weight: 600; padding: 1px 6px; border-radius: 4px; margin-right: 3px; white-space: nowrap; }
+.chip.good { background: var(--good-soft); color: var(--good); }
+.chip.bad { background: var(--bad-soft); color: var(--bad); }
+.chip.mid { background: var(--soft); color: var(--muted); }
+.stat-o { color: var(--bad); font-weight: 600; font-size: 11px; }
+.stat-dtd { color: var(--accent); font-weight: 600; font-size: 11px; }
+.heat td.h { text-align: center; font-weight: 600; min-width: 34px; }
+.delta.up { color: var(--good); font-weight: 600; } .delta.down { color: var(--bad); font-weight: 600; }
+.teamsel { display: flex; align-items: center; gap: 8px; }
+.teamsel label { font-size: 12px; color: var(--muted); font-weight: 600; }
+.teamsel select { min-width: 220px; font-weight: 600; border: 1px solid var(--accent); background: var(--card); border-radius: 8px; padding: 6px 10px; }
+@media (max-width: 520px) { .teamsel { flex: 1 1 100%; } .teamsel select { flex: 1; min-width: 0; } }
+.steps { display: grid; gap: 8px; }
+.step { display: grid; grid-template-columns: 92px minmax(0, 1fr) 150px; gap: 12px; align-items: center; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; }
+.step .when { font-family: var(--display); font-weight: 700; font-size: 16px; line-height: 1.1; }
+.step .when small { display: block; font-family: var(--body); font-weight: 500; font-size: 11px; color: var(--muted); }
+.step .what { min-width: 0; display: grid; gap: 2px; }
+.step .what b { font-weight: 600; }
+.step .what .m { font-size: 12px; color: var(--muted); white-space: normal; }
+.step .eff { display: grid; gap: 4px; justify-items: end; font-size: 12px; color: var(--muted); }
+.step .eff .bar { width: 100%; }
+.step.base { background: var(--soft); border-style: dashed; }
+@media (max-width: 640px) { .step { grid-template-columns: minmax(0, 1fr); } .step .eff { justify-items: start; } }
+footer { color: var(--muted); font-size: 12px; display: grid; gap: 4px; border-top: 1px solid var(--line); padding-top: 12px; }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div>
+      <h1>10팀 리그 시즌 전망</h1>
+      <p class="sub">26-27 fantasy · 10팀 H2H 카테고리별 집계 11개(FG% FT% 3PM REB AST STL BLK TO↓ DD PTS TW) · 순위 = 누적 카테고리 승수 · 정규시즌 22주 · 상위 4팀 플레이오프(1주 단판 2라운드) · 매일 라인업 · 매치업당 영입 7회 · 트레이드 마감 2027-01-04</p>
+    </div>
+    <div class="fresh" id="fresh"></div>
+  </header>
+
+  <section class="msgband" id="msg"></section>
+
+  <section class="panel">
+    <div class="phead"><h2>파워 랭킹 · 시즌 시뮬레이션</h2><span class="note">행을 누르면 아래 팀 상세가 바뀝니다</span></div>
+    <div class="tbl"><table id="power"></table></div>
+    <p class="note" id="power-note"></p>
+  </section>
+
+  <section class="panel">
+    <div class="phead"><h2>Twindragons 실행안</h2><span class="note" id="plan-sub"></span></div>
+    <div class="kpis" id="plan-kpis"></div>
+    <div class="steps" id="plan-steps"></div>
+    <p class="note" id="plan-note"></p>
+  </section>
+
+  <section class="panel">
+    <div class="phead"><h2 id="det-title">팀 상세</h2><div class="teamsel"><label for="team-sel">팀</label><select id="team-sel"></select></div></div>
+    <div class="kpis" id="kpis"></div>
+    <p class="note" id="verdict" style="font-size:13px;color:var(--ink)"></p>
+  </section>
+
+  <div class="grid2 wide">
+    <section class="panel"><h2 id="roster-title">로스터</h2><div class="tbl"><table id="roster"></table></div><p class="note">슬롯 = 모델 최적 라인업(ESPN 복수 포지션 자격 기준). 기여 = 이 선수를 빼고 빈칸으로 두었을 때 카테고리 승률 변화, 작을수록 교체 1순위.</p></section>
+    <section class="panel"><h2>카테고리 비교</h2><div class="tbl"><table id="cats"></table></div><p class="note" id="cats-note"></p></section>
+  </div>
+
+  <div class="grid2">
+    <section class="panel"><h2>FA 영입 후보</h2><div class="tbl"><table id="fa"></table></div><p class="note">현재 무소속(어느 팀에도 없는) 선수 중 ESPN 프로젝션이 있는 선수만. 방출 대상은 효과가 가장 큰 선수를 자동 선택.</p></section>
+    <section class="panel"><h2>트레이드 후보 · 1:1</h2><div class="tbl"><table id="trades"></table></div><p class="note">상대가 ESPN 순위로 보면 동급 이상을 받는 거래(수락 가능성 높음)이면서 이 팀의 카테고리 승률이 오르는 조합. 상대 변화는 모델 기준.</p></section>
+  </div>
+
+  <div class="grid2">
+    <section class="panel"><h2>팀별 카테고리 예상 순위</h2><div class="tbl"><table class="heat" id="heat"></table></div><p class="note">1위 = 가장 유리(TO는 적을수록 1위). 진할수록 상위. 오른쪽 숫자 = 평균 순위.</p></section>
+    <section class="panel"><h2>최종 순위 분포</h2><div class="tbl"><table class="heat" id="finish"></table></div><p class="note">시즌 2만 회 시뮬레이션에서 각 정규시즌 순위로 끝난 비율(%). 굵은 선 왼쪽 4칸 = 플레이오프 진출.</p></section>
+  </div>
+
+  <footer id="foot"></footer>
+</div>
+
+<script type="application/json" id="data">%%DATA%%</script>
+<script>
+(function () {
+  const D = JSON.parse(document.getElementById("data").textContent);
+  const P = D.players, TM = D.teams, CATS = D.cats, ME = D.me;
+  const LAB = { FG: "FG%", FT: "FT%", TPM: "3PM", REB: "REB", AST: "AST", STL: "STL", BLK: "BLK", TO: "TO", DD: "DD", PTS: "PTS", TW: "TW" };
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const pct = (x, d = 0) => (x * 100).toFixed(d) + "%";
+  const pp = (x, d = 1) => `<span class="delta ${x >= 0 ? "up" : "down"}">${x >= 0 ? "+" : ""}${(x * 100).toFixed(d)}%p</span>`;
+  const st = p => p.st === "O" ? ` <span class="stat-o">O</span>` : p.st === "DTD" ? ` <span class="stat-dtd">DTD</span>` : "";
+  const nm = id => { const p = P[id]; return `${esc(p.n)}${st(p)}`; };
+  const fmt = (c, v) => c === "FG" || c === "FT" ? v.toFixed(3).replace(/^0/, "") : v.toFixed(1);
+  const heat = (rk, n = 10) => { const a = (n - rk) / (n - 1); return `background: rgba(var(--heat), ${(0.08 + 0.62 * a).toFixed(2)}); color: ${a > 0.62 ? "#fff" : "var(--ink)"}`; };
+  const store = { get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }, set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} } };
+  let sel = +(store.get("l10-team") ?? ME); if (!(sel >= 0 && sel < TM.length)) sel = ME;
+
+  $("fresh").innerHTML = D.fresh.map(([t, w]) => `<span class="pill${w ? " warn" : ""}">${esc(t)}</span>`).join("");
+  const me = TM[ME], plan = D.plan, order = TM.map((t, i) => i).sort((a, b) => TM[b].ec - TM[a].ec), myRank = order.indexOf(ME) + 1;
+  $("msg").innerHTML = `<span class="k">결론</span><p>Twindragons는 현재 로스터로 10팀 중 <b>${myRank}위권</b>입니다(카테고리 승률 ${pct(me.ec, 1)}, 4강 ${pct(me.season.p4)}, 우승 ${pct(me.season.champ)}). FG%·REB·TW 외에 확실히 이기는 카테고리가 없어 주간 과반 승률이 ${pct(me.maj)}에 그칩니다.</p>
+    <p>FA 1건과 트레이드 3건을 실행하면 ${pct(plan.ec, 1)}, 4강 ${pct(plan.season.p4)}, 우승 ${pct(plan.season.champ)}까지 오릅니다(모델 기준). 트레이드는 모두 상대가 ESPN 순위상 같거나 더 높은 선수를 받는 조합입니다. 최강 팀은 Seoul Dreamers(4강 ${pct(TM[4].season.p4)}, 우승 ${pct(TM[4].season.champ)})입니다.</p>`;
+
+  // ---------- power ranking
+  function renderPower() {
+    $("power").innerHTML = `<thead><tr><th>#</th><th>팀</th><th class="r">카테고리 승률</th><th></th><th class="r">예상 성적 /242</th><th class="r">주간 과반</th><th class="r">4강</th><th class="r">정규 1위</th><th class="r">우승</th><th>강점 (1~2위)</th><th>약점 (9~10위)</th></tr></thead><tbody>` +
+      order.map((i, k) => { const t = TM[i], s = t.season;
+        const strong = CATS.filter(c => t.rank[c] <= 2), weak = CATS.filter(c => t.rank[c] >= 9);
+        return `<tr class="click${t.me ? " me" : ""}" data-i="${i}"><td class="num">${k + 1}</td><td><b>${esc(t.name)}</b><br><span class="note">${esc(t.mgr)}</span></td>
+          <td class="r num">${pct(t.ec, 1)}</td><td><div class="bar mid"><span style="width:${Math.max(0, Math.min(100, (t.ec - 0.35) / 0.3 * 100)).toFixed(0)}%"></span></div></td>
+          <td class="r num">${s.wins.toFixed(0)}–${(242 - s.wins).toFixed(0)}</td><td class="r num">${pct(t.maj)}</td><td class="r num"><b>${pct(s.p4)}</b></td><td class="r num">${pct(s.p1)}</td><td class="r num">${pct(s.champ)}</td>
+          <td>${strong.map(c => `<span class="chip good">${LAB[c]}</span>`).join("") || '<span class="note">—</span>'}</td><td>${weak.map(c => `<span class="chip bad">${LAB[c]}</span>`).join("") || '<span class="note">—</span>'}</td>
+          </tr><tr class="noterow${t.me ? " me" : ""}${i === sel ? " sel" : ""}" data-i="${i}"><td></td><td colspan="10" class="why">${esc(t.note)}</td></tr>`; }).join("") + `</tbody>`;
+    $("power").querySelectorAll("tr[data-i]").forEach(tr => tr.addEventListener("click", () => { sel = +tr.dataset.i; store.set("l10-team", sel); renderAll(); $("det-title").scrollIntoView({ behavior: "smooth", block: "start" }); }));
+    $("power-note").textContent = `카테고리 승률 = 9팀 상대로 매주 11개 카테고리 중 이길 기대 비율(막대 가운데선 50%). 예상 성적 = 22주 × 11개 = 242개 카테고리 중 기대 승–패. 주간 과반 = 한 주에 6개 이상 이길 확률(플레이오프 승리 조건). 4강·1위·우승은 선수 성적 ±10%, 부상 결장, NBA 팀 승수 ±6승을 시즌마다 흔든 2만 회 시뮬레이션. 프로젝션이 정확하다고 가정하면 Seoul Dreamers 4강 ${pct(TM[4].season0.p4)}, Twindragons ${pct(me.season0.p4)}로 격차가 더 큽니다.`;
+  }
+
+  // ---------- my plan
+  function renderPlan() {
+    const s0 = me.season, s1 = plan.season;
+    const k = (l, a, b, f, d) => `<div class="kpi"><span class="l">${l}</span><span class="v num">${f(b)}</span><span class="d">현재 ${f(a)} → <b class="${b >= a ? "up" : "down"}">${d(b - a)}</b></span></div>`;
+    $("plan-kpis").innerHTML = k("카테고리 승률", me.ec, plan.ec, x => pct(x, 1), x => (x >= 0 ? "+" : "") + (x * 100).toFixed(1) + "%p")
+      + k("예상 성적 (승)", s0.wins, s1.wins, x => x.toFixed(0), x => (x >= 0 ? "+" : "") + x.toFixed(0) + "승")
+      + k("4강 진출", s0.p4, s1.p4, x => pct(x), x => (x >= 0 ? "+" : "") + (x * 100).toFixed(0) + "%p")
+      + k("우승", s0.champ, s1.champ, x => pct(x), x => (x >= 0 ? "+" : "") + (x * 100).toFixed(0) + "%p")
+      + `<div class="kpi"><span class="l">실행 후 강점 (1~2위)</span><div>${CATS.filter(c => plan.rank[c] <= 2).map(c => `<span class="chip good">${LAB[c]}</span>`).join("")}</div><span class="d">포기: ${CATS.filter(c => plan.rank[c] >= 9).map(c => LAB[c]).join("·") || "없음"}</span></div>`;
+    const when = ["오늘", "1주차", "1~2주차", "2~3주차"], path = me.execPath;
+    const why = { fa: "주간 3PM·STL·AST를 보강하는 저비용 가드. 웨이버 1일이라 내일부터 출전 가능.", 0: "", 1: "", 2: "" };
+    $("plan-steps").innerHTML = `<div class="step base"><div class="when">현재<small>드래프트 직후</small></div><div class="what"><b>현 로스터 13명</b><span class="m">교체 1순위(기여 최저): ${me.dropImpact.slice(0, 4).map(([id]) => esc(P[id].n)).join(" · ")}</span></div><div class="eff"><span class="num">${pct(path[0].ec, 1)}</span><div class="bar mid"><span style="width:${((path[0].ec - 0.35) / 0.3 * 100).toFixed(0)}%"></span></div></div></div>` +
+      path.slice(1).map((s, k) => { const g = P[s.give], r = P[s.get], d = s.ec - path[k].ec;
+        const head = s.kind === "fa" ? `FA: ${nm(s.give)} 방출 → <b>${nm(s.get)}</b> 영입` : `트레이드 · ${esc(TM[s.to].name)}: ${nm(s.give)} <span class="note">(ESPN #${g.r})</span> ↔ <b>${nm(s.get)}</b> <span class="note">(ESPN #${r.r})</span>`;
+        const m = s.kind === "fa" ? `${esc(r.t)} ${esc(r.el)} · GP ${Math.round(r.gp)} · ${r.PTS.toFixed(1)}점 ${r.TPM.toFixed(1)}3P ${r.AST.toFixed(1)}AST ${r.STL.toFixed(1)}STL · ${why.fa}`
+          : `${esc(r.n)}: ${r.PTS.toFixed(1)}점 ${r.REB.toFixed(1)}REB ${r.AST.toFixed(1)}AST ${r.BLK.toFixed(1)}BLK, FG ${fmt("FG", r.FG)}, GP ${Math.round(r.gp)} · 상대 팀 변화 ${(D.planPartner[s.to] * 100).toFixed(1)}%p (모델)`;
+        return `<div class="step"><div class="when">${when[k]}<small>${s.kind === "fa" ? "웨이버 1일" : "제안"}</small></div><div class="what"><span>${head}</span><span class="m">${m}</span></div>
+          <div class="eff"><span class="num">${pct(s.ec, 1)} ${pp(d)}</span><div class="bar mid"><span style="width:${((s.ec - 0.35) / 0.3 * 100).toFixed(0)}%"></span></div></div></div>`; }).join("");
+    $("plan-sub").textContent = "FA → 트레이드 순서, 누적 효과";
+    $("plan-note").textContent = `트레이드는 거절될 수 있습니다. 대안(같은 기준): ${me.fairTrades.filter(x => !plan.steps.some(s => s.give === x.give && s.get === x.get)).slice(0, 4).map(x => `${P[x.give].n} ↔ ${P[x.get].n}(${TM[x.to].abbr}, +${(x.di * 100).toFixed(1)}%p)`).join(" · ")}. 실제 스탯 2~3주가 쌓이면 다시 계산하십시오. 트레이드 마감 2027-01-04.`;
+  }
+
+  // ---------- team detail
+  function renderTeam() {
+    const t = TM[sel], s = t.season, rk = order.indexOf(sel) + 1;
+    $("det-title").textContent = `팀 상세 · ${t.name}`;
+    $("kpis").innerHTML = `
+      <div class="kpi"><span class="l">카테고리 승률</span><span class="v num">${pct(t.ec, 1)}<small>${rk}위</small></span><span class="d">주간 과반 ${pct(t.maj)}</span></div>
+      <div class="kpi"><span class="l">예상 성적 /242</span><span class="v num">${s.wins.toFixed(0)}–${(242 - s.wins).toFixed(0)}</span><span class="d">±${s.sd.toFixed(0)}승 (1표준편차)</span></div>
+      <div class="kpi"><span class="l">4강 진출</span><span class="v num">${pct(s.p4)}</span><span class="d">정규 1위 ${pct(s.p1)}</span></div>
+      <div class="kpi"><span class="l">우승</span><span class="v num">${pct(s.champ)}</span><span class="d">결승 진출 ${pct(s.final)}</span></div>
+      <div class="kpi"><span class="l">선발 평균 예상 출장</span><span class="v num">${t.gpStart.toFixed(1)}<small>경기</small></span><span class="d">위험: ${t.risk.length ? esc(t.risk.join(", ")) : "없음"}</span></div>`;
+    $("verdict").textContent = t.note;
+    $("roster-title").textContent = `로스터 · ${t.name}`;
+    const imp = Object.fromEntries(t.dropImpact), ordr = ["PG", "SG", "SF", "PF", "C", "G", "F", "UTIL", "BE"];
+    const ids = t.roster.slice().sort((a, b) => ordr.indexOf(t.asg[a]) - ordr.indexOf(t.asg[b]) || P[b].v - P[a].v);
+    const minImp = Math.max(...t.dropImpact.map(x => x[1]));
+    $("roster").innerHTML = `<thead><tr><th>슬롯</th><th>선수</th><th>NBA</th><th>포지션</th><th class="r">ESPN</th><th class="r">GP</th><th class="r">PTS/REB/AST</th><th class="r">팀 승수</th><th class="r">기여</th></tr></thead><tbody>` +
+      ids.map(id => { const p = P[id], f = t.filled.includes(id);
+        return `<tr><td>${t.asg[id] === "BE" ? "BN" : t.asg[id]}</td><td>${nm(id)}${f ? ' <span class="chip mid">가정 보충</span>' : ""}</td><td>${p.t}</td><td>${p.el}</td><td class="r num">${p.r ? "#" + p.r : "—"}</td>
+        <td class="r num" style="color:${p.gp >= 72 ? "var(--good)" : p.gp < 60 ? "var(--bad)" : "inherit"}">${Math.round(p.gp)}</td><td class="r num">${p.PTS.toFixed(1)}/${p.REB.toFixed(1)}/${p.AST.toFixed(1)}</td><td class="r num">${p.tw.toFixed(1)}</td>
+        <td class="r num ${imp[id] === minImp ? "delta down" : ""}">${(imp[id] * 100).toFixed(1)}%p</td></tr>`; }).join("") +
+      t.ir.map(id => `<tr><td>IR</td><td>${nm(id)}</td><td>${P[id].t}</td><td>${P[id].el}</td><td class="r num">${P[id].r ? "#" + P[id].r : "—"}</td><td class="r num">—</td><td class="r note" colspan="3">IR 슬롯 · 계산 제외</td></tr>`).join("") + `</tbody>`;
+    const top = sel === order[0] ? order[1] : order[0], avg = c => TM.reduce((a, x) => a + x.cats[c], 0) / TM.length;
+    $("cats").innerHTML = `<thead><tr><th>카테고리</th><th class="r">${esc(t.abbr)}</th><th class="r">리그 평균</th><th class="r">${esc(TM[top].abbr)} (${sel === order[0] ? "2위" : "1위"})</th><th class="r">순위</th><th class="r">주간 승리확률</th></tr></thead><tbody>` +
+      CATS.map(c => `<tr><td>${LAB[c]}</td><td class="r num"><b>${fmt(c, t.cats[c])}</b></td><td class="r num">${fmt(c, avg(c))}</td><td class="r num">${fmt(c, TM[top].cats[c])}</td>
+        <td class="r num" style="${heat(t.rank[c])};text-align:center">${t.rank[c]}</td><td class="r num">${pct(t.perCat[c])}</td></tr>`).join("") + `</tbody>`;
+    $("cats-note").textContent = "주간 기대 기록(선발 10명 + 벤치 3명 × 0.92, 선수별 GP/82). TW = 출전 선수 소속팀의 승리 수. 주간 승리확률 = 9팀 상대 평균.";
+    $("fa").innerHTML = `<thead><tr><th>영입</th><th>방출</th><th class="r">효과</th><th class="r">ESPN</th><th class="r">GP</th><th class="r">PTS/3P/REB/AST/STL</th></tr></thead><tbody>` +
+      t.fa.slice(0, 6).map(f => { const p = P[f.add]; return `<tr><td><b>${nm(f.add)}</b> <span class="note">${p.t} ${p.el}</span></td><td>${nm(f.drop)}</td><td class="r num">${pp(f.d)}</td><td class="r num">#${p.r}</td><td class="r num">${Math.round(p.gp)}</td>
+        <td class="r num">${p.PTS.toFixed(1)}/${p.TPM.toFixed(1)}/${p.REB.toFixed(1)}/${p.AST.toFixed(1)}/${p.STL.toFixed(1)}</td></tr>`; }).join("") + `</tbody>`;
+    const tr = t.fairTrades.slice(0, 6);
+    $("trades").innerHTML = tr.length ? `<thead><tr><th>보낼 선수</th><th>받을 선수</th><th>상대</th><th class="r">이 팀</th><th class="r">상대</th></tr></thead><tbody>` +
+      tr.map(x => `<tr><td>${nm(x.give)} <span class="note">#${P[x.give].r}</span></td><td><b>${nm(x.get)}</b> <span class="note">#${P[x.get].r}</span></td><td>${esc(TM[x.to].abbr)}</td><td class="r num">${pp(x.di)}</td><td class="r num">${pp(x.dj)}</td></tr>`).join("") + `</tbody>`
+      : `<tbody><tr><td class="note">조건에 맞는 1:1 트레이드가 없습니다.</td></tr></tbody>`;
+    document.querySelectorAll("#power tr.noterow").forEach(r => r.classList.toggle("sel", +r.dataset.i === sel));
+    $("team-sel").value = String(sel);
+  }
+
+  // ---------- heat tables
+  function renderHeat() {
+    $("heat").innerHTML = `<thead><tr><th>팀</th>${CATS.map(c => `<th class="c">${LAB[c]}</th>`).join("")}<th class="r">평균</th></tr></thead><tbody>` +
+      order.map(i => { const t = TM[i], a = CATS.reduce((s, c) => s + t.rank[c], 0) / CATS.length;
+        return `<tr class="${t.me ? "me" : ""}"><td>${esc(t.abbr)}</td>${CATS.map(c => `<td class="h num" style="${heat(t.rank[c])}">${t.rank[c]}</td>`).join("")}<td class="r num">${a.toFixed(1)}</td></tr>`; }).join("") + `</tbody>`;
+    const byRank = TM.map((t, i) => i).sort((a, b) => TM[a].season.avgRank - TM[b].season.avgRank);
+    $("finish").innerHTML = `<thead><tr><th>팀</th>${[...Array(10)].map((_, k) => `<th class="c"${k === 3 ? ' style="border-right:2px solid var(--ink)"' : ""}>${k + 1}</th>`).join("")}<th class="r">평균</th></tr></thead><tbody>` +
+      byRank.map(i => { const t = TM[i], mx = Math.max(...t.season.fin);
+        return `<tr class="${t.me ? "me" : ""}"><td>${esc(t.abbr)}</td>${t.season.fin.map((v, k) => `<td class="h num" style="background: rgba(var(--heat), ${(0.06 + 0.7 * v / 0.4).toFixed(2)}); color:${v > 0.24 ? "#fff" : "var(--ink)"};${k === 3 ? "border-right:2px solid var(--ink);" : ""}font-weight:${v === mx ? 700 : 500}">${Math.round(v * 100)}</td>`).join("")}<td class="r num">${t.season.avgRank.toFixed(1)}</td></tr>`; }).join("") + `</tbody>`;
+  }
+
+  $("team-sel").innerHTML = order.map(i => `<option value="${i}">${esc(TM[i].name)}${TM[i].me ? " (내 팀)" : ""}</option>`).join("");
+  $("team-sel").addEventListener("change", e => { sel = +e.target.value; store.set("l10-team", sel); renderAll(); });
+  $("foot").innerHTML = D.foot.map(x => `<span>${x}</span>`).join("");
+  function renderAll() { renderPower(); renderTeam(); }
+  renderPlan(); renderHeat(); renderAll();
+})();
+</script>

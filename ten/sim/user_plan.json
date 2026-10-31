@@ -1,0 +1,67 @@
+{
+ "boost": {
+  "Ajay Mitchell": "Jalen Williams"
+ },
+ "windows": {},
+ "b2bOne": [
+  "Joel Embiid",
+  "LeBron James",
+  "Stephen Curry",
+  "Kyrie Irving"
+ ],
+ "streamFromWeek": 2,
+ "streamPerWeek": 2,
+ "adds": {},
+ "pendingTrade": {
+  "accepted": "2026-10-31T16:02+09:00",
+  "effective": "2026-11-02",
+  "a": "GTD",
+  "b": "IYH",
+  "aGives": [
+   "Rudy Gobert"
+  ],
+  "bGives": [
+   "Andrew Nembhard"
+  ]
+ },
+ "processedTrades": [
+  {
+   "date": "2026-10-29",
+   "gtd": [
+    "Giannis Antetokounmpo",
+    "Julius Randle"
+   ],
+   "tbg": [
+    "Karl-Anthony Towns",
+    "Paul Reed"
+   ]
+  }
+ ],
+ "swaps": {
+  "GTD": [
+   {
+    "drop": "Paul Reed",
+    "add": "Daniel Gafford",
+    "from": "2026-11-02"
+   }
+  ]
+ },
+ "core": [
+  "Karl-Anthony Towns",
+  "Kawhi Leonard",
+  "Donovan Mitchell",
+  "Ivica Zubac",
+  "Josh Hart",
+  "Rudy Gobert",
+  "Ajay Mitchell",
+  "Miles Bridges",
+  "Peyton Watson",
+  "Dejounte Murray"
+ ],
+ "coreNote": "사용자 지정 상위 10명 고정(방출 금지). 로스터에 없는 선수는 자동 제외.",
+ "headline": "Gobert ↔ Nembhard 예정 반영 · Gafford 영입 · Kawhi IR 11/23",
+ "notes": {
+  "GTD": "Gobert ↔ Andrew Nembhard(IYH) 트레이드 예정(11/2 처리 가정) · Paul Reed → Daniel Gafford(11/2부터). Kawhi 무릎 IR · ESPN 예상 복귀 11/23 → 복귀 시 가치 최하위 선수 자동 방출. Ajay Mitchell은 Jalen Williams 역할 승계(스탯 상향 가정).",
+  "TBG": "Giannis·Randle 영입(Towns·Paul Reed 이적). Edwards IR."
+ }
+}

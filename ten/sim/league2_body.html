@@ -1,0 +1,564 @@
+<style>
+/* v2 additions: tabs, week-1 matchup board, trade before/after, projection evidence */
+[hidden] { display: none !important; }
+.rtop { display: flex; flex-wrap: wrap; gap: 10px 18px; justify-content: space-between; align-items: flex-start; }
+.cbx { position: relative; }
+.cbx > button { display: inline-flex; align-items: center; justify-content: space-between; gap: 10px; min-width: 230px; padding: 7px 10px 7px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--card); color: var(--ink); font-size: 13.5px; cursor: pointer; box-shadow: 0 1px 2px rgba(0,0,0,.05); }
+.cbx > button:hover { background: var(--soft); }
+.cbx > button .lab { color: var(--muted); font-size: 12px; margin-right: 2px; }
+.cbx > button svg { flex: none; opacity: .55; }
+.cbx .pop { position: absolute; z-index: 20; top: calc(100% + 4px); left: 0; width: max(100%, 270px); background: var(--card); border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 10px 28px rgba(0,0,0,.16); padding: 4px; display: none; }
+.cbx.open .pop { display: block; }
+.cbx .pop input { width: 100%; border: none; border-bottom: 1px solid var(--line); background: transparent; color: var(--ink); font: inherit; font-size: 13px; padding: 8px 8px 9px 30px; outline: none; background-image: radial-gradient(circle at 13px 50%, transparent 0, transparent 0); }
+.cbx .pop .sr { position: relative; } .cbx .pop .sr svg { position: absolute; left: 9px; top: 10px; opacity: .5; }
+.cbx .pop ul { list-style: none; margin: 4px 0 0; padding: 0; max-height: 300px; overflow: auto; }
+.cbx .pop li { display: grid; grid-template-columns: 16px minmax(0,1fr) auto; gap: 8px; align-items: center; padding: 7px 8px; border-radius: 6px; font-size: 13px; cursor: pointer; }
+.cbx .pop li .rk { color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+.cbx .pop li[aria-selected="true"] .ck { opacity: 1; } .cbx .pop li .ck { opacity: 0; }
+.cbx .pop li.act, .cbx .pop li:hover { background: var(--soft); }
+.cbx .pop .empty { padding: 10px; color: var(--muted); font-size: 12.5px; text-align: center; }
+.verbar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.verbar .vb { border: 1px solid var(--line); background: var(--card); color: var(--ink); border-radius: 999px; padding: 6px 14px; font-size: 13px; cursor: pointer; }
+.verbar .vb[aria-pressed="true"] { background: var(--ink); color: var(--card); border-color: var(--ink); font-weight: 600; }
+.verbar .vk { font-size: 12px; color: var(--muted); }
+.mth { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; } @media (max-width: 780px) { .mth { grid-template-columns: minmax(0, 1fr); } }
+.mth h3 { margin: 0 0 6px; font-size: 15px; } .mth p, .mth li { font-size: 12.5px; line-height: 1.6; color: var(--ink); } .mth ol { margin: 0; padding-left: 18px; }
+/* radar (shadcn Radar chart look: polar grid, filled series, dots, card header/footer) */
+.radar-wrap { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 18px; align-items: start; }
+@media (max-width: 780px) { .radar-wrap { grid-template-columns: minmax(0, 1fr); } }
+.rchart { position: relative; width: 100%; max-width: 470px; margin: 0 auto; }
+.rchart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.rchart text.rl { fill: var(--muted); font-size: 12px; font-family: var(--body); }
+.rchart text.rl.b { fill: var(--ink); font-weight: 600; }
+.rchart.mini text.rl { font-size: 10.5px; }
+.rtip { position: absolute; pointer-events: none; background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 7px 10px; font-size: 12px; line-height: 1.45; box-shadow: 0 6px 18px rgba(0,0,0,.14); display: none; z-index: 5; min-width: 150px; }
+.rtip b { font-weight: 600; } .rtip .row { display: flex; justify-content: space-between; gap: 12px; align-items: center; }
+.sw { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+.rlegend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12px; color: var(--muted); justify-content: center; }
+.rcard-head { display: grid; gap: 2px; } .rcard-head .t { font-weight: 600; font-size: 15px; } .rcard-head .d { color: var(--muted); font-size: 12.5px; }
+.rfoot { display: grid; gap: 3px; font-size: 13px; } .rfoot .lead { font-weight: 600; } .rfoot .m { color: var(--muted); font-size: 12px; }
+.rctl { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; font-size: 13px; }
+.rctl select { font: inherit; padding: 5px 9px; border-radius: 8px; border: 1px solid var(--line); background: var(--card); color: var(--ink); }
+.rctl label { display: inline-flex; gap: 6px; align-items: center; color: var(--muted); }
+.rgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(200px, 46%), 1fr)); gap: 12px; }
+.rcard { border: 1px solid var(--line); border-radius: 10px; padding: 12px 12px 10px; display: grid; gap: 4px; cursor: pointer; background: var(--card); text-align: left; }
+.rcard:hover { border-color: var(--muted); } .rcard.me { border-color: var(--accent); } .rcard.on { box-shadow: inset 0 0 0 2px var(--s1); }
+.rcard .h { display: flex; justify-content: space-between; gap: 6px; align-items: baseline; font-size: 13.5px; font-weight: 600; }
+.rcard .h .e { font-variant-numeric: tabular-nums; color: var(--muted); font-weight: 500; font-size: 12.5px; }
+.rcard .f { font-size: 11.5px; color: var(--muted); line-height: 1.45; } .rcard .f b { color: var(--good); font-weight: 600; } .rcard .f i { color: var(--bad); font-style: normal; font-weight: 600; }
+.rcmp td.d { font-weight: 600; } .rcmp td.d.up { color: var(--good); } .rcmp td.d.down { color: var(--bad); }
+.tabs { display: flex; flex-wrap: wrap; gap: 4px; border-bottom: 1px solid var(--line); }
+.tab { border: none; background: none; padding: 8px 14px; font-family: var(--display); font-size: 19px; font-weight: 600; color: var(--muted); border-bottom: 3px solid transparent; margin-bottom: -1px; cursor: pointer; }
+.tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+.mu { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
+.mu-card { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; display: grid; gap: 8px; }
+.mu-card.me { border-color: var(--accent); }
+.mu-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; align-items: baseline; }
+.mu-head b { font-size: 15px; }
+.split { display: flex; height: 10px; border-radius: 5px; overflow: hidden; background: var(--soft); min-width: 120px; }
+.split > span { display: block; height: 100%; }
+.split .a { background: var(--accent); } .split .t { background: var(--line); } .split .b { background: var(--s1); }
+.pw { font-family: var(--display); font-weight: 700; font-size: 22px; }
+.cmpcol { text-align: right; }
+.up2 { color: var(--good); font-weight: 600; } .down2 { color: var(--bad); font-weight: 600; }
+.plans { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
+@media (max-width: 900px) { .plans { grid-template-columns: minmax(0, 1fr); } }
+.plan-card { border: 1px solid var(--line); border-radius: 10px; padding: 14px; display: grid; gap: 10px; align-content: start; }
+.plan-card.rec { border-color: var(--accent); }
+.plan-card h3 { margin: 0; font-family: var(--display); font-size: 20px; letter-spacing: .02em; }
+.plan-card h3 small { font-family: var(--body); font-size: 12px; font-weight: 600; color: var(--accent); margin-left: 6px; }
+.pstep { display: grid; grid-template-columns: 70px minmax(0, 1fr) 92px; gap: 8px; align-items: center; font-size: 13px; padding: 6px 0; border-bottom: 1px dashed var(--line); }
+.pstep:last-child { border-bottom: none; }
+.pstep .wh { font-family: var(--display); font-weight: 700; font-size: 15px; }
+.pstep .wh small { display: block; font-family: var(--body); font-weight: 500; font-size: 11px; color: var(--muted); }
+.pstep .ef { text-align: right; font-variant-numeric: tabular-nums; }
+.pstep .m { font-size: 11.5px; color: var(--muted); display: block; }
+.search { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.search input, .search select { font: inherit; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--card); color: var(--ink); min-width: 0; }
+.search input { flex: 1 1 200px; }
+.projtbl tbody tr { cursor: pointer; }
+.projtbl tbody tr:hover td { background: var(--soft); }
+.projtbl tbody tr.on td { background: var(--accent-soft); }
+.meth { font-size: 10.5px; font-weight: 700; padding: 1px 6px; border-radius: 4px; border: 1px solid var(--line); color: var(--muted); }
+.meth.ncaa { color: var(--accent); border-color: var(--accent); }
+.meth.espn { color: var(--bad); border-color: var(--bad); }
+.detail { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
+.formula { font-size: 13px; line-height: 1.6; background: var(--soft); border-radius: 8px; padding: 10px 12px; }
+.formula code { font-family: ui-monospace, Menlo, monospace; font-size: 12.5px; }
+.wtbl td, .wtbl th { text-align: center; }
+.chart svg { display: block; width: 100%; height: auto; }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div>
+      <h1>10팀 리그 시즌 전망</h1>
+      <p class="sub">26-27 fantasy · 10팀 H2H 카테고리별 집계 11개(FG% FT% 3PM REB AST STL BLK TO↓ DD PTS TW) · 순위 = 누적 카테고리 승률 · 정규시즌 22주 · 상위 4팀 플레이오프 · 매일 라인업 · 매치업당 영입 7회 · 트레이드 마감 2027-01-04</p>
+    </div>
+    <div class="fresh" id="fresh"></div>
+  </header>
+
+  <section class="msgband" id="msg"></section>
+
+  <div class="verbar" role="group" aria-label="프로젝션 모델 버전"><span class="vk">프로젝션 모델</span><button type="button" class="vb" id="ver1">v1 · 기존 방식(회귀+ESPN+주차 가중)</button><button type="button" class="vb" id="ver2">v2 · 시즌 초 회귀(BR 2021~2026 같은 시점)</button><span class="vk" id="verdesc"></span></div>
+  <nav class="tabs" role="tablist">
+    <button class="tab" role="tab" id="tab-outlook" aria-selected="true" type="button">시즌 전망</button>
+    <button class="tab" role="tab" id="tab-radar" aria-selected="false" type="button">카테고리 레이더</button>
+    <button class="tab" role="tab" id="tab-stream" aria-selected="false" type="button">교체 전략</button>
+    <button class="tab" role="tab" id="tab-week1" aria-selected="false" type="button">1주차 매치업</button>
+    <button class="tab" role="tab" id="tab-trade" aria-selected="false" type="button">트레이드 평가 · 실행안</button>
+    <button class="tab" role="tab" id="tab-proj" aria-selected="false" type="button">프로젝션 근거 (300명)</button>
+  </nav>
+
+  <div id="view-outlook" style="display:grid;gap:16px">
+    <section class="panel">
+      <div class="phead"><h2>파워 랭킹</h2><span class="note">행을 누르면 아래 팀 상세가 바뀝니다</span></div>
+      <div class="tbl"><table id="power"></table></div>
+      <p class="note" id="power-note"></p>
+    </section>
+    <section class="panel">
+      <div class="phead"><h2 id="det-title">팀 상세</h2><div class="teamsel"><label for="team-sel">팀</label><select id="team-sel"></select></div></div>
+      <div class="kpis" id="kpis"></div>
+      <p class="note" id="verdict" style="font-size:13px;color:var(--ink)"></p>
+    </section>
+    <div class="grid2 wide">
+      <section class="panel"><h2 id="roster-title">로스터</h2><div class="tbl"><table id="roster"></table></div><p class="note">현재 로스터(트레이드 처리 후). 슬롯 = 모델 최적 라인업(ESPN 복수 포지션). 수치 = 최종 프로젝션(경기당). 기여 = 이 선수를 빼고 빈칸으로 두었을 때 2~22주차 카테고리 승률 변화.</p></section>
+      <section class="panel"><h2>카테고리 비교</h2><div class="tbl"><table id="cats"></table></div><p class="note">2~22주차 주간 기대 기록 평균(실제 NBA 일정 반영). 순위 = 10팀 중(TO는 적을수록 1위). 승리확률 = 9팀 상대 평균.</p></section>
+    </div>
+    <div class="grid2">
+      <section class="panel"><h2>FA 영입 후보</h2><div class="tbl"><table id="fa"></table></div><p class="note">현재 무소속 선수(ESPN 300 내) 중 효과 상위. 방출 대상은 효과가 가장 큰 선수로 자동 선택.</p></section>
+      <section class="panel"><h2>최종 순위 분포</h2><div class="tbl"><table class="heat" id="finish"></table></div><p class="note">시즌 1만 회 시뮬레이션(선수 성적 ±10%, 부상 결장, NBA 팀 승수 ±6승). 굵은 선 왼쪽 = 플레이오프.</p></section>
+    </div>
+    <section class="panel"><div class="phead"><h2>부상자 복귀 일정 · 로스터 전체</h2><span class="note" id="inj-sub"></span></div><div class="tbl"><table id="inj"></table></div><p class="note">복귀일 = 그날부터 출전 가능으로 보고 실제 NBA 일정에서 그 전 경기는 결장 처리. 복귀 선수는 13명 한도 안에서 가장 낮은 가치의 선수를 대체한다고 가정.</p></section>
+    <section class="panel"><h2>팀별 카테고리 예상 순위</h2><div class="tbl"><table class="heat" id="heat"></table></div><p class="note">1위 = 가장 유리. 진할수록 상위. 오른쪽 = 평균 순위.</p></section>
+  </div>
+
+  <div id="view-week1" hidden style="display:grid;gap:16px">
+    <section class="panel">
+      <div class="phead"><h2 id="w1-h">매치업</h2><span class="note" id="w1-sub"></span></div>
+      <div class="tbl"><table id="w1-me"></table></div>
+      <p class="note" id="w1-note"></p>
+    </section>
+    <section class="panel"><h2>리그 전체 매치업</h2><div class="mu" id="w1-all"></div></section>
+  </div>
+
+  <div id="view-trade" hidden style="display:grid;gap:16px">
+    <section class="panel">
+      <div class="phead"><h2>예정 트레이드 · Gobert ↔ Andrew Nembhard (IYH)</h2><span class="note">트레이드 전(Gobert 보유) 대비 · 같은 프로젝션·같은 시드 1만 회</span></div>
+      <div class="tbl"><table id="tr-opts"></table></div>
+      <p class="note" id="tr-opts-note"></p>
+    </section>
+    <section class="panel">
+      <div class="phead"><h2 id="tr-title">트레이드 시뮬레이션</h2><span class="note" id="tr-sub"></span></div>
+      <div class="kpis" id="tr-kpis"></div>
+      <div class="radar-wrap"><div><div class="rchart" id="tr-radar"></div><div class="rlegend" id="tr-legend"></div></div><div><p class="note" style="margin:0 0 6px">카테고리별 주간 승률 변화(%p) · Twindragons</p><div class="chart" id="tr-bars"></div></div></div>
+      <div class="grid2"><div class="tbl"><table id="tr-cats"></table></div><div class="tbl"><table id="tr-players"></table></div></div>
+      <p class="note" id="tr-note"></p>
+    </section>
+    <section class="panel" hidden>
+      <div class="phead"><h2>3주차 영입 후보 · Aaron Wiggins 자리</h2><span class="note">11/2부터 보유. 변화 = Aaron Wiggins 방출 후 빈 자리 대비 3~22주차 카테고리 승률(전 팀 주 2회 교체 가정 포함). 후보 간 차이로 비교</span></div>
+      <div class="tbl"><table id="wk3"></table></div>
+    </section>
+    <section class="panel" hidden>
+      <div class="phead"><h2>트레이드 참고안</h2><span class="note">상대가 ESPN 순위상 같거나 높은 선수를 받는 1:1 조합. 방출 예정 선수(McCain·Aaron Wiggins)는 제외</span></div>
+      <div class="plans" id="plans"></div>
+      <p class="note" id="plan-note"></p>
+    </section>
+    <section class="panel"><h2>트레이드 후보 · Twindragons</h2><div class="tbl"><table id="trades"></table></div><p class="note">Towns 영입 후 로스터 기준 단건 효과(참고). 상대 변화는 모델 기준이며, 상대는 ESPN 순위로 판단한다고 가정.</p></section>
+  </div>
+
+  <div id="view-radar" hidden style="display:grid;gap:16px">
+    <section class="panel">
+      <div class="rtop">
+        <div class="rcard-head"><span class="t" id="rd-title">카테고리 레이더</span><span class="d">현재 로스터 기준 2~22주차 주간 카테고리 승률(9팀 상대 평균). 점선 = 50%(리그 평균선). TO는 적을수록 바깥.</span></div>
+        <div class="rctl">
+          <div class="cbx" id="cb-team"></div>
+          <div class="cbx" id="cb-cmp"></div>
+          <label id="rd-plan-wrap"><input type="checkbox" id="rd-plan"> 트레이드안 실행 후 겹쳐 보기</label>
+        </div>
+      </div>
+      <div class="radar-wrap">
+        <div><div class="rchart" id="rd-main"></div><div class="rlegend" id="rd-legend"></div></div>
+        <div style="display:grid;gap:10px"><div class="tbl"><table class="rcmp" id="rd-tbl"></table></div><div class="rfoot" id="rd-foot"></div></div>
+      </div>
+    </section>
+    <section class="panel">
+      <div class="rcard-head"><span class="t">10개 팀 카테고리 프로필</span><span class="d">카테고리 승률 순. 카드를 누르면 위 차트의 팀이 바뀝니다. 강점 = 주간 승률 60% 이상, 약점 = 40% 이하.</span></div>
+      <div class="rgrid" id="rd-grid"></div>
+    </section>
+  </div>
+
+  <div id="view-stream" hidden style="display:grid;gap:16px">
+    <section class="panel">
+      <div class="phead"><h2>선수 교체 전략 · Gobert 트레이드 여부 비교</h2><span class="note" id="st-sub"></span></div>
+      <div class="tbl"><table id="st-cmp"></table></div>
+      <p class="note" id="st-note"></p>
+    </section>
+    <section class="panel" id="ks-panel">
+      <div class="phead"><h2>Kawhi 복귀 시점 민감도</h2><span class="note">권장 교체안 고정 · 복귀일만 변경 · 8천 회</span></div>
+      <div class="tbl"><table id="ks"></table></div>
+      <p class="note" id="ks-note"></p>
+    </section>
+    <section class="panel">
+      <div class="phead"><h2 id="st-title">주차별 교체 계획</h2><div class="rctl"><label for="st-sel">운영안</label><select id="st-sel"></select></div></div>
+      <div class="tbl"><table id="st-plan"></table></div>
+      <p class="note">기대 카테고리 = 그 주 상대와의 11개 카테고리 중 이길 기대 개수(무승부 0.5). 교체 영입 선수는 연속 경기 결장 없이 모든 경기 출전으로 가정. 경기 수(g)는 그 주 NBA 실제 일정(15주 이후는 요일 패턴 반복).</p>
+    </section>
+  </div>
+
+  <div id="view-proj" hidden style="display:grid;gap:16px">
+    <section class="panel">
+      <h2>프로젝션 산출 방식</h2>
+      <div class="formula" id="method"></div>
+      <div class="grid2">
+        <div><p class="note" style="margin-bottom:6px">회귀 비중(카테고리 평균) · 기록 시즌 수별</p><div class="tbl"><table class="wtbl" id="wtbl"></table></div></div>
+        <div><p class="note" style="margin-bottom:6px">백테스트 상대오차(RMSE) · 2021~2025 기록으로 2026 예측</p><div class="tbl"><table class="wtbl" id="bttbl"></table></div></div>
+      </div>
+    </section>
+    <section class="panel">
+      <div class="phead"><h2>선수별 프로젝션 (ESPN 300)</h2>
+        <div class="search"><input id="pq" type="search" placeholder="선수·NBA팀 검색" aria-label="선수 검색"><select id="pown" aria-label="소속"><option value="">전체</option><option value="FA">FA</option></select><select id="psort" aria-label="정렬"><option value="vr">모델 가치순</option><option value="r">ESPN 순위순</option><option value="dpts">ESPN 대비 득점 변화순</option><option value="w">회귀 비중순</option></select></div></div>
+      <div class="detail"><div class="tbl" style="max-height:520px;overflow:auto"><table class="projtbl" id="ptbl"></table></div><div id="pdet" class="panel" style="border:none;padding:0"></div></div>
+    </section>
+  </div>
+
+  <section class="panel" id="method-panel">
+    <h2>산출방식 · v1 / v2</h2>
+    <div class="mth">
+      <div><h3>v1 · 기존 방식</h3><ol>
+        <li>Basketball Reference 2021~2026 경기당 기록으로 선수별 가중 선형회귀(가중치 = 출전 경기 수), 2027 값 예측. 관측 범위의 75~125%로 제한.</li>
+        <li>ESPN 2027 프로젝션과 역분산 가중으로 결합(2021~2025로 2026을 맞힌 백테스트 오차 기준). 신인 = NCAA 30% + ESPN 70%.</li>
+        <li>2027 실제 기록을 주차별 고정 비중으로 반영: 1~3주 10%, 4~6주 30%, 7~9주 50%, 10~12주 60%, 13~15주 70%, 16주~ 80%.</li></ol></div>
+      <div><h3>v2 · 시즌 초 회귀</h3><ol>
+        <li>학습: 2021~2026 각 시즌 Basketball Reference 경기 로그에서 개막 후 같은 일수(D일)까지의 경기당 기록 = 시즌 초 기록, 이후 잔여 경기당 기록 = 목표, 직전 시즌 경기당 기록 = 사전 기대치.</li>
+        <li>카테고리별·시즌 초 출전 수(1/2/3/4경기+)별 가중회귀: 잔여 기록 = b0 + b1×사전 기대치 + b2×시즌 초 기록(가중치 = 잔여 경기 수, 직전·잔여 각 20경기 이상).</li>
+        <li>적용: 사전 기대치 자리에 ESPN 2027 프로젝션, 시즌 초 기록 자리에 2027 실제 기록(ESPN API, 개막 후 D일). 시즌 초 출전이 없으면 사전 기대치만 쓰는 회귀.</li>
+        <li>실제 기록의 비중(b2)을 고정값 대신 과거 같은 시점의 데이터가 정함. 매주 D가 늘면 재적합.</li></ol></div>
+    </div>
+    <div class="tbl"><table class="wtbl" id="v2coef"></table></div>
+    <p class="note" id="v2note"></p>
+  </section>
+  <footer id="foot"></footer>
+</div>
+
+<script type="application/json" id="data">%%DATA%%</script>
+<script type="application/json" id="data2">%%DATA2%%</script>
+<script>
+(function () {
+  const VER = (function () { if (location.hash === "#v2") return "2"; if (location.hash === "#v1") return "1"; try { return localStorage.getItem("l10-ver") || "1"; } catch (e) { return "1"; } })();
+  const D = JSON.parse(document.getElementById(VER === "2" ? "data2" : "data").textContent), D2 = JSON.parse(document.getElementById("data2").textContent);
+  const PR = D.proj, P = {}; PR.forEach(p => P[p.id] = p);
+  const TM = D.teams, CATS = D.cats, ME = D.me, NT = TM.length;
+  const LAB = { FG: "FG%", FT: "FT%", TPM: "3PM", REB: "REB", AST: "AST", STL: "STL", BLK: "BLK", TO: "TO", DD: "DD", PTS: "PTS", TW: "TW" };
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const pct = (x, d = 0) => (x * 100).toFixed(d) + "%";
+  const pp = (x, d = 1) => `<span class="delta ${x >= 0 ? "up" : "down"}">${x >= 0 ? "+" : ""}${(x * 100).toFixed(d)}%p</span>`;
+  const st = p => p.st === "O" ? ` <span class="stat-o">O</span>` : p.st === "DTD" ? ` <span class="stat-dtd">DTD</span>` : "";
+  const nm = id => `${esc(P[id].n)}${st(P[id])}`;
+  const fmt = (c, v) => c === "FG" || c === "FT" ? v.toFixed(3).replace(/^0/, "") : v.toFixed(1);
+  const heat = (rk, n = 10) => { const a = (n - rk) / (n - 1); return `background: rgba(var(--heat), ${(0.08 + 0.62 * a).toFixed(2)}); color: ${a > 0.62 ? "#fff" : "var(--ink)"}`; };
+  const store = { get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }, set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} } };
+  const rec = s => `${s.W.toFixed(0)}–${s.L.toFixed(0)}–${s.T.toFixed(0)}`;
+  let sel = +(store.get("l10v2-team") ?? ME); if (!(sel >= 0 && sel < NT)) sel = ME;
+  const order = TM.map((t, i) => i).sort((a, b) => TM[b].ec - TM[a].ec);
+
+  $("tab-week1").textContent = `${D.period || 1}주차 매치업`;
+  $("w1-h").textContent = D.w1meta.title || `매치업 ${D.period || 1} · 현재까지 + 남은 경기 예상`;
+  $("fresh").innerHTML = D.fresh.map(([t, w]) => `<span class="pill${w ? " warn" : ""}">${esc(t)}</span>`).join("");
+  const me = TM[ME], te = D.tradeEval, pA = D.plan, pB = D.planB, myRank = order.indexOf(ME) + 1, w1 = D.week1.find(x => x.a === ME || x.b === ME);
+  const w1me = w1.a === ME ? w1.pA : w1.pB, w1op = w1.a === ME ? w1.pB : w1.pA, opp = TM[w1.a === ME ? w1.b : w1.a];
+  $("msg").innerHTML = `<span class="k">결론</span>
+    <p>현재 로스터 기준 2~22주차 카테고리 승률 ${pct(me.ec, 1)}로 10팀 중 ${myRank}위, 4강 확률 ${pct(me.season.p4)}입니다. 강점은 ${CATS.filter(c => me.profile.per[c] >= 0.6).map(c => LAB[c]).join("·") || "없음"}, 약점은 ${CATS.filter(c => me.profile.per[c] <= 0.4).map(c => LAB[c]).join("·") || "없음"}입니다. Gobert ↔ Nembhard(IYH) 예정 반영: 트레이드 전 대비 승률 ${pct(te.me.p0.ec, 1)} → ${pct(te.me.p1.ec, 1)}, 4강 ${pct(te.me.s0.p4)} → ${pct(te.me.s1.p4)}. Kawhi는 IR(ESPN 예상 복귀 11/23)로 반영했습니다.</p>
+    <p>${D.period || 1}주차 ${esc(opp.name)} 전 현재 ${w1.a === ME ? w1.rec[0] : w1.rec[1]}, 승리 확률 ${pct(w1me)}(패배 ${pct(w1op)}, 나머지 무승부). ${(D.streamPlans || []).length ? `권장 교체안 실행 시 4강 ${pct(D.streamPlans[0].sum.plan.p4)}(교체 없음 ${pct(D.streamBase.p4)}).` : ""}</p>`;
+
+  // ---------- tabs
+  const VIEWS = ["outlook", "radar", "stream", "week1", "trade", "proj"];
+  let view = VIEWS.includes((location.hash || "").slice(1)) ? location.hash.slice(1) : (VIEWS.includes(store.get("l10v2-view")) ? store.get("l10v2-view") : "outlook");
+  function setView(v) { view = v; store.set("l10v2-view", v); VIEWS.forEach(k => { $("view-" + k).hidden = k !== v; $("tab-" + k).setAttribute("aria-selected", String(k === v)); }); }
+  VIEWS.forEach(k => $("tab-" + k).addEventListener("click", () => setView(k)));
+
+  // ---------- outlook
+  function renderPower() {
+    $("power").innerHTML = `<thead><tr><th>#</th><th>팀</th><th class="r">카테고리 승률</th><th></th><th class="r">예상 성적 W–L–T</th><th class="r">4강</th><th class="r">정규 1위</th><th class="r">우승</th><th class="r">1주차 승</th><th>강점 (1~2위)</th><th>약점 (9~10위)</th></tr></thead><tbody>` +
+      order.map((i, k) => { const t = TM[i], s = t.season, rk = t.profile.rank;
+        const strong = CATS.filter(c => rk[c] <= 2), weak = CATS.filter(c => rk[c] >= 9);
+        return `<tr class="click${t.me ? " me" : ""}" data-i="${i}"><td class="num">${k + 1}</td><td><b>${esc(t.name)}</b><br><span class="note">${esc(t.mgr)}</span></td>
+          <td class="r num">${pct(t.ec, 1)}</td><td><div class="bar mid"><span style="width:${Math.max(0, Math.min(100, (t.ec - 0.35) / 0.3 * 100)).toFixed(0)}%"></span></div></td>
+          <td class="r num">${rec(s)}</td><td class="r num"><b>${pct(s.p4)}</b></td><td class="r num">${pct(s.p1)}</td><td class="r num">${pct(s.champ)}</td><td class="r num">${pct(s.w1)}</td>
+          <td>${strong.map(c => `<span class="chip good">${LAB[c]}</span>`).join("") || '<span class="note">—</span>'}</td><td>${weak.map(c => `<span class="chip bad">${LAB[c]}</span>`).join("") || '<span class="note">—</span>'}</td></tr>
+          <tr class="noterow${t.me ? " me" : ""}${i === sel ? " sel" : ""}" data-i="${i}"><td></td><td colspan="10" class="why">${esc(t.note)}</td></tr>`; }).join("") + `</tbody>`;
+    $("power").querySelectorAll("tr[data-i]").forEach(tr => tr.addEventListener("click", () => { sel = +tr.dataset.i; store.set("l10v2-team", sel); renderPower(); renderTeam(); $("det-title").scrollIntoView({ behavior: "smooth", block: "start" }); }));
+    $("power-note").textContent = "카테고리 승률 = 2~22주차, 9팀 상대로 매주 11개 카테고리 중 이길 기대 비율(무승부 0.5). 예상 성적 = 확정된 주차 기록 + 남은 시즌 카테고리 W–L–T(22주 × 11 = 242). 1주차 승 = 이번 주 매치업에서 카테고리를 더 많이 이길 확률. 확률은 실제 NBA 일정(1~14주)과 선수별 결장 가능성을 반영한 1만 회 시뮬레이션.";
+  }
+  function renderTeam() {
+    const t = TM[sel], s = t.season, rk = order.indexOf(sel) + 1, pf = t.profile;
+    $("det-title").textContent = `팀 상세 · ${t.name}`;
+    $("kpis").innerHTML = `
+      <div class="kpi"><span class="l">카테고리 승률</span><span class="v num">${pct(t.ec, 1)}<small>${rk}위</small></span><span class="d">2~22주차</span></div>
+      <div class="kpi"><span class="l">예상 성적 W–L–T</span><span class="v num">${rec(s)}</span><span class="d">평균 순위 ${s.avgRank.toFixed(1)}위</span></div>
+      <div class="kpi"><span class="l">4강 진출</span><span class="v num">${pct(s.p4)}</span><span class="d">정규 1위 ${pct(s.p1)}</span></div>
+      <div class="kpi"><span class="l">우승</span><span class="v num">${pct(s.champ)}</span><span class="d">결승 진출 ${pct(s.final)}</span></div>
+      <div class="kpi"><span class="l">선발 평균 예상 출장</span><span class="v num">${t.gpStart.toFixed(1)}<small>경기</small></span><span class="d">위험: ${t.risk.length ? esc(t.risk.join(", ")) : "없음"}</span></div>`;
+    $("verdict").textContent = t.note;
+    $("roster-title").textContent = `로스터 · ${t.name}`;
+    const imp = Object.fromEntries(t.drop), ord = ["PG", "SG", "SF", "PF", "C", "G", "F", "UTIL", "BE"];
+    const ids = t.roster.filter(id => !t.ir.includes(id)).sort((a, b) => ord.indexOf(t.asg[a]) - ord.indexOf(t.asg[b]) || P[b].v - P[a].v), mx = Math.max(...t.drop.map(x => x[1]));
+    $("roster").innerHTML = `<thead><tr><th>슬롯</th><th>선수</th><th>NBA</th><th class="r">ESPN</th><th class="r">GP</th><th class="r">PTS/REB/AST</th><th class="r">3P/STL/BLK</th><th class="r">FG%/FT%</th><th class="r">기여</th></tr></thead><tbody>` +
+      ids.map(id => { const p = P[id], f = p.f, nw = false;
+        return `<tr><td>${t.asg[id] === "BE" ? "BN" : t.asg[id]}</td><td>${nm(id)}${nw ? ' <span class="chip good">트레이드 영입</span>' : ""}${t.filled.includes(id) ? ' <span class="chip mid">가정 보충</span>' : ""}</td><td>${p.t}</td><td class="r num">${p.r ? "#" + p.r : "—"}</td>
+        <td class="r num">${Math.round(p.gp)}</td><td class="r num">${f.PTS.toFixed(1)}/${f.REB.toFixed(1)}/${f.AST.toFixed(1)}</td><td class="r num">${f.TPM.toFixed(1)}/${f.STL.toFixed(1)}/${f.BLK.toFixed(1)}</td>
+        <td class="r num">${(f.FGM / f.FGA).toFixed(3).replace(/^0/, "")}/${f.FTA ? (f.FTM / f.FTA).toFixed(3).replace(/^0/, "") : "—"}</td><td class="r num ${imp[id] === mx ? "delta down" : ""}">${(imp[id] * 100).toFixed(1)}%p</td></tr>`; }).join("") +
+      t.ir.map(id => `<tr><td>IR</td><td>${nm(id)}</td><td>${P[id].t}</td><td class="r num">${P[id].r ? "#" + P[id].r : "—"}</td><td class="r note" colspan="5">${D.returns && D.returns[P[id].n] ? "IR · " + D.returns[P[id].n].slice(5).replace("-", "/") + "부터 복귀 반영" : "IR 슬롯 · 계산 제외"}</td></tr>`).join("") + `</tbody>`;
+    const top = sel === order[0] ? order[1] : order[0];
+    $("cats").innerHTML = `<thead><tr><th>카테고리</th><th class="r">${esc(t.abbr)}</th><th class="r">리그 평균</th><th class="r">${esc(TM[top].abbr)}</th><th class="c">순위</th><th class="r">승리확률</th></tr></thead><tbody>` +
+      CATS.map(c => `<tr><td>${LAB[c]}</td><td class="r num"><b>${fmt(c, pf.avg[c])}</b></td><td class="r num">${fmt(c, pf.league[c])}</td><td class="r num">${fmt(c, TM[top].profile.avg[c])}</td>
+        <td class="c num" style="${heat(pf.rank[c])}">${pf.rank[c]}</td><td class="r num">${pct(pf.per[c])}</td></tr>`).join("") + `</tbody>`;
+    $("fa").innerHTML = `<thead><tr><th>영입</th><th>방출</th><th class="r">효과</th><th class="r">ESPN</th><th class="r">PTS/3P/REB/AST/STL</th></tr></thead><tbody>` +
+      t.fa.slice(0, 6).map(f => { const p = P[f.add], x = p.f; return `<tr><td><b>${nm(f.add)}</b> <span class="note">${p.t} ${p.el}</span></td><td>${nm(f.drop)}</td><td class="r num">${pp(f.d)}</td><td class="r num">#${p.r}</td>
+        <td class="r num">${x.PTS.toFixed(1)}/${x.TPM.toFixed(1)}/${x.REB.toFixed(1)}/${x.AST.toFixed(1)}/${x.STL.toFixed(1)}</td></tr>`; }).join("") + `</tbody>`;
+    $("team-sel").value = String(sel);
+    document.querySelectorAll("#power tr.noterow").forEach(r => r.classList.toggle("sel", +r.dataset.i === sel));
+  }
+  function renderHeat() {
+    $("heat").innerHTML = `<thead><tr><th>팀</th>${CATS.map(c => `<th class="c">${LAB[c]}</th>`).join("")}<th class="r">평균</th></tr></thead><tbody>` +
+      order.map(i => { const t = TM[i], a = CATS.reduce((s, c) => s + t.profile.rank[c], 0) / CATS.length;
+        return `<tr class="${t.me ? "me" : ""}"><td>${esc(t.abbr)}</td>${CATS.map(c => `<td class="h num" style="${heat(t.profile.rank[c])}">${t.profile.rank[c]}</td>`).join("")}<td class="r num">${a.toFixed(1)}</td></tr>`; }).join("") + `</tbody>`;
+    const byRank = TM.map((t, i) => i).sort((a, b) => TM[a].season.avgRank - TM[b].season.avgRank);
+    $("finish").innerHTML = `<thead><tr><th>팀</th>${[...Array(10)].map((_, k) => `<th class="c"${k === 3 ? ' style="border-right:2px solid var(--ink)"' : ""}>${k + 1}</th>`).join("")}<th class="r">평균</th></tr></thead><tbody>` +
+      byRank.map(i => { const t = TM[i], mx = Math.max(...t.season.fin);
+        return `<tr class="${t.me ? "me" : ""}"><td>${esc(t.abbr)}</td>${t.season.fin.map((v, k) => `<td class="h num" style="background: rgba(var(--heat), ${(0.06 + 0.7 * Math.min(1, v / 0.45)).toFixed(2)}); color:${v > 0.27 ? "#fff" : "var(--ink)"};${k === 3 ? "border-right:2px solid var(--ink);" : ""}font-weight:${v === mx ? 700 : 500}">${Math.round(v * 100)}</td>`).join("")}<td class="r num">${t.season.avgRank.toFixed(1)}</td></tr>`; }).join("") + `</tbody>`;
+  }
+
+  // ---------- week 1
+  function renderWeek1() {
+    const [i, j] = [w1.a, w1.b], A = TM[i], B = TM[j];
+    $("w1-sub").textContent = `${A.abbr} ${w1.rec[0]} vs ${B.abbr} ${w1.rec[1]} (${D.w1meta.through})`;
+    $("w1-me").innerHTML = `<thead><tr><th>카테고리</th><th class="r">${esc(A.abbr)} 현재</th><th class="r">${esc(B.abbr)} 현재</th><th class="r">${esc(A.abbr)} 최종 예상</th><th class="r">${esc(B.abbr)} 최종 예상</th><th class="r">${esc(A.abbr)} 승</th><th class="r">무</th><th></th></tr></thead><tbody>` +
+      w1.cats.map(x => `<tr><td>${LAB[x.c]}</td><td class="r num">${fmt(x.c, x.curA)}</td><td class="r num">${fmt(x.c, x.curB)}</td><td class="r num"><b>${fmt(x.c, x.finA)}</b></td><td class="r num"><b>${fmt(x.c, x.finB)}</b></td>
+        <td class="r num ${x.pw >= 0.6 ? "up2" : x.pw <= 0.4 ? "down2" : ""}">${pct(x.pw)}</td><td class="r num">${pct(x.pt)}</td><td><div class="split" style="width:140px"><span class="a" style="width:${(x.pw * 100).toFixed(0)}%"></span><span class="t" style="width:${(x.pt * 100).toFixed(0)}%"></span><span class="b" style="width:${((1 - x.pw - x.pt) * 100).toFixed(0)}%"></span></div></td></tr>`).join("") +
+      `<tr><td><b>매치업</b></td><td colspan="4" class="note">카테고리를 더 많이 이길 확률 (주황 = ${esc(A.abbr)}, 회색 = 무승부, 파랑 = ${esc(B.abbr)})</td><td class="r num"><b>${pct(w1.pA)}</b></td><td class="r num">${pct(1 - w1.pA - w1.pB)}</td><td><div class="split" style="width:140px"><span class="a" style="width:${(w1.pA * 100).toFixed(0)}%"></span><span class="t" style="width:${((1 - w1.pA - w1.pB) * 100).toFixed(0)}%"></span><span class="b" style="width:${(w1.pB * 100).toFixed(0)}%"></span></div></td></tr></tbody>`;
+    $("w1-note").textContent = `현재 = ESPN 스코어보드(${D.w1meta.through}). 남은 경기 ${D.w1meta.remaining}: ${D.w1meta.rosterNote} 남은 선발 출전 예상 ${w1.remA.toFixed(1)}경기 vs ${w1.remB.toFixed(1)}경기.`;
+    $("w1-all").innerHTML = D.week1.map(m => { const A = TM[m.a], B = TM[m.b], tie = Math.max(0, 1 - m.pA - m.pB);
+      const ea = m.cats.reduce((s, x) => s + x.pw + x.pt / 2, 0);
+      return `<div class="mu-card${A.me || B.me ? " me" : ""}"><div class="mu-head"><span><b>${esc(A.name)}</b> <span class="note">${m.rec[0]}</span> vs <b>${esc(B.name)}</b> <span class="note">${m.rec[1]}</span></span>
+        <span class="num"><span class="pw">${pct(m.pA)}</span> <span class="note">: 무 ${pct(tie)} :</span> <span class="pw" style="color:var(--s1)">${pct(m.pB)}</span></span></div>
+        <div class="split"><span class="a" style="width:${(m.pA * 100).toFixed(0)}%"></span><span class="t" style="width:${(tie * 100).toFixed(0)}%"></span><span class="b" style="width:${(m.pB * 100).toFixed(0)}%"></span></div>
+        <span class="note">기대 카테고리 ${ea.toFixed(1)} : ${(11 - ea).toFixed(1)} · ${m.cats.filter(x => x.pw >= 0.5).map(x => LAB[x.c]).join("·")} 우세(${esc(A.abbr)})</span></div>`; }).join("");
+  }
+
+  // ---------- trade
+  let trSel = 0;
+  function renderOpts() {
+    const O = D.tradeOptions || [];
+    $("tr-opts").innerHTML = `<thead><tr><th>시나리오</th><th class="r">Twindragons 승률</th><th class="r">변화</th><th class="r">4강</th><th class="r">우승</th><th class="r">상대 승률 변화</th><th class="r">상대 4강</th><th>ESPN 순위 균형</th></tr></thead><tbody>` +
+      O.map((o, k) => { const m = o.me, p = o.partner, d = m.p1.ec - m.p0.ec; return `<tr data-k="${k}" class="${k === trSel ? "me" : ""}" style="cursor:pointer"><td><b>${esc(o.label)}</b>${o.tag ? ` <span class="chip ${o.tagc || "mid"}">${esc(o.tag)}</span>` : ""}</td><td class="r num">${pct(m.p1.ec, 1)}</td><td class="r num">${pp(d)}</td><td class="r num">${pct(m.s1.p4)}</td><td class="r num">${pct(m.s1.champ, 1)}</td><td class="r num">${pp(p.p1.ec - p.p0.ec)}</td><td class="r num">${pct(p.s0.p4)} → ${pct(p.s1.p4)}</td><td class="note">${esc(o.fair || "")}</td></tr>`; }).join("") +
+      `<tr><td class="note">트레이드 전(Gobert 보유)</td><td class="r num">${pct(O[0].me.p0.ec, 1)}</td><td></td><td class="r num">${pct(O[0].me.s0.p4)}</td><td class="r num">${pct(O[0].me.s0.champ, 1)}</td><td colspan="3"></td></tr></tbody>`;
+    $("tr-opts-note").textContent = D.tradeOptsNote || "";
+    $("tr-opts").querySelectorAll("tr[data-k]").forEach(tr => tr.addEventListener("click", () => { trSel = +tr.dataset.k; renderOpts(); renderTrade(); }));
+  }
+  function renderTrade() {
+    const te = (D.tradeOptions || [D.tradeEval])[trSel];
+    const a = te.me, d = te.partner, PT = TM[te.to];
+    $("tr-title").textContent = `트레이드 효과 · ${te.give.map(i => P[i].n).join("·")} ↔ ${te.get.map(i => P[i].n).join("·")} (${PT.name})`;
+    $("tr-sub").textContent = "예정 · 11/2 처리 가정 · 트레이드 전 대비, 같은 프로젝션·같은 시드 1만 회";
+    const k = (l, x0, x1, f, df) => `<div class="kpi"><span class="l">${l}</span><span class="v num">${f(x1)}</span><span class="d">트레이드 전 ${f(x0)} → <b class="${x1 >= x0 ? "up" : "down"}">${df(x1 - x0)}</b></span></div>`;
+    const dp = x => (x >= 0 ? "+" : "") + (x * 100).toFixed(1) + "%p";
+    $("tr-kpis").innerHTML = k("Twindragons 카테고리 승률", a.p0.ec, a.p1.ec, x => pct(x, 1), dp) + k("Twindragons 4강", a.s0.p4, a.s1.p4, x => pct(x), dp) + k("Twindragons 우승", a.s0.champ, a.s1.champ, x => pct(x, 1), dp)
+      + k(`${esc(PT.abbr)} 카테고리 승률`, d.p0.ec, d.p1.ec, x => pct(x, 1), dp) + k(`${esc(PT.abbr)} 4강`, d.s0.p4, d.s1.p4, x => pct(x), dp);
+    const v0 = CATS.map(c => a.p0.per[c]), v1 = CATS.map(c => a.p1.per[c]);
+    $("tr-radar").innerHTML = radarSVG([{ v: v0, color: "var(--muted)", fo: 0.12, sw: 1.4, dash: true }, { v: v1, color: "var(--accent)", fo: 0.5, sw: 1.8, dots: true }], { size: 360, pad: 8, label: "트레이드 전후 레이더" });
+    $("tr-legend").innerHTML = `<span><span class="sw" style="background:var(--accent)"></span>트레이드 후</span><span><span class="sw" style="background:transparent;border:1px dashed var(--muted)"></span>트레이드 전</span>`;
+    const dl = CATS.map(c => a.p1.per[c] - a.p0.per[c]), mx = Math.max(0.05, ...dl.map(Math.abs)), Wd = 420, rh = 26, lw = 46, cx = lw + (Wd - lw) / 2, sc = (Wd - lw) / 2 - 34;
+    let g = `<line x1="${cx}" y1="4" x2="${cx}" y2="${CATS.length * rh + 4}" stroke="var(--line)"/>`;
+    CATS.forEach((c, i) => { const y = 6 + i * rh, v = dl[i], w = Math.abs(v) / mx * sc, x = v >= 0 ? cx : cx - w, col = v >= 0 ? "var(--good)" : "var(--bad)";
+      g += `<text x="0" y="${y + 14}" style="fill:var(--muted);font-size:12px">${LAB[c]}</text><rect x="${x.toFixed(1)}" y="${y + 3}" width="${Math.max(1, w).toFixed(1)}" height="${rh - 10}" rx="3" style="fill:${col}"/>`
+        + `<text x="${(v >= 0 ? cx + w + 5 : cx - w - 5).toFixed(1)}" y="${y + 14}" text-anchor="${v >= 0 ? "start" : "end"}" class="num" style="fill:var(--ink);font-size:11.5px">${v >= 0 ? "+" : ""}${(v * 100).toFixed(0)}</text>`; });
+    $("tr-bars").innerHTML = `<svg viewBox="0 0 ${Wd} ${CATS.length * rh + 10}" role="img" aria-label="카테고리별 승률 변화">${g}</svg>`;
+    $("tr-cats").innerHTML = `<thead><tr><th>카테고리</th><th class="r">현재 순위</th><th class="r">후 순위</th><th class="r">현재 승률</th><th class="r">후 승률</th><th class="r">변화</th></tr></thead><tbody>` +
+      CATS.map(c => { const r0 = a.p0.rank[c], r1 = a.p1.rank[c], w0 = a.p0.per[c], w = a.p1.per[c];
+        return `<tr><td>${LAB[c]}</td><td class="r num">${r0}</td><td class="r num" style="${heat(r1)}">${r1}</td><td class="r num">${pct(w0)}</td><td class="r num">${pct(w)}</td><td class="r num">${pp(w - w0)}</td></tr>`; }).join("") +
+      `<tr><td><b>합계</b></td><td></td><td></td><td class="r num">${(CATS.reduce((s, c) => s + a.p0.per[c], 0)).toFixed(2)}</td><td class="r num">${(CATS.reduce((s, c) => s + a.p1.per[c], 0)).toFixed(2)}</td><td class="r num note">주간 기대 카테고리 승수</td></tr></tbody>`;
+    const rows = te.give.map(id => [id, "보냄"]).concat(te.get.map(id => [id, "받음"]));
+    $("tr-players").innerHTML = `<thead><tr><th></th><th>선수</th><th class="r">ESPN</th><th class="r">GP</th><th class="r">PTS/REB/AST</th><th class="r">3P/STL/BLK/TO</th><th class="r">FG%/FT%</th><th class="r">DD/TW</th></tr></thead><tbody>` +
+      rows.map(([id, w]) => { const p = P[id], f = p.f; return `<tr><td><span class="chip ${w === "받음" ? "good" : "bad"}">${w}</span></td><td>${nm(id)} <span class="note">${p.t}</span></td><td class="r num">#${p.r}</td><td class="r num">${Math.round(p.gp)}</td>
+        <td class="r num">${f.PTS.toFixed(1)}/${f.REB.toFixed(1)}/${f.AST.toFixed(1)}</td><td class="r num">${f.TPM.toFixed(1)}/${f.STL.toFixed(1)}/${f.BLK.toFixed(1)}/${f.TO.toFixed(1)}</td><td class="r num">${(f.FGM / f.FGA).toFixed(3).replace(/^0/, "")}/${(f.FTM / f.FTA).toFixed(3).replace(/^0/, "")}</td><td class="r num">${p.dd.toFixed(2)}/${p.tw.toFixed(0)}승</td></tr>`; }).join("") + `</tbody>`;
+    const ups = CATS.filter(c => a.p1.per[c] - a.p0.per[c] >= 0.02).map(c => LAB[c]), downs = CATS.filter(c => a.p0.per[c] - a.p1.per[c] >= 0.02).map(c => LAB[c]);
+    $("tr-note").textContent = `${D.tsimNote || ""} 오른 카테고리: ${ups.join("·") || "없음"}. 내려간 카테고리: ${downs.join("·") || "없음"}. ${PT.name} 4강 확률 ${pct(d.s0.p4)} → ${pct(d.s1.p4)}.`;
+    const planCard = (p, title, tag, isRec) => `<div class="plan-card${isRec ? " rec" : ""}"><h3>${title}${tag ? `<small>${tag}</small>` : ""}</h3>
+      <div class="kpis" style="grid-template-columns:repeat(3,minmax(0,1fr))"><div class="kpi"><span class="l">카테고리 승률</span><span class="v num">${pct(p.ec, 1)}</span><span class="d">현재 ${pct(me.ec, 1)}</span></div><div class="kpi"><span class="l">4강</span><span class="v num">${pct(p.season.p4)}</span><span class="d">현재 ${pct(me.season.p4)}</span></div><div class="kpi"><span class="l">우승</span><span class="v num">${pct(p.season.champ)}</span><span class="d">현재 ${pct(me.season.champ)}</span></div></div>
+      <div>${p.steps.map((s, k) => { const g = P[s.give], r = P[s.get];
+        const when = (D.stepWhen && D.stepWhen[s.give] && s.kind !== "trade") ? D.stepWhen[s.give] : s.kind === "ir" ? ["오늘", "IR 해제"] : s.kind === "fa" ? ["오늘", "웨이버 1일"] : [["이번 주", "제안"], ["2주차", "제안"], ["2~3주차", "제안"]][p.steps.filter(x => x.kind === "trade").indexOf(s)] || ["", ""];
+        const head = s.kind === "ir" ? `IR 복귀: ${nm(s.give)} 방출 → <b>${nm(s.get)}</b> 활성화` : s.kind === "fa" ? `FA: ${nm(s.give)} → <b>${nm(s.get)}</b>` : `${esc(TM[s.to].abbr)}: ${nm(s.give)} <span class="note">#${g.r}</span> ↔ <b>${nm(s.get)}</b> <span class="note">#${r.r}</span>`;
+        const m = `${esc(r.n)} ${r.t} · ${r.f.PTS.toFixed(1)}점 ${r.f.REB.toFixed(1)}REB ${r.f.AST.toFixed(1)}AST ${r.f.STL.toFixed(1)}STL ${r.f.BLK.toFixed(1)}BLK${s.kind === "trade" ? ` · 상대 ${(s.dj * 100).toFixed(1)}%p` : ""}`;
+        return `<div class="pstep"><div class="wh">${when[0]}<small>${when[1]}</small></div><div>${head}<span class="m">${m}</span></div><div class="ef">${pct(s.ec, 1)}<br>${pp(s.d)}</div></div>`; }).join("")}</div>
+      <p class="note">실행 후 강점: ${CATS.filter(c => p.profile.rank[c] <= 2).map(c => LAB[c]).join("·") || "—"} · 포기: ${CATS.filter(c => p.profile.rank[c] >= 9).map(c => LAB[c]).join("·") || "없음"}</p></div>`;
+    $("plans").innerHTML = planCard(pA, "트레이드 참고안", "상대 수락 필요", true);
+    $("wk3").innerHTML = `<thead><tr><th>#</th><th>선수</th><th>NBA</th><th class="r">ESPN</th><th class="r">PTS/REB/AST</th><th class="r">3P/STL/BLK</th><th class="r">FG%/FT%</th><th class="r">3~22주 승률 변화</th><th>오르는 카테고리</th></tr></thead><tbody>` + (D.wk3 || []).map((x, k) => { const f = x.f, up = CATS.filter(c => x.per[c] - x.base[c] >= 0.08).map(c => LAB[c]); return `<tr class="${k === 0 ? "me" : ""}"><td>${k + 1}</td><td><b>${esc(x.n)}</b>${x.ret ? ` <span class="note">복귀 ${x.ret.slice(5).replace("-", "/")}</span>` : ""}</td><td>${x.t}</td><td class="r num">#${x.r}</td><td class="r num">${f.PTS.toFixed(1)}/${f.REB.toFixed(1)}/${f.AST.toFixed(1)}</td><td class="r num">${f.TPM.toFixed(1)}/${f.STL.toFixed(1)}/${f.BLK.toFixed(1)}</td><td class="r num">${(f.FGM / f.FGA).toFixed(3).replace(/^0/, "")}/${(f.FTM / f.FTA).toFixed(3).replace(/^0/, "")}</td><td class="r num"><b>+${(x.d * 100).toFixed(1)}%p</b></td><td class="note">${up.join("·")}</td></tr>`; }).join("") + `</tbody>`;
+    $("plan-note").textContent = `${D.planRisk || ""}`;
+    $("trades").innerHTML = `<thead><tr><th>보낼 선수</th><th>받을 선수</th><th>상대</th><th class="r">Twindragons</th><th class="r">상대</th></tr></thead><tbody>` +
+      me.trades.map(x => `<tr><td>${nm(x.give)} <span class="note">#${P[x.give].r}</span></td><td><b>${nm(x.get)}</b> <span class="note">#${P[x.get].r}</span></td><td>${esc(TM[x.to].abbr)}</td><td class="r num">${pp(x.di)}</td><td class="r num">${pp(x.dj)}</td></tr>`).join("") + `</tbody>`;
+  }
+
+  // ---------- projections
+  const SM = D.summary, KEYS = ["PTS", "REB", "AST", "STL", "BLK", "TPM", "FGM", "FTA", "TO"];
+  function renderMethod() {
+    $("method").innerHTML = `<b>1단계 · 과거 실적 선형회귀</b> Basketball Reference 경기당 기록(2020-21~2025-26, 최대 6시즌)으로 카테고리별 가중최소제곱 회귀(가중치 = 출전 경기 수) 후 2026-27 값을 외삽. 2025-26 기록이 없으면 그 이전 시즌만 사용. 외삽값은 관측 범위의 75~125% 안으로 제한.<br>
+      <b>2단계 · ESPN 프로젝션과 결합</b> <code>최종 = w × 회귀 + (1 − w) × ESPN</code>, <code>w = σ<sub>ESPN</sub>² ÷ (σ<sub>ESPN</sub>² + σ<sub>회귀</sub>²)</code>. σ<sub>회귀</sub>는 같은 방법으로 2021~2025 기록만 써서 2026을 예측한 백테스트 오차(로테이션 선수 ${SM.NBT[4] + SM.NBT[2] + SM.NBT[1]}명), σ<sub>ESPN</sub>은 가장 좋은 단순 예측(직전 시즌·회귀)보다 20% 정확하다고 가정.<br>
+      <b>신인</b> NCAA 2025-26 경기당 기록을 NBA 신인 수준으로 환산(득점 ×0.68, 리바운드 ×0.80, 어시스트·블록 ×0.75, 스틸 ×0.70, FG% −3%p)해 30%, ESPN 70% 가중평균. 대학 기록에 없는 항목(FGA·3PM·FTA·TO)은 ESPN.<br>
+      <b>3단계 · 시즌 실제 기록</b> 경기당 실제 기록을 주차별 비중으로 반영: ${SM.WACT_TABLE.map(([k, w], i) => `${i ? SM.WACT_TABLE[i - 1][0] + 1 : 1}~${k < 99 ? k : ""}주 ${Math.round(w * 100)}%`).join(" · ")}. 현재 ${SM.WEEK}주차 → ${Math.round(SM.WACT * 100)}%. 선수별 실제 기록은 ${D.actualThrough} 기준이며, 1경기 표본이라 이 단계의 흔들림이 큽니다.<br>
+      <b>그 밖</b> 출전 경기(GP)는 ESPN 값, DD는 기존 모델 비율을 새 기록에 맞춰 조정, TW는 소속팀 시즌 승수 배당 ÷ 82.`;
+    const g = [1, 2, 4], gl = { 1: "1시즌", 2: "2~3시즌", 4: "4시즌 이상" };
+    const W = {}; g.forEach(k => { W[k] = {}; KEYS.forEach(s => { const a = PR.filter(p => p.wAll && (p.ns === 1 ? 1 : p.ns <= 3 ? 2 : 4) === k && p.m === "reg+espn"); W[k][s] = a.length ? a.reduce((x, p) => x + p.wAll[s], 0) / a.length : null; W[k].n = a.length; }); });
+    $("wtbl").innerHTML = `<thead><tr><th>기록</th><th>선수</th>${KEYS.map(s => `<th>${LAB[s] || s}</th>`).join("")}</tr></thead><tbody>` + g.map(k => `<tr><td>${gl[k]}</td><td class="num">${W[k].n}</td>${KEYS.map(s => `<td class="num">${W[k][s] == null ? "—" : Math.round(W[k][s] * 100) + "%"}</td>`).join("")}</tr>`).join("") +
+      `<tr><td>신인</td><td class="num">${PR.filter(p => p.m === "ncaa+espn").length}</td><td colspan="${KEYS.length}" class="note">NCAA 환산 30% · ESPN 70%</td></tr><tr><td>ESPN만</td><td class="num">${PR.filter(p => p.m === "espn").length}</td><td colspan="${KEYS.length}" class="note">NBA·NCAA 기록 확인 불가</td></tr></tbody>`;
+    $("bttbl").innerHTML = `<thead><tr><th>방법</th>${KEYS.map(s => `<th>${LAB[s] || s}</th>`).join("")}</tr></thead><tbody>` +
+      g.map(k => `<tr><td>회귀 · ${gl[k]}</td>${KEYS.map(s => `<td class="num">${Math.round(SM.RREG[k][s] * 100)}%</td>`).join("")}</tr>`).join("") +
+      `<tr><td>직전 시즌 그대로</td>${KEYS.map(s => `<td class="num">${Math.round(SM.RNAIVE[s] * 100)}%</td>`).join("")}</tr><tr><td><b>ESPN (가정)</b></td>${KEYS.map(s => `<td class="num"><b>${Math.round(SM.RESPN[s] * 100)}%</b></td>`).join("")}</tr></tbody>`;
+  }
+  const owners = [...new Set(PR.map(p => p.own.replace(" IR", "")))].filter(x => x !== "FA").sort();
+  $("pown").innerHTML += owners.map(o => `<option value="${o}">${o}</option>`).join("");
+  let psel = PR.find(p => p.n === "Giannis Antetokounmpo").id;
+  function renderProj() {
+    const q = $("pq").value.trim().toLowerCase(), ow = $("pown").value, so = $("psort").value;
+    let L = PR.filter(p => (!q || p.n.toLowerCase().includes(q) || p.t.toLowerCase() === q) && (!ow || p.own.replace(" IR", "") === ow));
+    const key = { vr: p => p.vr, r: p => p.r || 999, dpts: p => -Math.abs(p.f.PTS - p.e.PTS), w: p => -(p.w ?? -1) }[so];
+    L.sort((a, b) => key(a) - key(b));
+    $("ptbl").innerHTML = `<thead><tr><th>선수</th><th>소속</th><th class="r">ESPN</th><th>방법</th><th class="r">회귀 비중</th><th class="r">PTS ESPN→최종</th><th class="r">REB</th><th class="r">AST</th><th class="r">FG%</th></tr></thead><tbody>` +
+      L.map(p => { const d = p.f.PTS - p.e.PTS; return `<tr data-id="${p.id}" class="${p.id === psel ? "on" : ""}"><td>${esc(p.n)}${st(p)} <span class="note">${p.t}</span></td><td>${esc(p.own)}</td><td class="r num">${p.r || "—"}</td>
+        <td><span class="meth ${p.m === "ncaa+espn" ? "ncaa" : p.m === "espn" ? "espn" : ""}">${p.m === "reg+espn" ? "회귀 " + p.ns + "시즌" : p.m === "ncaa+espn" ? "NCAA+ESPN" : "ESPN"}</span></td>
+        <td class="r num">${p.w == null ? "—" : Math.round(p.w * 100) + "%"}</td><td class="r num">${p.e.PTS.toFixed(1)}→<b>${p.f.PTS.toFixed(1)}</b> <span class="${d >= 0 ? "up2" : "down2"}">${d >= 0 ? "+" : ""}${d.toFixed(1)}</span></td>
+        <td class="r num">${p.f.REB.toFixed(1)}</td><td class="r num">${p.f.AST.toFixed(1)}</td><td class="r num">${(p.f.FGM / p.f.FGA).toFixed(3).replace(/^0/, "")}</td></tr>`; }).join("") + `</tbody>`;
+    $("ptbl").querySelectorAll("tr[data-id]").forEach(tr => tr.addEventListener("click", () => { psel = +tr.dataset.id; renderProj(); }));
+    renderPDet();
+  }
+  function renderPDet() {
+    const p = P[psel], S = ["PTS", "REB", "AST", "STL", "BLK", "TPM", "TO", "FGM", "FGA", "FTM", "FTA", "MP"];
+    const row = (l, o) => o ? `<tr><td>${l}</td>${S.map(s => `<td class="r num">${o[s] == null ? "—" : (+o[s]).toFixed(1)}</td>`).join("")}</tr>` : "";
+    const hist = p.h && p.h.length ? `<div class="tbl"><table><thead><tr><th>시즌</th><th class="r">G</th><th class="r">MP</th><th class="r">PTS</th><th class="r">REB</th><th class="r">AST</th><th class="r">STL</th><th class="r">BLK</th><th class="r">3PM</th></tr></thead><tbody>${p.h.map(h => `<tr><td>${h[0] - 1}-${String(h[0]).slice(2)}</td>${h.slice(1).map(x => `<td class="r num">${x}</td>`).join("")}</tr>`).join("")}</tbody></table></div>` : "";
+    const nc = p.nc ? `<p class="note">NCAA 2025-26 (${esc(p.nc.school)}): ${p.nc.raw.PTS}점 ${p.nc.raw.REB}리바 ${p.nc.raw.AST}어시 ${p.nc.raw.STL ?? "—"}스틸 ${p.nc.raw.BLK ?? "—"}블록, FG ${p.nc.raw.FGp ?? "—"} · FT ${p.nc.raw.FTp ?? "—"} → NBA 환산 ${p.nc.nba.PTS}점 ${p.nc.nba.REB}리바 ${p.nc.nba.AST}어시 (출처: ${esc(p.nc.src)})</p>` : "";
+    $("pdet").innerHTML = `<h2 style="color:var(--ink)">${esc(p.n)} <span class="note">${p.t} · ${p.el} · ${esc(p.own)} · ESPN #${p.r || "—"} · 모델 가치 ${p.vr}위</span></h2>
+      <div class="tbl"><table><thead><tr><th>단계</th>${S.map(s => `<th class="r">${LAB[s] || s}</th>`).join("")}</tr></thead><tbody>${row("ESPN", p.e)}${row("회귀 (" + p.ns + "시즌)", p.rg)}${row("결합", p.b)}${p.a ? row("실제 (" + p.a.G + "경기)", p.a) : ""}<tr style="font-weight:700">${row("최종", p.f).slice(4)}</tbody></table></div>
+      <p class="note">${p.wAll ? "회귀 비중: " + ["PTS", "REB", "AST", "STL", "BLK", "TPM"].map(s => `${LAB[s]} ${Math.round(p.wAll[s] * 100)}%`).join(" · ") : p.m === "ncaa+espn" ? "신인: NCAA 환산 30% + ESPN 70%" : "과거 기록 없음: ESPN 값 사용"}${p.a ? ` · 실제 기록 ${Math.round(D.summary.WACT * 100)}% 반영` : " · 이번 시즌 실제 기록 미반영(미출전 또는 자료 없음)"} · GP ${Math.round(p.gp)} · DD ${p.dd.toFixed(2)} · 팀 승수 ${p.tw}</p>${nc}${hist}`;
+  }
+  ["pq", "pown", "psort"].forEach(id => $(id).addEventListener("input", renderProj));
+
+  $("team-sel").innerHTML = order.map(i => `<option value="${i}">${esc(TM[i].name)}${TM[i].me ? " (내 팀)" : ""}</option>`).join("");
+  $("team-sel").addEventListener("change", e => { sel = +e.target.value; store.set("l10v2-team", sel); renderPower(); renderTeam(); });
+  $("foot").innerHTML = D.foot.map(x => `<span>${x}</span>`).join("");
+
+  // ---------- radar (SVG, shadcn Radar chart styling)
+  function radarSVG(series, o) {
+    const S = o.size, cx = S / 2, cy = S / 2, R = S / 2 - o.pad, n = CATS.length;
+    const ang = k => -Math.PI / 2 + 2 * Math.PI * k / n, pt = (k, r) => [cx + r * Math.cos(ang(k)), cy + r * Math.sin(ang(k))];
+    const poly = (f) => CATS.map((c, k) => pt(k, R * Math.max(0, Math.min(1, f(k)))).map(v => v.toFixed(1)).join(",")).join(" ");
+    let g = "";
+    [0.25, 0.5, 0.75, 1].forEach(l => { g += `<polygon points="${poly(() => l)}" fill="none" stroke="var(--line)"${l === 0.5 ? ' stroke-dasharray="4 4" stroke-width="1.2" style="stroke:var(--muted);stroke-opacity:.55"' : ""}/>`; });
+    CATS.forEach((c, k) => { const [x, y] = pt(k, R); g += `<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="var(--line)"/>`; });
+    series.forEach(s => { g += `<polygon points="${poly(k => s.v[k])}" style="fill:${s.color};fill-opacity:${s.fo};stroke:${s.color};stroke-width:${s.sw || 1.5}${s.dash ? ";stroke-dasharray:5 4" : ""}" stroke-linejoin="round"/>`;
+      if (s.dots) CATS.forEach((c, k) => { const [x, y] = pt(k, R * Math.max(0, Math.min(1, s.v[k]))); g += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${o.mini ? 2.2 : 3.6}" style="fill:${s.color}"/>`; }); });
+    CATS.forEach((c, k) => { const [x, y] = pt(k, R + (o.mini ? 11 : 16)), co = Math.cos(ang(k)), si = Math.sin(ang(k));
+      const an = co > 0.3 ? "start" : co < -0.3 ? "end" : "middle", dy = si > 0.5 ? "0.9em" : si < -0.5 ? "-0.15em" : "0.35em";
+      g += `<text class="rl${o.bold && o.bold.includes(c) ? " b" : ""}" x="${x.toFixed(1)}" y="${y.toFixed(1)}" text-anchor="${an}" dy="${dy}">${LAB[c]}</text>`; });
+    if (o.hit) CATS.forEach((c, k) => { const [x, y] = pt(k, R * 0.82); g += `<circle class="hit" data-k="${k}" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(R * 0.26).toFixed(1)}" fill="transparent"/>`; });
+    const m = o.mini ? 26 : 44;
+    return `<svg viewBox="${-m} ${-m / 2} ${S + 2 * m} ${S + m}" role="img" aria-label="${esc(o.label || "")}">${g}</svg>`;
+  }
+  const perOf = t => CATS.map(c => t.profile.per[c]);
+  const CHEV = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg>';
+  const CHECK = '<svg class="ck" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>';
+  const SRCH = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>';
+  let rdSel = +(store.get("l10v3-rdsel") ?? ME); if (!(rdSel >= 0 && rdSel < NT)) rdSel = ME;
+  let rdCmp = +(store.get("l10v3-rdcmp") ?? -1); if (!(rdCmp >= -1 && rdCmp < NT)) rdCmp = -1;
+  let rdPlan = store.get("l10v2-rdplan") === "1";
+  // shadcn-style combobox (button + popover with search + listbox)
+  function combobox(host, label, items, value, onPick) {
+    const cur = items.find(x => x.v === value) || items[0];
+    host.innerHTML = `<button type="button" role="combobox" aria-expanded="false" aria-haspopup="listbox"><span><span class="lab">${label}</span> ${esc(cur.t)}</span>${CHEV}</button>
+      <div class="pop"><div class="sr">${SRCH}<input type="text" placeholder="팀 검색…" aria-label="${label} 검색"></div><ul role="listbox"></ul></div>`;
+    const btn = host.querySelector("button"), inp = host.querySelector("input"), ul = host.querySelector("ul");
+    let act = 0, shown = items;
+    const draw = () => { const q = inp.value.trim().toLowerCase(); shown = items.filter(x => !q || x.t.toLowerCase().includes(q) || (x.k || "").toLowerCase().includes(q)); act = Math.min(act, Math.max(0, shown.length - 1));
+      ul.innerHTML = shown.length ? shown.map((x, k) => `<li role="option" data-v="${x.v}" aria-selected="${x.v === value}" class="${k === act ? "act" : ""}">${CHECK}<span>${esc(x.t)}</span><span class="rk">${x.r || ""}</span></li>`).join("") : `<li class="empty" role="presentation">일치하는 팀이 없습니다</li>`;
+      ul.querySelectorAll("li[data-v]").forEach(li => li.addEventListener("mousedown", e => { e.preventDefault(); pick(+li.dataset.v); })); };
+    const open = o => { host.classList.toggle("open", o); btn.setAttribute("aria-expanded", String(o)); if (o) { inp.value = ""; act = Math.max(0, items.findIndex(x => x.v === value)); draw(); setTimeout(() => inp.focus(), 0); } };
+    const pick = v => { open(false); onPick(v); };
+    btn.addEventListener("click", () => open(!host.classList.contains("open")));
+    inp.addEventListener("input", () => { act = 0; draw(); });
+    inp.addEventListener("keydown", e => { if (e.key === "ArrowDown") { act = Math.min(act + 1, shown.length - 1); draw(); e.preventDefault(); } else if (e.key === "ArrowUp") { act = Math.max(act - 1, 0); draw(); e.preventDefault(); }
+      else if (e.key === "Enter" && shown[act]) { pick(shown[act].v); e.preventDefault(); } else if (e.key === "Escape") { open(false); btn.focus(); } });
+    inp.addEventListener("blur", () => setTimeout(() => open(false), 120));
+  }
+  function renderRadar() {
+    const A = TM[rdSel], va = perOf(A), isMe = rdSel === ME, B = rdCmp >= 0 && rdCmp !== rdSel ? TM[rdCmp] : null, vb = B ? perOf(B) : null;
+    const showPlan = isMe && rdPlan, vp = CATS.map(c => pB.profile.per[c]);
+    const items = order.map((i, r) => ({ v: i, t: TM[i].name + (i === ME ? " (내 팀)" : ""), k: TM[i].abbr, r: `${r + 1}위 · ${pct(TM[i].ec, 1)}` }));
+    combobox($("cb-team"), "팀", items, rdSel, v => { rdSel = v; store.set("l10v3-rdsel", String(v)); renderRadar(); });
+    combobox($("cb-cmp"), "비교", [{ v: -1, t: "비교 안 함", k: "" }].concat(items.filter(x => x.v !== rdSel)), B ? rdCmp : -1, v => { rdCmp = v; store.set("l10v3-rdcmp", String(v)); renderRadar(); });
+    $("rd-plan-wrap").hidden = !isMe; $("rd-plan").checked = rdPlan;
+    $("rd-title").textContent = `카테고리 레이더 · ${A.name}`;
+    const mainColor = isMe ? "var(--accent)" : "var(--s1)", cmpColor = isMe ? "var(--s1)" : "var(--accent)";
+    const ser = [];
+    if (B) ser.push({ v: vb, color: cmpColor, fo: 0.18, sw: 1.5 });
+    ser.push({ v: va, color: mainColor, fo: 0.55, sw: 1.8, dots: true });
+    if (showPlan) ser.push({ v: vp, color: "var(--good)", fo: 0.06, sw: 2, dash: true, dots: true });
+    $("rd-main").innerHTML = radarSVG(ser, { size: 380, pad: 8, hit: true, bold: CATS.filter((c, k) => va[k] >= 0.6), label: A.name }) + `<div class="rtip" id="rd-tip"></div>`;
+    $("rd-legend").innerHTML = `<span><span class="sw" style="background:${mainColor}"></span>${esc(A.name)}</span>` + (B ? `<span><span class="sw" style="background:${cmpColor};opacity:.7"></span>${esc(B.name)}</span>` : "") + (showPlan ? `<span><span class="sw" style="background:var(--good)"></span>트레이드안 실행 후</span>` : "") + `<span><span class="sw" style="background:transparent;border:1px dashed var(--muted)"></span>50% 기준선</span>`;
+    const tip = $("rd-tip"), box = $("rd-main");
+    box.querySelectorAll(".hit").forEach(el => {
+      el.addEventListener("mouseenter", () => { const k = +el.dataset.k, c = CATS[k];
+        tip.innerHTML = `<b>${LAB[c]}</b><div class="row"><span><span class="sw" style="background:${mainColor}"></span>${esc(A.abbr)}</span><span class="num">${pct(va[k])} · ${A.profile.rank[c]}위</span></div>` + (B ? `<div class="row"><span><span class="sw" style="background:${cmpColor}"></span>${esc(B.abbr)}</span><span class="num">${pct(vb[k])} · ${B.profile.rank[c]}위</span></div>` : "") + (showPlan ? `<div class="row"><span><span class="sw" style="background:var(--good)"></span>트레이드안</span><span class="num">${pct(vp[k])} · ${pB.profile.rank[c]}위</span></div>` : "");
+        tip.style.display = "block"; const r = box.getBoundingClientRect(), e = el.getBoundingClientRect(); let x = e.left - r.left + e.width / 2 + 10, y = e.top - r.top - 6; if (x > r.width - 160) x = Math.max(0, x - 180); tip.style.left = x + "px"; tip.style.top = y + "px"; });
+      el.addEventListener("mouseleave", () => tip.style.display = "none"); });
+    const cols = [[A, va, A.abbr]].concat(B ? [[B, vb, B.abbr]] : []);
+    $("rd-tbl").innerHTML = `<thead><tr><th>카테고리</th>${cols.map(c => `<th class="r">${esc(c[2])}</th>`).join("")}${B ? '<th class="r">차이</th>' : ""}${showPlan ? '<th class="r">트레이드안</th>' : ""}</tr></thead><tbody>` +
+      CATS.map((c, k) => { const d = B ? va[k] - vb[k] : 0; return `<tr><td>${LAB[c]}</td>${cols.map(([t, v]) => `<td class="r num">${pct(v[k])} <span class="note">${t.profile.rank[c]}위</span></td>`).join("")}${B ? `<td class="r num d ${d >= 0 ? "up" : "down"}">${d >= 0 ? "+" : ""}${(d * 100).toFixed(0)}</td>` : ""}${showPlan ? `<td class="r num">${pct(vp[k])}</td>` : ""}</tr>`; }).join("") +
+      `<tr><td><b>카테고리 승률</b></td>${cols.map(([t]) => `<td class="r num"><b>${pct(t.ec, 1)}</b> <span class="note">${order.indexOf(t.i) + 1}위</span></td>`).join("")}${B ? `<td class="r num d ${A.ec >= B.ec ? "up" : "down"}">${A.ec >= B.ec ? "+" : ""}${((A.ec - B.ec) * 100).toFixed(1)}</td>` : ""}${showPlan ? `<td class="r num"><b>${pct(pB.ec, 1)}</b></td>` : ""}</tr></tbody>`;
+    const s = CATS.filter((c, k) => va[k] >= 0.6).map(c => LAB[c]), w = CATS.filter((c, k) => va[k] <= 0.4).map(c => LAB[c]);
+    let foot = `<span class="lead">${esc(A.name)} · 카테고리 승률 ${pct(A.ec, 1)} (${order.indexOf(rdSel) + 1}위) · 4강 ${pct(A.season.p4)}</span><span class="m">강점(60%↑): ${s.join("·") || "없음"} / 약점(40%↓): ${w.join("·") || "없음"}</span>`;
+    if (B) { const win = CATS.filter((c, k) => va[k] > vb[k] + 0.02), lose = CATS.filter((c, k) => vb[k] > va[k] + 0.02); foot += `<span class="m">${esc(B.name)} 대비 우위 ${win.length}개(${win.map(c => LAB[c]).join("·") || "—"}) · 열세 ${lose.length}개(${lose.map(c => LAB[c]).join("·") || "—"}), ±2%p 이내는 동률.</span>`; }
+    $("rd-foot").innerHTML = foot;
+    $("rd-grid").innerHTML = order.map((i, r) => { const t = TM[i], v = perOf(t), ss = CATS.filter((c, k) => v[k] >= 0.6).map(c => LAB[c]), ww = CATS.filter((c, k) => v[k] <= 0.4).map(c => LAB[c]);
+      return `<button type="button" class="rcard${t.me ? " me" : ""}${i === rdSel ? " on" : ""}" data-i="${i}"><span class="h"><span>${r + 1}. ${esc(t.name)}</span><span class="e">${pct(t.ec, 1)}</span></span>
+        <div class="rchart mini">${radarSVG([{ v, color: t.me ? "var(--accent)" : "var(--s1)", fo: t.me ? 0.55 : 0.4, sw: 1.2, dots: true }], { size: 170, pad: 4, mini: true, bold: CATS.filter((c, k) => v[k] >= 0.6), label: t.name })}</div>
+        <span class="f">강점 <b>${ss.join("·") || "—"}</b> · 약점 <i>${ww.join("·") || "—"}</i></span></button>`; }).join("");
+    $("rd-grid").querySelectorAll(".rcard").forEach(el => el.addEventListener("click", () => { rdSel = +el.dataset.i; store.set("l10v3-rdsel", String(rdSel)); renderRadar(); $("rd-title").scrollIntoView({ behavior: "smooth", block: "start" }); }));
+  }
+  $("rd-plan").addEventListener("change", e => { rdPlan = e.target.checked; store.set("l10v2-rdplan", rdPlan ? "1" : "0"); renderRadar(); });
+  function renderInj() {
+    const L = D.injury || []; $("inj-sub").textContent = D.injuryAsOf ? `ESPN 부상 리포트 ${D.injuryAsOf}` : "";
+    $("inj").innerHTML = `<thead><tr><th>팀</th><th>선수</th><th>상태</th><th>부상</th><th class="r">복귀 예정</th><th class="r">결장(2주차 이후)</th><th>근거</th></tr></thead><tbody>` +
+      L.map(x => `<tr class="${x.me ? "me" : ""}"><td>${esc(x.team)}</td><td><b>${esc(x.n)}</b>${x.ir ? ' <span class="chip mid">IR</span>' : ""}</td><td>${esc(x.status || "")}</td><td>${esc(x.injury || "")}</td><td class="r num"><b>${x.ret ? x.ret.slice(5).replace("-", "/") : "—"}</b></td><td class="r num">${x.miss}경기</td><td class="note" title="${esc(x.note || "")}">${esc(x.basis)}${x.espn && x.espn !== x.ret ? ` (ESPN ${x.espn.slice(5).replace("-", "/")})` : ""}</td></tr>`).join("") + `</tbody>`;
+  }
+  ["1", "2"].forEach(v => { const el = document.getElementById("ver" + v); el.setAttribute("aria-pressed", String(VER === v)); el.addEventListener("click", () => { if (VER === v) return; try { localStorage.setItem("l10-ver", v); } catch (e) {} location.hash = "v" + v; location.reload(); }); });
+  document.getElementById("verdesc").textContent = VER === "2" ? `v2 적용 중 · 개막 후 ${D2.summary.V2.days}일 기준 재적합` : "v1 적용 중";
+  (function renderCoef() { const V = D2.summary.V2; if (!V) return; const K = ["PTS", "REB", "AST", "TPM", "STL", "BLK", "TO", "FGA", "FTA"], L2 = { TPM: "3PM" };
+    $("v2coef").innerHTML = `<thead><tr><th>카테고리</th>${[0, 1, 2, 3, 4].map(b => `<th>${b ? b + (b === 4 ? "경기+" : "경기") : "출전 없음"}<br><span class="note">b0 / b1(ESPN) / b2(실제) · R²</span></th>`).join("")}</tr></thead><tbody>` +
+      K.map(k => `<tr><td>${L2[k] || k}</td>${[0, 1, 2, 3, 4].map(b => { const c = V.coef[k + "|" + b]; return c ? `<td class="num">${c.b0.toFixed(2)} / ${c.b1.toFixed(2)} / ${c.b2.toFixed(2)} · ${c.r2.toFixed(2)}<br><span class="note">n=${c.n}</span></td>` : "<td>—</td>"; }).join("")}</tr>`).join("") + `</tbody>`;
+    $("v2note").textContent = `v2 학습 표본: Basketball Reference 경기 로그 ${V.players}개 선수-시즌(2021~2026). 개막 후 ${V.days}일(2027 = 10/20~${V.cutLabel || ""}) 기준. b2가 클수록 시즌 초 실제 기록을 많이 믿는다는 뜻입니다. 표본이 없는 구간(현재 6일 기준 4경기+)은 바로 아래 구간 계수를 씁니다. v2에서도 Ajay Mitchell 승계·연속 경기 규칙·하루 10명 제한·주 2회 교체 가정은 v1과 같습니다.`; })();
+  // ---------- acquisition strategy
+  let stSel = 0;
+  function renderStream() {
+    const V = D.streamPlans || []; if (!V.length) return; const S0 = D.streamBase;
+    $("st-sub").textContent = `${D.streamMeta || ""}`;
+    $("st-cmp").innerHTML = `<thead><tr><th>운영안</th><th class="r">교체(2주 잔여~22주)</th><th class="r">누적(한도 70)</th><th class="r">예상 성적</th><th class="r">PTS 승률</th><th class="r">AST 승률</th><th class="r">4강</th><th class="r">정규 1위</th><th class="r">우승</th></tr></thead><tbody>` +
+      `<tr><td class="note">교체 없음(현 로스터 고정)</td><td class="r num">0</td><td class="r num">${D.acqUsed}</td><td class="r num">${S0.W.toFixed(0)}–${S0.L.toFixed(0)}–${S0.T.toFixed(0)}</td><td></td><td></td><td class="r num">${pct(S0.p4)}</td><td class="r num">${pct(S0.p1)}</td><td class="r num">${pct(S0.champ, 1)}</td></tr>` +
+      V.map((v, k) => `<tr data-k="${k}" class="${k === stSel ? "me" : ""}" style="cursor:pointer"><td><b>${esc(v.label)}</b>${v.rec ? ' <span class="chip good">권장</span>' : ""}</td><td class="r num">${v.sum.used}</td><td class="r num">${D.acqUsed + v.sum.used}</td><td class="r num">${v.sum.plan.W.toFixed(0)}–${v.sum.plan.L.toFixed(0)}–${v.sum.plan.T.toFixed(0)}</td><td class="r num">${v.sum.catWin ? pct(v.sum.catWin.PTS) : "—"}</td><td class="r num">${v.sum.catWin ? pct(v.sum.catWin.AST) : "—"}</td><td class="r num"><b>${pct(v.sum.plan.p4)}</b></td><td class="r num">${pct(v.sum.plan.p1)}</td><td class="r num">${pct(v.sum.plan.champ, 1)}</td></tr>`).join("") + `</tbody>`;
+    $("st-note").textContent = D.streamNote || "";
+    $("st-cmp").querySelectorAll("tr[data-k]").forEach(tr => tr.addEventListener("click", () => { stSel = +tr.dataset.k; renderStream(); }));
+    $("st-sel").innerHTML = V.map((v, k) => `<option value="${k}"${k === stSel ? " selected" : ""}>${esc(v.label)}</option>`).join("");
+    const L = V[stSel].log; let cum = D.acqUsed;
+    $("st-title").textContent = `주차별 교체 계획 · ${V[stSel].label}`;
+    $("st-plan").innerHTML = `<thead><tr><th>주차</th><th>상대</th><th>교체 (방출 → 영입, 그 주 경기 수)</th><th class="r">교체</th><th class="r">누적</th><th class="r">기대 카테고리</th><th class="r">매치업 승리</th></tr></thead><tbody>` +
+      L.map(x => { cum += x.nMoves; const mv = x.moves.map(m => `${esc(m.drop)} → <b>${esc(m.add)}</b> <span class="note">${m.g}g</span>`); if (x.forced) mv.unshift(`<span class="note">Kawhi 복귀(11/23) → ${esc(x.forced)} 방출 · 교체 미소진</span>`); if (x.now) { mv.unshift(`<span class="note">${x.moves.length ? "이번 주 권장 교체(남은 경기 기준)" : "이번 주: 남은 경기 기준 교체 효과 미미 → 교체 없음"}</span>`); mv.push(`<span class="note">이번 주 · 기대 카테고리·승리확률은 Watson 영입 후 대비</span>`); } if (x.joint) mv.push(`<span class="note">3·4주 공동 최적화 · 집중: ${CATS.filter(c => x.per[c] - x.perBefore[c] >= 0.08).map(c => LAB[c]).join("·") || "—"} / 포기: ${CATS.filter(c => x.per[c] < 0.2).map(c => LAB[c]).join("·") || "—"}</span>`);
+        return `<tr><td class="num">${x.week}주 <span class="note">${x.start.slice(5).replace("-", "/")}</span></td><td>${esc(x.opp)}</td><td>${mv.join("<br>") || '<span class="note">유지</span>'}</td><td class="r num">${x.nMoves}</td><td class="r num">${cum}</td><td class="r num">${x.before.toFixed(1)} → <b>${x.after.toFixed(1)}</b></td><td class="r num">${pct(x.winBefore)} → <b>${pct(x.winAfter)}</b></td></tr>`; }).join("") + `</tbody>`;
+  }
+  $("st-sel").addEventListener("change", e => { stSel = +e.target.value; renderStream(); });
+  function renderKS() { const K = D.kawhiSens || []; if (!K.length) { $("ks-panel").hidden = true; return; }
+    $("ks").innerHTML = `<thead><tr><th>Kawhi 복귀</th><th class="r">결장 경기</th><th class="r">예상 성적</th><th class="r">4강</th><th class="r">정규 1위</th><th class="r">우승</th></tr></thead><tbody>` +
+      K.map(k => `<tr class="${k.base ? "me" : ""}"><td>${esc(k.label)}${k.base ? ' <span class="chip mid">기준</span>' : ""}</td><td class="r num">${k.miss}</td><td class="r num">${k.W.toFixed(0)}–${k.L.toFixed(0)}–${k.T.toFixed(0)}</td><td class="r num"><b>${pct(k.p4)}</b></td><td class="r num">${pct(k.p1)}</td><td class="r num">${pct(k.champ, 1)}</td></tr>`).join("") + `</tbody>`;
+    $("ks-note").textContent = D.kawhiNote || ""; }
+  renderInj(); renderOpts(); renderStream(); renderKS();
+  renderPower(); renderTeam(); renderHeat(); renderWeek1(); renderTrade(); renderMethod(); renderProj(); renderRadar(); setView(view);
+})();
+</script>

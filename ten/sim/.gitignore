@@ -1,0 +1,20 @@
+# generated each run (rebuilt by run.sh)
+proj_1023.json
+proj_v2.json
+league2_out.json
+league2_out_v2.json
+league2.html
+league10.html
+d1.json
+d2.json
+rosters_espn.json
+rosters_espn_notrade.json
+rosters_plan.json
+rosters_ks.json
+actual_espn_live.csv
+stream_plan_*.json
+wk_now.json
+ksens_out.jsonl
+tsim_out.json
+out/*.log
+out/league10.html

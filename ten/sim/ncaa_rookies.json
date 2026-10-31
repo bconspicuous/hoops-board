@@ -1,0 +1,324 @@
+{
+"AJ Dybantsa": {
+"school": "BYU",
+"raw": {
+"G": 35,
+"MP": 34.8,
+"FGp": 0.51,
+"TPp": 0.331,
+"FTp": 0.774,
+"REB": 6.8,
+"AST": 3.7,
+"STL": 1.1,
+"BLK": 0.3,
+"PTS": 25.5
+},
+"nba": {
+"PTS": 17.34,
+"REB": 5.44,
+"AST": 2.775,
+"STL": 0.77,
+"BLK": 0.225,
+"FGp": 0.48,
+"FTp": 0.774
+},
+"src": "Wikipedia college statistics (2025-26)"
+},
+"Cameron Boozer": {
+"school": "Duke",
+"raw": {
+"G": 38,
+"MP": 33.5,
+"FGp": 0.556,
+"TPp": 0.391,
+"FTp": 0.789,
+"REB": 10.2,
+"AST": 4.1,
+"STL": 1.4,
+"BLK": 0.6,
+"PTS": 22.5
+},
+"nba": {
+"PTS": 15.3,
+"REB": 8.16,
+"AST": 3.075,
+"STL": 0.98,
+"BLK": 0.45,
+"FGp": 0.526,
+"FTp": 0.789
+},
+"src": "Wikipedia college statistics (2025-26)"
+},
+"Darryn Peterson": {
+"school": "Kansas",
+"raw": {
+"G": 24,
+"MP": 29.0,
+"FGp": 0.438,
+"TPp": 0.382,
+"FTp": 0.826,
+"REB": 4.2,
+"AST": 1.6,
+"STL": 1.4,
+"BLK": 0.6,
+"PTS": 20.2
+},
+"nba": {
+"PTS": 13.736,
+"REB": 3.36,
+"AST": 1.2,
+"STL": 0.98,
+"BLK": 0.45,
+"FGp": 0.408,
+"FTp": 0.826
+},
+"src": "Wikipedia college statistics (2025-26)"
+},
+"Caleb Wilson": {
+"school": "North Carolina",
+"raw": {
+"G": 24,
+"MP": 31.3,
+"FGp": 0.578,
+"TPp": 0.259,
+"FTp": 0.713,
+"REB": 9.4,
+"AST": 2.7,
+"STL": 1.5,
+"BLK": 1.4,
+"PTS": 19.8
+},
+"nba": {
+"PTS": 13.464,
+"REB": 7.52,
+"AST": 2.025,
+"STL": 1.05,
+"BLK": 1.05,
+"FGp": 0.548,
+"FTp": 0.713
+},
+"src": "Wikipedia college statistics (2025-26)"
+},
+"Darius Acuff Jr.": {
+"school": "Arkansas",
+"raw": {
+"G": 36,
+"MP": 35.1,
+"FGp": 0.484,
+"TPp": 0.44,
+"FTp": 0.809,
+"REB": 3.1,
+"AST": 6.4,
+"STL": 0.8,
+"BLK": 0.3,
+"PTS": 23.5
+},
+"nba": {
+"PTS": 15.98,
+"REB": 2.48,
+"AST": 4.8,
+"STL": 0.56,
+"BLK": 0.225,
+"FGp": 0.454,
+"FTp": 0.809
+},
+"src": "Wikipedia college statistics (2025-26)"
+},
+"Keaton Wagler": {
+"school": "Illinois",
+"raw": {
+"G": 37,
+"MP": 33.9,
+"FGp": 0.445,
+"TPp": 0.397,
+"FTp": 0.796,
+"REB": 5.1,
+"AST": 4.2,
+"STL": 0.9,
+"BLK": 0.4,
+"PTS": 17.9
+},
+"nba": {
+"PTS": 12.172,
+"REB": 4.08,
+"AST": 3.15,
+"STL": 0.63,
+"BLK": 0.3,
+"FGp": 0.415,
+"FTp": 0.796
+},
+"src": "Wikipedia college statistics (2025-26)"
+},
+"Mikel Brown Jr.": {
+"school": "Louisville",
+"raw": {
+"G": 21,
+"MP": 29.2,
+"FGp": 0.41,
+"TPp": 0.344,
+"FTp": 0.844,
+"REB": 3.3,
+"AST": 4.7,
+"STL": 1.2,
+"BLK": 0.1,
+"PTS": 18.2
+},
+"nba": {
+"PTS": 12.376,
+"REB": 2.64,
+"AST": 3.525,
+"STL": 0.84,
+"BLK": 0.075,
+"FGp": 0.38,
+"FTp": 0.844
+},
+"src": "Wikipedia college statistics (2025-26)"
+},
+"Yaxel Lendeborg": {
+"school": "Michigan",
+"raw": {
+"G": 40,
+"MP": 30.2,
+"FGp": 0.515,
+"TPp": 0.372,
+"FTp": 0.824,
+"REB": 6.8,
+"AST": 3.2,
+"STL": 1.1,
+"BLK": 1.2,
+"PTS": 15.1
+},
+"nba": {
+"PTS": 10.268,
+"REB": 5.44,
+"AST": 2.4,
+"STL": 0.77,
+"BLK": 0.9,
+"FGp": 0.485,
+"FTp": 0.824
+},
+"src": "Wikipedia college statistics (2025-26)"
+},
+"K. Flemings": {
+"school": "Houston",
+"raw": {
+"G": 37,
+"MP": 31.7,
+"FGp": 0.476,
+"TPp": 0.387,
+"FTp": 0.845,
+"REB": 4.1,
+"AST": 5.2,
+"STL": 1.5,
+"BLK": 0.3,
+"PTS": 16.1
+},
+"nba": {
+"PTS": 10.948,
+"REB": 3.28,
+"AST": 3.9,
+"STL": 1.05,
+"BLK": 0.225,
+"FGp": 0.446,
+"FTp": 0.845
+},
+"src": "Wikipedia college statistics (2025-26)"
+},
+"Morez Johnson Jr.": {
+"school": "Michigan",
+"raw": {
+"G": 40,
+"MP": 25.1,
+"FGp": 0.623,
+"TPp": 0.343,
+"FTp": 0.782,
+"REB": 7.3,
+"AST": 1.2,
+"STL": 0.7,
+"BLK": 1.1,
+"PTS": 13.1
+},
+"nba": {
+"PTS": 8.908,
+"REB": 5.84,
+"AST": 0.9,
+"STL": 0.49,
+"BLK": 0.825,
+"FGp": 0.593,
+"FTp": 0.782
+},
+"src": "Wikipedia college statistics (2025-26)"
+},
+"Aday Mara": {
+"school": "Michigan",
+"raw": {
+"G": 40,
+"MP": 23.4,
+"FGp": 0.668,
+"TPp": 0.3,
+"FTp": 0.564,
+"REB": 6.8,
+"AST": 2.4,
+"STL": 0.4,
+"BLK": 2.6,
+"PTS": 12.1
+},
+"nba": {
+"PTS": 8.228,
+"REB": 5.44,
+"AST": 1.8,
+"STL": 0.28,
+"BLK": 1.95,
+"FGp": 0.638,
+"FTp": 0.564
+},
+"src": "Wikipedia college statistics (2025-26)"
+},
+"H. Steinbach": {
+"school": "Washington",
+"raw": {
+"G": 30,
+"MP": 34.6,
+"FGp": 0.577,
+"TPp": 0.34,
+"FTp": 0.759,
+"REB": 11.8,
+"AST": 1.6,
+"STL": 1.1,
+"BLK": 1.2,
+"PTS": 18.5
+},
+"nba": {
+"PTS": 12.58,
+"REB": 9.44,
+"AST": 1.2,
+"STL": 0.77,
+"BLK": 0.9,
+"FGp": 0.547,
+"FTp": 0.759
+},
+"src": "Wikipedia college statistics (2025-26)"
+},
+"B. Burries": {
+"school": "Arizona",
+"raw": {
+"G": null,
+"MP": null,
+"FGp": null,
+"TPp": null,
+"FTp": null,
+"REB": 4.9,
+"AST": 2.4,
+"STL": 1.5,
+"BLK": null,
+"PTS": 16.1
+},
+"nba": {
+"PTS": 10.948,
+"REB": 3.92,
+"AST": 1.8,
+"STL": 1.05
+},
+"src": "Wikipedia college statistics (2025-26)"
+}
+}

@@ -1,0 +1,41 @@
+name: ten · simulation
+# ESPN sync + full season simulation for the 10-team league; rebuilds ten/index.html and ten/sim/out/summary.*. Touches only ten/.
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: ten-espn
+  cancel-in-progress: false
+jobs:
+  sim:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+      - name: Fetch ESPN league data
+        env:
+          ESPN_LEAGUE_ID: "504060248"
+          ESPN_SEASON: "2027"
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          ESPN_SWID: ${{ secrets.ESPN_SWID }}
+        run: python ten/espn/fetch_espn.py
+      - name: Run simulation pipeline
+        run: |
+          bash ten/sim/run.sh 2>&1 | tee ten/sim/out/run.log
+          test -s ten/sim/out/summary.json || { echo "::error title=simulation::summary.json missing"; tail -60 ten/sim/out/run.log | sed 's/^/::error::/'; exit 1; }
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ten/data ten/index.html ten/sim/out/summary.json ten/sim/out/summary.md ten/sim/opt_kat.json ten/sim/opt_kat_v2.json
+          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
+          git commit -m "ten: simulation $(TZ=Asia/Seoul date +'%Y-%m-%d %H:%M KST')"
+          git pull --rebase origin main
+          git push
