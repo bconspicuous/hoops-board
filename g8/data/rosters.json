@@ -1,5 +1,5 @@
 {
- "asOf": "2026-10-31T15:19+09:00",
+ "asOf": "2026-10-31T16:21+09:00",
  "leagueId": "751654965",
  "season": 2027,
  "teams": [
@@ -21,7 +21,7 @@
     "Darius Acuff Jr.",
     "Ayo Dosunmu",
     "Wendell Carter Jr.",
-    "Duncan Robinson"
+    "Aaron Wiggins"
    ],
    "ir": [
     "Paolo Banchero",
@@ -57,7 +57,7 @@
     "Myles Turner",
     "VJ Edgecombe",
     "Cedric Coward",
-    "Kris Dunn"
+    "Tari Eason"
    ],
    "ir": [
     "Jalen Williams",
@@ -71,9 +71,9 @@
    },
    "acqByPeriod": {
     "1": 4,
-    "2": 3
+    "2": 4
    },
-   "acqTotal": 7
+   "acqTotal": 8
   },
   {
    "name": "Garak Twindragons",
@@ -92,8 +92,8 @@
     "Tyler Herro",
     "Rudy Gobert",
     "Norman Powell",
-    "Toumani Camara",
-    "Fred VanVleet"
+    "Fred VanVleet",
+    "Dennis Schroder"
    ],
    "ir": [
     "Coby White"
@@ -150,20 +150,20 @@
    "players": [
     "Luka Doncic",
     "Donovan Mitchell",
-    "Alperen Sengun",
     "Devin Booker",
     "Pascal Siakam",
     "Deni Avdija",
+    "Jaylen Brown",
     "Julius Randle",
-    "Miles Bridges",
     "Zach LaVine",
     "Mikal Bridges",
     "Derik Queen",
     "Jabari Smith Jr.",
-    "Stephon Castle"
+    "Stephon Castle",
+    "Moussa Diabate"
    ],
    "ir": [
-    "Jaylen Brown",
+    "Alperen Sengun",
     "Ja Morant"
    ],
    "record": {
