@@ -330,6 +330,27 @@ function buildPlayers() {
      seasonOut = out for the rest of the season (no games; removed from his fantasy roster, the spot is streamed) */
   const M = state.docs["league/meta"] || {}, cp = M.statCopy || {};
   for (const t in cp) { const src = PL[cp[t]], d = PL[t]; if (!src || !d) continue; KEYS.forEach(k => d[k] = src[k]); d.value = src.value; d.statFrom = cp[t]; }
+  /* actualOverride {name: weight}: the manager's per-player weight on the 2026-27 actual line (1 = actual stats only), replacing the
+     week's weight. The season value moves by the same valuation as the projection pipeline (neutral.py: 50% per-game z + 50%
+     season-total z over the top 150), so lineup order and streaming decisions follow the new line. */
+  const ov = M.actualOverride || {};
+  if (Object.keys(ov).length) {
+    const pool = Object.values(BASE).filter(b => b.value != null).sort((a, b) => b.value - a.value).slice(0, 150), C = ["FG", "FT", "TPM", "REB", "AST", "STL", "BLK", "TO", "DD", "PTS", "PF"];
+    const fgL = pool.reduce((s, b) => s + b.FGM, 0) / pool.reduce((s, b) => s + b.FGA, 0), ftL = pool.reduce((s, b) => s + b.FTM, 0) / pool.reduce((s, b) => s + b.FTA, 0);
+    const raw = (p, c) => c === "FG" ? p.FGM - p.FGA * fgL : c === "FT" ? p.FTM - p.FTA * ftL : c === "DD" ? p.DDg : p[c], gpOf = b => b.gp || 70;
+    const ms = f => { const v = pool.map(f), m = v.reduce((s, x) => s + x, 0) / v.length; return [m, Math.sqrt(v.reduce((s, x) => s + (x - m) * (x - m), 0) / v.length) || 1]; };
+    const Z = {}, ZT = {}; C.forEach(c => { Z[c] = ms(b => raw(b, c)); ZT[c] = ms(b => raw(b, c) * gpOf(b)); });
+    const vpg = p => C.reduce((s, c) => s + (c === "TO" || c === "PF" ? -1 : 1) * (raw(p, c) - Z[c][0]) / Z[c][1], 0);
+    const vt = (p, g) => C.reduce((s, c) => s + (c === "TO" || c === "PF" ? -1 : 1) * (raw(p, c) * g - ZT[c][0]) / ZT[c][1], 0);
+    const sd = a => { const m = a.reduce((s, x) => s + x, 0) / a.length; return Math.sqrt(a.reduce((s, x) => s + (x - m) * (x - m), 0) / a.length) || 1; };
+    const scale = sd(pool.map(vpg)) / sd(pool.map(b => vt(b, gpOf(b)))), val = (p, g) => .5 * vpg(p) + .5 * vt(p, g) * scale;
+    for (const n in ov) {
+      const d = PL[n], b = BASE[n], a = act[n], w = Math.max(0, Math.min(1, +ov[n])); if (!d || !b || !a || !(a.g > 0)) continue;
+      const A = { FGM: a.fgm, FGA: a.fga, FTM: a.ftm, FTA: a.fta, TPM: a.tpm, REB: a.reb, AST: a.ast, STL: a.stl, BLK: a.blk, TO: a.to, PTS: a.pts, PF: a.pf, DDg: a.dd != null ? a.dd / a.g : null };
+      KEYS.forEach(k => { if (A[k] != null && isFinite(A[k])) d[k] = (1 - w) * b[k] + w * A[k]; });
+      const g = d.gp || b.gp || 82; d.value = d.value + val(d, g) - val(b, g); d.actual = a; d.actW = w; d.actOverride = w;
+    }
+  }
   state.seasonOut = new Set(M.seasonOut || []);
   /* streaming weight = one game's value with the 11 categories weighted equally (per-game stat / top-150 average; TO, PF negative;
      FG%·FT% as made-shot surplus over the league rate / its spread). Used only to rank who fills an open slot. */
@@ -744,7 +765,7 @@ function renderNow() {
   const act = state.docs["league/actuals"];
   const rowsP = ros.active.map(n => state.PL[n]).filter(Boolean).sort((a, b) => b.value - a.value);
   const gw = n => { const p = state.PL[n]; return p && p.team ? REF.grid[cw][COLI[p.team]] : 0; };
-  const st = n => { const s = statusOf(n); return (s === "O" ? '<span class="stat-o">O</span>' : s === "DTD" ? '<span class="stat-dtd">DTD</span>' : "") + (state.restB2B.has(n) ? ' <span class="chip" title="백투백 2번째 경기 결장(운영 가정)">B2B 휴식</span>' : "") + (state.PL[n] && state.PL[n].statFrom ? ` <span class="chip" title="운영 가정: ${esc(state.PL[n].statFrom)}의 경기당 기록·가치를 승계">${esc(state.PL[n].statFrom.split(" ").slice(-1)[0])} 역할 승계</span>` : "") + (state.seasonOut && state.seasonOut.has(n) ? ' <span class="stat-o">시즌아웃</span>' : ""); };
+  const st = n => { const s = statusOf(n); return (s === "O" ? '<span class="stat-o">O</span>' : s === "DTD" ? '<span class="stat-dtd">DTD</span>' : "") + (state.restB2B.has(n) ? ' <span class="chip" title="백투백 2번째 경기 결장(운영 가정)">B2B 휴식</span>' : "") + (state.PL[n] && state.PL[n].actOverride != null ? ` <span class="chip" title="운영 가정: 2026-27 실제 기록 ${Math.round(state.PL[n].actOverride * 100)}% 반영 (${state.PL[n].actual ? state.PL[n].actual.g + '경기' : ''})">실적 ${Math.round(state.PL[n].actOverride * 100)}%</span>` : "") + (state.PL[n] && state.PL[n].statFrom ? ` <span class="chip" title="운영 가정: ${esc(state.PL[n].statFrom)}의 경기당 기록·가치를 승계">${esc(state.PL[n].statFrom.split(" ").slice(-1)[0])} 역할 승계</span>` : "") + (state.seasonOut && state.seasonOut.has(n) ? ' <span class="stat-o">시즌아웃</span>' : ""); };
   $("roster").innerHTML = `<table><thead><tr><th>선수</th><th>포지션</th><th>NBA</th><th>상태</th><th class="r" title="중립 보정 예상 출전 경기(괄호 없음). 마우스를 올리면 ESPN 원 프로젝션">예상 GP</th><th class="r">이번 주 경기</th><th class="r">사용 예상</th><th class="r">PTS</th><th class="r">REB</th><th class="r">AST</th><th class="r">STL</th><th class="r">BLK</th><th class="r">3PM</th><th class="r">FG%</th><th class="r">FT%</th><th class="r">TO</th><th class="r">실제 경기</th>${state.b2b ? '<th class="r">B2B 경기</th><th class="r">B2B 휴식확률</th><th class="r">사용 Δ</th>' : ""}</tr></thead><tbody>` +
     rowsP.map(p => `<tr><td>${esc(p.name)}</td><td>${esc(p.elig)}</td><td>${esc(p.team || "—")}</td><td>${st(p.name)}</td><td class="r num" title="ESPN ${p.gpE != null ? p.gpE : p.gp}경기 · 중립 ${BASE[p.name].gp}경기${p.gpKept ? " · 현재 ESPN 유지" : ""}${p.gpFull ? " · 현재 전 경기 출전 가정" : ""}">${p.gpFull ? "전 경기" : Math.round(p.gp) + (p.gpKept ? "*" : "")}</td><td class="r num">${gw(p.name)}</td><td class="r num">${(A.used[p.name] || 0).toFixed(1)}</td><td class="r num">${p.PTS.toFixed(1)}</td><td class="r num">${p.REB.toFixed(1)}</td><td class="r num">${p.AST.toFixed(1)}</td><td class="r num">${p.STL.toFixed(1)}</td><td class="r num">${p.BLK.toFixed(1)}</td><td class="r num">${p.TPM.toFixed(1)}</td><td class="r num">${(p.FGM / p.FGA).toFixed(3).replace(/^0/, "")}</td><td class="r num">${(p.FTA ? p.FTM / p.FTA : 0).toFixed(3).replace(/^0/, "")}</td><td class="r num">${p.TO.toFixed(1)}</td><td class="r num">${p.actual ? p.actual.g : "—"}</td>${state.b2b ? (() => { const bi = b2bOf(p), av = availOf(p, cw, false, true); return `<td class="r num">${b2bDays(p, cw).length}</td><td class="r num" title="${esc(bi.why)}">${pct(av.rEff)}</td><td class="r num">${dlt((A.used[p.name] || 0) - (Ao.used[p.name] || 0), 1)}</td>`; })() : ""}</tr>`).join("") +
     ir.map(n => `<tr><td>${esc(n)}</td><td colspan="${state.b2b ? 19 : 16}" class="note">IR — 시뮬레이션 제외</td></tr>`).join("") + `</tbody></table>`;
