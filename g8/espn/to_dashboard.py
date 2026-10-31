@@ -107,7 +107,16 @@ def main(build=True):
         from zoneinfo import ZoneInfo; et = datetime.now(ZoneInfo("America/New_York"))
     except Exception:
         et = datetime.now(timezone(timedelta(hours=-5)))
-    if cur and 3 <= et.hour < 13:
+    # live totals are safe when no NBA game is in progress: yesterday's (ET) games all final and none of today's started.
+    # Uses ESPN's public scoreboard (g8/data/nba_days.json); falls back to the 03:00-13:00 ET window if it is missing.
+    nd, quiet = load(os.path.join(G8, "nba_days.json"), {}) or {}, None
+    y, t = (et.date() - timedelta(days=1)).isoformat(), et.date().isoformat()
+    if nd.get("days") and y in nd["days"] and t in nd["days"] and not nd.get("error"):
+        quiet = all(g.get("state") == "post" for g in nd["days"][y]) and all(g.get("state") == "pre" for g in nd["days"][t])
+        note("notice", f"NBA games: yesterday {[g.get('state') for g in nd['days'][y]].count('post')}/{len(nd['days'][y])} final, "
+                       f"today {[g.get('state') for g in nd['days'][t]].count('pre')}/{len(nd['days'][t])} not started -> live {'updated' if quiet else 'kept'}")
+    if quiet is None: quiet = 3 <= et.hour < 13
+    if cur and quiet:
         cats = {}
         for a, b in ref["matchups"][cur - 1] if cur - 1 < len(ref["matchups"]) else []:
             pair, g = find(cur, a, b)
@@ -120,7 +129,7 @@ def main(build=True):
                 "source": "ESPN API sync — current matchup totals through yesterday (US Eastern)", "cats": cats, "adds": adds}
         if cats and dump("live", live): changed.append("live")
     else:
-        note("notice", f"live totals not updated at {et:%H:%M} ET (games may be in progress; window 03:00-13:00 ET)")
+        note("notice", f"live totals not updated at {et:%H:%M} ET (a game is in progress or yesterday's games are not all final)")
     # ---- actuals (ESPN season averages)
     acts = {}
     csvp = os.path.join(G8, "players_2027.csv")

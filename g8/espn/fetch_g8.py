@@ -93,6 +93,28 @@ def fetch_injuries():
     return out, "; ".join(errs)
 
 
+def fetch_nba_days():
+    """NBA games of yesterday and today (US Eastern) from ESPN's public scoreboard: state pre / in / post per game.
+    Lets the converter take the live matchup totals whenever no game is in progress, not only in a fixed time window."""
+    try:
+        from zoneinfo import ZoneInfo; et = datetime.now(ZoneInfo("America/New_York"))
+    except Exception:
+        et = datetime.now(timezone(timedelta(hours=-5)))
+    out, errs = {"asOfET": et.isoformat(timespec="minutes"), "days": {}}, []
+    for d in (et.date() - timedelta(days=1), et.date()):
+        url = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=" + d.strftime("%Y%m%d")
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (hoops-board g8 fetcher)", "Accept": "application/json"})
+            with urllib.request.urlopen(req, timeout=30) as r:
+                data = json.loads(r.read().decode("utf-8"))
+            out["days"][d.isoformat()] = [{"id": e.get("id"), "start": e.get("date"), "name": e.get("shortName"),
+                                           "state": (((e.get("status") or {}).get("type") or {}).get("state"))} for e in data.get("events") or []]
+        except Exception as e:
+            errs.append(f"{d}: {e}")
+    out["error"] = "; ".join(errs) or None
+    return out
+
+
 def team_name(t):
     if t.get("name"):
         return t["name"].strip()
@@ -188,6 +210,9 @@ def main():
     inj, ierr = fetch_injuries()
     json.dump({"asOf": now, "source": "site.api.espn.com nba/injuries", "error": ierr, "injuries": inj}, open(os.path.join(OUT, "injuries.json"), "w"), ensure_ascii=False, indent=1)
     print(f"injuries: {len(inj)} {ierr or ''}")
+    nd = fetch_nba_days()
+    json.dump(nd, open(os.path.join(OUT, "nba_days.json"), "w"), ensure_ascii=False, indent=1)
+    print("nba days:", {k: [g["state"] for g in v] for k, v in nd["days"].items()}, nd["error"] or "")
     print(f"ok: {len(teams)} teams, {len(rows)} players, matchup period {sp}, asOf {now}")
 
 
