@@ -457,7 +457,7 @@ footer { color: var(--muted); font-size: 12px; display: grid; gap: 4px; border-t
   function renderTrade() {
     const te = (D.tradeOptions || [D.tradeEval])[trSel];
     const a = te.me, d = te.partner, PT = TM[te.to];
-    $("tr-title").textContent = `확정 트레이드 효과 · ${te.give.map(i => P[i].n).join("·")} ↔ ${te.get.map(i => P[i].n).join("·")} (${PT.name})`;
+    $("tr-title").textContent = `트레이드 효과 · ${te.give.map(i => P[i].n).join("·")} ↔ ${te.get.map(i => P[i].n).join("·")} (${PT.name})`;
     $("tr-sub").textContent = "예정 · 11/2 처리 가정 · 트레이드 전 대비, 같은 프로젝션·같은 시드 1만 회";
     const k = (l, x0, x1, f, df) => `<div class="kpi"><span class="l">${l}</span><span class="v num">${f(x1)}</span><span class="d">트레이드 전 ${f(x0)} → <b class="${x1 >= x0 ? "up" : "down"}">${df(x1 - x0)}</b></span></div>`;
     const dp = x => (x >= 0 ? "+" : "") + (x * 100).toFixed(1) + "%p";
