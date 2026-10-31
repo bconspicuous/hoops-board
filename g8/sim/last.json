@@ -1,0 +1,161 @@
+{
+ "asOf": "2026-10-31T16:21+09:00",
+ "week": 2,
+ "weekRange": [
+  "2026-10-26",
+  "2026-11-01"
+ ],
+ "opp": "Kunhyo's Chokeslam",
+ "through": "2026-10-30",
+ "live": {
+  "me": {
+   "PTS": 730,
+   "BLK": 19,
+   "STL": 41,
+   "AST": 111,
+   "DD": 8,
+   "REB": 248,
+   "PF": 95,
+   "TO": 80,
+   "TPM": 84,
+   "FG": 0.46725664,
+   "FT": 0.8137931
+  },
+  "opp": {
+   "PTS": 467,
+   "BLK": 23,
+   "STL": 23,
+   "AST": 111,
+   "DD": 3,
+   "REB": 175,
+   "PF": 70,
+   "TO": 66,
+   "TPM": 45,
+   "FG": 0.47123288,
+   "FT": 0.76470588
+  },
+  "adds": 6
+ },
+ "wk": [
+  7.135048639009733,
+  3.838604692788797,
+  0.026346668201468693
+ ],
+ "pc": {
+  "FG": 0.13097510377408605,
+  "FT": 0.9998139656453067,
+  "TPM": 1,
+  "REB": 0.9999999999298108,
+  "AST": 0.9836452412141671,
+  "STL": 0.9999999999136577,
+  "BLK": 0.03567020882055183,
+  "TO": 0.000004140866882273997,
+  "DD": 0.9981133129394751,
+  "PTS": 1,
+  "PF": 6.530664897752558e-12
+ },
+ "plan": [
+  {
+   "name": "Neemias Queta",
+   "team": "BOS",
+   "from": "11-01",
+   "to": "11-01"
+  }
+ ],
+ "season": [
+  {
+   "team": "Garak Twindragons",
+   "rec": "7-4-0",
+   "epct": 0.5873157131063212,
+   "po": 0.99995,
+   "p1": 0.65795,
+   "champ": 0.31555
+  },
+  {
+   "team": "Songpa Park Kezhang",
+   "rec": "6-4-1",
+   "epct": 0.5602675648417519,
+   "po": 0.99985,
+   "p1": 0.24125,
+   "champ": 0.5186
+  },
+  {
+   "team": "Zero Sugar",
+   "rec": "6-5-0",
+   "epct": 0.5261607348563748,
+   "po": 0.99295,
+   "p1": 0.0464,
+   "champ": 0.0747
+  },
+  {
+   "team": "Gatori Team",
+   "rec": "4-7-0",
+   "epct": 0.5221779634682555,
+   "po": 0.98705,
+   "p1": 0.0389,
+   "champ": 0.07875
+  },
+  {
+   "team": "Junyoung's Scary Team",
+   "rec": "5-6-0",
+   "epct": 0.5080931607596855,
+   "po": 0.97305,
+   "p1": 0.0153,
+   "champ": 0.01105
+  },
+  {
+   "team": "ChaRDaddy",
+   "rec": "6-5-0",
+   "epct": 0.45248211341946976,
+   "po": 0.618,
+   "p1": 0.0002,
+   "champ": 0.00065
+  },
+  {
+   "team": "Kunhyo's Chokeslam",
+   "rec": "4-6-1",
+   "epct": 0.43134053683084544,
+   "po": 0.29545,
+   "p1": 0,
+   "champ": 0.00065
+  },
+  {
+   "team": "Brand_New_Neo_HJ",
+   "rec": "5-6-0",
+   "epct": 0.41216221271729553,
+   "po": 0.1337,
+   "p1": 0,
+   "champ": 0.00005
+  }
+ ],
+ "roster": [
+  "Shai Gilgeous-Alexander",
+  "Karl-Anthony Towns",
+  "Anthony Davis",
+  "James Harden",
+  "Austin Reaves",
+  "Kyrie Irving",
+  "Michael Porter Jr.",
+  "Brandon Miller",
+  "Tyler Herro",
+  "Rudy Gobert",
+  "Norman Powell",
+  "Fred VanVleet",
+  "Dennis Schroder"
+ ],
+ "injured": [],
+ "ir": [
+  "Coby White"
+ ],
+ "watch": {
+  "Kel'el Ware": {
+   "g": 5,
+   "mp": 18.8,
+   "owner": "FA",
+   "blk": 0.4,
+   "pts": 11.8,
+   "reb": 8.4
+  }
+ },
+ "at": "2026-10-31T07:23:58.559Z"
+}

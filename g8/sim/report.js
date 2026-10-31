@@ -28,6 +28,13 @@ let pw; try { pw = require(process.env.PW || '/opt/node-tools/node_modules/playw
   const pct = x => (x * 100).toFixed(1) + '%', dp = (a, b) => b == null ? '' : ` (${a - b >= 0 ? '+' : ''}${((a - b) * 100).toFixed(1)}%p)`;
   const CAT = ['FG', 'FT', 'TPM', 'REB', 'AST', 'STL', 'BLK', 'TO', 'DD', 'PTS', 'PF'], LAB = { FG: 'FG%', FT: 'FT%', TPM: '3PM' };
   const swing = CAT.filter(c => d.pc[c] > 0.1 && d.pc[c] < 0.9).map(c => `${LAB[c] || c} ${Math.round(d.pc[c] * 100)}%`);
+  // watch list: season-average minutes from the ESPN sync, with the minutes implied for games since the last report
+  const WATCH = (process.env.WATCH || "Kel'el Ware").split(',').map(x => x.trim()).filter(Boolean), watch = {};
+  try {
+    const rows = fs.readFileSync(path.join(ROOT, 'g8', 'data', 'players_2027.csv'), 'utf8').trim().split('\n'), h = rows[0].split(',');
+    rows.slice(1).forEach(r => { const c = r.split(','), o = Object.fromEntries(h.map((k, i) => [k, c[i]])); if (WATCH.includes(o.Player)) watch[o.Player] = { g: +o.G, mp: +o.MP, owner: o.Owner, blk: +o.BLK, pts: +o.PTS, reb: +o.TRB }; });
+  } catch (e) {}
+  d.watch = watch;
   const lines = [];
   lines.push(`# G League 시뮬레이션 — ${d.asOf}`);
   lines.push(`**우리 팀** 기대승률 ${pct(me.epct)}${dp(me.epct, pm && pm.epct)} · 정규 1위 ${pct(me.p1)}${dp(me.p1, pm && pm.p1)} · 우승 ${pct(me.champ)}${dp(me.champ, pm && pm.champ)}`);
@@ -36,6 +43,9 @@ let pw; try { pw = require(process.env.PW || '/opt/node-tools/node_modules/playw
   lines.push(`**${d.week}주차 vs ${d.opp}** 예상 ${d.wk.map(x => x.toFixed(1)).join('-')}${prev && prev.week === d.week ? ` (직전 ${prev.wk.map(x => x.toFixed(1)).join('-')})` : ''} · 실적 ${d.through || '—'}까지 · 경합: ${swing.join(', ') || '없음'}`);
   if (d.live && d.live.me) lines.push(`현재 합계 PTS ${d.live.me.PTS}-${d.live.opp.PTS} · REB ${d.live.me.REB}-${d.live.opp.REB} · AST ${d.live.me.AST}-${d.live.opp.AST} · BLK ${d.live.me.BLK}-${d.live.opp.BLK} · FG% ${(+d.live.me.FG).toFixed(3)}-${(+d.live.opp.FG).toFixed(3)} · TO ${d.live.me.TO}-${d.live.opp.TO} · 영입 ${d.live.adds}회 사용`);
   if (d.plan.length) lines.push(`모델 스트리밍 계획: ${d.plan.map(s => `${s.name}(${s.team}) ${s.from}~${s.to}`).join(' → ')}`);
+  Object.entries(watch).forEach(([n, w]) => { const q = prev && prev.watch && prev.watch[n]; let rec = '';
+    if (q && w.g > q.g) rec = ` · 직전 리포트 이후 ${w.g - q.g}경기 평균 ${((w.mp * w.g - q.mp * q.g) / (w.g - q.g)).toFixed(1)}분`;
+    lines.push(`관찰: ${n} (${w.owner}) ${w.g}경기 평균 ${w.mp.toFixed(1)}분 · ${w.pts.toFixed(1)}점 ${w.reb.toFixed(1)}리바 ${w.blk.toFixed(1)}블록${rec}`); });
   if (d.injured.length) lines.push(`부상: ${d.injured.join(', ')}`);
   lines.push('', '| 팀 | 성적 | 기대승률 | PO | 1위 | 우승 |', '|---|---|---|---|---|---|');
   d.season.forEach(s => lines.push(`| ${s.team} | ${s.rec} | ${pct(s.epct)} | ${pct(s.po)} | ${pct(s.p1)} | ${pct(s.champ)} |`));
