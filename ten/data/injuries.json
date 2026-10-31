@@ -1,5 +1,5 @@
 {
- "asOf": "2026-10-31T08:42+09:00",
+ "asOf": "2026-10-31T09:52+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -247,11 +247,11 @@
    "status": "Out",
    "date": "2026-10-30T20:30Z",
    "type": "out",
-   "returnDate": "2026-10-30",
+   "returnDate": "2026-11-02",
    "detail": null,
    "side": "Right",
    "injury": "Personal",
-   "fantasyStatus": "GTD",
+   "fantasyStatus": "OUT",
    "short": "Diallo (personal) is doubtful for Friday's game against the Suns.",
    "long": "Diallo is not expected to rejoin the Nuggets in time for Friday's action. Assuming he's eventually ruled out, his next chance to return comes Monday against Portland."
   },
