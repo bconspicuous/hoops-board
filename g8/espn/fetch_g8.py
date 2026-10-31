@@ -94,24 +94,49 @@ def fetch_injuries():
 
 
 def fetch_nba_days():
-    """NBA games of yesterday and today (US Eastern) from ESPN's public scoreboard: state pre / in / post per game.
-    Lets the converter take the live matchup totals whenever no game is in progress, not only in a fixed time window."""
+    """NBA games of yesterday and today (US Eastern), each with state pre / in / post. Lets the converter take the live matchup
+    totals whenever no game is in progress, not only in a fixed time window. Source: ESPN's public scoreboard; if that is refused,
+    the fantasy API's pro-team schedule (start times only: a game counts as final 3h30m after tip-off)."""
     try:
-        from zoneinfo import ZoneInfo; et = datetime.now(ZoneInfo("America/New_York"))
+        from zoneinfo import ZoneInfo; ET = ZoneInfo("America/New_York")
     except Exception:
-        et = datetime.now(timezone(timedelta(hours=-5)))
-    out, errs = {"asOfET": et.isoformat(timespec="minutes"), "days": {}}, []
-    for d in (et.date() - timedelta(days=1), et.date()):
-        url = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=" + d.strftime("%Y%m%d")
+        ET = timezone(timedelta(hours=-5))
+    now = datetime.now(ET); want = [now.date() - timedelta(days=1), now.date()]
+    out, errs = {"asOfET": now.isoformat(timespec="minutes"), "days": {}, "source": None}, []
+    hdr = {"User-Agent": "Mozilla/5.0 (hoops-board g8 fetcher)", "Accept": "application/json"}
+    for base in ("https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=",
+                 "https://site.web.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates="):
         try:
-            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (hoops-board g8 fetcher)", "Accept": "application/json"})
-            with urllib.request.urlopen(req, timeout=30) as r:
-                data = json.loads(r.read().decode("utf-8"))
-            out["days"][d.isoformat()] = [{"id": e.get("id"), "start": e.get("date"), "name": e.get("shortName"),
-                                           "state": (((e.get("status") or {}).get("type") or {}).get("state"))} for e in data.get("events") or []]
+            days = {}
+            for d in want:
+                with urllib.request.urlopen(urllib.request.Request(base + d.strftime("%Y%m%d"), headers=hdr), timeout=30) as r:
+                    data = json.loads(r.read().decode("utf-8"))
+                days[d.isoformat()] = [{"id": e.get("id"), "start": e.get("date"), "name": e.get("shortName"),
+                                        "state": (((e.get("status") or {}).get("type") or {}).get("state"))} for e in data.get("events") or []]
+            out.update(days=days, source=base.split("/apis")[0]); return out
         except Exception as e:
-            errs.append(f"{d}: {e}")
-    out["error"] = "; ".join(errs) or None
+            errs.append(f"{base.split('/apis')[0]}: {e}")
+    try:   # fantasy API pro schedule (same auth as the league fetch)
+        h = dict(hdr); s2, swid = os.environ.get("ESPN_S2"), os.environ.get("ESPN_SWID")
+        if s2 and swid: h["Cookie"] = f"espn_s2={s2}; SWID={swid}"
+        url = f"https://lm-api-reads.fantasy.espn.com/apis/v3/games/fba/seasons/{SEASON}?view=proTeamSchedules_wl"
+        with urllib.request.urlopen(urllib.request.Request(url, headers=h), timeout=30) as r:
+            data = json.loads(r.read().decode("utf-8"))
+        seen, days = set(), {d.isoformat(): [] for d in want}
+        for t in (data.get("settings") or {}).get("proTeams") or []:
+            for games in (t.get("proGamesByScoringPeriod") or {}).values():
+                for g in games:
+                    if g.get("id") in seen or not g.get("date"): continue
+                    seen.add(g.get("id")); st = datetime.fromtimestamp(g["date"] / 1000, ET); k = st.date().isoformat()
+                    if k not in days: continue
+                    state = "pre" if now < st else ("post" if now > st + timedelta(hours=3, minutes=30) else "in")
+                    days[k].append({"id": g.get("id"), "start": st.isoformat(timespec="minutes"), "state": state})
+        if seen:
+            out.update(days=days, source="fantasy proTeamSchedules (start times)"); return out
+        errs.append("fantasy proTeamSchedules: no games")
+    except Exception as e:
+        errs.append(f"fantasy proTeamSchedules: {e}")
+    out["error"] = "; ".join(errs)
     return out
 
 
@@ -212,7 +237,7 @@ def main():
     print(f"injuries: {len(inj)} {ierr or ''}")
     nd = fetch_nba_days()
     json.dump(nd, open(os.path.join(OUT, "nba_days.json"), "w"), ensure_ascii=False, indent=1)
-    print("nba days:", {k: [g["state"] for g in v] for k, v in nd["days"].items()}, nd["error"] or "")
+    print("nba days:", nd.get("source"), {k: [g["state"] for g in v] for k, v in nd["days"].items()}, nd.get("error") or "")
     print(f"ok: {len(teams)} teams, {len(rows)} players, matchup period {sp}, asOf {now}")
 
 
