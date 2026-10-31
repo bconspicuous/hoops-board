@@ -73,7 +73,7 @@ d['streamBase']=json.load(open(W+'stream_plan_rec.json'))['sum']['base']
 _R=json.load(open(os.path.join(W, '..', 'data', '')+'rosters.json')); d['acqUsed']=next(t for t in _R['teams'] if t['abbr']=='GTD')['transactions']['acquisitions']
 d['streamMeta']=f"v1 프로젝션 기준 · 지금까지 교체 {d['acqUsed']}회 사용(ESPN) · 이번 주(잔여)~22주차 계획"
 _SPJ=json.load(open(W+'stream_plan_rec.json'))['sum']; _sn=lambda n: n if n in ('Kawhi Leonard',) else n.split(' ',1)[-1]
-d['streamNote']='집중안 = 교체 선택 기준에서 해당 카테고리 주간 승률을 1배 더 가중(평가는 동일한 시즌 시뮬레이션). PTS·AST 승률 = 3~22주 매주 실제 상대 대비 평균. '+'상위 10명(사용자 지정: '+'·'.join(_SPJ.get('core',[]))+')은 방출하지 않음. IR 선수 복귀로 활성 13명 초과 시 가치 최하위 선수를 방출(교체 횟수 미소진).'+' 3·4주차(Seoul Dreamers·Saving PakPaks)는 두 주를 함께 놓고 조합을 탐색해, 교체 1회당 기대 카테고리 +0.08개 미만이면 교체하지 않음. 5주차부터는 매주 그 주 상대(ESPN 실제 대진)를 상대로 기대 카테고리 승수를 가장 많이 올리는 교체를 순서대로 고름(무소속 상위 90명 × 우리 팀 하위 5명). 1·2번째 교체는 +0.03개 이상, 3번째는 +0.12개 이상일 때만 실행해 남은 주에 주 2회 이상을 쓸 수 있도록 한도를 관리. 상대 팀은 주 2회 평균적 교체를 가정. 한계: 다른 팀이 같은 무소속 선수를 먼저 데려갈 수 있고, 무소속 선수 예측치는 시즌 평균이라 실제 효과는 이보다 작을 수 있음.'
+d['streamNote']='집중안 = 교체 선택 기준에서 해당 카테고리 주간 승률을 1배 더 가중(평가는 동일한 시즌 시뮬레이션). PTS·AST 승률 = 3~22주 매주 실제 상대 대비 평균. '+'상위 10명(사용자 지정: '+'·'.join(_SPJ.get('core',[]))+')은 방출하지 않음. IR 선수 복귀로 활성 13명 초과 시 가치 최하위 선수를 방출(교체 횟수 미소진).'+' 다음 2주는 함께 놓고 조합을 탐색해, 교체 1회당 기대 카테고리 +0.08개 미만이면 교체하지 않음. 그 이후는 매주 그 주 상대(ESPN 실제 대진)를 상대로 기대 카테고리 승수를 가장 많이 올리는 교체를 순서대로 고름(무소속 상위 90명 × 우리 팀 하위 5명). 1·2번째 교체는 +0.03개 이상, 3번째는 +0.12개 이상일 때만 실행해 남은 주에 주 2회 이상을 쓸 수 있도록 한도를 관리. 상대 팀은 주 2회 평균적 교체를 가정. 한계: 다른 팀이 같은 무소속 선수를 먼저 데려갈 수 있고, 무소속 선수 예측치는 시즌 평균이라 실제 효과는 이보다 작을 수 있음.'
 _KS=[json.loads(l) for l in open(W+'ksens_out.jsonl')] if os.path.exists(W+'ksens_out.jsonl') else []
 _kb=_RS['returns'].get('Kawhi Leonard','')
 def _kl(r):

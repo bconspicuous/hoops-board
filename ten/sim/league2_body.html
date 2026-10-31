@@ -190,7 +190,7 @@
 
   <div id="view-stream" hidden style="display:grid;gap:16px">
     <section class="panel">
-      <div class="phead"><h2>선수 교체 전략 · Gobert 트레이드 여부 비교</h2><span class="note" id="st-sub"></span></div>
+      <div class="phead"><h2>선수 교체 전략</h2><span class="note" id="st-sub"></span></div>
       <div class="tbl"><table id="st-cmp"></table></div>
       <p class="note" id="st-note"></p>
     </section>
@@ -541,7 +541,7 @@
   function renderStream() {
     const V = D.streamPlans || []; if (!V.length) return; const S0 = D.streamBase;
     $("st-sub").textContent = `${D.streamMeta || ""}`;
-    $("st-cmp").innerHTML = `<thead><tr><th>운영안</th><th class="r">교체(2주 잔여~22주)</th><th class="r">누적(한도 70)</th><th class="r">예상 성적</th><th class="r">PTS 승률</th><th class="r">AST 승률</th><th class="r">4강</th><th class="r">정규 1위</th><th class="r">우승</th></tr></thead><tbody>` +
+    $("st-cmp").innerHTML = `<thead><tr><th>운영안</th><th class="r">교체(다음 주~22주)</th><th class="r">누적(한도 70)</th><th class="r">예상 성적</th><th class="r">PTS 승률</th><th class="r">AST 승률</th><th class="r">4강</th><th class="r">정규 1위</th><th class="r">우승</th></tr></thead><tbody>` +
       `<tr><td class="note">교체 없음(현 로스터 고정)</td><td class="r num">0</td><td class="r num">${D.acqUsed}</td><td class="r num">${S0.W.toFixed(0)}–${S0.L.toFixed(0)}–${S0.T.toFixed(0)}</td><td></td><td></td><td class="r num">${pct(S0.p4)}</td><td class="r num">${pct(S0.p1)}</td><td class="r num">${pct(S0.champ, 1)}</td></tr>` +
       V.map((v, k) => `<tr data-k="${k}" class="${k === stSel ? "me" : ""}" style="cursor:pointer"><td><b>${esc(v.label)}</b>${v.rec ? ' <span class="chip good">권장</span>' : ""}</td><td class="r num">${v.sum.used}</td><td class="r num">${D.acqUsed + v.sum.used}</td><td class="r num">${v.sum.plan.W.toFixed(0)}–${v.sum.plan.L.toFixed(0)}–${v.sum.plan.T.toFixed(0)}</td><td class="r num">${v.sum.catWin ? pct(v.sum.catWin.PTS) : "—"}</td><td class="r num">${v.sum.catWin ? pct(v.sum.catWin.AST) : "—"}</td><td class="r num"><b>${pct(v.sum.plan.p4)}</b></td><td class="r num">${pct(v.sum.plan.p1)}</td><td class="r num">${pct(v.sum.plan.champ, 1)}</td></tr>`).join("") + `</tbody>`;
     $("st-note").textContent = D.streamNote || "";
@@ -550,7 +550,7 @@
     const L = V[stSel].log; let cum = D.acqUsed;
     $("st-title").textContent = `주차별 교체 계획 · ${V[stSel].label}`;
     $("st-plan").innerHTML = `<thead><tr><th>주차</th><th>상대</th><th>교체 (방출 → 영입, 그 주 경기 수)</th><th class="r">교체</th><th class="r">누적</th><th class="r">기대 카테고리</th><th class="r">매치업 승리</th></tr></thead><tbody>` +
-      L.map(x => { cum += x.nMoves; const mv = x.moves.map(m => `${esc(m.drop)} → <b>${esc(m.add)}</b> <span class="note">${m.g}g</span>`); if (x.forced) mv.unshift(`<span class="note">Kawhi 복귀(11/23) → ${esc(x.forced)} 방출 · 교체 미소진</span>`); if (x.now) { mv.unshift(`<span class="note">${x.moves.length ? "이번 주 권장 교체(남은 경기 기준)" : "이번 주: 남은 경기 기준 교체 효과 미미 → 교체 없음"}</span>`); mv.push(`<span class="note">이번 주 · 기대 카테고리·승리확률은 Watson 영입 후 대비</span>`); } if (x.joint) mv.push(`<span class="note">3·4주 공동 최적화 · 집중: ${CATS.filter(c => x.per[c] - x.perBefore[c] >= 0.08).map(c => LAB[c]).join("·") || "—"} / 포기: ${CATS.filter(c => x.per[c] < 0.2).map(c => LAB[c]).join("·") || "—"}</span>`);
+      L.map(x => { cum += x.nMoves; const mv = x.moves.map(m => `${esc(m.drop)} → <b>${esc(m.add)}</b> <span class="note">${m.g}g</span>`); if (x.forced) mv.unshift(`<span class="note">Kawhi 복귀(11/23) → ${esc(x.forced)} 방출 · 교체 미소진</span>`); if (x.now) { mv.unshift(`<span class="note">${x.moves.length ? "이번 주 권장 교체(남은 경기 기준)" : "이번 주: 남은 경기 기준 교체 효과 미미 → 교체 없음"}</span>`); } if (x.joint) mv.push(`<span class="note">2주 공동 최적화 · 집중: ${CATS.filter(c => x.per[c] - x.perBefore[c] >= 0.08).map(c => LAB[c]).join("·") || "—"} / 포기: ${CATS.filter(c => x.per[c] < 0.2).map(c => LAB[c]).join("·") || "—"}</span>`);
         return `<tr><td class="num">${x.week}주 <span class="note">${x.start.slice(5).replace("-", "/")}</span></td><td>${esc(x.opp)}</td><td>${mv.join("<br>") || '<span class="note">유지</span>'}</td><td class="r num">${x.nMoves}</td><td class="r num">${cum}</td><td class="r num">${x.before.toFixed(1)} → <b>${x.after.toFixed(1)}</b></td><td class="r num">${pct(x.winBefore)} → <b>${pct(x.winAfter)}</b></td></tr>`; }).join("") + `</tbody>`;
   }
   $("st-sel").addEventListener("change", e => { stSel = +e.target.value; renderStream(); });
