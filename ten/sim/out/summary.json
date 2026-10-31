@@ -16,7 +16,9 @@
   "p4v2": 0.2396,
   "Wv2": 110.438,
   "projRank": 8,
-  "curRank": 8
+  "curRank": 8,
+  "planW": 125.1695,
+  "planRank": 2
  },
  "week": {
   "v1": {
@@ -490,7 +492,9 @@
    "p4v2": 0.2396,
    "Wv2": 110.438,
    "projRank": 8,
-   "curRank": 8
+   "curRank": 8,
+   "planW": 125.1695,
+   "planRank": 2
   },
   {
    "abbr": "GGAM",

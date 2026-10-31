@@ -24,6 +24,7 @@ for k, t in enumerate(order): t['projRank'] = k + 1
 cur = sorted(teams, key=lambda x: -x['pct'])
 for k, t in enumerate(cur): t['curRank'] = k + 1
 me = next(t for t in teams if t['me'])
+me['planW'] = SP['rec']['sum']['plan']['W']; me['planRank'] = 1 + sum(1 for t in teams if not t['me'] and t['W'] > me['planW'])
 # this week: recommend the best current-week move only if it is worth an acquisition
 best = (WK['singles'] or [None])[0]
 nowMove = best if best and WK['remDays'] >= 2 and (best['win'] - WK['base']['win'] >= 0.05 or best['e'] - WK['base']['e'] >= 0.2) else None
@@ -34,7 +35,7 @@ sm = {'asOf': META['asOf'], 'me': me, 'week': {'v1': w1, 'v2': w2, 'remDays': WK
 json.dump(sm, open(W + 'out/summary.json', 'w'), ensure_ascii=False, indent=1)
 pc = lambda v: f"{v * 100:.0f}%"
 md = [f"# 10팀 리그 시뮬레이션 · {META['asOf'].replace('T', ' ')[:16]} KST", '',
-      f"## 우리 팀 예상 순위: {me['projRank']}위 (현재 {me['curRank']}위, {me['rec']})",
+      f"## 우리 팀 예상 순위: 권장 교체안 실행 시 {me['planRank']}위 · 일반 교체 가정 시 {me['projRank']}위 (현재 {me['curRank']}위, {me['rec']})",
       f"- 4강 {pc(me['p4'])}(v2 {pc(me['p4v2'])}) · 우승 {me['champ'] * 100:.1f}% · 권장 교체안 실행 시 4강 {pc(sm['plans']['rec']['p4'])}, 우승 {sm['plans']['rec']['champ'] * 100:.1f}%", '',
       f"## 이번 주({WK['week']}주차) vs {w1['oppName']} ({w1['opp']})",
       f"- 현재 {w1['record']} · 승리 확률 {pc(w1['win'])}(v2 {pc(w2['win'])}) · 남은 {WK['remDays']}일",
