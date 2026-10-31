@@ -1,5 +1,5 @@
 {
- "asOf": "2026-10-31T22:44+09:00",
+ "asOf": "2026-11-01T03:38+09:00",
  "leagueId": "504060248",
  "season": 2027,
  "teams": [
@@ -148,6 +148,7 @@
     "Domantas Sabonis",
     "Devin Booker",
     "Pascal Siakam",
+    "Lauri Markkanen",
     "De'Aaron Fox",
     "Franz Wagner",
     "Zion Williamson",
@@ -155,12 +156,9 @@
     "Myles Turner",
     "Jaime Jaquez Jr.",
     "Wendell Carter Jr.",
-    "Kris Dunn",
-    "Bobby Portis"
+    "Kris Dunn"
    ],
-   "ir": [
-    "Lauri Markkanen"
-   ],
+   "ir": [],
    "record": {
     "wins": 5,
     "losses": 6,
@@ -170,13 +168,13 @@
    "transactions": {
     "acquisitionBudgetSpent": 0,
     "acquisitions": 8,
-    "drops": 7,
+    "drops": 8,
     "matchupAcquisitionTotals": {
      "1": 6,
      "2": 2
     },
     "misc": 0,
-    "moveToActive": 35,
+    "moveToActive": 36,
     "moveToIR": 3,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -453,7 +451,9 @@
  "status": {
   "O": [
    "Jaren Jackson Jr.",
+   "Joel Embiid",
    "Paolo Banchero",
+   "Fred VanVleet",
    "Brandon Ingram",
    "Tyrese Haliburton",
    "Jalen Duren",
@@ -461,10 +461,12 @@
    "Anthony Edwards",
    "Kawhi Leonard",
    "Ivica Zubac",
+   "LeBron James",
    "Kon Knueppel",
    "Tobias Harris",
    "Ja Morant",
    "Coby White",
+   "Reed Sheppard",
    "Jalen Williams",
    "Kristaps Porzingis",
    "Nic Claxton",
@@ -499,15 +501,11 @@
    "Moses Moody"
   ],
   "DTD": [
-   "Joel Embiid",
    "Ty Jerome",
-   "Lauri Markkanen",
-   "Alperen Sengun",
    "Jaylen Brown",
-   "Reed Sheppard",
+   "Rudy Gobert",
    "Obi Toppin",
    "Scotty Pippen Jr.",
-   "Robert Williams III",
    "Ziaire Williams",
    "Meleek Thomas",
    "Rob Dillingham"

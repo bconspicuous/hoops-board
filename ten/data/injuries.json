@@ -1,5 +1,5 @@
 {
- "asOf": "2026-10-31T22:44+09:00",
+ "asOf": "2026-11-01T03:38+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -65,7 +65,7 @@
    "status": "Out",
    "date": "2026-10-25T17:19Z",
    "type": "out",
-   "returnDate": "2026-11-01",
+   "returnDate": "2026-11-06",
    "detail": "Sprain",
    "side": "Right",
    "injury": "Shoulder",
@@ -83,7 +83,7 @@
    "detail": null,
    "side": "Left",
    "injury": "Hamstring",
-   "fantasyStatus": "GTD",
+   "fantasyStatus": "OUT",
    "short": "Knueppel (hamstring) was recalled from the G League's Greensboro Swarm on Friday. He remains out for Friday's contest against the Wizards.",
    "long": "Knueppel was able to log a practice with the Swarm on Thursday. While there's been no official update on his progress, it's safe to assume he's at least trending in the right direction. A timetable for his return has yet to be announced."
   },
@@ -97,7 +97,7 @@
    "detail": "Strain",
    "side": "Left",
    "injury": "Calf",
-   "fantasyStatus": "GTD",
+   "fantasyStatus": "OUT",
    "short": "Head coach Charles Lee said Monday that White (calf) remains without a timeline for a return, though Lee added that he'll have a better idea of where things stand following the Hornets' two-game road trip, Rod Boone of The Charlotte Observer reports.",
    "long": "White's next opportunity to play will come Saturday at home against the Sixers in the second leg of a back-to-back set. However, he should be considered highly questionable for that contest until the Hornets offer an update on his status. Dennis Schroder and Christian Anderson will likely continue seeing increased burn until White returns."
   },
@@ -209,7 +209,7 @@
    "detail": "Surgery",
    "side": "Right",
    "injury": "Knee",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Aldama (knee) is listed as out for Friday's game against the Rockets.",
    "long": "Aldama continues to make progress in his recovery from right knee surgery, though he won't be ready to suit up for Friday's meeting with Houston. Without Aldama on the floor, Zaccharie Risacher, Morez Johnson, Caleb Martin and Moussa Cisse should all continue to see extra minutes."
   },
@@ -237,7 +237,7 @@
    "detail": "Surgery",
    "side": "Right",
    "injury": "Foot",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Lively (foot) has been ruled out for Friday's game against the Pacers.",
    "long": "Lively underwent right foot surgery last December and remains without a clear timetable to return. The big man can be considered week-to-week until the Mavericks offer an update on his status. In the meantime, Moussa Cisse and Morez Johnson are candidates for increased minutes."
   },
@@ -265,7 +265,7 @@
    "detail": "Not Specified",
    "side": "Not Specified",
    "injury": "Hamstring",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Jones (hamstring) has been ruled out for Wednesday's game against New Orleans.",
    "long": "Jones is reportedly progressing in his recovery, though there's still no firm timetable for his return to game action. He can be considered week-to-week until the Nuggets provide an update on his status."
   },
@@ -356,30 +356,30 @@
   {
    "player": "Reed Sheppard",
    "team": "HOU",
-   "status": "Day-To-Day",
-   "date": "2026-10-31T05:00Z",
-   "type": "day-to-day",
-   "returnDate": "2026-10-31",
+   "status": "Out",
+   "date": "2026-10-31T17:33Z",
+   "type": "out",
+   "returnDate": "2026-11-02",
    "detail": null,
    "side": null,
    "injury": "Back",
-   "fantasyStatus": "GTD",
-   "short": "Houston picked up Sheppard's (back) fourth-year team option Friday, per Lachard Binkley of SI.com.",
-   "long": "This decision is a no-brainer after the Rockets chose Sheppard in the first round of the 2024 NBA Draft. Sheppard, who remains out for Friday's game versus Dallas, is a key cog in the backcourt rotation when healthy."
+   "fantasyStatus": "OUT",
+   "short": "Sheppard (back) is out for Saturday's game against the Thunder.",
+   "long": "This will be Sheppard's second straight game on the sidelines, and for now, he should be viewed as questionable for Monday's game against the Celtics. Fred VanVleet (knee) will join Sheppard on the inactive list for Saturday's game, paving the way for Marcus Smart to start."
   },
   {
-   "player": "Alperen Sengun",
+   "player": "Fred VanVleet",
    "team": "HOU",
-   "status": "Day-To-Day",
-   "date": "2026-10-31T05:00Z",
-   "type": "day-to-day",
-   "returnDate": "2026-10-31",
-   "detail": "Soreness",
-   "side": null,
-   "injury": "Back",
-   "fantasyStatus": "GTD",
-   "short": "Sengun (back) has been ruled out for Friday's game against the Mavericks, Mike Curtis of The Dallas Morning News reports.",
-   "long": "Sengun will miss a second consecutive contest due to lower-back soreness, opening up additional minutes in the frontcourt for Tari Eason and Clint Capela. Sengun's next chance to play will come Saturday against the Thunder in the second leg of this back-to-back set."
+   "status": "Out",
+   "date": "2026-10-31T17:31Z",
+   "type": "out",
+   "returnDate": "2026-11-02",
+   "detail": null,
+   "side": "Right",
+   "injury": "Knee",
+   "fantasyStatus": "OUT",
+   "short": "VanVleet (knee) won't play Saturday against the Thunder.",
+   "long": "It's the second night of a back-to-back set, so VanVleet will receive his standard maintenance day, but he should return for Monday's meeting with the Celtics. Reed Sheppard (back) is also out for Saturday's game, so Marcus Smart could draw the start at point guard, and Amen Thompson should see some increased playmaking responsibilities."
   },
   {
    "player": "Steven Adams",
@@ -447,7 +447,7 @@
    "detail": "Sprain",
    "side": "Left",
    "injury": "Ankle",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Zubac (ankle) is out for Friday's game against the Heat.",
    "long": "The Pacers continue to view the veteran big man as day-to-day due to an ankle sprain. Jay Huff figures to continue to start at center for the Pacers on Friday, while Obi Toppin could see a larger share of the frontcourt minutes."
   },
@@ -618,6 +618,20 @@
    "fantasyStatus": "GTD",
    "short": "Post (ankle) is doubtful for Friday's game against the Kings.",
    "long": "A right ankle sprain is expected to cost Post at least one contest. Assuming he's eventually downgraded to out, more playing time should fall into the hands of Isaiah Stewart as the No. 2 center Saturday."
+  },
+  {
+   "player": "Rudy Gobert",
+   "team": "MIN",
+   "status": "Day-To-Day",
+   "date": "2026-10-31T18:03Z",
+   "type": "day-to-day",
+   "returnDate": "2026-10-31",
+   "detail": "Spasms",
+   "side": null,
+   "injury": "Back",
+   "fantasyStatus": "GTD",
+   "short": "Gobert (back) is listed as questionable for Saturday's game at San Antonio.",
+   "long": "Gobert is a late addition to the injury report, so his status will be worth monitoring ahead of Saturday's 8:00 p.m. ET tipoff. Joan Beringer would likely be the top candidate to enter the Timberwolves' starting lineup if Gobert is not cleared to play in the second leg of the team's back-to-back set."
   },
   {
    "player": "Anthony Edwards",
@@ -844,46 +858,74 @@
    "long": "With Nelson still in recovery mode from the left ankle surgery he underwent this summer, his path back to game action remains delayed for the early part of the season. The rookie big man is on a two-way contract with the Magic, so his short-term absence mainly affects his developmental timeline rather than Orlando's regular rotation."
   },
   {
-   "player": "Jaylen Brown",
-   "team": "PHI",
-   "status": "Day-To-Day",
-   "date": "2026-10-31T04:58Z",
-   "type": "day-to-day",
-   "returnDate": "2026-10-31",
-   "detail": null,
-   "side": null,
-   "injury": "Knee",
-   "fantasyStatus": "GTD",
-   "short": "Brown (knee) is out for Friday's game against the Knicks.",
-   "long": "Brown is sitting out the first leg of this back-to-back set, and he figures to be facing a short-term absence. Kentavious Caldwell-Pope and Dean Wade should see more playing time, while Joel Embiid, Tyrese Maxey and LeBron James are all in line to handle more usage."
-  },
-  {
    "player": "Jabari Walker",
    "team": "PHI",
    "status": "Out",
-   "date": "2026-10-29T21:34Z",
+   "date": "2026-10-31T17:25Z",
    "type": "out",
    "returnDate": "2026-10-31",
    "detail": "Soreness",
    "side": "Left",
    "injury": "Knee",
    "fantasyStatus": "GTD",
-   "short": "Walker (knee) has been ruled out for Friday's game versus New York.",
-   "long": "Walker will miss a third consecutive contest due to a left knee issue. His next opportunity to suit up will come Saturday at Charlotte in the second leg of this back-to-back set."
+   "short": "Walker (knee) is questionable for Saturday's game in Charlotte.",
+   "long": "Walker has missed the past three games for the 76ers, but this is the first time he's received the questionable tag since going down, which indicates progress. With LeBron James (rest) out, Walker could be in the rotation if he's cleared to play."
+  },
+  {
+   "player": "LeBron James",
+   "team": "PHI",
+   "status": "Out",
+   "date": "2026-10-31T17:16Z",
+   "type": "out",
+   "returnDate": "2026-11-02",
+   "detail": null,
+   "side": null,
+   "injury": "Back",
+   "fantasyStatus": "OUT",
+   "short": "James (back) has been ruled out for Saturday's meeting in Charlotte.",
+   "long": "James will rest on the second leg of a back-to-back set, but he should return for Monday's game against the Bulls. Dean Wade and Justin Edwards should see a bump in minutes with James inactive, while Tyrese Maxey figures to see a sizeable uptick in usage."
   },
   {
    "player": "Tacko Fall",
    "team": "PHI",
    "status": "Out",
-   "date": "2026-10-27T21:10Z",
+   "date": "2026-10-31T17:14Z",
    "type": "out",
-   "returnDate": "2026-11-04",
+   "returnDate": "2026-10-31",
    "detail": "Strain",
    "side": "Left",
    "injury": "Quadriceps",
+   "fantasyStatus": "GTD",
+   "short": "Fall (quad) is questionable to face the Hornets on Saturday.",
+   "long": "Fall has yet to debut for the 76ers this season, but he might be able to get out there Saturday. With Joel Embiid (foot) out, Fall could be in the rotation if cleared to play."
+  },
+  {
+   "player": "Joel Embiid",
+   "team": "PHI",
+   "status": "Out",
+   "date": "2026-10-31T17:12Z",
+   "type": "out",
+   "returnDate": "2026-11-02",
+   "detail": null,
+   "side": "Right",
+   "injury": "Foot",
    "fantasyStatus": "OUT",
-   "short": "Fall (quadriceps) is out for Wednesday's game in Indiana.",
-   "long": "Fall was able to get through Tuesday's practice, but he'll remain on the inactive list for Wednesday's game. He should continue to be viewed as week-to-week."
+   "short": "Embiid (foot) is out for Saturday's game in Charlotte.",
+   "long": "It's the second night of a back-to-back set, so Embiid will get hit with a maintenance day. Adem Bona will have the opportunity to start Saturday with Embiid inactive."
+  },
+  {
+   "player": "Jaylen Brown",
+   "team": "PHI",
+   "status": "Day-To-Day",
+   "date": "2026-10-31T17:08Z",
+   "type": "day-to-day",
+   "returnDate": "2026-10-31",
+   "detail": null,
+   "side": "Left",
+   "injury": "Knee",
+   "fantasyStatus": "GTD",
+   "short": "Brown (knee) is questionable for Saturday's game in Charlotte.",
+   "long": "Brown sat out Friday's 98-93 win over the Knicks and is now in jeopardy of missing his second straight game. If he's out again, Dean Wade would likely get another start, and it will be the Tyrese Maxey show on offense with Joel Embiid (foot) and LeBron James (back) already ruled out for Halloween."
   },
   {
    "player": "Dominick Barlow",
@@ -926,34 +968,6 @@
    "fantasyStatus": "OUT",
    "short": "Williams underwent surgery Thursday to repair a torn labrum in his left shoulder and will miss an extended period of time, Shams Charania of ESPN reports.",
    "long": "This is a tough blow for the center with training camp right around the corner. With his status for Opening Night in jeopardy, this will put a lot of eyes on Oso Ighodaro and Khaman Maluach, with the latter already drawing buzz during the Summer League. More clarity on Williams' timeline should be known in the coming weeks."
-  },
-  {
-   "player": "Robert Williams III",
-   "team": "POR",
-   "status": "Day-To-Day",
-   "date": "2026-10-30T23:11Z",
-   "type": "day-to-day",
-   "returnDate": "2026-10-31",
-   "detail": null,
-   "side": "Left",
-   "injury": "Knee",
-   "fantasyStatus": "GTD",
-   "short": "Williams (knee) is questionable for Saturday's game against the Jazz.",
-   "long": "Williams missed Thursday's game against the Grizzlies,  but since the decision was precautionary, the upgrade to questionable suggests the veteran center has a chance to play Saturday. Williams is averaging 9.7 points and 8.7 rebounds per game, and if he's available, he should be the primary backup at center behind Donovan Clingan."
-  },
-  {
-   "player": "Chris Youngblood",
-   "team": "POR",
-   "status": "Out",
-   "date": "2026-10-30T23:09Z",
-   "type": "out",
-   "returnDate": "2026-10-31",
-   "detail": "Soreness",
-   "side": "Left",
-   "injury": "Ankle",
-   "fantasyStatus": "GTD",
-   "short": "Youngblood (ankle) is questionable for Saturday's game against Utah.",
-   "long": "Youngblood has yet to make his 2026-27 regular-season debut due to a left ankle injury. However, his potential absence wouldn't affect the rotation."
   },
   {
    "player": "Ja Morant",
@@ -1094,20 +1108,6 @@
    "fantasyStatus": "OUT",
    "short": "Bittle (foot) has been ruled out for Wednesday's game against the Magic, Cody Taylor of USA Today reports.",
    "long": "Bittle remains without a timetable to return due to a right foot avulsion fracture. He can be considered week-to-week until the Raptors offer an update on his progress."
-  },
-  {
-   "player": "Lauri Markkanen",
-   "team": "UTAH",
-   "status": "Day-To-Day",
-   "date": "2026-10-30T23:13Z",
-   "type": "day-to-day",
-   "returnDate": "2026-10-31",
-   "detail": "Not Specified",
-   "side": "Right",
-   "injury": "Wrist",
-   "fantasyStatus": "GTD",
-   "short": "Markkanen (wrist) is listed as questionable for Saturday's game against Portland.",
-   "long": "Markkanen suffered a right wrist sprain during the 110-105 loss to Memphis on Monday. As a result, he didn't play in Wednesday's meeting with the Spurs. While subsequent tests have been encouraging, the veteran should still be considered day-to-day. If Markkanen misses another contest, Josh Green could remain in the starting lineup."
   },
   {
    "player": "Jaren Jackson Jr.",
