@@ -1,5 +1,5 @@
 {
- "asOf": "2026-10-31T08:41+09:00",
+ "asOf": "2026-10-31T15:19+09:00",
  "leagueId": "751654965",
  "season": 2027,
  "teams": [
@@ -35,9 +35,9 @@
    },
    "acqByPeriod": {
     "1": 4,
-    "2": 2
+    "2": 3
    },
-   "acqTotal": 6
+   "acqTotal": 7
   },
   {
    "name": "Gatori Team",
@@ -106,9 +106,9 @@
    },
    "acqByPeriod": {
     "1": 6,
-    "2": 5
+    "2": 6
    },
-   "acqTotal": 11
+   "acqTotal": 12
   },
   {
    "name": "Zero Sugar",
@@ -174,9 +174,9 @@
    },
    "acqByPeriod": {
     "1": 6,
-    "2": 6
+    "2": 7
    },
-   "acqTotal": 12
+   "acqTotal": 13
   },
   {
    "name": "Kunhyo's Chokeslam",
@@ -288,9 +288,6 @@
    "Jalen Williams",
    "Coby White",
    "Chet Holmgren",
-   "Reed Sheppard",
-   "Alperen Sengun",
-   "Jaylen Brown",
    "Ja Morant",
    "Anthony Edwards",
    "Jalen Duren",
@@ -308,17 +305,14 @@
    "Jimmy Butler III",
    "Alex Caruso",
    "Jalen Suggs",
-   "Obi Toppin",
    "Jordan Poole",
    "Cason Wallace",
    "T.J. McConnell",
-   "Cameron Johnson",
    "Shaedon Sharpe",
    "Mark Williams",
    "Jusuf Nurkic",
    "Santi Aldama",
    "Dereck Lively II",
-   "Ziaire Williams",
    "Jaylon Tyson",
    "Justin Champagnie",
    "Donte DiVincenzo",
@@ -333,12 +327,15 @@
   ],
   "DTD": [
    "Lauri Markkanen",
+   "Reed Sheppard",
+   "Alperen Sengun",
+   "Jaylen Brown",
    "Ty Jerome",
-   "Oso Ighodaro",
+   "Obi Toppin",
    "Scotty Pippen Jr.",
    "Robert Williams III",
-   "Meleek Thomas",
-   "Gui Santos"
+   "Ziaire Williams",
+   "Meleek Thomas"
   ]
  }
 }
