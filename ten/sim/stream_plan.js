@@ -81,6 +81,12 @@ const N = +(process.env.N || 8000), SEED = 20261027;
 S.setPlan(static3); const s0 = season(POST, POST, N, SEED)[ME];
 S.setPlan(plan); if (PRE_ADD.length) console.log('current-week roster override', plan[S.CURW].map(x => P[x].name).join(', ')); const s1 = season(POST, POST, N, SEED)[ME];
 const catAvg = c => log.reduce((a, x) => a + x.per[c], 0) / log.length;
-const sum = { catWin: Object.fromEntries(CATS.map(c => [c, catAvg(c)])), focus: FOC, base: { W: s0.W, L: s0.L, T: s0.T, p4: s0.p4, champ: s0.champ, p1: s0.p1, fin: s0.fin }, plan: { W: s1.W, L: s1.L, T: s1.T, p4: s1.p4, champ: s1.champ, p1: s1.p1, fin: s1.fin }, used, budget: BUDGET, maxw: MAXW, core: [...CORE].map(x => P[x].name), leave: Object.keys(LEAVE).map(x => P[x].name) };
+// season category profile of the plan roster vs all 9 opponents (same basis as the radar), weeks FIRST..22
+const prof = (() => { const per = Object.fromEntries(CATS.map(c => [c, 0])), my = Object.fromEntries(CATS.map(c => [c, 0])), oth = TEAMS.map(() => Object.fromEntries(CATS.map(c => [c, 0]))); let n = 0, nw = 0;
+  for (let w = FIRST; w < NW; w++) { const a = catMS(weekSums(plan[w], w, null, ME)); nw++; CATS.forEach(c => my[c] += a[c][0]);
+    TEAMS.forEach((t, o) => { if (o === ME) return; const b = catMS(weekSums(POST[o], w, null, o)); CATS.forEach(c => { oth[o][c] += b[c][0]; const [pw, pt] = pwlt(a, b, c); per[c] += pw + pt / 2; }); n++; }); }
+  const rank = {}; CATS.forEach(c => { per[c] /= n; rank[c] = 1 + TEAMS.filter((t, o) => o !== ME && (c === 'TO' ? oth[o][c] < my[c] : oth[o][c] > my[c])).length; });
+  return { per, rank, ec: CATS.reduce((s, c) => s + per[c], 0) / CATS.length }; })();
+const sum = { profile: prof, catWin: Object.fromEntries(CATS.map(c => [c, catAvg(c)])), focus: FOC, base: { W: s0.W, L: s0.L, T: s0.T, p4: s0.p4, champ: s0.champ, p1: s0.p1, fin: s0.fin }, plan: { W: s1.W, L: s1.L, T: s1.T, p4: s1.p4, champ: s1.champ, p1: s1.p1, fin: s1.fin }, used, budget: BUDGET, maxw: MAXW, core: [...CORE].map(x => P[x].name), leave: Object.keys(LEAVE).map(x => P[x].name) };
 console.log('season base', s0.W.toFixed(0) + '-' + s0.L.toFixed(0), 'PO', (s0.p4 * 100).toFixed(0), 'ch', (s0.champ * 100).toFixed(1), '| plan', s1.W.toFixed(0) + '-' + s1.L.toFixed(0), 'PO', (s1.p4 * 100).toFixed(0), 'ch', (s1.champ * 100).toFixed(1));
 fs.writeFileSync(process.env.PLANOUT || 'stream_plan.json', JSON.stringify({ log, sum }));

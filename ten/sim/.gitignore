@@ -18,3 +18,4 @@ ksens_out.jsonl
 tsim_out.json
 out/*.log
 out/league10.html
+nextweek.json

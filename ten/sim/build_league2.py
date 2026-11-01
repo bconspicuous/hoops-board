@@ -69,6 +69,13 @@ _nowrow={'week':_WK['week'],'start':_SCs[_WK['week']-1],'opp':_WK['opp'],'oppNam
 d['streamPlans']=[]
 for k,lab,rec in _SP:
     x=json.load(open(W+f'stream_plan_{k}.json')); d['streamPlans'].append({'key':k,'label':lab,'rec':rec,'log':[_nowrow]+[l for l in x['log'] if not l.get('now')],'sum':x['sum']})
+d['planProfiles']=[{'key':v['key'],'label':v['label'],'short':{'rec':'권장안','c2':'주 2회안','free':'제한 없음안'}.get(v['key'],v['key']),'rec':v['rec'],**v['sum']['profile']} for v in d['streamPlans'] if v['sum'].get('profile')]
+_NW=json.load(open(W+'nextweek.json')) if os.path.exists(W+'nextweek.json') else None
+if _NW and _WK['remDays']<=1:   # current matchup is over (or on its last day): show the next one with the planned moves
+    _s=_d2.date.fromisoformat(_NW['start']); _e=_s+_d2.timedelta(days=6)
+    d['week1']=_NW['matchups']; d['period']=_NW['week']
+    d['w1meta']={'title':f"매치업 {_NW['week']} ({_s.strftime('%m/%d')}~{_e.strftime('%m/%d')}) · 권장 교체안 반영 예측",'through':'시작 전','remaining':f"{_s.strftime('%m/%d')}~{_e.strftime('%m/%d')}",
+                 'rosterNote':'일별 상위 10명 예측. 우리 팀은 권장 교체안의 그 주 로스터 기준.','next':True,'moves':_NW['moves'],'forced':_NW.get('forced')}
 d['streamBase']=json.load(open(W+'stream_plan_rec.json'))['sum']['base']
 _R=json.load(open(os.path.join(W, '..', 'data', '')+'rosters.json')); d['acqUsed']=next(t for t in _R['teams'] if t['abbr']=='GTD')['transactions']['acquisitions']
 d['streamMeta']=f"v1 프로젝션 기준 · 지금까지 교체 {d['acqUsed']}회 사용(ESPN) · 이번 주(잔여)~22주차 계획"
