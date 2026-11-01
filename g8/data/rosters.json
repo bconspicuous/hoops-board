@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-02T03:07+09:00",
+ "asOf": "2026-11-02T06:41+09:00",
  "leagueId": "751654965",
  "season": 2027,
  "teams": [
@@ -301,6 +301,7 @@
    "Kon Knueppel",
    "Tyrese Haliburton",
    "Ivica Zubac",
+   "Brandon Ingram",
    "Jaren Jackson Jr.",
    "Tobias Harris",
    "Nic Claxton",
@@ -312,6 +313,8 @@
    "Jalen Suggs",
    "Alex Caruso",
    "Mitchell Robinson",
+   "Obi Toppin",
+   "Jordan Poole",
    "Cason Wallace",
    "T.J. McConnell",
    "Shaedon Sharpe",
@@ -320,8 +323,9 @@
    "Mark Williams",
    "Santi Aldama",
    "Dereck Lively II",
-   "Justin Champagnie",
+   "Ziaire Williams",
    "Donte DiVincenzo",
+   "Justin Champagnie",
    "Bradley Beal",
    "Maxime Raynaud",
    "Jose Alvarado",
@@ -331,22 +335,19 @@
    "Sergio de Larrea"
   ],
   "DTD": [
-   "Dejounte Murray",
+   "Trey Murphy III",
    "Rudy Gobert",
-   "Fred VanVleet",
    "Reed Sheppard",
    "Jalen Johnson",
    "LeBron James",
    "Joel Embiid",
    "Ty Jerome",
-   "Obi Toppin",
+   "Jalen Smith",
    "Scotty Pippen Jr.",
-   "Jordan Poole",
-   "Ziaire Williams",
-   "Aaron Nesmith",
    "Jaylon Tyson",
    "Gui Santos",
-   "Jock Landale"
+   "Jock Landale",
+   "Clint Capela"
   ]
  }
 }
