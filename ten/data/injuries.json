@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-02T06:15+09:00",
+ "asOf": "2026-11-02T06:45+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -133,15 +133,15 @@
    "player": "Kon Knueppel",
    "team": "CHA",
    "status": "Out",
-   "date": "2026-10-30T15:12Z",
+   "date": "2026-11-01T21:10Z",
    "type": "out",
    "returnDate": "2026-11-02",
    "detail": null,
    "side": "Left",
    "injury": "Hamstring",
    "fantasyStatus": "GTD",
-   "short": "Knueppel (hamstring) was recalled from the G League's Greensboro Swarm on Friday. He remains out for Friday's contest against the Wizards.",
-   "long": "Knueppel was able to log a practice with the Swarm on Thursday. While there's been no official update on his progress, it's safe to assume he's at least trending in the right direction. A timetable for his return has yet to be announced."
+   "short": "The Hornets exercised Knueppel's (hamstring) third-year team option on Sunday.",
+   "long": "Knueppel has yet to play in 2026-27 while dealing with a left hamstring injury, but it's clear he's one of Charlotte's foundational pieces going forward. Across 81 games (80 starts) as a rookie, Knueppel averaged 18.5 points, 5.3 rebounds, 3.4 assists and 3.4 three-pointers in 31.5 minutes, helping him finish second in Rookie of the Year voting."
   },
   {
    "player": "Coby White",
@@ -184,6 +184,34 @@
    "fantasyStatus": "GTD",
    "short": "Boswell (knee) is out for Wednesday's season opener against the Nets.",
    "long": "Boswell continues to rehab after right knee surgery. The hope in early October was that he would be cleared for basketball activities prior to the start of the G League season, which begins in early November."
+  },
+  {
+   "player": "Jalen Smith",
+   "team": "CHI",
+   "status": "Day-To-Day",
+   "date": "2026-11-01T21:40Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-02",
+   "detail": "Sprain",
+   "side": "Left",
+   "injury": "Finger",
+   "fantasyStatus": "GTD",
+   "short": "Smith ended Friday's 125-111 loss to the Celtics with five points (2-8 FG, 0-5 3Pt, 1-2 FT), 12 rebounds, one assist and two blocks over 27 minutes.",
+   "long": "Smith was the only player who finished Friday's game with double-digit rebounds, although it was the second time in three games that he failed to score in double digits. The seventh-year center is averaging 12.0 points, 8.8 rebounds, 1.7 assists and 1.0 blocks over 24.2 minutes per game to open the regular season. He'll continue to operate in a starting role for as long as Nic Claxton (hamstring) is out of action."
+  },
+  {
+   "player": "Tobe Awaka",
+   "team": "CHI",
+   "status": "Day-To-Day",
+   "date": "2026-11-01T21:17Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-02",
+   "detail": "Sprain",
+   "side": "Left",
+   "injury": "Ankle",
+   "fantasyStatus": "GTD",
+   "short": "Awaka (ankle) is probable for Monday's game against Philadelphia.",
+   "long": "Awaka played 12 minutes during Friday's 125-111 loss to the Celtics after missing one game with the ankle issue. The rookie big man will continue to provide depth off the bench for the Bulls behind Jalen Smith."
   },
   {
    "player": "Nic Claxton",
@@ -595,15 +623,15 @@
    "player": "Max Strus",
    "team": "LAC",
    "status": "Out",
-   "date": "2026-10-29T01:03Z",
+   "date": "2026-11-01T15:42Z",
    "type": "out",
    "returnDate": "2026-11-08",
    "detail": "Plantar Fasciitis",
    "side": "Right",
    "injury": "Foot",
    "fantasyStatus": "OUT",
-   "short": "Strus (foot) is making progress but is set to miss at least one more week, Ohm Youngmisuk of ESPN.com reports.",
-   "long": "Strus sustained a partially torn plantar fascia in his right foot in the Clippers' preseason opener but is seemingly nearing a return to game action. Keaton Wagler and Kobe Sanders will likely continue seeing increased playing time for as long as Strus and Brandon Ingram (Achilles) are sidelined."
+   "short": "Los Angeles assigned Strus (foot) to the G League's San Diego Clippers on Friday.",
+   "long": "Strus has made progress in his recovery from his plantar fasciitis, but he's expected to require a few more days to regain full health. Meanwhile, Strus will work with the San Diego affiliate and could see his first minutes of the season at the G League level before being deemed ready for active status at the NBA level."
   },
   {
    "player": "Bradley Beal",
@@ -1231,7 +1259,7 @@
    "detail": "Pinched Nerve",
    "side": "Left",
    "injury": "Hip",
-   "fantasyStatus": "GTD",
+   "fantasyStatus": "OUT",
    "short": "The Wizards announced Thursday that Vukcevic (hip) will be re-evaluated in four weeks.",
    "long": "Although the big man will remain a limited participant in training camp as he continues his rehab from a hip impingement, it sounds like his absence from game action will extend into the regular season. Deandre Ayton should have the backup center role all to himself until Vukcevic is cleared to retake the floor."
   },
