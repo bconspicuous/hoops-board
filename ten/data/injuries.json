@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-03T06:36+09:00",
+ "asOf": "2026-11-03T06:48+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -233,7 +233,7 @@
    "status": "Day-To-Day",
    "date": "2026-11-02T18:51Z",
    "type": "day-to-day",
-   "returnDate": "2026-11-04",
+   "returnDate": "2026-11-02",
    "detail": null,
    "side": "Left",
    "injury": "Knee",
