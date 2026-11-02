@@ -46,6 +46,14 @@ else: md.append(f"- 교체 없음 (최선안 효과 미미: {(best['moves'][0]['
 for x in nxt:
     mv = ', '.join(f"{m['drop']} → {m['add']}" for m in x['moves']) or '유지'
     md.append(f"- {x['week']}주차({x['start'][5:].replace('-', '/')}~) vs {x['opp']}: {mv} · 승리 {pc(x['winBefore'])} → {pc(x['winAfter'])}" + (f" · IR 복귀로 {x['forced']} 방출" if x.get('forced') else ''))
+LW = json.load(open(W + 'lineup_week.json')) if os.path.exists(W + 'lineup_week.json') else None
+if LW:
+    md += ['', f"## 추천 라인업 ({LW['week']}주차 vs {LW['opp']}, {'권장 교체 반영' if LW['rosterMode'] == 'plan' else '현재 로스터'})"]
+    for x in LW['days']:
+        if x['n'] > 10: md.append(f"- {x['date'][5:].replace('-', '/')}: {x['n']}명 출전 가능 → 벤치 {', '.join(b['name'] for b in x['bench'])}" + (f" (결장 {', '.join(x['out'])})" if x['out'] else ''))
+    if not any(x['n'] > 10 for x in LW['days']): md.append('- 10명 초과일 없음 · 출전 가능 전원 선발')
+    sm['lineup'] = LW
+    json.dump(sm, open(W + 'out/summary.json', 'w'), ensure_ascii=False, indent=1)
 md += ['', '## 예상 순위 · 팀별 현황', '| 예상 | 팀 | 현재 성적(순위) | 예상 카테고리 성적 | 4강 | 우승 |', '|---|---|---|---|---|---|']
 for t in order: md.append(f"| {t['projRank']} | {'**' if t['me'] else ''}{t['name']} ({t['abbr']}){'**' if t['me'] else ''} | {t['rec']} ({t['curRank']}위) | {t['W']:.0f}-{t['L']:.0f}-{t['T']:.0f} | {pc(t['p4'])} | {t['champ'] * 100:.1f}% |")
 open(W + 'out/summary.md', 'w').write('\n'.join(md) + '\n')

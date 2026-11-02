@@ -138,6 +138,11 @@
       <div class="tbl"><table id="w1-me"></table></div>
       <p class="note" id="w1-note"></p>
     </section>
+    <section class="panel" id="lu-panel">
+      <div class="phead"><h2 id="lu-h">추천 라인업</h2><span class="note" id="lu-sub"></span></div>
+      <div class="tbl"><table id="lu"></table></div>
+      <p class="note" id="lu-note"></p>
+    </section>
     <section class="panel"><h2>리그 전체 매치업</h2><div class="mu" id="w1-all"></div></section>
   </div>
 
@@ -572,7 +577,18 @@
     $("ks").innerHTML = `<thead><tr><th>Kawhi 복귀</th><th class="r">결장 경기</th><th class="r">예상 성적</th><th class="r">4강</th><th class="r">정규 1위</th><th class="r">우승</th></tr></thead><tbody>` +
       K.map(k => `<tr class="${k.base ? "me" : ""}"><td>${esc(k.label)}${k.base ? ' <span class="chip mid">기준</span>' : ""}</td><td class="r num">${k.miss}</td><td class="r num">${k.W.toFixed(0)}–${k.L.toFixed(0)}–${k.T.toFixed(0)}</td><td class="r num"><b>${pct(k.p4)}</b></td><td class="r num">${pct(k.p1)}</td><td class="r num">${pct(k.champ, 1)}</td></tr>`).join("") + `</tbody>`;
     $("ks-note").textContent = D.kawhiNote || ""; }
-  renderInj(); renderStream(); renderKS();
+  function renderLineup() {
+    const LW = D.lineupWeek; if (!LW || !LW.days.length) { $("lu-panel").hidden = true; return; }
+    $("lu-h").textContent = `추천 라인업 · ${LW.week}주차 vs ${LW.opp}`;
+    $("lu-sub").textContent = LW.rosterMode === "plan" ? "권장 교체 반영 로스터 기준" : "현재 로스터 기준";
+    const wd = ["일", "월", "화", "수", "목", "금", "토"];
+    $("lu").innerHTML = `<thead><tr><th>날짜</th><th class="r">출전 가능</th><th>선발 10명 (슬롯)</th><th>벤치(제외)</th><th>결장</th></tr></thead><tbody>` +
+      LW.days.map(x => { const dd = new Date(x.date + "T00:00:00Z"); return `<tr class="${x.n > 10 ? "me" : ""}"><td class="num">${x.date.slice(5).replace("-", "/")} (${wd[dd.getUTCDay()]})</td><td class="r num">${x.n}명</td>
+        <td style="white-space:normal">${x.start.map(s => `<span class="note">${s.slot}</span> ${esc(s.name)}`).join(" · ") || '<span class="note">경기 없음</span>'}</td>
+        <td style="white-space:normal">${x.bench.length ? x.bench.map(b => `<b>${esc(b.name)}</b>`).join(", ") : '<span class="note">—</span>'}</td><td>${x.out.map(esc).join(", ") || '<span class="note">—</span>'}</td></tr>`; }).join("") + `</tbody>`;
+    $("lu-note").textContent = `10명 초과일(강조)은 매치업 기여도 순으로 선발. 기여도 = 이번 주 상대와 박빙인 카테고리일수록 가중(포기 카테고리는 낮게). 우선순위: ${LW.rank.map(r => r.name.split(" ").slice(-1)[0]).join(" > ")}. 출전 직전 부상 소식(DTD)은 ESPN에서 확인 후 조정.`;
+  }
+  renderInj(); renderStream(); renderKS(); renderLineup();
   renderPower(); renderTeam(); renderHeat(); renderWeek1(); renderMethod(); renderProj(); renderRadar(); setView(view);
 })();
 </script>

@@ -12,6 +12,10 @@
 - 3주차(11/02~) vs KOO: Paul Reed → Neemias Queta, Duncan Robinson → Alex Caruso · 승리 5% → 15%
 - 4주차(11/09~) vs KWNG: Toumani Camara → Reed Sheppard, Neemias Queta → Santi Aldama, Andrew Nembhard → Ryan Rollins · 승리 43% → 67%
 
+## 추천 라인업 (3주차 vs KOO, 권장 교체 반영)
+- 11/02: 12명 출전 가능 → 벤치 Daniel Gafford, Toumani Camara (결장 Alex Caruso, Kawhi Leonard)
+- 11/04: 13명 출전 가능 → 벤치 Daniel Gafford, Alex Caruso, Toumani Camara (결장 Kawhi Leonard)
+
 ## 예상 순위 · 팀별 현황
 | 예상 | 팀 | 현재 성적(순위) | 예상 카테고리 성적 | 4강 | 우승 |
 |---|---|---|---|---|---|

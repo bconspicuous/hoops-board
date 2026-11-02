@@ -461,5 +461,436 @@
    "curRank": 10
   }
  ],
- "acq": 10
+ "acq": 10,
+ "lineup": {
+  "week": 3,
+  "opp": "KOO",
+  "rosterMode": "plan",
+  "lev": {
+   "FG": 11.162756404240325,
+   "FT": 7.868045785621591,
+   "TPM": 0.001693152485382554,
+   "REB": 0.012253620102830026,
+   "AST": 0.02288702354950624,
+   "STL": 0.04633865909512276,
+   "BLK": 0.01790956562039422,
+   "TO": 0.03633756632667429,
+   "DD": 0.09822293449610586,
+   "PTS": 0.0034923086118412946,
+   "TW": 0.07830486674471464
+  },
+  "rank": [
+   {
+    "name": "Karl-Anthony Towns",
+    "score": 0.4044733531516878
+   },
+   {
+    "name": "Kawhi Leonard",
+    "score": 0.35266402785119516
+   },
+   {
+    "name": "Ivica Zubac",
+    "score": 0.3403195330128047
+   },
+   {
+    "name": "Donovan Mitchell",
+    "score": 0.3333789411184789
+   },
+   {
+    "name": "Ajay Mitchell",
+    "score": 0.3251000012085885
+   },
+   {
+    "name": "Josh Hart",
+    "score": 0.3232155586611017
+   },
+   {
+    "name": "Dejounte Murray",
+    "score": 0.2834589113975132
+   },
+   {
+    "name": "Neemias Queta",
+    "score": 0.2706004513342713
+   },
+   {
+    "name": "Andrew Nembhard",
+    "score": 0.26595412434946014
+   },
+   {
+    "name": "Miles Bridges",
+    "score": 0.2563531973150217
+   },
+   {
+    "name": "Daniel Gafford",
+    "score": 0.2513654390880974
+   },
+   {
+    "name": "Alex Caruso",
+    "score": 0.23939650647409771
+   },
+   {
+    "name": "Peyton Watson",
+    "score": 0.2086351524949502
+   },
+   {
+    "name": "Toumani Camara",
+    "score": 0.1907002012217101
+   }
+  ],
+  "days": [
+   {
+    "date": "2026-11-02",
+    "n": 12,
+    "start": [
+     {
+      "slot": "PG",
+      "name": "Andrew Nembhard",
+      "team": "IND"
+     },
+     {
+      "slot": "SG",
+      "name": "Dejounte Murray",
+      "team": "NOR"
+     },
+     {
+      "slot": "SF",
+      "name": "Peyton Watson",
+      "team": "CLE"
+     },
+     {
+      "slot": "PF",
+      "name": "Miles Bridges",
+      "team": "PHO"
+     },
+     {
+      "slot": "C",
+      "name": "Ivica Zubac",
+      "team": "IND"
+     },
+     {
+      "slot": "G",
+      "name": "Donovan Mitchell",
+      "team": "CLE"
+     },
+     {
+      "slot": "F",
+      "name": "Josh Hart",
+      "team": "NYK"
+     },
+     {
+      "slot": "UTIL",
+      "name": "Ajay Mitchell",
+      "team": "OKC"
+     },
+     {
+      "slot": "UTIL",
+      "name": "Neemias Queta",
+      "team": "BOS"
+     },
+     {
+      "slot": "UTIL",
+      "name": "Karl-Anthony Towns",
+      "team": "NYK"
+     }
+    ],
+    "bench": [
+     {
+      "name": "Daniel Gafford",
+      "team": "DAL"
+     },
+     {
+      "name": "Toumani Camara",
+      "team": "POR"
+     }
+    ],
+    "out": [
+     "Alex Caruso",
+     "Kawhi Leonard"
+    ],
+    "idle": []
+   },
+   {
+    "date": "2026-11-03",
+    "n": 0,
+    "start": [],
+    "bench": [],
+    "out": [],
+    "idle": [
+     "Donovan Mitchell",
+     "Dejounte Murray",
+     "Ivica Zubac",
+     "Josh Hart",
+     "Ajay Mitchell",
+     "Toumani Camara",
+     "Peyton Watson",
+     "Miles Bridges",
+     "Karl-Anthony Towns",
+     "Neemias Queta",
+     "Alex Caruso",
+     "Andrew Nembhard",
+     "Daniel Gafford",
+     "Kawhi Leonard"
+    ]
+   },
+   {
+    "date": "2026-11-04",
+    "n": 13,
+    "start": [
+     {
+      "slot": "PG",
+      "name": "Andrew Nembhard",
+      "team": "IND"
+     },
+     {
+      "slot": "SG",
+      "name": "Dejounte Murray",
+      "team": "NOR"
+     },
+     {
+      "slot": "SF",
+      "name": "Peyton Watson",
+      "team": "CLE"
+     },
+     {
+      "slot": "PF",
+      "name": "Miles Bridges",
+      "team": "PHO"
+     },
+     {
+      "slot": "C",
+      "name": "Ivica Zubac",
+      "team": "IND"
+     },
+     {
+      "slot": "G",
+      "name": "Donovan Mitchell",
+      "team": "CLE"
+     },
+     {
+      "slot": "F",
+      "name": "Josh Hart",
+      "team": "NYK"
+     },
+     {
+      "slot": "UTIL",
+      "name": "Ajay Mitchell",
+      "team": "OKC"
+     },
+     {
+      "slot": "UTIL",
+      "name": "Neemias Queta",
+      "team": "BOS"
+     },
+     {
+      "slot": "UTIL",
+      "name": "Karl-Anthony Towns",
+      "team": "NYK"
+     }
+    ],
+    "bench": [
+     {
+      "name": "Daniel Gafford",
+      "team": "DAL"
+     },
+     {
+      "name": "Alex Caruso",
+      "team": "OKC"
+     },
+     {
+      "name": "Toumani Camara",
+      "team": "POR"
+     }
+    ],
+    "out": [
+     "Kawhi Leonard"
+    ],
+    "idle": []
+   },
+   {
+    "date": "2026-11-05",
+    "n": 1,
+    "start": [
+     {
+      "slot": "SF",
+      "name": "Miles Bridges",
+      "team": "PHO"
+     }
+    ],
+    "bench": [],
+    "out": [],
+    "idle": [
+     "Donovan Mitchell",
+     "Dejounte Murray",
+     "Ivica Zubac",
+     "Josh Hart",
+     "Ajay Mitchell",
+     "Toumani Camara",
+     "Peyton Watson",
+     "Karl-Anthony Towns",
+     "Neemias Queta",
+     "Alex Caruso",
+     "Andrew Nembhard",
+     "Daniel Gafford",
+     "Kawhi Leonard"
+    ]
+   },
+   {
+    "date": "2026-11-06",
+    "n": 8,
+    "start": [
+     {
+      "slot": "PG",
+      "name": "Alex Caruso",
+      "team": "OKC"
+     },
+     {
+      "slot": "SG",
+      "name": "Dejounte Murray",
+      "team": "NOR"
+     },
+     {
+      "slot": "SF",
+      "name": "Toumani Camara",
+      "team": "POR"
+     },
+     {
+      "slot": "PF",
+      "name": "Peyton Watson",
+      "team": "CLE"
+     },
+     {
+      "slot": "C",
+      "name": "Neemias Queta",
+      "team": "BOS"
+     },
+     {
+      "slot": "G",
+      "name": "Ajay Mitchell",
+      "team": "OKC"
+     },
+     {
+      "slot": "UTIL",
+      "name": "Donovan Mitchell",
+      "team": "CLE"
+     },
+     {
+      "slot": "UTIL",
+      "name": "Daniel Gafford",
+      "team": "DAL"
+     }
+    ],
+    "bench": [],
+    "out": [
+     "Kawhi Leonard"
+    ],
+    "idle": [
+     "Ivica Zubac",
+     "Josh Hart",
+     "Miles Bridges",
+     "Karl-Anthony Towns",
+     "Andrew Nembhard"
+    ]
+   },
+   {
+    "date": "2026-11-07",
+    "n": 10,
+    "start": [
+     {
+      "slot": "PG",
+      "name": "Donovan Mitchell",
+      "team": "CLE"
+     },
+     {
+      "slot": "SG",
+      "name": "Josh Hart",
+      "team": "NYK"
+     },
+     {
+      "slot": "SF",
+      "name": "Toumani Camara",
+      "team": "POR"
+     },
+     {
+      "slot": "PF",
+      "name": "Peyton Watson",
+      "team": "CLE"
+     },
+     {
+      "slot": "C",
+      "name": "Ivica Zubac",
+      "team": "IND"
+     },
+     {
+      "slot": "G",
+      "name": "Alex Caruso",
+      "team": "OKC"
+     },
+     {
+      "slot": "F",
+      "name": "Miles Bridges",
+      "team": "PHO"
+     },
+     {
+      "slot": "UTIL",
+      "name": "Andrew Nembhard",
+      "team": "IND"
+     },
+     {
+      "slot": "UTIL",
+      "name": "Ajay Mitchell",
+      "team": "OKC"
+     },
+     {
+      "slot": "UTIL",
+      "name": "Karl-Anthony Towns",
+      "team": "NYK"
+     }
+    ],
+    "bench": [],
+    "out": [],
+    "idle": [
+     "Dejounte Murray",
+     "Neemias Queta",
+     "Daniel Gafford",
+     "Kawhi Leonard"
+    ]
+   },
+   {
+    "date": "2026-11-08",
+    "n": 3,
+    "start": [
+     {
+      "slot": "PG",
+      "name": "Dejounte Murray",
+      "team": "NOR"
+     },
+     {
+      "slot": "C",
+      "name": "Daniel Gafford",
+      "team": "DAL"
+     },
+     {
+      "slot": "UTIL",
+      "name": "Neemias Queta",
+      "team": "BOS"
+     }
+    ],
+    "bench": [],
+    "out": [],
+    "idle": [
+     "Donovan Mitchell",
+     "Ivica Zubac",
+     "Josh Hart",
+     "Ajay Mitchell",
+     "Toumani Camara",
+     "Peyton Watson",
+     "Miles Bridges",
+     "Karl-Anthony Towns",
+     "Alex Caruso",
+     "Andrew Nembhard",
+     "Kawhi Leonard"
+    ]
+   }
+  ]
+ }
 }

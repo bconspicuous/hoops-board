@@ -19,3 +19,4 @@ tsim_out.json
 out/*.log
 out/league10.html
 nextweek.json
+lineup_week.json

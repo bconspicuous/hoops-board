@@ -242,7 +242,7 @@ function season(rPre, rPost, S, seed, noisy = true) {
   return [...Array(T).keys()].map(i => ({ fin: fin[i].map(x => x / S), p4: po[i] / S, p1: fin[i][0] / S, final: fz[i] / S, champ: ch[i] / S,
     W: W[i] / S, L: L[i] / S, T: Ti[i] / S, avgRank: fin[i].reduce((a, x, k) => a + x * (k + 1), 0) / S, w1: w1win[i] / S }));
 }
-module.exports = { weekWeights, setPlan, CURW, FROM, BANK, WIN, RET, VIRT, P, BY, TEAMS, AB, ME, DOO, PRE, POST, FA, filled, CATS, SCHED, PAIRS, W1, lineup, weekSums, catMS, pwlt, week1, ecRest, season, postTrade, give, get, games, avail, START, GAMES, NW, SC };
+module.exports = { dayA0, weekWeights, setPlan, CURW, FROM, BANK, WIN, RET, VIRT, P, BY, TEAMS, AB, ME, DOO, PRE, POST, FA, filled, CATS, SCHED, PAIRS, W1, lineup, weekSums, catMS, pwlt, week1, ecRest, season, postTrade, give, get, games, avail, START, GAMES, NW, SC };
 if (require.main === module) {
   const t0 = Date.now();
   const w1 = week1(PRE, POST);
