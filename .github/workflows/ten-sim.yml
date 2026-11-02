@@ -2,6 +2,8 @@ name: ten · simulation
 # ESPN sync + full season simulation for the 10-team league; rebuilds ten/index.html and ten/sim/out/summary.*. Touches only ten/.
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "53 */6 * * *"   # every 6 hours, same cadence as the G League sync (g8-espn: 47 */6)
 permissions:
   contents: write
 concurrency:

@@ -1,9 +1,8 @@
 name: ten · ESPN league sync
+# Manual data-only sync (the scheduled run is ten-sim.yml, which syncs and rebuilds the dashboard).
 # Pulls the 10-team league (ESPN league 504060248) into ten/data/. Touches nothing outside ten/data.
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "23 * * * *"   # hourly
 permissions:
   contents: write
 concurrency:

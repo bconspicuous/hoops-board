@@ -79,6 +79,7 @@ if _NW and _WK['remDays']<=1:   # current matchup is over (or on its last day): 
 _FAF='wk_next.json' if (_NW and _WK['remDays']<=1 and os.path.exists(W+'wk_next.json')) else 'wk_now.json'
 _FAJ=json.load(open(W+_FAF)); d['faWeek']={'week':_FAJ['week'],'opp':_FAJ['opp'],'base':_FAJ['base'],'list':_FAJ.get('faList',[])}
 d['standings']={t['abbr']:[t['record'].get('wins',0),t['record'].get('losses',0),t['record'].get('ties',0)] for t in json.load(open(os.path.join(W,'..','data','rosters.json')))['teams']}
+d['simData']=json.load(open(W+('simdata_v2.json' if os.environ.get('SUF')=='_v2' else 'simdata.json'))) if os.path.exists(W+'simdata.json') else None
 d['lineupWeek']=json.load(open(W+'lineup_week.json')) if os.path.exists(W+'lineup_week.json') else None
 d['streamBase']=json.load(open(W+'stream_plan_rec.json'))['sum']['base']
 _R=json.load(open(os.path.join(W, '..', 'data', '')+'rosters.json')); d['acqUsed']=next(t for t in _R['teams'] if t['abbr']=='GTD')['transactions']['acquisitions']

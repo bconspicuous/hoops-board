@@ -441,6 +441,30 @@ section:not([hidden]) .vchart .bars rect { transform-box: fill-box; transform-or
 
   <section id="view-fc" hidden><div class="stack">
     <div class="panel msgband" id="msg"></div>
+    <div class="panel" id="sim-panel">
+      <div class="chead"><div><h2>Simul · 선수 교체 시뮬레이션</h2><p class="desc">방출·영입할 선수를 고르고 Simul을 누르면 남은 시즌을 이 페이지에서 바로 다시 계산합니다(시즌 4천 회). 대상 팀은 상단 팀 선택을 따릅니다.</p></div></div>
+      <div class="sim">
+        <div style="display:grid;gap:12px;align-content:start">
+          <div class="field"><span class="lab">대상 팀</span><b id="sim-team-name"></b></div>
+          <div class="field"><span class="lab">방출할 선수</span><div class="list" id="sim-drop"></div></div>
+          <div class="row">
+            <div class="field" style="flex:1 1 140px"><label for="sim-week">적용 시작 주차</label><select id="sim-week"></select></div>
+            <label class="row" style="flex:1 1 220px;font-size:12.5px"><input type="checkbox" id="sim-pg" checked> 영입·이동 선수는 결장 할인 없이 출전 가능 경기 전부</label>
+          </div>
+        </div>
+        <div style="display:grid;gap:12px;align-content:start">
+          <div class="field"><div class="addhead"><label for="sim-q" id="sim-add-label">영입할 선수 (FA)</label><label class="chk"><input type="checkbox" id="sim-other"> 다른 팀 선수 포함</label></div><input type="search" id="sim-q" placeholder="이름·NBA 팀·포지션 검색"></div>
+          <div class="list" id="sim-add" style="max-height:330px"></div>
+          <div class="trade" id="sim-trade-box" hidden><label class="chk"><input type="checkbox" id="sim-trade" checked> 방출 선수를 상대 팀으로 보내기 (트레이드)</label><span class="note" id="sim-trade-note"></span></div>
+        </div>
+      </div>
+      <div class="row"><button class="btn primary" id="sim-run" type="button">Simul</button><button class="btn" id="sim-reset" type="button">초기화</button><span class="msg" id="sim-msg"></span></div>
+    </div>
+    <div class="kpis" id="sim-kpis" hidden></div>
+    <div class="grid2" id="sim-res" hidden>
+      <div class="panel"><h2>시즌 예측 · Simul</h2><div class="tbl"><table id="sim-fc"></table></div><p class="note" id="sim-fc-note"></p></div>
+      <div class="panel"><h2 id="sim-wk-title">주별 매치업 승리 확률</h2><div class="legend"><span><span class="sw" style="background:color-mix(in srgb, var(--muted) 35%, transparent)"></span>교체 없음</span><span><span class="sw" style="background:var(--s1)"></span>Simul</span><span>점선 = 50%</span></div><div class="vchart" id="sim-wk"></div><div class="tbl"><table id="sim-cat"></table></div></div>
+    </div>
     <section class="panel">
       <div class="phead"><h2>선수 교체 전략</h2><span class="note" id="st-sub"></span></div>
       <div class="vchart" id="st-weeks"></div>
@@ -849,7 +873,110 @@ section:not([hidden]) .vchart .bars rect { transform-box: fill-box; transform-or
   $("rd-opp").addEventListener("change", e => { rdOpp = +e.target.value; renderRadar8(); });
   $("rd-mode").addEventListener("change", e => { rdMode = e.target.value; store.set("l10v5-rdmode", rdMode); renderRadar8(); });
   $("rd-avg").addEventListener("change", e => { rdAvg = e.target.checked; store.set("l10v5-rdavg", rdAvg ? "1" : "0"); renderRadar8(); });
-  function renderNow() { renderKpis(); renderDuel(); renderRace(); renderRank(); renderRadar8(); $("h1-team").textContent = sel === ME ? "Twindragons" : TM[sel].name; }
+  // ---------- Simul (in-page): weekly team sums from the pipeline ± player lines → category win probabilities → season Monte Carlo
+  const SD = D.simData;
+  const SK = SD ? Object.fromEntries(SD.keys.map((k, i) => [k, i])) : {};
+  const CVJ = { PTS: 0.40, REB: 0.45, AST: 0.55, STL: 0.85, BLK: 1.0, TPM: 0.75, TO: 0.60 }, INTJ = { TPM: 1, REB: 1, AST: 1, STL: 1, BLK: 1, TO: 1, DD: 1, PTS: 1, TW: 1 };
+  const LK = ["FGM", "FGA", "FTM", "FTA", "TPM", "REB", "AST", "STL", "BLK", "TO", "PTS"];
+  function msJ(s, b) { const g = k => s[SK[k]] + (b ? b[SK[k]] : 0), o = {};
+    const FGA = g("FGA"), FTA = g("FTA"), fgp = g("FGM") / Math.max(FGA, 1e-9), ftp = g("FTM") / Math.max(FTA, 1e-9);
+    o.FG = [fgp, Math.sqrt(fgp * (1 - fgp) / Math.max(s[SK.FGA], 1)) * s[SK.FGA] / Math.max(FGA, 1e-9)];
+    o.FT = [ftp, Math.sqrt(ftp * (1 - ftp) / Math.max(s[SK.FTA], 1)) * s[SK.FTA] / Math.max(FTA, 1e-9)];
+    const n = Math.max(s[SK.NPG], 1); ["TPM", "REB", "AST", "STL", "BLK", "TO", "PTS"].forEach(c => o[c] = [g(c), CVJ[c] * s[SK[c]] / Math.sqrt(n)]);
+    o.DD = [g("DD"), Math.sqrt(Math.max(s[SK.DD], 1e-6))]; o.TW = [g("TW"), Math.sqrt(Math.max(s[SK.TW] * (1 - s[SK.TW] / n), 1e-6) * 1.3)]; return o; }
+  function ncdfJ(x) { const z = Math.abs(x) / Math.SQRT2, t = 1 / (1 + 0.3275911 * z); const y = 1 - (((((1.061405429 * t - 1.453152027) * t) + 1.421413741) * t - 0.284496736) * t + 0.254829592) * t * Math.exp(-z * z); return x >= 0 ? 0.5 * (1 + y) : 0.5 * (1 - y); }
+  function pwltJ(a, b, c) { const d = (c === "TO" ? -1 : 1) * (a[c][0] - b[c][0]), s = Math.sqrt(a[c][1] ** 2 + b[c][1] ** 2) || 1e-6;
+    if (!INTJ[c]) return [ncdfJ(d / s), 0]; return [1 - ncdfJ((0.5 - d) / s), ncdfJ((0.5 - d) / s) - ncdfJ((-0.5 - d) / s)]; }
+  function probsOf(sums) { return SD.weeks.map((w, k) => SD.pairs[k].map(([i, j]) => { const cur = w === SD.curw && SD.bank[0];
+    const a = msJ(sums[i][k], cur ? SD.bank[i] : null), b = msJ(sums[j][k], cur ? SD.bank[j] : null); return CATS.map(c => pwltJ(a, b, c)); })); }
+  function seasonMC(pr, N) {
+    const T = TM.length, base = TM.map(t => recOf(t)), cnt = TM.map(() => ({ p4: 0, p1: 0, W: 0, L: 0, Tt: 0 })); let seed = 20261103;
+    const rnd = () => { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296; };
+    for (let n = 0; n < N; n++) { const W = base.map(r => r[0]), L = base.map(r => r[1]), Ti = base.map(r => r[2]);
+      pr.forEach((wk, k) => wk.forEach((cats, q) => { const [i, j] = SD.pairs[k][q]; cats.forEach(([pw, pt]) => { const r = rnd(); if (r < pw) { W[i]++; L[j]++; } else if (r < pw + pt) { Ti[i]++; Ti[j]++; } else { W[j]++; L[i]++; } }); }));
+      const sc = W.map((w, i) => (w + Ti[i] / 2) / Math.max(1, w + L[i] + Ti[i]) + rnd() * 1e-9), ord = sc.map((s, i) => i).sort((a, b) => sc[b] - sc[a]);
+      ord.forEach((i, r) => { if (r < 4) cnt[i].p4++; if (r === 0) cnt[i].p1++; }); W.forEach((w, i) => { cnt[i].W += w; cnt[i].L += L[i]; cnt[i].Tt += Ti[i]; }); }
+    return cnt.map(c => ({ p4: c.p4 / N, p1: c.p1 / N, W: c.W / N, L: c.L / N, T: c.Tt / N })); }
+  function matchWin(cats) { let d = { 0: 1 }; cats.forEach(([pw, pt]) => { const nd = {}, pl = 1 - pw - pt; for (const [k, v] of Object.entries(d)) { const y = +k; nd[y + 1] = (nd[y + 1] || 0) + v * pw; nd[y] = (nd[y] || 0) + v * pt; nd[y - 1] = (nd[y - 1] || 0) + v * pl; } d = nd; });
+    let a = 0; for (const [k, v] of Object.entries(d)) if (+k > 0) a += v; return a; }
+  const PLX = SD ? Object.fromEntries(SD.players.map(p => [p.n, p])) : {};
+  const simSel = { drop: new Set(), add: new Set() }; let simOther = false, simBase = null;
+  function addLine(row, p, g, sg) { if (!g) return; LK.forEach((k, x) => row[SK[k]] += sg * g * p.f[x]); row[SK.DD] += sg * g * p.dd; row[SK.TW] += sg * g * p.tw; row[SK.NPG] += sg * g; }
+  // one team's week: remove `out`, bring in `inn`; the 13-active cap (IR returns) is re-applied, so a 14th active player pushes out the lowest-value one
+  function applyTeam(row, t, out, inn, k, gIn) {
+    const base = SD.players.filter(p => p.tm === t), scen = base.filter(p => !out.has(p.n)).concat([...inn].map(n => PLX[n]));
+    const act = L => L.filter(p => p.all[k] > 0 || p.own[k] > 0).sort((a, b) => b.v - a.v);
+    const bCut = new Set(act(base).slice(13).map(p => p.n)), sCut = new Set(act(scen).slice(13).map(p => p.n));
+    out.forEach(n => addLine(row, PLX[n], PLX[n].own[k], -1));
+    inn.forEach(n => { if (!sCut.has(n)) addLine(row, PLX[n], gIn(PLX[n], k), 1); });
+    base.forEach(p => { if (out.has(p.n)) return; if (sCut.has(p.n) && !bCut.has(p.n)) addLine(row, p, p.own[k], -1); else if (bCut.has(p.n) && !sCut.has(p.n)) addLine(row, p, p.all[k], 1); });
+  }
+  function scenSums(team, drop, add, k0, perGame, trade) {
+    const sums = SD.sums.map(t => t.map(r => r.slice())), gIn = (p, k) => perGame ? p.games[k] : p.all[k];
+    const partners = [...new Set([...add].map(n => PLX[n].tm).filter(t => t >= 0 && t !== team))], tr = trade && partners.length === 1;
+    for (let k = k0; k < SD.weeks.length; k++) {
+      applyTeam(sums[team][k], team, drop, add, k, gIn);
+      partners.forEach(x => applyTeam(sums[x][k], x, new Set([...add].filter(n => PLX[n].tm === x)), tr ? drop : new Set(), k, gIn)); }
+    return { sums, partners }; }
+  function renderSimLists() {
+    if (!SD) { $("sim-panel").hidden = true; return; }
+    const team = sel; $("sim-team-name").textContent = TM[team].name;
+    if (!$("sim-week").options.length) { const k0 = D.w1meta.next ? 1 : 0; $("sim-week").innerHTML = SD.weeks.map((w, k) => `<option value="${k}"${k === k0 ? " selected" : ""}>${w + 1}주차 (${SD.starts[k].slice(5).replace("-", "/")}~)${w === SD.curw ? " · 진행 중" : ""}</option>`).join(""); }
+    const k = +$("sim-week").value || 0;
+    $("sim-drop").innerHTML = SD.players.filter(p => p.tm === team).sort((a, b) => a.v - b.v).map(p => `<label class="${simSel.drop.has(p.n) ? "on" : ""}"><input type="checkbox" data-drop="${esc(p.n)}"${simSel.drop.has(p.n) ? " checked" : ""}><span>${esc(p.n)} <span class="m">${p.pos} · ${p.nba}${p.st ? ` · <b class="${p.st === "O" ? "stat-o" : "stat-dtd"}">${p.st}</b>` : ""}</span></span><span class="m">가치 ${p.v.toFixed(2)}</span></label>`).join("");
+    const q = $("sim-q").value.trim().toLowerCase();
+    const pool = SD.players.filter(p => p.tm !== team && (simOther || p.tm < 0) && (!q || (p.n + " " + p.nba + " " + p.pos).toLowerCase().includes(q))).sort((a, b) => b.v - a.v).slice(0, 80);
+    $("sim-add").innerHTML = pool.map(p => `<label class="${simSel.add.has(p.n) ? "on" : ""}"><input type="checkbox" data-add="${esc(p.n)}"${simSel.add.has(p.n) ? " checked" : ""}><span>${esc(p.n)} <span class="m">${p.pos} · ${p.nba}${p.tm >= 0 ? " · " + esc(TM[p.tm].abbr) : ""}${p.r ? " · ESPN " + p.r : ""}${p.st ? ` · <b class="${p.st === "O" ? "stat-o" : "stat-dtd"}">${p.st}</b>` : ""}</span></span><span class="m">${p.games[k]}경기 · ${p.v.toFixed(2)}</span></label>`).join("") || `<div class="note" style="padding:10px">검색 결과 없음</div>`;
+    $("sim-other").checked = simOther; $("sim-add-label").textContent = simOther ? "영입할 선수 (FA · 다른 팀)" : "영입할 선수 (FA)";
+    $("sim-drop").querySelectorAll("input").forEach(el => el.addEventListener("change", () => { el.checked ? simSel.drop.add(el.dataset.drop) : simSel.drop.delete(el.dataset.drop); renderSimLists(); }));
+    $("sim-add").querySelectorAll("input").forEach(el => el.addEventListener("change", () => { el.checked ? simSel.add.add(el.dataset.add) : simSel.add.delete(el.dataset.add); renderSimLists(); }));
+    const ps = [...new Set([...simSel.add].map(n => PLX[n] && PLX[n].tm).filter(t => t >= 0 && t !== team))], box = $("sim-trade-box"); box.hidden = !ps.length;
+    if (ps.length) { $("sim-trade").disabled = ps.length !== 1; $("sim-trade-note").textContent = ps.length === 1 ? `체크 시 방출 선수는 ${TM[ps[0]].abbr}로 이동, 해제 시 FA로 방출.` : `여러 팀(${ps.map(t => TM[t].abbr).join(", ")}) 선수를 영입하면 방출 선수는 FA로 처리.`; }
+  }
+  function runSim() {
+    const team = sel, drop = new Set(simSel.drop), add = new Set(simSel.add), msg = $("sim-msg");
+    if (!drop.size && !add.size) { msg.className = "msg err"; msg.textContent = "방출 또는 영입할 선수를 한 명 이상 고르세요."; return; }
+    const act = SD.players.filter(p => p.tm === team).length - drop.size + add.size;
+    if (act > 14) { msg.className = "msg err"; msg.textContent = `로스터가 ${act}명이 됩니다(IR 포함 최대 14명). 방출 선수를 더 고르세요.`; return; }
+    msg.className = "msg"; msg.textContent = "계산 중…"; $("sim-run").disabled = true;
+    setTimeout(() => {
+      const k0 = +$("sim-week").value || 0, perGame = $("sim-pg").checked, trade = $("sim-trade").checked;
+      if (!simBase) { const pr = probsOf(SD.sums); simBase = { pr, mc: seasonMC(pr, 4000) }; }
+      const sc = scenSums(team, drop, add, k0, perGame, trade), pr = probsOf(sc.sums), mc = seasonMC(pr, 4000);
+      renderSimResult(team, simBase, { pr, mc, k0, drop, add, partners: sc.partners });
+      msg.textContent = `완료 · ${SD.weeks[k0] + 1}주차부터 적용 · 시즌 4천 회`; $("sim-run").disabled = false;
+    }, 30);
+  }
+  function renderSimResult(team, B, S) {
+    const b = B.mc[team], s = S.mc[team], ecOf = r => (r.W + r.T / 2) / Math.max(1, r.W + r.L + r.T);
+    const dl = (x, y, d = 1) => `<span class="${y >= x ? "delta up" : "delta down"}">${y >= x ? "+" : ""}${((y - x) * 100).toFixed(d)}%p</span>`;
+    $("sim-kpis").innerHTML =
+      `<div class="kpi"><span class="l">기대 승률 (시즌 최종)</span><span class="v num">${pct(ecOf(s), 1)}</span><span class="d">교체 없음 ${pct(ecOf(b), 1)} → ${dl(ecOf(b), ecOf(s))}</span></div>` +
+      `<div class="kpi"><span class="l">예상 W-L-T (카테고리)</span><span class="v num">${s.W.toFixed(0)}–${s.L.toFixed(0)}–${s.T.toFixed(0)}</span><span class="d">교체 없음 ${b.W.toFixed(0)}–${b.L.toFixed(0)}–${b.T.toFixed(0)}</span></div>` +
+      `<div class="kpi has-ring"><span class="l">4강 확률</span><span class="v num">${pct(s.p4, 1)}</span><span class="d">교체 없음 ${pct(b.p4, 1)} → ${dl(b.p4, s.p4)}</span>${ring(s.p4)}</div>` +
+      `<div class="kpi"><span class="l">정규 1위</span><span class="v num">${pct(s.p1, 1)}</span><span class="d">교체 없음 ${pct(b.p1, 1)} → ${dl(b.p1, s.p1)}</span></div>`;
+    $("sim-kpis").hidden = false; $("sim-res").hidden = false;
+    const ord = TM.map((t, i) => i).sort((x, y) => S.mc[y].W - S.mc[x].W);
+    $("sim-fc").innerHTML = `<thead><tr><th>순위</th><th>팀</th><th class="r">기대 승률</th><th class="r">예상 W-L-T</th><th class="r">4강</th><th class="r">1위</th></tr></thead><tbody>` +
+      ord.map((i, r) => { const x = S.mc[i], y = B.mc[i], ch = i === team || S.partners.includes(i); return `<tr class="${i === team ? "me" : ""}"><td>${r + 1}</td><td>${esc(TM[i].name)}${ch && i !== team ? ' <span class="chip tag">트레이드</span>' : ""}</td><td class="r">${pct(ecOf(x), 1)}</td><td class="r">${x.W.toFixed(0)}–${x.L.toFixed(0)}–${x.T.toFixed(0)}</td><td class="r">${pct(x.p4)} ${Math.abs(x.p4 - y.p4) >= 0.005 ? dl(y.p4, x.p4, 0) : ""}</td><td class="r">${pct(x.p1)}</td></tr>`; }).join("") + `</tbody>`;
+    $("sim-fc-note").textContent = `교체 없음 = 남은 시즌 동안 이 팀이 교체를 전혀 하지 않을 때(다른 팀은 주 2회 일반 교체 가정, 같은 계산기). 대시보드 본문의 시즌 시뮬레이션(선수 성적 변동·부상 포함)과는 수준이 다르므로 변화량(%p)으로 비교하세요. 영입 선수의 출전은 그 주 실제 일정 기준이며, 라인업 10명 경쟁은 반영하지 않아 효과가 다소 크게 나올 수 있습니다.`;
+    const log = SD.weeks.map((w, k) => { const q = SD.pairs[k].findIndex(([i, j]) => i === team || j === team); if (q < 0) return null; const [i, j] = SD.pairs[k][q], isA = i === team;
+      const wb = isA ? matchWin(B.pr[k][q]) : matchWin(B.pr[k][q].map(([pw, pt]) => [1 - pw - pt, pt])), ws = isA ? matchWin(S.pr[k][q]) : matchWin(S.pr[k][q].map(([pw, pt]) => [1 - pw - pt, pt]));
+      return { week: w + 1, opp: TM[isA ? j : i].abbr, winBefore: wb, winAfter: ws, nMoves: 0 }; }).filter(Boolean);
+    weekChart("sim-wk", { log, label: "Simul" });
+    $("sim-wk-title").textContent = `주별 매치업 승리 확률 · ${TM[team].name}`;
+    const per = (pr) => CATS.map((c, x) => { let s0 = 0, n = 0; SD.weeks.forEach((w, k) => { if (k < S.k0) return; const q = SD.pairs[k].findIndex(([i, j]) => i === team || j === team); if (q < 0) return; const [i] = SD.pairs[k][q], [pw, pt] = pr[k][q][x]; s0 += i === team ? pw + pt / 2 : 1 - pw - pt / 2; n++; }); return s0 / Math.max(1, n); });
+    const pb = per(B.pr), ps = per(S.pr);
+    $("sim-cat").innerHTML = `<thead><tr><th>카테고리</th><th class="r">교체 없음</th><th class="r">Simul</th><th class="r">변화</th></tr></thead><tbody>` +
+      CATS.map((c, x) => `<tr><td>${LAB[c]}${c === "TO" ? " ↓" : ""}</td><td class="r">${pct(pb[x])}</td><td class="r">${pct(ps[x])}</td><td class="r">${Math.abs(ps[x] - pb[x]) >= 0.005 ? dl(pb[x], ps[x], 0) : "±0"}</td></tr>`).join("") + `</tbody>`;
+  }
+  if (SD) {
+    $("sim-q").addEventListener("input", renderSimLists); $("sim-week").addEventListener("change", renderSimLists);
+    $("sim-other").addEventListener("change", e => { simOther = e.target.checked; renderSimLists(); });
+    $("sim-run").addEventListener("click", runSim);
+    $("sim-reset").addEventListener("click", () => { simSel.drop.clear(); simSel.add.clear(); $("sim-q").value = ""; $("sim-msg").textContent = ""; $("sim-kpis").hidden = true; $("sim-res").hidden = true; renderSimLists(); });
+  }
+  function renderNow() { renderKpis(); renderDuel(); renderRace(); renderRank(); renderRadar8(); if (typeof renderSimLists === "function") { simSel.drop.clear(); simSel.add.clear(); renderSimLists(); } $("h1-team").textContent = sel === ME ? "Twindragons" : TM[sel].name; }
   renderInj(); renderStream(); renderKS(); renderLineup(); renderFA();
   renderPower(); renderTeam(); renderHeat(); renderWeek1(); renderMethod(); renderProj(); renderNow(); setView(view);
 })();

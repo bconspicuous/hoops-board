@@ -30,6 +30,7 @@ r['streamOverride']={'GTD':{str(w):0 for w in range(0,23)}}; json.dump(r,open('r
 grep -E "season|acquisitions" out/plan_rec.log
 ROSTERS=rosters_plan.json node nextweek.js | tail -1
 ROSTERS=rosters_plan.json node lineup.js | tail -8
+ROSTERS=rosters_plan.json node simdata.js simdata.json && PROJ=proj_v2.json ROSTERS=rosters_plan.json node simdata.js simdata_v2.json
 # pending trade still open -> re-evaluate it (otherwise the last evaluation stays)
 python3 -I - <<'PY'
 import json, subprocess, os
