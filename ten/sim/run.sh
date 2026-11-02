@@ -9,6 +9,9 @@ print(r['current']['period'], r['current']['fromDate'], next(t for t in g['teams
 DAYS=$(python3 -I -c "import datetime as d; print((d.date.fromisoformat('$FROM')-d.date(2026,10,20)).days)")
 CORE_NAMES=$(python3 -I -c "import json; print('|'.join(json.load(open('user_plan.json')).get('core',[])))"); export CORE_NAMES
 echo "period $CUR from $FROM days $DAYS acquisitions $ACQ"
+# our own current week: no virtual streamers (real moves come from the current-week search), other teams keep the generic 2/week
+python3 -I -c "
+import json; r=json.load(open('rosters_espn.json')); r.setdefault('streamOverride',{}).setdefault('GTD',{})[str($CUR-1)]=0; json.dump(r,open('rosters_espn.json','w'),ensure_ascii=False)"
 ROSTERS=rosters_espn.json WEEK=$CUR LIVE_SRC='ESPN API' python3 -I proj.py final > /dev/null
 V2_DAYS=$DAYS python3 -I proj_v2.py | tail -1
 # planner input: GTD gets no virtual streamers (the planner chooses real adds)
@@ -21,7 +24,7 @@ r['streamOverride']={'GTD':{str(w):0 for w in range(0,23)}}; json.dump(r,open('r
   MAXW=3 PLANOUT=stream_plan_rec.json node stream_plan.js > out/plan_rec.log 2>&1 &
   MAXW=2 PLANOUT=stream_plan_c2.json node stream_plan.js > out/plan_c2.log 2>&1 &
   CORE_NAMES= MAXW=3 PLANOUT=stream_plan_free.json node stream_plan.js > out/plan_free.log 2>&1 &
-  ROSTERS=rosters_espn.json WKOUT=wk_now.json node wk2add.js > out/wk_now.log 2>&1 &
+  ROSTERS=rosters_plan.json WKOUT=wk_now.json node wk2add.js > out/wk_now.log 2>&1 &
   W_OFFSET=1 ROSTERS=rosters_plan.json WKOUT=wk_next.json node wk2add.js > out/wk_next.log 2>&1 &
   wait )
 grep -E "season|acquisitions" out/plan_rec.log
