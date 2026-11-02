@@ -78,6 +78,7 @@ if _NW and _WK['remDays']<=1:   # current matchup is over (or on its last day): 
                  'rosterNote':'일별 상위 10명 예측. 우리 팀은 권장 교체안의 그 주 로스터 기준.','next':True,'moves':_NW['moves'],'forced':_NW.get('forced')}
 _FAF='wk_next.json' if (_NW and _WK['remDays']<=1 and os.path.exists(W+'wk_next.json')) else 'wk_now.json'
 _FAJ=json.load(open(W+_FAF)); d['faWeek']={'week':_FAJ['week'],'opp':_FAJ['opp'],'base':_FAJ['base'],'list':_FAJ.get('faList',[])}
+d['standings']={t['abbr']:[t['record'].get('wins',0),t['record'].get('losses',0),t['record'].get('ties',0)] for t in json.load(open(os.path.join(W,'..','data','rosters.json')))['teams']}
 d['lineupWeek']=json.load(open(W+'lineup_week.json')) if os.path.exists(W+'lineup_week.json') else None
 d['streamBase']=json.load(open(W+'stream_plan_rec.json'))['sum']['base']
 _R=json.load(open(os.path.join(W, '..', 'data', '')+'rosters.json')); d['acqUsed']=next(t for t in _R['teams'] if t['abbr']=='GTD')['transactions']['acquisitions']

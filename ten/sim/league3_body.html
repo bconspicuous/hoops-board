@@ -1,0 +1,856 @@
+<style>
+
+/* v2 additions: tabs, week-1 matchup board, trade before/after, projection evidence */
+[hidden] { display: none !important; }
+.rtop { display: flex; flex-wrap: wrap; gap: 10px 18px; justify-content: space-between; align-items: flex-start; }
+.cbx { position: relative; }
+.cbx > button { display: inline-flex; align-items: center; justify-content: space-between; gap: 10px; min-width: 230px; padding: 7px 10px 7px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--card); color: var(--ink); font-size: 13.5px; cursor: pointer; box-shadow: 0 1px 2px rgba(0,0,0,.05); }
+.cbx > button:hover { background: var(--soft); }
+.cbx > button .lab { color: var(--muted); font-size: 12px; margin-right: 2px; }
+.cbx > button svg { flex: none; opacity: .55; }
+.cbx .pop { position: absolute; z-index: 20; top: calc(100% + 4px); left: 0; width: max(100%, 270px); background: var(--card); border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 10px 28px rgba(0,0,0,.16); padding: 4px; display: none; }
+.cbx.open .pop { display: block; }
+.cbx .pop input { width: 100%; border: none; border-bottom: 1px solid var(--line); background: transparent; color: var(--ink); font: inherit; font-size: 13px; padding: 8px 8px 9px 30px; outline: none; background-image: radial-gradient(circle at 13px 50%, transparent 0, transparent 0); }
+.cbx .pop .sr { position: relative; } .cbx .pop .sr svg { position: absolute; left: 9px; top: 10px; opacity: .5; }
+.cbx .pop ul { list-style: none; margin: 4px 0 0; padding: 0; max-height: 300px; overflow: auto; }
+.cbx .pop li { display: grid; grid-template-columns: 16px minmax(0,1fr) auto; gap: 8px; align-items: center; padding: 7px 8px; border-radius: 6px; font-size: 13px; cursor: pointer; }
+.cbx .pop li .rk { color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+.cbx .pop li[aria-selected="true"] .ck { opacity: 1; } .cbx .pop li .ck { opacity: 0; }
+.cbx .pop li.act, .cbx .pop li:hover { background: var(--soft); }
+.cbx .pop .empty { padding: 10px; color: var(--muted); font-size: 12.5px; text-align: center; }
+.verbar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.verbar .vb { border: 1px solid var(--line); background: var(--card); color: var(--ink); border-radius: 999px; padding: 6px 14px; font-size: 13px; cursor: pointer; }
+.verbar .vb[aria-pressed="true"] { background: var(--ink); color: var(--card); border-color: var(--ink); font-weight: 600; }
+.verbar .vk { font-size: 12px; color: var(--muted); }
+.mth { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; } @media (max-width: 780px) { .mth { grid-template-columns: minmax(0, 1fr); } }
+.mth h3 { margin: 0 0 6px; font-size: 15px; } .mth p, .mth li { font-size: 12.5px; line-height: 1.6; color: var(--ink); } .mth ol { margin: 0; padding-left: 18px; }
+/* radar (shadcn Radar chart look: polar grid, filled series, dots, card header/footer) */
+.radar-wrap { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 18px; align-items: start; }
+@media (max-width: 780px) { .radar-wrap { grid-template-columns: minmax(0, 1fr); } }
+.rchart { position: relative; width: 100%; max-width: 470px; margin: 0 auto; }
+.rchart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.rchart text.rl { fill: var(--muted); font-size: 12px; font-family: var(--body); }
+.rchart text.rl.b { fill: var(--ink); font-weight: 600; }
+.rchart.mini text.rl { font-size: 10.5px; }
+.rtip { position: absolute; pointer-events: none; background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 7px 10px; font-size: 12px; line-height: 1.45; box-shadow: 0 6px 18px rgba(0,0,0,.14); display: none; z-index: 5; min-width: 150px; }
+.rtip b { font-weight: 600; } .rtip .row { display: flex; justify-content: space-between; gap: 12px; align-items: center; }
+.sw { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+.rlegend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12px; color: var(--muted); justify-content: center; }
+.rcard-head { display: grid; gap: 2px; } .rcard-head .t { font-weight: 600; font-size: 15px; } .rcard-head .d { color: var(--muted); font-size: 12.5px; }
+.rfoot { display: grid; gap: 3px; font-size: 13px; } .rfoot .lead { font-weight: 600; } .rfoot .m { color: var(--muted); font-size: 12px; }
+.rctl { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; font-size: 13px; }
+.rctl select { font: inherit; padding: 5px 9px; border-radius: 8px; border: 1px solid var(--line); background: var(--card); color: var(--ink); }
+.rctl label { display: inline-flex; gap: 6px; align-items: center; color: var(--muted); }
+.rgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(200px, 46%), 1fr)); gap: 12px; }
+.rcard { border: 1px solid var(--line); border-radius: 10px; padding: 12px 12px 10px; display: grid; gap: 4px; cursor: pointer; background: var(--card); text-align: left; }
+.rcard:hover { border-color: var(--muted); } .rcard.me { border-color: var(--accent); } .rcard.on { box-shadow: inset 0 0 0 2px var(--s1); }
+.rcard .h { display: flex; justify-content: space-between; gap: 6px; align-items: baseline; font-size: 13.5px; font-weight: 600; }
+.rcard .h .e { font-variant-numeric: tabular-nums; color: var(--muted); font-weight: 500; font-size: 12.5px; }
+.rcard .f { font-size: 11.5px; color: var(--muted); line-height: 1.45; } .rcard .f b { color: var(--good); font-weight: 600; } .rcard .f i { color: var(--bad); font-style: normal; font-weight: 600; }
+.rcmp td.d { font-weight: 600; } .rcmp td.d.up { color: var(--good); } .rcmp td.d.down { color: var(--bad); }
+.tabs { display: flex; flex-wrap: wrap; gap: 4px; border-bottom: 1px solid var(--line); }
+.tab { border: none; background: none; padding: 8px 14px; font-family: var(--display); font-size: 19px; font-weight: 600; color: var(--muted); border-bottom: 3px solid transparent; margin-bottom: -1px; cursor: pointer; }
+.tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+.mu { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
+.mu-card { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; display: grid; gap: 8px; }
+.mu-card.me { border-color: var(--accent); }
+.mu-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; align-items: baseline; }
+.mu-head b { font-size: 15px; }
+.split { display: flex; height: 10px; border-radius: 5px; overflow: hidden; background: var(--soft); min-width: 120px; }
+.split > span { display: block; height: 100%; }
+.split .a { background: var(--accent); } .split .t { background: var(--line); } .split .b { background: var(--s1); }
+.pw { font-family: var(--display); font-weight: 700; font-size: 22px; }
+.cmpcol { text-align: right; }
+.up2 { color: var(--good); font-weight: 600; } .down2 { color: var(--bad); font-weight: 600; }
+.plans { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
+@media (max-width: 900px) { .plans { grid-template-columns: minmax(0, 1fr); } }
+.plan-card { border: 1px solid var(--line); border-radius: 10px; padding: 14px; display: grid; gap: 10px; align-content: start; }
+.plan-card.rec { border-color: var(--accent); }
+.plan-card h3 { margin: 0; font-family: var(--display); font-size: 20px; letter-spacing: .02em; }
+.plan-card h3 small { font-family: var(--body); font-size: 12px; font-weight: 600; color: var(--accent); margin-left: 6px; }
+.pstep { display: grid; grid-template-columns: 70px minmax(0, 1fr) 92px; gap: 8px; align-items: center; font-size: 13px; padding: 6px 0; border-bottom: 1px dashed var(--line); }
+.pstep:last-child { border-bottom: none; }
+.pstep .wh { font-family: var(--display); font-weight: 700; font-size: 15px; }
+.pstep .wh small { display: block; font-family: var(--body); font-weight: 500; font-size: 11px; color: var(--muted); }
+.pstep .ef { text-align: right; font-variant-numeric: tabular-nums; }
+.pstep .m { font-size: 11.5px; color: var(--muted); display: block; }
+.search { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.search input, .search select { font: inherit; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--card); color: var(--ink); min-width: 0; }
+.search input { flex: 1 1 200px; }
+.projtbl tbody tr { cursor: pointer; }
+.projtbl tbody tr:hover td { background: var(--soft); }
+.projtbl tbody tr.on td { background: var(--accent-soft); }
+.meth { font-size: 10.5px; font-weight: 700; padding: 1px 6px; border-radius: 4px; border: 1px solid var(--line); color: var(--muted); }
+.meth.ncaa { color: var(--accent); border-color: var(--accent); }
+.meth.espn { color: var(--bad); border-color: var(--bad); }
+.detail { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
+.formula { font-size: 13px; line-height: 1.6; background: var(--soft); border-radius: 8px; padding: 10px 12px; }
+.formula code { font-family: ui-monospace, Menlo, monospace; font-size: 12.5px; }
+.wtbl td, .wtbl th { text-align: center; }
+.chart svg { display: block; width: 100%; height: auto; }
+
+</style>
+<style>
+
+/* Layout (shadcn/ui dashboard pattern): sticky toolbar header → segmented tabs → KPI cards with inline micro-charts → bento grid of
+   chart cards (this week's category duel · title race) → radar → detail tables. Zinc neutrals, one chart pair (blue = 내 팀, orange =
+   상대/시나리오), semantic green/red for win/loss, Geist for latin & numerals with IBM Plex Sans KR for Hangul. */
+:root {
+  --bg: #fafafa; --card: #ffffff; --ink: #09090b; --muted: #71717a; --line: #e4e4e7; --soft: #f4f4f5; --soft2: #fafafa;
+  --primary: #18181b; --primary-fg: #fafafa; --ring: #a1a1aa;
+  --accent: #18181b; --accent-soft: #eff6ff; --warn: #b45309; --warn-soft: #fffbeb;
+  --good: #15803d; --good-soft: #f0fdf4; --good-bar: #22c55e; --bad: #b91c1c; --bad-soft: #fef2f2; --bad-bar: #ef4444;
+  --s1: #2563eb; --s2: #ea580c; --heat: 37, 99, 235;
+  --shadow: 0 1px 2px rgba(9, 9, 11, .05); --shadow-lg: 0 10px 30px -10px rgba(9, 9, 11, .18);
+  --radius: 12px;
+  --display: "Geist", "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  --body: "Geist", "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  --mono: "Geist Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --ease: cubic-bezier(.22, .9, .25, 1);
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #09090b; --card: #111113; --ink: #fafafa; --muted: #a1a1aa; --line: #27272a; --soft: #1c1c20; --soft2: #151518;
+  --primary: #fafafa; --primary-fg: #18181b; --ring: #52525b;
+  --accent: #fafafa; --accent-soft: rgba(59, 130, 246, .13); --warn: #fbbf24; --warn-soft: rgba(251, 191, 36, .12);
+  --good: #4ade80; --good-soft: rgba(34, 197, 94, .13); --good-bar: #22c55e; --bad: #f87171; --bad-soft: rgba(239, 68, 68, .13); --bad-bar: #ef4444;
+  --s1: #3b82f6; --s2: #ea580c; --heat: 59, 130, 246;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .4); --shadow-lg: 0 12px 32px -12px rgba(0, 0, 0, .7); color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #09090b; --card: #111113; --ink: #fafafa; --muted: #a1a1aa; --line: #27272a; --soft: #1c1c20; --soft2: #151518;
+  --primary: #fafafa; --primary-fg: #18181b; --ring: #52525b;
+  --accent: #fafafa; --accent-soft: rgba(59, 130, 246, .13); --warn: #fbbf24; --warn-soft: rgba(251, 191, 36, .12);
+  --good: #4ade80; --good-soft: rgba(34, 197, 94, .13); --good-bar: #22c55e; --bad: #f87171; --bad-soft: rgba(239, 68, 68, .13); --bad-bar: #ef4444;
+  --s1: #3b82f6; --s2: #ea580c; --heat: 59, 130, 246;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .4); --shadow-lg: 0 12px 32px -12px rgba(0, 0, 0, .7); color-scheme: dark }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 14px; line-height: 1.5; margin: 0; -webkit-font-smoothing: antialiased; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--bg); }
+.wrap { max-width: 1240px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 20px 48px; display: grid; gap: 16px; }
+.num, td.r, .kpi .v { font-variant-numeric: tabular-nums; }
+button, select, input { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; border-radius: 6px; }
+/* header */
+header.top { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: flex-end; justify-content: space-between; }
+h1 { word-break: keep-all; font-family: var(--display); font-weight: 650; font-size: clamp(24px, 3.6vw, 32px); line-height: 1.15; margin: 0; letter-spacing: -.025em; text-wrap: balance; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; }
+h1 .ver { font-size: 12px; font-weight: 500; color: var(--muted); letter-spacing: 0; border: 1px solid var(--line); border-radius: 999px; padding: 1px 8px; background: var(--card); }
+.sub { margin: 6px 0 0; color: var(--muted); font-size: 13px; max-width: 78ch; }
+.fresh { display: flex; flex-wrap: wrap; gap: 6px; }
+.pill { font-size: 12px; padding: 2px 10px; border-radius: 999px; background: var(--card); border: 1px solid var(--line); white-space: nowrap; color: var(--muted); font-weight: 500; }
+.pill.warn { border-color: var(--warn); color: var(--warn); background: var(--warn-soft); }
+.pill.b2b { border-color: var(--s2); color: var(--s2); }
+.pill.live { color: var(--ink); }
+.pill.live::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--good-bar); margin-right: 6px; vertical-align: 1px; box-shadow: 0 0 0 0 rgba(34, 197, 94, .5); animation: pulse 2.4s infinite; }
+/* toolbar: segmented tabs + controls (sticky) */
+.tabbar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; justify-content: space-between;
+  padding-block: 10px; background: color-mix(in srgb, var(--bg) 86%, transparent); backdrop-filter: saturate(1.4) blur(10px); -webkit-backdrop-filter: saturate(1.4) blur(10px); border-bottom: 1px solid var(--line); margin-inline: -4px; padding-inline: 4px; }
+.tabs { position: relative; display: inline-flex; gap: 2px; padding: 4px; background: var(--soft); border-radius: 10px; border: 1px solid var(--line); }
+.tab-ind { position: absolute; top: 4px; bottom: 4px; left: 0; width: 0; border-radius: 7px; background: var(--card); box-shadow: var(--shadow), 0 0 0 1px var(--line); transition: transform .35s var(--ease), width .35s var(--ease); z-index: 0; }
+.tab { position: relative; z-index: 1; border: none; background: none; padding: 6px 14px; font-size: 13.5px; font-weight: 550; color: var(--muted); border-radius: 7px; transition: color .2s; white-space: nowrap; }
+.tab:hover { color: var(--ink); }
+.tab[aria-selected="true"] { color: var(--ink); }
+.tabbar .right { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.teamsel { display: flex; align-items: center; gap: 8px; }
+.teamsel label { font-size: 12px; color: var(--muted); font-weight: 500; }
+.teamsel select { width: auto; min-width: 210px; font-weight: 600; }
+@media (max-width: 560px) { .teamsel { flex: 1 1 100%; } .teamsel select { flex: 1; min-width: 0; } .tabs { width: 100%; } .tab { flex: 1; padding-inline: 8px; } }
+.chk { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; cursor: pointer; color: var(--ink); }
+.chk input { accent-color: var(--s1); width: 15px; height: 15px; }
+.b2bchk { font-weight: 500; }
+.stsel { display: inline-flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.stsel select { width: auto; padding: 5px 28px 5px 10px; font-size: 12.5px; }
+/* cards */
+.panel { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; min-width: 0; align-content: start; box-shadow: var(--shadow); }
+.panel h2 { font-family: var(--display); font-weight: 600; font-size: 15.5px; letter-spacing: -.01em; margin: 0; color: var(--ink); text-wrap: balance; }
+.panel .desc, .note { color: var(--muted); font-size: 12.5px; margin: 0; }
+.chead { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: flex-start; justify-content: space-between; }
+.chead > div:first-child { display: grid; gap: 3px; min-width: 0; flex: 1 1 260px; }
+.badges { display: flex; flex-wrap: wrap; gap: 6px; }
+.kpis > *, .grid2 > *, .grid-main > * { min-width: 0; }
+.grid2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
+.grid-main { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 16px; }
+@media (max-width: 920px) { .grid2, .grid-main { grid-template-columns: minmax(0, 1fr); } }
+/* KPI cards */
+.kpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 920px) { .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 440px) { .kpis { grid-template-columns: minmax(0, 1fr); } }
+.kpi { position: relative; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 18px; display: grid; gap: 6px; align-content: start; box-shadow: var(--shadow); overflow: hidden; transition: transform .25s var(--ease), box-shadow .25s var(--ease); }
+.kpi:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+.kpi .l { font-size: 12.5px; color: var(--muted); font-weight: 500; display: flex; justify-content: space-between; gap: 8px; align-items: center; }
+.kpi .v { font-family: var(--display); font-weight: 650; font-size: 28px; line-height: 1.1; letter-spacing: -.03em; word-break: keep-all; }
+.kpi .v small { font-size: 14px; font-weight: 500; color: var(--muted); margin-left: 6px; letter-spacing: 0; }
+.kpi .d { font-size: 12px; color: var(--muted); }
+.kpi .ring { position: absolute; right: 14px; top: 14px; width: 56px; height: 56px; }
+.kpi.has-ring .v, .kpi.has-ring .d { padding-right: 64px; }
+.ring circle { fill: none; stroke-width: 6; }
+.ring .trk { stroke: var(--soft); }
+.ring .val { stroke: var(--s1); stroke-linecap: round; transform: rotate(-90deg); transform-origin: 50% 50%; stroke-dasharray: var(--c); stroke-dashoffset: var(--off); animation: ring 1.1s var(--ease) both; }
+.ring text { font: 600 12px var(--mono); fill: var(--ink); }
+.wltbar { display: flex; height: 8px; border-radius: 999px; overflow: hidden; background: var(--soft); gap: 2px; }
+.wltbar span { display: block; height: 100%; transform-origin: left; animation: grow .8s var(--ease) both; }
+.wltbar .w { background: var(--good-bar); } .wltbar .t { background: var(--ring); } .wltbar .lo { background: var(--bad-bar); }
+.badge { display: inline-flex; align-items: center; gap: 4px; font-size: 11.5px; font-weight: 600; padding: 1px 8px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); background: var(--card); white-space: nowrap; }
+.badge.up { color: var(--good); border-color: color-mix(in srgb, var(--good) 35%, transparent); background: var(--good-soft); }
+.badge.down { color: var(--bad); border-color: color-mix(in srgb, var(--bad) 35%, transparent); background: var(--bad-soft); }
+/* this week's category duel */
+.duel { display: grid; gap: 4px; }
+.duel-h, .duel-r { display: grid; grid-template-columns: 54px 64px minmax(80px, 1fr) 64px 82px; align-items: center; gap: 10px; }
+.duel-h { font-size: 11.5px; color: var(--muted); font-weight: 500; padding-bottom: 4px; border-bottom: 1px solid var(--line); }
+.duel-h .mid { display: flex; justify-content: space-between; }
+.duel-r { padding: 5px 0; border-radius: 8px; transition: background .2s; }
+.duel-r:hover { background: var(--soft2); }
+.duel-r .c { font-weight: 600; font-size: 13px; }
+.duel-r .c small { color: var(--muted); font-weight: 500; }
+.duel-r .a, .duel-r .b { font: 500 12.5px/1.2 var(--mono); text-align: right; }
+.duel-r .b { text-align: left; }
+.duel-r .a small, .duel-r .b small { display: block; color: var(--muted); font-size: 10.5px; }
+.dtrack { position: relative; height: 22px; background: linear-gradient(90deg, var(--soft) 0 50%, var(--soft) 50% 100%); border-radius: 6px; overflow: hidden; }
+.dtrack::after { content: ""; position: absolute; left: 50%; top: 3px; bottom: 3px; width: 1px; background: var(--ring); }
+.dtrack i { position: absolute; top: 4px; bottom: 4px; border-radius: 4px; animation: grow .8s var(--ease) both; animation-delay: calc(var(--i, 0) * 35ms); }
+.dtrack i.pos { left: 50%; background: var(--good-bar); transform-origin: left; }
+.dtrack i.neg { right: 50%; background: var(--bad-bar); transform-origin: right; }
+.dtrack i.even { background: var(--ring); }
+.duel-r .p { justify-self: end; }
+.duel-legend { display: flex; justify-content: space-between; font-size: 11.5px; color: var(--muted); }
+@media (max-width: 520px) { .duel-h, .duel-r { grid-template-columns: 40px 46px minmax(50px, 1fr) 46px 70px; gap: 6px; } .duel-r .a small, .duel-r .b small, .duel-h .mid .side { display: none; } .duel-h .mid { justify-content: center; } }
+/* title race */
+.race { display: grid; gap: 8px; }
+.race-r { display: grid; grid-template-columns: minmax(0, 120px) minmax(60px, 1fr) 52px; gap: 10px; align-items: center; font-size: 13px; }
+.race-r .n { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 1.3; }
+.race-r .n small { font-size: 11px; }
+.race-r.me .n { font-weight: 650; }
+.race-r .t { position: relative; height: 18px; background: var(--soft); border-radius: 6px; overflow: hidden; }
+.race-r .t i { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 6px; background: color-mix(in srgb, var(--muted) 45%, transparent); transform-origin: left; animation: grow .9s var(--ease) both; animation-delay: calc(var(--i, 0) * 45ms); }
+.race-r .t b { position: absolute; left: 0; top: 0; bottom: 0; border-right: 2px solid var(--ink); opacity: .35; transform-origin: left; animation: grow .9s var(--ease) both; }
+.race-r.me .t i { background: var(--s1); }
+.race-r .v { font: 600 12.5px var(--mono); text-align: right; }
+.race-key { display: flex; gap: 14px; flex-wrap: wrap; font-size: 11.5px; color: var(--muted); }
+.race-key i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
+/* tables */
+.tbl { overflow-x: auto; border-radius: 8px; }
+table { border-collapse: collapse; width: 100%; font-size: 13px; }
+th, td { padding: 8px 10px; border-bottom: 1px solid var(--line); text-align: left; white-space: nowrap; }
+th { font-size: 12px; color: var(--muted); font-weight: 500; height: 36px; }
+tbody tr { transition: background .15s; }
+tbody tr:hover td { background: var(--soft2); }
+tbody tr:last-child td { border-bottom: none; }
+td.r, th.r { text-align: right; }
+td.r { font-family: var(--mono); font-size: 12.5px; }
+tr.me td { background: var(--accent-soft); }
+tr.me:hover td { background: var(--accent-soft); }
+tr.me td:first-child { box-shadow: inset 2px 0 0 var(--s1); }
+tr.me td:nth-child(2) { font-weight: 650; }
+.bar { position: relative; height: 8px; background: var(--soft); border-radius: 999px; min-width: 80px; overflow: hidden; }
+.bar > span { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 999px; background: var(--s1); transform-origin: left; animation: grow .8s var(--ease) both; }
+.bar.mid::after { content: ""; position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: var(--ring); }
+.chip { font-size: 11px; font-weight: 600; padding: 1px 7px; border-radius: 6px; border: 1px solid var(--line); background: var(--card); color: var(--muted); white-space: nowrap; }
+.chip.good { background: var(--good-soft); color: var(--good); border-color: color-mix(in srgb, var(--good) 30%, transparent); }
+.chip.bad { background: var(--bad-soft); color: var(--bad); border-color: color-mix(in srgb, var(--bad) 30%, transparent); }
+.chip.mid { background: var(--soft); color: var(--muted); }
+.chip.own { color: var(--s1); border-color: var(--s1); margin-left: 5px; padding: 0 5px; }
+.chip.scen { background: var(--soft); color: var(--ink); margin-left: 6px; }
+.chip.tag { background: var(--soft); color: var(--muted); font-weight: 500; }
+.stat-o { color: var(--bad); font-weight: 650; }
+.stat-dtd { color: var(--warn); font-weight: 650; }
+.heat td.h { text-align: center; font-weight: 600; min-width: 34px; white-space: nowrap; font-family: var(--mono); font-size: 12.5px; transition: filter .15s; }
+.heat td.h:hover { filter: brightness(1.08); }
+.heat thead th.r:not(:last-child) { text-align: center; }
+.heat .rkd { font-size: 10px; font-weight: 700; margin-left: 3px; }
+.heat .rkd.up { color: var(--good); }
+.heat .rkd.down { color: var(--bad); }
+.heat td.avg { text-align: right; font-weight: 600; border-left: 1px solid var(--line); white-space: nowrap; }
+details.more { border-top: 1px dashed var(--line); padding-top: 10px; }
+details.more summary { cursor: pointer; font-size: 12.5px; color: var(--muted); font-weight: 500; list-style: none; display: inline-flex; align-items: center; gap: 6px; }
+details.more summary::-webkit-details-marker { display: none; }
+details.more summary::before { content: ""; width: 6px; height: 6px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(-45deg); transition: transform .2s; }
+details.more[open] summary::before { transform: rotate(45deg); }
+details.more summary:hover { color: var(--ink); }
+details.more[open] > .tbl { margin-top: 10px; animation: fadeUp .3s var(--ease) both; }
+/* forms & buttons */
+.addhead { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 4px 12px; }
+.trade { border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; display: grid; gap: 4px; font-size: 12.5px; background: var(--soft2); }
+td.why { white-space: normal; min-width: 180px; color: var(--muted); font-size: 12px; }
+td.stseq { white-space: normal; min-width: 300px; line-height: 1.55; }
+td.stseq .sl { display: block; }
+td.stseq .sn { display: inline-block; min-width: 18px; color: var(--muted); font-size: 11px; font-weight: 700; }
+.empty { padding: 36px 16px; text-align: center; color: var(--muted); border: 1px dashed var(--line); border-radius: var(--radius); background: var(--card); }
+.empty b { color: var(--ink); display: block; font-size: 16px; margin-bottom: 4px; }
+.sim { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 16px; }
+@media (max-width: 860px) { .sim { grid-template-columns: minmax(0, 1fr); } }
+.field { display: grid; gap: 6px; }
+.field > label, .lab { font-size: 12.5px; color: var(--ink); font-weight: 500; }
+select, input[type="search"] { border: 1px solid var(--line); background: var(--card); border-radius: 8px; padding: 7px 10px; min-width: 0; width: 100%; height: 36px; box-shadow: var(--shadow); transition: border-color .15s, box-shadow .15s; }
+select { appearance: none; -webkit-appearance: none; padding-right: 30px; background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%); background-position: calc(100% - 15px) 52%, calc(100% - 10px) 52%; background-size: 5px 5px; background-repeat: no-repeat; }
+select:hover, input[type="search"]:hover { border-color: var(--ring); }
+select:focus-visible, input[type="search"]:focus-visible { outline: none; border-color: var(--ring); box-shadow: 0 0 0 3px color-mix(in srgb, var(--ring) 35%, transparent); }
+.list { border: 1px solid var(--line); border-radius: 10px; max-height: 280px; overflow: auto; }
+.list label { display: grid; grid-template-columns: 18px minmax(0, 1fr) auto; gap: 8px; align-items: center; padding: 7px 12px; border-bottom: 1px solid var(--line); font-size: 13px; cursor: pointer; transition: background .15s; }
+.list label:hover { background: var(--soft2); }
+.list label:last-child { border-bottom: none; }
+.list label .m { color: var(--muted); font-size: 11.5px; }
+.list label.on { background: var(--accent-soft); }
+.list input { accent-color: var(--s1); }
+.row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.btn { border: 1px solid var(--line); background: var(--card); border-radius: 8px; padding: 0 16px; height: 36px; font-weight: 550; font-size: 13.5px; box-shadow: var(--shadow); transition: background .15s, transform .1s; }
+.btn:hover { background: var(--soft); }
+.btn:active { transform: translateY(1px); }
+.btn.primary { background: var(--primary); border-color: var(--primary); color: var(--primary-fg); padding: 0 22px; }
+.btn.primary:hover { background: color-mix(in srgb, var(--primary) 88%, var(--bg)); }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+.msg { font-size: 12.5px; }
+.msg.err { color: var(--bad); }
+.delta.up { color: var(--good); font-weight: 600; }
+.delta.down { color: var(--bad); font-weight: 600; }
+.legend { display: flex; gap: 14px; font-size: 12px; color: var(--muted); align-items: center; flex-wrap: wrap; }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
+/* charts */
+.chart { position: relative; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.chart svg .wb { transform-box: fill-box; transform-origin: bottom; animation: growY .75s var(--ease) both; animation-delay: calc(var(--i, 0) * 30ms); }
+.chart svg .wb.past { opacity: .55; }
+.chart svg .cur { fill: var(--soft); }
+.rd-card { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+@media (max-width: 920px) { .rd-card { grid-template-columns: minmax(0, 1fr); } }
+.rd-chart { position: relative; max-width: 460px; width: 100%; justify-self: center; }
+.rd-chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.rd-chart svg polygon.me, .rd-chart svg polygon.op { transform-origin: 50% 51%; transform-box: view-box; animation: radar .9s var(--ease) both; }
+.rd-chart .tip { white-space: normal; width: max-content; max-width: min(280px, 90vw); text-align: center; }
+.sc-chart { width: 100%; }
+.sc-chart .recharts-surface { overflow: visible; }
+.sc-tip { min-width: 9rem; display: grid; gap: 6px; border: 1px solid var(--line); background: var(--card); color: var(--ink); border-radius: 10px; padding: 8px 10px; font-size: 12px; box-shadow: var(--shadow-lg); }
+.sc-tip-title { font-weight: 600; }
+.sc-tip-row { display: flex; align-items: center; gap: 8px; }
+.sc-ind { width: 4px; height: 14px; border-radius: 2px; flex: none; }
+.sc-ind[data-dash] { width: 0; border-left: 2px dashed; border-radius: 0; background: none; }
+.sc-name { color: var(--muted); flex: 1; }
+.sc-val { font-variant-numeric: tabular-nums; font-weight: 600; font-family: var(--mono); }
+.sc-tip-foot { border-top: 1px solid var(--line); padding-top: 5px; color: var(--muted); }
+.rd-legend { display: flex; flex-wrap: wrap; gap: 6px 16px; justify-content: center; font-size: 12.5px; color: var(--muted); }
+.rd-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+.rd-legend i.dash { background: none; border: 2px dashed var(--muted); width: 8px; height: 8px; border-radius: 50%; }
+.rd-controls { display: flex; flex-wrap: wrap; gap: 10px 12px; align-items: end; }
+.rd-controls .field { flex: 1 1 180px; }
+.rd-sum { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
+td.rd-win { color: var(--good); font-weight: 600; } td.rd-lose { color: var(--bad); font-weight: 600; }
+.tip { position: absolute; pointer-events: none; background: var(--card); color: var(--ink); border: 1px solid var(--line); box-shadow: var(--shadow-lg); font-size: 12px; padding: 6px 10px; border-radius: 8px; white-space: nowrap; transform: translate(-50%, -100%); z-index: 5; }
+.busy { font-size: 12.5px; color: var(--muted); }
+#busybar { position: fixed; left: 0; right: 0; top: env(safe-area-inset-top, 0px); height: 2px; z-index: 40; overflow: hidden; }
+#busybar::after { content: ""; position: absolute; top: 0; bottom: 0; width: 40%; background: linear-gradient(90deg, transparent, var(--s1), transparent); animation: slide 1.1s linear infinite; }
+td.pjv small { display: block; color: var(--muted); font-size: 10.5px; line-height: 1.2; }
+td.pjv { line-height: 1.25; }
+.pj-steps { margin: 0; padding-left: 20px; display: grid; gap: 8px; font-size: 13px; }
+.pj-steps b { font-weight: 600; }
+footer { color: var(--muted); font-size: 12px; display: grid; gap: 6px; border-top: 1px solid var(--line); padding-top: 14px; }
+/* motion: entering cards, growing marks, counting numbers — all start from a visible frame and finish in < 1.2s */
+section:not([hidden]) > .stack > * { animation: fadeUp .5s var(--ease) both; }
+section:not([hidden]) > .stack > *:nth-child(2) { animation-delay: .05s; } section:not([hidden]) > .stack > *:nth-child(3) { animation-delay: .1s; }
+section:not([hidden]) > .stack > *:nth-child(4) { animation-delay: .15s; } section:not([hidden]) > .stack > *:nth-child(n+5) { animation-delay: .2s; }
+.kpis > .kpi { animation: fadeUp .5s var(--ease) both; }
+.kpis > .kpi:nth-child(2) { animation-delay: .06s; } .kpis > .kpi:nth-child(3) { animation-delay: .12s; } .kpis > .kpi:nth-child(4) { animation-delay: .18s; }
+.stack { display: grid; gap: 16px; }
+@keyframes fadeUp { from { opacity: .35; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes growY { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+@keyframes ring { from { stroke-dashoffset: var(--c); } to { stroke-dashoffset: var(--off); } }
+@keyframes radar { from { transform: scale(.2); opacity: .2; } to { transform: scale(1); opacity: 1; } }
+@keyframes slide { from { left: -40%; } to { left: 100%; } }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, .45); } 70% { box-shadow: 0 0 0 6px rgba(34, 197, 94, 0); } 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+
+/* 10-team additions on top of the 8-team v2.2 system */
+.msgband { display: grid; gap: 6px; } .msgband .k { font-weight: 600; font-size: 13px; color: var(--s1); } .msgband p { margin: 0; line-height: 1.6; }
+.split .a { background: var(--s1); } .split .t { background: var(--ring); } .split .b { background: var(--s2); }
+tr.click { cursor: pointer; } tr.click td { border-bottom: none; padding-bottom: 2px; } tr.noterow td { padding-top: 0; padding-bottom: 8px; }
+tr.sel td { box-shadow: inset 0 -2px 0 var(--s1); }
+.legend .sw, .rlegend .sw { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
+.vchart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.vchart text { fill: var(--muted); font-size: 11px; font-family: var(--body); }
+.vchart .gl { stroke: var(--line); } .vchart .b0 { fill: color-mix(in srgb, var(--muted) 35%, transparent); } .vchart .b1 { fill: var(--s1); } .vchart .lbl { fill: var(--ink); font-weight: 600; }
+section:not([hidden]) .vchart .bars rect { transform-box: fill-box; transform-origin: bottom; animation: growY .75s var(--ease) both; }
+.kpi .v small { font-size: 14px; }
+.h-ver { font-size: 12px; font-weight: 500; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 1px 8px; background: var(--card); letter-spacing: 0; }
+.rd-chart svg text { font-family: var(--body); }
+#k-now .kpi .v { font-size: 26px; }
+
+</style>
+<div id="busybar" hidden></div>
+<div class="wrap">
+  <header class="top">
+    <div>
+      <h1><span id="h1-team">Twindragons</span> 시즌 대시보드 <small class="h-ver">10팀 리그</small></h1>
+      <p class="sub">26-27 fantasy · 10팀 H2H 카테고리별 승패 11개(FG% FT% 3PM REB AST STL BLK TO↓ DD PTS TW) · 순위 = 누적 카테고리 승률(무 = 0.5승) · 정규시즌 22주 · 플레이오프 4팀 · 매치업당 영입 7회 · 시즌 영입 70회</p>
+    </div>
+    <div class="fresh" id="fresh"></div>
+  </header>
+  <div class="tabbar">
+    <nav class="tabs" role="tablist"><span class="tab-ind" id="tab-ind" aria-hidden="true"></span>
+      <button class="tab" role="tab" id="tab-now" aria-selected="true" type="button">현황</button>
+      <button class="tab" role="tab" id="tab-fc" aria-selected="false" type="button">예측</button>
+      <button class="tab" role="tab" id="tab-proj" aria-selected="false" type="button">프로젝션 근거</button>
+    </nav>
+    <div class="right">
+      <span class="stsel"><label class="lab" for="ver-sel">프로젝션</label><select id="ver-sel"><option value="1">v1 · 회귀+ESPN+주차 가중</option><option value="2">v2 · 시즌 초 회귀</option></select></span>
+      <div class="teamsel"><label for="team-sel">팀</label><select id="team-sel"></select></div>
+    </div>
+  </div>
+
+  <section id="view-now"><div class="stack">
+    <div class="kpis" id="k-now"></div>
+    <div class="grid-main">
+      <div class="panel">
+        <div class="chead"><div><h2 id="duel-t">매치업</h2><p class="desc" id="duel-desc"></p></div><div class="badges" id="duel-badges"></div></div>
+        <div class="duel" id="duel"></div>
+        <details class="more"><summary>카테고리별 상세 수치</summary><div class="tbl"><table id="w1-me"></table></div><p class="note" id="w1-note" style="margin-top:8px"></p></details>
+      </div>
+      <div class="panel">
+        <div class="chead"><div><h2>4강 경쟁</h2><p class="desc">플레이오프(상위 4팀) 진출 확률 · 시즌 1만 회 시뮬레이션</p></div></div>
+        <div class="race" id="race"></div>
+        <div class="race-key" id="race-key"></div>
+        <details class="more" open><summary>리그 순위표</summary><div class="tbl"><table id="rank"></table></div></details>
+        <p class="note">예상 순위 = 시즌 종료 시 기대 카테고리 승수 순. 기록 = ESPN 누적 카테고리 W-L-T. 다른 팀은 주 2회 일반 교체 가정.</p>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="chead"><div><h2>카테고리 레이더 · 팀 비교</h2><p class="desc" id="rd-desc"></p></div></div>
+      <div class="rd-controls">
+        <div class="field"><label for="rd-opp">비교 팀</label><select id="rd-opp"></select></div>
+        <div class="field"><label for="rd-mode">기준</label><select id="rd-mode"></select></div>
+        <label class="chk"><input type="checkbox" id="rd-avg"> 리그 평균 표시</label>
+      </div>
+      <div class="rd-card">
+        <div style="display:grid;gap:10px"><div class="rd-chart" id="rd-chart"></div><div class="rd-legend" id="rd-legend"></div><div class="rd-sum" id="rd-sum"></div></div>
+        <div class="tbl"><table id="rd-tbl"></table></div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="chead"><div><h2 id="roster-title">로스터</h2><p class="desc">슬롯 = 모델 최적 라인업(ESPN 복수 포지션). 수치 = 최종 프로젝션(경기당). 기여 = 이 선수를 빼고 빈칸으로 두었을 때 2~22주차 카테고리 승률 변화.</p></div></div>
+      <div class="tbl"><table id="roster"></table></div>
+    </div>
+    <section class="panel" id="lu-panel">
+      <div class="phead"><h2 id="lu-h">추천 라인업</h2><span class="note" id="lu-sub"></span></div>
+      <div class="tbl"><table id="lu"></table></div>
+      <p class="note" id="lu-note"></p>
+    </section>
+    <section class="panel" id="fa-panel">
+      <div class="phead"><h2 id="fa-h">FA 영입 후보</h2><span class="note" id="fa-sub"></span></div>
+      <div class="tbl"><table id="faw"></table></div>
+      <p class="note">ESPN 최신 무소속 선수 기준. 선수별로 가장 효과가 큰 방출 대상(상위 10명 고정 제외)과 짝지어 그 주 상대 기준으로 평가. 경기 수 = 그 주 출전 가능 경기(부상 복귀일 반영).</p>
+    </section>
+    <section class="panel"><div class="phead"><h2>부상자 복귀 일정 · 로스터 전체</h2><span class="note" id="inj-sub"></span></div><div class="tbl"><table id="inj"></table></div><p class="note">복귀일 = 그날부터 출전 가능으로 보고 실제 NBA 일정에서 그 전 경기는 결장 처리. 복귀 선수는 13명 한도 안에서 가장 낮은 가치의 선수를 대체한다고 가정.</p></section>
+  </div></section>
+
+  <section id="view-fc" hidden><div class="stack">
+    <div class="panel msgband" id="msg"></div>
+    <section class="panel">
+      <div class="phead"><h2>선수 교체 전략</h2><span class="note" id="st-sub"></span></div>
+      <div class="vchart" id="st-weeks"></div>
+      <div class="legend"><span><span class="sw" style="background:color-mix(in srgb, var(--muted) 35%, transparent)"></span>교체 전</span><span><span class="sw" style="background:var(--s1)"></span>선택한 운영안 교체 후</span><span>점선 = 50%</span></div>
+      <div class="tbl"><table id="st-cmp"></table></div>
+      <p class="note" id="st-note"></p>
+    </section>
+    <section class="panel" id="ks-panel">
+      <div class="phead"><h2>Kawhi 복귀 시점 민감도</h2><span class="note">권장 교체안 고정 · 복귀일만 변경 · 8천 회</span></div>
+      <div class="tbl"><table id="ks"></table></div>
+      <p class="note" id="ks-note"></p>
+    </section>
+    <section class="panel">
+      <div class="phead"><h2 id="st-title">주차별 교체 계획</h2><div class="rctl"><label for="st-sel">운영안</label><select id="st-sel"></select></div></div>
+      <div class="tbl"><table id="st-plan"></table></div>
+      <p class="note">기대 카테고리 = 그 주 상대와의 11개 카테고리 중 이길 기대 개수(무승부 0.5). 교체 영입 선수는 연속 경기 결장 없이 모든 경기 출전으로 가정. 경기 수(g)는 그 주 NBA 실제 일정(15주 이후는 요일 패턴 반복).</p>
+    </section>
+    <div class="grid2">
+      <div class="panel"><div class="chead"><div><h2>시즌 예측</h2><p class="desc">행을 누르면 팀 상세와 현황 탭의 기준 팀이 바뀝니다</p></div></div><div class="tbl"><table id="power"></table></div><p class="note" id="power-note"></p></div>
+      <div class="panel"><div class="chead"><div><h2 id="det-title">팀 상세</h2></div></div><div class="kpis" id="kpis"></div><p class="note" id="verdict" style="color:var(--ink)"></p><div class="tbl"><table id="cats"></table></div></div>
+    </div>
+    <div class="grid2">
+      <div class="panel"><h2>FA 영입 후보 · 시즌 기준</h2><div class="tbl"><table id="fa"></table></div><p class="note">현재 무소속 선수(ESPN 300 내) 중 2~22주차 효과 상위. 방출 대상은 효과가 가장 큰 선수로 자동 선택.</p></div>
+      <div class="panel"><h2>최종 순위 분포</h2><div class="tbl"><table class="heat" id="finish"></table></div><p class="note">시즌 1만 회 시뮬레이션(선수 성적 ±10%, 부상 결장, NBA 팀 승수 ±6승). 굵은 선 왼쪽 = 플레이오프.</p></div>
+    </div>
+    <div class="panel"><h2>팀별 카테고리 예상 순위</h2><div class="tbl"><table class="heat" id="heat"></table></div><p class="note">1위 = 가장 유리. 진할수록 상위. 오른쪽 = 평균 순위.</p></div>
+    <div class="panel"><div class="chead"><div><h2 id="w1-h">리그 전체 매치업</h2><p class="desc" id="w1-sub"></p></div></div><div class="mu" id="w1-all"></div></div>
+  </div></section>
+
+  <section id="view-proj" hidden><div class="stack">
+    <section class="panel">
+      <h2>프로젝션 산출 방식</h2>
+      <div class="formula" id="method"></div>
+      <div class="grid2">
+        <div><p class="note" style="margin-bottom:6px">회귀 비중(카테고리 평균) · 기록 시즌 수별</p><div class="tbl"><table class="wtbl" id="wtbl"></table></div></div>
+        <div><p class="note" style="margin-bottom:6px">백테스트 상대오차(RMSE) · 2021~2025 기록으로 2026 예측</p><div class="tbl"><table class="wtbl" id="bttbl"></table></div></div>
+      </div>
+    </section>
+    <section class="panel">
+      <div class="phead"><h2>선수별 프로젝션 (ESPN 300)</h2>
+        <div class="search"><input id="pq" type="search" placeholder="선수·NBA팀 검색" aria-label="선수 검색"><select id="pown" aria-label="소속"><option value="">전체</option><option value="FA">FA</option></select><select id="psort" aria-label="정렬"><option value="vr">모델 가치순</option><option value="r">ESPN 순위순</option><option value="dpts">ESPN 대비 득점 변화순</option><option value="w">회귀 비중순</option></select></div></div>
+      <div class="detail"><div class="tbl" style="max-height:520px;overflow:auto"><table class="projtbl" id="ptbl"></table></div><div id="pdet" class="panel" style="border:none;padding:0"></div></div>
+    </section>
+  <section class="panel" id="method-panel">
+    <h2>산출방식 · v1 / v2</h2>
+    <div class="mth">
+      <div><h3>v1 · 기존 방식</h3><ol>
+        <li>Basketball Reference 2021~2026 경기당 기록으로 선수별 가중 선형회귀(가중치 = 출전 경기 수), 2027 값 예측. 관측 범위의 75~125%로 제한.</li>
+        <li>ESPN 2027 프로젝션과 역분산 가중으로 결합(2021~2025로 2026을 맞힌 백테스트 오차 기준). 신인 = NCAA 30% + ESPN 70%.</li>
+        <li>2027 실제 기록을 주차별 고정 비중으로 반영: 1~3주 10%, 4~6주 30%, 7~9주 50%, 10~12주 60%, 13~15주 70%, 16주~ 80%.</li></ol></div>
+      <div><h3>v2 · 시즌 초 회귀</h3><ol>
+        <li>학습: 2021~2026 각 시즌 Basketball Reference 경기 로그에서 개막 후 같은 일수(D일)까지의 경기당 기록 = 시즌 초 기록, 이후 잔여 경기당 기록 = 목표, 직전 시즌 경기당 기록 = 사전 기대치.</li>
+        <li>카테고리별·시즌 초 출전 수(1/2/3/4경기+)별 가중회귀: 잔여 기록 = b0 + b1×사전 기대치 + b2×시즌 초 기록(가중치 = 잔여 경기 수, 직전·잔여 각 20경기 이상).</li>
+        <li>적용: 사전 기대치 자리에 ESPN 2027 프로젝션, 시즌 초 기록 자리에 2027 실제 기록(ESPN API, 개막 후 D일). 시즌 초 출전이 없으면 사전 기대치만 쓰는 회귀.</li>
+        <li>실제 기록의 비중(b2)을 고정값 대신 과거 같은 시점의 데이터가 정함. 매주 D가 늘면 재적합.</li></ol></div>
+    </div>
+    <div class="tbl"><table class="wtbl" id="v2coef"></table></div>
+    <p class="note" id="v2note"></p>
+  </section>
+  </div></section>
+  <footer id="foot"></footer>
+</div>
+
+<script type="application/json" id="data">%%DATA%%</script>
+<script type="application/json" id="data2">%%DATA2%%</script>
+<script>
+(function () {
+  const VER = (function () { if (location.hash === "#v2") return "2"; if (location.hash === "#v1") return "1"; try { return localStorage.getItem("l10-ver") || "1"; } catch (e) { return "1"; } })();
+  const D = JSON.parse(document.getElementById(VER === "2" ? "data2" : "data").textContent), D2 = JSON.parse(document.getElementById("data2").textContent);
+  const PR = D.proj, P = {}; PR.forEach(p => P[p.id] = p);
+  const TM = D.teams, CATS = D.cats, ME = D.me, NT = TM.length;
+  const LAB = { FG: "FG%", FT: "FT%", TPM: "3PM", REB: "REB", AST: "AST", STL: "STL", BLK: "BLK", TO: "TO", DD: "DD", PTS: "PTS", TW: "TW" };
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const pct = (x, d = 0) => (x * 100).toFixed(d) + "%";
+  const pp = (x, d = 1) => `<span class="delta ${x >= 0 ? "up" : "down"}">${x >= 0 ? "+" : ""}${(x * 100).toFixed(d)}%p</span>`;
+  const st = p => p.st === "O" ? ` <span class="stat-o">O</span>` : p.st === "DTD" ? ` <span class="stat-dtd">DTD</span>` : "";
+  const nm = id => `${esc(P[id].n)}${st(P[id])}`;
+  const fmt = (c, v) => c === "FG" || c === "FT" ? v.toFixed(3).replace(/^0/, "") : v.toFixed(1);
+  const heat = (rk, n = 10) => { const a = (n - rk) / (n - 1); return `background: rgba(var(--heat), ${(0.08 + 0.62 * a).toFixed(2)}); color: ${a > 0.62 ? "#fff" : "var(--ink)"}`; };
+  const store = { get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }, set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} } };
+  const rec = s => `${s.W.toFixed(0)}–${s.L.toFixed(0)}–${s.T.toFixed(0)}`;
+  let sel = +(store.get("l10v2-team") ?? ME); if (!(sel >= 0 && sel < NT)) sel = ME;
+  const order = TM.map((t, i) => i).sort((a, b) => TM[b].ec - TM[a].ec);
+
+  $("w1-h").textContent = D.w1meta.title || `매치업 ${D.period || 1} · 현재까지 + 남은 경기 예상`;
+  $("fresh").innerHTML = D.fresh.map(([t, w]) => `<span class="pill${w ? " warn" : ""}">${esc(t)}</span>`).join("");
+  const me = TM[ME], pA = D.plan, pB = D.planB, myRank = order.indexOf(ME) + 1, w1 = D.week1.find(x => x.a === ME || x.b === ME);
+  const w1me = w1.a === ME ? w1.pA : w1.pB, w1op = w1.a === ME ? w1.pB : w1.pA, opp = TM[w1.a === ME ? w1.b : w1.a];
+  $("msg").innerHTML = `<span class="k">결론</span>
+    <p>현재 로스터 기준 2~22주차 카테고리 승률 ${pct(me.ec, 1)}로 10팀 중 ${myRank}위, 4강 확률 ${pct(me.season.p4)}입니다. 강점은 ${CATS.filter(c => me.profile.per[c] >= 0.6).map(c => LAB[c]).join("·") || "없음"}, 약점은 ${CATS.filter(c => me.profile.per[c] <= 0.4).map(c => LAB[c]).join("·") || "없음"}입니다. Kawhi는 IR(ESPN 예상 복귀일)로 반영했습니다.</p>
+    <p>${D.w1meta.next ? `${D.period}주차 ${esc(opp.name)} 전 예상 승리 확률 ${pct(w1me)}(권장 교체 전 ${pct(w1.a === ME ? w1.pA0 : w1.pB0)}, 패배 ${pct(w1op)}). ` : `${D.period || 1}주차 ${esc(opp.name)} 전 현재 ${w1.a === ME ? w1.rec[0] : w1.rec[1]}, 승리 확률 ${pct(w1me)}(패배 ${pct(w1op)}, 나머지 무승부). `}${(D.streamPlans || []).length ? `권장 교체안 실행 시 4강 ${pct(D.streamPlans[0].sum.plan.p4)}(교체 없음 ${pct(D.streamBase.p4)}).` : ""}</p>`;
+
+  // ---------- tabs
+  const VIEWS = ["now", "fc", "proj"];
+  let view = VIEWS.includes((location.hash || "").slice(1)) ? location.hash.slice(1) : (VIEWS.includes(store.get("l10v5-view")) ? store.get("l10v5-view") : "now");
+  function moveInd() { const b = $("tab-" + view), ind = $("tab-ind"); if (!b || !ind) return; ind.style.width = b.offsetWidth + "px"; ind.style.transform = `translateX(${b.offsetLeft - 4}px)`; }
+  function setView(v) { view = v; store.set("l10v5-view", v); VIEWS.forEach(k => { $("view-" + k).hidden = k !== v; $("tab-" + k).setAttribute("aria-selected", String(k === v)); }); moveInd(); if (v === "now") countUp($("k-now")); }
+  VIEWS.forEach(k => $("tab-" + k).addEventListener("click", () => setView(k)));
+  window.addEventListener("resize", moveInd);
+
+  // ---------- outlook
+  function renderPower() {
+    $("power").innerHTML = `<thead><tr><th>#</th><th>팀</th><th class="r">카테고리 승률</th><th></th><th class="r">예상 성적 W–L–T</th><th class="r">4강</th><th class="r">정규 1위</th><th class="r">우승</th><th class="r">1주차 승</th><th>강점 (1~2위)</th><th>약점 (9~10위)</th></tr></thead><tbody>` +
+      order.map((i, k) => { const t = TM[i], s = t.season, rk = t.profile.rank;
+        const strong = CATS.filter(c => rk[c] <= 2), weak = CATS.filter(c => rk[c] >= 9);
+        return `<tr class="click${t.me ? " me" : ""}" data-i="${i}"><td class="num">${k + 1}</td><td><b>${esc(t.name)}</b><br><span class="note">${esc(t.mgr)}</span></td>
+          <td class="r num">${pct(t.ec, 1)}</td><td><div class="bar mid"><span style="width:${Math.max(0, Math.min(100, (t.ec - 0.35) / 0.3 * 100)).toFixed(0)}%"></span></div></td>
+          <td class="r num">${rec(s)}</td><td class="r num"><b>${pct(s.p4)}</b></td><td class="r num">${pct(s.p1)}</td><td class="r num">${pct(s.champ)}</td><td class="r num">${pct(s.w1)}</td>
+          <td>${strong.map(c => `<span class="chip good">${LAB[c]}</span>`).join("") || '<span class="note">—</span>'}</td><td>${weak.map(c => `<span class="chip bad">${LAB[c]}</span>`).join("") || '<span class="note">—</span>'}</td></tr>
+          <tr class="noterow${t.me ? " me" : ""}${i === sel ? " sel" : ""}" data-i="${i}"><td></td><td colspan="10" class="why">${esc(t.note)}</td></tr>`; }).join("") + `</tbody>`;
+    $("power").querySelectorAll("tr[data-i]").forEach(tr => tr.addEventListener("click", () => { sel = +tr.dataset.i; store.set("l10v2-team", sel); renderPower(); renderTeam(); renderNow(); }));
+    $("power-note").textContent = "카테고리 승률 = 2~22주차, 9팀 상대로 매주 11개 카테고리 중 이길 기대 비율(무승부 0.5). 예상 성적 = 확정된 주차 기록 + 남은 시즌 카테고리 W–L–T(22주 × 11 = 242). 1주차 승 = 이번 주 매치업에서 카테고리를 더 많이 이길 확률. 확률은 실제 NBA 일정(1~14주)과 선수별 결장 가능성을 반영한 1만 회 시뮬레이션.";
+  }
+  function renderTeam() {
+    const t = TM[sel], s = t.season, rk = order.indexOf(sel) + 1, pf = t.profile;
+    $("det-title").textContent = `팀 상세 · ${t.name}`;
+    $("kpis").innerHTML = `
+      <div class="kpi"><span class="l">카테고리 승률</span><span class="v num">${pct(t.ec, 1)}<small>${rk}위</small></span><span class="d">2~22주차</span></div>
+      <div class="kpi"><span class="l">예상 성적 W–L–T</span><span class="v num">${rec(s)}</span><span class="d">평균 순위 ${s.avgRank.toFixed(1)}위</span></div>
+      <div class="kpi"><span class="l">4강 진출</span><span class="v num">${pct(s.p4)}</span><span class="d">정규 1위 ${pct(s.p1)}</span></div>
+      <div class="kpi"><span class="l">우승</span><span class="v num">${pct(s.champ)}</span><span class="d">결승 진출 ${pct(s.final)}</span></div>
+      <div class="kpi"><span class="l">선발 평균 예상 출장</span><span class="v num">${t.gpStart.toFixed(1)}<small>경기</small></span><span class="d">위험: ${t.risk.length ? esc(t.risk.join(", ")) : "없음"}</span></div>`;
+    $("verdict").textContent = t.note;
+    $("roster-title").textContent = `로스터 · ${t.name}`;
+    const imp = Object.fromEntries(t.drop), ord = ["PG", "SG", "SF", "PF", "C", "G", "F", "UTIL", "BE"];
+    const ids = t.roster.filter(id => !t.ir.includes(id)).sort((a, b) => ord.indexOf(t.asg[a]) - ord.indexOf(t.asg[b]) || P[b].v - P[a].v), mx = Math.max(...t.drop.map(x => x[1]));
+    $("roster").innerHTML = `<thead><tr><th>슬롯</th><th>선수</th><th>NBA</th><th class="r">ESPN</th><th class="r">GP</th><th class="r">PTS/REB/AST</th><th class="r">3P/STL/BLK</th><th class="r">FG%/FT%</th><th class="r">기여</th></tr></thead><tbody>` +
+      ids.map(id => { const p = P[id], f = p.f, nw = false;
+        return `<tr><td>${t.asg[id] === "BE" ? "BN" : t.asg[id]}</td><td>${nm(id)}${nw ? ' <span class="chip good">트레이드 영입</span>' : ""}${t.filled.includes(id) ? ' <span class="chip mid">가정 보충</span>' : ""}</td><td>${p.t}</td><td class="r num">${p.r ? "#" + p.r : "—"}</td>
+        <td class="r num">${Math.round(p.gp)}</td><td class="r num">${f.PTS.toFixed(1)}/${f.REB.toFixed(1)}/${f.AST.toFixed(1)}</td><td class="r num">${f.TPM.toFixed(1)}/${f.STL.toFixed(1)}/${f.BLK.toFixed(1)}</td>
+        <td class="r num">${(f.FGM / f.FGA).toFixed(3).replace(/^0/, "")}/${f.FTA ? (f.FTM / f.FTA).toFixed(3).replace(/^0/, "") : "—"}</td><td class="r num ${imp[id] === mx ? "delta down" : ""}">${(imp[id] * 100).toFixed(1)}%p</td></tr>`; }).join("") +
+      t.ir.map(id => `<tr><td>IR</td><td>${nm(id)}</td><td>${P[id].t}</td><td class="r num">${P[id].r ? "#" + P[id].r : "—"}</td><td class="r note" colspan="5">${D.returns && D.returns[P[id].n] ? "IR · " + D.returns[P[id].n].slice(5).replace("-", "/") + "부터 복귀 반영" : "IR 슬롯 · 계산 제외"}</td></tr>`).join("") + `</tbody>`;
+    const top = sel === order[0] ? order[1] : order[0];
+    $("cats").innerHTML = `<thead><tr><th>카테고리</th><th class="r">${esc(t.abbr)}</th><th class="r">리그 평균</th><th class="r">${esc(TM[top].abbr)}</th><th class="c">순위</th><th class="r">승리확률</th></tr></thead><tbody>` +
+      CATS.map(c => `<tr><td>${LAB[c]}</td><td class="r num"><b>${fmt(c, pf.avg[c])}</b></td><td class="r num">${fmt(c, pf.league[c])}</td><td class="r num">${fmt(c, TM[top].profile.avg[c])}</td>
+        <td class="c num" style="${heat(pf.rank[c])}">${pf.rank[c]}</td><td class="r num">${pct(pf.per[c])}</td></tr>`).join("") + `</tbody>`;
+    $("fa").innerHTML = `<thead><tr><th>영입</th><th>방출</th><th class="r">효과</th><th class="r">ESPN</th><th class="r">PTS/3P/REB/AST/STL</th></tr></thead><tbody>` +
+      t.fa.slice(0, 6).map(f => { const p = P[f.add], x = p.f; return `<tr><td><b>${nm(f.add)}</b> <span class="note">${p.t} ${p.el}</span></td><td>${nm(f.drop)}</td><td class="r num">${pp(f.d)}</td><td class="r num">#${p.r}</td>
+        <td class="r num">${x.PTS.toFixed(1)}/${x.TPM.toFixed(1)}/${x.REB.toFixed(1)}/${x.AST.toFixed(1)}/${x.STL.toFixed(1)}</td></tr>`; }).join("") + `</tbody>`;
+    $("team-sel").value = String(sel);
+    document.querySelectorAll("#power tr.noterow").forEach(r => r.classList.toggle("sel", +r.dataset.i === sel));
+  }
+  function renderHeat() {
+    $("heat").innerHTML = `<thead><tr><th>팀</th>${CATS.map(c => `<th class="c">${LAB[c]}</th>`).join("")}<th class="r">평균</th></tr></thead><tbody>` +
+      order.map(i => { const t = TM[i], a = CATS.reduce((s, c) => s + t.profile.rank[c], 0) / CATS.length;
+        return `<tr class="${t.me ? "me" : ""}"><td>${esc(t.abbr)}</td>${CATS.map(c => `<td class="h num" style="${heat(t.profile.rank[c])}">${t.profile.rank[c]}</td>`).join("")}<td class="r num">${a.toFixed(1)}</td></tr>`; }).join("") + `</tbody>`;
+    const byRank = TM.map((t, i) => i).sort((a, b) => TM[a].season.avgRank - TM[b].season.avgRank);
+    $("finish").innerHTML = `<thead><tr><th>팀</th>${[...Array(10)].map((_, k) => `<th class="c"${k === 3 ? ' style="border-right:2px solid var(--ink)"' : ""}>${k + 1}</th>`).join("")}<th class="r">평균</th></tr></thead><tbody>` +
+      byRank.map(i => { const t = TM[i], mx = Math.max(...t.season.fin);
+        return `<tr class="${t.me ? "me" : ""}"><td>${esc(t.abbr)}</td>${t.season.fin.map((v, k) => `<td class="h num" style="background: rgba(var(--heat), ${(0.06 + 0.7 * Math.min(1, v / 0.45)).toFixed(2)}); color:${v > 0.27 ? "#fff" : "var(--ink)"};${k === 3 ? "border-right:2px solid var(--ink);" : ""}font-weight:${v === mx ? 700 : 500}">${Math.round(v * 100)}</td>`).join("")}<td class="r num">${t.season.avgRank.toFixed(1)}</td></tr>`; }).join("") + `</tbody>`;
+  }
+
+  // ---------- week 1
+  function renderWeek1() {
+    const [i, j] = [w1.a, w1.b], A = TM[i], B = TM[j];
+    if (D.w1meta.next) {
+      const mv = (D.w1meta.moves || []).map(m => `${esc(m.drop)} → <b>${esc(m.add)}</b>`).join(", ") || "교체 없음";
+      $("w1-sub").textContent = `${A.abbr} vs ${B.abbr} · 경기 시작 전 · 우리 팀은 권장 교체 반영`;
+      $("w1-me").innerHTML = `<thead><tr><th>카테고리</th><th class="r">${esc(A.abbr)} 예상</th><th class="r">${esc(B.abbr)} 예상</th><th class="r">${esc(A.abbr)} 승(교체 전)</th><th class="r">${esc(A.abbr)} 승(교체 후)</th><th class="r">무</th><th></th></tr></thead><tbody>` +
+        w1.cats.map(x => { const d = x.pw - x.pw0; return `<tr><td>${LAB[x.c]}</td><td class="r num"><b>${fmt(x.c, x.finA)}</b></td><td class="r num"><b>${fmt(x.c, x.finB)}</b></td><td class="r num">${pct(x.pw0)}</td>
+          <td class="r num ${x.pw >= 0.6 ? "up2" : x.pw <= 0.4 ? "down2" : ""}">${pct(x.pw)} ${Math.abs(d) >= 0.03 ? `<span class="note">${d > 0 ? "+" : ""}${(d * 100).toFixed(0)}</span>` : ""}</td><td class="r num">${pct(x.pt)}</td><td><div class="split" style="width:140px"><span class="a" style="width:${(x.pw * 100).toFixed(0)}%"></span><span class="t" style="width:${(x.pt * 100).toFixed(0)}%"></span><span class="b" style="width:${((1 - x.pw - x.pt) * 100).toFixed(0)}%"></span></div></td></tr>`; }).join("") +
+        `<tr><td><b>매치업</b></td><td colspan="2" class="note">카테고리를 더 많이 이길 확률</td><td class="r num">${pct(w1.pA0)}</td><td class="r num"><b>${pct(w1.pA)}</b></td><td class="r num">${pct(1 - w1.pA - w1.pB)}</td><td><div class="split" style="width:140px"><span class="a" style="width:${(w1.pA * 100).toFixed(0)}%"></span><span class="t" style="width:${((1 - w1.pA - w1.pB) * 100).toFixed(0)}%"></span><span class="b" style="width:${(w1.pB * 100).toFixed(0)}%"></span></div></td></tr></tbody>`;
+      const ms = w1.cats.map(x => [x.c, w1.a === ME ? x.pw : 1 - x.pw - x.pt]), keep = ms.filter(([, v]) => v >= 0.6).map(([c]) => LAB[c]), swing = ms.filter(([, v]) => v > 0.35 && v < 0.6).map(([c]) => LAB[c]), punt = ms.filter(([, v]) => v <= 0.35).map(([c]) => LAB[c]);
+      $("w1-note").innerHTML = `권장 교체: ${mv}${D.w1meta.forced ? ` · IR 복귀로 ${esc(D.w1meta.forced)} 방출` : ""}. 전략 — 확보: ${keep.join("·") || "—"} / 승부처: ${swing.join("·") || "—"} / 포기: ${punt.join("·") || "—"}. ${esc(D.w1meta.rosterNote)} 선발 출전 예상 ${w1.remA.toFixed(1)}경기 vs ${w1.remB.toFixed(1)}경기.`;
+      renderAll(); return;
+    }
+    $("w1-sub").textContent = `${A.abbr} ${w1.rec[0]} vs ${B.abbr} ${w1.rec[1]} (${D.w1meta.through})`;
+    $("w1-me").innerHTML = `<thead><tr><th>카테고리</th><th class="r">${esc(A.abbr)} 현재</th><th class="r">${esc(B.abbr)} 현재</th><th class="r">${esc(A.abbr)} 최종 예상</th><th class="r">${esc(B.abbr)} 최종 예상</th><th class="r">${esc(A.abbr)} 승</th><th class="r">무</th><th></th></tr></thead><tbody>` +
+      w1.cats.map(x => `<tr><td>${LAB[x.c]}</td><td class="r num">${fmt(x.c, x.curA)}</td><td class="r num">${fmt(x.c, x.curB)}</td><td class="r num"><b>${fmt(x.c, x.finA)}</b></td><td class="r num"><b>${fmt(x.c, x.finB)}</b></td>
+        <td class="r num ${x.pw >= 0.6 ? "up2" : x.pw <= 0.4 ? "down2" : ""}">${pct(x.pw)}</td><td class="r num">${pct(x.pt)}</td><td><div class="split" style="width:140px"><span class="a" style="width:${(x.pw * 100).toFixed(0)}%"></span><span class="t" style="width:${(x.pt * 100).toFixed(0)}%"></span><span class="b" style="width:${((1 - x.pw - x.pt) * 100).toFixed(0)}%"></span></div></td></tr>`).join("") +
+      `<tr><td><b>매치업</b></td><td colspan="4" class="note">카테고리를 더 많이 이길 확률 (주황 = ${esc(A.abbr)}, 회색 = 무승부, 파랑 = ${esc(B.abbr)})</td><td class="r num"><b>${pct(w1.pA)}</b></td><td class="r num">${pct(1 - w1.pA - w1.pB)}</td><td><div class="split" style="width:140px"><span class="a" style="width:${(w1.pA * 100).toFixed(0)}%"></span><span class="t" style="width:${((1 - w1.pA - w1.pB) * 100).toFixed(0)}%"></span><span class="b" style="width:${(w1.pB * 100).toFixed(0)}%"></span></div></td></tr></tbody>`;
+    $("w1-note").textContent = `현재 = ESPN 스코어보드(${D.w1meta.through}). 남은 경기 ${D.w1meta.remaining}: ${D.w1meta.rosterNote} 남은 선발 출전 예상 ${w1.remA.toFixed(1)}경기 vs ${w1.remB.toFixed(1)}경기.`;
+    renderAll();
+  }
+  function renderAll() {
+    $("w1-all").innerHTML = D.week1.map(m => { const A = TM[m.a], B = TM[m.b], tie = Math.max(0, 1 - m.pA - m.pB);
+      const ea = m.cats.reduce((s, x) => s + x.pw + x.pt / 2, 0);
+      return `<div class="mu-card${A.me || B.me ? " me" : ""}"><div class="mu-head"><span><b>${esc(A.name)}</b> <span class="note">${m.rec[0]}</span> vs <b>${esc(B.name)}</b> <span class="note">${m.rec[1]}</span></span>
+        <span class="num"><span class="pw">${pct(m.pA)}</span> <span class="note">: 무 ${pct(tie)} :</span> <span class="pw" style="color:var(--s1)">${pct(m.pB)}</span></span></div>
+        <div class="split"><span class="a" style="width:${(m.pA * 100).toFixed(0)}%"></span><span class="t" style="width:${(tie * 100).toFixed(0)}%"></span><span class="b" style="width:${(m.pB * 100).toFixed(0)}%"></span></div>
+        <span class="note">기대 카테고리 ${ea.toFixed(1)} : ${(11 - ea).toFixed(1)} · ${m.cats.filter(x => x.pw >= 0.5).map(x => LAB[x.c]).join("·")} 우세(${esc(A.abbr)})</span></div>`; }).join("");
+  }
+
+  const SM = D.summary, KEYS = ["PTS", "REB", "AST", "STL", "BLK", "TPM", "FGM", "FTA", "TO"];
+  function renderMethod() {
+    $("method").innerHTML = `<b>1단계 · 과거 실적 선형회귀</b> Basketball Reference 경기당 기록(2020-21~2025-26, 최대 6시즌)으로 카테고리별 가중최소제곱 회귀(가중치 = 출전 경기 수) 후 2026-27 값을 외삽. 2025-26 기록이 없으면 그 이전 시즌만 사용. 외삽값은 관측 범위의 75~125% 안으로 제한.<br>
+      <b>2단계 · ESPN 프로젝션과 결합</b> <code>최종 = w × 회귀 + (1 − w) × ESPN</code>, <code>w = σ<sub>ESPN</sub>² ÷ (σ<sub>ESPN</sub>² + σ<sub>회귀</sub>²)</code>. σ<sub>회귀</sub>는 같은 방법으로 2021~2025 기록만 써서 2026을 예측한 백테스트 오차(로테이션 선수 ${SM.NBT[4] + SM.NBT[2] + SM.NBT[1]}명), σ<sub>ESPN</sub>은 가장 좋은 단순 예측(직전 시즌·회귀)보다 20% 정확하다고 가정.<br>
+      <b>신인</b> NCAA 2025-26 경기당 기록을 NBA 신인 수준으로 환산(득점 ×0.68, 리바운드 ×0.80, 어시스트·블록 ×0.75, 스틸 ×0.70, FG% −3%p)해 30%, ESPN 70% 가중평균. 대학 기록에 없는 항목(FGA·3PM·FTA·TO)은 ESPN.<br>
+      <b>3단계 · 시즌 실제 기록</b> 경기당 실제 기록을 주차별 비중으로 반영: ${SM.WACT_TABLE.map(([k, w], i) => `${i ? SM.WACT_TABLE[i - 1][0] + 1 : 1}~${k < 99 ? k : ""}주 ${Math.round(w * 100)}%`).join(" · ")}. 현재 ${SM.WEEK}주차 → ${Math.round(SM.WACT * 100)}%. 선수별 실제 기록은 ${D.actualThrough} 기준이며, 1경기 표본이라 이 단계의 흔들림이 큽니다.<br>
+      <b>그 밖</b> 출전 경기(GP)는 ESPN 값, DD는 기존 모델 비율을 새 기록에 맞춰 조정, TW는 소속팀 시즌 승수 배당 ÷ 82.`;
+    const g = [1, 2, 4], gl = { 1: "1시즌", 2: "2~3시즌", 4: "4시즌 이상" };
+    const W = {}; g.forEach(k => { W[k] = {}; KEYS.forEach(s => { const a = PR.filter(p => p.wAll && (p.ns === 1 ? 1 : p.ns <= 3 ? 2 : 4) === k && p.m === "reg+espn"); W[k][s] = a.length ? a.reduce((x, p) => x + p.wAll[s], 0) / a.length : null; W[k].n = a.length; }); });
+    $("wtbl").innerHTML = `<thead><tr><th>기록</th><th>선수</th>${KEYS.map(s => `<th>${LAB[s] || s}</th>`).join("")}</tr></thead><tbody>` + g.map(k => `<tr><td>${gl[k]}</td><td class="num">${W[k].n}</td>${KEYS.map(s => `<td class="num">${W[k][s] == null ? "—" : Math.round(W[k][s] * 100) + "%"}</td>`).join("")}</tr>`).join("") +
+      `<tr><td>신인</td><td class="num">${PR.filter(p => p.m === "ncaa+espn").length}</td><td colspan="${KEYS.length}" class="note">NCAA 환산 30% · ESPN 70%</td></tr><tr><td>ESPN만</td><td class="num">${PR.filter(p => p.m === "espn").length}</td><td colspan="${KEYS.length}" class="note">NBA·NCAA 기록 확인 불가</td></tr></tbody>`;
+    $("bttbl").innerHTML = `<thead><tr><th>방법</th>${KEYS.map(s => `<th>${LAB[s] || s}</th>`).join("")}</tr></thead><tbody>` +
+      g.map(k => `<tr><td>회귀 · ${gl[k]}</td>${KEYS.map(s => `<td class="num">${Math.round(SM.RREG[k][s] * 100)}%</td>`).join("")}</tr>`).join("") +
+      `<tr><td>직전 시즌 그대로</td>${KEYS.map(s => `<td class="num">${Math.round(SM.RNAIVE[s] * 100)}%</td>`).join("")}</tr><tr><td><b>ESPN (가정)</b></td>${KEYS.map(s => `<td class="num"><b>${Math.round(SM.RESPN[s] * 100)}%</b></td>`).join("")}</tr></tbody>`;
+  }
+  const owners = [...new Set(PR.map(p => p.own.replace(" IR", "")))].filter(x => x !== "FA").sort();
+  $("pown").innerHTML += owners.map(o => `<option value="${o}">${o}</option>`).join("");
+  let psel = PR.find(p => p.n === "Giannis Antetokounmpo").id;
+  function renderProj() {
+    const q = $("pq").value.trim().toLowerCase(), ow = $("pown").value, so = $("psort").value;
+    let L = PR.filter(p => (!q || p.n.toLowerCase().includes(q) || p.t.toLowerCase() === q) && (!ow || p.own.replace(" IR", "") === ow));
+    const key = { vr: p => p.vr, r: p => p.r || 999, dpts: p => -Math.abs(p.f.PTS - p.e.PTS), w: p => -(p.w ?? -1) }[so];
+    L.sort((a, b) => key(a) - key(b));
+    $("ptbl").innerHTML = `<thead><tr><th>선수</th><th>소속</th><th class="r">ESPN</th><th>방법</th><th class="r">회귀 비중</th><th class="r">PTS ESPN→최종</th><th class="r">REB</th><th class="r">AST</th><th class="r">FG%</th></tr></thead><tbody>` +
+      L.map(p => { const d = p.f.PTS - p.e.PTS; return `<tr data-id="${p.id}" class="${p.id === psel ? "on" : ""}"><td>${esc(p.n)}${st(p)} <span class="note">${p.t}</span></td><td>${esc(p.own)}</td><td class="r num">${p.r || "—"}</td>
+        <td><span class="meth ${p.m === "ncaa+espn" ? "ncaa" : p.m === "espn" ? "espn" : ""}">${p.m === "reg+espn" ? "회귀 " + p.ns + "시즌" : p.m === "ncaa+espn" ? "NCAA+ESPN" : "ESPN"}</span></td>
+        <td class="r num">${p.w == null ? "—" : Math.round(p.w * 100) + "%"}</td><td class="r num">${p.e.PTS.toFixed(1)}→<b>${p.f.PTS.toFixed(1)}</b> <span class="${d >= 0 ? "up2" : "down2"}">${d >= 0 ? "+" : ""}${d.toFixed(1)}</span></td>
+        <td class="r num">${p.f.REB.toFixed(1)}</td><td class="r num">${p.f.AST.toFixed(1)}</td><td class="r num">${(p.f.FGM / p.f.FGA).toFixed(3).replace(/^0/, "")}</td></tr>`; }).join("") + `</tbody>`;
+    $("ptbl").querySelectorAll("tr[data-id]").forEach(tr => tr.addEventListener("click", () => { psel = +tr.dataset.id; renderProj(); }));
+    renderPDet();
+  }
+  function renderPDet() {
+    const p = P[psel], S = ["PTS", "REB", "AST", "STL", "BLK", "TPM", "TO", "FGM", "FGA", "FTM", "FTA", "MP"];
+    const row = (l, o) => o ? `<tr><td>${l}</td>${S.map(s => `<td class="r num">${o[s] == null ? "—" : (+o[s]).toFixed(1)}</td>`).join("")}</tr>` : "";
+    const hist = p.h && p.h.length ? `<div class="tbl"><table><thead><tr><th>시즌</th><th class="r">G</th><th class="r">MP</th><th class="r">PTS</th><th class="r">REB</th><th class="r">AST</th><th class="r">STL</th><th class="r">BLK</th><th class="r">3PM</th></tr></thead><tbody>${p.h.map(h => `<tr><td>${h[0] - 1}-${String(h[0]).slice(2)}</td>${h.slice(1).map(x => `<td class="r num">${x}</td>`).join("")}</tr>`).join("")}</tbody></table></div>` : "";
+    const nc = p.nc ? `<p class="note">NCAA 2025-26 (${esc(p.nc.school)}): ${p.nc.raw.PTS}점 ${p.nc.raw.REB}리바 ${p.nc.raw.AST}어시 ${p.nc.raw.STL ?? "—"}스틸 ${p.nc.raw.BLK ?? "—"}블록, FG ${p.nc.raw.FGp ?? "—"} · FT ${p.nc.raw.FTp ?? "—"} → NBA 환산 ${p.nc.nba.PTS}점 ${p.nc.nba.REB}리바 ${p.nc.nba.AST}어시 (출처: ${esc(p.nc.src)})</p>` : "";
+    $("pdet").innerHTML = `<h2 style="color:var(--ink)">${esc(p.n)} <span class="note">${p.t} · ${p.el} · ${esc(p.own)} · ESPN #${p.r || "—"} · 모델 가치 ${p.vr}위</span></h2>
+      <div class="tbl"><table><thead><tr><th>단계</th>${S.map(s => `<th class="r">${LAB[s] || s}</th>`).join("")}</tr></thead><tbody>${row("ESPN", p.e)}${row("회귀 (" + p.ns + "시즌)", p.rg)}${row("결합", p.b)}${p.a ? row("실제 (" + p.a.G + "경기)", p.a) : ""}<tr style="font-weight:700">${row("최종", p.f).slice(4)}</tbody></table></div>
+      <p class="note">${p.wAll ? "회귀 비중: " + ["PTS", "REB", "AST", "STL", "BLK", "TPM"].map(s => `${LAB[s]} ${Math.round(p.wAll[s] * 100)}%`).join(" · ") : p.m === "ncaa+espn" ? "신인: NCAA 환산 30% + ESPN 70%" : "과거 기록 없음: ESPN 값 사용"}${p.a ? ` · 실제 기록 ${Math.round(D.summary.WACT * 100)}% 반영` : " · 이번 시즌 실제 기록 미반영(미출전 또는 자료 없음)"} · GP ${Math.round(p.gp)} · DD ${p.dd.toFixed(2)} · 팀 승수 ${p.tw}</p>${nc}${hist}`;
+  }
+  ["pq", "pown", "psort"].forEach(id => $(id).addEventListener("input", renderProj));
+
+  $("team-sel").innerHTML = order.map(i => `<option value="${i}">${esc(TM[i].name)}${TM[i].me ? " (내 팀)" : ""}</option>`).join("");
+  $("team-sel").addEventListener("change", e => { sel = +e.target.value; store.set("l10v2-team", sel); rdOpp = null; renderPower(); renderTeam(); renderNow(); });
+  $("foot").innerHTML = D.foot.map(x => `<span>${x}</span>`).join("");
+
+  // ---------- radar (SVG, shadcn Radar chart styling)
+  function radarSVG(series, o) {
+    const S = o.size, cx = S / 2, cy = S / 2, R = S / 2 - o.pad, n = CATS.length;
+    const ang = k => -Math.PI / 2 + 2 * Math.PI * k / n, pt = (k, r) => [cx + r * Math.cos(ang(k)), cy + r * Math.sin(ang(k))];
+    const poly = (f) => CATS.map((c, k) => pt(k, R * Math.max(0, Math.min(1, f(k)))).map(v => v.toFixed(1)).join(",")).join(" ");
+    let g = "";
+    [0.25, 0.5, 0.75, 1].forEach(l => { g += `<polygon points="${poly(() => l)}" fill="none" stroke="var(--line)"${l === 0.5 ? ' stroke-dasharray="4 4" stroke-width="1.2" style="stroke:var(--muted);stroke-opacity:.55"' : ""}/>`; });
+    CATS.forEach((c, k) => { const [x, y] = pt(k, R); g += `<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="var(--line)"/>`; });
+    g += `<g class="rs" style="transform-origin:${cx}px ${cy}px;transform-box:view-box">`;
+    series.forEach(s => { g += `<polygon points="${poly(k => s.v[k])}" style="fill:${s.color};fill-opacity:${s.fo};stroke:${s.color};stroke-width:${s.sw || 1.5}${s.dash ? ";stroke-dasharray:5 4" : ""}" stroke-linejoin="round"/>`;
+      if (s.dots) CATS.forEach((c, k) => { const [x, y] = pt(k, R * Math.max(0, Math.min(1, s.v[k]))); g += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${o.mini ? 2.2 : 3.6}" style="fill:${s.color}"/>`; }); });
+    g += `</g>`;
+    CATS.forEach((c, k) => { const [x, y] = pt(k, R + (o.mini ? 11 : 16)), co = Math.cos(ang(k)), si = Math.sin(ang(k));
+      const an = co > 0.3 ? "start" : co < -0.3 ? "end" : "middle", dy = si > 0.5 ? "0.9em" : si < -0.5 ? "-0.15em" : "0.35em";
+      g += `<text class="rl${o.bold && o.bold.includes(c) ? " b" : ""}" x="${x.toFixed(1)}" y="${y.toFixed(1)}" text-anchor="${an}" dy="${dy}">${LAB[c]}</text>`; });
+    if (o.hit) CATS.forEach((c, k) => { const [x, y] = pt(k, R * 0.82); g += `<circle class="hit" data-k="${k}" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(R * 0.26).toFixed(1)}" fill="transparent"/>`; });
+    const m = o.mini ? 26 : 44;
+    return `<svg viewBox="${-m} ${-m / 2} ${S + 2 * m} ${S + m}" role="img" aria-label="${esc(o.label || "")}">${g}</svg>`;
+  }
+  const perOf = t => CATS.map(c => t.profile.per[c]);
+  const CHEV = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg>';
+  const CHECK = '<svg class="ck" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>';
+  const SRCH = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>';
+  function renderInj() {
+    const L = D.injury || []; $("inj-sub").textContent = D.injuryAsOf ? `ESPN 부상 리포트 ${D.injuryAsOf}` : "";
+    $("inj").innerHTML = `<thead><tr><th>팀</th><th>선수</th><th>상태</th><th>부상</th><th class="r">복귀 예정</th><th class="r">결장(2주차 이후)</th><th>근거</th></tr></thead><tbody>` +
+      L.map(x => `<tr class="${x.me ? "me" : ""}"><td>${esc(x.team)}</td><td><b>${esc(x.n)}</b>${x.ir ? ' <span class="chip mid">IR</span>' : ""}</td><td>${esc(x.status || "")}</td><td>${esc(x.injury || "")}</td><td class="r num"><b>${x.ret ? x.ret.slice(5).replace("-", "/") : "—"}</b></td><td class="r num">${x.miss}경기</td><td class="note" title="${esc(x.note || "")}">${esc(x.basis)}${x.espn && x.espn !== x.ret ? ` (ESPN ${x.espn.slice(5).replace("-", "/")})` : ""}</td></tr>`).join("") + `</tbody>`;
+  }
+  $("ver-sel").value = VER; $("ver-sel").addEventListener("change", e => { const v = e.target.value; try { localStorage.setItem("l10-ver", v); } catch (x) {} location.hash = "#v" + v; location.reload(); });
+  (function renderCoef() { const V = D2.summary.V2; if (!V) return; const K = ["PTS", "REB", "AST", "TPM", "STL", "BLK", "TO", "FGA", "FTA"], L2 = { TPM: "3PM" };
+    $("v2coef").innerHTML = `<thead><tr><th>카테고리</th>${[0, 1, 2, 3, 4].map(b => `<th>${b ? b + (b === 4 ? "경기+" : "경기") : "출전 없음"}<br><span class="note">b0 / b1(ESPN) / b2(실제) · R²</span></th>`).join("")}</tr></thead><tbody>` +
+      K.map(k => `<tr><td>${L2[k] || k}</td>${[0, 1, 2, 3, 4].map(b => { const c = V.coef[k + "|" + b]; return c ? `<td class="num">${c.b0.toFixed(2)} / ${c.b1.toFixed(2)} / ${c.b2.toFixed(2)} · ${c.r2.toFixed(2)}<br><span class="note">n=${c.n}</span></td>` : "<td>—</td>"; }).join("")}</tr>`).join("") + `</tbody>`;
+    $("v2note").textContent = `v2 학습 표본: Basketball Reference 경기 로그 ${V.players}개 선수-시즌(2021~2026). 개막 후 ${V.days}일(2027 = 10/20~${V.cutLabel || ""}) 기준. b2가 클수록 시즌 초 실제 기록을 많이 믿는다는 뜻입니다. 표본이 없는 구간(현재 6일 기준 4경기+)은 바로 아래 구간 계수를 씁니다. v2에서도 Ajay Mitchell 승계·연속 경기 규칙·하루 10명 제한·주 2회 교체 가정은 v1과 같습니다.`; })();
+  // ---------- acquisition strategy
+  let stSel = 0;
+  function renderStream() {
+    const V = D.streamPlans || []; if (!V.length) return; const S0 = D.streamBase;
+    $("st-sub").textContent = `${D.streamMeta || ""}`;
+    $("st-cmp").innerHTML = `<thead><tr><th>운영안</th><th class="r">교체(다음 주~22주)</th><th class="r">누적(한도 70)</th><th class="r">예상 성적</th><th class="r">PTS 승률</th><th class="r">AST 승률</th><th class="r">4강</th><th class="r">정규 1위</th><th class="r">우승</th></tr></thead><tbody>` +
+      `<tr><td class="note">교체 없음(현 로스터 고정)</td><td class="r num">0</td><td class="r num">${D.acqUsed}</td><td class="r num">${S0.W.toFixed(0)}–${S0.L.toFixed(0)}–${S0.T.toFixed(0)}</td><td></td><td></td><td class="r num">${pct(S0.p4)}</td><td class="r num">${pct(S0.p1)}</td><td class="r num">${pct(S0.champ, 1)}</td></tr>` +
+      V.map((v, k) => `<tr data-k="${k}" class="${k === stSel ? "me" : ""}" style="cursor:pointer"><td><b>${esc(v.label)}</b>${v.rec ? ' <span class="chip good">권장</span>' : ""}</td><td class="r num">${v.sum.used}</td><td class="r num">${D.acqUsed + v.sum.used}</td><td class="r num">${v.sum.plan.W.toFixed(0)}–${v.sum.plan.L.toFixed(0)}–${v.sum.plan.T.toFixed(0)}</td><td class="r num">${v.sum.catWin ? pct(v.sum.catWin.PTS) : "—"}</td><td class="r num">${v.sum.catWin ? pct(v.sum.catWin.AST) : "—"}</td><td class="r num"><b>${pct(v.sum.plan.p4)}</b></td><td class="r num">${pct(v.sum.plan.p1)}</td><td class="r num">${pct(v.sum.plan.champ, 1)}</td></tr>`).join("") + `</tbody>`;
+    $("st-note").textContent = D.streamNote || "";
+    $("st-cmp").querySelectorAll("tr[data-k]").forEach(tr => tr.addEventListener("click", () => { stSel = +tr.dataset.k; renderStream(); }));
+    $("st-sel").innerHTML = V.map((v, k) => `<option value="${k}"${k === stSel ? " selected" : ""}>${esc(v.label)}</option>`).join("");
+    weekChart("st-weeks", V[stSel]);
+    const L = V[stSel].log; let cum = D.acqUsed;
+    $("st-title").textContent = `주차별 교체 계획 · ${V[stSel].label}`;
+    $("st-plan").innerHTML = `<thead><tr><th>주차</th><th>상대</th><th>교체 (방출 → 영입, 그 주 경기 수)</th><th class="r">교체</th><th class="r">누적</th><th class="r">기대 카테고리</th><th class="r">매치업 승리</th></tr></thead><tbody>` +
+      L.map(x => { cum += x.nMoves; const mv = x.moves.map(m => `${esc(m.drop)} → <b>${esc(m.add)}</b> <span class="note">${m.g}g</span>`); if (x.forced) mv.unshift(`<span class="note">Kawhi 복귀(11/23) → ${esc(x.forced)} 방출 · 교체 미소진</span>`); if (x.now) { mv.unshift(`<span class="note">${x.moves.length ? "이번 주 권장 교체(남은 경기 기준)" : "이번 주: 남은 경기 기준 교체 효과 미미 → 교체 없음"}</span>`); } if (x.joint) mv.push(`<span class="note">2주 공동 최적화 · 집중: ${CATS.filter(c => x.per[c] - x.perBefore[c] >= 0.08).map(c => LAB[c]).join("·") || "—"} / 포기: ${CATS.filter(c => x.per[c] < 0.2).map(c => LAB[c]).join("·") || "—"}</span>`);
+        return `<tr><td class="num">${x.week}주 <span class="note">${x.start.slice(5).replace("-", "/")}</span></td><td>${esc(x.opp)}</td><td>${mv.join("<br>") || '<span class="note">유지</span>'}</td><td class="r num">${x.nMoves}</td><td class="r num">${cum}</td><td class="r num">${x.before.toFixed(1)} → <b>${x.after.toFixed(1)}</b></td><td class="r num">${pct(x.winBefore)} → <b>${pct(x.winAfter)}</b></td></tr>`; }).join("") + `</tbody>`;
+  }
+  $("st-sel").addEventListener("change", e => { stSel = +e.target.value; renderStream(); });
+  function renderKS() { const K = D.kawhiSens || []; if (!K.length) { $("ks-panel").hidden = true; return; }
+    $("ks").innerHTML = `<thead><tr><th>Kawhi 복귀</th><th class="r">결장 경기</th><th class="r">예상 성적</th><th class="r">4강</th><th class="r">정규 1위</th><th class="r">우승</th></tr></thead><tbody>` +
+      K.map(k => `<tr class="${k.base ? "me" : ""}"><td>${esc(k.label)}${k.base ? ' <span class="chip mid">기준</span>' : ""}</td><td class="r num">${k.miss}</td><td class="r num">${k.W.toFixed(0)}–${k.L.toFixed(0)}–${k.T.toFixed(0)}</td><td class="r num"><b>${pct(k.p4)}</b></td><td class="r num">${pct(k.p1)}</td><td class="r num">${pct(k.champ, 1)}</td></tr>`).join("") + `</tbody>`;
+    $("ks-note").textContent = D.kawhiNote || ""; }
+  function renderLineup() {
+    const LW = D.lineupWeek; if (!LW || !LW.days.length) { $("lu-panel").hidden = true; return; }
+    $("lu-h").textContent = `추천 라인업 · ${LW.week}주차 vs ${LW.opp}`;
+    $("lu-sub").textContent = LW.rosterMode === "plan" ? "권장 교체 반영 로스터 기준" : "현재 로스터 기준";
+    const wd = ["일", "월", "화", "수", "목", "금", "토"];
+    $("lu").innerHTML = `<thead><tr><th>날짜</th><th class="r">출전 가능</th><th>선발 10명 (슬롯)</th><th>벤치(제외)</th><th>결장</th></tr></thead><tbody>` +
+      LW.days.map(x => { const dd = new Date(x.date + "T00:00:00Z"); return `<tr class="${x.n > 10 ? "me" : ""}"><td class="num">${x.date.slice(5).replace("-", "/")} (${wd[dd.getUTCDay()]})</td><td class="r num">${x.n}명</td>
+        <td style="white-space:normal">${x.start.map(s => `<span class="note">${s.slot}</span> ${esc(s.name)}`).join(" · ") || '<span class="note">경기 없음</span>'}</td>
+        <td style="white-space:normal">${x.bench.length ? x.bench.map(b => `<b>${esc(b.name)}</b>`).join(", ") : '<span class="note">—</span>'}</td><td>${x.out.map(esc).join(", ") || '<span class="note">—</span>'}</td></tr>`; }).join("") + `</tbody>`;
+    $("lu-note").textContent = `10명 초과일(강조)은 매치업 기여도 순으로 선발. 기여도 = 이번 주 상대와 박빙인 카테고리일수록 가중(포기 카테고리는 낮게). 우선순위: ${LW.rank.map(r => r.name.split(" ").slice(-1)[0]).join(" > ")}. 출전 직전 부상 소식(DTD)은 ESPN에서 확인 후 조정.`;
+  }
+  function renderFA() {
+    const F = D.faWeek; if (!F || !F.list.length) { $("fa-panel").hidden = true; return; }
+    $("fa-h").textContent = `FA 영입 후보 · ${F.week}주차 vs ${F.opp}`;
+    $("fa-sub").textContent = `현재 로스터 기대 카테고리 ${F.base.e.toFixed(2)}개 · 승리 ${pct(F.base.win)}`;
+    $("faw").innerHTML = `<thead><tr><th>영입</th><th>NBA</th><th class="r">경기</th><th>방출</th><th class="r">기대 카테고리</th><th class="r">승리 확률</th><th>주요 변화(%p)</th></tr></thead><tbody>` +
+      F.list.map(x => { const m = x.moves[0], ch = Object.entries(x.dPer).filter(([, v]) => Math.abs(v) >= 0.04).sort((a, b) => Math.abs(b[1]) - Math.abs(a[1])).slice(0, 4);
+        return `<tr><td><b>${esc(m.add)}</b></td><td>${m.team}</td><td class="r num">${m.g}</td><td>${esc(m.drop)}</td><td class="r num">${x.e.toFixed(2)} <span class="note">${x.dE >= 0 ? "+" : ""}${x.dE.toFixed(2)}</span></td><td class="r num">${pct(x.win)} <span class="note">${x.dW >= 0 ? "+" : ""}${(x.dW * 100).toFixed(0)}</span></td>
+          <td style="white-space:normal">${ch.map(([c, v]) => `<span class="${v > 0 ? "up2" : "down2"}">${LAB[c]} ${v > 0 ? "+" : ""}${(v * 100).toFixed(0)}</span>`).join(" · ") || '<span class="note">—</span>'}</td></tr>`; }).join("") + `</tbody>`;
+  }
+  function countUp(root) {
+    if (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    root.querySelectorAll("[data-count]").forEach(el => { const end = +el.dataset.count, dec = +(el.dataset.dec || 0), suf = el.dataset.suf || "", t0 = performance.now();
+      const step = now => { const k = Math.min(1, (now - t0) / 700), e = 1 - Math.pow(1 - k, 3); el.textContent = (end * e).toFixed(dec) + suf; if (k < 1) requestAnimationFrame(step); };
+      el.textContent = (0).toFixed(dec) + suf; requestAnimationFrame(step); });
+  }
+  function weekChart(id, SP) {
+    const el = $(id); if (!el || !SP) return;
+    const L = SP.log, W = 1000, H = 250, pl = 30, pr = 6, pt = 14, pb = 24, iw = W - pl - pr, ih = H - pt - pb, bw = iw / L.length, y = v => pt + ih * (1 - v);
+    let g = `<g>`;
+    [0, 0.5, 1].forEach(v => { g += `<line class="gl" x1="${pl}" x2="${W - pr}" y1="${y(v)}" y2="${y(v)}"${v === 0.5 ? ' stroke-dasharray="4 4"' : ""}/><text x="${pl - 6}" y="${y(v) + 4}" text-anchor="end">${v * 100}%</text>`; });
+    g += `</g><g class="bars">`;
+    L.forEach((x, k) => { const x0 = pl + k * bw + bw * 0.14, w = bw * 0.34, d = (k * 0.025).toFixed(3);
+      g += `<rect class="b0" x="${x0.toFixed(1)}" y="${y(x.winBefore).toFixed(1)}" width="${w.toFixed(1)}" height="${(ih * x.winBefore).toFixed(1)}" rx="2" style="animation-delay:${d}s"><title>${x.week}주 vs ${x.opp} · 교체 전 ${pct(x.winBefore)}</title></rect>`;
+      g += `<rect class="b1" x="${(x0 + w + bw * 0.04).toFixed(1)}" y="${y(x.winAfter).toFixed(1)}" width="${w.toFixed(1)}" height="${(ih * x.winAfter).toFixed(1)}" rx="2" style="animation-delay:${d}s"><title>${x.week}주 vs ${x.opp} · 권장 교체 후 ${pct(x.winAfter)} (교체 ${x.nMoves}회)</title></rect>`; });
+    g += `</g><g>`;
+    L.forEach((x, k) => { if (L.length > 12 && k % 2) return; g += `<text x="${(pl + k * bw + bw / 2).toFixed(1)}" y="${H - 6}" text-anchor="middle"${x.now ? ' class="lbl"' : ""}>${x.week}주</text>`; });
+    g += `</g>`;
+    el.innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="주차별 매치업 승리 확률">${g}</svg>`;
+  }
+  // ---------- 현황 (8-team v2.2 layout): KPI cards → category duel + playoff race → radar → roster
+  const STD = D.standings || {};
+  const myMatch = i => D.week1.find(x => x.a === i || x.b === i);
+  const catP = (x, isA) => isA ? x.pw + x.pt / 2 : 1 - x.pw - x.pt / 2;
+  const recOf = t => STD[t.abbr] || [0, 0, 0];
+  const pctRec = r => (r[0] + r[2] / 2) / Math.max(1, r[0] + r[1] + r[2]);
+  function ring(p) { const r = 24, c = 2 * Math.PI * r; return `<svg class="ring" viewBox="0 0 56 56" style="--c:${c.toFixed(1)};--off:${(c * (1 - p)).toFixed(1)}" aria-hidden="true"><circle class="trk" cx="28" cy="28" r="${r}"/><circle class="val" cx="28" cy="28" r="${r}"/></svg>`; }
+  function renderKpis() {
+    const t = TM[sel], m = myMatch(sel), isA = m && m.a === sel, o = m ? TM[isA ? m.b : m.a] : null, SP = (D.streamPlans || [])[0], isMe = sel === ME, wk = D.w1meta;
+    let w = 0, tt = 0, l = 0; if (m) m.cats.forEach(x => { const pw = isA ? x.pw : 1 - x.pw - x.pt; w += pw; tt += x.pt; l += 1 - pw - x.pt; });
+    const pwin = m ? (isA ? m.pA : m.pB) : 0, r = recOf(t), tot = Math.max(1, r[0] + r[1] + r[2]);
+    const rkNow = 1 + TM.filter(u => u !== t && pctRec(recOf(u)) > pctRec(r)).length;
+    const Wp = isMe && SP ? SP.sum.plan.W : t.season.W, prRank = 1 + TM.filter(u => u !== t && u.season.W > Wp).length;
+    const p4 = isMe && SP ? SP.sum.plan.p4 : t.season.p4, ch = isMe && SP ? SP.sum.plan.champ : t.season.champ;
+    $("k-now").innerHTML =
+      `<div class="kpi"><span class="l">이번 매치업 · ${D.period}주차 <span class="badge">${wk.next ? "시작 전" : "진행 중"}</span></span><span class="v">vs ${esc(o ? o.name : "—")}</span><span class="d">${esc(wk.remaining || "")}${wk.next ? "" : ` · 현재 ${isA ? m.rec[0] : m.rec[1]}`}</span></div>` +
+      `<div class="kpi"><span class="l">이번 주 예상 카테고리 W-L-T <span class="badge ${pwin >= 0.5 ? "up" : "down"}">${pct(pwin)}</span></span><span class="v num">${w.toFixed(1)}–${l.toFixed(1)}–${tt.toFixed(1)}</span>
+        <div class="wltbar"><span class="w" style="width:${(w / 11 * 100).toFixed(1)}%"></span><span class="t" style="width:${(tt / 11 * 100).toFixed(1)}%"></span><span class="lo" style="width:${(l / 11 * 100).toFixed(1)}%"></span></div>
+        <span class="d">매치업 승리 확률 ${pct(pwin)}${isMe && wk.next && m.pA0 != null ? ` · 권장 교체 전 ${pct(isA ? m.pA0 : m.pB0)}` : ""}</span></div>` +
+      `<div class="kpi"><span class="l">시즌 기록 (카테고리) <span class="badge">${prRank}위 예상</span></span><span class="v num">${r[0]}-${r[1]}-${r[2]}</span>
+        <div class="wltbar"><span class="w" style="width:${(r[0] / tot * 100).toFixed(1)}%"></span><span class="t" style="width:${(r[2] / tot * 100).toFixed(1)}%"></span><span class="lo" style="width:${(r[1] / tot * 100).toFixed(1)}%"></span></div>
+        <span class="d">현재 ${rkNow}위 · 최종 예상 ${Wp.toFixed(0)}승${isMe && SP ? "(권장 교체안)" : ""} · 기대 승률 ${pct(t.ec, 1)}</span></div>` +
+      `<div class="kpi has-ring"><span class="l">4강 확률${isMe && SP ? " · 권장 교체안" : ""}</span><span class="v num" data-count="${(p4 * 100).toFixed(1)}" data-dec="1" data-suf="%">${pct(p4, 1)}</span><span class="d">우승 ${pct(ch, 1)}${isMe && SP ? ` · 현재 로스터 ${pct(t.season.p4)}` : ` · 정규 1위 ${pct(t.season.p1)}`}</span>${ring(p4)}</div>`;
+    countUp($("k-now"));
+  }
+  function renderDuel() {
+    const m = myMatch(sel); if (!m) return; const isA = m.a === sel, A = TM[sel], B = TM[isA ? m.b : m.a]; let up = 0, ev = 0, dn = 0;
+    $("duel-t").textContent = `${D.period}주차 매치업 · vs ${B.name}`;
+    $("duel").innerHTML = `<div class="duel-h"><span>카테고리</span><span style="text-align:right">${esc(A.abbr)}</span><span class="mid"><span class="side">← 열세</span><span>50%</span><span class="side">우세 →</span></span><span>${esc(B.abbr)}</span><span style="text-align:right">승률</span></div>` +
+      m.cats.map((x, k) => { const p = catP(x, isA), d = p - 0.5, cls = p >= 0.6 ? "up" : p <= 0.4 ? "down" : "", lab = p >= 0.6 ? "우세" : p <= 0.4 ? "열세" : "박빙";
+        if (cls === "up") up++; else if (cls === "down") dn++; else ev++;
+        return `<div class="duel-r"><span class="c">${LAB[x.c]}${x.c === "TO" ? " ↓" : ""}</span><span class="a">${fmt(x.c, isA ? x.finA : x.finB)}</span><div class="dtrack"><i class="${d >= 0 ? "pos" : "neg"}${Math.abs(d) < 0.1 ? " even" : ""}" style="--i:${k};width:${(Math.abs(d) * 100).toFixed(1)}%"></i></div><span class="b">${fmt(x.c, isA ? x.finB : x.finA)}</span><span class="p"><span class="badge ${cls}">${lab} ${pct(p)}</span></span></div>`; }).join("");
+    $("duel-badges").innerHTML = `<span class="badge up">우세 ${up}</span><span class="badge">박빙 ${ev}</span><span class="badge down">열세 ${dn}</span>`;
+    $("duel-desc").textContent = `카테고리별 예상 승률 · 가운데 50% 기준으로 오른쪽이 우세${D.w1meta.next ? (sel === ME ? " · 권장 교체 반영 · 경기 시작 전" : " · 경기 시작 전") : ` · ${D.w1meta.through} 확정분 + 남은 경기 예측`}`;
+  }
+  function renderRace() {
+    const SP = (D.streamPlans || [])[0], ord = TM.map((t, i) => i).sort((a, b) => TM[b].season.p4 - TM[a].season.p4);
+    $("race").innerHTML = ord.map((i, k) => { const t = TM[i], s = t.season;
+      return `<div class="race-r${i === sel ? " me" : ""}"><span class="n">${esc(t.name)}<br><small class="note">${recOf(t).join("-")} · 우승 ${pct(s.champ, 1)}</small></span><span class="t"><i style="--i:${k};width:${(s.p4 * 100).toFixed(1)}%"></i>${t.me && SP ? `<b style="width:${(SP.sum.plan.p4 * 100).toFixed(1)}%"></b>` : ""}</span><span class="v">${pct(s.p4, 1)}</span></div>`; }).join("");
+    $("race-key").innerHTML = `<span><i style="background:var(--s1)"></i>선택한 팀</span><span><i style="background:color-mix(in srgb, var(--muted) 45%, transparent)"></i>다른 팀</span>${SP ? `<span><i style="background:none;border-right:2px solid var(--ink);opacity:.5;border-radius:0"></i>${esc(TM[ME].abbr)} 권장 교체안 ${pct(SP.sum.plan.p4, 1)}</span>` : ""}`;
+  }
+  function renderRank() {
+    const ord = TM.map((t, i) => i).sort((a, b) => TM[b].season.W - TM[a].season.W);
+    $("rank").innerHTML = `<thead><tr><th>예상</th><th>팀</th><th class="r">기록</th><th class="r">기대 승률</th><th class="r">예상 W-L-T</th><th class="r">4강</th><th class="r">우승</th></tr></thead><tbody>` +
+      ord.map((i, k) => { const t = TM[i], s = t.season; return `<tr class="${i === sel ? "me" : ""}"><td>${k + 1}</td><td>${esc(t.name)}</td><td class="r">${recOf(t).join("-")}</td><td class="r">${pct(t.ec, 1)}</td><td class="r">${rec(s)}</td><td class="r">${pct(s.p4)}</td><td class="r">${pct(s.champ, 1)}</td></tr>`; }).join("") + `</tbody>`;
+  }
+  let rdOpp = null, rdMode = store.get("l10v5-rdmode") || "season", rdAvg = store.get("l10v5-rdavg") === "1";
+  function radar8(series, avg) {
+    const S = 360, cx = S / 2, cy = S / 2, R = 132, n = CATS.length, ang = k => -Math.PI / 2 + 2 * Math.PI * k / n, pt = (k, r) => [cx + r * Math.cos(ang(k)), cy + r * Math.sin(ang(k))];
+    const poly = f => CATS.map((c, k) => pt(k, R * Math.max(0, Math.min(1, f(k)))).map(v => v.toFixed(1)).join(",")).join(" ");
+    let g = "";
+    [0.2, 0.4, 0.6, 0.8, 1].forEach(l => g += `<polygon points="${poly(() => l)}" fill="none" stroke="var(--line)"/>`);
+    CATS.forEach((c, k) => { const [x, y] = pt(k, R); g += `<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="var(--line)"/>`; });
+    g += `<text x="${cx + 4}" y="${(cy - R * 0.5 + 3).toFixed(1)}" style="fill:var(--muted);font-size:9px">50</text><text x="${cx + 4}" y="${(cy - R + 3).toFixed(1)}" style="fill:var(--muted);font-size:9px">100</text>`;
+    if (avg) g += `<polygon points="${poly(() => 0.5)}" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-dasharray="4 4"/>`;
+    series.forEach(s => { g += `<polygon class="${s.cls}" points="${poly(k => s.v[k])}" style="fill:${s.color};fill-opacity:${s.fo};stroke:${s.color};stroke-width:2" stroke-linejoin="round"/>`; });
+    series.forEach(s => CATS.forEach((c, k) => { const [x, y] = pt(k, R * Math.max(0, Math.min(1, s.v[k]))); g += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="4" style="fill:${s.color}"><title>${LAB[c]} · ${esc(s.name)} ${pct(s.v[k])}</title></circle>`; }));
+    CATS.forEach((c, k) => { const [x, y] = pt(k, R + 18), co = Math.cos(ang(k)), si = Math.sin(ang(k));
+      g += `<text x="${x.toFixed(1)}" y="${y.toFixed(1)}" text-anchor="${co > 0.3 ? "start" : co < -0.3 ? "end" : "middle"}" dy="${si > 0.5 ? "0.9em" : si < -0.5 ? "-0.1em" : "0.35em"}" style="fill:var(--ink);font-size:12.5px;font-weight:600">${LAB[c]}${c === "TO" ? "↓" : ""}</text>`; });
+    return `<svg viewBox="-44 -26 ${S + 88} ${S + 52}" role="img" aria-label="카테고리 레이더">${g}</svg>`;
+  }
+  function renderRadar8() {
+    const A = TM[sel], m = myMatch(sel), PP = sel === ME ? (D.planProfiles || []) : [];
+    if (rdOpp == null || rdOpp === sel) rdOpp = m ? (m.a === sel ? m.b : m.a) : order.find(i => i !== sel);
+    $("rd-opp").innerHTML = order.filter(i => i !== sel).map(i => `<option value="${i}"${i === rdOpp ? " selected" : ""}>${esc(TM[i].name)}${m && (m.a === i || m.b === i) ? ` (${D.period}주차 상대)` : ""}</option>`).join("");
+    $("rd-mode").innerHTML = `<option value="season">잔여 시즌 평균 · 현재 로스터</option>` + PP.map(p => `<option value="${p.key}">${esc(p.short)} 실행 후${p.rec ? " (권장)" : ""}</option>`).join("");
+    if (rdMode !== "season" && !PP.find(p => p.key === rdMode)) rdMode = "season";
+    $("rd-mode").value = rdMode; $("rd-avg").checked = rdAvg;
+    const B = TM[rdOpp], plan = PP.find(p => p.key === rdMode);
+    const va = CATS.map(c => plan ? plan.per[c] : A.profile.per[c]), vb = CATS.map(c => B.profile.per[c]);
+    $("rd-chart").innerHTML = radar8([{ v: vb, color: "var(--s2)", fo: 0.22, cls: "op", name: B.name }, { v: va, color: "var(--s1)", fo: 0.42, cls: "me", name: A.name }], rdAvg);
+    $("rd-legend").innerHTML = `<span><i style="background:var(--s1)"></i>${esc(A.name)}${plan ? " · " + esc(plan.short) : ""}</span><span><i style="background:var(--s2)"></i>${esc(B.name)}</span>${rdAvg ? '<span><i class="dash"></i>리그 평균(50)</span>' : ""}`;
+    const h2h = CATS.map((c, k) => { const oa = va[k] / Math.max(1e-6, 1 - va[k]), ob = vb[k] / Math.max(1e-6, 1 - vb[k]); return oa / (oa + ob); });
+    const nWin = h2h.filter(p => p > 0.5).length, ex = h2h.reduce((s, p) => s + p, 0);
+    $("rd-sum").innerHTML = `<span class="badge">우위 카테고리 ${nWin}/11</span><span class="badge">맞대결 기대 ${ex.toFixed(1)}–${(11 - ex).toFixed(1)}</span>`;
+    $("rd-tbl").innerHTML = `<thead><tr><th>카테고리</th><th class="r">${esc(A.abbr)}</th><th class="r">${esc(B.abbr)}</th><th class="r">순위</th><th class="r">맞대결</th></tr></thead><tbody>` +
+      CATS.map((c, k) => `<tr><td>${LAB[c]}${c === "TO" ? " ↓" : ""}</td><td class="r">${plan ? pct(va[k]) : fmt(c, A.profile.avg[c])}</td><td class="r">${plan ? pct(vb[k]) : fmt(c, B.profile.avg[c])}</td><td class="r">${plan ? plan.rank[c] : A.profile.rank[c]}위 · ${B.profile.rank[c]}위</td><td class="r ${h2h[k] >= 0.55 ? "rd-win" : h2h[k] <= 0.45 ? "rd-lose" : ""}">${pct(h2h[k])}</td></tr>`).join("") + `</tbody>`;
+    $("rd-desc").textContent = `${plan ? `${plan.short} 실행 후 남은 주차` : "2~22주차 주간 평균(현재 로스터)"} · 축 = 9팀 상대 카테고리 승률(0~100, TO는 적을수록 바깥). 맞대결 = 두 팀 카테고리 승률로 추정한 1:1 승률.`;
+  }
+  $("rd-opp").addEventListener("change", e => { rdOpp = +e.target.value; renderRadar8(); });
+  $("rd-mode").addEventListener("change", e => { rdMode = e.target.value; store.set("l10v5-rdmode", rdMode); renderRadar8(); });
+  $("rd-avg").addEventListener("change", e => { rdAvg = e.target.checked; store.set("l10v5-rdavg", rdAvg ? "1" : "0"); renderRadar8(); });
+  function renderNow() { renderKpis(); renderDuel(); renderRace(); renderRank(); renderRadar8(); $("h1-team").textContent = sel === ME ? "Twindragons" : TM[sel].name; }
+  renderInj(); renderStream(); renderKS(); renderLineup(); renderFA();
+  renderPower(); renderTeam(); renderHeat(); renderWeek1(); renderMethod(); renderProj(); renderNow(); setView(view);
+})();
+</script>
