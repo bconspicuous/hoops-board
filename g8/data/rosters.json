@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-02T15:52+09:00",
+ "asOf": "2026-11-02T19:42+09:00",
  "leagueId": "751654965",
  "season": 2027,
  "teams": [
@@ -28,10 +28,10 @@
     "Yves Missi"
    ],
    "record": {
-    "wins": 5,
-    "losses": 6,
+    "wins": 11,
+    "losses": 11,
     "ties": 0,
-    "percentage": 0.45454545454545453
+    "percentage": 0.5
    },
    "acqByPeriod": {
     "1": 4,
@@ -64,10 +64,10 @@
     "Jalen Williams"
    ],
    "record": {
-    "wins": 4,
-    "losses": 7,
-    "ties": 0,
-    "percentage": 0.36363636363636365
+    "wins": 10,
+    "losses": 11,
+    "ties": 1,
+    "percentage": 0.4772727272727273
    },
    "acqByPeriod": {
     "1": 4,
@@ -92,16 +92,13 @@
     "Tyler Herro",
     "Rudy Gobert",
     "Norman Powell",
-    "Dennis Schroder",
-    "Andrew Nembhard"
+    "Miles Bridges",
+    "Collin Gillespie"
    ],
-   "ir": [
-    "Coby White",
-    "Fred VanVleet"
-   ],
+   "ir": [],
    "record": {
-    "wins": 7,
-    "losses": 4,
+    "wins": 14,
+    "losses": 8,
     "ties": 0,
     "percentage": 0.6363636363636364
    },
@@ -122,7 +119,6 @@
     "Scottie Barnes",
     "Jalen Brunson",
     "Trae Young",
-    "Chet Holmgren",
     "Desmond Bane",
     "Franz Wagner",
     "Dyson Daniels",
@@ -132,12 +128,14 @@
     "Grayson Allen",
     "Reed Sheppard"
    ],
-   "ir": [],
+   "ir": [
+    "Chet Holmgren"
+   ],
    "record": {
-    "wins": 6,
-    "losses": 5,
-    "ties": 0,
-    "percentage": 0.5454545454545454
+    "wins": 10,
+    "losses": 11,
+    "ties": 1,
+    "percentage": 0.4772727272727273
    },
    "acqByPeriod": {
     "2": 2
@@ -168,10 +166,10 @@
     "Ja Morant"
    ],
    "record": {
-    "wins": 6,
-    "losses": 5,
+    "wins": 13,
+    "losses": 9,
     "ties": 0,
-    "percentage": 0.5454545454545454
+    "percentage": 0.5909090909090909
    },
    "acqByPeriod": {
     "1": 6,
@@ -204,10 +202,10 @@
     "Kon Knueppel"
    ],
    "record": {
-    "wins": 4,
-    "losses": 6,
+    "wins": 8,
+    "losses": 13,
     "ties": 1,
-    "percentage": 0.4090909090909091
+    "percentage": 0.38636363636363635
    },
    "acqByPeriod": {
     "1": 6,
@@ -240,10 +238,10 @@
     "LeBron James"
    ],
    "record": {
-    "wins": 6,
-    "losses": 4,
+    "wins": 11,
+    "losses": 10,
     "ties": 1,
-    "percentage": 0.5909090909090909
+    "percentage": 0.5227272727272727
    },
    "acqByPeriod": {
     "2": 2
@@ -265,20 +263,20 @@
     "Jaden McDaniels",
     "Yaxel Lendeborg",
     "Paul Reed",
-    "Quentin Grimes",
     "Kyshawn George",
     "Ajay Mitchell",
-    "Davion Mitchell"
+    "Davion Mitchell",
+    "Kel'el Ware"
    ],
    "ir": [
     "Ivica Zubac",
     "Brandon Ingram"
    ],
    "record": {
-    "wins": 5,
-    "losses": 6,
+    "wins": 9,
+    "losses": 13,
     "ties": 0,
-    "percentage": 0.45454545454545453
+    "percentage": 0.4090909090909091
    },
    "acqByPeriod": {
     "1": 6,
@@ -332,8 +330,8 @@
    "Jose Alvarado",
    "Ben Simmons",
    "Isaiah Joe",
-   "Jock Landale",
    "Max Strus",
+   "Jock Landale",
    "Sergio de Larrea"
   ],
   "DTD": [
