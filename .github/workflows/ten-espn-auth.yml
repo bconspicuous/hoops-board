@@ -1,0 +1,21 @@
+name: ten · ESPN write-access check (read-only)
+# Manual. Verifies whether the stored ESPN cookies belong to an owner of our team. Makes no write requests; prints no secrets.
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Check ownership
+        env:
+          ESPN_LEAGUE_ID: "504060248"
+          ESPN_SEASON: "2027"
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          ESPN_SWID: ${{ secrets.ESPN_SWID }}
+        run: python ten/espn/auth_check.py
