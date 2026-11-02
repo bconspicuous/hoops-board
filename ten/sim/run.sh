@@ -31,6 +31,7 @@ grep -E "season|acquisitions" out/plan_rec.log
 ROSTERS=rosters_plan.json node nextweek.js | tail -1
 ROSTERS=rosters_plan.json node lineup.js | tail -8
 ROSTERS=rosters_plan.json node simdata.js simdata.json && PROJ=proj_v2.json ROSTERS=rosters_plan.json node simdata.js simdata_v2.json
+node simcal.js simdata.json league2_out.json; node simcal.js simdata_v2.json league2_out_v2.json
 # pending trade still open -> re-evaluate it (otherwise the last evaluation stays)
 python3 -I - <<'PY'
 import json, subprocess, os

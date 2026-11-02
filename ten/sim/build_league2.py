@@ -60,9 +60,11 @@ for t in RS['teams']:
 d['injury'].sort(key=lambda x:(not x['me'], x['ret']))
 d['returns']=RET; d['injuryAsOf']=json.load(open(os.path.join(W, '..', 'data', '')+'injuries.json'))['asOf'].replace('T',' ')[:16]
 d['wk3']=json.load(open(W+os.environ.get('WK3','wk3add_out.json')))
-_SP=[('rec','상위 10명 고정 · 주 최대 3회 · 다음 2주 공동 최적화',True),('c2','상위 10명 고정 · 주 최대 2회',False),('free','참고: 방출 제한 없음 · 주 최대 3회',False)]
-_WK=json.load(open(W+'wk_now.json')); _b=(_WK['singles'] or [None])[0]
-_nm=_b if _b and _WK['remDays']>=2 and (_b['win']-_WK['base']['win']>=0.05 or _b['e']-_WK['base']['e']>=0.2) else None
+_SP=[('rec','상위 10명 고정 · 주 2~3회 · 다음 2주 공동 최적화',True),('c2','상위 10명 고정 · 주 2회',False),('free','참고: 방출 제한 없음 · 주 2~3회',False)]
+_WK=json.load(open(W+'wk_now.json'))
+# at least 2 moves a week: best pair of moves for the rest of this week (single move if no pair helps)
+_b=next((x for x in (_WK.get('doubles') or [])[:1] + (_WK['singles'] or [])[:1] if x['e']>=_WK['base']['e']-0.01), None)
+_nm=_b if _b and _WK['remDays']>=2 else None
 _SCs=json.load(open(W+'nba_sched.json'))['starts']
 _nowrow={'week':_WK['week'],'start':_SCs[_WK['week']-1],'opp':_WK['opp'],'oppName':_WK['oppName'],'moves':[{'drop':m['drop'],'add':m['add'],'g':m['g'],'gDrop':m['gDrop']} for m in (_nm['moves'] if _nm else [])],
          'nMoves':len(_nm['moves']) if _nm else 0,'before':_WK['base']['e'],'after':(_nm or _WK['base'])['e'],'winBefore':_WK['base']['win'],'winAfter':(_nm or _WK['base'])['win'],'per':{},'perBefore':{},'now':True}
@@ -82,6 +84,7 @@ d['standings']={t['abbr']:[t['record'].get('wins',0),t['record'].get('losses',0)
 d['simData']=json.load(open(W+('simdata_v2.json' if os.environ.get('SUF')=='_v2' else 'simdata.json'))) if os.path.exists(W+'simdata.json') else None
 d['lineupWeek']=json.load(open(W+'lineup_week.json')) if os.path.exists(W+'lineup_week.json') else None
 d['streamBase']=json.load(open(W+'stream_plan_rec.json'))['sum']['base']
+d['core']=json.load(open(W+'user_plan.json')).get('core',[])
 _R=json.load(open(os.path.join(W, '..', 'data', '')+'rosters.json')); d['acqUsed']=next(t for t in _R['teams'] if t['abbr']=='GTD')['transactions']['acquisitions']
 d['streamMeta']=f"v1 프로젝션 기준 · 지금까지 교체 {d['acqUsed']}회 사용(ESPN) · 이번 주(잔여)~22주차 계획"
 _SPJ=json.load(open(W+'stream_plan_rec.json'))['sum']; _sn=lambda n: n if n in ('Kawhi Leonard',) else n.split(' ',1)[-1]

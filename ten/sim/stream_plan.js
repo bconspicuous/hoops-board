@@ -1,7 +1,7 @@
 // Weekly acquisition strategy for Garak Twindragons (no trades): each week pick 2-3 FA adds that maximise expected category wins vs that week's opponent
 const fs = require('fs'); const S = require('./sim2.js');
 const { P, BY, TEAMS, ME, POST, CATS, lineup, weekSums, catMS, pwlt, SCHED, NW, START, season } = S;
-const MAXW = +(process.env.MAXW || 3), T3 = +(process.env.T3 || 0.12), T12 = +(process.env.T12 || 0.03), FIRST = +(process.env.FIRST || (S.CURW + 1)), BUDGET = +(process.env.BUDGET || 65);
+const MAXW = +(process.env.MAXW || 3), MINW = +(process.env.MINW != null ? process.env.MINW : 2), T3 = +(process.env.T3 || 0.12), T12 = +(process.env.T12 || 0.03), FIRST = +(process.env.FIRST || (S.CURW + 1)), BUDGET = +(process.env.BUDGET || 65);
 const ok = r => r.filter(x => P[x].pos === 'C').length <= 4 && Object.keys(lineup(r).slots).length === 10;
 // pool: free agents (healthy or with a return date), added players assumed to play every game (no back-to-back rest)
 const own = new Set(POST.flat()); TEAMS.forEach(t => t.ir.forEach(x => own.add(x)));
@@ -65,7 +65,7 @@ for (let w = FIRST; w < NW; w++) {
     const drops = cur.filter(dropable).sort((a, b) => P[a].value - P[b].value).slice(0, 5); let best = null;
     for (const f of pool) { if (cur.includes(f.id) || usedFA.has(f.id) && !moves.length && false) continue; if (cur.includes(f.id)) continue;
       for (const d of drops) { const r2 = cur.map(x => x === d ? f.id : x); if (!ok(r2)) continue; const s = exp(r2, w, o), j = obj(r2, w); if (!best || j > best.j) best = { f: f.id, d, s, r2, j }; } }
-    const need = (moves.length + PRE3(w)) >= 2 ? T3 : T12;
+    const nm = moves.length + PRE3(w), need = nm < MINW ? -0.05 : nm >= 2 ? T3 : T12;   // MINW: assume at least MINW moves every week
     if (!best || best.j - nowObj < need) break;
     moves.push({ drop: P[best.d].name, add: P[best.f].name, g: gcount(best.f, w), gDrop: gcount(best.d, w), gain: best.s.e - now.e, gain2: best.j - nowObj }); cur = best.r2; now = best.s; nowObj = best.j; usedFA.add(best.f);
   }

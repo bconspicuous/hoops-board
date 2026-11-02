@@ -16,12 +16,12 @@ console.log('vs', TEAMS[O].abbr, 'base cats', base.e.toFixed(2), 'win', (base.wi
 console.log('drops remaining games', DROPS.map(d => P[d].name + ' ' + gl(d) + 'g').join(', '));
 const singles = [];
 for (const f of pool) for (const d of DROPS) { const r = cur.map(x => x === d ? f.id : x); const s = ev(r); singles.push({ f: f.id, d, ...s }); }
-singles.sort((a, b) => b.win - a.win);
+singles.sort((a, b) => (b.win + 0.03 * b.e) - (a.win + 0.03 * a.e));
 const fmt = x => `${x.moves.map(([d, f]) => P[d].name.split(' ').pop() + '→' + P[f].name + '(' + P[f].sc + ' ' + gl(f) + 'g)').join(' + ')} | cats ${x.e.toFixed(2)} win ${(x.win * 100).toFixed(1)} | ` + CATS.filter(c => Math.abs(x.per[c] - base.per[c]) >= 0.03).map(c => c + (x.per[c] > base.per[c] ? '+' : '') + ((x.per[c] - base.per[c]) * 100).toFixed(0)).join(' ');
 console.log('== singles'); singles.slice(0, 15).forEach(x => console.log(fmt({ ...x, moves: [[x.d, x.f]] })));
 const top = singles.slice(0, 40), dbl = [];
 for (let i = 0; i < top.length; i++) for (let j = i + 1; j < top.length; j++) { const a = top[i], b = top[j]; if (a.f === b.f || a.d === b.d) continue; const r = cur.map(x => x === a.d ? a.f : x === b.d ? b.f : x); dbl.push({ moves: [[a.d, a.f], [b.d, b.f]], ...ev(r) }); }
-dbl.sort((a, b) => b.win - a.win); console.log('== doubles'); dbl.slice(0, 10).forEach(x => console.log(fmt(x)));
+dbl.sort((a, b) => (b.win + 0.03 * b.e) - (a.win + 0.03 * a.e)); console.log('== doubles'); dbl.slice(0, 10).forEach(x => console.log(fmt(x)));
 const named = (process.env.NAMED || '').split(';').filter(Boolean);
 for (const nm of named) { const mv = nm.split(',').map(s => s.split('>').map(n => BY[n].id)); const r = cur.map(x => { const m = mv.find(([d]) => d === x); return m ? m[1] : x; }); console.log('NAMED', fmt({ moves: mv, ...ev(r) })); }
 

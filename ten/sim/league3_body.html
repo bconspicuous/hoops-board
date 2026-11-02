@@ -195,7 +195,7 @@ h1 .ver { font-size: 12px; font-weight: 500; color: var(--muted); letter-spacing
 /* this week's category duel */
 .duel { display: grid; gap: 4px; }
 .duel-h, .duel-r { display: grid; grid-template-columns: 54px 64px minmax(80px, 1fr) 64px 82px; align-items: center; gap: 10px; }
-.duel-h { font-size: 11.5px; color: var(--muted); font-weight: 500; padding-bottom: 4px; border-bottom: 1px solid var(--line); }
+.duel-h { white-space: nowrap; font-size: 11.5px; color: var(--muted); font-weight: 500; padding-bottom: 4px; border-bottom: 1px solid var(--line); }
 .duel-h .mid { display: flex; justify-content: space-between; }
 .duel-r { padding: 5px 0; border-radius: 8px; transition: background .2s; }
 .duel-r:hover { background: var(--soft2); }
@@ -215,7 +215,7 @@ h1 .ver { font-size: 12px; font-weight: 500; color: var(--muted); letter-spacing
 @media (max-width: 520px) { .duel-h, .duel-r { grid-template-columns: 40px 46px minmax(50px, 1fr) 46px 70px; gap: 6px; } .duel-r .a small, .duel-r .b small, .duel-h .mid .side { display: none; } .duel-h .mid { justify-content: center; } }
 /* title race */
 .race { display: grid; gap: 8px; }
-.race-r { display: grid; grid-template-columns: minmax(0, 120px) minmax(60px, 1fr) 52px; gap: 10px; align-items: center; font-size: 13px; }
+.race-r { display: grid; grid-template-columns: minmax(0, 150px) minmax(60px, 1fr) 52px; gap: 10px; align-items: center; font-size: 13px; }
 .race-r .n { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 1.3; }
 .race-r .n small { font-size: 11px; }
 .race-r.me .n { font-weight: 650; }
@@ -294,6 +294,7 @@ select:focus-visible, input[type="search"]:focus-visible { outline: none; border
 .btn { border: 1px solid var(--line); background: var(--card); border-radius: 8px; padding: 0 16px; height: 36px; font-weight: 550; font-size: 13.5px; box-shadow: var(--shadow); transition: background .15s, transform .1s; }
 .btn:hover { background: var(--soft); }
 .btn:active { transform: translateY(1px); }
+.btn.sm { height: 28px; padding: 0 10px; font-size: 12px; box-shadow: none; }
 .btn.primary { background: var(--primary); border-color: var(--primary); color: var(--primary-fg); padding: 0 22px; }
 .btn.primary:hover { background: color-mix(in srgb, var(--primary) 88%, var(--bg)); }
 .btn:disabled { opacity: .5; cursor: not-allowed; }
@@ -442,15 +443,17 @@ section:not([hidden]) .vchart .bars rect { transform-box: fill-box; transform-or
   <section id="view-fc" hidden><div class="stack">
     <div class="panel msgband" id="msg"></div>
     <div class="panel" id="sim-panel">
-      <div class="chead"><div><h2>Simul · 선수 교체 시뮬레이션</h2><p class="desc">방출·영입할 선수를 고르고 Simul을 누르면 남은 시즌을 이 페이지에서 바로 다시 계산합니다(시즌 4천 회). 대상 팀은 상단 팀 선택을 따릅니다.</p></div></div>
+      <div class="chead"><div><h2>Simul · 선수 교체 시뮬레이션</h2><p class="desc">기본 시나리오 = 현재 로스터 + 매주 일반 교체(우리 팀 주 2회 이상). 매일 선발 10명만 집계합니다. 방출·영입을 고르고 Simul을 누르면 남은 시즌을 다시 계산합니다(시즌 4천 회). 대상 팀은 상단 팀 선택을 따릅니다.</p></div></div>
       <div class="sim">
         <div style="display:grid;gap:12px;align-content:start">
           <div class="field"><span class="lab">대상 팀</span><b id="sim-team-name"></b></div>
           <div class="field"><span class="lab">방출할 선수</span><div class="list" id="sim-drop"></div></div>
           <div class="row">
             <div class="field" style="flex:1 1 140px"><label for="sim-week">적용 시작 주차</label><select id="sim-week"></select></div>
-            <label class="row" style="flex:1 1 220px;font-size:12.5px"><input type="checkbox" id="sim-pg" checked> 영입·이동 선수는 결장 할인 없이 출전 가능 경기 전부</label>
-          </div>
+            <div class="field" style="flex:1 1 140px"><label for="sim-n">주간 일반 교체</label><select id="sim-n"><option value="2">주 2회 (기본)</option><option value="3">주 3회</option></select></div>
+            </div>
+          <span class="note" id="sim-n-note"></span>
+          <label class="row" style="font-size:12.5px"><input type="checkbox" id="sim-pg" checked> 영입·이동 선수는 결장 할인 없이 출전 가능 경기 전부</label>
         </div>
         <div style="display:grid;gap:12px;align-content:start">
           <div class="field"><div class="addhead"><label for="sim-q" id="sim-add-label">영입할 선수 (FA)</label><label class="chk"><input type="checkbox" id="sim-other"> 다른 팀 선수 포함</label></div><input type="search" id="sim-q" placeholder="이름·NBA 팀·포지션 검색"></div>
@@ -463,8 +466,13 @@ section:not([hidden]) .vchart .bars rect { transform-box: fill-box; transform-or
     <div class="kpis" id="sim-kpis" hidden></div>
     <div class="grid2" id="sim-res" hidden>
       <div class="panel"><h2>시즌 예측 · Simul</h2><div class="tbl"><table id="sim-fc"></table></div><p class="note" id="sim-fc-note"></p></div>
-      <div class="panel"><h2 id="sim-wk-title">주별 매치업 승리 확률</h2><div class="legend"><span><span class="sw" style="background:color-mix(in srgb, var(--muted) 35%, transparent)"></span>교체 없음</span><span><span class="sw" style="background:var(--s1)"></span>Simul</span><span>점선 = 50%</span></div><div class="vchart" id="sim-wk"></div><div class="tbl"><table id="sim-cat"></table></div></div>
+      <div class="panel"><h2 id="sim-wk-title">주별 매치업 승리 확률</h2><div class="legend"><span id="sim-leg"><span class="sw" style="background:color-mix(in srgb, var(--muted) 35%, transparent)"></span><span id="sim-leg0">기본</span></span><span><span class="sw" style="background:var(--s1)"></span><span id="sim-leg1">Simul</span></span><span>점선 = 50%</span></div><div class="vchart" id="sim-wk"></div><div class="tbl"><table id="sim-cat"></table></div></div>
     </div>
+    <section class="panel" id="rec-panel">
+      <div class="phead"><h2>FA 영입 추천 · Simul 엔진</h2><span class="note">주 2회 이상 교체 기본 위에 FA 1명을 영구 영입할 때</span></div>
+      <div class="row"><button class="btn primary" id="rec-run" type="button">추천 계산</button><span class="msg" id="rec-msg">상위 FA 45명 × 방출 후보(가치 하위 4명, 상위 10명 고정 제외) 조합을 남은 시즌 매치업 승리로 평가합니다.</span></div>
+      <div id="rec-wrap" hidden><div class="tbl"><table id="rec"></table></div><p class="note">매치업 승리 Δ = 적용 주차~22주 기대 매치업 승리 수 변화(기본 시나리오 대비). 영입 선수가 일반 교체 대상보다 가치가 낮으면 그 주 교체로 다시 빠지므로 효과가 0에 가깝게 나옵니다. Simul 버튼 = 해당 조합으로 시즌 재계산.</p></div>
+    </section>
     <section class="panel">
       <div class="phead"><h2>선수 교체 전략</h2><span class="note" id="st-sub"></span></div>
       <div class="vchart" id="st-weeks"></div>
@@ -530,6 +538,7 @@ section:not([hidden]) .vchart .bars rect { transform-box: fill-box; transform-or
 
 <script type="application/json" id="data">%%DATA%%</script>
 <script type="application/json" id="data2">%%DATA2%%</script>
+<script>%%SIMENG%%</script>
 <script>
 (function () {
   const VER = (function () { if (location.hash === "#v2") return "2"; if (location.hash === "#v1") return "1"; try { return localStorage.getItem("l10-ver") || "1"; } catch (e) { return "1"; } })();
@@ -555,14 +564,14 @@ section:not([hidden]) .vchart .bars rect { transform-box: fill-box; transform-or
   const me = TM[ME], pA = D.plan, pB = D.planB, myRank = order.indexOf(ME) + 1, w1 = D.week1.find(x => x.a === ME || x.b === ME);
   const w1me = w1.a === ME ? w1.pA : w1.pB, w1op = w1.a === ME ? w1.pB : w1.pA, opp = TM[w1.a === ME ? w1.b : w1.a];
   $("msg").innerHTML = `<span class="k">결론</span>
-    <p>현재 로스터 기준 2~22주차 카테고리 승률 ${pct(me.ec, 1)}로 10팀 중 ${myRank}위, 4강 확률 ${pct(me.season.p4)}입니다. 강점은 ${CATS.filter(c => me.profile.per[c] >= 0.6).map(c => LAB[c]).join("·") || "없음"}, 약점은 ${CATS.filter(c => me.profile.per[c] <= 0.4).map(c => LAB[c]).join("·") || "없음"}입니다. Kawhi는 IR(ESPN 예상 복귀일)로 반영했습니다.</p>
-    <p>${D.w1meta.next ? `${D.period}주차 ${esc(opp.name)} 전 예상 승리 확률 ${pct(w1me)}(권장 교체 전 ${pct(w1.a === ME ? w1.pA0 : w1.pB0)}, 패배 ${pct(w1op)}). ` : `${D.period || 1}주차 ${esc(opp.name)} 전 현재 ${w1.a === ME ? w1.rec[0] : w1.rec[1]}, 승리 확률 ${pct(w1me)}(패배 ${pct(w1op)}, 나머지 무승부). `}${(D.streamPlans || []).length ? `권장 교체안 실행 시 4강 ${pct(D.streamPlans[0].sum.plan.p4)}(교체 없음 ${pct(D.streamBase.p4)}).` : ""}</p>`;
+    <p>현재 로스터 + 주 2회 일반 교체 기준 2~22주차 카테고리 승률 ${pct(me.ec, 1)}로 10팀 중 ${myRank}위, 4강 확률 ${pct(me.season.p4)}입니다. 강점은 ${CATS.filter(c => me.profile.per[c] >= 0.6).map(c => LAB[c]).join("·") || "없음"}, 약점은 ${CATS.filter(c => me.profile.per[c] <= 0.4).map(c => LAB[c]).join("·") || "없음"}입니다. Kawhi는 IR(ESPN 예상 복귀일)로 반영했습니다.</p>
+    <p>${D.w1meta.next ? `${D.period}주차 ${esc(opp.name)} 전 예상 승리 확률 ${pct(w1me)}(권장 교체 전 ${pct(w1.a === ME ? w1.pA0 : w1.pB0)}, 패배 ${pct(w1op)}). ` : `${D.period || 1}주차 ${esc(opp.name)} 전 현재 ${w1.a === ME ? w1.rec[0] : w1.rec[1]}, 승리 확률 ${pct(w1me)}(패배 ${pct(w1op)}, 나머지 무승부). `}${(D.streamPlans || []).length ? `권장 교체안(주 2~3회) 실행 시 4강 ${pct(D.streamPlans[0].sum.plan.p4)}, 주 2회 일반 교체 가정 시 ${pct(me.season.p4)}.` : ""}</p>`;
 
   // ---------- tabs
   const VIEWS = ["now", "fc", "proj"];
   let view = VIEWS.includes((location.hash || "").slice(1)) ? location.hash.slice(1) : (VIEWS.includes(store.get("l10v5-view")) ? store.get("l10v5-view") : "now");
   function moveInd() { const b = $("tab-" + view), ind = $("tab-ind"); if (!b || !ind) return; ind.style.width = b.offsetWidth + "px"; ind.style.transform = `translateX(${b.offsetLeft - 4}px)`; }
-  function setView(v) { view = v; store.set("l10v5-view", v); VIEWS.forEach(k => { $("view-" + k).hidden = k !== v; $("tab-" + k).setAttribute("aria-selected", String(k === v)); }); moveInd(); if (v === "now") countUp($("k-now")); }
+  function setView(v) { view = v; store.set("l10v5-view", v); VIEWS.forEach(k => { $("view-" + k).hidden = k !== v; $("tab-" + k).setAttribute("aria-selected", String(k === v)); }); moveInd(); if (typeof redrawPending === "function") redrawPending(); if (v === "now") countUp($("k-now")); }
   VIEWS.forEach(k => $("tab-" + k).addEventListener("click", () => setView(k)));
   window.addEventListener("resize", moveInd);
 
@@ -622,7 +631,7 @@ section:not([hidden]) .vchart .bars rect { transform-box: fill-box; transform-or
   function renderWeek1() {
     const [i, j] = [w1.a, w1.b], A = TM[i], B = TM[j];
     if (D.w1meta.next) {
-      const mv = (D.w1meta.moves || []).map(m => `${esc(m.drop)} → <b>${esc(m.add)}</b>`).join(", ") || "교체 없음";
+      const mv = (D.w1meta.moves || []).map(m => `${esc(m.drop)} → <b>${esc(m.add)}</b>`).join(", ") || "이월";
       $("w1-sub").textContent = `${A.abbr} vs ${B.abbr} · 경기 시작 전 · 우리 팀은 권장 교체 반영`;
       $("w1-me").innerHTML = `<thead><tr><th>카테고리</th><th class="r">${esc(A.abbr)} 예상</th><th class="r">${esc(B.abbr)} 예상</th><th class="r">${esc(A.abbr)} 승(교체 전)</th><th class="r">${esc(A.abbr)} 승(교체 후)</th><th class="r">무</th><th></th></tr></thead><tbody>` +
         w1.cats.map(x => { const d = x.pw - x.pw0; return `<tr><td>${LAB[x.c]}</td><td class="r num"><b>${fmt(x.c, x.finA)}</b></td><td class="r num"><b>${fmt(x.c, x.finB)}</b></td><td class="r num">${pct(x.pw0)}</td>
@@ -734,7 +743,6 @@ section:not([hidden]) .vchart .bars rect { transform-box: fill-box; transform-or
     const V = D.streamPlans || []; if (!V.length) return; const S0 = D.streamBase;
     $("st-sub").textContent = `${D.streamMeta || ""}`;
     $("st-cmp").innerHTML = `<thead><tr><th>운영안</th><th class="r">교체(다음 주~22주)</th><th class="r">누적(한도 70)</th><th class="r">예상 성적</th><th class="r">PTS 승률</th><th class="r">AST 승률</th><th class="r">4강</th><th class="r">정규 1위</th><th class="r">우승</th></tr></thead><tbody>` +
-      `<tr><td class="note">교체 없음(현 로스터 고정)</td><td class="r num">0</td><td class="r num">${D.acqUsed}</td><td class="r num">${S0.W.toFixed(0)}–${S0.L.toFixed(0)}–${S0.T.toFixed(0)}</td><td></td><td></td><td class="r num">${pct(S0.p4)}</td><td class="r num">${pct(S0.p1)}</td><td class="r num">${pct(S0.champ, 1)}</td></tr>` +
       V.map((v, k) => `<tr data-k="${k}" class="${k === stSel ? "me" : ""}" style="cursor:pointer"><td><b>${esc(v.label)}</b>${v.rec ? ' <span class="chip good">권장</span>' : ""}</td><td class="r num">${v.sum.used}</td><td class="r num">${D.acqUsed + v.sum.used}</td><td class="r num">${v.sum.plan.W.toFixed(0)}–${v.sum.plan.L.toFixed(0)}–${v.sum.plan.T.toFixed(0)}</td><td class="r num">${v.sum.catWin ? pct(v.sum.catWin.PTS) : "—"}</td><td class="r num">${v.sum.catWin ? pct(v.sum.catWin.AST) : "—"}</td><td class="r num"><b>${pct(v.sum.plan.p4)}</b></td><td class="r num">${pct(v.sum.plan.p1)}</td><td class="r num">${pct(v.sum.plan.champ, 1)}</td></tr>`).join("") + `</tbody>`;
     $("st-note").textContent = D.streamNote || "";
     $("st-cmp").querySelectorAll("tr[data-k]").forEach(tr => tr.addEventListener("click", () => { stSel = +tr.dataset.k; renderStream(); }));
@@ -743,7 +751,7 @@ section:not([hidden]) .vchart .bars rect { transform-box: fill-box; transform-or
     const L = V[stSel].log; let cum = D.acqUsed;
     $("st-title").textContent = `주차별 교체 계획 · ${V[stSel].label}`;
     $("st-plan").innerHTML = `<thead><tr><th>주차</th><th>상대</th><th>교체 (방출 → 영입, 그 주 경기 수)</th><th class="r">교체</th><th class="r">누적</th><th class="r">기대 카테고리</th><th class="r">매치업 승리</th></tr></thead><tbody>` +
-      L.map(x => { cum += x.nMoves; const mv = x.moves.map(m => `${esc(m.drop)} → <b>${esc(m.add)}</b> <span class="note">${m.g}g</span>`); if (x.forced) mv.unshift(`<span class="note">Kawhi 복귀(11/23) → ${esc(x.forced)} 방출 · 교체 미소진</span>`); if (x.now) { mv.unshift(`<span class="note">${x.moves.length ? "이번 주 권장 교체(남은 경기 기준)" : "이번 주: 남은 경기 기준 교체 효과 미미 → 교체 없음"}</span>`); } if (x.joint) mv.push(`<span class="note">2주 공동 최적화 · 집중: ${CATS.filter(c => x.per[c] - x.perBefore[c] >= 0.08).map(c => LAB[c]).join("·") || "—"} / 포기: ${CATS.filter(c => x.per[c] < 0.2).map(c => LAB[c]).join("·") || "—"}</span>`);
+      L.map(x => { cum += x.nMoves; const mv = x.moves.map(m => `${esc(m.drop)} → <b>${esc(m.add)}</b> <span class="note">${m.g}g</span>`); if (x.forced) mv.unshift(`<span class="note">Kawhi 복귀(11/23) → ${esc(x.forced)} 방출 · 교체 미소진</span>`); if (x.now) { mv.unshift(`<span class="note">${x.moves.length ? "이번 주 권장 교체(남은 경기 기준)" : "이번 주: 남은 일정이 짧아 교체를 다음 주로 이월"}</span>`); } if (x.joint) mv.push(`<span class="note">2주 공동 최적화 · 집중: ${CATS.filter(c => x.per[c] - x.perBefore[c] >= 0.08).map(c => LAB[c]).join("·") || "—"} / 포기: ${CATS.filter(c => x.per[c] < 0.2).map(c => LAB[c]).join("·") || "—"}</span>`);
         return `<tr><td class="num">${x.week}주 <span class="note">${x.start.slice(5).replace("-", "/")}</span></td><td>${esc(x.opp)}</td><td>${mv.join("<br>") || '<span class="note">유지</span>'}</td><td class="r num">${x.nMoves}</td><td class="r num">${cum}</td><td class="r num">${x.before.toFixed(1)} → <b>${x.after.toFixed(1)}</b></td><td class="r num">${pct(x.winBefore)} → <b>${pct(x.winAfter)}</b></td></tr>`; }).join("") + `</tbody>`;
   }
   $("st-sel").addEventListener("change", e => { stSel = +e.target.value; renderStream(); });
@@ -758,8 +766,8 @@ section:not([hidden]) .vchart .bars rect { transform-box: fill-box; transform-or
     const wd = ["일", "월", "화", "수", "목", "금", "토"];
     $("lu").innerHTML = `<thead><tr><th>날짜</th><th class="r">출전 가능</th><th>선발 10명 (슬롯)</th><th>벤치(제외)</th><th>결장</th></tr></thead><tbody>` +
       LW.days.map(x => { const dd = new Date(x.date + "T00:00:00Z"); return `<tr class="${x.n > 10 ? "me" : ""}"><td class="num">${x.date.slice(5).replace("-", "/")} (${wd[dd.getUTCDay()]})</td><td class="r num">${x.n}명</td>
-        <td style="white-space:normal">${x.start.map(s => `<span class="note">${s.slot}</span> ${esc(s.name)}`).join(" · ") || '<span class="note">경기 없음</span>'}</td>
-        <td style="white-space:normal">${x.bench.length ? x.bench.map(b => `<b>${esc(b.name)}</b>`).join(", ") : '<span class="note">—</span>'}</td><td>${x.out.map(esc).join(", ") || '<span class="note">—</span>'}</td></tr>`; }).join("") + `</tbody>`;
+        <td style="white-space:normal;min-width:300px">${x.start.map(s => `<span class="note">${s.slot}</span> ${esc(s.name)}`).join(" · ") || '<span class="note">경기 없음</span>'}</td>
+        <td style="white-space:normal;min-width:96px">${x.bench.length ? x.bench.map(b => `<b>${esc(b.name)}</b>`).join(", ") : '<span class="note">—</span>'}</td><td>${x.out.map(esc).join(", ") || '<span class="note">—</span>'}</td></tr>`; }).join("") + `</tbody>`;
     $("lu-note").textContent = `10명 초과일(강조)은 매치업 기여도 순으로 선발. 기여도 = 이번 주 상대와 박빙인 카테고리일수록 가중(포기 카테고리는 낮게). 우선순위: ${LW.rank.map(r => r.name.split(" ").slice(-1)[0]).join(" > ")}. 출전 직전 부상 소식(DTD)은 ESPN에서 확인 후 조정.`;
   }
   function renderFA() {
@@ -777,20 +785,28 @@ section:not([hidden]) .vchart .bars rect { transform-box: fill-box; transform-or
       const step = now => { const k = Math.min(1, (now - t0) / 700), e = 1 - Math.pow(1 - k, 3); el.textContent = (end * e).toFixed(dec) + suf; if (k < 1) requestAnimationFrame(step); };
       el.textContent = (0).toFixed(dec) + suf; requestAnimationFrame(step); });
   }
+  // bar chart drawn at the container's real pixel width so text never scales down; labels thin out when bars get narrow
+  const WCH = {};
   function weekChart(id, SP) {
-    const el = $(id); if (!el || !SP) return;
-    const L = SP.log, W = 1000, H = 250, pl = 30, pr = 6, pt = 14, pb = 24, iw = W - pl - pr, ih = H - pt - pb, bw = iw / L.length, y = v => pt + ih * (1 - v);
+    const el = $(id); if (!el || !SP) return; WCH[id] = SP;
+    const W = Math.round(el.clientWidth || 0); if (W < 50) { el.dataset.pending = "1"; return; } delete el.dataset.pending;
+    const L = SP.log, narrow = W < 560, H = narrow ? 190 : 240, pl = 38, pr = 4, pt = 10, pb = 26, iw = W - pl - pr, ih = H - pt - pb, bw = iw / L.length, y = v => pt + ih * (1 - v);
+    const step = Math.max(1, Math.ceil(34 / bw)), l0 = SP.l0 || "교체 전", l1 = SP.l1 || "교체 후";
     let g = `<g>`;
     [0, 0.5, 1].forEach(v => { g += `<line class="gl" x1="${pl}" x2="${W - pr}" y1="${y(v)}" y2="${y(v)}"${v === 0.5 ? ' stroke-dasharray="4 4"' : ""}/><text x="${pl - 6}" y="${y(v) + 4}" text-anchor="end">${v * 100}%</text>`; });
     g += `</g><g class="bars">`;
-    L.forEach((x, k) => { const x0 = pl + k * bw + bw * 0.14, w = bw * 0.34, d = (k * 0.025).toFixed(3);
-      g += `<rect class="b0" x="${x0.toFixed(1)}" y="${y(x.winBefore).toFixed(1)}" width="${w.toFixed(1)}" height="${(ih * x.winBefore).toFixed(1)}" rx="2" style="animation-delay:${d}s"><title>${x.week}주 vs ${x.opp} · 교체 전 ${pct(x.winBefore)}</title></rect>`;
-      g += `<rect class="b1" x="${(x0 + w + bw * 0.04).toFixed(1)}" y="${y(x.winAfter).toFixed(1)}" width="${w.toFixed(1)}" height="${(ih * x.winAfter).toFixed(1)}" rx="2" style="animation-delay:${d}s"><title>${x.week}주 vs ${x.opp} · 권장 교체 후 ${pct(x.winAfter)} (교체 ${x.nMoves}회)</title></rect>`; });
+    L.forEach((x, k) => { const x0 = pl + k * bw + bw * 0.12, w = Math.max(1.5, bw * 0.36), d = (k * 0.025).toFixed(3);
+      if (SP.single) { g += `<rect class="b1" x="${(pl + k * bw + bw * 0.2).toFixed(1)}" y="${y(x.winAfter).toFixed(1)}" width="${Math.max(2, bw * 0.6).toFixed(1)}" height="${(ih * x.winAfter).toFixed(1)}" rx="${narrow ? 1 : 2}" style="animation-delay:${d}s"><title>${x.week}주 vs ${x.opp} · ${l1} ${pct(x.winAfter)}</title></rect>`; return; }
+      g += `<rect class="b0" x="${x0.toFixed(1)}" y="${y(x.winBefore).toFixed(1)}" width="${w.toFixed(1)}" height="${(ih * x.winBefore).toFixed(1)}" rx="${narrow ? 1 : 2}" style="animation-delay:${d}s"><title>${x.week}주 vs ${x.opp} · ${l0} ${pct(x.winBefore)}</title></rect>`;
+      g += `<rect class="b1" x="${(x0 + w + bw * 0.04).toFixed(1)}" y="${y(x.winAfter).toFixed(1)}" width="${w.toFixed(1)}" height="${(ih * x.winAfter).toFixed(1)}" rx="${narrow ? 1 : 2}" style="animation-delay:${d}s"><title>${x.week}주 vs ${x.opp} · ${l1} ${pct(x.winAfter)}${x.nMoves ? ` (교체 ${x.nMoves}회)` : ""}</title></rect>`; });
     g += `</g><g>`;
-    L.forEach((x, k) => { if (L.length > 12 && k % 2) return; g += `<text x="${(pl + k * bw + bw / 2).toFixed(1)}" y="${H - 6}" text-anchor="middle"${x.now ? ' class="lbl"' : ""}>${x.week}주</text>`; });
+    L.forEach((x, k) => { if (k % step && !x.now) return; if (!x.now && L.some((z, j) => z.now && Math.abs(j - k) < step && j !== k)) return; g += `<text x="${(pl + k * bw + bw / 2).toFixed(1)}" y="${H - 8}" text-anchor="middle"${x.now ? ' class="lbl"' : ""}>${x.week}${narrow ? "" : "주"}</text>`; });
     g += `</g>`;
-    el.innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="주차별 매치업 승리 확률">${g}</svg>`;
+    el.innerHTML = `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="주차별 매치업 승리 확률">${g}</svg>`;
   }
+  let wchT = 0, wchW = innerWidth;
+  addEventListener("resize", () => { if (Math.abs(innerWidth - wchW) < 8) return; wchW = innerWidth; clearTimeout(wchT); wchT = setTimeout(() => Object.keys(WCH).forEach(id => weekChart(id, WCH[id])), 120); });
+  const redrawPending = () => Object.keys(WCH).forEach(id => { if ($(id).dataset.pending) weekChart(id, WCH[id]); });
   // ---------- 현황 (8-team v2.2 layout): KPI cards → category duel + playoff race → radar → roster
   const STD = D.standings || {};
   const myMatch = i => D.week1.find(x => x.a === i || x.b === i);
@@ -813,13 +829,13 @@ section:not([hidden]) .vchart .bars rect { transform-box: fill-box; transform-or
       `<div class="kpi"><span class="l">시즌 기록 (카테고리) <span class="badge">${prRank}위 예상</span></span><span class="v num">${r[0]}-${r[1]}-${r[2]}</span>
         <div class="wltbar"><span class="w" style="width:${(r[0] / tot * 100).toFixed(1)}%"></span><span class="t" style="width:${(r[2] / tot * 100).toFixed(1)}%"></span><span class="lo" style="width:${(r[1] / tot * 100).toFixed(1)}%"></span></div>
         <span class="d">현재 ${rkNow}위 · 최종 예상 ${Wp.toFixed(0)}승${isMe && SP ? "(권장 교체안)" : ""} · 기대 승률 ${pct(t.ec, 1)}</span></div>` +
-      `<div class="kpi has-ring"><span class="l">4강 확률${isMe && SP ? " · 권장 교체안" : ""}</span><span class="v num" data-count="${(p4 * 100).toFixed(1)}" data-dec="1" data-suf="%">${pct(p4, 1)}</span><span class="d">우승 ${pct(ch, 1)}${isMe && SP ? ` · 현재 로스터 ${pct(t.season.p4)}` : ` · 정규 1위 ${pct(t.season.p1)}`}</span>${ring(p4)}</div>`;
+      `<div class="kpi has-ring"><span class="l">4강 확률${isMe && SP ? " · 권장 교체안" : ""}</span><span class="v num" data-count="${(p4 * 100).toFixed(1)}" data-dec="1" data-suf="%">${pct(p4, 1)}</span><span class="d">우승 ${pct(ch, 1)}${isMe && SP ? ` · 일반 교체(주 2회) ${pct(t.season.p4)}` : ` · 정규 1위 ${pct(t.season.p1)}`}</span>${ring(p4)}</div>`;
     countUp($("k-now"));
   }
   function renderDuel() {
     const m = myMatch(sel); if (!m) return; const isA = m.a === sel, A = TM[sel], B = TM[isA ? m.b : m.a]; let up = 0, ev = 0, dn = 0;
     $("duel-t").textContent = `${D.period}주차 매치업 · vs ${B.name}`;
-    $("duel").innerHTML = `<div class="duel-h"><span>카테고리</span><span style="text-align:right">${esc(A.abbr)}</span><span class="mid"><span class="side">← 열세</span><span>50%</span><span class="side">우세 →</span></span><span>${esc(B.abbr)}</span><span style="text-align:right">승률</span></div>` +
+    $("duel").innerHTML = `<div class="duel-h"><span>항목</span><span style="text-align:right">${esc(A.abbr)}</span><span class="mid"><span class="side">← 열세</span><span>50%</span><span class="side">우세 →</span></span><span>${esc(B.abbr)}</span><span style="text-align:right">승률</span></div>` +
       m.cats.map((x, k) => { const p = catP(x, isA), d = p - 0.5, cls = p >= 0.6 ? "up" : p <= 0.4 ? "down" : "", lab = p >= 0.6 ? "우세" : p <= 0.4 ? "열세" : "박빙";
         if (cls === "up") up++; else if (cls === "down") dn++; else ev++;
         return `<div class="duel-r"><span class="c">${LAB[x.c]}${x.c === "TO" ? " ↓" : ""}</span><span class="a">${fmt(x.c, isA ? x.finA : x.finB)}</span><div class="dtrack"><i class="${d >= 0 ? "pos" : "neg"}${Math.abs(d) < 0.1 ? " even" : ""}" style="--i:${k};width:${(Math.abs(d) * 100).toFixed(1)}%"></i></div><span class="b">${fmt(x.c, isA ? x.finB : x.finA)}</span><span class="p"><span class="badge ${cls}">${lab} ${pct(p)}</span></span></div>`; }).join("");
@@ -834,8 +850,8 @@ section:not([hidden]) .vchart .bars rect { transform-box: fill-box; transform-or
   }
   function renderRank() {
     const ord = TM.map((t, i) => i).sort((a, b) => TM[b].season.W - TM[a].season.W);
-    $("rank").innerHTML = `<thead><tr><th>예상</th><th>팀</th><th class="r">기록</th><th class="r">기대 승률</th><th class="r">예상 W-L-T</th><th class="r">4강</th><th class="r">우승</th></tr></thead><tbody>` +
-      ord.map((i, k) => { const t = TM[i], s = t.season; return `<tr class="${i === sel ? "me" : ""}"><td>${k + 1}</td><td>${esc(t.name)}</td><td class="r">${recOf(t).join("-")}</td><td class="r">${pct(t.ec, 1)}</td><td class="r">${rec(s)}</td><td class="r">${pct(s.p4)}</td><td class="r">${pct(s.champ, 1)}</td></tr>`; }).join("") + `</tbody>`;
+    $("rank").innerHTML = `<thead><tr><th>예상</th><th>팀</th><th class="r">기록</th><th class="r">예상 W-L-T</th><th class="r">4강</th><th class="r">우승</th></tr></thead><tbody>` +
+      ord.map((i, k) => { const t = TM[i], s = t.season; return `<tr class="${i === sel ? "me" : ""}"><td>${k + 1}</td><td>${esc(t.name)}</td><td class="r">${recOf(t).join("-")}</td><td class="r">${rec(s)}</td><td class="r">${pct(s.p4)}</td><td class="r">${pct(s.champ, 1)}</td></tr>`; }).join("") + `</tbody>`;
   }
   let rdOpp = null, rdMode = store.get("l10v5-rdmode") || "season", rdAvg = store.get("l10v5-rdavg") === "1";
   function radar8(series, avg) {
@@ -844,19 +860,18 @@ section:not([hidden]) .vchart .bars rect { transform-box: fill-box; transform-or
     let g = "";
     [0.2, 0.4, 0.6, 0.8, 1].forEach(l => g += `<polygon points="${poly(() => l)}" fill="none" stroke="var(--line)"/>`);
     CATS.forEach((c, k) => { const [x, y] = pt(k, R); g += `<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="var(--line)"/>`; });
-    g += `<text x="${cx + 4}" y="${(cy - R * 0.5 + 3).toFixed(1)}" style="fill:var(--muted);font-size:9px">50</text><text x="${cx + 4}" y="${(cy - R + 3).toFixed(1)}" style="fill:var(--muted);font-size:9px">100</text>`;
     if (avg) g += `<polygon points="${poly(() => 0.5)}" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-dasharray="4 4"/>`;
     series.forEach(s => { g += `<polygon class="${s.cls}" points="${poly(k => s.v[k])}" style="fill:${s.color};fill-opacity:${s.fo};stroke:${s.color};stroke-width:2" stroke-linejoin="round"/>`; });
     series.forEach(s => CATS.forEach((c, k) => { const [x, y] = pt(k, R * Math.max(0, Math.min(1, s.v[k]))); g += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="4" style="fill:${s.color}"><title>${LAB[c]} · ${esc(s.name)} ${pct(s.v[k])}</title></circle>`; }));
     CATS.forEach((c, k) => { const [x, y] = pt(k, R + 18), co = Math.cos(ang(k)), si = Math.sin(ang(k));
-      g += `<text x="${x.toFixed(1)}" y="${y.toFixed(1)}" text-anchor="${co > 0.3 ? "start" : co < -0.3 ? "end" : "middle"}" dy="${si > 0.5 ? "0.9em" : si < -0.5 ? "-0.1em" : "0.35em"}" style="fill:var(--ink);font-size:12.5px;font-weight:600">${LAB[c]}${c === "TO" ? "↓" : ""}</text>`; });
-    return `<svg viewBox="-44 -26 ${S + 88} ${S + 52}" role="img" aria-label="카테고리 레이더">${g}</svg>`;
+      g += `<text x="${x.toFixed(1)}" y="${y.toFixed(1)}" text-anchor="${co > 0.3 ? "start" : co < -0.3 ? "end" : "middle"}" dy="${si > 0.5 ? "0.9em" : si < -0.5 ? "-0.1em" : "0.35em"}" style="fill:var(--ink);font-size:15px;font-weight:600">${LAB[c]}${c === "TO" ? "↓" : ""}</text>`; });
+    return `<svg viewBox="-52 -30 ${S + 104} ${S + 60}" role="img" aria-label="카테고리 레이더">${g}</svg>`;
   }
   function renderRadar8() {
     const A = TM[sel], m = myMatch(sel), PP = sel === ME ? (D.planProfiles || []) : [];
     if (rdOpp == null || rdOpp === sel) rdOpp = m ? (m.a === sel ? m.b : m.a) : order.find(i => i !== sel);
     $("rd-opp").innerHTML = order.filter(i => i !== sel).map(i => `<option value="${i}"${i === rdOpp ? " selected" : ""}>${esc(TM[i].name)}${m && (m.a === i || m.b === i) ? ` (${D.period}주차 상대)` : ""}</option>`).join("");
-    $("rd-mode").innerHTML = `<option value="season">잔여 시즌 평균 · 현재 로스터</option>` + PP.map(p => `<option value="${p.key}">${esc(p.short)} 실행 후${p.rec ? " (권장)" : ""}</option>`).join("");
+    $("rd-mode").innerHTML = `<option value="season">잔여 시즌 평균 · 주 2회 일반 교체</option>` + PP.map(p => `<option value="${p.key}">${esc(p.short)} 실행 후${p.rec ? " (권장)" : ""}</option>`).join("");
     if (rdMode !== "season" && !PP.find(p => p.key === rdMode)) rdMode = "season";
     $("rd-mode").value = rdMode; $("rd-avg").checked = rdAvg;
     const B = TM[rdOpp], plan = PP.find(p => p.key === rdMode);
@@ -868,7 +883,7 @@ section:not([hidden]) .vchart .bars rect { transform-box: fill-box; transform-or
     $("rd-sum").innerHTML = `<span class="badge">우위 카테고리 ${nWin}/11</span><span class="badge">맞대결 기대 ${ex.toFixed(1)}–${(11 - ex).toFixed(1)}</span>`;
     $("rd-tbl").innerHTML = `<thead><tr><th>카테고리</th><th class="r">${esc(A.abbr)}</th><th class="r">${esc(B.abbr)}</th><th class="r">순위</th><th class="r">맞대결</th></tr></thead><tbody>` +
       CATS.map((c, k) => `<tr><td>${LAB[c]}${c === "TO" ? " ↓" : ""}</td><td class="r">${plan ? pct(va[k]) : fmt(c, A.profile.avg[c])}</td><td class="r">${plan ? pct(vb[k]) : fmt(c, B.profile.avg[c])}</td><td class="r">${plan ? plan.rank[c] : A.profile.rank[c]}위 · ${B.profile.rank[c]}위</td><td class="r ${h2h[k] >= 0.55 ? "rd-win" : h2h[k] <= 0.45 ? "rd-lose" : ""}">${pct(h2h[k])}</td></tr>`).join("") + `</tbody>`;
-    $("rd-desc").textContent = `${plan ? `${plan.short} 실행 후 남은 주차` : "2~22주차 주간 평균(현재 로스터)"} · 축 = 9팀 상대 카테고리 승률(0~100, TO는 적을수록 바깥). 맞대결 = 두 팀 카테고리 승률로 추정한 1:1 승률.`;
+    $("rd-desc").textContent = `${plan ? `${plan.short} 실행 후 남은 주차` : "2~22주차 주간 평균(현재 로스터 + 주 2회 일반 교체)"} · 축 = 9팀 상대 카테고리 승률(0~100, TO는 적을수록 바깥). 맞대결 = 두 팀 카테고리 승률로 추정한 1:1 승률.`;
   }
   $("rd-opp").addEventListener("change", e => { rdOpp = +e.target.value; renderRadar8(); });
   $("rd-mode").addEventListener("change", e => { rdMode = e.target.value; store.set("l10v5-rdmode", rdMode); renderRadar8(); });
@@ -889,11 +904,14 @@ section:not([hidden]) .vchart .bars rect { transform-box: fill-box; transform-or
     if (!INTJ[c]) return [ncdfJ(d / s), 0]; return [1 - ncdfJ((0.5 - d) / s), ncdfJ((0.5 - d) / s) - ncdfJ((-0.5 - d) / s)]; }
   function probsOf(sums) { return SD.weeks.map((w, k) => SD.pairs[k].map(([i, j]) => { const cur = w === SD.curw && SD.bank[0];
     const a = msJ(sums[i][k], cur ? SD.bank[i] : null), b = msJ(sums[j][k], cur ? SD.bank[j] : null); return CATS.map(c => pwltJ(a, b, c)); })); }
+  // season Monte Carlo; tau = season-long team strength shock (logit shift on every category), calibrated in simcal.js to the full season simulation
   function seasonMC(pr, N) {
-    const T = TM.length, base = TM.map(t => recOf(t)), cnt = TM.map(() => ({ p4: 0, p1: 0, W: 0, L: 0, Tt: 0 })); let seed = 20261103;
-    const rnd = () => { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296; };
-    for (let n = 0; n < N; n++) { const W = base.map(r => r[0]), L = base.map(r => r[1]), Ti = base.map(r => r[2]);
-      pr.forEach((wk, k) => wk.forEach((cats, q) => { const [i, j] = SD.pairs[k][q]; cats.forEach(([pw, pt]) => { const r = rnd(); if (r < pw) { W[i]++; L[j]++; } else if (r < pw + pt) { Ti[i]++; Ti[j]++; } else { W[j]++; L[i]++; } }); }));
+    const T = TM.length, base = TM.map(t => recOf(t)), cnt = TM.map(() => ({ p4: 0, p1: 0, W: 0, L: 0, Tt: 0 })), tau = SD.cal || 0; let seed = 20261103;
+    const rnd = () => { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296; }, gauss = () => Math.sqrt(-2 * Math.log(rnd() + 1e-12)) * Math.cos(2 * Math.PI * rnd());
+    const lg = p => { p = Math.max(1e-6, Math.min(1 - 1e-6, p)); return Math.log(p / (1 - p)); };
+    const Q = pr.map(wk => wk.map(cats => cats.map(([pw, pt]) => [lg(pw), lg(pw + pt)])));
+    for (let n = 0; n < N; n++) { const W = base.map(r => r[0]), L = base.map(r => r[1]), Ti = base.map(r => r[2]), z = TM.map(() => gauss() * tau);
+      Q.forEach((wk, k) => wk.forEach((cats, q) => { const [i, j] = SD.pairs[k][q], sh = z[i] - z[j]; cats.forEach(([qa, qb]) => { const a = 1 / (1 + Math.exp(-qa - sh)), nl = 1 / (1 + Math.exp(-qb - sh)), r = rnd(); if (r < a) { W[i]++; L[j]++; } else if (r < nl) { Ti[i]++; Ti[j]++; } else { W[j]++; L[i]++; } }); }));
       const sc = W.map((w, i) => (w + Ti[i] / 2) / Math.max(1, w + L[i] + Ti[i]) + rnd() * 1e-9), ord = sc.map((s, i) => i).sort((a, b) => sc[b] - sc[a]);
       ord.forEach((i, r) => { if (r < 4) cnt[i].p4++; if (r === 0) cnt[i].p1++; }); W.forEach((w, i) => { cnt[i].W += w; cnt[i].L += L[i]; cnt[i].Tt += Ti[i]; }); }
     return cnt.map(c => ({ p4: c.p4 / N, p1: c.p1 / N, W: c.W / N, L: c.L / N, T: c.Tt / N })); }
@@ -901,29 +919,38 @@ section:not([hidden]) .vchart .bars rect { transform-box: fill-box; transform-or
     let a = 0; for (const [k, v] of Object.entries(d)) if (+k > 0) a += v; return a; }
   const PLX = SD ? Object.fromEntries(SD.players.map(p => [p.n, p])) : {};
   const simSel = { drop: new Set(), add: new Set() }; let simOther = false, simBase = null;
-  function addLine(row, p, g, sg) { if (!g) return; LK.forEach((k, x) => row[SK[k]] += sg * g * p.f[x]); row[SK.DD] += sg * g * p.dd; row[SK.TW] += sg * g * p.tw; row[SK.NPG] += sg * g; }
-  // one team's week: remove `out`, bring in `inn`; the 13-active cap (IR returns) is re-applied, so a 14th active player pushes out the lowest-value one
-  function applyTeam(row, t, out, inn, k, gIn) {
-    const base = SD.players.filter(p => p.tm === t), scen = base.filter(p => !out.has(p.n)).concat([...inn].map(n => PLX[n]));
-    const act = L => L.filter(p => p.all[k] > 0 || p.own[k] > 0).sort((a, b) => b.v - a.v);
-    const bCut = new Set(act(base).slice(13).map(p => p.n)), sCut = new Set(act(scen).slice(13).map(p => p.n));
-    out.forEach(n => addLine(row, PLX[n], PLX[n].own[k], -1));
-    inn.forEach(n => { if (!sCut.has(n)) addLine(row, PLX[n], gIn(PLX[n], k), 1); });
-    base.forEach(p => { if (out.has(p.n)) return; if (sCut.has(p.n) && !bCut.has(p.n)) addLine(row, p, p.own[k], -1); else if (bCut.has(p.n) && !sCut.has(p.n)) addLine(row, p, p.all[k], 1); });
-  }
+  // engine: daily 10-starter lineup (ESPN slots) · 13-active cap · generic weekly streaming, recomputed in the page for changed teams.
+  // pipeline sums + (engine scenario − engine replay of the pipeline roster) so engine/pipeline rounding cancels.
+  const ENG = SD && SD.days && window.SimEng ? window.SimEng.make(SD) : null, NK = SD ? SD.weeks.length : 0;
+  const ACQ_LEFT = Math.max(0, 70 - (D.acqUsed || 0));
+  let simN = Math.max(2, Math.min(3, +(store.get("l10v6-simn") || (SD && SD.streamPerWeek) || 2)));
+  const nsOf = (t, k) => t === ME ? simN : SD.kNode[t][k];
+  const baseU = t => SD.players.filter(p => p.tm === t).map(p => ENG.unit(p, false));
+  const RCACHE = new Map();
+  const rowOf = (t, units, k, ns, key) => { const ck = key ? `${t}|${k}|${ns}|${key}` : null; if (ck && RCACHE.has(ck)) return RCACHE.get(ck); const r = ENG.row(units, k, ns); if (ck) RCACHE.set(ck, r); return r; };
+  const nodeRow = (t, k) => rowOf(t, baseU(t), k, SD.kNode[t][k], "node");
+  const adj = (t, k, units, ns, key) => { const a = rowOf(t, units, k, ns, key), b = nodeRow(t, k); return SD.sums[t][k].map((v, x) => v + a[x] - b[x]); };
+  function baseSums() { const s = SD.sums.map(t => t.map(r => r.slice())); for (let k = 0; k < NK; k++) s[ME][k] = adj(ME, k, baseU(ME), simN, "base" + simN); return s; }
+  function scenUnits(t, out, inn, full) { return SD.players.filter(p => p.tm === t && !out.has(p.n)).map(p => ENG.unit(p, false)).concat([...inn].map(n => ENG.unit(PLX[n], full))); }
   function scenSums(team, drop, add, k0, perGame, trade) {
-    const sums = SD.sums.map(t => t.map(r => r.slice())), gIn = (p, k) => perGame ? p.games[k] : p.all[k];
+    const sums = (simBase ? simBase.sums : baseSums()).map(t => t.map(r => r.slice()));
     const partners = [...new Set([...add].map(n => PLX[n].tm).filter(t => t >= 0 && t !== team))], tr = trade && partners.length === 1;
-    for (let k = k0; k < SD.weeks.length; k++) {
-      applyTeam(sums[team][k], team, drop, add, k, gIn);
-      partners.forEach(x => applyTeam(sums[x][k], x, new Set([...add].filter(n => PLX[n].tm === x)), tr ? drop : new Set(), k, gIn)); }
-    return { sums, partners }; }
+    const uT = scenUnits(team, drop, add, perGame);
+    const uP = partners.map(x => scenUnits(x, new Set([...add].filter(n => PLX[n].tm === x)), tr ? drop : new Set(), perGame));
+    for (let k = k0; k < NK; k++) { sums[team][k] = adj(team, k, uT, nsOf(team, k)); partners.forEach((x, q) => sums[x][k] = adj(x, k, uP[q], nsOf(x, k))); }
+    return { sums, partners };
+  }
+  function ensureBase() { if (!simBase) { const sums = baseSums(), pr = probsOf(sums); simBase = { sums, pr, mc: seasonMC(pr, 4000) }; } return simBase; }
+  const nLabel = () => `기본(주 ${simN}회 교체)`;
   function renderSimLists() {
-    if (!SD) { $("sim-panel").hidden = true; return; }
+    if (!SD || !ENG) { $("sim-panel").hidden = true; return; }
     const team = sel; $("sim-team-name").textContent = TM[team].name;
     if (!$("sim-week").options.length) { const k0 = D.w1meta.next ? 1 : 0; $("sim-week").innerHTML = SD.weeks.map((w, k) => `<option value="${k}"${k === k0 ? " selected" : ""}>${w + 1}주차 (${SD.starts[k].slice(5).replace("-", "/")}~)${w === SD.curw ? " · 진행 중" : ""}</option>`).join(""); }
+    $("sim-n").value = String(simN); $("sim-n").disabled = team !== ME;
+    const wk = NK - (SD.fromIdx[0] >= 6 ? 1 : 0);
+    $("sim-n-note").textContent = team === ME ? `남은 영입 한도 ${ACQ_LEFT}회 · 주 ${simN}회 × ${wk}주 = ${simN * wk}회${simN * wk > ACQ_LEFT ? " (한도 초과 — 주 2회 권장)" : ""}` : `${TM[team].abbr}: 주 2회 일반 교체 가정(다른 팀 공통)`;
     const k = +$("sim-week").value || 0;
-    $("sim-drop").innerHTML = SD.players.filter(p => p.tm === team).sort((a, b) => a.v - b.v).map(p => `<label class="${simSel.drop.has(p.n) ? "on" : ""}"><input type="checkbox" data-drop="${esc(p.n)}"${simSel.drop.has(p.n) ? " checked" : ""}><span>${esc(p.n)} <span class="m">${p.pos} · ${p.nba}${p.st ? ` · <b class="${p.st === "O" ? "stat-o" : "stat-dtd"}">${p.st}</b>` : ""}</span></span><span class="m">가치 ${p.v.toFixed(2)}</span></label>`).join("");
+    $("sim-drop").innerHTML = SD.players.filter(p => p.tm === team).sort((a, b) => a.v - b.v).map(p => `<label class="${simSel.drop.has(p.n) ? "on" : ""}"><input type="checkbox" data-drop="${esc(p.n)}"${simSel.drop.has(p.n) ? " checked" : ""}><span>${esc(p.n)}${team === ME && CORE.has(p.n) ? ' <span class="chip tag">고정</span>' : ""} <span class="m">${p.pos} · ${p.nba}${p.st ? ` · <b class="${p.st === "O" ? "stat-o" : "stat-dtd"}">${p.st}</b>` : ""}</span></span><span class="m">가치 ${p.v.toFixed(2)}</span></label>`).join("");
     const q = $("sim-q").value.trim().toLowerCase();
     const pool = SD.players.filter(p => p.tm !== team && (simOther || p.tm < 0) && (!q || (p.n + " " + p.nba + " " + p.pos).toLowerCase().includes(q))).sort((a, b) => b.v - a.v).slice(0, 80);
     $("sim-add").innerHTML = pool.map(p => `<label class="${simSel.add.has(p.n) ? "on" : ""}"><input type="checkbox" data-add="${esc(p.n)}"${simSel.add.has(p.n) ? " checked" : ""}><span>${esc(p.n)} <span class="m">${p.pos} · ${p.nba}${p.tm >= 0 ? " · " + esc(TM[p.tm].abbr) : ""}${p.r ? " · ESPN " + p.r : ""}${p.st ? ` · <b class="${p.st === "O" ? "stat-o" : "stat-dtd"}">${p.st}</b>` : ""}</span></span><span class="m">${p.games[k]}경기 · ${p.v.toFixed(2)}</span></label>`).join("") || `<div class="note" style="padding:10px">검색 결과 없음</div>`;
@@ -935,48 +962,85 @@ section:not([hidden]) .vchart .bars rect { transform-box: fill-box; transform-or
   }
   function runSim() {
     const team = sel, drop = new Set(simSel.drop), add = new Set(simSel.add), msg = $("sim-msg");
-    if (!drop.size && !add.size) { msg.className = "msg err"; msg.textContent = "방출 또는 영입할 선수를 한 명 이상 고르세요."; return; }
     const act = SD.players.filter(p => p.tm === team).length - drop.size + add.size;
     if (act > 14) { msg.className = "msg err"; msg.textContent = `로스터가 ${act}명이 됩니다(IR 포함 최대 14명). 방출 선수를 더 고르세요.`; return; }
     msg.className = "msg"; msg.textContent = "계산 중…"; $("sim-run").disabled = true;
     setTimeout(() => {
-      const k0 = +$("sim-week").value || 0, perGame = $("sim-pg").checked, trade = $("sim-trade").checked;
-      if (!simBase) { const pr = probsOf(SD.sums); simBase = { pr, mc: seasonMC(pr, 4000) }; }
-      const sc = scenSums(team, drop, add, k0, perGame, trade), pr = probsOf(sc.sums), mc = seasonMC(pr, 4000);
-      renderSimResult(team, simBase, { pr, mc, k0, drop, add, partners: sc.partners });
-      msg.textContent = `완료 · ${SD.weeks[k0] + 1}주차부터 적용 · 시즌 4천 회`; $("sim-run").disabled = false;
+      const k0 = +$("sim-week").value || 0, perGame = $("sim-pg").checked, trade = $("sim-trade").checked, B = ensureBase();
+      const sc = drop.size || add.size ? scenSums(team, drop, add, k0, perGame, trade) : { sums: B.sums, partners: [] };
+      const pr = drop.size || add.size ? probsOf(sc.sums) : B.pr, mc = drop.size || add.size ? seasonMC(pr, 4000) : B.mc;
+      renderSimResult(team, B, { pr, mc, k0, drop, add, partners: sc.partners, same: !drop.size && !add.size });
+      msg.textContent = drop.size || add.size ? `완료 · ${SD.weeks[k0] + 1}주차부터 적용 · 일일 선발 10명 · 시즌 4천 회` : `${nLabel()} 시나리오 · 시즌 4천 회`; $("sim-run").disabled = false;
     }, 30);
   }
   function renderSimResult(team, B, S) {
-    const b = B.mc[team], s = S.mc[team], ecOf = r => (r.W + r.T / 2) / Math.max(1, r.W + r.L + r.T);
-    const dl = (x, y, d = 1) => `<span class="${y >= x ? "delta up" : "delta down"}">${y >= x ? "+" : ""}${((y - x) * 100).toFixed(d)}%p</span>`;
+    const b = B.mc[team], s = S.mc[team], ecOf = r => (r.W + r.T / 2) / Math.max(1, r.W + r.L + r.T), bl = team === ME ? nLabel() : "기본(주 2회 교체)";
+    const dl = (x, y, d = 1) => S.same ? "" : `<span class="${y >= x ? "delta up" : "delta down"}">${y >= x ? "+" : ""}${((y - x) * 100).toFixed(d)}%p</span>`;
+    const sub = (txt) => S.same ? `<span class="d">${bl}</span>` : `<span class="d">${txt}</span>`;
     $("sim-kpis").innerHTML =
-      `<div class="kpi"><span class="l">기대 승률 (시즌 최종)</span><span class="v num">${pct(ecOf(s), 1)}</span><span class="d">교체 없음 ${pct(ecOf(b), 1)} → ${dl(ecOf(b), ecOf(s))}</span></div>` +
-      `<div class="kpi"><span class="l">예상 W-L-T (카테고리)</span><span class="v num">${s.W.toFixed(0)}–${s.L.toFixed(0)}–${s.T.toFixed(0)}</span><span class="d">교체 없음 ${b.W.toFixed(0)}–${b.L.toFixed(0)}–${b.T.toFixed(0)}</span></div>` +
-      `<div class="kpi has-ring"><span class="l">4강 확률</span><span class="v num">${pct(s.p4, 1)}</span><span class="d">교체 없음 ${pct(b.p4, 1)} → ${dl(b.p4, s.p4)}</span>${ring(s.p4)}</div>` +
-      `<div class="kpi"><span class="l">정규 1위</span><span class="v num">${pct(s.p1, 1)}</span><span class="d">교체 없음 ${pct(b.p1, 1)} → ${dl(b.p1, s.p1)}</span></div>`;
+      `<div class="kpi"><span class="l">기대 승률 (시즌 최종)</span><span class="v num">${pct(ecOf(s), 1)}</span>${sub(`${bl} ${pct(ecOf(b), 1)} → ${dl(ecOf(b), ecOf(s))}`)}</div>` +
+      `<div class="kpi"><span class="l">예상 W-L-T (카테고리)</span><span class="v num">${s.W.toFixed(0)}–${s.L.toFixed(0)}–${s.T.toFixed(0)}</span>${sub(`${bl} ${b.W.toFixed(0)}–${b.L.toFixed(0)}–${b.T.toFixed(0)}`)}</div>` +
+      `<div class="kpi has-ring"><span class="l">4강 확률</span><span class="v num">${pct(s.p4, 1)}</span>${sub(`${bl} ${pct(b.p4, 1)} → ${dl(b.p4, s.p4)}`)}${ring(s.p4)}</div>` +
+      `<div class="kpi"><span class="l">정규 1위</span><span class="v num">${pct(s.p1, 1)}</span>${sub(`${bl} ${pct(b.p1, 1)} → ${dl(b.p1, s.p1)}`)}</div>`;
     $("sim-kpis").hidden = false; $("sim-res").hidden = false;
     const ord = TM.map((t, i) => i).sort((x, y) => S.mc[y].W - S.mc[x].W);
     $("sim-fc").innerHTML = `<thead><tr><th>순위</th><th>팀</th><th class="r">기대 승률</th><th class="r">예상 W-L-T</th><th class="r">4강</th><th class="r">1위</th></tr></thead><tbody>` +
       ord.map((i, r) => { const x = S.mc[i], y = B.mc[i], ch = i === team || S.partners.includes(i); return `<tr class="${i === team ? "me" : ""}"><td>${r + 1}</td><td>${esc(TM[i].name)}${ch && i !== team ? ' <span class="chip tag">트레이드</span>' : ""}</td><td class="r">${pct(ecOf(x), 1)}</td><td class="r">${x.W.toFixed(0)}–${x.L.toFixed(0)}–${x.T.toFixed(0)}</td><td class="r">${pct(x.p4)} ${Math.abs(x.p4 - y.p4) >= 0.005 ? dl(y.p4, x.p4, 0) : ""}</td><td class="r">${pct(x.p1)}</td></tr>`; }).join("") + `</tbody>`;
-    $("sim-fc-note").textContent = `교체 없음 = 남은 시즌 동안 이 팀이 교체를 전혀 하지 않을 때(다른 팀은 주 2회 일반 교체 가정, 같은 계산기). 대시보드 본문의 시즌 시뮬레이션(선수 성적 변동·부상 포함)과는 수준이 다르므로 변화량(%p)으로 비교하세요. 영입 선수의 출전은 그 주 실제 일정 기준이며, 라인업 10명 경쟁은 반영하지 않아 효과가 다소 크게 나올 수 있습니다.`;
+    $("sim-fc-note").textContent = `기본 = 현재 로스터 + ${team === ME ? `우리 팀 주 ${simN}회` : "주 2회"} 일반 교체(가치 하위 선수를 그 주 빈 슬롯을 가장 많이 채우는 팀의 평균 FA로 교체), 다른 팀도 주 2회. 매일 선발 10명(PG·SG·SF·PF·C·G·F·UTIL×3)만 집계하고 13명 활성 한도를 적용합니다. 시즌 단위 팀 전력 변동(선수 성적·부상)은 본문 시즌 시뮬레이션에 맞춰 보정했습니다(τ=${(SD.cal || 0).toFixed(2)}). 의사결정은 기본 대비 변화량(%p)으로 보세요.`;
     const log = SD.weeks.map((w, k) => { const q = SD.pairs[k].findIndex(([i, j]) => i === team || j === team); if (q < 0) return null; const [i, j] = SD.pairs[k][q], isA = i === team;
-      const wb = isA ? matchWin(B.pr[k][q]) : matchWin(B.pr[k][q].map(([pw, pt]) => [1 - pw - pt, pt])), ws = isA ? matchWin(S.pr[k][q]) : matchWin(S.pr[k][q].map(([pw, pt]) => [1 - pw - pt, pt]));
-      return { week: w + 1, opp: TM[isA ? j : i].abbr, winBefore: wb, winAfter: ws, nMoves: 0 }; }).filter(Boolean);
-    weekChart("sim-wk", { log, label: "Simul" });
+      const mw = pr => isA ? matchWin(pr[k][q]) : matchWin(pr[k][q].map(([pw, pt]) => [1 - pw - pt, pt]));
+      return { week: w + 1, opp: TM[isA ? j : i].abbr, winBefore: mw(B.pr), winAfter: mw(S.pr), nMoves: 0, now: w === SD.curw }; }).filter(Boolean);
+    $("sim-leg0").textContent = bl;
+    weekChart("sim-wk", { log, label: "Simul", l0: bl, l1: S.same ? bl : "Simul", single: S.same });
+    $("sim-leg").hidden = !!S.same; $("sim-leg1").textContent = S.same ? bl : "Simul";
     $("sim-wk-title").textContent = `주별 매치업 승리 확률 · ${TM[team].name}`;
     const per = (pr) => CATS.map((c, x) => { let s0 = 0, n = 0; SD.weeks.forEach((w, k) => { if (k < S.k0) return; const q = SD.pairs[k].findIndex(([i, j]) => i === team || j === team); if (q < 0) return; const [i] = SD.pairs[k][q], [pw, pt] = pr[k][q][x]; s0 += i === team ? pw + pt / 2 : 1 - pw - pt / 2; n++; }); return s0 / Math.max(1, n); });
     const pb = per(B.pr), ps = per(S.pr);
-    $("sim-cat").innerHTML = `<thead><tr><th>카테고리</th><th class="r">교체 없음</th><th class="r">Simul</th><th class="r">변화</th></tr></thead><tbody>` +
-      CATS.map((c, x) => `<tr><td>${LAB[c]}${c === "TO" ? " ↓" : ""}</td><td class="r">${pct(pb[x])}</td><td class="r">${pct(ps[x])}</td><td class="r">${Math.abs(ps[x] - pb[x]) >= 0.005 ? dl(pb[x], ps[x], 0) : "±0"}</td></tr>`).join("") + `</tbody>`;
+    $("sim-cat").innerHTML = `<thead><tr><th>카테고리</th><th class="r">${esc(bl)}</th><th class="r">Simul</th><th class="r">변화</th></tr></thead><tbody>` +
+      CATS.map((c, x) => `<tr><td>${LAB[c]}${c === "TO" ? " ↓" : ""}</td><td class="r">${pct(pb[x])}</td><td class="r">${pct(ps[x])}</td><td class="r">${S.same ? "—" : Math.abs(ps[x] - pb[x]) >= 0.005 ? dl(pb[x], ps[x], 0) : "±0"}</td></tr>`).join("") + `</tbody>`;
   }
-  if (SD) {
+  // FA recommendations: every (FA, drop) pair on top of the weekly streaming baseline, ranked by expected matchup wins over the remaining weeks
+  function recommend() {
+    const team = sel, k0 = +$("sim-week").value || 0, perGame = $("sim-pg").checked, B = ensureBase(), msg = $("rec-msg");
+    msg.textContent = "계산 중…"; $("rec-run").disabled = true;
+    setTimeout(() => {
+      const mine = SD.players.filter(p => p.tm === team), drops = mine.filter(p => !(team === ME && CORE.has(p.n))).sort((a, b) => a.v - b.v).slice(0, 4);
+      const fas = SD.players.filter(p => p.tm < 0 && p.all.slice(k0).some(g => g > 0)).sort((a, b) => b.v - a.v).slice(0, 45);
+      const my = []; for (let k = k0; k < NK; k++) { const q = SD.pairs[k].findIndex(([i, j]) => i === team || j === team); if (q >= 0) my.push([k, SD.pairs[k][q]]); }
+      const score = sums => { let w = 0, c = 0; const pc = CATS.map(() => 0);
+        my.forEach(([k, [i, j]]) => { const cur = SD.weeks[k] === SD.curw && SD.bank[0], A = msJ(sums(i, k), cur ? SD.bank[i] : null), Bm = msJ(sums(j, k), cur ? SD.bank[j] : null);
+          const cats = CATS.map(x => pwltJ(A, Bm, x)), mine = i === team ? cats : cats.map(([pw, pt]) => [1 - pw - pt, pt]);
+          w += matchWin(mine); mine.forEach(([pw, pt], x) => { c += pw + pt / 2; pc[x] += pw + pt / 2; }); });
+        return { w, c, pc }; };
+      const b0 = score((t, k) => B.sums[t][k]), res = [];
+      for (const d of drops) for (const f of fas) {
+        const u = scenUnits(team, new Set([d.n]), new Set([f.n]), perGame), rows = {};
+        for (let k = k0; k < NK; k++) rows[k] = adj(team, k, u, nsOf(team, k));
+        const s = score((t, k) => t === team ? rows[k] : B.sums[t][k]); res.push({ d, f, dw: s.w - b0.w, dc: (s.c - b0.c) / Math.max(1, my.length * 11), pc: s.pc.map((v, x) => (v - b0.pc[x]) / Math.max(1, my.length)) });
+      }
+      const best = new Map(); res.sort((a, b) => b.dw - a.dw).forEach(r => { if (!best.has(r.f.n)) best.set(r.f.n, r); });
+      const top = [...best.values()].slice(0, 10);
+      $("rec").innerHTML = `<thead><tr><th>영입</th><th>방출</th><th class="r">${SD.weeks[k0] + 1}주 경기</th><th class="r">매치업 승리 Δ</th><th class="r">카테고리 승률 Δ</th><th>주요 변화(%p)</th><th></th></tr></thead><tbody>` +
+        top.map((r, x) => { const ch = CATS.map((c, i) => [c, r.pc[i]]).filter(([, v]) => Math.abs(v) >= 0.01).sort((a, b) => Math.abs(b[1]) - Math.abs(a[1])).slice(0, 3);
+          return `<tr class="${x === 0 && r.dw > 0 ? "me" : ""}"><td><b>${esc(r.f.n)}</b> <span class="note">${r.f.pos} · ${r.f.nba}${r.f.st ? " · " + r.f.st : ""}</span></td><td>${esc(r.d.n)}</td><td class="r num">${r.f.games[k0]}</td>
+            <td class="r num ${r.dw >= 0 ? "up2" : "down2"}">${r.dw >= 0 ? "+" : ""}${r.dw.toFixed(2)}승</td><td class="r num">${r.dc >= 0 ? "+" : ""}${(r.dc * 100).toFixed(1)}%p</td>
+            <td style="white-space:normal">${ch.map(([c, v]) => `<span class="${v > 0 ? "up2" : "down2"}">${LAB[c]} ${v > 0 ? "+" : ""}${(v * 100).toFixed(0)}</span>`).join(" · ") || '<span class="note">—</span>'}</td>
+            <td><button class="btn sm" type="button" data-rf="${esc(r.f.n)}" data-rd="${esc(r.d.n)}">Simul</button></td></tr>`; }).join("") + `</tbody>`;
+      $("rec").querySelectorAll("button[data-rf]").forEach(el => el.addEventListener("click", () => { simSel.drop = new Set([el.dataset.rd]); simSel.add = new Set([el.dataset.rf]); simOther = false; renderSimLists(); runSim(); $("sim-panel").scrollIntoView({ behavior: "smooth", block: "start" }); }));
+      $("rec-wrap").hidden = false;
+      msg.textContent = `${fas.length}명 × 방출 후보 ${drops.length}명(${drops.map(p => p.n.split(" ").slice(-1)[0]).join("·")}) 평가 · ${SD.weeks[k0] + 1}~22주 · ${nLabel()} 위에 영구 영입 1명 추가 효과`;
+      $("rec-run").disabled = false;
+    }, 30);
+  }
+  const CORE = new Set(D.core || []);
+  if (SD && ENG) {
     $("sim-q").addEventListener("input", renderSimLists); $("sim-week").addEventListener("change", renderSimLists);
     $("sim-other").addEventListener("change", e => { simOther = e.target.checked; renderSimLists(); });
-    $("sim-run").addEventListener("click", runSim);
-    $("sim-reset").addEventListener("click", () => { simSel.drop.clear(); simSel.add.clear(); $("sim-q").value = ""; $("sim-msg").textContent = ""; $("sim-kpis").hidden = true; $("sim-res").hidden = true; renderSimLists(); });
+    $("sim-n").addEventListener("change", e => { simN = +e.target.value; store.set("l10v6-simn", String(simN)); simBase = null; $("rec-wrap").hidden = true; renderSimLists(); runSim(); });
+    $("sim-run").addEventListener("click", runSim); $("rec-run").addEventListener("click", recommend);
+    $("sim-reset").addEventListener("click", () => { simSel.drop.clear(); simSel.add.clear(); $("sim-q").value = ""; renderSimLists(); runSim(); });
   }
-  function renderNow() { renderKpis(); renderDuel(); renderRace(); renderRank(); renderRadar8(); if (typeof renderSimLists === "function") { simSel.drop.clear(); simSel.add.clear(); renderSimLists(); } $("h1-team").textContent = sel === ME ? "Twindragons" : TM[sel].name; }
+  function renderNow() { renderKpis(); renderDuel(); renderRace(); renderRank(); renderRadar8(); if (ENG) { simSel.drop.clear(); simSel.add.clear(); renderSimLists(); $("rec-wrap").hidden = true; runSim(); } $("h1-team").textContent = sel === ME ? "Twindragons" : TM[sel].name; }
   renderInj(); renderStream(); renderKS(); renderLineup(); renderFA();
   renderPower(); renderTeam(); renderHeat(); renderWeek1(); renderMethod(); renderProj(); renderNow(); setView(view);
 })();

@@ -1,14 +1,14 @@
 # 10팀 리그 시뮬레이션 · 2026-11-03 01:06 KST
 
 ## 우리 팀 예상 순위: 권장 교체안 실행 시 2위 · 일반 교체 가정 시 8위 (현재 10위, 7-15-0)
-- 4강 23%(v2 29%) · 우승 4.5% · 권장 교체안 실행 시 4강 64%, 우승 6.5%
+- 4강 23%(v2 29%) · 우승 4.5% · 권장 교체안 실행 시 4강 63%, 우승 6.6%
 
 ## 이번 주(3주차) vs Seoul Dreamers (KOO)
 - 현재 0-0-11 · 승리 확률 1%(v2 1%) · 남은 7일
 - 카테고리 승률: FG% 51%, FT% 57%, 3PM 2%, REB 0%, AST 24%, STL 16%, BLK 0%, TO 92%, DD 22%, PTS 1%, TW 17%
 
 ## 이번 주 교체 플랜
-- 권장: Paul Reed → Ryan Rollins(MIL, 4경기) · 승리 1% → 2%
+- 권장(남은 경기 기준): Paul Reed → Anfernee Simons(PHI, 4경기), Daniel Gafford → Ryan Rollins(MIL, 4경기) · 승리 1% → 4%
 - 4주차(11/09~) vs KWNG: Duncan Robinson → OG Anunoby, Paul Reed → Reed Sheppard · 승리 22% → 59%
 - 5주차(11/16~) vs TBG: Daniel Gafford → Nikola Vucevic, Andrew Nembhard → DeMar DeRozan, Reed Sheppard → Jalen Suggs · 승리 65% → 88%
 

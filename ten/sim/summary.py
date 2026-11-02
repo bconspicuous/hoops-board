@@ -26,8 +26,8 @@ for k, t in enumerate(cur): t['curRank'] = k + 1
 me = next(t for t in teams if t['me'])
 me['planW'] = SP['rec']['sum']['plan']['W']; me['planRank'] = 1 + sum(1 for t in teams if not t['me'] and t['W'] > me['planW'])
 # this week: recommend the best current-week move only if it is worth an acquisition
-best = (WK['singles'] or [None])[0]
-nowMove = best if best and WK['remDays'] >= 2 and (best['win'] - WK['base']['win'] >= 0.05 or best['e'] - WK['base']['e'] >= 0.2) else None
+best = next((x for x in (WK.get('doubles') or [])[:1] + (WK['singles'] or [])[:1] if x['e'] >= WK['base']['e'] - 0.01), None)
+nowMove = best if best and WK['remDays'] >= 2 else None   # at least 2 moves a week
 plan = SP['rec']; nxt = [x for x in plan['log'] if not x.get('now')][:2]
 sm = {'asOf': META['asOf'], 'me': me, 'week': {'v1': w1, 'v2': w2, 'remDays': WK['remDays'], 'base': WK['base'], 'nowMove': nowMove, 'alts': WK['singles'][:3]},
       'plans': {k: {'p4': v['sum']['plan']['p4'], 'champ': v['sum']['plan']['champ'], 'used': v['sum']['used'], 'W': v['sum']['plan']['W'], 'L': v['sum']['plan']['L']} for k, v in SP.items()},
@@ -41,8 +41,8 @@ md = [f"# 10팀 리그 시뮬레이션 · {META['asOf'].replace('T', ' ')[:16]} 
       f"- 현재 {w1['record']} · 승리 확률 {pc(w1['win'])}(v2 {pc(w2['win'])}) · 남은 {WK['remDays']}일",
       '- 카테고리 승률: ' + ', '.join(f"{CATL[c]} {v}%" for c, v in w1['cats'].items()), '']
 md.append('## 이번 주 교체 플랜')
-if nowMove: md.append(f"- 권장: {nowMove['moves'][0]['drop']} → {nowMove['moves'][0]['add']}({nowMove['moves'][0]['team']}, {nowMove['moves'][0]['g']}경기) · 승리 {pc(WK['base']['win'])} → {pc(nowMove['win'])}")
-else: md.append(f"- 교체 없음 (최선안 효과 미미: {(best['moves'][0]['drop'] + ' → ' + best['moves'][0]['add'] + ' ' + pc(WK['base']['win']) + '→' + pc(best['win'])) if best else '-'})")
+if nowMove: md.append("- 권장(남은 경기 기준): " + ', '.join(f"{m['drop']} → {m['add']}({m['team']}, {m['g']}경기)" for m in nowMove['moves']) + f" · 승리 {pc(WK['base']['win'])} → {pc(nowMove['win'])}")
+else: md.append(f"- 이번 주 남은 일정 {WK['remDays']}일 · 교체는 다음 주 플랜으로 이월")
 for x in nxt:
     mv = ', '.join(f"{m['drop']} → {m['add']}" for m in x['moves']) or '유지'
     md.append(f"- {x['week']}주차({x['start'][5:].replace('-', '/')}~) vs {x['opp']}: {mv} · 승리 {pc(x['winBefore'])} → {pc(x['winAfter'])}" + (f" · IR 복귀로 {x['forced']} 방출" if x.get('forced') else ''))
