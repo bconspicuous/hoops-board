@@ -48,7 +48,7 @@ out = {'asOf': meta['asOf'], 'source': 'ESPN API', 'teams': teams, 'status': {'O
                    'cats': {g[s]['team']: g[s]['cats'] for g in weeks.get(cur, []) for s in ('home', 'away')}}}
 inj = json.load(open(D + 'injuries.json'))['injuries']
 roster_names = {n for t in teams for n in t['players'] + t['ir']} | set(old.get('reserveFA', []))
-OVR = {}   # 10/28: Kawhi now follows ESPN (knee inflammation, est. return 11/23, IR)
+OVR = {n: (d, '사용자 가정') for n, d in json.load(open(W + 'user_plan.json')).get('returnOverrides', {}).items()}   # user-stated absences override ESPN return dates
 ret, info = {}, {}
 for x in inj:
     n = m(x['player'] or '')

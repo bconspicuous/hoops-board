@@ -1,24 +1,24 @@
 {
- "asOf": "2026-11-02T14:14+09:00",
+ "asOf": "2026-11-02T14:26+09:00",
  "me": {
   "abbr": "GTD",
   "name": "Garak Twindragons",
   "me": true,
   "rec": "5-6-0",
   "pct": 0.45454545454545453,
-  "ec": 0.4642829088156177,
-  "W": 109.5439,
-  "L": 125.0341,
-  "T": 7.422,
-  "p4": 0.2031,
-  "champ": 0.038,
-  "avgRank": 6.7538,
-  "p4v2": 0.2375,
-  "Wv2": 110.5503,
+  "ec": 0.4589415521321397,
+  "W": 108.7562,
+  "L": 125.8753,
+  "T": 7.3685,
+  "p4": 0.1854,
+  "champ": 0.0351,
+  "avgRank": 6.8806,
+  "p4v2": 0.2247,
+  "Wv2": 110.015,
   "projRank": 8,
   "curRank": 8,
-  "planW": 125.466125,
-  "planRank": 3
+  "planW": 124.285875,
+  "planRank": 4
  },
  "week": {
   "v1": {
@@ -85,45 +85,45 @@
  },
  "plans": {
   "rec": {
-   "p4": 0.59225,
-   "champ": 0.06425,
-   "used": 42,
-   "W": 125.466125,
-   "L": 109.564875
+   "p4": 0.565,
+   "champ": 0.064625,
+   "used": 41,
+   "W": 124.285875,
+   "L": 110.86625
   },
   "c2": {
-   "p4": 0.54975,
-   "champ": 0.06425,
-   "used": 36,
-   "W": 123.939625,
-   "L": 111.113125
+   "p4": 0.5395,
+   "champ": 0.06,
+   "used": 35,
+   "W": 123.287875,
+   "L": 111.813
   },
   "free": {
-   "p4": 0.649625,
-   "champ": 0.068125,
-   "used": 47,
-   "W": 127.828,
-   "L": 107.291875
+   "p4": 0.635875,
+   "champ": 0.0645,
+   "used": 45,
+   "W": 127.270875,
+   "L": 107.937875
   }
  },
  "base": {
-  "W": 98.4945,
-  "L": 136.27825,
-  "T": 7.22725,
-  "p4": 0.054375,
-  "champ": 0.010875,
-  "p1": 0.002125,
+  "W": 97.910375,
+  "L": 136.931375,
+  "T": 7.15825,
+  "p4": 0.04675,
+  "champ": 0.009875,
+  "p1": 0.001625,
   "fin": [
-   0.002125,
-   0.00825,
-   0.015875,
-   0.028125,
-   0.047125,
-   0.069125,
-   0.10275,
+   0.001625,
+   0.007625,
+   0.013625,
+   0.023875,
+   0.044,
+   0.066625,
+   0.099625,
    0.153375,
-   0.225,
-   0.34825
+   0.22875,
+   0.360875
   ]
  },
  "next": [
@@ -135,49 +135,49 @@
    "moves": [
     {
      "drop": "Paul Reed",
-     "add": "Neemias Queta",
+     "add": "Ryan Rollins",
      "g": 4,
      "gDrop": 3,
-     "gain": 0.4522553507492315
+     "gain": 0.35266645516043305
     },
     {
      "drop": "Duncan Robinson",
-     "add": "Alex Caruso",
+     "add": "Collin Gillespie",
      "g": 4,
      "gDrop": 3,
-     "gain": 0.32317684982538797
+     "gain": 0.22357732090451155
     }
    ],
    "nMoves": 2,
-   "before": 3.3801486005070966,
-   "after": 4.155580801081716,
+   "before": 2.8047017537627212,
+   "after": 3.380945529827666,
    "perBefore": {
-    "FG": 0.5816767275945631,
-    "FT": 0.46702772826465416,
-    "TPM": 0.028180586772961425,
-    "REB": 0.06068024594413057,
-    "AST": 0.447805992116551,
-    "STL": 0.2549652213812055,
-    "BLK": 0.01962466219622011,
-    "TO": 0.7091903085226234,
-    "DD": 0.3932868402916285,
-    "PTS": 0.10429465768270352,
-    "TW": 0.3134156297398547
+    "FG": 0.5147900872058359,
+    "FT": 0.566753186874917,
+    "TPM": 0.014923584946572255,
+    "REB": 0.0005671259601564005,
+    "AST": 0.22667644990099078,
+    "STL": 0.151850869165636,
+    "BLK": 0.001122417478534532,
+    "TO": 0.9247211810819552,
+    "DD": 0.23030910137217736,
+    "PTS": 0.005342327603672037,
+    "TW": 0.1676454221722738
    },
-   "winBefore": 0.04542676677727917,
-   "winAfter": 0.15006211602354513,
+   "winBefore": 0.005900584557329533,
+   "winAfter": 0.03687826536214077,
    "per": {
-    "FG": 0.6817386588179892,
-    "FT": 0.42668492412928966,
-    "TPM": 0.007235054095253157,
-    "REB": 0.2911675874269606,
-    "AST": 0.5153462180199917,
-    "STL": 0.40106124807003407,
-    "BLK": 0.0866933537662335,
-    "TO": 0.6696129941147025,
-    "DD": 0.47729799511557347,
-    "PTS": 0.13195539368496323,
-    "TW": 0.46678737384072544
+    "FG": 0.36411260001525586,
+    "FT": 0.5877896746404329,
+    "TPM": 0.10003810579034328,
+    "REB": 0.004310589784335628,
+    "AST": 0.7865806153790693,
+    "STL": 0.4425299851040647,
+    "BLK": 0.0008572369615130748,
+    "TO": 0.6053743049600843,
+    "DD": 0.256468705526243,
+    "PTS": 0.05711867627816919,
+    "TW": 0.1757650353881554
    },
    "roster": [
     "Donovan Mitchell",
@@ -189,8 +189,8 @@
     "Peyton Watson",
     "Miles Bridges",
     "Karl-Anthony Towns",
-    "Neemias Queta",
-    "Alex Caruso",
+    "Ryan Rollins",
+    "Collin Gillespie",
     "Andrew Nembhard",
     "Daniel Gafford",
     "Kawhi Leonard"
@@ -209,53 +209,46 @@
      "add": "Reed Sheppard",
      "g": 4,
      "gDrop": 3,
-     "gain": 0.3728170116982419
-    },
-    {
-     "drop": "Neemias Queta",
-     "add": "Santi Aldama",
-     "g": 4,
-     "gDrop": 3,
-     "gain": 0.3855209576300087
+     "gain": 0.5233743432867728
     },
     {
      "drop": "Andrew Nembhard",
-     "add": "Ryan Rollins",
+     "add": "Santi Aldama",
      "g": 4,
      "gDrop": 4,
-     "gain": 0.18874550567732218
+     "gain": 0.1344943156682099
     }
    ],
-   "nMoves": 3,
-   "before": 5.3689007127406505,
-   "after": 6.315984187746223,
+   "nMoves": 2,
+   "before": 5.646187244988091,
+   "after": 6.304055903943074,
    "perBefore": {
-    "FG": 0.7243442761466257,
-    "FT": 0.1994893733853983,
-    "TPM": 0.11670944290346696,
-    "REB": 0.835032927158001,
-    "AST": 0.3962247422275894,
-    "STL": 0.5186881361343861,
-    "BLK": 0.472359526745052,
-    "TO": 0.6431476494675414,
-    "DD": 0.658264146820672,
-    "PTS": 0.18972587858040812,
-    "TW": 0.6149146131715102
+    "FG": 0.5556925820165444,
+    "FT": 0.22444526654578556,
+    "TPM": 0.4960418405815433,
+    "REB": 0.7916720807747472,
+    "AST": 0.7968940354073064,
+    "STL": 0.645796221378202,
+    "BLK": 0.26686328761737205,
+    "TO": 0.30628237019735544,
+    "DD": 0.6302006368780604,
+    "PTS": 0.4465386268945857,
+    "TW": 0.48576029669658927
    },
-   "winBefore": 0.42858239548446314,
-   "winAfter": 0.6749578910452921,
+   "winBefore": 0.5033452553243492,
+   "winAfter": 0.6762664805224045,
    "per": {
-    "FG": 0.5838877678752373,
-    "FT": 0.17954457256280243,
-    "TPM": 0.5813824087825674,
-    "REB": 0.8921477040001659,
-    "AST": 0.6393622320095984,
-    "STL": 0.7433662793315668,
-    "BLK": 0.5448998574995465,
-    "TO": 0.4439563114822511,
-    "DD": 0.6071589413761085,
-    "PTS": 0.49159354483589274,
-    "TW": 0.6086845679904856
+    "FG": 0.5152561589150162,
+    "FT": 0.17978521600524577,
+    "TPM": 0.7104562695719487,
+    "REB": 0.9001736245639345,
+    "AST": 0.7502000584494217,
+    "STL": 0.7358558854502253,
+    "BLK": 0.46603998645684386,
+    "TO": 0.332752740024019,
+    "DD": 0.6168316062986452,
+    "PTS": 0.5685651302748685,
+    "TW": 0.5281392279329047
    },
    "roster": [
     "Donovan Mitchell",
@@ -267,9 +260,9 @@
     "Peyton Watson",
     "Miles Bridges",
     "Karl-Anthony Towns",
-    "Santi Aldama",
-    "Alex Caruso",
     "Ryan Rollins",
+    "Collin Gillespie",
+    "Santi Aldama",
     "Daniel Gafford",
     "Kawhi Leonard"
    ],
@@ -284,15 +277,15 @@
    "me": false,
    "rec": "6-5-0",
    "pct": 0.5454545454545454,
-   "ec": 0.5876832283192445,
-   "W": 136.368,
-   "L": 99.3906,
-   "T": 6.2414,
-   "p4": 0.8202,
-   "champ": 0.2065,
-   "avgRank": 2.6752,
-   "p4v2": 0.8506,
-   "Wv2": 138.2305,
+   "ec": 0.588057726010081,
+   "W": 137.2092,
+   "L": 98.6029,
+   "T": 6.1879,
+   "p4": 0.8361,
+   "champ": 0.2079,
+   "avgRank": 2.5675,
+   "p4v2": 0.8611,
+   "Wv2": 138.8167,
    "projRank": 1,
    "curRank": 3
   },
@@ -302,14 +295,14 @@
    "me": false,
    "rec": "6-5-0",
    "pct": 0.5454545454545454,
-   "ec": 0.5351084922251751,
+   "ec": 0.5356526151102033,
    "W": 125.4855,
    "L": 109.4222,
    "T": 7.0923,
    "p4": 0.5958,
-   "champ": 0.1615,
-   "avgRank": 4.1835,
-   "p4v2": 0.6145,
+   "champ": 0.16,
+   "avgRank": 4.1853,
+   "p4v2": 0.6147,
    "Wv2": 125.5364,
    "projRank": 2,
    "curRank": 4
@@ -320,14 +313,14 @@
    "me": false,
    "rec": "8-3-0",
    "pct": 0.7272727272727273,
-   "ec": 0.49748511668859086,
+   "ec": 0.4982512380575499,
    "W": 124.7895,
    "L": 110.3363,
    "T": 6.8742,
-   "p4": 0.5783,
-   "champ": 0.1725,
-   "avgRank": 4.3034,
-   "p4v2": 0.4861,
+   "p4": 0.5785,
+   "champ": 0.1747,
+   "avgRank": 4.3042,
+   "p4v2": 0.486,
    "Wv2": 120.9264,
    "projRank": 3,
    "curRank": 1
@@ -338,14 +331,14 @@
    "me": false,
    "rec": "5-5-1",
    "pct": 0.5,
-   "ec": 0.5545582284731452,
+   "ec": 0.5551090211419609,
    "W": 124.2529,
    "L": 109.5991,
    "T": 8.148,
-   "p4": 0.5807,
-   "champ": 0.2123,
-   "avgRank": 4.3234,
-   "p4v2": 0.3728,
+   "p4": 0.5806,
+   "champ": 0.2114,
+   "avgRank": 4.3262,
+   "p4v2": 0.3729,
    "Wv2": 115.8456,
    "projRank": 4,
    "curRank": 6
@@ -356,14 +349,14 @@
    "me": false,
    "rec": "5-5-1",
    "pct": 0.5,
-   "ec": 0.503632953671039,
+   "ec": 0.5041040287676057,
    "W": 119.1733,
    "L": 114.9986,
    "T": 7.8281,
-   "p4": 0.4254,
-   "champ": 0.0837,
-   "avgRank": 5.1805,
-   "p4v2": 0.4692,
+   "p4": 0.4274,
+   "champ": 0.0848,
+   "avgRank": 5.1781,
+   "p4v2": 0.4691,
    "Wv2": 119.9479,
    "projRank": 5,
    "curRank": 5
@@ -374,13 +367,13 @@
    "me": false,
    "rec": "3-8-0",
    "pct": 0.2727272727272727,
-   "ec": 0.5177404639636045,
+   "ec": 0.5183697744070992,
    "W": 116.4817,
    "L": 118.4888,
    "T": 7.0295,
-   "p4": 0.3708,
-   "champ": 0.0372,
-   "avgRank": 5.61,
+   "p4": 0.3704,
+   "champ": 0.037,
+   "avgRank": 5.6102,
    "p4v2": 0.3746,
    "Wv2": 116.0686,
    "projRank": 6,
@@ -392,14 +385,14 @@
    "me": false,
    "rec": "8-3-0",
    "pct": 0.7272727272727273,
-   "ec": 0.47103887169628217,
+   "ec": 0.47163093483818297,
    "W": 111.139,
    "L": 123.6911,
    "T": 7.1699,
-   "p4": 0.225,
-   "champ": 0.0591,
-   "avgRank": 6.5444,
-   "p4v2": 0.2397,
+   "p4": 0.2254,
+   "champ": 0.0603,
+   "avgRank": 6.5372,
+   "p4v2": 0.2406,
    "Wv2": 111.1123,
    "projRank": 7,
    "curRank": 2
@@ -410,19 +403,19 @@
    "me": true,
    "rec": "5-6-0",
    "pct": 0.45454545454545453,
-   "ec": 0.4642829088156177,
-   "W": 109.5439,
-   "L": 125.0341,
-   "T": 7.422,
-   "p4": 0.2031,
-   "champ": 0.038,
-   "avgRank": 6.7538,
-   "p4v2": 0.2375,
-   "Wv2": 110.5503,
+   "ec": 0.4589415521321397,
+   "W": 108.7562,
+   "L": 125.8753,
+   "T": 7.3685,
+   "p4": 0.1854,
+   "champ": 0.0351,
+   "avgRank": 6.8806,
+   "p4v2": 0.2247,
+   "Wv2": 110.015,
    "projRank": 8,
    "curRank": 8,
-   "planW": 125.466125,
-   "planRank": 3
+   "planW": 124.285875,
+   "planRank": 4
   },
   {
    "abbr": "GGAM",
@@ -430,14 +423,14 @@
    "me": false,
    "rec": "5-6-0",
    "pct": 0.45454545454545453,
-   "ec": 0.4360465453785015,
+   "ec": 0.4366286620457988,
    "W": 105.9888,
    "L": 128.6499,
    "T": 7.3613,
-   "p4": 0.1407,
-   "champ": 0.0204,
-   "avgRank": 7.3122,
-   "p4v2": 0.2415,
+   "p4": 0.1409,
+   "champ": 0.0201,
+   "avgRank": 7.3046,
+   "p4v2": 0.2422,
    "Wv2": 110.8364,
    "projRank": 9,
    "curRank": 7
@@ -448,14 +441,14 @@
    "me": false,
    "rec": "3-8-0",
    "pct": 0.2727272727272727,
-   "ec": 0.43242319076879854,
+   "ec": 0.4332544474893775,
    "W": 100.8417,
    "L": 134.4536,
    "T": 6.7047,
-   "p4": 0.06,
-   "champ": 0.0088,
-   "avgRank": 8.1136,
-   "p4v2": 0.1135,
+   "p4": 0.0595,
+   "champ": 0.0087,
+   "avgRank": 8.1061,
+   "p4v2": 0.1141,
    "Wv2": 104.332,
    "projRank": 10,
    "curRank": 10
@@ -467,95 +460,95 @@
   "opp": "KOO",
   "rosterMode": "plan",
   "lev": {
-   "FG": 11.162756404240325,
-   "FT": 7.868045785621591,
-   "TPM": 0.001693152485382554,
-   "REB": 0.012253620102830026,
-   "AST": 0.02288702354950624,
-   "STL": 0.04633865909512276,
-   "BLK": 0.01790956562039422,
-   "TO": 0.03633756632667429,
-   "DD": 0.09822293449610586,
-   "PTS": 0.0034923086118412946,
-   "TW": 0.07830486674471464
+   "FG": 11.645998543532027,
+   "FT": 7.636034785848743,
+   "TPM": 0.010952681476696976,
+   "REB": 0.00035003491746225134,
+   "AST": 0.0180253722572331,
+   "STL": 0.045445160159286596,
+   "BLK": 0.0003593263817472912,
+   "TO": 0.035530151304102905,
+   "DD": 0.0844026054747163,
+   "PTS": 0.0013921888518351447,
+   "TW": 0.04890084791631969
   },
   "rank": [
    {
-    "name": "Karl-Anthony Towns",
-    "score": 0.4044733531516878
-   },
-   {
     "name": "Kawhi Leonard",
-    "score": 0.35266402785119516
-   },
-   {
-    "name": "Ivica Zubac",
-    "score": 0.3403195330128047
+    "score": 0.21209193564916182
    },
    {
     "name": "Donovan Mitchell",
-    "score": 0.3333789411184789
+    "score": 0.20661839408297136
+   },
+   {
+    "name": "Karl-Anthony Towns",
+    "score": 0.18659129301921884
    },
    {
     "name": "Ajay Mitchell",
-    "score": 0.3251000012085885
+    "score": 0.18166103270889217
    },
    {
     "name": "Josh Hart",
-    "score": 0.3232155586611017
-   },
-   {
-    "name": "Dejounte Murray",
-    "score": 0.2834589113975132
-   },
-   {
-    "name": "Neemias Queta",
-    "score": 0.2706004513342713
+    "score": 0.16635307835198068
    },
    {
     "name": "Andrew Nembhard",
-    "score": 0.26595412434946014
+    "score": 0.1660971145150224
+   },
+   {
+    "name": "Dejounte Murray",
+    "score": 0.15635195000205124
+   },
+   {
+    "name": "Collin Gillespie",
+    "score": 0.1346290809116662
+   },
+   {
+    "name": "Ryan Rollins",
+    "score": 0.13287298529628408
+   },
+   {
+    "name": "Ivica Zubac",
+    "score": 0.12004707022617139
    },
    {
     "name": "Miles Bridges",
-    "score": 0.2563531973150217
-   },
-   {
-    "name": "Daniel Gafford",
-    "score": 0.2513654390880974
-   },
-   {
-    "name": "Alex Caruso",
-    "score": 0.23939650647409771
-   },
-   {
-    "name": "Peyton Watson",
-    "score": 0.2086351524949502
+    "score": 0.11853110979664915
    },
    {
     "name": "Toumani Camara",
-    "score": 0.1907002012217101
+    "score": 0.09691819294813814
+   },
+   {
+    "name": "Daniel Gafford",
+    "score": 0.08784751516611916
+   },
+   {
+    "name": "Peyton Watson",
+    "score": 0.0781024957449779
    }
   ],
   "days": [
    {
     "date": "2026-11-02",
-    "n": 12,
+    "n": 11,
     "start": [
      {
       "slot": "PG",
+      "name": "Ryan Rollins",
+      "team": "MIL"
+     },
+     {
+      "slot": "SG",
       "name": "Andrew Nembhard",
       "team": "IND"
      },
      {
-      "slot": "SG",
-      "name": "Dejounte Murray",
-      "team": "NOR"
-     },
-     {
       "slot": "SF",
-      "name": "Peyton Watson",
-      "team": "CLE"
+      "name": "Toumani Camara",
+      "team": "POR"
      },
      {
       "slot": "PF",
@@ -564,13 +557,13 @@
      },
      {
       "slot": "C",
-      "name": "Ivica Zubac",
-      "team": "IND"
+      "name": "Karl-Anthony Towns",
+      "team": "NYK"
      },
      {
       "slot": "G",
-      "name": "Donovan Mitchell",
-      "team": "CLE"
+      "name": "Collin Gillespie",
+      "team": "PHO"
      },
      {
       "slot": "F",
@@ -579,32 +572,29 @@
      },
      {
       "slot": "UTIL",
+      "name": "Dejounte Murray",
+      "team": "NOR"
+     },
+     {
+      "slot": "UTIL",
+      "name": "Donovan Mitchell",
+      "team": "CLE"
+     },
+     {
+      "slot": "UTIL",
       "name": "Ajay Mitchell",
       "team": "OKC"
-     },
-     {
-      "slot": "UTIL",
-      "name": "Neemias Queta",
-      "team": "BOS"
-     },
-     {
-      "slot": "UTIL",
-      "name": "Karl-Anthony Towns",
-      "team": "NYK"
      }
     ],
     "bench": [
      {
       "name": "Daniel Gafford",
       "team": "DAL"
-     },
-     {
-      "name": "Toumani Camara",
-      "team": "POR"
      }
     ],
     "out": [
-     "Alex Caruso",
+     "Ivica Zubac",
+     "Peyton Watson",
      "Kawhi Leonard"
     ],
     "idle": []
@@ -625,8 +615,8 @@
      "Peyton Watson",
      "Miles Bridges",
      "Karl-Anthony Towns",
-     "Neemias Queta",
-     "Alex Caruso",
+     "Ryan Rollins",
+     "Collin Gillespie",
      "Andrew Nembhard",
      "Daniel Gafford",
      "Kawhi Leonard"
@@ -634,22 +624,22 @@
    },
    {
     "date": "2026-11-04",
-    "n": 13,
+    "n": 11,
     "start": [
      {
       "slot": "PG",
+      "name": "Ryan Rollins",
+      "team": "MIL"
+     },
+     {
+      "slot": "SG",
       "name": "Andrew Nembhard",
       "team": "IND"
      },
      {
-      "slot": "SG",
-      "name": "Dejounte Murray",
-      "team": "NOR"
-     },
-     {
       "slot": "SF",
-      "name": "Peyton Watson",
-      "team": "CLE"
+      "name": "Toumani Camara",
+      "team": "POR"
      },
      {
       "slot": "PF",
@@ -658,13 +648,13 @@
      },
      {
       "slot": "C",
-      "name": "Ivica Zubac",
-      "team": "IND"
+      "name": "Karl-Anthony Towns",
+      "team": "NYK"
      },
      {
       "slot": "G",
-      "name": "Donovan Mitchell",
-      "team": "CLE"
+      "name": "Collin Gillespie",
+      "team": "PHO"
      },
      {
       "slot": "F",
@@ -673,43 +663,42 @@
      },
      {
       "slot": "UTIL",
+      "name": "Dejounte Murray",
+      "team": "NOR"
+     },
+     {
+      "slot": "UTIL",
+      "name": "Donovan Mitchell",
+      "team": "CLE"
+     },
+     {
+      "slot": "UTIL",
       "name": "Ajay Mitchell",
       "team": "OKC"
-     },
-     {
-      "slot": "UTIL",
-      "name": "Neemias Queta",
-      "team": "BOS"
-     },
-     {
-      "slot": "UTIL",
-      "name": "Karl-Anthony Towns",
-      "team": "NYK"
      }
     ],
     "bench": [
      {
       "name": "Daniel Gafford",
       "team": "DAL"
-     },
-     {
-      "name": "Alex Caruso",
-      "team": "OKC"
-     },
-     {
-      "name": "Toumani Camara",
-      "team": "POR"
      }
     ],
     "out": [
+     "Ivica Zubac",
+     "Peyton Watson",
      "Kawhi Leonard"
     ],
     "idle": []
    },
    {
     "date": "2026-11-05",
-    "n": 1,
+    "n": 2,
     "start": [
+     {
+      "slot": "PG",
+      "name": "Collin Gillespie",
+      "team": "PHO"
+     },
      {
       "slot": "SF",
       "name": "Miles Bridges",
@@ -727,8 +716,7 @@
      "Toumani Camara",
      "Peyton Watson",
      "Karl-Anthony Towns",
-     "Neemias Queta",
-     "Alex Caruso",
+     "Ryan Rollins",
      "Andrew Nembhard",
      "Daniel Gafford",
      "Kawhi Leonard"
@@ -736,12 +724,12 @@
    },
    {
     "date": "2026-11-06",
-    "n": 8,
+    "n": 6,
     "start": [
      {
       "slot": "PG",
-      "name": "Alex Caruso",
-      "team": "OKC"
+      "name": "Ryan Rollins",
+      "team": "MIL"
      },
      {
       "slot": "SG",
@@ -754,14 +742,9 @@
       "team": "POR"
      },
      {
-      "slot": "PF",
-      "name": "Peyton Watson",
-      "team": "CLE"
-     },
-     {
       "slot": "C",
-      "name": "Neemias Queta",
-      "team": "BOS"
+      "name": "Daniel Gafford",
+      "team": "DAL"
      },
      {
       "slot": "G",
@@ -772,15 +755,11 @@
       "slot": "UTIL",
       "name": "Donovan Mitchell",
       "team": "CLE"
-     },
-     {
-      "slot": "UTIL",
-      "name": "Daniel Gafford",
-      "team": "DAL"
      }
     ],
     "bench": [],
     "out": [
+     "Peyton Watson",
      "Kawhi Leonard"
     ],
     "idle": [
@@ -788,17 +767,18 @@
      "Josh Hart",
      "Miles Bridges",
      "Karl-Anthony Towns",
+     "Collin Gillespie",
      "Andrew Nembhard"
     ]
    },
    {
     "date": "2026-11-07",
-    "n": 10,
+    "n": 8,
     "start": [
      {
       "slot": "PG",
-      "name": "Donovan Mitchell",
-      "team": "CLE"
+      "name": "Andrew Nembhard",
+      "team": "IND"
      },
      {
       "slot": "SG",
@@ -812,45 +792,38 @@
      },
      {
       "slot": "PF",
-      "name": "Peyton Watson",
-      "team": "CLE"
-     },
-     {
-      "slot": "C",
-      "name": "Ivica Zubac",
-      "team": "IND"
-     },
-     {
-      "slot": "G",
-      "name": "Alex Caruso",
-      "team": "OKC"
-     },
-     {
-      "slot": "F",
       "name": "Miles Bridges",
       "team": "PHO"
      },
      {
+      "slot": "C",
+      "name": "Karl-Anthony Towns",
+      "team": "NYK"
+     },
+     {
+      "slot": "G",
+      "name": "Collin Gillespie",
+      "team": "PHO"
+     },
+     {
       "slot": "UTIL",
-      "name": "Andrew Nembhard",
-      "team": "IND"
+      "name": "Donovan Mitchell",
+      "team": "CLE"
      },
      {
       "slot": "UTIL",
       "name": "Ajay Mitchell",
       "team": "OKC"
-     },
-     {
-      "slot": "UTIL",
-      "name": "Karl-Anthony Towns",
-      "team": "NYK"
      }
     ],
     "bench": [],
-    "out": [],
+    "out": [
+     "Ivica Zubac",
+     "Peyton Watson"
+    ],
     "idle": [
      "Dejounte Murray",
-     "Neemias Queta",
+     "Ryan Rollins",
      "Daniel Gafford",
      "Kawhi Leonard"
     ]
@@ -861,6 +834,11 @@
     "start": [
      {
       "slot": "PG",
+      "name": "Ryan Rollins",
+      "team": "MIL"
+     },
+     {
+      "slot": "SG",
       "name": "Dejounte Murray",
       "team": "NOR"
      },
@@ -868,11 +846,6 @@
       "slot": "C",
       "name": "Daniel Gafford",
       "team": "DAL"
-     },
-     {
-      "slot": "UTIL",
-      "name": "Neemias Queta",
-      "team": "BOS"
      }
     ],
     "bench": [],
@@ -886,7 +859,7 @@
      "Peyton Watson",
      "Miles Bridges",
      "Karl-Anthony Towns",
-     "Alex Caruso",
+     "Collin Gillespie",
      "Andrew Nembhard",
      "Kawhi Leonard"
     ]

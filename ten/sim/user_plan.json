@@ -48,10 +48,14 @@
   "Dejounte Murray"
  ],
  "coreNote": "사용자 지정 상위 10명 고정(방출 금지). 로스터에 없는 선수는 자동 제외.",
- "headline": "Gobert ↔ Nembhard·Bey → Gafford 반영 완료 · Kawhi IR 11/23",
+ "headline": "Zubac·Watson 3주차 결장 가정 · Kawhi IR 11/23",
  "notes": {
   "GTD": "Gobert ↔ Andrew Nembhard(IYH) 트레이드·Saddiq Bey → Daniel Gafford 반영 완료. Kawhi 무릎 IR · ESPN 예상 복귀 11/23 → 복귀 시 가치 최하위 선수 자동 방출. Ajay Mitchell은 Jalen Williams 역할 승계(스탯 상향 가정).",
   "TBG": "Giannis·Randle 영입(Towns·Paul Reed 이적). Edwards IR.",
   "IYH": "Gobert 영입(Nembhard 이적). Jaren Jackson Jr. IR."
+ },
+ "returnOverrides": {
+  "Ivica Zubac": "2026-11-09",
+  "Peyton Watson": "2026-11-09"
  }
 }

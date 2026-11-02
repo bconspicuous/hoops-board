@@ -22,6 +22,7 @@ r['streamOverride']={'GTD':{str(w):0 for w in range(0,23)}}; json.dump(r,open('r
   MAXW=2 PLANOUT=stream_plan_c2.json node stream_plan.js > out/plan_c2.log 2>&1 &
   CORE_NAMES= MAXW=3 PLANOUT=stream_plan_free.json node stream_plan.js > out/plan_free.log 2>&1 &
   ROSTERS=rosters_espn.json WKOUT=wk_now.json node wk2add.js > out/wk_now.log 2>&1 &
+  W_OFFSET=1 ROSTERS=rosters_plan.json WKOUT=wk_next.json node wk2add.js > out/wk_next.log 2>&1 &
   wait )
 grep -E "season|acquisitions" out/plan_rec.log
 ROSTERS=rosters_plan.json node nextweek.js | tail -1

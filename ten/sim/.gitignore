@@ -20,3 +20,4 @@ out/*.log
 out/league10.html
 nextweek.json
 lineup_week.json
+wk_next.json

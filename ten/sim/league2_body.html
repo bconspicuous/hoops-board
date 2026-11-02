@@ -143,6 +143,11 @@
       <div class="tbl"><table id="lu"></table></div>
       <p class="note" id="lu-note"></p>
     </section>
+    <section class="panel" id="fa-panel">
+      <div class="phead"><h2 id="fa-h">FA 영입 후보</h2><span class="note" id="fa-sub"></span></div>
+      <div class="tbl"><table id="faw"></table></div>
+      <p class="note">ESPN 최신 무소속 선수 기준. 선수별로 가장 효과가 큰 방출 대상(상위 10명 고정 제외)과 짝지어 그 주 상대 기준으로 평가. 경기 수 = 그 주 출전 가능 경기(부상 복귀일 반영).</p>
+    </section>
     <section class="panel"><h2>리그 전체 매치업</h2><div class="mu" id="w1-all"></div></section>
   </div>
 
@@ -588,7 +593,16 @@
         <td style="white-space:normal">${x.bench.length ? x.bench.map(b => `<b>${esc(b.name)}</b>`).join(", ") : '<span class="note">—</span>'}</td><td>${x.out.map(esc).join(", ") || '<span class="note">—</span>'}</td></tr>`; }).join("") + `</tbody>`;
     $("lu-note").textContent = `10명 초과일(강조)은 매치업 기여도 순으로 선발. 기여도 = 이번 주 상대와 박빙인 카테고리일수록 가중(포기 카테고리는 낮게). 우선순위: ${LW.rank.map(r => r.name.split(" ").slice(-1)[0]).join(" > ")}. 출전 직전 부상 소식(DTD)은 ESPN에서 확인 후 조정.`;
   }
-  renderInj(); renderStream(); renderKS(); renderLineup();
+  function renderFA() {
+    const F = D.faWeek; if (!F || !F.list.length) { $("fa-panel").hidden = true; return; }
+    $("fa-h").textContent = `FA 영입 후보 · ${F.week}주차 vs ${F.opp}`;
+    $("fa-sub").textContent = `현재 로스터 기대 카테고리 ${F.base.e.toFixed(2)}개 · 승리 ${pct(F.base.win)}`;
+    $("faw").innerHTML = `<thead><tr><th>영입</th><th>NBA</th><th class="r">경기</th><th>방출</th><th class="r">기대 카테고리</th><th class="r">승리 확률</th><th>주요 변화(%p)</th></tr></thead><tbody>` +
+      F.list.map(x => { const m = x.moves[0], ch = Object.entries(x.dPer).filter(([, v]) => Math.abs(v) >= 0.04).sort((a, b) => Math.abs(b[1]) - Math.abs(a[1])).slice(0, 4);
+        return `<tr><td><b>${esc(m.add)}</b></td><td>${m.team}</td><td class="r num">${m.g}</td><td>${esc(m.drop)}</td><td class="r num">${x.e.toFixed(2)} <span class="note">${x.dE >= 0 ? "+" : ""}${x.dE.toFixed(2)}</span></td><td class="r num">${pct(x.win)} <span class="note">${x.dW >= 0 ? "+" : ""}${(x.dW * 100).toFixed(0)}</span></td>
+          <td style="white-space:normal">${ch.map(([c, v]) => `<span class="${v > 0 ? "up2" : "down2"}">${LAB[c]} ${v > 0 ? "+" : ""}${(v * 100).toFixed(0)}</span>`).join(" · ") || '<span class="note">—</span>'}</td></tr>`; }).join("") + `</tbody>`;
+  }
+  renderInj(); renderStream(); renderKS(); renderLineup(); renderFA();
   renderPower(); renderTeam(); renderHeat(); renderWeek1(); renderMethod(); renderProj(); renderRadar(); setView(view);
 })();
 </script>
