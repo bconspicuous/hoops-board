@@ -122,7 +122,7 @@ const tradeEval = { give, get, me: { ecNo: ecNo[ME], ec: ec[ME], s0: SEA0[ME], s
 // ---------- projection table (300 players)
 const owner = {}; TEAMS.forEach((t, i) => { POST[i].forEach(id => owner[id] = t.abbr); t.ir.forEach(id => owner[id] = t.abbr + ' IR'); });
 const proj = PJ.players.map((p, id) => ({ id, n: p.name, t: p.abbr, el: p.elig, r: p.espnRank, vr: P[id].vrank, v: +P[id].value.toFixed(2), gp: p.gp, m: p.method, ns: p.n,
-  st: P[id].status, own: owner[id] || 'FA', e: p.espn, rg: p.reg || null, w: p.wReg ? p.wReg.PTS : null, wAll: p.wReg || null, b: p.blend, a: p.actual || null, f: p.final, dd: p.DDg, tw: +(p.TWg * 82).toFixed(1), h: p.hist, nc: p.ncaa || null }));
+  st: P[id].status, own: owner[id] || 'FA', e: p.espn, rg: p.reg || null, w: p.wReg ? p.wReg.PTS : null, wAll: p.wReg || null, b: p.blend, a: p.actual || null, f: P[id].actualLine ? { ...p.final, ...P[id].f } : p.final, m2: P[id].actualLine ? '2026-27 실제' : undefined, dd: p.DDg, tw: +(p.TWg * 82).toFixed(1), h: p.hist, nc: p.ncaa || null }));
 const out = { asOf: RR.asOf || '2026-10-26T13:42+09:00', cats: CATS, me: ME, doo: DOO, teams, week1: curOut || week1Out, period: (RR.current && RR.current.period) || 1, week1Final: week1Out, plan, planB, tradeEval, proj, summary: PJ.summary,
   sched: { starts: START.slice(0, 24), pairs: SCHED.map(w => w.map(([a, b]) => [a, b])) } };
 fs.writeFileSync(W + (process.env.OUTF || 'league2_out.json'), JSON.stringify(out));

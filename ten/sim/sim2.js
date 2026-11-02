@@ -19,6 +19,13 @@ const O = new Set(R.status.O), DTD = new Set(R.status.DTD);
 P.forEach(p => { p.status = O.has(p.name) ? 'O' : DTD.has(p.name) ? 'DTD' : ''; });
 // role boost (user): a player inherits another player's per-game line (e.g. Ajay Mitchell takes Jalen Williams's role)
 for (const [to, from] of Object.entries(R.boost || {})) if (BY[to] && BY[from]) { BY[to].f = { ...BY[from].f }; BY[to].DDg = BY[from].DDg; BY[to].boosted = from; }
+// user: these players are projected with their 2026-27 actual per-game line (ESPN live), not the blended projection
+if ((R.useActual || []).length && fs.existsSync(W + 'actual_espn_live.csv')) {
+  const L = fs.readFileSync(W + 'actual_espn_live.csv', 'utf8').trim().split(/\r?\n/), H = L[0].split(',');
+  L.slice(1).forEach(line => { const c = line.split(','), r = Object.fromEntries(H.map((h, i) => [h, c[i]])); const p = BY[r.Player];
+    if (!p || !R.useActual.includes(r.Player) || !(+r.G > 0)) return;
+    p.f = { ...p.f, MP: +r.MP, FGM: +r.FG, FGA: +r.FGA, TPM: +r['3P'], FTM: +r.FT, FTA: +r.FTA, REB: +r.TRB, AST: +r.AST, STL: +r.STL, BLK: +r.BLK, TO: +r.TOV, PTS: +r.PTS }; p.actualLine = +r.G; });
+}
 // value (lineup order): z-sum of 11 categories, 50% per game + 50% season total, on the top-130 pool
 function values() {
   const raw = (p, tot) => { const k = tot ? p.gp : 1, f = p.f;
