@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-03T05:41+09:00",
+ "asOf": "2026-11-03T06:56+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -233,7 +233,7 @@
    "status": "Day-To-Day",
    "date": "2026-11-02T18:51Z",
    "type": "day-to-day",
-   "returnDate": "2026-11-04",
+   "returnDate": "2026-11-02",
    "detail": null,
    "side": "Left",
    "injury": "Knee",
@@ -368,6 +368,34 @@
    "long": "Duren suffered the hamstring injury in Friday's win over Miami and is set to miss an extended period. Paul Reed is expected to join the starting five and carries significant fantasy value until Duren returns. John Collins and Tolu Smith are also candidates to see a bump in minutes in Duren's stead."
   },
   {
+   "player": "Brandon Williams",
+   "team": "GS",
+   "status": "Day-To-Day",
+   "date": "2026-11-02T21:09Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-02",
+   "detail": "Bruise",
+   "side": "Left",
+   "injury": "Quadriceps",
+   "fantasyStatus": "GTD",
+   "short": "Williams (quadriceps) is listed as questionable for Monday's game against the Suns.",
+   "long": "Williams is dealing with a left quadriceps contusion and could sit out the back end of this back-to-back set. If the 26-year-old guard is unable to suit up, Will Richard and De'Anthony Melton could see increased burn."
+  },
+  {
+   "player": "Al Horford",
+   "team": "GS",
+   "status": "Out",
+   "date": "2026-11-02T21:07Z",
+   "type": "out",
+   "returnDate": "2026-11-05",
+   "detail": null,
+   "side": null,
+   "injury": "Rest",
+   "fantasyStatus": "OUT",
+   "short": "Horford will be rested Monday against the Suns.",
+   "long": "As expected, Horford will sit out the second leg of this back-to-back set. Fortunately for the Warriors, Draymond Green (back) is set to return to the lineup."
+  },
+  {
    "player": "Gui Santos",
    "team": "GS",
    "status": "Out",
@@ -380,34 +408,6 @@
    "fantasyStatus": "OUT",
    "short": "Santos did not play in the second half of Sunday's 124-112 win over the Clippers due to a knee injury and will not play against the Suns on Monday, Danny Emerman of SFStandard.com reports.",
    "long": "Santos has been working through a knee injury that he picked up in preseason action in mid-October, and he was initially tagged as questionable for Sunday's game before being cleared to play. Head coach Steve Kerr told reporters after the game that the Warriors need \"to get [Santos] right,\" so it's possible that the fifth-year forward is facing an extended absence beyond Monday's contest. Georges Niang and Al Horford both figure to see an uptick in playing time in Santos' absence."
-  },
-  {
-   "player": "Draymond Green",
-   "team": "GS",
-   "status": "Day-To-Day",
-   "date": "2026-11-02T14:20Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-02",
-   "detail": null,
-   "side": null,
-   "injury": "Rest",
-   "fantasyStatus": "GTD",
-   "short": "Green (back) is out for Sunday's game against the Clippers.",
-   "long": "Green will sit out the first leg of this back-to-back set, but he should return for Monday's game against the Suns. Graham Ike, Al Horford and Charles Bassey will help pick up the slack with Green inactive Sunday."
-  },
-  {
-   "player": "Stephen Curry",
-   "team": "GS",
-   "status": "Day-To-Day",
-   "date": "2026-11-02T14:20Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-02",
-   "detail": null,
-   "side": null,
-   "injury": "Rest",
-   "fantasyStatus": "GTD",
-   "short": "Curry (rest) won't play Sunday against the Clippers, Brett Siegel of ClutchPoints.com reports.",
-   "long": "Sunday's game will be the first of a back-to-back set, so Curry will receive a maintenance day, but he should return for Monday's meeting with the Suns. De'Anthony Melton could draw the start sans Curry, and Brandin Podziemski will be more involved in the offense."
   },
   {
    "player": "Kristaps Porzingis",
@@ -634,6 +634,34 @@
    "long": "Given the tricky nature of hamstring injuries, the Pacers will likely take their time bringing Haliburton back to the court, so don't be surprised if his absence extends beyond this two-week window. Andrew Nembhard (neck) and Pascal Siakam should each get a usage bump as they take over more of the playmaking duties sans Haliburton and there will be more minutes available for Quenton Jackson."
   },
   {
+   "player": "Rui Hachimura",
+   "team": "LAC",
+   "status": "Out",
+   "date": "2026-11-02T21:19Z",
+   "type": "out",
+   "returnDate": "2026-11-04",
+   "detail": "Bruise",
+   "side": "Left",
+   "injury": "Quadriceps",
+   "fantasyStatus": "OUT",
+   "short": "Hachimura (quadriceps) has been ruled out for Monday's game against the Raptors.",
+   "long": "The 28-year-old forward will miss the second leg of this back-to-back set due to a left quadriceps contusion, and his next chance to play will come Wednesday against the Heat. With Hachimura and Derrick Jones both sidelined, Kobe Sanders, Baba Miller and Gradey Dick are all candidates for increased playing time, especially if Max Strus (foot) operates under a minutes restriction in his regular-season debut with the Clippers."
+  },
+  {
+   "player": "Derrick Jones Jr.",
+   "team": "LAC",
+   "status": "Out",
+   "date": "2026-11-02T21:12Z",
+   "type": "out",
+   "returnDate": "2026-11-04",
+   "detail": "Soreness",
+   "side": "Right",
+   "injury": "Knee",
+   "fantasyStatus": "OUT",
+   "short": "Jones (knee) has been ruled out for Monday's game against the Raptors.",
+   "long": "Jones exited Sunday's loss to the Warriors and did not return due to a right knee injury. He's now listed on the injury report with right knee soreness, and the veteran forward's next chance to play will come Wednesday against Miami. In the meantime, Kobe Sanders, Baba Miller and Gradey Dick are candidates for increased playing time."
+  },
+  {
    "player": "Yanic Konan Niederhauser",
    "team": "LAC",
    "status": "Out",
@@ -662,34 +690,6 @@
    "long": "Ingram appears to be making steady progress after missing the opening run of the 2026-27 season through a partial Achilles tear, although it remains unclear when he'll be an option again for the Clippers and how quickly he'll regain playing time. Having worked with the G League squad Sunday, the versatile man is back with the main team, and his eventual return to action will restore a major piece of the rotation. However, while Ingram remains out, Darius Garland and Kris Dunn look set to carry most of the workload in upcoming contests."
   },
   {
-   "player": "Max Strus",
-   "team": "LAC",
-   "status": "Out",
-   "date": "2026-11-02T15:47Z",
-   "type": "out",
-   "returnDate": "2026-11-08",
-   "detail": "Plantar Fasciitis",
-   "side": "Right",
-   "injury": "Foot",
-   "fantasyStatus": "OUT",
-   "short": "The Clippers recalled Strus (foot) from the G League's San Diego Clippers on Sunday.",
-   "long": "Strus spent the weekend on assignment with San Diego as he continued to work in overcoming a partially torn plantar fascia that has prevented him from making his season debut. Following a considerable absence, he may initially play at the G League level, looking to get back on track before offering the NBA squad a reliable second-unit contributor of points and rebounds."
-  },
-  {
-   "player": "Derrick Jones Jr.",
-   "team": "LAC",
-   "status": "Day-To-Day",
-   "date": "2026-11-02T03:47Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-02",
-   "detail": null,
-   "side": "Right",
-   "injury": "Knee",
-   "fantasyStatus": "GTD",
-   "short": "Jones (right knee) has been ruled out for the rest of Sunday's game against the Clippers, Ohm Youngmisuk of ESPN.com reports.",
-   "long": "Jones appeared to sustain the injury in the third quarter of Sunday's game, and he'll be sidelined for the rest of the contest. Gradey Dick and Kobe Sanders are both in line for minutes the rest of the way in the absence of Jones, who will finish with nine points (3-11 FG, 1-5 3Pt, 2-2 FT), seven rebounds and one assist over 28 minutes."
-  },
-  {
    "player": "Bradley Beal",
    "team": "LAC",
    "status": "Out",
@@ -716,20 +716,6 @@
    "fantasyStatus": "OUT",
    "short": "Miller underwent surgery Wednesday to repair a torn left rotator cuff and will be re-evaluated in six months, per Law Murray of The Athletic.",
    "long": "It's a tough break for Miller, who had an opportunity to battle for a reserve role during training camp in the fall. The timeline for a return is likely to keep him on the shelf until after the All-Star break. Miller's extended stay on the sidelines gives Kobe Sanders a chance to crack the Clippers' rotation."
-  },
-  {
-   "player": "Ziaire Williams",
-   "team": "LAL",
-   "status": "Out",
-   "date": "2026-11-01T21:04Z",
-   "type": "out",
-   "returnDate": "2026-11-02",
-   "detail": null,
-   "side": "Left",
-   "injury": "Foot",
-   "fantasyStatus": "GTD",
-   "short": "Williams (foot) is out for Sunday's game against the Raptors.",
-   "long": "Williams will now miss his third consecutive outing as he recovers from a left foot injury. Jake LaRavia is in line for a second straight start, while Quentin Grimes and Sandro Mamukelashvili should continue to see an uptick in minutes off the bench."
   },
   {
    "player": "Adou Thiero",
@@ -1141,15 +1127,15 @@
    "player": "Dylan Cardwell",
    "team": "SAC",
    "status": "Out",
-   "date": "2026-11-02T19:13Z",
+   "date": "2026-11-02T20:34Z",
    "type": "out",
    "returnDate": "2026-11-02",
    "detail": "Strain",
    "side": "Left",
    "injury": "Calf",
    "fantasyStatus": "GTD",
-   "short": "Cardwell is probable for Monday's game against Dallas due to a left calf strain.",
-   "long": "Cardwell appears likely to suit up despite the calf issue. With Maxime Raynaud (knee) sidelined, Cardwell could have an opportunity for additional frontcourt minutes if he's cleared to play."
+   "short": "Cardwell (calf) has been downgraded to questionable for Monday's game against Dallas.",
+   "long": "Cardwell was initially listed as questionable before being upgraded to probable, though it's now less certain that he'll make his season debut. If the 24-year-old big man is cleared to play, there would be fewer minutes available for Jonathan Mogbo."
   },
   {
    "player": "Zach LaVine",
@@ -1234,6 +1220,20 @@
    "fantasyStatus": "OUT",
    "short": "Quaintance has been around the team but has not yet been cleared for basketball activities, Matt Guzman of SI.com reports.",
    "long": "The Spurs are expected to exercise extreme caution with the big man, as Quaintance suffered a torn ACL and meniscus with Arizona State in February 2025 before appearing in only four games with Kentucky last season due to severe complications and persistent swelling. The 19-year-old underwent a cleanup procedure on his meniscus in mid-July, and the Spurs will likely want him at 100 percent before ramping him up to basketball activities."
+  },
+  {
+   "player": "Scottie Barnes",
+   "team": "TOR",
+   "status": "Day-To-Day",
+   "date": "2026-11-02T21:23Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-02",
+   "detail": "Soreness",
+   "side": "Left",
+   "injury": "Hip",
+   "fantasyStatus": "GTD",
+   "short": "Barnes (hip) is listed as questionable for Monday's game against the Clippers.",
+   "long": "Barnes is dealing with left hip soreness and could miss the second leg of this back-to-back set. The star forward's absence would open up additional minutes for the likes of Collin Murray-Boyles, Jamison Battle and Allen Graves."
   },
   {
    "player": "Jakob Poeltl",
