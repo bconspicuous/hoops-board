@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-03T00:30+09:00",
+ "asOf": "2026-11-03T01:06+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -592,6 +592,20 @@
    "long": "Given the tricky nature of hamstring injuries, the Pacers will likely take their time bringing Haliburton back to the court, so don't be surprised if his absence extends beyond this two-week window. Andrew Nembhard (neck) and Pascal Siakam should each get a usage bump as they take over more of the playmaking duties sans Haliburton and there will be more minutes available for Quenton Jackson."
   },
   {
+   "player": "Max Strus",
+   "team": "LAC",
+   "status": "Out",
+   "date": "2026-11-02T15:47Z",
+   "type": "out",
+   "returnDate": "2026-11-08",
+   "detail": "Plantar Fasciitis",
+   "side": "Right",
+   "injury": "Foot",
+   "fantasyStatus": "OUT",
+   "short": "The Clippers recalled Strus (foot) from the G League's San Diego Clippers on Sunday.",
+   "long": "Strus spent the weekend on assignment with San Diego as he continued to work in overcoming a partially torn plantar fascia that has prevented him from making his season debut. Following a considerable absence, he may initially play at the G League level, looking to get back on track before offering the NBA squad a reliable second-unit contributor of points and rebounds."
+  },
+  {
    "player": "Derrick Jones Jr.",
    "team": "LAC",
    "status": "Day-To-Day",
@@ -604,20 +618,6 @@
    "fantasyStatus": "GTD",
    "short": "Jones (right knee) has been ruled out for the rest of Sunday's game against the Clippers, Ohm Youngmisuk of ESPN.com reports.",
    "long": "Jones appeared to sustain the injury in the third quarter of Sunday's game, and he'll be sidelined for the rest of the contest. Gradey Dick and Kobe Sanders are both in line for minutes the rest of the way in the absence of Jones, who will finish with nine points (3-11 FG, 1-5 3Pt, 2-2 FT), seven rebounds and one assist over 28 minutes."
-  },
-  {
-   "player": "Max Strus",
-   "team": "LAC",
-   "status": "Out",
-   "date": "2026-11-02T00:45Z",
-   "type": "out",
-   "returnDate": "2026-11-08",
-   "detail": "Plantar Fasciitis",
-   "side": "Right",
-   "injury": "Foot",
-   "fantasyStatus": "OUT",
-   "short": "Strus (foot) practiced and participated in 5-on-5 with the San Diego Clippers on Saturday, Los Angeles Clippers sideline reporter/host Ohm Youngmisuk reports.",
-   "long": "Strus continues to progress in his recovery from a partially torn plantar fascia in his right foot suffered in the Clippers' preseason opener. He'll keep working with the G League affiliate and will likely play his first minutes of the season there before he's cleared to return to the NBA level."
   },
   {
    "player": "Yanic Konan Niederhauser",
@@ -917,15 +917,15 @@
    "player": "Jonathan Isaac",
    "team": "ORL",
    "status": "Out",
-   "date": "2026-10-29T18:29Z",
+   "date": "2026-11-02T15:22Z",
    "type": "out",
    "returnDate": "2026-11-10",
    "detail": "Not Specified",
    "side": "Left",
    "injury": "Knee",
    "fantasyStatus": "OUT",
-   "short": "Isaac (knee) is out for Friday's game in Toronto.",
-   "long": "Isaac holds no timetable for a return to an ongoing left knee injury. The oft-injured forward can be considered week-to-week until the Magic update his timeline."
+   "short": "Orlando recalled Isaac (knee) from the G League's Osceola Magic on Sunday.",
+   "long": "Isaac has been working on his rehabilitation from a significant knee injury and remains without a defined timeline to make his 2026-27 season debut. He was assigned to the G League club Sunday and recalled shortly after, presumably getting some practice with the affiliate team. Once he's healthy, Isaac could see minutes off the bench for Orlando."
   },
   {
    "player": "Jalen Suggs",
