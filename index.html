@@ -7,153 +7,278 @@
 <title>리그 팀별 대시보드 v2.2</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap">
 <style>
 [hidden] { display: none !important; }
-/* Layout: header + tab bar; 현황 = KPI row, this week's category board, standings, roster, category heatmap; 예측 = Simul panel, season table, weekly chart, category effect, FA ranking, category rank board (scenario-aware). */
+/* Layout (shadcn/ui dashboard pattern): sticky toolbar header → segmented tabs → KPI cards with inline micro-charts → bento grid of
+   chart cards (this week's category duel · title race) → radar → detail tables. Zinc neutrals, one chart pair (blue = 내 팀, orange =
+   상대/시나리오), semantic green/red for win/loss, Geist for latin & numerals with IBM Plex Sans KR for Hangul. */
 :root {
-  --bg: #EEF0F3; --card: #FFFFFF; --ink: #15203A; --muted: #5C6578; --line: #D6DAE2; --soft: #E7EAF0;
-  --accent: #C4501C; --accent-soft: #F7E3D8; --good: #1E7653; --good-soft: #DDF0E6; --bad: #A8383A; --bad-soft: #F5E0E0;
-  --s1: #2a78d6; --s2: #eb6834; --heat: 42, 120, 214;
-  --display: "Barlow Condensed", "Arial Narrow", "Helvetica Neue", sans-serif;
-  --body: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  --bg: #fafafa; --card: #ffffff; --ink: #09090b; --muted: #71717a; --line: #e4e4e7; --soft: #f4f4f5; --soft2: #fafafa;
+  --primary: #18181b; --primary-fg: #fafafa; --ring: #a1a1aa;
+  --accent: #18181b; --accent-soft: #eff6ff; --warn: #b45309; --warn-soft: #fffbeb;
+  --good: #15803d; --good-soft: #f0fdf4; --good-bar: #22c55e; --bad: #b91c1c; --bad-soft: #fef2f2; --bad-bar: #ef4444;
+  --s1: #2563eb; --s2: #ea580c; --heat: 37, 99, 235;
+  --shadow: 0 1px 2px rgba(9, 9, 11, .05); --shadow-lg: 0 10px 30px -10px rgba(9, 9, 11, .18);
+  --radius: 12px;
+  --display: "Geist", "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  --body: "Geist", "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  --mono: "Geist Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --ease: cubic-bezier(.22, .9, .25, 1);
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
-  --bg: #0D1220; --card: #151C2D; --ink: #E5E9F1; --muted: #98A2B6; --line: #283149; --soft: #1D2539;
-  --accent: #F0804B; --accent-soft: #3A2419; --good: #52C292; --good-soft: #15302A; --bad: #E07B7B; --bad-soft: #3A1E22;
-  --s1: #3987e5; --s2: #d95926; --heat: 57, 135, 229; color-scheme: dark } }
+  --bg: #09090b; --card: #111113; --ink: #fafafa; --muted: #a1a1aa; --line: #27272a; --soft: #1c1c20; --soft2: #151518;
+  --primary: #fafafa; --primary-fg: #18181b; --ring: #52525b;
+  --accent: #fafafa; --accent-soft: rgba(59, 130, 246, .13); --warn: #fbbf24; --warn-soft: rgba(251, 191, 36, .12);
+  --good: #4ade80; --good-soft: rgba(34, 197, 94, .13); --good-bar: #22c55e; --bad: #f87171; --bad-soft: rgba(239, 68, 68, .13); --bad-bar: #ef4444;
+  --s1: #3b82f6; --s2: #ea580c; --heat: 59, 130, 246;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .4); --shadow-lg: 0 12px 32px -12px rgba(0, 0, 0, .7); color-scheme: dark } }
 :root[data-theme="dark"] {
-  --bg: #0D1220; --card: #151C2D; --ink: #E5E9F1; --muted: #98A2B6; --line: #283149; --soft: #1D2539;
-  --accent: #F0804B; --accent-soft: #3A2419; --good: #52C292; --good-soft: #15302A; --bad: #E07B7B; --bad-soft: #3A1E22;
-  --s1: #3987e5; --s2: #d95926; --heat: 57, 135, 229; color-scheme: dark }
+  --bg: #09090b; --card: #111113; --ink: #fafafa; --muted: #a1a1aa; --line: #27272a; --soft: #1c1c20; --soft2: #151518;
+  --primary: #fafafa; --primary-fg: #18181b; --ring: #52525b;
+  --accent: #fafafa; --accent-soft: rgba(59, 130, 246, .13); --warn: #fbbf24; --warn-soft: rgba(251, 191, 36, .12);
+  --good: #4ade80; --good-soft: rgba(34, 197, 94, .13); --good-bar: #22c55e; --bad: #f87171; --bad-soft: rgba(239, 68, 68, .13); --bad-bar: #ef4444;
+  --s1: #3b82f6; --s2: #ea580c; --heat: 59, 130, 246;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .4); --shadow-lg: 0 12px 32px -12px rgba(0, 0, 0, .7); color-scheme: dark }
 * { box-sizing: border-box; }
-body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 14px; line-height: 1.5; margin: 0; }
-.wrap { max-width: 1180px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 18px 40px; display: grid; gap: 16px; }
-.num { font-variant-numeric: tabular-nums; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 14px; line-height: 1.5; margin: 0; -webkit-font-smoothing: antialiased; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--bg); }
+.wrap { max-width: 1240px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 20px 48px; display: grid; gap: 16px; }
+.num, td.r, .kpi .v { font-variant-numeric: tabular-nums; }
 button, select, input { font: inherit; color: inherit; }
 button { cursor: pointer; }
-:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-header.top { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: flex-end; justify-content: space-between; }
-h1 { word-break: keep-all; font-family: var(--display); font-weight: 700; font-size: clamp(28px, 5vw, 40px); line-height: 1; margin: 0; letter-spacing: .005em; text-wrap: balance; }
-h1 .ver { font-size: .45em; font-weight: 600; color: var(--muted); letter-spacing: .04em; vertical-align: .35em; }
-.tabbar { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: flex-end; justify-content: space-between; border-bottom: 1px solid var(--line); }
-.tabbar .tabs { border-bottom: none; }
-.teamsel { display: flex; align-items: center; gap: 8px; padding-bottom: 6px; }
-.teamsel label { font-size: 12px; color: var(--muted); font-weight: 600; }
-.teamsel select { width: auto; min-width: 220px; font-weight: 600; border-color: var(--accent); }
-@media (max-width: 520px) { .teamsel { flex: 1 1 100%; } .teamsel select { flex: 1; min-width: 0; } }
-.sub { margin: 4px 0 0; color: var(--muted); font-size: 13px; }
+:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; border-radius: 6px; }
+/* header */
+header.top { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: flex-end; justify-content: space-between; }
+h1 { word-break: keep-all; font-family: var(--display); font-weight: 650; font-size: clamp(24px, 3.6vw, 32px); line-height: 1.15; margin: 0; letter-spacing: -.025em; text-wrap: balance; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; }
+h1 .ver { font-size: 12px; font-weight: 500; color: var(--muted); letter-spacing: 0; border: 1px solid var(--line); border-radius: 999px; padding: 1px 8px; background: var(--card); }
+.sub { margin: 6px 0 0; color: var(--muted); font-size: 13px; max-width: 78ch; }
 .fresh { display: flex; flex-wrap: wrap; gap: 6px; }
-.pill { font-size: 12px; padding: 2px 9px; border-radius: 999px; background: var(--soft); border: 1px solid var(--line); white-space: nowrap; }
-.pill.warn { border-color: var(--accent); color: var(--accent); }
-.tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--line); }
-.tab { border: none; background: none; padding: 8px 16px; font-family: var(--display); font-size: 20px; font-weight: 600; color: var(--muted); border-bottom: 3px solid transparent; margin-bottom: -1px; }
-.tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
-.panel { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 16px; display: grid; gap: 12px; min-width: 0; align-content: start; }
-.panel h2 { font-family: var(--display); font-weight: 600; font-size: 18px; letter-spacing: .04em; text-transform: uppercase; margin: 0; color: var(--muted); }
-.note { color: var(--muted); font-size: 12px; margin: 0; }
-.grid2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
-@media (max-width: 860px) { .grid2 { grid-template-columns: minmax(0, 1fr); } }
-.kpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
-@media (max-width: 860px) { .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-.kpi { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: grid; gap: 4px; align-content: start; }
-.kpi .l { font-size: 12px; color: var(--muted); letter-spacing: .03em; }
-.kpi .v { font-family: var(--display); font-weight: 700; font-size: 32px; line-height: 1.05; }
-.kpi .v small { font-size: 16px; font-weight: 500; color: var(--muted); margin-left: 4px; }
-.kpi .d { font-size: 12.5px; color: var(--muted); }
-.tbl { overflow-x: auto; }
-table { border-collapse: collapse; width: 100%; font-size: 13px; }
-th, td { padding: 6px 8px; border-bottom: 1px solid var(--line); text-align: left; white-space: nowrap; }
-th { font-size: 11.5px; color: var(--muted); font-weight: 600; letter-spacing: .03em; }
-td.r, th.r { text-align: right; }
-tr.me td { background: var(--accent-soft); }
-tr.me td:first-child { font-weight: 600; }
-.bar { position: relative; height: 8px; background: var(--soft); border-radius: 4px; min-width: 80px; }
-.bar > span { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 4px; background: var(--s1); }
-.bar.mid::after { content: ""; position: absolute; left: 50%; top: -2px; bottom: -2px; width: 1px; background: var(--muted); opacity: .6; }
-.chip { font-size: 11px; font-weight: 600; padding: 1px 6px; border-radius: 4px; }
-.chip.good { background: var(--good-soft); color: var(--good); }
-.chip.bad { background: var(--bad-soft); color: var(--bad); }
-.chip.mid { background: var(--soft); color: var(--muted); }
-.stat-o { color: var(--bad); font-weight: 600; }
-.stat-dtd { color: var(--accent); font-weight: 600; }
-.heat td.h { text-align: center; font-weight: 600; min-width: 34px; white-space: nowrap; }
-.heat thead th.r:not(:last-child) { text-align: center; }
-.chk { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; cursor: pointer; }
-.addhead { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 4px 12px; }
-.chip.own { background: var(--card); color: var(--accent); border: 1px solid var(--accent); margin-left: 5px; white-space: nowrap; padding: 0 5px; }
-.trade { border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; display: grid; gap: 4px; font-size: 12.5px; }
-.b2bchk { padding-bottom: 6px; font-weight: 600; }
-.stsel { display: inline-flex; align-items: center; gap: 6px; padding-bottom: 6px; }
-.stsel select { width: auto; padding: 4px 8px; font-size: 12.5px; }
+.pill { font-size: 12px; padding: 2px 10px; border-radius: 999px; background: var(--card); border: 1px solid var(--line); white-space: nowrap; color: var(--muted); font-weight: 500; }
+.pill.warn { border-color: var(--warn); color: var(--warn); background: var(--warn-soft); }
 .pill.b2b { border-color: var(--s2); color: var(--s2); }
-.tabbar .right { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 4px 16px; }
-td.why { white-space: normal; min-width: 180px; color: var(--muted); font-size: 12px; }
-td.stseq { white-space: normal; min-width: 300px; line-height: 1.55; }
-td.stseq .sl { display: block; }
-td.stseq .sn { display: inline-block; min-width: 18px; color: var(--muted); font-size: 11px; font-weight: 700; }
+.pill.live { color: var(--ink); }
+.pill.live::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--good-bar); margin-right: 6px; vertical-align: 1px; box-shadow: 0 0 0 0 rgba(34, 197, 94, .5); animation: pulse 2.4s infinite; }
+/* toolbar: segmented tabs + controls (sticky) */
+.tabbar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; justify-content: space-between;
+  padding-block: 10px; background: color-mix(in srgb, var(--bg) 86%, transparent); backdrop-filter: saturate(1.4) blur(10px); -webkit-backdrop-filter: saturate(1.4) blur(10px); border-bottom: 1px solid var(--line); margin-inline: -4px; padding-inline: 4px; }
+.tabs { position: relative; display: inline-flex; gap: 2px; padding: 4px; background: var(--soft); border-radius: 10px; border: 1px solid var(--line); }
+.tab-ind { position: absolute; top: 4px; bottom: 4px; left: 0; width: 0; border-radius: 7px; background: var(--card); box-shadow: var(--shadow), 0 0 0 1px var(--line); transition: transform .35s var(--ease), width .35s var(--ease); z-index: 0; }
+.tab { position: relative; z-index: 1; border: none; background: none; padding: 6px 14px; font-size: 13.5px; font-weight: 550; color: var(--muted); border-radius: 7px; transition: color .2s; white-space: nowrap; }
+.tab:hover { color: var(--ink); }
+.tab[aria-selected="true"] { color: var(--ink); }
+.tabbar .right { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.teamsel { display: flex; align-items: center; gap: 8px; }
+.teamsel label { font-size: 12px; color: var(--muted); font-weight: 500; }
+.teamsel select { width: auto; min-width: 210px; font-weight: 600; }
+@media (max-width: 560px) { .teamsel { flex: 1 1 100%; } .teamsel select { flex: 1; min-width: 0; } .tabs { width: 100%; } .tab { flex: 1; padding-inline: 8px; } }
+.chk { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; cursor: pointer; color: var(--ink); }
+.chk input { accent-color: var(--s1); width: 15px; height: 15px; }
+.b2bchk { font-weight: 500; }
+.stsel { display: inline-flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.stsel select { width: auto; padding: 5px 28px 5px 10px; font-size: 12.5px; }
+/* cards */
+.panel { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; min-width: 0; align-content: start; box-shadow: var(--shadow); }
+.panel h2 { font-family: var(--display); font-weight: 600; font-size: 15.5px; letter-spacing: -.01em; margin: 0; color: var(--ink); text-wrap: balance; }
+.panel .desc, .note { color: var(--muted); font-size: 12.5px; margin: 0; }
+.chead { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: flex-start; justify-content: space-between; }
+.chead > div:first-child { display: grid; gap: 3px; min-width: 0; flex: 1 1 260px; }
+.badges { display: flex; flex-wrap: wrap; gap: 6px; }
+.kpis > *, .grid2 > *, .grid-main > * { min-width: 0; }
+.grid2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
+.grid-main { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 16px; }
+@media (max-width: 920px) { .grid2, .grid-main { grid-template-columns: minmax(0, 1fr); } }
+/* KPI cards */
+.kpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 920px) { .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 440px) { .kpis { grid-template-columns: minmax(0, 1fr); } }
+.kpi { position: relative; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 18px; display: grid; gap: 6px; align-content: start; box-shadow: var(--shadow); overflow: hidden; transition: transform .25s var(--ease), box-shadow .25s var(--ease); }
+.kpi:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+.kpi .l { font-size: 12.5px; color: var(--muted); font-weight: 500; display: flex; justify-content: space-between; gap: 8px; align-items: center; }
+.kpi .v { font-family: var(--display); font-weight: 650; font-size: 28px; line-height: 1.1; letter-spacing: -.03em; word-break: keep-all; }
+.kpi .v small { font-size: 14px; font-weight: 500; color: var(--muted); margin-left: 6px; letter-spacing: 0; }
+.kpi .d { font-size: 12px; color: var(--muted); }
+.kpi .ring { position: absolute; right: 14px; top: 14px; width: 56px; height: 56px; }
+.kpi.has-ring .v, .kpi.has-ring .d { padding-right: 64px; }
+.ring circle { fill: none; stroke-width: 6; }
+.ring .trk { stroke: var(--soft); }
+.ring .val { stroke: var(--s1); stroke-linecap: round; transform: rotate(-90deg); transform-origin: 50% 50%; stroke-dasharray: var(--c); stroke-dashoffset: var(--off); animation: ring 1.1s var(--ease) both; }
+.ring text { font: 600 12px var(--mono); fill: var(--ink); }
+.wltbar { display: flex; height: 8px; border-radius: 999px; overflow: hidden; background: var(--soft); gap: 2px; }
+.wltbar span { display: block; height: 100%; transform-origin: left; animation: grow .8s var(--ease) both; }
+.wltbar .w { background: var(--good-bar); } .wltbar .t { background: var(--ring); } .wltbar .lo { background: var(--bad-bar); }
+.badge { display: inline-flex; align-items: center; gap: 4px; font-size: 11.5px; font-weight: 600; padding: 1px 8px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); background: var(--card); white-space: nowrap; }
+.badge.up { color: var(--good); border-color: color-mix(in srgb, var(--good) 35%, transparent); background: var(--good-soft); }
+.badge.down { color: var(--bad); border-color: color-mix(in srgb, var(--bad) 35%, transparent); background: var(--bad-soft); }
+/* this week's category duel */
+.duel { display: grid; gap: 4px; }
+.duel-h, .duel-r { display: grid; grid-template-columns: 54px 64px minmax(80px, 1fr) 64px 82px; align-items: center; gap: 10px; }
+.duel-h { font-size: 11.5px; color: var(--muted); font-weight: 500; padding-bottom: 4px; border-bottom: 1px solid var(--line); }
+.duel-h .mid { display: flex; justify-content: space-between; }
+.duel-r { padding: 5px 0; border-radius: 8px; transition: background .2s; }
+.duel-r:hover { background: var(--soft2); }
+.duel-r .c { font-weight: 600; font-size: 13px; }
+.duel-r .c small { color: var(--muted); font-weight: 500; }
+.duel-r .a, .duel-r .b { font: 500 12.5px/1.2 var(--mono); text-align: right; }
+.duel-r .b { text-align: left; }
+.duel-r .a small, .duel-r .b small { display: block; color: var(--muted); font-size: 10.5px; }
+.dtrack { position: relative; height: 22px; background: linear-gradient(90deg, var(--soft) 0 50%, var(--soft) 50% 100%); border-radius: 6px; overflow: hidden; }
+.dtrack::after { content: ""; position: absolute; left: 50%; top: 3px; bottom: 3px; width: 1px; background: var(--ring); }
+.dtrack i { position: absolute; top: 4px; bottom: 4px; border-radius: 4px; animation: grow .8s var(--ease) both; animation-delay: calc(var(--i, 0) * 35ms); }
+.dtrack i.pos { left: 50%; background: var(--good-bar); transform-origin: left; }
+.dtrack i.neg { right: 50%; background: var(--bad-bar); transform-origin: right; }
+.dtrack i.even { background: var(--ring); }
+.duel-r .p { justify-self: end; }
+.duel-legend { display: flex; justify-content: space-between; font-size: 11.5px; color: var(--muted); }
+@media (max-width: 520px) { .duel-h, .duel-r { grid-template-columns: 40px 46px minmax(50px, 1fr) 46px 70px; gap: 6px; } .duel-r .a small, .duel-r .b small, .duel-h .mid .side { display: none; } .duel-h .mid { justify-content: center; } }
+/* title race */
+.race { display: grid; gap: 8px; }
+.race-r { display: grid; grid-template-columns: minmax(0, 120px) minmax(60px, 1fr) 52px; gap: 10px; align-items: center; font-size: 13px; }
+.race-r .n { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 1.3; }
+.race-r .n small { font-size: 11px; }
+.race-r.me .n { font-weight: 650; }
+.race-r .t { position: relative; height: 18px; background: var(--soft); border-radius: 6px; overflow: hidden; }
+.race-r .t i { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 6px; background: color-mix(in srgb, var(--muted) 45%, transparent); transform-origin: left; animation: grow .9s var(--ease) both; animation-delay: calc(var(--i, 0) * 45ms); }
+.race-r .t b { position: absolute; left: 0; top: 0; bottom: 0; border-right: 2px solid var(--ink); opacity: .35; transform-origin: left; animation: grow .9s var(--ease) both; }
+.race-r.me .t i { background: var(--s1); }
+.race-r .v { font: 600 12.5px var(--mono); text-align: right; }
+.race-key { display: flex; gap: 14px; flex-wrap: wrap; font-size: 11.5px; color: var(--muted); }
+.race-key i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
+/* tables */
+.tbl { overflow-x: auto; border-radius: 8px; }
+table { border-collapse: collapse; width: 100%; font-size: 13px; }
+th, td { padding: 8px 10px; border-bottom: 1px solid var(--line); text-align: left; white-space: nowrap; }
+th { font-size: 12px; color: var(--muted); font-weight: 500; height: 36px; }
+tbody tr { transition: background .15s; }
+tbody tr:hover td { background: var(--soft2); }
+tbody tr:last-child td { border-bottom: none; }
+td.r, th.r { text-align: right; }
+td.r { font-family: var(--mono); font-size: 12.5px; }
+tr.me td { background: var(--accent-soft); }
+tr.me:hover td { background: var(--accent-soft); }
+tr.me td:first-child { box-shadow: inset 2px 0 0 var(--s1); }
+tr.me td:nth-child(2) { font-weight: 650; }
+.bar { position: relative; height: 8px; background: var(--soft); border-radius: 999px; min-width: 80px; overflow: hidden; }
+.bar > span { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 999px; background: var(--s1); transform-origin: left; animation: grow .8s var(--ease) both; }
+.bar.mid::after { content: ""; position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: var(--ring); }
+.chip { font-size: 11px; font-weight: 600; padding: 1px 7px; border-radius: 6px; border: 1px solid var(--line); background: var(--card); color: var(--muted); white-space: nowrap; }
+.chip.good { background: var(--good-soft); color: var(--good); border-color: color-mix(in srgb, var(--good) 30%, transparent); }
+.chip.bad { background: var(--bad-soft); color: var(--bad); border-color: color-mix(in srgb, var(--bad) 30%, transparent); }
+.chip.mid { background: var(--soft); color: var(--muted); }
+.chip.own { color: var(--s1); border-color: var(--s1); margin-left: 5px; padding: 0 5px; }
+.chip.scen { background: var(--soft); color: var(--ink); margin-left: 6px; }
+.chip.tag { background: var(--soft); color: var(--muted); font-weight: 500; }
+.stat-o { color: var(--bad); font-weight: 650; }
+.stat-dtd { color: var(--warn); font-weight: 650; }
+.heat td.h { text-align: center; font-weight: 600; min-width: 34px; white-space: nowrap; font-family: var(--mono); font-size: 12.5px; transition: filter .15s; }
+.heat td.h:hover { filter: brightness(1.08); }
+.heat thead th.r:not(:last-child) { text-align: center; }
 .heat .rkd { font-size: 10px; font-weight: 700; margin-left: 3px; }
 .heat .rkd.up { color: var(--good); }
 .heat .rkd.down { color: var(--bad); }
 .heat td.avg { text-align: right; font-weight: 600; border-left: 1px solid var(--line); white-space: nowrap; }
-.chip.scen { background: var(--soft); color: var(--ink); margin-left: 6px; }
-.empty { padding: 28px 16px; text-align: center; color: var(--muted); border: 1px dashed var(--line); border-radius: 10px; }
+details.more { border-top: 1px dashed var(--line); padding-top: 10px; }
+details.more summary { cursor: pointer; font-size: 12.5px; color: var(--muted); font-weight: 500; list-style: none; display: inline-flex; align-items: center; gap: 6px; }
+details.more summary::-webkit-details-marker { display: none; }
+details.more summary::before { content: ""; width: 6px; height: 6px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(-45deg); transition: transform .2s; }
+details.more[open] summary::before { transform: rotate(45deg); }
+details.more summary:hover { color: var(--ink); }
+details.more[open] > .tbl { margin-top: 10px; animation: fadeUp .3s var(--ease) both; }
+/* forms & buttons */
+.addhead { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 4px 12px; }
+.trade { border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; display: grid; gap: 4px; font-size: 12.5px; background: var(--soft2); }
+td.why { white-space: normal; min-width: 180px; color: var(--muted); font-size: 12px; }
+td.stseq { white-space: normal; min-width: 300px; line-height: 1.55; }
+td.stseq .sl { display: block; }
+td.stseq .sn { display: inline-block; min-width: 18px; color: var(--muted); font-size: 11px; font-weight: 700; }
+.empty { padding: 36px 16px; text-align: center; color: var(--muted); border: 1px dashed var(--line); border-radius: var(--radius); background: var(--card); }
 .empty b { color: var(--ink); display: block; font-size: 16px; margin-bottom: 4px; }
 .sim { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 16px; }
 @media (max-width: 860px) { .sim { grid-template-columns: minmax(0, 1fr); } }
-.field { display: grid; gap: 4px; }
-.field > label, .lab { font-size: 12px; color: var(--muted); font-weight: 600; }
-select, input[type="search"] { border: 1px solid var(--line); background: var(--card); border-radius: 8px; padding: 6px 10px; min-width: 0; width: 100%; }
-.list { border: 1px solid var(--line); border-radius: 8px; max-height: 280px; overflow: auto; }
-.list label { display: grid; grid-template-columns: 18px minmax(0, 1fr) auto; gap: 8px; align-items: center; padding: 5px 10px; border-bottom: 1px solid var(--line); font-size: 13px; cursor: pointer; }
+.field { display: grid; gap: 6px; }
+.field > label, .lab { font-size: 12.5px; color: var(--ink); font-weight: 500; }
+select, input[type="search"] { border: 1px solid var(--line); background: var(--card); border-radius: 8px; padding: 7px 10px; min-width: 0; width: 100%; height: 36px; box-shadow: var(--shadow); transition: border-color .15s, box-shadow .15s; }
+select { appearance: none; -webkit-appearance: none; padding-right: 30px; background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%); background-position: calc(100% - 15px) 52%, calc(100% - 10px) 52%; background-size: 5px 5px; background-repeat: no-repeat; }
+select:hover, input[type="search"]:hover { border-color: var(--ring); }
+select:focus-visible, input[type="search"]:focus-visible { outline: none; border-color: var(--ring); box-shadow: 0 0 0 3px color-mix(in srgb, var(--ring) 35%, transparent); }
+.list { border: 1px solid var(--line); border-radius: 10px; max-height: 280px; overflow: auto; }
+.list label { display: grid; grid-template-columns: 18px minmax(0, 1fr) auto; gap: 8px; align-items: center; padding: 7px 12px; border-bottom: 1px solid var(--line); font-size: 13px; cursor: pointer; transition: background .15s; }
+.list label:hover { background: var(--soft2); }
 .list label:last-child { border-bottom: none; }
 .list label .m { color: var(--muted); font-size: 11.5px; }
 .list label.on { background: var(--accent-soft); }
+.list input { accent-color: var(--s1); }
 .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
-.btn { border: 1px solid var(--line); background: var(--card); border-radius: 8px; padding: 7px 14px; font-weight: 600; }
-.btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; font-family: var(--display); font-size: 17px; letter-spacing: .04em; padding: 6px 22px; }
+.btn { border: 1px solid var(--line); background: var(--card); border-radius: 8px; padding: 0 16px; height: 36px; font-weight: 550; font-size: 13.5px; box-shadow: var(--shadow); transition: background .15s, transform .1s; }
+.btn:hover { background: var(--soft); }
+.btn:active { transform: translateY(1px); }
+.btn.primary { background: var(--primary); border-color: var(--primary); color: var(--primary-fg); padding: 0 22px; }
+.btn.primary:hover { background: color-mix(in srgb, var(--primary) 88%, var(--bg)); }
 .btn:disabled { opacity: .5; cursor: not-allowed; }
 .msg { font-size: 12.5px; }
 .msg.err { color: var(--bad); }
 .delta.up { color: var(--good); font-weight: 600; }
 .delta.down { color: var(--bad); font-weight: 600; }
-.legend { display: flex; gap: 14px; font-size: 12px; color: var(--muted); align-items: center; }
-.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+.legend { display: flex; gap: 14px; font-size: 12px; color: var(--muted); align-items: center; flex-wrap: wrap; }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
+/* charts */
 .chart { position: relative; }
 .chart svg { display: block; width: 100%; height: auto; overflow: visible; }
-.rd-card { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 16px; align-items: start; }
-@media (max-width: 860px) { .rd-card { grid-template-columns: minmax(0, 1fr); } }
-.rd-chart { position: relative; max-width: 440px; width: 100%; justify-self: center; }
+.chart svg .wb { transform-box: fill-box; transform-origin: bottom; animation: growY .75s var(--ease) both; animation-delay: calc(var(--i, 0) * 30ms); }
+.chart svg .wb.past { opacity: .55; }
+.chart svg .cur { fill: var(--soft); }
+.rd-card { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+@media (max-width: 920px) { .rd-card { grid-template-columns: minmax(0, 1fr); } }
+.rd-chart { position: relative; max-width: 460px; width: 100%; justify-self: center; }
 .rd-chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.rd-chart svg polygon.me, .rd-chart svg polygon.op { transform-origin: 50% 51%; transform-box: view-box; animation: radar .9s var(--ease) both; }
 .rd-chart .tip { white-space: normal; width: max-content; max-width: min(280px, 90vw); text-align: center; }
 .sc-chart { width: 100%; }
 .sc-chart .recharts-surface { overflow: visible; }
-.sc-tip { min-width: 9rem; display: grid; gap: 6px; border: 1px solid var(--line); background: var(--card); color: var(--ink); border-radius: 8px; padding: 8px 10px; font-size: 12px; box-shadow: 0 8px 24px rgba(0,0,0,.12); }
+.sc-tip { min-width: 9rem; display: grid; gap: 6px; border: 1px solid var(--line); background: var(--card); color: var(--ink); border-radius: 10px; padding: 8px 10px; font-size: 12px; box-shadow: var(--shadow-lg); }
 .sc-tip-title { font-weight: 600; }
 .sc-tip-row { display: flex; align-items: center; gap: 8px; }
 .sc-ind { width: 4px; height: 14px; border-radius: 2px; flex: none; }
 .sc-ind[data-dash] { width: 0; border-left: 2px dashed; border-radius: 0; background: none; }
 .sc-name { color: var(--muted); flex: 1; }
-.sc-val { font-variant-numeric: tabular-nums; font-weight: 600; }
+.sc-val { font-variant-numeric: tabular-nums; font-weight: 600; font-family: var(--mono); }
 .sc-tip-foot { border-top: 1px solid var(--line); padding-top: 5px; color: var(--muted); }
 .rd-legend { display: flex; flex-wrap: wrap; gap: 6px 16px; justify-content: center; font-size: 12.5px; color: var(--muted); }
 .rd-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
 .rd-legend i.dash { background: none; border: 2px dashed var(--muted); width: 8px; height: 8px; border-radius: 50%; }
-.rd-controls { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: end; }
+.rd-controls { display: flex; flex-wrap: wrap; gap: 10px 12px; align-items: end; }
 .rd-controls .field { flex: 1 1 180px; }
-.rd-sum { display: flex; flex-wrap: wrap; gap: 6px; }
+.rd-sum { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
 td.rd-win { color: var(--good); font-weight: 600; } td.rd-lose { color: var(--bad); font-weight: 600; }
-.tip { position: absolute; pointer-events: none; background: var(--ink); color: var(--bg); font-size: 12px; padding: 6px 9px; border-radius: 6px; white-space: nowrap; transform: translate(-50%, -100%); }
-.busy { font-size: 12.5px; color: var(--accent); }
+.tip { position: absolute; pointer-events: none; background: var(--card); color: var(--ink); border: 1px solid var(--line); box-shadow: var(--shadow-lg); font-size: 12px; padding: 6px 10px; border-radius: 8px; white-space: nowrap; transform: translate(-50%, -100%); z-index: 5; }
+.busy { font-size: 12.5px; color: var(--muted); }
+#busybar { position: fixed; left: 0; right: 0; top: env(safe-area-inset-top, 0px); height: 2px; z-index: 40; overflow: hidden; }
+#busybar::after { content: ""; position: absolute; top: 0; bottom: 0; width: 40%; background: linear-gradient(90deg, transparent, var(--s1), transparent); animation: slide 1.1s linear infinite; }
 td.pjv small { display: block; color: var(--muted); font-size: 10.5px; line-height: 1.2; }
 td.pjv { line-height: 1.25; }
 .pj-steps { margin: 0; padding-left: 20px; display: grid; gap: 8px; font-size: 13px; }
 .pj-steps b { font-weight: 600; }
-.chip.tag { background: var(--soft); color: var(--muted); font-weight: 500; }
-footer { color: var(--muted); font-size: 12px; display: grid; gap: 4px; border-top: 1px solid var(--line); padding-top: 12px; }
+footer { color: var(--muted); font-size: 12px; display: grid; gap: 6px; border-top: 1px solid var(--line); padding-top: 14px; }
+/* motion: entering cards, growing marks, counting numbers — all start from a visible frame and finish in < 1.2s */
+section:not([hidden]) > .stack > * { animation: fadeUp .5s var(--ease) both; }
+section:not([hidden]) > .stack > *:nth-child(2) { animation-delay: .05s; } section:not([hidden]) > .stack > *:nth-child(3) { animation-delay: .1s; }
+section:not([hidden]) > .stack > *:nth-child(4) { animation-delay: .15s; } section:not([hidden]) > .stack > *:nth-child(n+5) { animation-delay: .2s; }
+.kpis > .kpi { animation: fadeUp .5s var(--ease) both; }
+.kpis > .kpi:nth-child(2) { animation-delay: .06s; } .kpis > .kpi:nth-child(3) { animation-delay: .12s; } .kpis > .kpi:nth-child(4) { animation-delay: .18s; }
+.stack { display: grid; gap: 16px; }
+@keyframes fadeUp { from { opacity: .35; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes growY { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+@keyframes ring { from { stroke-dashoffset: var(--c); } to { stroke-dashoffset: var(--off); } }
+@keyframes radar { from { transform: scale(.2); opacity: .2; } to { transform: scale(1); opacity: 1; } }
+@keyframes slide { from { left: -40%; } to { left: 100%; } }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, .45); } 70% { box-shadow: 0 0 0 6px rgba(34, 197, 94, 0); } 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
 </style>
 </head>
 <body>
+<div id="busybar" hidden></div>
+
 <div class="wrap">
   <header class="top">
     <div>
@@ -163,7 +288,7 @@ footer { color: var(--muted); font-size: 12px; display: grid; gap: 4px; border-t
     <div class="fresh" id="fresh"></div>
   </header>
   <div class="tabbar">
-    <nav class="tabs" role="tablist">
+    <nav class="tabs" role="tablist"><span class="tab-ind" id="tab-ind" aria-hidden="true"></span>
       <button class="tab" role="tab" id="tab-now" aria-selected="true" type="button">현황</button>
       <button class="tab" role="tab" id="tab-fc" aria-selected="false" type="button">예측</button>
       <button class="tab" role="tab" id="tab-proj" aria-selected="false" type="button">프로젝션 근거</button>
@@ -174,11 +299,17 @@ footer { color: var(--muted); font-size: 12px; display: grid; gap: 4px; border-t
   <div id="view-empty" class="empty" hidden><b id="empty-title">로스터를 불러오는 중입니다</b><span id="empty-text">잠시만 기다려 주세요.</span></div>
 
   <section id="view-now" hidden>
-    <div style="display:grid;gap:16px">
+    <div class="stack">
       <div class="kpis" id="kpis"></div>
-      <div class="grid2">
-        <div class="panel"><h2 id="mu-title">이번 주 매치업</h2><div class="tbl" id="mu-table"></div><p class="note" id="mu-note"></p></div>
-        <div class="panel"><h2>리그 순위</h2><div class="tbl" id="standings"></div><p class="note">순위 = 누적 카테고리 승률 (승 + 무/2) ÷ (승+패+무). 기록·W-L-T는 카테고리 단위. 실제 기록은 매주 결과 캡처로 반영, 기대 승률·확률은 남은 주차를 카테고리 단위로 시뮬레이션(2만 회). PO = 상위 6팀 진출, 우승 = 플레이오프(3v6·4v5 → 1·2시드와 2주 준결승 → 2주 결승) 우승.</p></div>
+      <div class="grid-main">
+        <div class="panel"><div class="chead"><div><h2 id="mu-title">이번 주 매치업</h2><p class="desc" id="mu-desc">카테고리별 예상 승률 · 가운데 50% 기준으로 오른쪽이 우세</p></div><div class="badges" id="mu-sum"></div></div>
+          <div class="duel" id="mu-chart"></div>
+          <details class="more"><summary>카테고리별 상세 수치</summary><div class="tbl" id="mu-table"></div></details>
+          <p class="note" id="mu-note"></p></div>
+        <div class="panel"><div class="chead"><div><h2>우승 경쟁</h2><p class="desc">플레이오프 우승 확률 · 시즌 2만 회 시뮬레이션</p></div></div>
+          <div class="race" id="race"></div>
+          <div class="race-key"><span><i style="background:var(--s1)"></i>선택한 팀</span><span><i style="background:color-mix(in srgb, var(--muted) 45%, transparent)"></i>다른 팀</span></div>
+          <details class="more" open><summary>리그 순위표</summary><div class="tbl" id="standings"></div></details><p class="note">순위 = 누적 카테고리 승률 (승 + 무/2) ÷ (승+패+무). 기록·W-L-T는 카테고리 단위. 실제 기록은 매주 결과 캡처로 반영, 기대 승률·확률은 남은 주차를 카테고리 단위로 시뮬레이션(2만 회). PO = 상위 6팀 진출, 우승 = 플레이오프(3v6·4v5 → 1·2시드와 2주 준결승 → 2주 결승) 우승.</p></div>
       </div>
       <div class="panel" id="rd-panel">
         <div style="display:grid;gap:4px"><h2>카테고리 레이더 · 팀 비교</h2><p class="note" id="rd-desc"></p></div>
@@ -201,7 +332,7 @@ footer { color: var(--muted); font-size: 12px; display: grid; gap: 4px; border-t
   </section>
 
   <section id="view-fc" hidden>
-    <div style="display:grid;gap:16px">
+    <div class="stack">
       <div class="panel">
         <h2>Simul · 선수 교체 시뮬레이션</h2>
         <div class="sim">
@@ -244,7 +375,7 @@ footer { color: var(--muted); font-size: 12px; display: grid; gap: 4px; border-t
   </section>
 
   <section id="view-proj" hidden>
-    <div style="display:grid;gap:16px">
+    <div class="stack">
       <div class="kpis" id="pj-kpis"></div>
       <div class="panel"><h2>팀별 프로젝션 변화 · ESPN 대비</h2><div class="tbl" id="pj-teams"></div><p class="note" id="pj-teams-note"></p></div>
       <div class="panel"><h2 id="pj-title">선수별 프로젝션 근거</h2>
@@ -753,11 +884,21 @@ function renderNow() {
   const R = state.base, cw = R.cw, o = oppOf(ME, cw), s = R.season[ME], rec = record(ME), wk = wkWLT(R, ME, cw);
   const started = todayStr() >= REF.starts[0];
   const ranks = REF.teams.slice().sort((a, b) => R.season[b].epct - R.season[a].epct);
+  const lvK = (() => { const l = state.docs["league/live"]; if (!l || l.week !== cw + 1 || !l.cats || !l.cats[ME] || !l.cats[o.opp]) return null; const x = l.cats[ME], y = l.cats[o.opp]; if (!(+x.PTS || +y.PTS)) return null;
+    let W = 0, L = 0, T = 0; CATS.forEach(c => { const u = +x[c], v = +y[c]; if (u === v) T++; else if (LOW[c] ? u < v : u > v) W++; else L++; }); return [W, L, T, l.through]; })();
+  const wsum = wk[0] + wk[1] + wk[2] || 1, ringC = 2 * Math.PI * 24;
   $("kpis").innerHTML = `
-    <div class="kpi"><span class="l">${started ? "이번" : "첫"} 매치업 · ${cw + 1}주차</span><span class="v">${esc(sh(o.opp))}</span><span class="d">${md(REF.starts[cw])}–${md(REF.ends[cw])} · ${o.away ? "원정" : "홈"}</span></div>
-    <div class="kpi"><span class="l">이번 주 예상 카테고리 W-L-T</span><span class="v num">${wlt(wk[0], wk[1], wk[2])}</span><span class="d">주간 승률 ${pctP(wp(R, ME, cw))}${state.b2b ? ` · 백투백 미반영 ${pctP(wp(state.baseOff, ME, cw))}` : ""}${state.stream.on ? ` · 스트리밍 미반영 ${pctP(wp(state.baseNS, ME, cw))}` : ""}</span></div>
-    <div class="kpi"><span class="l">시즌 기록 (카테고리)</span><span class="v num">${rec.w}-${rec.l}-${rec.t}</span><span class="d">${rec.pct != null ? "승률 " + pctP(rec.pct) : started ? "결과 캡처 대기" : "시즌 시작 전"}</span></div>
-    <div class="kpi"><span class="l">예상 최종 승률</span><span class="v num">${pctP(s.epct)}<small> · ${ranks.indexOf(ME) + 1}위</small></span><span class="d">W-L-T ${wlt(s.eW, s.eL, s.eT, 0)} · PO ${pct(s.po)} · 1위 ${pct(s.p1)} · 우승 ${pct(s.champ)}${state.b2b ? ` · B2B 미반영 ${pctP(state.baseOff.season[ME].epct)}` : ""}${state.stream.on ? ` · 스트리밍 미반영 ${pctP(state.baseNS.season[ME].epct)}` : ""}</span></div>`;
+    <div class="kpi"><span class="l">${started ? "이번" : "첫"} 매치업 · ${cw + 1}주차 <span class="badge">${o.away ? "원정" : "홈"}</span></span><span class="v">vs ${esc(sh(o.opp))}</span><span class="d">${md(REF.starts[cw])}–${md(REF.ends[cw])}${lvK ? ` · 현재 실적 <b class="num">${lvK[0]}-${lvK[1]}-${lvK[2]}</b> (${md(lvK[3])}까지)` : ""}</span></div>
+    <div class="kpi"><span class="l">이번 주 예상 카테고리 W-L-T <span class="badge ${wp(R, ME, cw) >= .55 ? "up" : wp(R, ME, cw) <= .45 ? "down" : ""}">${pctP(wp(R, ME, cw), 0)}</span></span><span class="v num">${wlt(wk[0], wk[1], wk[2])}</span>
+      <div class="wltbar" title="승 ${wk[0].toFixed(1)} · 무 ${wk[2].toFixed(1)} · 패 ${wk[1].toFixed(1)}"><span class="w" style="width:${(wk[0] / wsum * 100).toFixed(1)}%"></span><span class="t" style="width:${(wk[2] / wsum * 100).toFixed(1)}%"></span><span class="lo" style="width:${(wk[1] / wsum * 100).toFixed(1)}%"></span></div>
+      <span class="d">주간 승률 ${pctP(wp(R, ME, cw))}${state.b2b ? ` · 백투백 미반영 ${pctP(wp(state.baseOff, ME, cw))}` : ""}${state.stream.on ? ` · 스트리밍 미반영 ${pctP(wp(state.baseNS, ME, cw))}` : ""}</span></div>
+    <div class="kpi"><span class="l">시즌 기록 (카테고리) <span class="badge">${ranks.indexOf(ME) + 1}위 예상</span></span><span class="v num">${rec.w}-${rec.l}-${rec.t}</span>
+      <div class="bar"><span style="width:${((rec.pct != null ? rec.pct : s.epct) * 100).toFixed(1)}%"></span></div>
+      <span class="d">${rec.pct != null ? "현재 승률 " + pctP(rec.pct) + " · " : started ? "결과 캡처 대기 · " : "시즌 시작 전 · "}최종 예상 <b class="num">${pctP(s.epct)}</b> (W-L-T ${wlt(s.eW, s.eL, s.eT, 0)})${state.b2b ? ` · B2B 미반영 ${pctP(state.baseOff.season[ME].epct)}` : ""}${state.stream.on ? ` · 스트리밍 미반영 ${pctP(state.baseNS.season[ME].epct)}` : ""}</span></div>
+    <div class="kpi has-ring"><span class="l">우승 확률</span><span class="v num"><span data-to="${(s.champ * 100).toFixed(1)}" data-dec="1" data-suf="%" data-key="champ">${pctP(s.champ)}</span></span>
+      <svg class="ring" viewBox="0 0 56 56" aria-hidden="true"><circle class="trk" cx="28" cy="28" r="24"/><circle class="val" cx="28" cy="28" r="24" style="--c:${ringC.toFixed(2)};--off:${(ringC * (1 - s.champ)).toFixed(2)}"/></svg>
+      <span class="d">PO ${pct(s.po)} · 정규 1위 ${pct(s.p1)} · 결승 ${pct(s.fin)}</span></div>`;
+  countUp($("kpis"));
   $("mu-title").textContent = `${cw + 1}주차 매치업 · vs ${sh(o.opp)}`;
   const A = R.TW[ME + "|" + cw], B = R.TW[o.opp + "|" + cw], pc3 = pcat3(A, B), pc = pcat(A, B), live = state.docs["league/live"];
   const bb = state.b2b, Ao = state.baseOff.TW[ME + "|" + cw], Bo = state.baseOff.TW[o.opp + "|" + cw];
@@ -768,6 +909,8 @@ function renderNow() {
   $("mu-note").textContent = `${bb ? "Δ = 백투백 반영 전후 주간 합계 차이. " : ""}예상 주간 합계(${sh(ME)} ${A.n.toFixed(1)}경기 · 상대 ${B.n.toFixed(1)}경기 사용). 백투백 2번째 경기 노출: ${sh(ME)} ${A.b2bCnt}회 · ${sh(o.opp)} ${B.b2bCnt}회(선수×경기)${bb ? `, 실제 사용 ${A.nB.toFixed(1)} · ${B.nB.toFixed(1)}경기` : ""}. ${lv ? `예상 합계 = 실제(${md(live.through || "")}까지, 스코어보드 ${esc(live.asOf || "")}) + 남은 일정 예측. 사용 예상은 남은 경기만 셉니다.` : "진행 중 실제값은 매치업 화면 캡처를 주시면 표시됩니다."}`;
   $("standings").innerHTML = `<table><thead><tr><th>예상</th><th>팀</th><th class="r" title="카테고리 승-패-무">기록</th><th class="r" title="시즌 최종 기대 승률 (마우스를 올리면 예상 W-L-T)">기대 승률</th>${state.b2b ? '<th class="r">B2B 영향</th>' : ""}${state.stream.on ? '<th class="r" title="전 팀 스트리밍 반영 전후 기대 승률 차이">스트리밍 영향</th>' : ""}<th class="r" title="플레이오프 진출(상위 ${(rules().playoffs || {}).teams || 6}팀)">PO</th><th class="r" title="정규시즌 1위">1위</th><th class="r" title="플레이오프 우승">우승</th></tr></thead><tbody>` +
     ranks.map((t, i) => { const x = R.season[t], r = record(t); return `<tr class="${t === ME ? "me" : ""}"><td class="num">${i + 1}</td><td>${esc(sh(t))}</td><td class="r num">${r.w}-${r.l}-${r.t}</td><td class="r num" title="예상 W-L-T ${wlt(x.eW, x.eL, x.eT, 1)} · 80% 범위 ${Math.round(x.p10 * 100)}–${Math.round(x.p90 * 100)}%">${pctP(x.epct)}</td>${state.b2b ? `<td class="r num">${dpp(x.epct - state.baseOff.season[t].epct)}</td>` : ""}${state.stream.on ? `<td class="r num">${dpp(x.epct - state.baseNS.season[t].epct)}</td>` : ""}<td class="r num" title="상위 2시드(1라운드 부전승) ${pct(x.p2)}">${pct(x.po)}</td><td class="r num">${pct(x.p1)}</td><td class="r num" title="결승 진출 ${pct(x.fin)}">${pct(x.champ)}</td></tr>`; }).join("") + `</tbody></table>`;
+  renderDuel(A, B, pc, pc3, lv, o);
+  renderRace(R, ranks);
   const ros = rosters()[ME], ir = ros.ir || [];
   const act = state.docs["league/actuals"];
   const rowsP = ros.active.map(n => state.PL[n]).filter(Boolean).sort((a, b) => b.value - a.value);
@@ -782,6 +925,33 @@ function renderNow() {
   $("heat").innerHTML = heatTable(R, 0, null, null);
   renderRadar();
 }
+/* ---------- overview charts (shadcn card + bar-chart patterns, plain HTML so they render without the CDN) ---------- */
+const CU = {};
+function countUp(root) {
+  const rm = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  root.querySelectorAll("[data-to]").forEach(el => { const to = +el.dataset.to, dec = +(el.dataset.dec || 0), suf = el.dataset.suf || "", key = el.dataset.key || "";
+    const from = CU[key] != null ? CU[key] : to * .4; CU[key] = to; if (rm || Math.abs(from - to) < 1e-9) { el.textContent = to.toFixed(dec) + suf; return; }
+    const t0 = performance.now(), D = 800, step = t => { const k = Math.min(1, (t - t0) / D), e = 1 - Math.pow(1 - k, 3); el.textContent = (from + (to - from) * e).toFixed(dec) + suf; if (k < 1) requestAnimationFrame(step); };
+    el.textContent = from.toFixed(dec) + suf; requestAnimationFrame(step); });
+}
+function renderDuel(A, B, pc, pc3, lv, o) {
+  const fav = CATS.filter(c => pc[c] >= .6).length, und = CATS.filter(c => pc[c] <= .4).length;
+  $("mu-sum").innerHTML = `<span class="badge up">우세 ${fav}</span><span class="badge">박빙 ${CATS.length - fav - und}</span><span class="badge down">열세 ${und}</span>`;
+  $("mu-chart").innerHTML = `<div class="duel-h"><span>카테고리</span><span style="text-align:right">${esc(sh(ME))}</span><span class="mid"><span class="side">← 열세</span><span>50%</span><span class="side">우세 →</span></span><span>${esc(sh(o.opp))}</span><span style="text-align:right">승률</span></div>` +
+    CATS.map((c, i) => { const p = pc[c], q = pc3[c], d = p - .5, k = p >= .6 ? "good" : p <= .4 ? "bad" : "mid", kl = p >= .6 ? "우세" : p <= .4 ? "열세" : "박빙";
+      const wd = Math.max(Math.abs(d) * 100, 1.2).toFixed(1), cls = Math.abs(d) < .02 ? "even" : d > 0 ? "pos" : "neg";
+      const lvOn = lv && lv[ME] && lv[o.opp] && (+lv[ME].PTS || +lv[o.opp].PTS), la = lvOn && lv[ME][c] != null ? `<small>실제 ${esc(fmtCat(c, +lv[ME][c]))}</small>` : "", lb = lvOn && lv[o.opp][c] != null ? `<small>실제 ${esc(fmtCat(c, +lv[o.opp][c]))}</small>` : "";
+      const bar = cls === "even" ? `<i class="even" style="left:calc(50% - 1.5px);width:3px;--i:${i}"></i>` : `<i class="${cls}" style="width:${wd}%;--i:${i}"></i>`;
+      return `<div class="duel-r" title="승 ${pct(q.w)} · 무 ${pct(q.t)} · 패 ${pct(q.l)}"><span class="c">${LAB[c]}${LOW[c] ? " <small>↓</small>" : ""}</span><span class="a">${fmtCat(c, A.c[c])}${la}</span><div class="dtrack">${bar}</div><span class="b">${fmtCat(c, B.c[c])}${lb}</span><span class="p"><span class="chip ${k}">${kl} ${pct(p)}</span></span></div>`; }).join("");
+}
+function renderRace(R, ranks) {
+  const order = REF.teams.slice().sort((a, b) => R.season[b].champ - R.season[a].champ);
+  $("race").innerHTML = order.map((t, i) => { const x = R.season[t], r = record(t);
+    return `<div class="race-r${t === ME ? " me" : ""}" title="우승 ${pct(x.champ)} · 결승 ${pct(x.fin)} · 정규 1위 ${pct(x.p1)} · PO ${pct(x.po)}"><span class="n">${esc(sh(t))}<br><small class="note">${r.w}-${r.l}-${r.t} · PO ${pct(x.po)} · 1위 ${pct(x.p1)}</small></span><div class="t"><i style="width:${Math.max(x.champ * 100, .6).toFixed(1)}%;--i:${i}"></i></div><span class="v">${pctP(x.champ)}</span></div>`; }).join("");
+}
+function moveInd() { const sel = document.querySelector('.tab[aria-selected="true"]'), ind = $("tab-ind"); if (!sel || !ind) return; ind.style.width = sel.offsetWidth + "px"; ind.style.transform = `translateX(${sel.offsetLeft - 4}px)`; }
+window.addEventListener("resize", () => { moveInd(); });
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(moveInd);
 /* ---------- category radar (shadcn chart-radar look, plain SVG) ----------
    Axis value = the team's position among the 8 teams for that category in the chosen period: 0 = league worst, 100 = league best
    (TO·PF: fewer is better). Periods: remaining-season expected weekly average, the current week's expected total, or a completed
@@ -827,8 +997,8 @@ function renderRadar() {
   [50, 100].forEach(g => { const [x, y] = pt(0, g); s += `<text x="${x + 4}" y="${y + 3}" font-size="9" fill="var(--muted)">${g}</text>`; });
   const sMe = CATS.map(c => score(c, val(ME, c))), sOp = CATS.map(c => score(c, val(opp, c)));
   if (state.rdAvg && opp !== "avg") s += `<polygon points="${poly(CATS.map(c => score(c, avgOf(c))))}" fill="none" stroke="var(--muted)" stroke-width="1.5" stroke-dasharray="4 4"/>`;
-  s += `<polygon points="${poly(sOp)}" fill="var(--s2)" fill-opacity=".22" stroke="var(--s2)" stroke-width="2" stroke-linejoin="round"/>`;
-  s += `<polygon points="${poly(sMe)}" fill="var(--s1)" fill-opacity=".32" stroke="var(--s1)" stroke-width="2" stroke-linejoin="round"/>`;
+  s += `<polygon class="op" points="${poly(sOp)}" fill="var(--s2)" fill-opacity=".22" stroke="var(--s2)" stroke-width="2" stroke-linejoin="round"/>`;
+  s += `<polygon class="me" points="${poly(sMe)}" fill="var(--s1)" fill-opacity=".32" stroke="var(--s1)" stroke-width="2" stroke-linejoin="round"/>`;
   [[sOp, "var(--s2)"], [sMe, "var(--s1)"]].forEach(([sc, col]) => sc.forEach((v, i) => { const [x, y] = pt(i, v); s += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="4" fill="${col}" stroke="var(--card)" stroke-width="2"/>`; }));
   CATS.forEach((c, i) => { const [x, y] = pt(i, 116), a = Math.cos(ang(i)); s += `<text x="${x.toFixed(1)}" y="${(y + 4).toFixed(1)}" text-anchor="${Math.abs(a) < .2 ? "middle" : a > 0 ? "start" : "end"}" font-size="12" font-weight="600" fill="var(--ink)">${LAB[c]}${LOW[c] ? "↓" : ""}</text>`; });
   CATS.forEach((c, i) => { const a0 = ang(i - .5), a1 = ang(i + .5), R2 = rr + 34; s += `<path data-c="${c}" d="M${cx},${cy} L${(cx + Math.cos(a0) * R2).toFixed(1)},${(cy + Math.sin(a0) * R2).toFixed(1)} A${R2},${R2} 0 0 1 ${(cx + Math.cos(a1) * R2).toFixed(1)},${(cy + Math.sin(a1) * R2).toFixed(1)} Z" fill="transparent"/>`; });
@@ -889,8 +1059,8 @@ function rdShadcn(box, rows, o) {
         h(RC.PolarAngleAxis, { dataKey: "cat", tick: { fill: ink, fontSize: 12, fontWeight: 600 } }),
         h(RC.PolarRadiusAxis, { domain: [0, 100], tick: false, axisLine: false }),
         o.showAvg ? h(RC.Radar, { name: "리그 평균", dataKey: "avg", stroke: mut, strokeDasharray: "4 4", fill: "none", isAnimationActive: false }) : null,
-        h(RC.Radar, { name: o.opp, dataKey: "opp", stroke: c2, strokeWidth: 2, fill: c2, fillOpacity: .25, dot: { r: 4, fillOpacity: 1, fill: c2, stroke: card, strokeWidth: 2 } }),
-        h(RC.Radar, { name: o.me, dataKey: "me", stroke: c1, strokeWidth: 2, fill: c1, fillOpacity: .5, dot: { r: 4, fillOpacity: 1, fill: c1, stroke: card, strokeWidth: 2 } })));
+        h(RC.Radar, { name: o.opp, dataKey: "opp", stroke: c2, strokeWidth: 2, fill: c2, fillOpacity: .25, animationDuration: 900, animationEasing: "ease-out", dot: { r: 4, fillOpacity: 1, fill: c2, stroke: card, strokeWidth: 2 } }),
+        h(RC.Radar, { name: o.me, dataKey: "me", stroke: c1, strokeWidth: 2, fill: c1, fillOpacity: .45, animationDuration: 900, animationEasing: "ease-out", dot: { r: 4, fillOpacity: 1, fill: c1, stroke: card, strokeWidth: 2 } })));
     if (!rdRoot || rdRootEl !== box) { box.innerHTML = ""; const el = document.createElement("div"); el.className = "sc-chart"; box.appendChild(el); rdRoot = window.ReactDOM.createRoot(el); rdRootEl = box; }
     rdRoot.render(chart); box.dataset.engine = "shadcn";
   } catch (e) { console.warn("radar: shadcn render failed, SVG fallback", e); state.rdLib = "fail"; rdRoot = null; renderRadar(); }
@@ -985,12 +1155,13 @@ function drawWeekly(team) {
   const iw = W - pad.l - pad.r, ih = H - pad.t - pad.b, bw = iw / NW, y = v => pad.t + ih * (1 - v);
   let s = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="주별 카테고리 승률">`;
   [0, .5, 1].forEach(v => { s += `<line x1="${pad.l}" x2="${W - pad.r}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)" stroke-width="1"${v === .5 ? ' stroke-dasharray="3 3"' : ""}/><text x="${pad.l - 6}" y="${y(v) + 4}" text-anchor="end" font-size="10" fill="var(--muted)">${v * 100}%</text>`; });
+  const cwk = state.base.cw; s += `<rect class="cur" x="${pad.l + cwk * bw}" y="${pad.t}" width="${bw}" height="${ih}" rx="6"/>`;
   for (let w = 0; w < NW; w++) {
     const b = wp(state.base, team, w), x0 = pad.l + w * bw, gap = 2, n = S ? 2 : 1, bwi = (bw - 6 - gap * (n - 1)) / n;
     const bars = [[b, "var(--s1)"]].concat(S ? [[wp(S.R, team, w), "var(--s2)"]] : []);
-    bars.forEach(([v, col], k) => { const x = x0 + 3 + k * (bwi + gap), h = ih * v; s += `<path d="M${x},${y(0)} v${-(h - 2)} q0,-2 2,-2 h${bwi - 4} q2,0 2,2 v${h - 2} z" fill="${col}"/>`; });
+    bars.forEach(([v, col], k) => { const x = x0 + 3 + k * (bwi + gap), h = ih * v; s += `<path class="wb${w < cwk ? " past" : ""}" style="--i:${w}" d="M${x},${y(0)} v${-(h - 2)} q0,-2 2,-2 h${bwi - 4} q2,0 2,2 v${h - 2} z" fill="${col}"/>`; });
     s += `<rect x="${x0}" y="${pad.t}" width="${bw}" height="${ih}" fill="transparent" data-w="${w}"/>`;
-    s += `<text x="${x0 + bw / 2}" y="${H - 8}" text-anchor="middle" font-size="10" fill="var(--muted)">${w + 1}</text>`;
+    s += `<text x="${x0 + bw / 2}" y="${H - 8}" text-anchor="middle" font-size="10" font-weight="${w === cwk ? 700 : 400}" fill="${w === cwk ? "var(--ink)" : "var(--muted)"}">${w + 1}</text>`;
   }
   s += `</svg><div class="tip" hidden></div>`;
   box.innerHTML = s;
@@ -1088,9 +1259,10 @@ function renderFresh() {
   const r = state.docs["league/rosters"], a = state.docs["league/actuals"], res = state.docs["league/results"];
   const done = res && res.weeks ? Object.keys(res.weeks).length : 0;
   $("fresh").innerHTML = (state.db === "none" ? `<span class="pill warn">저장소에 연결되지 않음</span>` : state.db === "snapshot" ? `<span class="pill warn" title="실시간 저장소 대신 페이지에 내장된 데이터로 계산">스냅샷 데이터 · ${esc((EMBED.asOf || "").slice(0, 10))}</span>` : "") +
-    `<span class="pill">로스터 ${esc(r && r.asOf ? r.asOf.slice(0, 16).replace("T", " ") : "—")}</span><span class="pill" title="${a && a.source ? esc(a.source) : ""}">실제 스탯 ${esc(a && a.asOf ? a.asOf.slice(0, 10) : "시즌 시작 전")}${a ? ` · ${pct(actWeight(currentWeek()))}${actMode() === "sample" ? " 표본 보정" : ""}` : ""}</span>${state.docs["league/live"] && state.docs["league/live"].through ? `<span class="pill" title="${esc(state.docs["league/live"].source || "")}">진행 주 실제 ${esc(md(state.docs["league/live"].through))}까지</span>` : ""}<span class="pill">결과 반영 ${done}주</span>${state.stream.on ? `<span class="pill" title="FA 목록 ${esc(faDoc() ? (faDoc().asOf || "").slice(0, 16).replace("T", " ") : "없음")}">전 팀 스트리밍 · ${acqLabel()}</span>` : ""}${(() => { const m = state.docs["league/meta"] || {}, g = gpMode(); return g === "full" ? `<span class="pill" title="ESPN 예상 출전 경기와 무관하게 전 경기 출전, 백투백 휴식·피로만 반영">GP 가정: 전 경기 출전</span>` : g === "mine" && (m.keepGP || []).length ? `<span class="pill warn" title="이 선수들만 ESPN 출전 경기 유지 — 다른 팀 부상 시즌 선수는 중립 보정">GP 가정: ${esc((m.keepGP || []).map(n => n.split(" ").slice(-1)[0]).join("·"))} ESPN 유지</span>` : g === "fair" ? `<span class="pill">GP 가정: 부상 시즌 전원 ESPN 유지</span>` : `<span class="pill">GP 가정: 전원 중립</span>`; })()}${state.b2b ? '<span class="pill b2b">백투백 반영 중</span>' : ""}${state.busy ? '<span class="pill">계산 중…</span>' : ""}`;
+    `<span class="pill">로스터 ${esc(r && r.asOf ? r.asOf.slice(0, 16).replace("T", " ") : "—")}</span><span class="pill" title="${a && a.source ? esc(a.source) : ""}">실제 스탯 ${esc(a && a.asOf ? a.asOf.slice(0, 10) : "시즌 시작 전")}${a ? ` · ${pct(actWeight(currentWeek()))}${actMode() === "sample" ? " 표본 보정" : ""}` : ""}</span>${state.docs["league/live"] && state.docs["league/live"].through ? `<span class="pill live" title="${esc(state.docs["league/live"].source || "")}">진행 주 실제 ${esc(md(state.docs["league/live"].through))}까지</span>` : ""}<span class="pill">결과 반영 ${done}주</span>${state.stream.on ? `<span class="pill" title="FA 목록 ${esc(faDoc() ? (faDoc().asOf || "").slice(0, 16).replace("T", " ") : "없음")}">전 팀 스트리밍 · ${acqLabel()}</span>` : ""}${(() => { const m = state.docs["league/meta"] || {}, g = gpMode(); return g === "full" ? `<span class="pill" title="ESPN 예상 출전 경기와 무관하게 전 경기 출전, 백투백 휴식·피로만 반영">GP 가정: 전 경기 출전</span>` : g === "mine" && (m.keepGP || []).length ? `<span class="pill warn" title="이 선수들만 ESPN 출전 경기 유지 — 다른 팀 부상 시즌 선수는 중립 보정">GP 가정: ${esc((m.keepGP || []).map(n => n.split(" ").slice(-1)[0]).join("·"))} ESPN 유지</span>` : g === "fair" ? `<span class="pill">GP 가정: 부상 시즌 전원 ESPN 유지</span>` : `<span class="pill">GP 가정: 전원 중립</span>`; })()}${state.b2b ? '<span class="pill b2b">백투백 반영 중</span>' : ""}${state.busy ? '<span class="pill">계산 중…</span>' : ""}`;
+  $("busybar").hidden = !state.busy;
 }
-function setTab(t) { state.tab = t; try { localStorage.setItem("td-tab", t); } catch (e) {} $("tab-now").setAttribute("aria-selected", String(t === "now")); $("tab-fc").setAttribute("aria-selected", String(t === "fc")); $("tab-proj").setAttribute("aria-selected", String(t === "proj")); render(); }
+function setTab(t) { state.tab = t; try { localStorage.setItem("td-tab", t); } catch (e) {} $("tab-now").setAttribute("aria-selected", String(t === "now")); $("tab-fc").setAttribute("aria-selected", String(t === "fc")); $("tab-proj").setAttribute("aria-selected", String(t === "proj")); moveInd(); render(); }
 function renderNeutralNote() {
   const n = REF.neutral, rs = [...state.restB2B];
   $("neutral-note").textContent = (REF.projMeta ? `경기당 기록: 모든 선수(8팀·FA 동일 규칙)에 ESPN 프로젝션과 Basketball-Reference 6시즌 가중 선형회귀를 역분산으로 결합(회귀 가중 ${Math.round(REF.projMeta.wMin * 100)}–${Math.round(REF.projMeta.wMax * 100)}%, 신인은 NCAA 환산 ${Math.round(REF.projMeta.wNcaa * 100)}%) — 선수별 근거는 '프로젝션 근거' 탭. ${n ? `출전 경기 중립 보정(GP 가정이 '중립'·'지정'·'부상 시즌'일 때 사용) = ESPN ${Math.round((1 - n.wGP) * 100)}% + 최근 시즌 실제 ${Math.round(n.wGP * 100)}%. ` : ""}` : n ? `중립 보정: 모든 선수(8팀·FA 동일 규칙)의 ESPN 프로젝션을 최근 실적 쪽으로 회귀 — 출전 경기 = ESPN ${Math.round((1 - n.wGP) * 100)}% + 최근 시즌 실제 ${Math.round(n.wGP * 100)}%(2025-26 10경기 이상, 없으면 2024-25), 경기당 기록 = ESPN ${Math.round((1 - n.wPG) * 100)}% + 2025-26 실제 ${Math.round(n.wPG * 100)}%(20경기 이상). 신인·기록 없는 선수는 ESPN 그대로. ` : "중립 보정 미적용(ESPN 프로젝션 그대로). ") +
@@ -1115,7 +1287,7 @@ function setTeam(t) {
   render();
 }
 function render() {
-  renderTeamUI();
+  renderTeamUI(); moveInd();
   renderFresh(); renderNeutralNote();
   const ready = !!(rosters() && state.base);
   $("view-empty").hidden = ready;
