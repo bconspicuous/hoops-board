@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-02T13:45+09:00",
+ "asOf": "2026-11-02T14:14+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -398,14 +398,14 @@
   {
    "player": "Gui Santos",
    "team": "GS",
-   "status": "Out",
-   "date": "2026-11-02T04:19Z",
-   "type": "out",
+   "status": "Day-To-Day",
+   "date": "2026-11-02T04:49Z",
+   "type": "day-to-day",
    "returnDate": "2026-11-05",
    "detail": null,
    "side": null,
    "injury": "Knee",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Santos did not play in the second half of Sunday's 124-112 win over the Clippers due to a knee injury and will not play against the Suns on Monday, Danny Emerman of SFStandard.com reports.",
    "long": "Santos has been working through a knee injury that he picked up in preseason action in mid-October, and he was initially tagged as questionable for Sunday's game before being cleared to play. Head coach Steve Kerr told reporters after the game that the Warriors need \"to get [Santos] right,\" so it's possible that the fifth-year forward is facing an extended absence beyond Monday's contest. Georges Niang and Al Horford both figure to see an uptick in playing time in Santos' absence."
   },
@@ -1182,14 +1182,14 @@
   {
    "player": "Jakob Poeltl",
    "team": "TOR",
-   "status": "Out",
-   "date": "2026-11-02T01:44Z",
-   "type": "out",
+   "status": "Day-To-Day",
+   "date": "2026-11-02T04:47Z",
+   "type": "day-to-day",
    "returnDate": "2026-11-02",
    "detail": "Inflammation",
    "side": "Left",
    "injury": "Shoulder",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Poeltl (shoulder) won't play in Sunday's game against the Lakers, Vivek Jacob of the Raptors' official site reports.",
    "long": "Poeltl was a confirmed starter Sunday. However, a shoulder injury will keep him off the floor versus the Lakers. Without Poeltl, Trayce Jackson-Davis will enter the starting lineup."
   },
