@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-03T19:45+09:00",
+ "asOf": "2026-11-03T22:46+09:00",
  "scoringPeriodId": 15,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -34,7 +34,7 @@
    "team": "GGAM",
    "name": "Garibong CHaRdaddy",
    "rank": 3,
-   "acq": 8
+   "acq": 9
   },
   {
    "team": "TBG",
@@ -154,6 +154,42 @@
   }
  ],
  "transactions": [
+  {
+   "id": "4bf0bcf4-b65b-4410-825b-b3838b6f7c1a",
+   "team": "GGAM",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-03 22:25 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Nic Claxton",
+     "from": "FA",
+     "to": "GGAM"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "43f44e53-6293-4d1d-9a05-7df1467d25f0",
+   "team": "GGAM",
+   "mine": false,
+   "type": "WAIVER",
+   "status": "CANCELED",
+   "proposed": "2026-11-03 22:22 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "OG Anunoby",
+     "from": "FA",
+     "to": "GGAM"
+    }
+   ],
+   "bid": 0
+  },
   {
    "id": "b5b7916d-65ad-4bc6-a455-588dae752c4e",
    "team": "KOO",
