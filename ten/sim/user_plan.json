@@ -38,9 +38,9 @@
   "GTD": [
    {
     "add": "OG Anunoby",
-    "drop": "Paul Reed",
+    "drop": "Zaccharie Risacher",
     "from": "2026-11-04",
-    "note": "웨이버 신청(ESPN 처리 11/04 17:00 KST) · 성공 가정"
+    "note": "웨이버 신청 1순위(Risacher 방출, ESPN 처리 11/04 17:00 KST) · 성공 가정"
    }
   ]
  },
@@ -57,9 +57,9 @@
   "Dejounte Murray"
  ],
  "coreNote": "사용자 지정 상위 10명 고정(방출 금지). 로스터에 없는 선수는 자동 제외.",
- "headline": "Anunoby 웨이버 신청(Reed 방출, 11/04 처리·성공 가정) · Watson → Risacher · Zubac 3주차 결장 가정 · Kawhi IR 11/23",
+ "headline": "Anunoby 웨이버 신청(Risacher 방출, 11/04 처리·성공 가정) · Zubac 결장 가정 · Kawhi IR 11/23",
  "notes": {
-  "GTD": "OG Anunoby 웨이버 신청(Paul Reed 방출) — ESPN 처리 11/04 17:00 KST, 웨이버 순번 6위라 상위 5팀이 신청하면 실패 → 시뮬레이션은 성공 가정(11/04부터). Peyton Watson(DTD) → Zaccharie Risacher 교체 반영(11/03, Risacher는 2026-27 시즌 실제 경기당 스탯으로 고정). Gobert ↔ Andrew Nembhard(IYH) 트레이드·Saddiq Bey → Daniel Gafford 반영 완료. Kawhi 무릎 IR · ESPN 예상 복귀 11/23 → 복귀 시 가치 최하위 선수 자동 방출. Ajay Mitchell은 Jalen Williams 역할 승계(스탯 상향 가정).",
+  "GTD": "OG Anunoby 웨이버 신청(1순위 Zaccharie Risacher 방출, 2순위 Paul Reed 방출) — ESPN 처리 11/04 17:00 KST, 웨이버 순번 6위라 상위 5팀이 신청하면 실패 → 시뮬레이션은 성공 가정(11/04부터). Peyton Watson(DTD) → Zaccharie Risacher 교체 반영(11/03, Risacher는 2026-27 시즌 실제 경기당 스탯으로 고정). Gobert ↔ Andrew Nembhard(IYH) 트레이드·Saddiq Bey → Daniel Gafford 반영 완료. Kawhi 무릎 IR · ESPN 예상 복귀 11/23 → 복귀 시 가치 최하위 선수 자동 방출. Ajay Mitchell은 Jalen Williams 역할 승계(스탯 상향 가정).",
   "TBG": "Giannis·Randle 영입(Towns·Paul Reed 이적). Edwards IR.",
   "IYH": "Gobert 영입(Nembhard 이적). Jaren Jackson Jr. IR."
  },
