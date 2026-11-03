@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-03T19:11+09:00",
+ "asOf": "2026-11-03T23:41+09:00",
  "source": "ESPN API sync (GitHub Actions g8-espn)",
  "teams": {
   "Junyoung's Scary Team": {
@@ -95,7 +95,8 @@
     "Jabari Smith Jr.",
     "Stephon Castle",
     "Moussa Diabate",
-    "Zaccharie Risacher"
+    "Zaccharie Risacher",
+    "Nic Claxton"
    ],
    "ir": [
     "Pascal Siakam",
@@ -173,6 +174,7 @@
   "Jalen Williams": "O",
   "Chet Holmgren": "O",
   "Ja Morant": "O",
+  "Nic Claxton": "O",
   "Anthony Edwards": "O",
   "Jalen Duren": "O",
   "Kawhi Leonard": "O",
@@ -182,7 +184,6 @@
   "Brandon Ingram": "O",
   "Jaren Jackson Jr.": "O",
   "Tobias Harris": "O",
-  "Nic Claxton": "O",
   "Kristaps Porzingis": "O",
   "Keegan Murray": "O",
   "Egor Demin": "O",
@@ -235,7 +236,8 @@
   "D'Angelo Russell",
   "Kevin Porter Jr.",
   "Lonzo Ball",
-  "Russell Westbrook"
+  "Russell Westbrook",
+  "Seth Curry"
  ],
  "returns": {
   "Egor Demin": "2026-11-07",
