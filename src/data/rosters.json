@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-03T23:41+09:00",
+ "asOf": "2026-11-04T04:50+09:00",
  "source": "ESPN API sync (GitHub Actions g8-espn)",
  "teams": {
   "Junyoung's Scary Team": {
@@ -205,7 +205,6 @@
   "Maxime Raynaud": "O",
   "Isaiah Joe": "O",
   "Ben Simmons": "O",
-  "Clint Capela": "O",
   "Sergio de Larrea": "O",
   "Kyrie Irving": "DTD",
   "Pascal Siakam": "DTD",
@@ -228,7 +227,8 @@
   "Brandon Williams": "DTD",
   "Al Horford": "DTD",
   "Gui Santos": "DTD",
-  "Jock Landale": "DTD"
+  "Jock Landale": "DTD",
+  "Clint Capela": "DTD"
  },
  "unsigned": [
   "Cam Thomas",
@@ -250,7 +250,6 @@
   "Jalen Duren": "2026-11-09",
   "Kristaps Porzingis": "2026-12-01",
   "Jimmy Butler III": "2027-01-02",
-  "Clint Capela": "2026-11-04",
   "Obi Toppin": "2026-11-04",
   "T.J. McConnell": "2026-11-09",
   "Ivica Zubac": "2026-11-09",
@@ -273,7 +272,7 @@
   "Maxime Raynaud": "2026-11-10",
   "Keegan Murray": "2026-11-10",
   "Ben Simmons": "2027-10-01",
-  "Tobias Harris": "2026-11-06",
+  "Tobias Harris": "2026-11-09",
   "Kawhi Leonard": "2026-11-23",
   "Jaren Jackson Jr.": "2026-12-14",
   "Jusuf Nurkic": "2026-11-04",
