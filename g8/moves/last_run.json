@@ -1,0 +1,57 @@
+{
+ "planId": "20261103T0037",
+ "mode": "dry",
+ "at": "2026-11-02T19:39-05:00",
+ "items": [
+  {
+   "n": 1,
+   "kind": "add/drop",
+   "checks": [
+    "✗ weekly add limit reached (3/1.0)",
+    "✗ not executable"
+   ],
+   "ok": false,
+   "add": {
+    "name": "Alex Sarr",
+    "status": "FREEAGENT"
+   },
+   "drop": "Norman Powell",
+   "ir": null
+  },
+  {
+   "n": 2,
+   "kind": "add/drop",
+   "checks": [
+    "✗ weekly add limit reached (3/1.0)",
+    "✗ not executable"
+   ],
+   "ok": false,
+   "add": {
+    "name": "Kevin Porter Jr.",
+    "status": "FREEAGENT"
+   },
+   "drop": "Dillon Brooks",
+   "ir": null
+  },
+  {
+   "n": 3,
+   "kind": "add/drop",
+   "checks": [
+    "✗ weekly add limit reached (3/1.0)",
+    "✗ not executable"
+   ],
+   "ok": false,
+   "add": {
+    "name": "VJ Edgecombe",
+    "status": "FREEAGENT"
+   },
+   "drop": "Brandon Miller",
+   "ir": null
+  }
+ ],
+ "ok": false,
+ "scoringPeriodId": 14,
+ "matchupPeriod": 3,
+ "addsUsed": 3,
+ "rosterMatchesPlan": true
+}
