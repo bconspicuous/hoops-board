@@ -136,7 +136,10 @@ def main():
         irp = byname.get(norm(it.get("ir"))) if it.get("ir") else None
         if it.get("drop") and not drop: okk = bad(f"{it['drop']} is not on our roster")
         if drop and drop["name"] in undrop: okk = bad(f"{drop['name']} is undroppable")
-        if irp:
+        if irp and it["kind"] == "activate":
+            if irp["slot"] != 13: okk = bad(f"{irp['name']} is not on IR")
+            if not drop: okk = bad("activation needs a drop (roster is full)")
+        elif irp:
             if irp["inj"] not in OUT_OK: okk = bad(f"{irp['name']} is {irp['inj']} — not IR-eligible")
             if sum(1 for e in ent if e["slot"] == 13) >= int((rs.get("lineupSlotCounts") or {}).get("13", 2)): okk = bad("no free IR slot")
         add = None
@@ -150,6 +153,24 @@ def main():
         r["add"] = add and {k: add[k] for k in ("name", "status")}; r["drop"] = drop and drop["name"]; r["ir"] = irp and irp["name"]
         r["checks"].append("✓ checks passed" if okk else "✗ not executable")
         if not okk or MODE != "live": r["ok"] = okk; continue
+        # ---- live: activation = drop first, then IR -> bench
+        if it["kind"] == "activate":
+            ok, resp = post({"isLeagueManager": False, "teamId": me["id"], "type": "FREEAGENT", "memberId": swid, "scoringPeriodId": sp, "executionType": "EXECUTE",
+                             "items": [{"playerId": drop["id"], "type": "DROP", "fromTeamId": me["id"]}]})
+            r["dropResponse"] = resp if not ok else {k: resp.get(k) for k in ("id", "status") if isinstance(resp, dict)}
+            if not ok: bad("ESPN rejected the drop"); break
+            time.sleep(2)
+            ok, resp = post({"isLeagueManager": False, "teamId": me["id"], "type": "ROSTER", "memberId": swid, "scoringPeriodId": sp, "executionType": "EXECUTE",
+                             "items": [{"playerId": irp["id"], "type": "LINEUP", "fromLineupSlotId": 13, "toLineupSlotId": 12}]})
+            r["activateResponse"] = resp if not ok else {k: resp.get(k) for k in ("id", "status") if isinstance(resp, dict)}
+            if not ok: bad("drop done, but ESPN rejected moving the player off IR — move him to the bench by hand"); break
+            time.sleep(3)
+            _, _, ent2, _, _, _, acq2, _ = state(); names2 = {norm(e["name"]): e for e in ent2}
+            verified = norm(drop["name"]) not in names2 and names2.get(norm(irp["name"]), {}).get("slot") not in (13, None)
+            r.update(ok=verified, verified=verified); it["status"] = "executed" if verified else "failed"; it["executedAt"] = res["at"]
+            ent, byname, acq = ent2, names2, acq2
+            if not verified: bad("ESPN shows a different roster after the activation"); break
+            continue
         # ---- live: one item = IR move (if any) then the add/drop transaction
         if irp:
             ok, resp = post({"isLeagueManager": False, "teamId": me["id"], "type": "ROSTER", "memberId": swid, "scoringPeriodId": sp, "executionType": "EXECUTE",

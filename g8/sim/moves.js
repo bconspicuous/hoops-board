@@ -60,6 +60,11 @@ const PROTECT = +(process.env.PROTECT || 8), MAXP = +(process.env.MAXP || 3), WK
       left--;
     }
     const c0 = cCount(roster); items.forEach(i => { i.conflicts = items.filter(j => j !== i && j.add && i.add && ((state.PL[i.add].pos === 'C' && state.PL[j.add].pos === 'C' && c0 - (i.drop && state.PL[i.drop].pos === 'C' ? 1 : 0) - (j.drop && state.PL[j.drop].pos === 'C' ? 1 : 0) + 2 > 4) || (i.drop && i.drop === j.drop))).map(j => j.n); });
+    /* IR player no longer O: best drop to activate him (optional — manager rule: a DTD player on IR does not block adds) */
+    ir.filter(n => statusOf(n) !== 'O' && state.PL[n]).forEach(n => { let best = null;
+      for (const d of drops) { const names = roster.filter(x => x !== d).concat([n]); if (cCount(names) > 4) continue; const g = wk(names) - base.wk; if (!best || g > best.wk) best = { d, wk: g }; }
+      if (!best) return; const z = season([best.d], [n]);
+      items.push({ n: items.length + 1, kind: 'activate', ir: n, drop: best.d, weekGain: +best.wk.toFixed(3), titleGain: +(z.champ - base.champ).toFixed(4), p1Gain: +(z.p1 - base.p1).toFixed(4), epctGain: +(z.epct - base.epct).toFixed(4), dropValue: +state.PL[best.d].value.toFixed(2), status: 'proposed', note: `IR 복귀(상태 ${statusOf(n) || '정상'})` }); });
     if (irFree > 0) outActive.filter(o => !items.some(i => i.ir === o)).forEach(o => items.push({ n: items.length + 1, kind: 'ir', ir: o, status: 'proposed', note: 'O 상태 — IR로 이동하면 로스터 1자리가 빔(영입 없이)' }));
     return { week: cw + 1, opp: oppOf(ME, cw).opp, acqLeft, base: { wk: +base.wk.toFixed(3), champ: +base.champ.toFixed(4), p1: +base.p1.toFixed(4), epct: +base.epct.toFixed(4) }, protect: [...protect], droppable: drops, flags, items,
       screened: top.map(s => ({ add: s.add, drop: s.drop, ir: s.ir || null, wk: +s.wk.toFixed(3), title: +(s.title || 0).toFixed(4) })) };
@@ -77,7 +82,7 @@ const PROTECT = +(process.env.PROTECT || 8), MAXP = +(process.env.MAXP || 3), WK
   const L = [`# 로스터 이동 제안 · ${R.week}주차 vs ${R.opp} · 이번 주 남은 영입 ${R.acqLeft}회`];
   R.flags.forEach(f => L.push(`⚠ ${f.player}: IR인데 상태 ${f.status} — ${f.note}`));
   if (!R.items.length) L.push('제안 없음 (기준: 이번 주 +0.05승 또는 우승 +1%p 이상)');
-  R.items.forEach(i => L.push(i.kind === 'ir' ? `${i.n}. IR 이동: ${i.ir} (${i.note})` :
+  R.items.forEach(i => L.push(i.kind === 'ir' ? `${i.n}. IR 이동: ${i.ir} (${i.note})` : i.kind === 'activate' ? `${i.n}. IR 복귀 ${i.ir} / 방출 ${i.drop} — 이번 주 ${i.weekGain >= 0 ? '+' : ''}${i.weekGain.toFixed(2)}승 · 우승 ${pc(i.titleGain)} [${i.status}]` :
     `${i.n}. ${i.ir ? `IR 이동 ${i.ir} + ` : ''}영입 ${i.add}(${i.addTeam} ${i.addPos}${i.addOwner === 'FA' ? '' : ' · ' + i.addOwner})${i.drop ? ` / 방출 ${i.drop}` : ''} — 이번 주 ${i.weekGain >= 0 ? '+' : ''}${i.weekGain.toFixed(2)}승 · 우승 ${pc(i.titleGain)} · 1위 ${pc(i.p1Gain)}${i.conflicts && i.conflicts.length ? ` · ${i.conflicts.join('·')}번과 동시 불가(C 한도)` : ''} [${i.status}]`));
   L.push('', `보호(방출 후보 제외): ${R.protect.join(', ')}`);
   fs.writeFileSync(path.join(OUTD, 'plan.md'), L.join('\n') + '\n');
