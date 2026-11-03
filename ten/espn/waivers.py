@@ -44,19 +44,24 @@ def main():
         for x in d.get("transactions") or []:
             tx.setdefault(x.get("id"), x)
     # players on waivers (clear date)
-    flt = {"players": {"filterStatus": {"value": ["WAIVERS"]}, "limit": 100}}
+    flt = {"players": {"filterStatus": {"value": ["FREEAGENT", "WAIVERS"]}, "limit": 600, "sortPercOwned": {"sortPriority": 1, "sortAsc": False}}}
     wv = RO.read_json("?view=kona_player_info", {"X-Fantasy-Filter": json.dumps(flt)})
     on_waivers = []
     for pe in wv.get("players") or []:
         p = pe.get("player") or {}; names[p.get("id")] = p.get("fullName")
+        if pe.get("status") != "WAIVERS":
+            continue
         on_waivers.append({"id": p.get("id"), "name": p.get("fullName"), "pro": F.PRO.get(p.get("proTeamId"), "FA"),
                            "waiverClears": ts(pe.get("waiverProcessDate")), "inj": p.get("injuryStatus")})
     # resolve unknown player ids
     unknown = sorted({it.get("playerId") for x in tx.values() for it in x.get("items") or [] if it.get("playerId") not in names})
     if unknown:
-        flt = {"players": {"filterIds": {"value": unknown[:200]}, "limit": 200}}
-        for pe in RO.read_json("?view=kona_player_info", {"X-Fantasy-Filter": json.dumps(flt)}).get("players") or []:
-            p = pe.get("player") or {}; names[p.get("id")] = p.get("fullName")
+        try:
+            flt = {"players": {"filterIds": {"value": unknown[:200]}, "limit": 200}}
+            for pe in RO.read_json("?view=kona_player_info", {"X-Fantasy-Filter": json.dumps(flt)}).get("players") or []:
+                p = pe.get("player") or {}; names[p.get("id")] = p.get("fullName")
+        except Exception as e:
+            print(f"::warning::player-name lookup failed: {e}")
     tn = lambda i: (teams.get(i) or {}).get("abbr") or ("FA" if i in (0, -1, None) else str(i))
     rows = []
     for x in tx.values():
