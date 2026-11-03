@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-03T09:26+09:00",
+ "asOf": "2026-11-03T11:41+09:00",
  "leagueId": "751654965",
  "season": 2027,
  "teams": [
@@ -315,6 +315,7 @@
    "Tobias Harris",
    "Nic Claxton",
    "Kristaps Porzingis",
+   "Jakob Poeltl",
    "Keegan Murray",
    "Egor Demin",
    "Jimmy Butler III",
@@ -323,8 +324,8 @@
    "Rui Hachimura",
    "Derrick Jones Jr.",
    "Obi Toppin",
-   "Scotty Pippen Jr.",
    "Jordan Poole",
+   "Scotty Pippen Jr.",
    "Terrence Shannon Jr.",
    "Cason Wallace",
    "T.J. McConnell",
@@ -332,10 +333,12 @@
    "Jusuf Nurkic",
    "Mark Williams",
    "Santi Aldama",
+   "Kelly Oubre Jr.",
    "Dereck Lively II",
    "Kingston Flemings",
    "Aaron Nesmith",
    "Jaylon Tyson",
+   "Brandon Williams",
    "Donte DiVincenzo",
    "Bradley Beal",
    "Justin Champagnie",
@@ -349,10 +352,7 @@
    "Sergio de Larrea"
   ],
   "DTD": [
-   "Scottie Barnes",
-   "LaMelo Ball",
-   "Jakob Poeltl",
-   "Brandon Williams"
+   "Max Christie"
   ]
  }
 }
