@@ -14,6 +14,11 @@ for e in (me or {}).get("roster", {}).get("entries", []):
     slots[e.get("lineupSlotId")] = slots.get(e.get("lineupSlotId"), 0) + 1
 out = {"team_found": bool(me), "team_id": (me or {}).get("id"), "cookie_is_team_owner": bool(swid) and swid in owners,
        "owners_count": len(owners), "lineup_slot_counts_on_roster": slots, "lineupLocktimeType": rs.get("lineupLocktimeType"),
-       "rosterLocktimeType": rs.get("rosterLocktimeType"), "moveLimit": rs.get("moveLimit")}
-print(json.dumps(out))
-print(f"::notice title=ESPN auth check::{json.dumps(out)}")
+       "rosterLocktimeType": rs.get("rosterLocktimeType"), "moveLimit": rs.get("moveLimit"),
+       # add/drop/IR feasibility (read-only): league acquisition rules, IR rules, our counters
+       "acquisitionSettings": d.get("settings", {}).get("acquisitionSettings"),
+       "rosterSettings_other": {k: v for k, v in rs.items() if k not in ("lineupSlotCounts", "positionLimits")},
+       "transactionCounter": (me or {}).get("transactionCounter"),
+       "ir_entries": [{"name": e["playerPoolEntry"]["player"].get("fullName"), "injuryStatus": e["playerPoolEntry"]["player"].get("injuryStatus"), "slot": e.get("lineupSlotId")} for e in (me or {}).get("roster", {}).get("entries", []) if e.get("lineupSlotId") == 13 or (e["playerPoolEntry"]["player"].get("injuryStatus") in ("OUT", "INJURY_RESERVE"))]}
+print(json.dumps(out, ensure_ascii=False, indent=1))
+print(f"::notice title=ESPN auth check::{json.dumps(out, ensure_ascii=False)[:3000]}")
