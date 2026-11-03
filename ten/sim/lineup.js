@@ -23,7 +23,8 @@ days.forEach((day, d) => { const dt = new Date(Date.parse(start) + d * 864e5).to
   out.push({ date: dt, n: playing.length, start: Object.entries(Lu.slots).map(([s, id]) => ({ slot: s.replace(/\d$/, ''), name: P[id].name, team: P[id].sc })).sort((x, y) => ord.indexOf(x.slot) - ord.indexOf(y.slot)),
     bench: Lu.bench.map(id => ({ name: P[id].name, team: P[id].sc })), out: outP.map(id => P[id].name), idle: roster.filter(id => !day.includes(P[id].sc)).map(id => P[id].name) }); });
 const rank = roster.slice().sort((x, y) => P[y].value - P[x].value).map(id => ({ name: P[id].name, score: P[id].value }));
+const rankCur = POST[ME].concat(TEAMS[ME].ir).filter((id, i, A) => A.indexOf(id) === i).map(id => ({ name: P[id].name, score: score(id) })).sort((x, y) => y.score - x.score);   // actual ESPN roster (for ten/espn/lineup.py)
 roster.forEach(id => { P[id].value = keep.get(id); });
-fs.writeFileSync('lineup_week.json', JSON.stringify({ week: w + 1, opp: TEAMS[O].abbr, rosterMode: useP ? 'plan' : 'current', lev, rank, days: out }));
+fs.writeFileSync('lineup_week.json', JSON.stringify({ week: w + 1, opp: TEAMS[O].abbr, rosterMode: useP ? 'plan' : 'current', lev, rank, rankCur, days: out }));
 for (const x of out) console.log(x.date, x.n + '명', x.n > 10 ? '벤치: ' + x.bench.map(b => b.name).join(', ') : '전원 출전', x.out.length ? '| 결장: ' + x.out.join(', ') : '');
 console.log('priority', rank.map(r => r.name.split(' ').pop() + ' ' + r.score.toFixed(3)).join(' > '));

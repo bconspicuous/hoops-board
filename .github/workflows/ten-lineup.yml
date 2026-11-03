@@ -1,0 +1,52 @@
+name: ten · daily lineup (plan / approved execute)
+# MODE=plan: read-only lineup proposal for a US date -> ten/espn/lineup_plan.json (no ESPN writes).
+# MODE=execute: only with the plan hash the team owner approved in chat; re-plans from live data and writes ESPN lineup
+# slots only if the plan is unchanged. Never adds, drops or trades. Touches only ten/.
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "plan (read-only) or execute (needs approved plan_hash)"
+        type: choice
+        options: [plan, execute]
+        default: plan
+      plan_hash:
+        description: "plan hash approved by the owner (execute only)"
+        required: false
+        default: ""
+      target_date:
+        description: "US date YYYY-MM-DD (default: today US/Eastern)"
+        required: false
+        default: ""
+permissions:
+  contents: write
+concurrency:
+  group: ten-lineup
+  cancel-in-progress: false
+jobs:
+  lineup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Lineup ${{ inputs.mode }}
+        env:
+          ESPN_LEAGUE_ID: "504060248"
+          ESPN_SEASON: "2027"
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          ESPN_SWID: ${{ secrets.ESPN_SWID }}
+          MODE: ${{ inputs.mode }}
+          PLAN_HASH: ${{ inputs.plan_hash }}
+          TARGET_DATE: ${{ inputs.target_date }}
+        run: python ten/espn/lineup.py
+      - name: Commit plan / result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ten/espn/lineup_plan.json
+          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
+          git commit -m "ten: lineup ${{ inputs.mode }} $(TZ=Asia/Seoul date +'%Y-%m-%d %H:%M KST')"
+          for i in 1 2 3; do git pull --rebase origin main && git push && break; sleep 5; done

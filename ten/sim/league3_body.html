@@ -470,8 +470,8 @@ section:not([hidden]) .vchart .bars rect { transform-box: fill-box; transform-or
     </div>
     <section class="panel" id="rec-panel">
       <div class="phead"><h2>FA 영입 추천 · Simul 엔진</h2><span class="note">주 2회 이상 교체 기본 위에 FA 1명을 영구 영입할 때</span></div>
-      <div class="row"><button class="btn primary" id="rec-run" type="button">추천 계산</button><span class="msg" id="rec-msg">상위 FA 45명 × 방출 후보(가치 하위 4명, 상위 10명 고정 제외) 조합을 남은 시즌 매치업 승리로 평가합니다.</span></div>
-      <div id="rec-wrap" hidden><div class="tbl"><table id="rec"></table></div><p class="note">매치업 승리 Δ = 적용 주차~22주 기대 매치업 승리 수 변화(기본 시나리오 대비). 영입 선수가 일반 교체 대상보다 가치가 낮으면 그 주 교체로 다시 빠지므로 효과가 0에 가깝게 나옵니다. Simul 버튼 = 해당 조합으로 시즌 재계산.</p></div>
+      <div class="row"><button class="btn primary" id="rec-run" type="button">추천 계산</button><span class="msg" id="rec-msg">상위 FA 45명 × 방출 후보(가치 하위 4명, 상위 10명 고정 제외) 조합을 남은 시즌 카테고리 승(순위 기준) 합계로 평가합니다.</span></div>
+      <div id="rec-wrap" hidden><div class="tbl"><table id="rec"></table></div><p class="note">모든 Δ는 기본 시나리오(주 2회 일반 교체) 대비, 적용 주차~22주 <b>남은 시즌 전체 합계</b>입니다(주당 값 병기). 카테고리 승 Δ = 순위 산정 기준(카테고리 누적 승패)의 기대 승수 변화로 정렬 기준. 매치업 승리 Δ = 주간 매치업(11개 중 과반) 승리 확률의 합계 변화. 영입 선수가 일반 교체 대상보다 가치가 낮으면 그 주 교체로 다시 빠지므로 효과가 0에 가깝게 나옵니다. Simul 버튼 = 해당 조합으로 시즌 재계산.</p></div>
     </section>
     <section class="panel">
       <div class="phead"><h2>선수 교체 전략</h2><span class="note" id="st-sub"></span></div>
@@ -1016,14 +1016,15 @@ section:not([hidden]) .vchart .bars rect { transform-box: fill-box; transform-or
       for (const d of drops) for (const f of fas) {
         const u = scenUnits(team, new Set([d.n]), new Set([f.n]), perGame), rows = {};
         for (let k = k0; k < NK; k++) rows[k] = adj(team, k, u, nsOf(team, k));
-        const s = score((t, k) => t === team ? rows[k] : B.sums[t][k]); res.push({ d, f, dw: s.w - b0.w, dc: (s.c - b0.c) / Math.max(1, my.length * 11), pc: s.pc.map((v, x) => (v - b0.pc[x]) / Math.max(1, my.length)) });
+        const s = score((t, k) => t === team ? rows[k] : B.sums[t][k]); res.push({ d, f, dw: s.w - b0.w, dcw: s.c - b0.c, dc: (s.c - b0.c) / Math.max(1, my.length * 11), pc: s.pc.map((v, x) => (v - b0.pc[x]) / Math.max(1, my.length)) });
       }
-      const best = new Map(); res.sort((a, b) => b.dw - a.dw).forEach(r => { if (!best.has(r.f.n)) best.set(r.f.n, r); });
+      const best = new Map(); res.sort((a, b) => b.dcw - a.dcw).forEach(r => { if (!best.has(r.f.n)) best.set(r.f.n, r); });
       const top = [...best.values()].slice(0, 10);
-      $("rec").innerHTML = `<thead><tr><th>영입</th><th>방출</th><th class="r">${SD.weeks[k0] + 1}주 경기</th><th class="r">매치업 승리 Δ</th><th class="r">카테고리 승률 Δ</th><th>주요 변화(%p)</th><th></th></tr></thead><tbody>` +
+      $("rec").innerHTML = `<thead><tr><th>영입</th><th>방출</th><th class="r">${SD.weeks[k0] + 1}주 경기</th><th class="r">카테고리 승 Δ<br><span class="note">남은 시즌 합계</span></th><th class="r">매치업 승리 Δ<br><span class="note">남은 시즌 합계</span></th><th class="r">카테고리 승률 Δ</th><th>주요 변화(%p)</th><th></th></tr></thead><tbody>` +
         top.map((r, x) => { const ch = CATS.map((c, i) => [c, r.pc[i]]).filter(([, v]) => Math.abs(v) >= 0.01).sort((a, b) => Math.abs(b[1]) - Math.abs(a[1])).slice(0, 3);
           return `<tr class="${x === 0 && r.dw > 0 ? "me" : ""}"><td><b>${esc(r.f.n)}</b> <span class="note">${r.f.pos} · ${r.f.nba}${r.f.st ? " · " + r.f.st : ""}</span></td><td>${esc(r.d.n)}</td><td class="r num">${r.f.games[k0]}</td>
-            <td class="r num ${r.dw >= 0 ? "up2" : "down2"}">${r.dw >= 0 ? "+" : ""}${r.dw.toFixed(2)}승</td><td class="r num">${r.dc >= 0 ? "+" : ""}${(r.dc * 100).toFixed(1)}%p</td>
+            <td class="r num ${r.dcw >= 0 ? "up2" : "down2"}"><b>${r.dcw >= 0 ? "+" : ""}${r.dcw.toFixed(1)}승</b> <span class="note">주당 ${r.dcw >= 0 ? "+" : ""}${(r.dcw / Math.max(1, my.length)).toFixed(2)}</span></td>
+            <td class="r num">${r.dw >= 0 ? "+" : ""}${r.dw.toFixed(2)}승 <span class="note">주당 ${r.dw >= 0 ? "+" : ""}${(r.dw / Math.max(1, my.length) * 100).toFixed(0)}%p</span></td><td class="r num">${r.dc >= 0 ? "+" : ""}${(r.dc * 100).toFixed(1)}%p</td>
             <td style="white-space:normal">${ch.map(([c, v]) => `<span class="${v > 0 ? "up2" : "down2"}">${LAB[c]} ${v > 0 ? "+" : ""}${(v * 100).toFixed(0)}</span>`).join(" · ") || '<span class="note">—</span>'}</td>
             <td><button class="btn sm" type="button" data-rf="${esc(r.f.n)}" data-rd="${esc(r.d.n)}">Simul</button></td></tr>`; }).join("") + `</tbody>`;
       $("rec").querySelectorAll("button[data-rf]").forEach(el => el.addEventListener("click", () => { simSel.drop = new Set([el.dataset.rd]); simSel.add = new Set([el.dataset.rf]); simOther = false; renderSimLists(); runSim(); $("sim-panel").scrollIntoView({ behavior: "smooth", block: "start" }); }));
