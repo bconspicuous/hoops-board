@@ -2,12 +2,13 @@
  "date": "2026-11-04",
  "scoringPeriodId": 16,
  "hash": "369bd1f298",
- "createdKST": "2026-11-03T09:24+09:00",
+ "createdKST": "2026-11-03T10:04+09:00",
  "mode": "plan",
  "moves": [],
  "lineup": [
   {
    "slot": "PG",
+   "cur": "PG",
    "name": "Donovan Mitchell",
    "pro": "CLE",
    "game": true,
@@ -16,6 +17,7 @@
   },
   {
    "slot": "SG",
+   "cur": "SG",
    "name": "Josh Hart",
    "pro": "NYK",
    "game": true,
@@ -24,6 +26,7 @@
   },
   {
    "slot": "SF",
+   "cur": "SF",
    "name": "Duncan Robinson",
    "pro": "DET",
    "game": true,
@@ -32,6 +35,7 @@
   },
   {
    "slot": "PF",
+   "cur": "PF",
    "name": "Toumani Camara",
    "pro": "POR",
    "game": true,
@@ -40,6 +44,7 @@
   },
   {
    "slot": "C",
+   "cur": "C",
    "name": "Karl-Anthony Towns",
    "pro": "NYK",
    "game": true,
@@ -48,6 +53,7 @@
   },
   {
    "slot": "G",
+   "cur": "G",
    "name": "Ajay Mitchell",
    "pro": "OKC",
    "game": true,
@@ -56,6 +62,7 @@
   },
   {
    "slot": "F",
+   "cur": "F",
    "name": "Miles Bridges",
    "pro": "PHX",
    "game": true,
@@ -64,6 +71,7 @@
   },
   {
    "slot": "UTIL",
+   "cur": "UTIL",
    "name": "Paul Reed",
    "pro": "DET",
    "game": true,
@@ -72,6 +80,7 @@
   },
   {
    "slot": "UTIL",
+   "cur": "UTIL",
    "name": "Daniel Gafford",
    "pro": "DAL",
    "game": true,
@@ -80,6 +89,7 @@
   },
   {
    "slot": "UTIL",
+   "cur": "UTIL",
    "name": "Zaccharie Risacher",
    "pro": "DAL",
    "game": true,
@@ -88,6 +98,7 @@
   },
   {
    "slot": "BE",
+   "cur": "BE",
    "name": "Dejounte Murray",
    "pro": "NOP",
    "game": true,
@@ -96,6 +107,7 @@
   },
   {
    "slot": "BE",
+   "cur": "BE",
    "name": "Ivica Zubac",
    "pro": "IND",
    "game": true,
@@ -104,6 +116,7 @@
   },
   {
    "slot": "BE",
+   "cur": "BE",
    "name": "Andrew Nembhard",
    "pro": "IND",
    "game": true,
@@ -114,6 +127,7 @@
  "ir": [
   "Kawhi Leonard"
  ],
+ "irReturn": [],
  "playing": 10,
  "status": "planned"
 }
