@@ -11,6 +11,9 @@ const fs = require('fs'), path = require('path');
 const ROOT = path.resolve(__dirname, '..', '..'), OUTD = path.join(ROOT, 'g8', 'moves');
 let pw; try { pw = require(process.env.PW || '/opt/node-tools/node_modules/playwright'); } catch (e) { pw = require('playwright'); }
 const PROTECT = +(process.env.PROTECT || 8), MAXP = +(process.env.MAXP || 3), WK_MIN = .05, TITLE_MIN = .01;
+/* proposal basis (g8/config.json proposalBasis): "actual" = every player with 2026-27 games projected from his actual per-game line
+   (weight 1, players without games keep the projection); the league simulation is recomputed on that basis before scoring */
+const BASIS = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'g8', 'config.json'), 'utf8')).proposalBasis || 'model'; } catch (e) { return 'model'; } })();
 (async () => {
   const csv = fs.readFileSync(path.join(ROOT, 'g8', 'data', 'players_2027.csv'), 'utf8').trim().split('\n'), h = csv[0].split(',');
   const rows = csv.slice(1).map(r => { const c = r.split(','), o = {}; h.forEach((k, i) => o[k] = c[i]); return o; });
@@ -25,7 +28,8 @@ const PROTECT = +(process.env.PROTECT || 8), MAXP = +(process.env.MAXP || 3), WK
   await p.route(/^https?:\/\//, r => r.abort());
   await p.goto('file://' + path.join(ROOT, 'index.html'));
   await p.waitForFunction(() => typeof state !== 'undefined' && state.base && !state.busy, null, { timeout: 600000 });
-  const R = await p.evaluate(([rows, acqUsed, P, cfg, unsignedCsv]) => {
+  const R = await p.evaluate(([rows, acqUsed, P, cfg, unsignedCsv, BASIS]) => {
+    if (BASIS === 'actual') { actWeight = () => 1; buildPlayers(); PLAYC = new Map(); state.base = computeAll(null); }
     const cw = currentWeek(), oT = state.base.TW[oppOf(ME, cw).opp + '|' + cw], roster = rosterFor(ME, cw, null), ir = (rosters()[ME].ir || []);
     const nrm = s => (s || '').normalize('NFKD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[.'`]/g, '').replace(/\b(jr|sr|ii|iii|iv)\b/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
     const espnRow = n => rows.find(r => nrm(r.Player) === nrm(n)) || {};
@@ -74,7 +78,7 @@ const PROTECT = +(process.env.PROTECT || 8), MAXP = +(process.env.MAXP || 3), WK
     if (irFree > 0) outActive.filter(o => !items.some(i => i.ir === o)).forEach(o => items.push({ n: items.length + 1, kind: 'ir', ir: o, status: 'proposed', note: 'O 상태 — IR로 이동하면 로스터 1자리가 빔(영입 없이)' }));
     return { week: cw + 1, opp: oppOf(ME, cw).opp, acqLeft, dropCandidates: drops, base: { wk: +base.wk.toFixed(3), champ: +base.champ.toFixed(4), p1: +base.p1.toFixed(4), epct: +base.epct.toFixed(4) }, protect: [...protect], droppable: drops, flags, items,
       screened: top.map(s => ({ add: s.add, drop: s.drop, ir: s.ir || null, wk: +s.wk.toFixed(3), title: +(s.title || 0).toFixed(4) })) };
-  }, [rows, acqUsed, { PROTECT, MAXP, WK_MIN, TITLE_MIN }, cfg, unsignedCsv]);
+  }, [rows, acqUsed, { PROTECT, MAXP, WK_MIN, TITLE_MIN }, cfg, unsignedCsv, BASIS]);
   await b.close();
   /* health line per proposal: ESPN fantasy status, injury report (estimated return), games and minutes so far */
   const inj = (JSON.parse(fs.readFileSync(path.join(ROOT, 'g8', 'data', 'injuries.json'), 'utf8')).injuries || []), rawSt = JSON.parse(fs.readFileSync(path.join(ROOT, 'g8', 'data', 'rosters.json'), 'utf8')).status || {};
@@ -91,7 +95,7 @@ const PROTECT = +(process.env.PROTECT || 8), MAXP = +(process.env.MAXP || 3), WK
   R.newItems = R.items.filter(i => i.firstProposedAt === R.createdAt).map(i => i.n);
   fs.writeFileSync(prevP, JSON.stringify(R, null, 1));
   const pc = x => (x >= 0 ? '+' : '') + (x * 100).toFixed(1) + '%p';
-  const L = [`# 로스터 이동 제안 · ${R.week}주차 vs ${R.opp} · 이번 주 남은 영입 ${R.acqLeft}회`];
+  const L = [`# 로스터 이동 제안 · ${R.week}주차 vs ${R.opp} · 이번 주 남은 영입 ${R.acqLeft}회 · 기준: ${BASIS === 'actual' ? '현재 스탯(2026-27 실제 100%)' : '프로젝션'}`];
   R.flags.forEach(f => L.push(`⚠ ${f.player}: IR인데 상태 ${f.status} — ${f.note}`));
   if (!R.items.length) L.push('제안 없음 (기준: 이번 주 +0.05승 또는 우승 +1%p 이상)');
   R.items.forEach(i => L.push(i.kind === 'ir' ? `${i.n}. IR 이동: ${i.ir} (${i.note})` : i.kind === 'activate' ? `${i.n}. IR 복귀 ${i.ir} / 방출 ${i.drop} — 이번 주 ${i.weekGain >= 0 ? '+' : ''}${i.weekGain.toFixed(2)}승 · 우승 ${pc(i.titleGain)} [${i.status}]` :
