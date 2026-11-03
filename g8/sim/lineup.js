@@ -63,6 +63,7 @@ const norm = s => (s || '').normalize('NFKD').replace(/[̀-ͯ]/g, '').toLowerCas
   const prevP = path.join(OUTD, 'plan.json'), prev = fs.existsSync(prevP) ? JSON.parse(fs.readFileSync(prevP, 'utf8')) : null;
   R.id = R.date + 'T' + new Date().toISOString().slice(11, 16).replace(':', '') + 'Z'; R.createdAt = new Date().toISOString();
   if (R.status === 'pending' && (!R.moves.length || (R.sameStarters && R.expected.gain < 0.005))) R.status = R.moves.length ? 'nochange-starters' : 'nochange';
+  else if (R.status === 'pending' && R.expected.gain < 0.02) R.status = 'minor';   // < 0.02 expected category wins: not worth an approval request
   // keep an approval/execution already given for the same day and the same starters
   if (prev && prev.date === R.date && ['approved', 'executed'].includes(prev.status) && JSON.stringify([...prev.starters || []].sort()) === JSON.stringify([...R.starters || []].sort())) { R.status = prev.status; R.approvedAt = prev.approvedAt; R.executedAt = prev.executedAt; }
   fs.writeFileSync(prevP, JSON.stringify(R, null, 1));
