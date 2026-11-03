@@ -135,7 +135,7 @@ def build(day, counts, rows):
     for x in act:
         want.setdefault(x["id"], 12)
     moves = [{"playerId": x["id"], "name": x["name"], "from": x["slot"], "to": want[x["id"]]} for x in act if want[x["id"]] != x["slot"]]
-    lineup = [{"slot": SLOTNAME[want[x["id"]]], "name": x["name"], "pro": x["pro"], "game": x["game"], "inj": x["inj"], "out": x["out"]}
+    lineup = [{"slot": SLOTNAME[want[x["id"]]], "cur": SLOTNAME.get(x["slot"]), "name": x["name"], "pro": x["pro"], "game": x["game"], "inj": x["inj"], "out": x["out"]}
               for x in sorted(act, key=lambda x: (want[x["id"]] == 12, start_slots.index(want[x["id"]]) if want[x["id"]] in start_slots else 99))]
     return moves, lineup, [x["name"] for x in info if x.get("why") == "IR"]
 
@@ -182,8 +182,8 @@ def main():
             res["status"] = "executed" if len(ok) == len(moves) else f"partial/failed: {len(ok)}/{len(moves)} moves applied"
     json.dump(res, open(OUTF, "w"), ensure_ascii=False, indent=1)
     lines = [f"## 라인업 {res['status']} · {res['date']} (scoringPeriod {spid}) · plan {h}",
-             "| 슬롯 | 선수 | NBA | 경기 | 상태 |", "|---|---|---|---|---|"]
-    lines += [f"| {x['slot']} | {x['name']} | {x['pro']} | {'O' if x['game'] else '-'} | {'결장' if x['out'] else x['inj']} |" for x in lineup]
+             "| 제안 슬롯 | 현재 슬롯 | 선수 | NBA | 경기 | 상태 |", "|---|---|---|---|---|---|"]
+    lines += [f"| {x['slot']} | {x['cur']} | {x['name']} | {x['pro']} | {'O' if x['game'] else '-'} | {'결장' if x['out'] else x['inj']} |" for x in lineup]
     lines += ["", "변경: " + (", ".join(f"{m['name']} {SLOTNAME.get(m['from'])}→{SLOTNAME.get(m['to'])}" for m in moves) or "없음")]
     if res.get("espn"):
         lines.append(f"ESPN 응답: {json.dumps(res['espn'], ensure_ascii=False)}")
