@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-03T23:41+09:00",
+ "asOf": "2026-11-04T06:45+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -60,18 +60,32 @@
    "long": "Veesaar suffered the injury during a workout on Sept. 15, and an MRI confirmed the diagnosis. The No. 52 overall pick in the 2026 NBA Draft, Veesaar was expected to spend a lot of time with Atlanta's G League affiliate this season."
   },
   {
-   "player": "Paul George",
+   "player": "Payton Pritchard",
    "team": "BOS",
    "status": "Day-To-Day",
-   "date": "2026-11-03T06:08Z",
+   "date": "2026-11-03T21:12Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-04",
+   "detail": null,
+   "side": "Right",
+   "injury": "Shoulder",
+   "fantasyStatus": "GTD",
+   "short": "Pritchard is listed as questionable for Wednesday's game against Milwaukee due to a right shoulder contusion, Taylor Snow of the Celtics' official site reports.",
+   "long": "Pritchard's status is uncertain after he struggled in Monday's loss to Houston, finishing with four points on 0-for-7 shooting across 30 minutes. With Jayson Tatum (rest) also questionable and Devin Carter (illness) ruled out, Boston could be shorthanded Wednesday. Pritchard's availability should become clearer closer to tipoff."
+  },
+  {
+   "player": "Jayson Tatum",
+   "team": "BOS",
+   "status": "Day-To-Day",
+   "date": "2026-11-03T21:10Z",
    "type": "day-to-day",
    "returnDate": "2026-11-04",
    "detail": null,
    "side": null,
    "injury": "Rest",
    "fantasyStatus": "GTD",
-   "short": "George will be rested Monday against Houston.",
-   "long": "There's no injury to report and this appears to be a planned maintenance day for the veteran. With George on the shelf, the Celtics will need guys like Payton Pritchard and Baylor Scheierman to absorb more minutes."
+   "short": "Tatum (rest) is questionable for Wednesday against the Bucks, Taylor Snow of the Celtics' official site reports.",
+   "long": "Tatum's questionable designation suggests Boston could give its star forward a night off for maintenance purposes. His status will be worth monitoring ahead of Wednesday's tipoff, as his potential absence would open up additional scoring opportunities for the Celtics' remaining starters."
   },
   {
    "player": "Devin Carter",
@@ -147,15 +161,29 @@
    "player": "Nic Claxton",
    "team": "CHI",
    "status": "Out",
-   "date": "2026-11-02T22:47Z",
+   "date": "2026-11-03T21:04Z",
    "type": "out",
    "returnDate": "2026-11-04",
    "detail": null,
    "side": "Not Specified",
    "injury": "Hamstring",
    "fantasyStatus": "GTD",
-   "short": "Claxton (hamstring) is out for Monday's game against the 76ers.",
-   "long": "Claxton appears to be trending in the right direction after practicing Sunday, but he's not yet ready to make his 2026-27 debut. His next chance to play will arrive Wednesday against the Knicks."
+   "short": "Claxton (hamstring) is questionable for Wednesday against the Knicks.",
+   "long": "Claxton has now drawn his first questionable tag of the young season as he closes in on his debut. If he does get the green light, he may face restrictions early on. Jalen Smith (finger) and Zach Collins could lose some steam upon Claxton's return."
+  },
+  {
+   "player": "Jalen Smith",
+   "team": "CHI",
+   "status": "Day-To-Day",
+   "date": "2026-11-03T21:03Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-04",
+   "detail": null,
+   "side": null,
+   "injury": "Finger",
+   "fantasyStatus": "GTD",
+   "short": "Smith is probable for Wednesday's game against the Knicks with a left finger sprain.",
+   "long": "Smith is expected to play through the injury Wednesday, but his time as Chicago's starting center could be coming to an end. Nic Claxton (hamstring) is questionable to make his season debut, and his return would send Smith into a bench role in all likelihood."
   },
   {
    "player": "Peyton Watson",
@@ -223,7 +251,7 @@
    "detail": "Surgery",
    "side": "Right",
    "injury": "Knee",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Aldama (knee) has been ruled out for Monday's matchup with Sacramento.",
    "long": "Aldama has yet to make his season debut while recovering from the right knee surgery he underwent in March, though he appears to be making progress. His next chance to suit up will come Wednesday against San Antonio."
   },
@@ -265,7 +293,7 @@
    "detail": "Strain",
    "side": "Right",
    "injury": "Knee",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Head coach Dusty May said Friday that de Larrea (knee) will be re-evaluated next week, Noah Weber of TheSmokingCuban.com reports.",
    "long": "De Larrea sprained his right knee in Monday's win over Miami and is without a definitive timetable for a return to action. However, his absence shouldn't cause any significant waves in the rotation."
   },
@@ -279,7 +307,7 @@
    "detail": "Not Specified",
    "side": "Not Specified",
    "injury": "Hamstring",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Jones (hamstring) is listed as out for Monday's game against the Trail Blazers.",
    "long": "Jones has yet to play during the 2026-27 campaign after suffering a hamstring injury during the preseason. He should be considered day-to-day, meaning his next opportunity to get on the floor will come Wednesday versus Toronto."
   },
@@ -301,15 +329,15 @@
    "player": "Isaiah Joe",
    "team": "DET",
    "status": "Out",
-   "date": "2026-11-02T17:35Z",
+   "date": "2026-11-03T21:18Z",
    "type": "out",
-   "returnDate": "2026-11-04",
+   "returnDate": "2026-11-08",
    "detail": "Bruise",
    "side": "Right",
    "injury": "Hip",
-   "fantasyStatus": "GTD",
-   "short": "Joe (hip) is out for Monday against the Hornets.",
-   "long": "Jones was unable to shake his questionable tag and will miss his fourth straight game. His next chance to play comes Wednesday against the 76ers."
+   "fantasyStatus": "OUT",
+   "short": "Joe (hip) has been ruled out for Wednesday's game against Philadelphia.",
+   "long": "Joe will miss Wednesday's contest due to a right hip contusion, resulting in his fifth straight absence. This will continue to open up additional minutes on the perimeter for Detroit's reserves. Joe's next opportunity to play will come Sunday against the Lakers."
   },
   {
    "player": "Jalen Duren",
@@ -412,14 +440,14 @@
   {
    "player": "Clint Capela",
    "team": "HOU",
-   "status": "Out",
-   "date": "2026-11-02T19:13Z",
-   "type": "out",
+   "status": "Day-To-Day",
+   "date": "2026-11-03T15:02Z",
+   "type": "day-to-day",
    "returnDate": "2026-11-04",
    "detail": "Sprain",
    "side": "Right",
    "injury": "Ankle",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Capela (ankle) has been ruled out for Monday's game against the Celtics.",
    "long": "Capela has been downgraded from questionable to out and will miss his second game of the season. With Steven Adams (knee) also sidelined, Oscar Tshiebwe could enter the rotation behind Alperen Sengun."
   },
@@ -877,7 +905,7 @@
    "status": "Out",
    "date": "2026-10-27T21:38Z",
    "type": "out",
-   "returnDate": "2026-11-06",
+   "returnDate": "2026-11-04",
    "detail": null,
    "side": null,
    "injury": "Back",
@@ -979,7 +1007,7 @@
    "detail": "Fracture",
    "side": "Not Specified",
    "injury": "Back",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Barlow (back) has been on the court \"a little bit\" and will be re-evaluated Tuesday, Austin Krell of OnPattison.com reports.",
    "long": "The Sixers are hoping for positive news so they can progress Barlow's workouts. The big man has yet to make his season debut due to a lumbar spine bone stress response."
   },
@@ -1115,7 +1143,7 @@
    "status": "Out",
    "date": "2026-10-30T21:44Z",
    "type": "out",
-   "returnDate": "2026-11-06",
+   "returnDate": "2026-11-09",
    "detail": "Strain",
    "side": "Left",
    "injury": "Calf",
@@ -1217,7 +1245,7 @@
    "detail": "Strain",
    "side": "Right",
    "injury": "Foot",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Nurkic will miss at least the next four weeks due to a partial plantar plate tear of second toe in right foot, Chris Haynes of NBA TV reports.",
    "long": "Nurkic will begin the 2026-27 season on the sidelines, and given the tricky nature of foot injuries for big men, it wouldn't be shocking to see his absence extend beyond this initial four-week window. Jaren Jackson will likely spend more time at center while Nurkic is out, and there will be more minutes available for Jaxson Hayes and Mo Bamba."
   },
