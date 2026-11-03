@@ -1,6 +1,6 @@
 # 로스터 이동 제안 · 3주차 vs Songpa Park Kezhang · 이번 주 남은 영입 4회
-1. 영입 Alex Sarr(WAS PF,C) / 방출 Norman Powell — 이번 주 +0.43승 · 우승 +16.9%p · 1위 +16.1%p [proposed]
-2. 영입 Kevin Porter Jr.(MIL PG,SG) / 방출 Dillon Brooks — 이번 주 +0.29승 · 우승 +7.7%p · 1위 +7.2%p [proposed]
-3. 영입 VJ Edgecombe(PHI SG) / 방출 Brandon Miller — 이번 주 +0.23승 · 우승 +0.7%p · 1위 +0.2%p [proposed]
+1. 영입 Robert Williams III(POR C) / 방출 Dillon Brooks — 이번 주 +0.43승 · 우승 +21.2%p · 1위 +19.1%p · 2·3번과 동시 불가(택1: 같은 방출 대상 또는 C 한도) [proposed]
+2. 영입 Alex Sarr(WAS PF,C) / 방출 Dillon Brooks — 이번 주 +0.41승 · 우승 +19.3%p · 1위 +18.4%p · 1·3번과 동시 불가(택1: 같은 방출 대상 또는 C 한도) [proposed]
+3. 영입 VJ Edgecombe(PHI SG) / 방출 Dillon Brooks — 이번 주 +0.24승 · 우승 +6.0%p · 1위 +7.1%p · 1·2번과 동시 불가(택1: 같은 방출 대상 또는 C 한도) [proposed]
 
-보호(방출 후보 제외): Shai Gilgeous-Alexander, Anthony Davis, James Harden, Karl-Anthony Towns, Austin Reaves, Michael Porter Jr., Tyler Herro, Rudy Gobert
+방출 대상(감독 지정): Dillon Brooks

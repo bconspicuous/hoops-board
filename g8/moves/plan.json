@@ -2,11 +2,14 @@
  "week": 3,
  "opp": "Songpa Park Kezhang",
  "acqLeft": 4,
+ "dropCandidates": [
+  "Dillon Brooks"
+ ],
  "base": {
-  "wk": 5.746,
-  "champ": 0.4523,
-  "p1": 0.774,
-  "epct": 0.5988
+  "wk": 5.775,
+  "champ": 0.4315,
+  "p1": 0.7524,
+  "epct": 0.5942
  },
  "protect": [
   "Shai Gilgeous-Alexander",
@@ -19,10 +22,6 @@
   "Rudy Gobert"
  ],
  "droppable": [
-  "Brandon Miller",
-  "Norman Powell",
-  "Miles Bridges",
-  "Collin Gillespie",
   "Dillon Brooks"
  ],
  "flags": [],
@@ -30,40 +29,46 @@
   {
    "n": 1,
    "kind": "add/drop",
-   "add": "Alex Sarr",
-   "addEspnId": 5160992,
+   "add": "Robert Williams III",
+   "addEspnId": 4066211,
    "addOwner": "FA",
-   "drop": "Norman Powell",
+   "drop": "Dillon Brooks",
    "ir": null,
-   "weekGain": 0.428,
-   "titleGain": 0.1685,
-   "p1Gain": 0.1606,
-   "epctGain": 0.0248,
-   "addTeam": "WAS",
-   "addPos": "PF,C",
-   "dropValue": -0.64,
+   "weekGain": 0.433,
+   "titleGain": 0.2124,
+   "p1Gain": 0.1909,
+   "epctGain": 0.0316,
+   "addTeam": "POR",
+   "addPos": "C",
+   "dropValue": -5.68,
    "status": "proposed",
-   "conflicts": [],
-   "firstProposedAt": "2026-11-03T00:35:42.831Z"
+   "conflicts": [
+    2,
+    3
+   ],
+   "firstProposedAt": "2026-11-03T00:45:57.209Z"
   },
   {
    "n": 2,
    "kind": "add/drop",
-   "add": "Kevin Porter Jr.",
-   "addEspnId": 4397140,
+   "add": "Alex Sarr",
+   "addEspnId": 5160992,
    "addOwner": "FA",
    "drop": "Dillon Brooks",
    "ir": null,
-   "weekGain": 0.29,
-   "titleGain": 0.0771,
-   "p1Gain": 0.0722,
-   "epctGain": 0.0095,
-   "addTeam": "MIL",
-   "addPos": "PG,SG",
+   "weekGain": 0.405,
+   "titleGain": 0.1927,
+   "p1Gain": 0.1836,
+   "epctGain": 0.0295,
+   "addTeam": "WAS",
+   "addPos": "PF,C",
    "dropValue": -5.68,
    "status": "proposed",
-   "conflicts": [],
-   "firstProposedAt": "2026-11-03T00:37:50.817Z"
+   "conflicts": [
+    1,
+    3
+   ],
+   "firstProposedAt": "2026-11-03T00:46:33.520Z"
   },
   {
    "n": 3,
@@ -71,59 +76,69 @@
    "add": "VJ Edgecombe",
    "addEspnId": 5124612,
    "addOwner": "FA",
-   "drop": "Brandon Miller",
+   "drop": "Dillon Brooks",
    "ir": null,
-   "weekGain": 0.225,
-   "titleGain": 0.007,
-   "p1Gain": 0.0023,
-   "epctGain": -0.0016,
+   "weekGain": 0.238,
+   "titleGain": 0.0598,
+   "p1Gain": 0.0706,
+   "epctGain": 0.0085,
    "addTeam": "PHI",
    "addPos": "SG",
-   "dropValue": -1.15,
+   "dropValue": -5.68,
    "status": "proposed",
-   "conflicts": [],
-   "firstProposedAt": "2026-11-03T00:37:50.817Z"
+   "conflicts": [
+    1,
+    2
+   ],
+   "firstProposedAt": "2026-11-03T00:46:33.520Z"
   }
  ],
  "screened": [
   {
-   "add": "Alex Sarr",
-   "drop": "Norman Powell",
-   "ir": null,
-   "wk": 0.428,
-   "title": 0.1685
-  },
-  {
-   "add": "Kevin Porter Jr.",
+   "add": "Robert Williams III",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.29,
-   "title": 0.0771
+   "wk": 0.433,
+   "title": 0.2124
+  },
+  {
+   "add": "Alex Sarr",
+   "drop": "Dillon Brooks",
+   "ir": null,
+   "wk": 0.405,
+   "title": 0.1927
   },
   {
    "add": "VJ Edgecombe",
-   "drop": "Brandon Miller",
+   "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.225,
-   "title": 0.007
+   "wk": 0.238,
+   "title": 0.0598
   },
   {
    "add": "Keegan Murray",
-   "drop": "Collin Gillespie",
+   "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.056,
-   "title": -0.0041
+   "wk": 0.229,
+   "title": 0.0591
   },
   {
    "add": "Saddiq Bey",
-   "drop": "Miles Bridges",
+   "drop": "Dillon Brooks",
    "ir": null,
-   "wk": -0.12,
-   "title": -0.0055
+   "wk": 0.206,
+   "title": 0.0588
+  },
+  {
+   "add": "Andrew Wiggins",
+   "drop": "Dillon Brooks",
+   "ir": null,
+   "wk": 0.202,
+   "title": 0.0481
   }
  ],
- "createdAt": "2026-11-03T00:40:48.126Z",
- "id": "20261103T0040",
+ "createdAt": "2026-11-03T00:47:10.985Z",
+ "id": "20261103T0047",
  "rosterSig": "Anthony Davis|Austin Reaves|Brandon Miller|Collin Gillespie|Dillon Brooks|James Harden|Karl-Anthony Towns|Michael Porter Jr.|Miles Bridges|Norman Powell|Rudy Gobert|Shai Gilgeous-Alexander|Tyler Herro#Kyrie Irving",
  "newItems": []
 }

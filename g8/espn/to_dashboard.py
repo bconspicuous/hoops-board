@@ -79,7 +79,11 @@ def main(build=True):
         elif s: note("notice", f"statusOverride for {n} ignored (not on a roster)")
     if len(teams) != len(TEAMS): note("warning", f"{len(teams)} of {len(TEAMS)} teams matched")
     if unknown: note("notice", "no projection (ignored by the simulation): " + ", ".join(sorted(set(unknown))[:15]))
-    if dump("rosters", {"asOf": asOf, "source": "ESPN API sync (GitHub Actions g8-espn)", "teams": teams, "status": status}): changed.append("rosters")
+    unsigned = []                                           # no NBA team on ESPN (proTeam FA): no games until signed
+    csvp0 = os.path.join(G8, "players_2027.csv")
+    if os.path.exists(csvp0):
+        unsigned = sorted({pname(r["Player"]) for r in csv.DictReader(open(csvp0, encoding="utf-8")) if (r.get("Team") or "") == "FA"})
+    if dump("rosters", {"asOf": asOf, "source": "ESPN API sync (GitHub Actions g8-espn)", "teams": teams, "status": status, "unsigned": unsigned}): changed.append("rosters")
     # ---- matchups: results (final periods) and live (current period)
     cur = sb.get("currentMatchupPeriod"); games = sb.get("matchups") or []
     def side_cats(s): return {CATS[k]: v for k, v in (s.get("cats") or {}).items() if k in CATS}

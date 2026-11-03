@@ -482,6 +482,8 @@ function buildPlayers() {
     }
   }
   state.seasonOut = new Set(M.seasonOut || []);
+  /* players without an NBA team on ESPN (unsigned free agents, league/rosters.unsigned): no games, so never streamed or recommended */
+  ((state.docs["league/rosters"] || {}).unsigned || []).forEach(n => { if (PL[n]) { PL[n].team = null; PL[n].unsigned = true; } });
   /* streaming weight = one game's value with the 11 categories weighted equally (per-game stat / top-150 average; TO, PF negative;
      FG%·FT% as made-shot surplus over the league rate / its spread). Used only to rank who fills an open slot. */
   const top = Object.values(PL).sort((a, b) => b.value - a.value).slice(0, 150), avg = k => top.reduce((s, p) => s + (p[k] || 0), 0) / top.length;

@@ -94,7 +94,7 @@ def find_player(name, espn_id):
             p = pe.get("player") or {}
             if (espn_id and p.get("id") == int(espn_id)) or norm(p.get("fullName")) == norm(name):
                 return {"id": p.get("id"), "name": p.get("fullName"), "status": pe.get("status") or ("ONTEAM" if pe.get("onTeamId") else "FREEAGENT"),
-                        "onTeamId": pe.get("onTeamId"), "inj": p.get("injuryStatus"), "pos": p.get("defaultPositionId")}
+                        "onTeamId": pe.get("onTeamId"), "inj": p.get("injuryStatus"), "pos": p.get("defaultPositionId"), "proTeamId": p.get("proTeamId")}
     return None
 
 
@@ -147,6 +147,7 @@ def main():
             add = find_player(it["add"], it.get("addEspnId"))
             if not add: okk = bad(f"{it['add']} not found in the player pool")
             elif add["status"] not in ("FREEAGENT", "WAIVERS") or (add.get("onTeamId") or 0) not in (0, None): okk = bad(f"{add['name']} is no longer available ({add['status']}, team {add.get('onTeamId')})")
+            if add and not add.get("proTeamId"): okk = bad(f"{add['name']} has no NBA team (unsigned) — no games")
             if acq >= limit: okk = bad(f"weekly add limit reached ({acq}/{limit})")
             cnow = sum(1 for e in ent if e["slot"] != 13 and e["pos"] == 5) - (1 if drop and drop["pos"] == 5 else 0) - (1 if irp and irp["pos"] == 5 else 0)
             if add and add.get("pos") == 5 and cnow + 1 > maxC: okk = bad(f"max C {maxC} would be exceeded")
