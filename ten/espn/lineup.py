@@ -6,7 +6,8 @@
                 write ten/espn/lineup_plan.json with the moves and a plan hash. No write requests.
   MODE=execute  needs PLAN_HASH = the hash the owner approved. Rebuilds the plan from live ESPN data;
                 if the hash differs (roster/injuries/slots changed) it stops without writing.
-                Otherwise submits the lineup moves (lineup slots only, never adds/drops/trades),
+                Otherwise submits the lineup moves (lineup slots incl. moving an OUT player into an open IR spot;
+                never adds/drops/trades),
                 re-reads the roster and records the result in lineup_plan.json.
 
 Env: ESPN_S2, ESPN_SWID (GitHub secrets, never printed), TARGET_DATE (YYYY-MM-DD, US date; default = today US/Eastern).
@@ -96,6 +97,18 @@ def build(day, counts, rows):
         base = pri.get(r["name"], min(pri.values()) - 0.01 if pri else 0.0)
         info.append({**r, "game": has_game, "out": out, "a": a, "p": a * max(base, 1e-3)})   # expected contribution = availability x matchup-leverage score
     act = [x for x in info if x.get("why") != "IR"]
+    # IR: an open IR spot takes the OUT player with the latest expected return (ESPN injury report); an IR player who is
+    # no longer OUT is flagged (returning him needs a roster spot -> roster.py ACTIVATE + DROP with owner approval)
+    ir_rows = [x for x in info if x.get("why") == "IR"]
+    ir_moves, ir_return = [], [x["name"] for x in ir_rows if x["inj"] not in OUT_STATUS]
+    if len(ir_rows) < counts.get(13, 0):
+        try:
+            inj = {i["player"]: (i.get("returnDate") or "9999") for i in json.load(open(os.path.join(HERE, "..", "data", "injuries.json")))["injuries"]}
+        except Exception:
+            inj = {}
+        cand = [x for x in act if x["inj"] in ("OUT", "INJURY_RESERVE") and 13 in x["elig"]]
+        for x in sorted(cand, key=lambda x: inj.get(x["name"], "0"), reverse=True)[:counts.get(13, 0) - len(ir_rows)]:
+            ir_moves.append({"playerId": x["id"], "name": x["name"], "from": x["slot"], "to": 13}); act.remove(x)
     if len(act) > len(start_slots) + counts.get(12, 0):
         F.die("more active players than lineup + bench slots")
     # 1) starters: greedy by priority on the slot matroid (augmenting paths), playing players first
@@ -134,10 +147,11 @@ def build(day, counts, rows):
     want = {x["id"]: start_slots[k] for k, x in enumerate(owner) if x}
     for x in act:
         want.setdefault(x["id"], 12)
-    moves = [{"playerId": x["id"], "name": x["name"], "from": x["slot"], "to": want[x["id"]]} for x in act if want[x["id"]] != x["slot"]]
+    moves = ir_moves + [{"playerId": x["id"], "name": x["name"], "from": x["slot"], "to": want[x["id"]]} for x in act if want[x["id"]] != x["slot"]]
     lineup = [{"slot": SLOTNAME[want[x["id"]]], "cur": SLOTNAME.get(x["slot"]), "name": x["name"], "pro": x["pro"], "game": x["game"], "inj": x["inj"], "out": x["out"]}
               for x in sorted(act, key=lambda x: (want[x["id"]] == 12, start_slots.index(want[x["id"]]) if want[x["id"]] in start_slots else 99))]
-    return moves, lineup, [x["name"] for x in info if x.get("why") == "IR"]
+    lineup += [{"slot": "IR", "cur": SLOTNAME.get(m["from"]), "name": m["name"], "pro": "", "game": False, "inj": "OUT", "out": True} for m in ir_moves]
+    return moves, lineup, [x["name"] for x in ir_rows], ir_return
 
 
 def plan_hash(day, spid, moves):
@@ -150,12 +164,12 @@ def main():
     day = date.fromisoformat(os.environ["TARGET_DATE"]) if os.environ.get("TARGET_DATE") else et_now().date()
     spid = (day - DAY1).days + 1
     team_id, counts, rows = read_team(spid)
-    moves, lineup, ir = build(day, counts, rows)
+    moves, lineup, ir, ir_return = build(day, counts, rows)
     h = plan_hash(day, spid, moves)
     now = datetime.now(timezone(timedelta(hours=9))).strftime("%Y-%m-%dT%H:%M+09:00")
     res = {"date": day.isoformat(), "scoringPeriodId": spid, "hash": h, "createdKST": now, "mode": mode,
            "moves": [{**m, "fromSlot": SLOTNAME.get(m["from"]), "toSlot": SLOTNAME.get(m["to"])} for m in moves],
-           "lineup": lineup, "ir": ir, "playing": sum(1 for x in lineup if x["game"] and not x["out"]), "status": "planned"}
+           "lineup": lineup, "ir": ir, "irReturn": ir_return, "playing": sum(1 for x in lineup if x["game"] and not x["out"]), "status": "planned"}
     if mode == "execute":
         want = (os.environ.get("PLAN_HASH") or "").strip()
         if not want or want != h:
@@ -184,6 +198,8 @@ def main():
     lines = [f"## 라인업 {res['status']} · {res['date']} (scoringPeriod {spid}) · plan {h}",
              "| 제안 슬롯 | 현재 슬롯 | 선수 | NBA | 경기 | 상태 |", "|---|---|---|---|---|---|"]
     lines += [f"| {x['slot']} | {x['cur']} | {x['name']} | {x['pro']} | {'O' if x['game'] else '-'} | {'결장' if x['out'] else x['inj']} |" for x in lineup]
+    if ir_return:
+        lines.append(f"IR 복귀 필요(ESPN 상태 정상): {', '.join(ir_return)} — roster.py ACTIVATE + DROP 승인 필요")
     lines += ["", "변경: " + (", ".join(f"{m['name']} {SLOTNAME.get(m['from'])}→{SLOTNAME.get(m['to'])}" for m in moves) or "없음")]
     if res.get("espn"):
         lines.append(f"ESPN 응답: {json.dumps(res['espn'], ensure_ascii=False)}")

@@ -1,0 +1,73 @@
+name: ten · roster move (plan / approved execute)
+# Add/drop, waiver claim or IR return for Garak Twindragons. MODE=plan is read-only (ten/espn/roster_plan.json).
+# MODE=execute runs only with the plan hash AND the player names the team owner typed when approving in chat;
+# it re-validates live (availability, limits, core rule) and stops on any mismatch. Never trades. Touches only ten/.
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        type: choice
+        options: [plan, execute]
+        default: plan
+      add:
+        description: "player to add (free agent or waiver claim)"
+        default: ""
+      drop:
+        description: "player to drop (only together with add or activate)"
+        default: ""
+      activate:
+        description: "IR player to return to the bench"
+        default: ""
+      plan_hash:
+        description: "approved plan hash (execute)"
+        default: ""
+      approve_add:
+        description: "add name exactly as the owner approved (execute)"
+        default: ""
+      approve_drop:
+        description: "drop name exactly as the owner approved (execute)"
+        default: ""
+      approve_activate:
+        description: "IR-return name exactly as the owner approved (execute)"
+        default: ""
+      allow_core:
+        description: "1 = owner explicitly allowed dropping a fixed top-10 player"
+        default: "0"
+permissions:
+  contents: write
+concurrency:
+  group: ten-lineup
+  cancel-in-progress: false
+jobs:
+  roster:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Roster ${{ inputs.mode }}
+        env:
+          ESPN_LEAGUE_ID: "504060248"
+          ESPN_SEASON: "2027"
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          ESPN_SWID: ${{ secrets.ESPN_SWID }}
+          MODE: ${{ inputs.mode }}
+          ADD: ${{ inputs.add }}
+          DROP: ${{ inputs.drop }}
+          ACTIVATE: ${{ inputs.activate }}
+          PLAN_HASH: ${{ inputs.plan_hash }}
+          APPROVE_ADD: ${{ inputs.approve_add }}
+          APPROVE_DROP: ${{ inputs.approve_drop }}
+          APPROVE_ACTIVATE: ${{ inputs.approve_activate }}
+          ALLOW_CORE: ${{ inputs.allow_core }}
+        run: python ten/espn/roster.py
+      - name: Commit plan / result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ten/espn/roster_plan.json
+          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
+          git commit -m "ten: roster ${{ inputs.mode }} $(TZ=Asia/Seoul date +'%Y-%m-%d %H:%M KST')"
+          for i in 1 2 3; do git pull --rebase origin main && git push && break; sleep 5; done
