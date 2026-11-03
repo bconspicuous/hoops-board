@@ -117,7 +117,9 @@ def main():
         to = want.get(e["id"])
         if to is None or to == e["slot"]: continue
         tip = starts.get(e["proTeamId"])
-        if e["locked"] or (tip and day == now.date() and now >= tip):
+        if 13 in (to, e["slot"]):                                # IR moves change the roster size: the manager does them by hand
+            res["skipped"].append({"name": e["name"], "from": ID_SLOT.get(e["slot"]), "to": ID_SLOT.get(to), "why": "IR slot — not changed automatically"}); continue
+        if day == now.date() and (e["locked"] or (tip and now >= tip)):   # lineupLocked refers to today's scoring period only
             res["skipped"].append({"name": e["name"], "from": ID_SLOT.get(e["slot"]), "to": ID_SLOT.get(to), "why": "game started / locked"}); continue
         if to not in e["eligible"]:
             res["skipped"].append({"name": e["name"], "from": ID_SLOT.get(e["slot"]), "to": ID_SLOT.get(to), "why": "not eligible"}); continue
