@@ -71,16 +71,30 @@ def state():
     return lg, me, ent, owned, sp, mp, acq, rs
 
 
+def kona(flt):
+    """one kona_player_info read on the league reads host; returns players or None (never exits)"""
+    h, _ = headers(); h = dict(h); h.pop("Content-Type", None); h["X-Fantasy-Filter"] = json.dumps(flt)
+    url = f"https://lm-api-reads.fantasy.espn.com/apis/v3/games/fba/seasons/{F.SEASON}/segments/0/leagues/{F.LEAGUE_ID}?view=kona_player_info"
+    try:
+        with urllib.request.urlopen(urllib.request.Request(url, headers=h), timeout=30) as r:
+            return (json.loads(r.read().decode("utf-8")) or {}).get("players") or []
+    except Exception as e:
+        note("warning", f"player lookup variant failed ({str(e)[:120]})"); return None
+
+
 def find_player(name, espn_id):
-    """free-agent pool lookup -> (id, status FREEAGENT/WAIVERS/ONTEAM, injury, defaultPositionId)"""
-    flt = {"players": {"filterStatus": {"value": ["FREEAGENT", "WAIVERS", "ONTEAM"]}, "limit": 50}}
-    if espn_id: flt["players"]["filterIds"] = {"value": [int(espn_id)]}
-    else: flt["players"]["filterName"] = {"value": name}
-    data = F.get(["kona_player_info"], {"X-Fantasy-Filter": json.dumps(flt)})
-    for pe in data.get("players") or []:
-        p = pe.get("player") or {}
-        if (espn_id and p.get("id") == int(espn_id)) or norm(p.get("fullName")) == norm(name):
-            return {"id": p.get("id"), "name": p.get("fullName"), "status": pe.get("status"), "onTeamId": pe.get("onTeamId"), "inj": p.get("injuryStatus"), "pos": p.get("defaultPositionId")}
+    """player-pool lookup -> {id, name, status FREEAGENT/WAIVERS/ONTEAM, onTeamId, inj, pos}. Tries an id filter, then the same
+    top-free-agent query the sync uses, then a name filter."""
+    tries = []
+    if espn_id: tries.append({"players": {"filterIds": {"value": [int(espn_id)]}}})
+    tries.append({"players": {"filterStatus": {"value": ["FREEAGENT", "WAIVERS"]}, "limit": 300, "sortPercOwned": {"sortPriority": 1, "sortAsc": False}}})
+    tries.append({"players": {"filterName": {"value": name}, "limit": 25}})
+    for flt in tries:
+        for pe in kona(flt) or []:
+            p = pe.get("player") or {}
+            if (espn_id and p.get("id") == int(espn_id)) or norm(p.get("fullName")) == norm(name):
+                return {"id": p.get("id"), "name": p.get("fullName"), "status": pe.get("status") or ("ONTEAM" if pe.get("onTeamId") else "FREEAGENT"),
+                        "onTeamId": pe.get("onTeamId"), "inj": p.get("injuryStatus"), "pos": p.get("defaultPositionId")}
     return None
 
 
