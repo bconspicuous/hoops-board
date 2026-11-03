@@ -1,0 +1,132 @@
+{
+ "week": 3,
+ "opp": "Songpa Park Kezhang",
+ "acqLeft": 4,
+ "base": {
+  "wk": 5.746,
+  "champ": 0.4523,
+  "p1": 0.774,
+  "epct": 0.5988
+ },
+ "protect": [
+  "Shai Gilgeous-Alexander",
+  "Anthony Davis",
+  "James Harden",
+  "Karl-Anthony Towns",
+  "Austin Reaves",
+  "Michael Porter Jr.",
+  "Tyler Herro",
+  "Rudy Gobert"
+ ],
+ "droppable": [
+  "Brandon Miller",
+  "Norman Powell",
+  "Miles Bridges",
+  "Collin Gillespie",
+  "Dillon Brooks"
+ ],
+ "flags": [],
+ "items": [
+  {
+   "n": 1,
+   "kind": "add/drop",
+   "add": "Alex Sarr",
+   "addEspnId": 5160992,
+   "addOwner": "FA",
+   "drop": "Norman Powell",
+   "ir": null,
+   "weekGain": 0.428,
+   "titleGain": 0.1685,
+   "p1Gain": 0.1606,
+   "epctGain": 0.0248,
+   "addTeam": "WAS",
+   "addPos": "PF,C",
+   "dropValue": -0.64,
+   "status": "proposed",
+   "conflicts": [],
+   "firstProposedAt": "2026-11-03T00:35:42.831Z"
+  },
+  {
+   "n": 2,
+   "kind": "add/drop",
+   "add": "Kevin Porter Jr.",
+   "addEspnId": 4397140,
+   "addOwner": "FA",
+   "drop": "Dillon Brooks",
+   "ir": null,
+   "weekGain": 0.29,
+   "titleGain": 0.0771,
+   "p1Gain": 0.0722,
+   "epctGain": 0.0095,
+   "addTeam": "MIL",
+   "addPos": "PG,SG",
+   "dropValue": -5.68,
+   "status": "proposed",
+   "conflicts": [],
+   "firstProposedAt": "2026-11-03T00:37:50.817Z"
+  },
+  {
+   "n": 3,
+   "kind": "add/drop",
+   "add": "VJ Edgecombe",
+   "addEspnId": 5124612,
+   "addOwner": "FA",
+   "drop": "Brandon Miller",
+   "ir": null,
+   "weekGain": 0.225,
+   "titleGain": 0.007,
+   "p1Gain": 0.0023,
+   "epctGain": -0.0016,
+   "addTeam": "PHI",
+   "addPos": "SG",
+   "dropValue": -1.15,
+   "status": "proposed",
+   "conflicts": [],
+   "firstProposedAt": "2026-11-03T00:37:50.817Z"
+  }
+ ],
+ "screened": [
+  {
+   "add": "Alex Sarr",
+   "drop": "Norman Powell",
+   "ir": null,
+   "wk": 0.428,
+   "title": 0.1685
+  },
+  {
+   "add": "Kevin Porter Jr.",
+   "drop": "Dillon Brooks",
+   "ir": null,
+   "wk": 0.29,
+   "title": 0.0771
+  },
+  {
+   "add": "VJ Edgecombe",
+   "drop": "Brandon Miller",
+   "ir": null,
+   "wk": 0.225,
+   "title": 0.007
+  },
+  {
+   "add": "Keegan Murray",
+   "drop": "Collin Gillespie",
+   "ir": null,
+   "wk": 0.056,
+   "title": -0.0041
+  },
+  {
+   "add": "Saddiq Bey",
+   "drop": "Miles Bridges",
+   "ir": null,
+   "wk": -0.12,
+   "title": -0.0055
+  }
+ ],
+ "createdAt": "2026-11-03T00:37:50.817Z",
+ "id": "20261103T0037",
+ "rosterSig": "Anthony Davis|Austin Reaves|Brandon Miller|Collin Gillespie|Dillon Brooks|James Harden|Karl-Anthony Towns|Michael Porter Jr.|Miles Bridges|Norman Powell|Rudy Gobert|Shai Gilgeous-Alexander|Tyler Herro#Kyrie Irving",
+ "newItems": [
+  2,
+  3
+ ]
+}

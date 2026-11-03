@@ -1,0 +1,48 @@
+name: g8 · ESPN roster moves (8-team, approval required)
+# Add/drop and IR moves for Garak Twindragons from g8/moves/plan.json. Never scheduled: Claude dispatches mode=dry to validate
+# proposals and mode=live only for items the manager approved (status "approved"). Uses the 8-team secrets only.
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "dry = validate only, live = execute approved items"
+        required: true
+        default: dry
+        type: choice
+        options: [dry, live]
+      items:
+        description: "item numbers, comma-separated (empty = all)"
+        required: false
+        default: ""
+permissions:
+  contents: write
+concurrency:
+  group: g8-roster-write      # one ESPN write at a time
+  cancel-in-progress: false
+jobs:
+  moves:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Moves (${{ inputs.mode }})
+        env:
+          MODE: ${{ inputs.mode }}
+          ITEMS: ${{ inputs.items }}
+          ESPN_LEAGUE_ID: "751654965"
+          ESPN_SEASON: "2027"
+          ESPN_S2: ${{ secrets.G8_ESPN_S2 }}
+          ESPN_SWID: ${{ secrets.G8_ESPN_SWID }}
+        run: python g8/espn/moves.py
+      - name: Commit run record
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add g8/moves || true
+          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
+          git commit -m "g8: roster moves ${{ inputs.mode }} $(TZ=Asia/Seoul date +'%Y-%m-%d %H:%M KST')"
+          for i in 1 2 3; do git pull --rebase origin main && git push && exit 0; sleep 5; done
+          exit 1
