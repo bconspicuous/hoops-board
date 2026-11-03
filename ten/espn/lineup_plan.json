@@ -2,7 +2,7 @@
  "date": "2026-11-03",
  "scoringPeriodId": 15,
  "hash": "c9665e482b",
- "createdKST": "2026-11-03T19:47+09:00",
+ "createdKST": "2026-11-04T06:49+09:00",
  "mode": "plan",
  "moves": [],
  "lineup": [
@@ -18,17 +18,17 @@
   {
    "slot": "SG",
    "cur": "SG",
-   "name": "Dejounte Murray",
-   "pro": "NOP",
+   "name": "Duncan Robinson",
+   "pro": "DET",
    "game": false,
-   "inj": "OUT",
-   "out": true
+   "inj": "ACTIVE",
+   "out": false
   },
   {
    "slot": "SF",
    "cur": "SF",
-   "name": "Miles Bridges",
-   "pro": "PHX",
+   "name": "Toumani Camara",
+   "pro": "POR",
    "game": false,
    "inj": "ACTIVE",
    "out": false
@@ -36,8 +36,8 @@
   {
    "slot": "PF",
    "cur": "PF",
-   "name": "Toumani Camara",
-   "pro": "POR",
+   "name": "Paul Reed",
+   "pro": "DET",
    "game": false,
    "inj": "ACTIVE",
    "out": false
@@ -66,17 +66,8 @@
    "name": "Josh Hart",
    "pro": "NYK",
    "game": false,
-   "inj": "ACTIVE",
+   "inj": "DAY_TO_DAY",
    "out": false
-  },
-  {
-   "slot": "UTIL",
-   "cur": "UTIL",
-   "name": "Ivica Zubac",
-   "pro": "IND",
-   "game": false,
-   "inj": "OUT",
-   "out": true
   },
   {
    "slot": "UTIL",
@@ -97,28 +88,37 @@
    "out": false
   },
   {
-   "slot": "BE",
-   "cur": "BE",
-   "name": "Paul Reed",
-   "pro": "DET",
-   "game": false,
-   "inj": "ACTIVE",
-   "out": false
-  },
-  {
-   "slot": "BE",
-   "cur": "BE",
-   "name": "Duncan Robinson",
-   "pro": "DET",
-   "game": false,
-   "inj": "ACTIVE",
-   "out": false
-  },
-  {
-   "slot": "BE",
-   "cur": "BE",
+   "slot": "UTIL",
+   "cur": "UTIL",
    "name": "Zaccharie Risacher",
    "pro": "DAL",
+   "game": false,
+   "inj": "ACTIVE",
+   "out": false
+  },
+  {
+   "slot": "BE",
+   "cur": "BE",
+   "name": "Dejounte Murray",
+   "pro": "NOP",
+   "game": false,
+   "inj": "OUT",
+   "out": true
+  },
+  {
+   "slot": "BE",
+   "cur": "BE",
+   "name": "Ivica Zubac",
+   "pro": "IND",
+   "game": false,
+   "inj": "OUT",
+   "out": true
+  },
+  {
+   "slot": "BE",
+   "cur": "BE",
+   "name": "Miles Bridges",
+   "pro": "PHX",
    "game": false,
    "inj": "ACTIVE",
    "out": false
