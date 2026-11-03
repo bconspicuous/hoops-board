@@ -1,0 +1,122 @@
+{
+ "planId": "2026-11-04T0025Z",
+ "mode": "dry",
+ "date": "2026-11-04",
+ "at": "2026-11-02T19:25-05:00",
+ "moves": [
+  {
+   "name": "Anthony Davis",
+   "from": "PF",
+   "to": "F"
+  },
+  {
+   "name": "Austin Reaves",
+   "from": "BE",
+   "to": "SG"
+  },
+  {
+   "name": "Kyrie Irving",
+   "from": "IR",
+   "to": "UTIL"
+  },
+  {
+   "name": "Michael Porter Jr.",
+   "from": "SF",
+   "to": "PF"
+  },
+  {
+   "name": "Brandon Miller",
+   "from": "F",
+   "to": "BE"
+  },
+  {
+   "name": "Tyler Herro",
+   "from": "UTIL",
+   "to": "PG"
+  },
+  {
+   "name": "Norman Powell",
+   "from": "SG",
+   "to": "BE"
+  },
+  {
+   "name": "Miles Bridges",
+   "from": "BE",
+   "to": "SF"
+  },
+  {
+   "name": "Collin Gillespie",
+   "from": "UTIL",
+   "to": "BE"
+  }
+ ],
+ "skipped": [
+  {
+   "name": "Shai Gilgeous-Alexander",
+   "from": "PG",
+   "to": "UTIL",
+   "why": "game started / locked"
+  }
+ ],
+ "ok": false,
+ "scoringPeriodId": 16,
+ "finalLineup": [
+  [
+   "PG",
+   "Shai Gilgeous-Alexander"
+  ],
+  [
+   "PG",
+   "Tyler Herro"
+  ],
+  [
+   "SG",
+   "Austin Reaves"
+  ],
+  [
+   "SF",
+   "Miles Bridges"
+  ],
+  [
+   "PF",
+   "Michael Porter Jr."
+  ],
+  [
+   "C",
+   "Karl-Anthony Towns"
+  ],
+  [
+   "G",
+   "James Harden"
+  ],
+  [
+   "F",
+   "Anthony Davis"
+  ],
+  [
+   "UTIL",
+   "Kyrie Irving"
+  ],
+  [
+   "UTIL",
+   "Rudy Gobert"
+  ],
+  [
+   "BE",
+   "Brandon Miller"
+  ],
+  [
+   "BE",
+   "Norman Powell"
+  ],
+  [
+   "BE",
+   "Collin Gillespie"
+  ],
+  [
+   "BE",
+   "Dillon Brooks"
+  ]
+ ],
+ "error": "resulting lineup exceeds slot counts {'PG': 2} (a locked player blocks a swap?) — nothing submitted"
+}
