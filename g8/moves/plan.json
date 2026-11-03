@@ -7,9 +7,9 @@
  ],
  "base": {
   "wk": 5.018,
-  "champ": 0.0735,
-  "p1": 0.0426,
-  "epct": 0.52
+  "champ": 0.0597,
+  "p1": 0.0214,
+  "epct": 0.5172
  },
  "protect": [
   "Shai Gilgeous-Alexander",
@@ -42,9 +42,9 @@
    "drop": "Dillon Brooks",
    "ir": null,
    "weekGain": 0.481,
-   "titleGain": 0.1425,
-   "p1Gain": 0.1776,
-   "epctGain": 0.0311,
+   "titleGain": 0.1099,
+   "p1Gain": 0.11,
+   "epctGain": 0.0307,
    "addTeam": "POR",
    "addPos": "C",
    "dropValue": -5.68,
@@ -72,9 +72,9 @@
    "drop": "Dillon Brooks",
    "ir": null,
    "weekGain": 0.254,
-   "titleGain": 0.0379,
-   "p1Gain": 0.0407,
-   "epctGain": 0.01,
+   "titleGain": 0.0367,
+   "p1Gain": 0.0319,
+   "epctGain": 0.013,
    "addTeam": "SAS",
    "addPos": "SF,PF",
    "dropValue": -5.68,
@@ -102,9 +102,9 @@
    "drop": "Dillon Brooks",
    "ir": null,
    "weekGain": 0.3,
-   "titleGain": 0.0227,
-   "p1Gain": 0.0266,
-   "epctGain": 0.0093,
+   "titleGain": 0.0237,
+   "p1Gain": 0.0248,
+   "epctGain": 0.0123,
    "addTeam": "NOR",
    "addPos": "SF,PF",
    "dropValue": -5.68,
@@ -129,9 +129,9 @@
    "ir": "Kyrie Irving",
    "drop": "Dillon Brooks",
    "weekGain": 0.166,
-   "titleGain": 0.0608,
-   "p1Gain": 0.0909,
-   "epctGain": 0.0176,
+   "titleGain": 0.0475,
+   "p1Gain": 0.0604,
+   "epctGain": 0.0208,
    "dropValue": -5.68,
    "status": "rejected",
    "note": "IR 복귀(상태 DTD)",
@@ -153,48 +153,46 @@
    "drop": "Dillon Brooks",
    "ir": null,
    "wk": 0.481,
-   "title": 0.1425
+   "title": 0.1099
   },
   {
    "add": "Tobias Harris",
    "drop": "Dillon Brooks",
    "ir": null,
    "wk": 0.254,
-   "title": 0.0379
+   "title": 0.0367
   },
   {
    "add": "Saddiq Bey",
    "drop": "Dillon Brooks",
    "ir": null,
    "wk": 0.3,
-   "title": 0.0227
-  },
-  {
-   "add": "Derik Queen",
-   "drop": "Dillon Brooks",
-   "ir": null,
-   "wk": 0.27,
-   "title": 0.0218
+   "title": 0.0237
   },
   {
    "add": "Precious Achiuwa",
    "drop": "Dillon Brooks",
    "ir": null,
    "wk": 0.324,
-   "title": 0.0149
+   "title": 0.0142
+  },
+  {
+   "add": "Derik Queen",
+   "drop": "Dillon Brooks",
+   "ir": null,
+   "wk": 0.27,
+   "title": 0.019
   },
   {
    "add": "Alex Caruso",
    "drop": "Dillon Brooks",
    "ir": null,
    "wk": 0.327,
-   "title": 0.0049
+   "title": 0.0092
   }
  ],
- "createdAt": "2026-11-03T13:55:17.880Z",
- "id": "20261103T1355",
+ "createdAt": "2026-11-03T14:43:48.596Z",
+ "id": "20261103T1443",
  "rosterSig": "Anthony Davis|Austin Reaves|Brandon Miller|Collin Gillespie|Dillon Brooks|James Harden|Karl-Anthony Towns|Michael Porter Jr.|Miles Bridges|Norman Powell|Rudy Gobert|Shai Gilgeous-Alexander|Tyler Herro#Kyrie Irving",
- "newItems": [
-  3
- ]
+ "newItems": []
 }
