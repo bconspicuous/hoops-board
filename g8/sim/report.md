@@ -1,17 +1,17 @@
-# G League 시뮬레이션 — 2026-11-03T14:42+09:00
-**우리 팀** 기대승률 59.2% (-0.7%p) · 정규 1위 74.1% (-5.3%p) · 우승 42.4% (-5.0%p)
-**3주차 vs Songpa Park Kezhang** 예상 6.2-4.5-0.3 (직전 6.2-4.6-0.3) · 실적 2026-11-01까지 · 경합: FG% 60%, FT% 74%, 3PM 86%, REB 73%, AST 15%, STL 61%, BLK 73%, TO 55%, DD 45%, PTS 87%
-현재 합계 PTS 0-0 · REB 0-0 · AST 0-0 · BLK 0-0 · FG% 0.000-0.000 · TO 0-0 · 영입 2회 사용
-모델 스트리밍 계획: Nikola Vucevic(ORL) 11-03~11-05 → Robert Williams III(POR) 11-06~11-07 → Daniel Gafford(DAL) 11-08~11-08 → Bobby Portis(MIA) 11-03~11-05 → Tobias Harris(SAS) 11-06~11-06 → Mikal Bridges(NYK) 11-07~11-07 → John Collins(DET) 11-08~11-08
+# G League 시뮬레이션 — 2026-11-03T19:11+09:00
+**우리 팀** 기대승률 59.0% (-0.3%p) · 정규 1위 72.6% (-1.4%p) · 우승 41.6% (-0.8%p)
+**3주차 vs Songpa Park Kezhang** 예상 5.6-5.1-0.3 (직전 6.2-4.5-0.3) · 실적 2026-11-02까지 · 경합: FG% 80%, FT% 32%, 3PM 83%, REB 66%, STL 45%, BLK 52%, TO 65%, DD 47%, PTS 88%
+현재 합계 PTS 206-183 · REB 59-62 · AST 35-56 · BLK 3-7 · FG% 0.474-0.424 · TO 19-24 · 영입 3회 사용
+모델 스트리밍 계획: Nikola Vucevic(ORL) 11-03~11-05 → Robert Williams III(POR) 11-06~11-07 → Daniel Gafford(DAL) 11-08~11-08 → Tobias Harris(SAS) 11-06~11-08
 관찰: Kel'el Ware (Brand_New_Neo_HJ) 7경기 평균 19.3분 · 11.4점 8.7리바 0.9블록
 
 | 팀 | 성적 | 기대승률 | PO | 1위 | 우승 |
 |---|---|---|---|---|---|
-| Garak Twindragons | 14-8-0 | 59.2% | 100.0% | 74.1% | 42.4% |
-| Gatori Team | 10-11-1 | 55.5% | 99.9% | 17.5% | 29.6% |
-| Songpa Park Kezhang | 11-10-1 | 52.9% | 99.2% | 5.7% | 24.4% |
-| Zero Sugar | 10-11-1 | 51.5% | 98.2% | 1.7% | 2.2% |
-| Junyoung's Scary Team | 11-11-0 | 50.5% | 96.5% | 1.1% | 1.1% |
-| ChaRDaddy | 13-9-0 | 46.0% | 70.4% | 0.0% | 0.3% |
-| Kunhyo's Chokeslam | 8-13-1 | 43.2% | 25.7% | 0.0% | 0.0% |
-| Brand_New_Neo_HJ | 9-13-0 | 41.2% | 10.1% | 0.0% | 0.0% |
+| Garak Twindragons | 14-8-0 | 59.0% | 100.0% | 72.6% | 41.6% |
+| Gatori Team | 10-11-1 | 55.2% | 99.8% | 16.9% | 28.1% |
+| Songpa Park Kezhang | 11-10-1 | 53.4% | 99.3% | 8.1% | 27.0% |
+| Zero Sugar | 10-11-1 | 50.7% | 96.5% | 1.3% | 1.8% |
+| Junyoung's Scary Team | 11-11-0 | 50.3% | 95.8% | 1.0% | 1.0% |
+| ChaRDaddy | 13-9-0 | 46.3% | 70.6% | 0.0% | 0.4% |
+| Kunhyo's Chokeslam | 8-13-1 | 43.4% | 25.9% | 0.0% | 0.0% |
+| Brand_New_Neo_HJ | 9-13-0 | 41.7% | 12.0% | 0.0% | 0.0% |
