@@ -6,10 +6,10 @@
   "Dillon Brooks"
  ],
  "base": {
-  "wk": 5.166,
-  "champ": 0.4242,
-  "p1": 0.7407,
-  "epct": 0.5924
+  "wk": 4.695,
+  "champ": 0.4165,
+  "p1": 0.7264,
+  "epct": 0.5897
  },
  "protect": [
   "Shai Gilgeous-Alexander",
@@ -24,7 +24,14 @@
  "droppable": [
   "Dillon Brooks"
  ],
- "flags": [],
+ "flags": [
+  {
+   "kind": "ir-ineligible",
+   "player": "Kyrie Irving",
+   "status": "DTD",
+   "note": "IR 선수가 O가 아님 — ESPN이 영입을 막을 수 있음(감독 판단: DTD는 영입 가능). 첫 사례에서 실제 동작을 기록"
+  }
+ ],
  "items": [
   {
    "n": 1,
@@ -34,10 +41,10 @@
    "addOwner": "FA",
    "drop": "Dillon Brooks",
    "ir": null,
-   "weekGain": 0.446,
-   "titleGain": 0.2106,
-   "p1Gain": 0.1808,
-   "epctGain": 0.0313,
+   "weekGain": 0.389,
+   "titleGain": 0.2032,
+   "p1Gain": 0.1954,
+   "epctGain": 0.0322,
    "addTeam": "POR",
    "addPos": "C",
    "dropValue": -5.68,
@@ -59,17 +66,17 @@
   {
    "n": 2,
    "kind": "add/drop",
-   "add": "Nikola Vucevic",
-   "addEspnId": 6478,
+   "add": "Alex Sarr",
+   "addEspnId": 5160992,
    "addOwner": "FA",
    "drop": "Dillon Brooks",
    "ir": null,
-   "weekGain": 0.335,
-   "titleGain": 0.1625,
-   "p1Gain": 0.1607,
-   "epctGain": 0.0283,
-   "addTeam": "ORL",
-   "addPos": "C",
+   "weekGain": 0.294,
+   "titleGain": 0.1821,
+   "p1Gain": 0.1749,
+   "epctGain": 0.0265,
+   "addTeam": "WAS",
+   "addPos": "PF,C",
    "dropValue": -5.68,
    "status": "proposed",
    "conflicts": [
@@ -77,28 +84,28 @@
     3
    ],
    "addHealth": {
-    "status": "정상",
-    "injury": null,
-    "returnDate": null,
-    "report": null,
-    "g": 7,
-    "min": 9.6
+    "status": "DTD",
+    "injury": "Knee",
+    "returnDate": "2026-11-04",
+    "report": "Sarr (knee) is out for Monday's game against Orlando.",
+    "g": 6,
+    "min": 25.5
    },
-   "firstProposedAt": "2026-11-03T05:43:11.583Z"
+   "firstProposedAt": "2026-11-03T10:13:08.421Z"
   },
   {
    "n": 3,
    "kind": "add/drop",
-   "add": "Saddiq Bey",
-   "addEspnId": 4397136,
+   "add": "Tobias Harris",
+   "addEspnId": 6440,
    "addOwner": "FA",
    "drop": "Dillon Brooks",
    "ir": null,
-   "weekGain": 0.222,
-   "titleGain": 0.0662,
-   "p1Gain": 0.0611,
-   "epctGain": 0.0081,
-   "addTeam": "NOR",
+   "weekGain": 0.212,
+   "titleGain": 0.0651,
+   "p1Gain": 0.0688,
+   "epctGain": 0.0073,
+   "addTeam": "SAS",
    "addPos": "SF,PF",
    "dropValue": -5.68,
    "status": "proposed",
@@ -107,14 +114,37 @@
     2
    ],
    "addHealth": {
-    "status": "정상",
-    "injury": null,
-    "returnDate": null,
-    "report": null,
-    "g": 7,
-    "min": 26.1
+    "status": "O",
+    "injury": "Calf",
+    "returnDate": "2026-11-06",
+    "report": "Harris (calf) is listed as out for Saturday's game against Minnesota.",
+    "g": null,
+    "min": null
    },
-   "firstProposedAt": "2026-11-03T05:43:11.583Z"
+   "firstProposedAt": "2026-11-03T10:13:08.421Z"
+  },
+  {
+   "n": 4,
+   "kind": "activate",
+   "ir": "Kyrie Irving",
+   "drop": "Dillon Brooks",
+   "weekGain": 0.329,
+   "titleGain": 0.099,
+   "p1Gain": 0.1312,
+   "epctGain": 0.0169,
+   "dropValue": -5.68,
+   "status": "proposed",
+   "note": "IR 복귀(상태 DTD)",
+   "addHealth": null,
+   "irHealth": {
+    "status": "DTD",
+    "injury": "Knee",
+    "returnDate": "2026-11-04",
+    "report": "Irving (knee) has been ruled out for Monday's game against the Kings.",
+    "g": 5,
+    "min": 28.8
+   },
+   "firstProposedAt": "2026-11-03T10:13:08.421Z"
   }
  ],
  "screened": [
@@ -122,50 +152,51 @@
    "add": "Robert Williams III",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.446,
-   "title": 0.2106
+   "wk": 0.389,
+   "title": 0.2032
   },
   {
-   "add": "Nikola Vucevic",
+   "add": "Alex Sarr",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.335,
-   "title": 0.1625
-  },
-  {
-   "add": "Saddiq Bey",
-   "drop": "Dillon Brooks",
-   "ir": null,
-   "wk": 0.222,
-   "title": 0.0662
+   "wk": 0.294,
+   "title": 0.1821
   },
   {
    "add": "Tobias Harris",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.219,
-   "title": 0.0598
+   "wk": 0.212,
+   "title": 0.0651
+  },
+  {
+   "add": "Saddiq Bey",
+   "drop": "Dillon Brooks",
+   "ir": null,
+   "wk": 0.224,
+   "title": 0.0373
   },
   {
    "add": "Bobby Portis",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.191,
-   "title": 0.0442
+   "wk": 0.192,
+   "title": 0.0292
   },
   {
    "add": "Santi Aldama",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.208,
-   "title": 0.0338
+   "wk": 0.185,
+   "title": 0.0196
   }
  ],
- "createdAt": "2026-11-03T05:43:11.583Z",
- "id": "20261103T0543",
+ "createdAt": "2026-11-03T10:13:08.421Z",
+ "id": "20261103T1013",
  "rosterSig": "Anthony Davis|Austin Reaves|Brandon Miller|Collin Gillespie|Dillon Brooks|James Harden|Karl-Anthony Towns|Michael Porter Jr.|Miles Bridges|Norman Powell|Rudy Gobert|Shai Gilgeous-Alexander|Tyler Herro#Kyrie Irving",
  "newItems": [
   2,
-  3
+  3,
+  4
  ]
 }
