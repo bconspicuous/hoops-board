@@ -540,7 +540,7 @@ function availOf(p, w, perGame, b2b) {
   /* planned rest (league/meta.restB2B, the manager's decision): out on every 2nd night of a team back-to-back. Season availability is
      kept at the projected GP/82 (same principle as the back-to-back layer); REST_KEEP_GP = false treats the rest as extra absences. */
   if (p.team && state.restB2B.has(p.name)) { const s = REF.b2bShare[p.team] || .18; pN = REST_KEEP_GP ? Math.min(1, g / (1 - s)) : g; pB = 0; rEff = 1; }
-  if (w === currentWeek()) { const st = statusOf(p.name); if (st === "O") { pN = pB = 0; } else if (st === "DTD") { pN *= .8; pB *= .8; } }
+  if (w === currentWeek()) { const st = statusOf(p.name); if (st === "O" && !returnIdx(p.name, w)) { pN = pB = 0; } else if (st === "DTD") { pN *= .8; pB *= .8; } }
   if (state.seasonOut && state.seasonOut.has(p.name)) { pN = pB = 0; }
   return { pN, pB, rEff };
 }
@@ -557,6 +557,11 @@ const XC = ["TPM", "REB", "AST", "STL", "BLK", "TO", "PTS", "PF"];
 /* Common random numbers: a player's simulated games in week w depend only on (week, player, draws, flags), so they are cached
    and shared by every roster/scenario that contains him. Cleared whenever the player table is rebuilt. */
 let PLAYC = new Map();
+/* OUT with an ESPN estimated return date inside week w -> index of the first day he can play (null = out all week / no date) */
+function returnIdx(n, w) {
+  const rd = ((state.docs["league/rosters"] || {}).returns || {})[n]; if (!rd || statusOf(n) !== "O" || w !== currentWeek()) return null;
+  if (rd > REF.ends[w]) return null; return Math.max(1, dayOffset(w, rd));
+}
 function playsOf(p, w, D, perGame, b2b) {
   const key = w + "|" + p.name + "|" + D + "|" + (perGame ? 1 : 0) + (b2b ? 1 : 0); let o = PLAYC.get(key); if (o) return o;
   const sched = REF.sched[w], B2 = REF.b2bd[w], days = sched.length, arr = new Uint8Array(D * days); let nb = 0;
@@ -564,7 +569,8 @@ function playsOf(p, w, D, perGame, b2b) {
     const fixed = []; for (let d = 0; d < days; d++) if (sched[d].indexOf(p.team) >= 0) fixed.push(d);
     const isB = fixed.map(d => B2[d].indexOf(p.team) >= 0); nb = isB.filter(Boolean).length;
     const av = availOf(p, w, perGame, b2b), r = rng(hash(w + "|" + p.name));
-    for (let k = 0; k < D; k++) for (let i = 0; i < fixed.length; i++) { const u = r(); if (u < (isB[i] ? av.pB : av.pN)) arr[k * days + fixed[i]] = isB[i] ? 2 : 1; }
+    const back = returnIdx(p.name, w) || 0;
+    for (let k = 0; k < D; k++) for (let i = 0; i < fixed.length; i++) { const u = r(); if (fixed[i] >= back && u < (isB[i] ? av.pB : av.pN)) arr[k * days + fixed[i]] = isB[i] ? 2 : 1; }
   }
   o = { arr, nb }; PLAYC.set(key, o); return o;
 }
@@ -909,7 +915,7 @@ function renderNow() {
   const act = state.docs["league/actuals"];
   const rowsP = ros.active.map(n => state.PL[n]).filter(Boolean).sort((a, b) => b.value - a.value);
   const gw = n => { const p = state.PL[n]; return p && p.team ? REF.grid[cw][COLI[p.team]] : 0; };
-  const st = n => { const s = statusOf(n); return (s === "O" ? '<span class="stat-o">O</span>' : s === "DTD" ? '<span class="stat-dtd">DTD</span>' : "") + (state.restB2B.has(n) ? ' <span class="chip" title="백투백 2번째 경기 결장(운영 가정)">B2B 휴식</span>' : "") + (state.PL[n] && state.PL[n].actOverride != null ? ` <span class="chip" title="운영 가정: 2026-27 실제 기록 ${Math.round(state.PL[n].actOverride * 100)}% 반영 (${state.PL[n].actual ? state.PL[n].actual.g + '경기' : ''})">실적 ${Math.round(state.PL[n].actOverride * 100)}%</span>` : "") + (state.PL[n] && state.PL[n].statFrom ? ` <span class="chip" title="운영 가정: ${esc(state.PL[n].statFrom)}의 경기당 기록·가치를 승계">${esc(state.PL[n].statFrom.split(" ").slice(-1)[0])} 역할 승계</span>` : "") + (state.seasonOut && state.seasonOut.has(n) ? ' <span class="stat-o">시즌아웃</span>' : ""); };
+  const st = n => { const s = statusOf(n), rd = ((state.docs["league/rosters"] || {}).returns || {})[n]; return (s === "O" ? `<span class="stat-o" title="${rd ? "ESPN 예상 복귀 " + esc(rd) : ""}">O${rd ? " · " + esc(md(rd)) + " 복귀 예상" : ""}</span>` : s === "DTD" ? '<span class="stat-dtd">DTD</span>' : "") + (state.restB2B.has(n) ? ' <span class="chip" title="백투백 2번째 경기 결장(운영 가정)">B2B 휴식</span>' : "") + (state.PL[n] && state.PL[n].actOverride != null ? ` <span class="chip" title="운영 가정: 2026-27 실제 기록 ${Math.round(state.PL[n].actOverride * 100)}% 반영 (${state.PL[n].actual ? state.PL[n].actual.g + '경기' : ''})">실적 ${Math.round(state.PL[n].actOverride * 100)}%</span>` : "") + (state.PL[n] && state.PL[n].statFrom ? ` <span class="chip" title="운영 가정: ${esc(state.PL[n].statFrom)}의 경기당 기록·가치를 승계">${esc(state.PL[n].statFrom.split(" ").slice(-1)[0])} 역할 승계</span>` : "") + (state.seasonOut && state.seasonOut.has(n) ? ' <span class="stat-o">시즌아웃</span>' : ""); };
   $("roster").innerHTML = `<table><thead><tr><th>선수</th><th>포지션</th><th>NBA</th><th>상태</th><th class="r" title="중립 보정 예상 출전 경기(괄호 없음). 마우스를 올리면 ESPN 원 프로젝션">예상 GP</th><th class="r">이번 주 경기</th><th class="r">사용 예상</th><th class="r">PTS</th><th class="r">REB</th><th class="r">AST</th><th class="r">STL</th><th class="r">BLK</th><th class="r">3PM</th><th class="r">FG%</th><th class="r">FT%</th><th class="r">TO</th><th class="r">실제 경기</th>${state.b2b ? '<th class="r">B2B 경기</th><th class="r">B2B 휴식확률</th><th class="r">사용 Δ</th>' : ""}</tr></thead><tbody>` +
     rowsP.map(p => `<tr><td>${esc(p.name)}</td><td>${esc(p.elig)}</td><td>${esc(p.team || "—")}</td><td>${st(p.name)}</td><td class="r num" title="ESPN ${p.gpE != null ? p.gpE : p.gp}경기 · 중립 ${BASE[p.name].gp}경기${p.gpKept ? " · 현재 ESPN 유지" : ""}${p.gpFull ? " · 현재 전 경기 출전 가정" : ""}">${p.gpFull ? "전 경기" : Math.round(p.gp) + (p.gpKept ? "*" : "")}</td><td class="r num">${gw(p.name)}</td><td class="r num">${(A.used[p.name] || 0).toFixed(1)}</td><td class="r num">${p.PTS.toFixed(1)}</td><td class="r num">${p.REB.toFixed(1)}</td><td class="r num">${p.AST.toFixed(1)}</td><td class="r num">${p.STL.toFixed(1)}</td><td class="r num">${p.BLK.toFixed(1)}</td><td class="r num">${p.TPM.toFixed(1)}</td><td class="r num">${(p.FGM / p.FGA).toFixed(3).replace(/^0/, "")}</td><td class="r num">${(p.FTA ? p.FTM / p.FTA : 0).toFixed(3).replace(/^0/, "")}</td><td class="r num">${p.TO.toFixed(1)}</td><td class="r num">${p.actual ? p.actual.g : "—"}</td>${state.b2b ? (() => { const bi = b2bOf(p), av = availOf(p, cw, false, true); return `<td class="r num">${b2bDays(p, cw).length}</td><td class="r num" title="${esc(bi.why)}">${pct(av.rEff)}</td><td class="r num">${dlt((A.used[p.name] || 0) - (Ao.used[p.name] || 0), 1)}</td>`; })() : ""}</tr>`).join("") +
     ir.map(n => `<tr><td>${esc(n)}</td><td colspan="${state.b2b ? 19 : 16}" class="note">IR — 시뮬레이션 제외</td></tr>`).join("") + `</tbody></table>`;

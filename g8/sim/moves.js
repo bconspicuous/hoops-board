@@ -37,7 +37,7 @@ const PROTECT = +(process.env.PROTECT || 8), MAXP = +(process.env.MAXP || 3), WK
     const want = (cfg.dropCandidates || []).map(nrm), drops = want.length ? roster.filter(n => want.includes(nrm(n)) && !und.has(n)) : roster.filter(n => !und.has(n) && !protect.has(n));
     const unsigned = new Set(unsignedCsv.map(nrm));
     const held = new Set(); REF.teams.forEach(t => rosterFor(t, cw, null).forEach(n => held.add(n))); Object.values(rosters()).forEach(x => (x.ir || []).forEach(n => held.add(n)));
-    const fa = Object.keys(state.PL).filter(n => !held.has(n) && !state.seasonOut.has(n) && state.PL[n].team && !state.PL[n].unsigned && !unsigned.has(nrm(n)) && statusOf(n) !== 'O').sort((a, c) => state.PL[c].sw - state.PL[a].sw).slice(0, 45);
+    const fa = Object.keys(state.PL).filter(n => !held.has(n) && !state.seasonOut.has(n) && state.PL[n].team && !state.PL[n].unsigned && !unsigned.has(nrm(n)) && (statusOf(n) !== 'O' || returnIdx(n, cw))).sort((a, c) => state.PL[c].sw - state.PL[a].sw).slice(0, 45);
     const cCount = names => names.filter(n => state.PL[n] && state.PL[n].pos === 'C').length;
     const flags = [], items = [];
     /* IR housekeeping */
@@ -76,6 +76,12 @@ const PROTECT = +(process.env.PROTECT || 8), MAXP = +(process.env.MAXP || 3), WK
       screened: top.map(s => ({ add: s.add, drop: s.drop, ir: s.ir || null, wk: +s.wk.toFixed(3), title: +(s.title || 0).toFixed(4) })) };
   }, [rows, acqUsed, { PROTECT, MAXP, WK_MIN, TITLE_MIN }, cfg, unsignedCsv]);
   await b.close();
+  /* health line per proposal: ESPN fantasy status, injury report (estimated return), games and minutes so far */
+  const inj = (JSON.parse(fs.readFileSync(path.join(ROOT, 'g8', 'data', 'injuries.json'), 'utf8')).injuries || []), rawSt = JSON.parse(fs.readFileSync(path.join(ROOT, 'g8', 'data', 'rosters.json'), 'utf8')).status || {};
+  const nrmN = s => (s || '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[.'`]/g, '').replace(/\b(jr|sr|ii|iii|iv)\b/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
+  const health = n => { if (!n) return null; const st = Object.keys(rawSt).find(k => (rawSt[k] || []).some(x => nrmN(x) === nrmN(n))) || '', i = inj.find(x => nrmN(x.player) === nrmN(n)), r = rows.find(x => nrmN(x.Player) === nrmN(n)) || {};
+    return { status: st || '정상', injury: i ? i.injury : null, returnDate: i ? i.returnDate : null, report: i ? i.short : null, g: r.G ? +r.G : null, min: r.MP ? +(+r.MP).toFixed(1) : null }; };
+  R.items.forEach(i => { i.addHealth = health(i.add); i.irHealth = i.ir ? health(i.ir) : undefined; });
   fs.mkdirSync(OUTD, { recursive: true });
   const prevP = path.join(OUTD, 'plan.json'), prev = fs.existsSync(prevP) ? JSON.parse(fs.readFileSync(prevP, 'utf8')) : null;
   R.createdAt = new Date().toISOString(); R.id = R.createdAt.slice(0, 16).replace(/[-:]/g, '');
@@ -90,6 +96,7 @@ const PROTECT = +(process.env.PROTECT || 8), MAXP = +(process.env.MAXP || 3), WK
   if (!R.items.length) L.push('제안 없음 (기준: 이번 주 +0.05승 또는 우승 +1%p 이상)');
   R.items.forEach(i => L.push(i.kind === 'ir' ? `${i.n}. IR 이동: ${i.ir} (${i.note})` : i.kind === 'activate' ? `${i.n}. IR 복귀 ${i.ir} / 방출 ${i.drop} — 이번 주 ${i.weekGain >= 0 ? '+' : ''}${i.weekGain.toFixed(2)}승 · 우승 ${pc(i.titleGain)} [${i.status}]` :
     `${i.n}. ${i.ir ? `IR 이동 ${i.ir} + ` : ''}영입 ${i.add}(${i.addTeam} ${i.addPos}${i.addOwner === 'FA' ? '' : ' · ' + i.addOwner})${i.drop ? ` / 방출 ${i.drop}` : ''} — 이번 주 ${i.weekGain >= 0 ? '+' : ''}${i.weekGain.toFixed(2)}승 · 우승 ${pc(i.titleGain)} · 1위 ${pc(i.p1Gain)}${i.conflicts && i.conflicts.length ? ` · ${i.conflicts.join('·')}번과 동시 불가(택1: 같은 방출 대상 또는 C 한도)` : ''} [${i.status}]`));
+  R.items.filter(i => i.addHealth).forEach(i => { const h = i.addHealth; L.push(`   ${i.n}번 ${i.add} 상태: ${h.status}${h.injury ? ` (${h.injury}${h.returnDate ? ', 복귀 예상 ' + h.returnDate : ''})` : ''} · 올 시즌 ${h.g ?? '—'}경기 ${h.min ?? '—'}분${h.report ? ' · ' + h.report : ''}`); });
   L.push('', (cfg.dropCandidates || []).length ? `방출 대상(감독 지정): ${R.dropCandidates.join(', ') || '없음 — 로스터에 없음'}` : `보호(방출 후보 제외): ${R.protect.join(', ')}`);
   fs.writeFileSync(path.join(OUTD, 'plan.md'), L.join('\n') + '\n');
   console.log(L.join('\n'));

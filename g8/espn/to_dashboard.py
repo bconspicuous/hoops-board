@@ -71,8 +71,7 @@ def main(build=True):
         teams[tn] = {"active": act, "ir": ir}
     for st, names in (ros.get("status") or {}).items():
         for n in names: status[pname(n)] = st
-    on = {n for t in teams.values() for n in t["active"] + t["ir"]}
-    status = {n: s for n, s in status.items() if n in on}
+    on = {n for t in teams.values() for n in t["active"] + t["ir"]}   # statuses kept for rostered players and the free agents the sync lists
     ov = (load(os.path.join(DATA, "meta.json"), {}) or {}).get("statusOverride") or {}   # user-set statuses beat ESPN's
     for n, s in ov.items():
         if n in on: status[n] = s
@@ -83,7 +82,12 @@ def main(build=True):
     csvp0 = os.path.join(G8, "players_2027.csv")
     if os.path.exists(csvp0):
         unsigned = sorted({pname(r["Player"]) for r in csv.DictReader(open(csvp0, encoding="utf-8")) if (r.get("Team") or "") == "FA"})
-    if dump("rosters", {"asOf": asOf, "source": "ESPN API sync (GitHub Actions g8-espn)", "teams": teams, "status": status, "unsigned": unsigned}): changed.append("rosters")
+    returns = {}                                            # ESPN injury report: estimated return date (US Eastern) of OUT players
+    inj = load(os.path.join(G8, "injuries.json"), {}) or {}
+    for x in inj.get("injuries") or []:
+        n = pname(x.get("player") or "")
+        if status.get(n) == "O" and x.get("returnDate") and n not in ov: returns[n] = str(x["returnDate"])[:10]
+    if dump("rosters", {"asOf": asOf, "source": "ESPN API sync (GitHub Actions g8-espn)", "teams": teams, "status": status, "unsigned": unsigned, "returns": returns}): changed.append("rosters")
     # ---- matchups: results (final periods) and live (current period)
     cur = sb.get("currentMatchupPeriod"); games = sb.get("matchups") or []
     def side_cats(s): return {CATS[k]: v for k, v in (s.get("cats") or {}).items() if k in CATS}
