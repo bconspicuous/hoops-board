@@ -1,28 +1,18 @@
 {
- "planId": "2026-11-04T0025Z",
+ "planId": "2026-11-04T0026Z",
  "mode": "dry",
  "date": "2026-11-04",
- "at": "2026-11-02T19:25-05:00",
+ "at": "2026-11-02T19:26-05:00",
  "moves": [
   {
-   "name": "Anthony Davis",
-   "from": "PF",
-   "to": "F"
+   "name": "James Harden",
+   "from": "G",
+   "to": "UTIL"
   },
   {
    "name": "Austin Reaves",
    "from": "BE",
-   "to": "SG"
-  },
-  {
-   "name": "Kyrie Irving",
-   "from": "IR",
-   "to": "UTIL"
-  },
-  {
-   "name": "Michael Porter Jr.",
-   "from": "SF",
-   "to": "PF"
+   "to": "G"
   },
   {
    "name": "Brandon Miller",
@@ -32,7 +22,7 @@
   {
    "name": "Tyler Herro",
    "from": "UTIL",
-   "to": "PG"
+   "to": "SG"
   },
   {
    "name": "Norman Powell",
@@ -42,23 +32,11 @@
   {
    "name": "Miles Bridges",
    "from": "BE",
-   "to": "SF"
-  },
-  {
-   "name": "Collin Gillespie",
-   "from": "UTIL",
-   "to": "BE"
+   "to": "F"
   }
  ],
- "skipped": [
-  {
-   "name": "Shai Gilgeous-Alexander",
-   "from": "PG",
-   "to": "UTIL",
-   "why": "game started / locked"
-  }
- ],
- "ok": false,
+ "skipped": [],
+ "ok": true,
  "scoringPeriodId": 16,
  "finalLineup": [
   [
@@ -66,20 +44,16 @@
    "Shai Gilgeous-Alexander"
   ],
   [
-   "PG",
+   "SG",
    "Tyler Herro"
   ],
   [
-   "SG",
-   "Austin Reaves"
-  ],
-  [
    "SF",
-   "Miles Bridges"
+   "Michael Porter Jr."
   ],
   [
    "PF",
-   "Michael Porter Jr."
+   "Anthony Davis"
   ],
   [
    "C",
@@ -87,19 +61,23 @@
   ],
   [
    "G",
-   "James Harden"
+   "Austin Reaves"
   ],
   [
    "F",
-   "Anthony Davis"
+   "Miles Bridges"
   ],
   [
    "UTIL",
-   "Kyrie Irving"
+   "James Harden"
   ],
   [
    "UTIL",
    "Rudy Gobert"
+  ],
+  [
+   "UTIL",
+   "Collin Gillespie"
   ],
   [
    "BE",
@@ -111,12 +89,12 @@
   ],
   [
    "BE",
-   "Collin Gillespie"
+   "Dillon Brooks"
   ],
   [
-   "BE",
-   "Dillon Brooks"
+   "IR",
+   "Kyrie Irving"
   ]
  ],
- "error": "resulting lineup exceeds slot counts {'PG': 2} (a locked player blocks a swap?) — nothing submitted"
+ "note": "dry run — nothing written"
 }
