@@ -1,8 +1,8 @@
 {
- "date": "2026-11-04",
- "scoringPeriodId": 16,
- "hash": "369bd1f298",
- "createdKST": "2026-11-03T10:04+09:00",
+ "date": "2026-11-02",
+ "scoringPeriodId": 14,
+ "hash": "923d770943",
+ "createdKST": "2026-11-03T13:48+09:00",
  "mode": "plan",
  "moves": [],
  "lineup": [
@@ -18,8 +18,8 @@
   {
    "slot": "SG",
    "cur": "SG",
-   "name": "Josh Hart",
-   "pro": "NYK",
+   "name": "Ajay Mitchell",
+   "pro": "OKC",
    "game": true,
    "inj": "ACTIVE",
    "out": false
@@ -54,8 +54,8 @@
   {
    "slot": "G",
    "cur": "G",
-   "name": "Ajay Mitchell",
-   "pro": "OKC",
+   "name": "Josh Hart",
+   "pro": "NYK",
    "game": true,
    "inj": "ACTIVE",
    "out": false
@@ -63,8 +63,8 @@
   {
    "slot": "F",
    "cur": "F",
-   "name": "Miles Bridges",
-   "pro": "PHX",
+   "name": "Paul Reed",
+   "pro": "DET",
    "game": true,
    "inj": "ACTIVE",
    "out": false
@@ -72,8 +72,8 @@
   {
    "slot": "UTIL",
    "cur": "UTIL",
-   "name": "Paul Reed",
-   "pro": "DET",
+   "name": "Miles Bridges",
+   "pro": "PHX",
    "game": true,
    "inj": "ACTIVE",
    "out": false
