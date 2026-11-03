@@ -1,0 +1,38 @@
+name: ten · waivers & transactions (read-only)
+# Our pending claims, league transactions (all teams), waiver order and players on waivers -> ten/espn/waivers.json. No ESPN writes.
+on:
+  workflow_dispatch:
+    inputs:
+      lookback:
+        description: "days of league transactions"
+        default: "7"
+permissions:
+  contents: write
+concurrency:
+  group: ten-lineup
+  cancel-in-progress: false
+jobs:
+  waivers:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Read waivers
+        env:
+          ESPN_LEAGUE_ID: "504060248"
+          ESPN_SEASON: "2027"
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          ESPN_SWID: ${{ secrets.ESPN_SWID }}
+          LOOKBACK: ${{ inputs.lookback || '7' }}
+        run: python ten/espn/waivers.py
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ten/espn/waivers.json
+          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
+          git commit -m "ten: waivers $(TZ=Asia/Seoul date +'%Y-%m-%d %H:%M KST')"
+          for i in 1 2 3; do git pull --rebase origin main && git push && break; sleep 5; done
