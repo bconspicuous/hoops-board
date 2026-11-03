@@ -118,7 +118,7 @@ def main():
     if not items:
         res.update(ok=True, note="no matching items" + (" with status approved" if MODE == "live" else "")); jdump(OUT, res); print(res["note"]); return
     lg, me, ent, owned, sp, mp, acq, rs = state()
-    limit = (rs.get("acquisitionLimit") or (lg.get("settings") or {}).get("acquisitionSettings", {}).get("matchupAcquisitionLimit") or 7)
+    limit = int(((json.load(open(os.path.join(ROOT, "src", "data", "rules.json"), encoding="utf-8")).get("acquisition") or {}).get("perMatchup")) or 7)   # league rule: 7 per matchup
     sig = "|".join(sorted(e["name"] for e in ent if e["slot"] != 13)) + "#" + "|".join(sorted(e["name"] for e in ent if e["slot"] == 13))
     res.update(scoringPeriodId=sp, matchupPeriod=mp, addsUsed=acq, rosterMatchesPlan=(norm(sig) == norm(plan.get("rosterSig", ""))))
     irBad = [e["name"] + f" ({e['inj']})" for e in ent if e["slot"] == 13 and e["inj"] not in OUT_OK]
@@ -180,7 +180,9 @@ def main():
     jdump(OUT, res)
     if MODE == "live": jdump(PLAN, plan)
     print(json.dumps(res, ensure_ascii=False)[:3000])
-    if not res["ok"]: F.die("one or more items failed — see g8/moves/last_run.json")
+    if not res["ok"]:
+        if MODE == "live": F.die("one or more items failed — see g8/moves/last_run.json")
+        note("warning", "some items are not executable — see g8/moves/last_run.json")
 
 
 if __name__ == "__main__":
