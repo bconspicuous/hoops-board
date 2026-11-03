@@ -88,6 +88,8 @@ def mark(plan, status, **kw):
 
 def main():
     plan = json.load(open(PLAN, encoding="utf-8"))
+    if not plan.get("slots"):
+        save({"planId": plan.get("id"), "mode": MODE, "date": plan.get("date"), "ok": True, "note": f"plan has no lineup (status {plan.get('status')})"}); print("nothing to do"); return
     now = datetime.now(ET); day = datetime.strptime(plan["date"], "%Y-%m-%d").date()
     res = {"planId": plan.get("id"), "mode": MODE, "date": plan["date"], "at": now.isoformat(timespec="minutes"), "moves": [], "skipped": [], "ok": False}
     if day < now.date():
