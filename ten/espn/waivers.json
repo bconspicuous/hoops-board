@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-04T06:45+09:00",
+ "asOf": "2026-11-04T08:43+09:00",
  "scoringPeriodId": 15,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -1042,7 +1042,7 @@
    "name": "Peyton Watson",
    "pro": "CLE",
    "waiverClears": "2026-11-04 17:00 KST",
-   "inj": "DAY_TO_DAY",
+   "inj": "OUT",
    "droppedBy": {
     "by": "GTD",
     "at": "2026-11-03 06:34 KST"
