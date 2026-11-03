@@ -1,0 +1,43 @@
+name: g8 · ESPN lineup (8-team, approval required)
+# Sets Garak Twindragons' daily lineup from g8/lineup/plan.json. Never scheduled: Claude dispatches it — mode=dry to validate a
+# proposed plan, mode=live only after the manager has approved that plan (plan.status = "approved"). Uses the 8-team secrets only.
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "dry = validate only, live = submit the approved plan"
+        required: true
+        default: dry
+        type: choice
+        options: [dry, live]
+permissions:
+  contents: write
+concurrency:
+  group: g8-lineup
+  cancel-in-progress: false
+jobs:
+  lineup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Lineup (${{ inputs.mode }})
+        env:
+          MODE: ${{ inputs.mode }}
+          ESPN_LEAGUE_ID: "751654965"
+          ESPN_SEASON: "2027"
+          ESPN_S2: ${{ secrets.G8_ESPN_S2 }}
+          ESPN_SWID: ${{ secrets.G8_ESPN_SWID }}
+        run: python g8/espn/lineup.py
+      - name: Commit run record
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add g8/lineup || true
+          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
+          git commit -m "g8: lineup ${{ inputs.mode }} $(TZ=Asia/Seoul date +'%Y-%m-%d %H:%M KST')"
+          for i in 1 2 3; do git pull --rebase origin main && git push && exit 0; sleep 5; done
+          exit 1

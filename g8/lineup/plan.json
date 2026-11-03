@@ -1,0 +1,61 @@
+{
+ "date": "2026-11-03",
+ "week": 3,
+ "status": "no-games",
+ "roster": [
+  {
+   "name": "Shai Gilgeous-Alexander",
+   "slot": "PG"
+  },
+  {
+   "name": "Karl-Anthony Towns",
+   "slot": "C"
+  },
+  {
+   "name": "Anthony Davis",
+   "slot": "PF"
+  },
+  {
+   "name": "James Harden",
+   "slot": "G"
+  },
+  {
+   "name": "Austin Reaves",
+   "slot": "UTIL"
+  },
+  {
+   "name": "Kyrie Irving",
+   "slot": "BE"
+  },
+  {
+   "name": "Michael Porter Jr.",
+   "slot": "SF"
+  },
+  {
+   "name": "Brandon Miller",
+   "slot": "F"
+  },
+  {
+   "name": "Tyler Herro",
+   "slot": "UTIL"
+  },
+  {
+   "name": "Rudy Gobert",
+   "slot": "UTIL"
+  },
+  {
+   "name": "Norman Powell",
+   "slot": "SG"
+  },
+  {
+   "name": "Miles Bridges",
+   "slot": "BE"
+  },
+  {
+   "name": "Collin Gillespie",
+   "slot": "BE"
+  }
+ ],
+ "id": "2026-11-03T0024Z",
+ "createdAt": "2026-11-03T00:24:12.233Z"
+}
