@@ -6,10 +6,10 @@
   "Dillon Brooks"
  ],
  "base": {
-  "wk": 5.096,
-  "champ": 0.4251,
-  "p1": 0.7174,
-  "epct": 0.5903
+  "wk": 5.1,
+  "champ": 0.4745,
+  "p1": 0.7941,
+  "epct": 0.5999
  },
  "protect": [
   "Shai Gilgeous-Alexander",
@@ -34,10 +34,10 @@
    "addOwner": "FA",
    "drop": "Dillon Brooks",
    "ir": null,
-   "weekGain": 0.447,
-   "titleGain": 0.2113,
-   "p1Gain": 0.2083,
-   "epctGain": 0.0314,
+   "weekGain": 0.427,
+   "titleGain": 0.1684,
+   "p1Gain": 0.1309,
+   "epctGain": 0.0238,
    "addTeam": "POR",
    "addPos": "C",
    "dropValue": -5.68,
@@ -51,8 +51,8 @@
     "injury": null,
     "returnDate": null,
     "report": null,
-    "g": 4,
-    "min": 17
+    "g": 5,
+    "min": 14.4
    },
    "firstProposedAt": "2026-11-03T00:45:57.209Z"
   },
@@ -64,10 +64,10 @@
    "addOwner": "FA",
    "drop": "Dillon Brooks",
    "ir": null,
-   "weekGain": 0.361,
-   "titleGain": 0.1901,
-   "p1Gain": 0.1995,
-   "epctGain": 0.03,
+   "weekGain": 0.357,
+   "titleGain": 0.1548,
+   "p1Gain": 0.126,
+   "epctGain": 0.0209,
    "addTeam": "WAS",
    "addPos": "PF,C",
    "dropValue": -5.68,
@@ -94,10 +94,10 @@
    "addOwner": "FA",
    "drop": "Dillon Brooks",
    "ir": null,
-   "weekGain": 0.219,
-   "titleGain": 0.0699,
-   "p1Gain": 0.0749,
-   "epctGain": 0.0074,
+   "weekGain": 0.216,
+   "titleGain": 0.0821,
+   "p1Gain": 0.0715,
+   "epctGain": 0.0097,
    "addTeam": "SAS",
    "addPos": "SF,PF",
    "dropValue": -5.68,
@@ -122,49 +122,47 @@
    "add": "Robert Williams III",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.447,
-   "title": 0.2113
+   "wk": 0.427,
+   "title": 0.1684
   },
   {
    "add": "Alex Sarr",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.361,
-   "title": 0.1901
+   "wk": 0.357,
+   "title": 0.1548
   },
   {
    "add": "Tobias Harris",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.219,
-   "title": 0.0699
+   "wk": 0.216,
+   "title": 0.0821
   },
   {
    "add": "Saddiq Bey",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.229,
-   "title": 0.0535
+   "wk": 0.217,
+   "title": 0.057
+  },
+  {
+   "add": "Andrew Wiggins",
+   "drop": "Dillon Brooks",
+   "ir": null,
+   "wk": 0.194,
+   "title": 0.0203
   },
   {
    "add": "Santi Aldama",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.213,
-   "title": 0.0361
-  },
-  {
-   "add": "Bobby Portis",
-   "drop": "Dillon Brooks",
-   "ir": null,
-   "wk": 0.2,
-   "title": 0.0328
+   "wk": 0.205,
+   "title": 0.0159
   }
  ],
- "createdAt": "2026-11-03T00:53:32.908Z",
- "id": "20261103T0053",
+ "createdAt": "2026-11-03T02:43:19.140Z",
+ "id": "20261103T0243",
  "rosterSig": "Anthony Davis|Austin Reaves|Brandon Miller|Collin Gillespie|Dillon Brooks|James Harden|Karl-Anthony Towns|Michael Porter Jr.|Miles Bridges|Norman Powell|Rudy Gobert|Shai Gilgeous-Alexander|Tyler Herro#Kyrie Irving",
- "newItems": [
-  3
- ]
+ "newItems": []
 }
