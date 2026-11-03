@@ -1,8 +1,8 @@
 {
- "date": "2026-11-02",
- "scoringPeriodId": 14,
- "hash": "923d770943",
- "createdKST": "2026-11-03T13:48+09:00",
+ "date": "2026-11-03",
+ "scoringPeriodId": 15,
+ "hash": "c9665e482b",
+ "createdKST": "2026-11-03T19:47+09:00",
  "mode": "plan",
  "moves": [],
  "lineup": [
@@ -11,25 +11,25 @@
    "cur": "PG",
    "name": "Donovan Mitchell",
    "pro": "CLE",
-   "game": true,
+   "game": false,
    "inj": "ACTIVE",
    "out": false
   },
   {
    "slot": "SG",
    "cur": "SG",
-   "name": "Ajay Mitchell",
-   "pro": "OKC",
-   "game": true,
-   "inj": "ACTIVE",
-   "out": false
+   "name": "Dejounte Murray",
+   "pro": "NOP",
+   "game": false,
+   "inj": "OUT",
+   "out": true
   },
   {
    "slot": "SF",
    "cur": "SF",
-   "name": "Duncan Robinson",
-   "pro": "DET",
-   "game": true,
+   "name": "Miles Bridges",
+   "pro": "PHX",
+   "game": false,
    "inj": "ACTIVE",
    "out": false
   },
@@ -38,7 +38,7 @@
    "cur": "PF",
    "name": "Toumani Camara",
    "pro": "POR",
-   "game": true,
+   "game": false,
    "inj": "ACTIVE",
    "out": false
   },
@@ -47,35 +47,44 @@
    "cur": "C",
    "name": "Karl-Anthony Towns",
    "pro": "NYK",
-   "game": true,
+   "game": false,
    "inj": "ACTIVE",
    "out": false
   },
   {
    "slot": "G",
    "cur": "G",
-   "name": "Josh Hart",
-   "pro": "NYK",
-   "game": true,
+   "name": "Ajay Mitchell",
+   "pro": "OKC",
+   "game": false,
    "inj": "ACTIVE",
    "out": false
   },
   {
    "slot": "F",
    "cur": "F",
-   "name": "Paul Reed",
-   "pro": "DET",
-   "game": true,
+   "name": "Josh Hart",
+   "pro": "NYK",
+   "game": false,
    "inj": "ACTIVE",
    "out": false
   },
   {
    "slot": "UTIL",
    "cur": "UTIL",
-   "name": "Miles Bridges",
-   "pro": "PHX",
-   "game": true,
-   "inj": "ACTIVE",
+   "name": "Ivica Zubac",
+   "pro": "IND",
+   "game": false,
+   "inj": "OUT",
+   "out": true
+  },
+  {
+   "slot": "UTIL",
+   "cur": "UTIL",
+   "name": "Andrew Nembhard",
+   "pro": "IND",
+   "game": false,
+   "inj": "DAY_TO_DAY",
    "out": false
   },
   {
@@ -83,51 +92,42 @@
    "cur": "UTIL",
    "name": "Daniel Gafford",
    "pro": "DAL",
-   "game": true,
+   "game": false,
    "inj": "ACTIVE",
    "out": false
   },
   {
-   "slot": "UTIL",
-   "cur": "UTIL",
+   "slot": "BE",
+   "cur": "BE",
+   "name": "Paul Reed",
+   "pro": "DET",
+   "game": false,
+   "inj": "ACTIVE",
+   "out": false
+  },
+  {
+   "slot": "BE",
+   "cur": "BE",
+   "name": "Duncan Robinson",
+   "pro": "DET",
+   "game": false,
+   "inj": "ACTIVE",
+   "out": false
+  },
+  {
+   "slot": "BE",
+   "cur": "BE",
    "name": "Zaccharie Risacher",
    "pro": "DAL",
-   "game": true,
+   "game": false,
    "inj": "ACTIVE",
    "out": false
-  },
-  {
-   "slot": "BE",
-   "cur": "BE",
-   "name": "Dejounte Murray",
-   "pro": "NOP",
-   "game": true,
-   "inj": "OUT",
-   "out": true
-  },
-  {
-   "slot": "BE",
-   "cur": "BE",
-   "name": "Ivica Zubac",
-   "pro": "IND",
-   "game": true,
-   "inj": "OUT",
-   "out": true
-  },
-  {
-   "slot": "BE",
-   "cur": "BE",
-   "name": "Andrew Nembhard",
-   "pro": "IND",
-   "game": true,
-   "inj": "OUT",
-   "out": true
   }
  ],
  "ir": [
   "Kawhi Leonard"
  ],
  "irReturn": [],
- "playing": 10,
+ "playing": 0,
  "status": "planned"
 }
