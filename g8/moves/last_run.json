@@ -1,7 +1,7 @@
 {
- "planId": "20261103T0037",
+ "planId": "20261103T0047",
  "mode": "dry",
- "at": "2026-11-02T19:39-05:00",
+ "at": "2026-11-02T19:47-05:00",
  "items": [
   {
    "n": 1,
@@ -11,10 +11,10 @@
    ],
    "ok": true,
    "add": {
-    "name": "Alex Sarr",
+    "name": "Robert Williams III",
     "status": "FREEAGENT"
    },
-   "drop": "Norman Powell",
+   "drop": "Dillon Brooks",
    "ir": null
   },
   {
@@ -25,7 +25,7 @@
    ],
    "ok": true,
    "add": {
-    "name": "Kevin Porter Jr.",
+    "name": "Alex Sarr",
     "status": "FREEAGENT"
    },
    "drop": "Dillon Brooks",
@@ -42,7 +42,7 @@
     "name": "VJ Edgecombe",
     "status": "FREEAGENT"
    },
-   "drop": "Brandon Miller",
+   "drop": "Dillon Brooks",
    "ir": null
   }
  ],
