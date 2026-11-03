@@ -10,108 +10,91 @@
   "Anthony Davis",
   "James Harden",
   "Austin Reaves",
-  "Kyrie Irving",
   "Michael Porter Jr.",
   "Tyler Herro",
   "Rudy Gobert",
-  "Miles Bridges"
+  "Miles Bridges",
+  "Collin Gillespie"
  ],
  "bench": [
   "Brandon Miller",
   "Norman Powell",
-  "Collin Gillespie"
+  "Dillon Brooks"
  ],
- "dtd": [
-  "Kyrie Irving"
- ],
+ "dtd": [],
  "expected": {
-  "best": 5.645,
-  "current": 5.555,
-  "gain": 0.09,
+  "best": 5.748,
+  "current": 5.642,
+  "gain": 0.106,
   "pcBest": {
-   "FG": 0.526,
-   "FT": 0.82,
-   "TPM": 0.842,
-   "REB": 0.369,
-   "AST": 0.175,
-   "STL": 0.42,
-   "BLK": 0.53,
-   "TO": 0.5,
-   "DD": 0.4,
-   "PTS": 0.839,
-   "PF": 0.224
+   "FG": 0.411,
+   "FT": 0.756,
+   "TPM": 0.907,
+   "REB": 0.518,
+   "AST": 0.372,
+   "STL": 0.556,
+   "BLK": 0.389,
+   "TO": 0.35,
+   "DD": 0.49,
+   "PTS": 0.889,
+   "PF": 0.11
   },
   "pcCurrent": {
-   "FG": 0.504,
-   "FT": 0.814,
-   "TPM": 0.872,
-   "REB": 0.346,
-   "AST": 0.16,
-   "STL": 0.447,
-   "BLK": 0.531,
-   "TO": 0.458,
-   "DD": 0.389,
-   "PTS": 0.857,
-   "PF": 0.175
+   "FG": 0.391,
+   "FT": 0.749,
+   "TPM": 0.924,
+   "REB": 0.482,
+   "AST": 0.315,
+   "STL": 0.581,
+   "BLK": 0.39,
+   "TO": 0.353,
+   "DD": 0.473,
+   "PTS": 0.893,
+   "PF": 0.092
   }
  },
  "alternatives": [
   {
    "bench": [
-    "Austin Reaves",
-    "Brandon Miller",
-    "Norman Powell"
+    "Norman Powell",
+    "Collin Gillespie",
+    "Dillon Brooks"
    ],
-   "W": 5.624
+   "W": 5.739
   },
   {
    "bench": [
-    "Brandon Miller",
     "Tyler Herro",
-    "Norman Powell"
+    "Norman Powell",
+    "Dillon Brooks"
    ],
-   "W": 5.619
+   "W": 5.716
   },
   {
    "bench": [
-    "Kyrie Irving",
-    "Brandon Miller",
-    "Norman Powell"
+    "Norman Powell",
+    "Miles Bridges",
+    "Dillon Brooks"
    ],
-   "W": 5.615
+   "W": 5.716
   }
  ],
  "currentBench": [
-  "Kyrie Irving",
+  "Austin Reaves",
   "Miles Bridges",
-  "Collin Gillespie"
+  "Dillon Brooks"
  ],
  "sameStarters": false,
  "moves": [
   {
-   "name": "Shai Gilgeous-Alexander",
-   "from": "PG",
+   "name": "James Harden",
+   "from": "G",
    "to": "UTIL"
-  },
-  {
-   "name": "Anthony Davis",
-   "from": "PF",
-   "to": "F"
   },
   {
    "name": "Austin Reaves",
-   "from": "UTIL",
-   "to": "SG"
-  },
-  {
-   "name": "Kyrie Irving",
    "from": "BE",
-   "to": "UTIL"
-  },
-  {
-   "name": "Michael Porter Jr.",
-   "from": "SF",
-   "to": "PF"
+   "to": "G"
   },
   {
    "name": "Brandon Miller",
@@ -121,7 +104,7 @@
   {
    "name": "Tyler Herro",
    "from": "UTIL",
-   "to": "PG"
+   "to": "SG"
   },
   {
    "name": "Norman Powell",
@@ -131,24 +114,24 @@
   {
    "name": "Miles Bridges",
    "from": "BE",
-   "to": "SF"
+   "to": "F"
   }
  ],
  "slots": [
   {
-   "name": "Tyler Herro",
+   "name": "Shai Gilgeous-Alexander",
    "slot": "PG"
   },
   {
-   "name": "Austin Reaves",
+   "name": "Tyler Herro",
    "slot": "SG"
   },
   {
-   "name": "Miles Bridges",
+   "name": "Michael Porter Jr.",
    "slot": "SF"
   },
   {
-   "name": "Michael Porter Jr.",
+   "name": "Anthony Davis",
    "slot": "PF"
   },
   {
@@ -156,23 +139,23 @@
    "slot": "C"
   },
   {
-   "name": "James Harden",
+   "name": "Austin Reaves",
    "slot": "G"
   },
   {
-   "name": "Anthony Davis",
+   "name": "Miles Bridges",
    "slot": "F"
   },
   {
-   "name": "Shai Gilgeous-Alexander",
-   "slot": "UTIL"
-  },
-  {
-   "name": "Kyrie Irving",
+   "name": "James Harden",
    "slot": "UTIL"
   },
   {
    "name": "Rudy Gobert",
+   "slot": "UTIL"
+  },
+  {
+   "name": "Collin Gillespie",
    "slot": "UTIL"
   },
   {
@@ -184,10 +167,10 @@
    "slot": "BE"
   },
   {
-   "name": "Collin Gillespie",
+   "name": "Dillon Brooks",
    "slot": "BE"
   }
  ],
- "id": "2026-11-04T0025Z",
- "createdAt": "2026-11-03T00:25:08.123Z"
+ "id": "2026-11-04T0026Z",
+ "createdAt": "2026-11-03T00:26:26.167Z"
 }
