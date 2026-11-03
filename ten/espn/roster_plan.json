@@ -1,31 +1,27 @@
 {
- "createdKST": "2026-11-03T10:02+09:00",
+ "createdKST": "2026-11-03T10:03+09:00",
  "mode": "plan",
  "spid": 14,
  "matchupPeriod": 3,
- "add": {
-  "id": 3934719,
-  "name": "OG Anunoby",
-  "status": "WAIVERS",
-  "pro": "NYK",
-  "inj": "ACTIVE"
- },
- "type": "WAIVER",
- "limits": {
-  "season": "11/70",
-  "matchup": "1/7"
- },
- "drop": {
-  "id": 4395712,
-  "name": "Andrew Nembhard",
-  "slot": 12,
+ "activate": {
+  "id": 6450,
+  "name": "Kawhi Leonard",
+  "slot": 13,
   "inj": "OUT"
  },
- "hash": "376f9da43c",
- "errors": [],
+ "drop": {
+  "id": 3062679,
+  "name": "Josh Hart",
+  "slot": 5,
+  "inj": "ACTIVE"
+ },
+ "hash": "2ae69b3997",
+ "errors": [
+  "Josh Hart은(는) 상위 10명 고정(core) — 사용자 규칙상 방출 불가(사용자가 명시하면 ALLOW_CORE=1)"
+ ],
  "warnings": [
-  "OG Anunoby은(는) 웨이버 상태 — 즉시 영입이 아니라 웨이버 신청(ESPN 처리 시각 8시, 순번 우선)",
+  "Kawhi Leonard ESPN 상태가 아직 OUT — 복귀시키면 결장 선수가 활성 로스터를 차지",
   "방출 선수는 24시간 웨이버 — 그 사이 다른 팀이 데려갈 수 있어 되돌릴 수 없음"
  ],
- "status": "planned"
+ "status": "invalid"
 }
