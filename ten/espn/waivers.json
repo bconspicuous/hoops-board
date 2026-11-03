@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-03T10:09+09:00",
+ "asOf": "2026-11-03T10:20+09:00",
  "scoringPeriodId": 14,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -87,7 +87,7 @@
    "type": "WAIVER",
    "status": "PENDING",
    "proposed": "2026-11-03 06:32 KST",
-   "processed": "2026-11-04 17:00 KST",
+   "processed": null,
    "items": [
     {
      "type": "ADD",
@@ -130,6 +130,30 @@
   }
  ],
  "transactions": [
+  {
+   "id": "b773a06b-16af-461e-acf6-d08850f5ba01",
+   "team": "GTD",
+   "mine": true,
+   "type": "WAIVER",
+   "status": "CANCELED",
+   "proposed": "2026-11-03 10:13 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "OG Anunoby",
+     "from": "FA",
+     "to": "GTD"
+    },
+    {
+     "type": "DROP",
+     "player": "Paul Reed",
+     "from": "GTD",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
   {
    "id": "33c35295-65a7-4605-8d51-59eade3c9667",
    "team": "KOO",
@@ -185,7 +209,7 @@
    "type": "WAIVER",
    "status": "PENDING",
    "proposed": "2026-11-03 06:32 KST",
-   "processed": "2026-11-04 17:00 KST",
+   "processed": null,
    "items": [
     {
      "type": "ADD",

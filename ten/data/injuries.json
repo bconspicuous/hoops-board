@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-03T10:09+09:00",
+ "asOf": "2026-11-03T10:20+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -282,20 +282,6 @@
    "fantasyStatus": "OUT",
    "short": "Jones (hamstring) is listed as out for Monday's game against the Trail Blazers.",
    "long": "Jones has yet to play during the 2026-27 campaign after suffering a hamstring injury during the preseason. He should be considered day-to-day, meaning his next opportunity to get on the floor will come Wednesday versus Toronto."
-  },
-  {
-   "player": "Alpha Diallo",
-   "team": "DEN",
-   "status": "Out",
-   "date": "2026-11-01T23:52Z",
-   "type": "out",
-   "returnDate": "2026-11-02",
-   "detail": "Sprain",
-   "side": "Right",
-   "injury": "Wrist",
-   "fantasyStatus": "GTD",
-   "short": "Diallo (wrist) is listed as questionable for Monday's game versus Portland.",
-   "long": "Diallo made his only appearance of the 2026-27 campaign in the 96-84 Opening Night loss to Oklahoma City. Since then, he has missed the Nuggets' last four games. While the personal issue that contributed to his absence has seemingly been resolved, a right wrist sprain may keep him off the floor for the fifth time this season."
   },
   {
    "player": "Julian Strawther",
