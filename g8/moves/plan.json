@@ -6,10 +6,10 @@
   "Dillon Brooks"
  ],
  "base": {
-  "wk": 5.018,
-  "champ": 0.0597,
-  "p1": 0.0214,
-  "epct": 0.5172
+  "wk": 4.965,
+  "champ": 0.0588,
+  "p1": 0.0215,
+  "epct": 0.5169
  },
  "protect": [
   "Shai Gilgeous-Alexander",
@@ -41,9 +41,9 @@
    "addOwner": "FA",
    "drop": "Dillon Brooks",
    "ir": null,
-   "weekGain": 0.481,
-   "titleGain": 0.1099,
-   "p1Gain": 0.11,
+   "weekGain": 0.434,
+   "titleGain": 0.1139,
+   "p1Gain": 0.1102,
    "epctGain": 0.0307,
    "addTeam": "POR",
    "addPos": "C",
@@ -66,52 +66,22 @@
   {
    "n": 2,
    "kind": "add/drop",
-   "add": "Tobias Harris",
-   "addEspnId": 6440,
-   "addOwner": "FA",
-   "drop": "Dillon Brooks",
-   "ir": null,
-   "weekGain": 0.254,
-   "titleGain": 0.0367,
-   "p1Gain": 0.0319,
-   "epctGain": 0.013,
-   "addTeam": "SAS",
-   "addPos": "SF,PF",
-   "dropValue": -5.68,
-   "status": "rejected",
-   "conflicts": [
-    1,
-    3
-   ],
-   "addHealth": {
-    "status": "O",
-    "injury": "Calf",
-    "returnDate": "2026-11-06",
-    "report": "Harris (calf) is listed as out for Saturday's game against Minnesota.",
-    "g": null,
-    "min": null
-   },
-   "firstProposedAt": "2026-11-03T10:13:08.421Z"
-  },
-  {
-   "n": 3,
-   "kind": "add/drop",
    "add": "Saddiq Bey",
    "addEspnId": 4397136,
    "addOwner": "FA",
    "drop": "Dillon Brooks",
    "ir": null,
-   "weekGain": 0.3,
-   "titleGain": 0.0237,
-   "p1Gain": 0.0248,
-   "epctGain": 0.0123,
+   "weekGain": 0.28,
+   "titleGain": 0.0238,
+   "p1Gain": 0.0269,
+   "epctGain": 0.0132,
    "addTeam": "NOR",
    "addPos": "SF,PF",
    "dropValue": -5.68,
    "status": "proposed",
    "conflicts": [
     1,
-    2
+    3
    ],
    "addHealth": {
     "status": "정상",
@@ -124,14 +94,44 @@
    "firstProposedAt": "2026-11-03T13:55:17.880Z"
   },
   {
+   "n": 3,
+   "kind": "add/drop",
+   "add": "Precious Achiuwa",
+   "addEspnId": 4431679,
+   "addOwner": "FA",
+   "drop": "Dillon Brooks",
+   "ir": null,
+   "weekGain": 0.307,
+   "titleGain": 0.0154,
+   "p1Gain": 0.0163,
+   "epctGain": 0.0073,
+   "addTeam": "SAC",
+   "addPos": "PF,C",
+   "dropValue": -5.68,
+   "status": "proposed",
+   "conflicts": [
+    1,
+    2
+   ],
+   "addHealth": {
+    "status": "정상",
+    "injury": null,
+    "returnDate": null,
+    "report": null,
+    "g": 7,
+    "min": 28.7
+   },
+   "firstProposedAt": "2026-11-03T20:47:20.397Z"
+  },
+  {
    "n": 4,
    "kind": "activate",
    "ir": "Kyrie Irving",
    "drop": "Dillon Brooks",
    "weekGain": 0.166,
-   "titleGain": 0.0475,
-   "p1Gain": 0.0604,
-   "epctGain": 0.0208,
+   "titleGain": 0.0491,
+   "p1Gain": 0.0639,
+   "epctGain": 0.0219,
    "dropValue": -5.68,
    "status": "rejected",
    "note": "IR 복귀(상태 DTD)",
@@ -152,47 +152,49 @@
    "add": "Robert Williams III",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.481,
-   "title": 0.1099
-  },
-  {
-   "add": "Tobias Harris",
-   "drop": "Dillon Brooks",
-   "ir": null,
-   "wk": 0.254,
-   "title": 0.0367
+   "wk": 0.434,
+   "title": 0.1139
   },
   {
    "add": "Saddiq Bey",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.3,
-   "title": 0.0237
+   "wk": 0.28,
+   "title": 0.0238
   },
   {
    "add": "Precious Achiuwa",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.324,
-   "title": 0.0142
+   "wk": 0.307,
+   "title": 0.0154
   },
   {
    "add": "Derik Queen",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.27,
-   "title": 0.019
+   "wk": 0.246,
+   "title": 0.0197
   },
   {
    "add": "Alex Caruso",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.327,
-   "title": 0.0092
+   "wk": 0.302,
+   "title": 0.0113
+  },
+  {
+   "add": "Santi Aldama",
+   "drop": "Dillon Brooks",
+   "ir": null,
+   "wk": 0.234,
+   "title": 0.0031
   }
  ],
- "createdAt": "2026-11-03T14:43:48.596Z",
- "id": "20261103T1443",
+ "createdAt": "2026-11-03T20:47:20.397Z",
+ "id": "20261103T2047",
  "rosterSig": "Anthony Davis|Austin Reaves|Brandon Miller|Collin Gillespie|Dillon Brooks|James Harden|Karl-Anthony Towns|Michael Porter Jr.|Miles Bridges|Norman Powell|Rudy Gobert|Shai Gilgeous-Alexander|Tyler Herro#Kyrie Irving",
- "newItems": []
+ "newItems": [
+  3
+ ]
 }
