@@ -7,8 +7,8 @@
  ],
  "base": {
   "wk": 4.878,
-  "champ": 0.0636,
-  "p1": 0.0423,
+  "champ": 0.063,
+  "p1": 0.0416,
   "epct": 0.5103
  },
  "protect": [
@@ -42,8 +42,8 @@
    "drop": "Dillon Brooks",
    "ir": null,
    "weekGain": 0.366,
-   "titleGain": 0.133,
-   "p1Gain": 0.1473,
+   "titleGain": 0.1338,
+   "p1Gain": 0.1495,
    "epctGain": 0.028,
    "addTeam": "POR",
    "addPos": "C",
@@ -72,8 +72,8 @@
    "drop": "Dillon Brooks",
    "ir": null,
    "weekGain": 0.186,
-   "titleGain": 0.0669,
-   "p1Gain": 0.0867,
+   "titleGain": 0.0675,
+   "p1Gain": 0.0881,
    "epctGain": 0.0197,
    "addTeam": "POR",
    "addPos": "PG,SG",
@@ -102,8 +102,8 @@
    "drop": "Dillon Brooks",
    "ir": null,
    "weekGain": 0.208,
-   "titleGain": 0.0255,
-   "p1Gain": 0.0267,
+   "titleGain": 0.0261,
+   "p1Gain": 0.0272,
    "epctGain": 0.0077,
    "addTeam": "DAL",
    "addPos": "SF,PF",
@@ -117,7 +117,7 @@
     "status": "O",
     "injury": "Knee",
     "returnDate": "2026-11-04",
-    "report": "Aldama (knee) is questionable for Wednesday's game against the Spurs.",
+    "report": "Aldama (knee) is doubtful for Wednesday's game against the Spurs, per NBA reporter Marc Stein.",
     "g": null,
     "min": null
    },
@@ -129,8 +129,8 @@
    "ir": "Kyrie Irving",
    "drop": "Dillon Brooks",
    "weekGain": 0.252,
-   "titleGain": 0.0443,
-   "p1Gain": 0.057,
+   "titleGain": 0.0446,
+   "p1Gain": 0.0577,
    "epctGain": 0.0145,
    "dropValue": -5.68,
    "status": "rejected",
@@ -153,48 +153,46 @@
    "drop": "Dillon Brooks",
    "ir": null,
    "wk": 0.366,
-   "title": 0.133
+   "title": 0.1338
   },
   {
    "add": "Jrue Holiday",
    "drop": "Dillon Brooks",
    "ir": null,
    "wk": 0.186,
-   "title": 0.0669
+   "title": 0.0675
   },
   {
    "add": "Santi Aldama",
    "drop": "Dillon Brooks",
    "ir": null,
    "wk": 0.208,
-   "title": 0.0255
+   "title": 0.0261
   },
   {
    "add": "Derik Queen",
    "drop": "Dillon Brooks",
    "ir": null,
    "wk": 0.215,
-   "title": 0.0218
+   "title": 0.0221
   },
   {
    "add": "Alex Caruso",
    "drop": "Dillon Brooks",
    "ir": null,
    "wk": 0.255,
-   "title": 0.0166
+   "title": 0.0158
   },
   {
    "add": "Jaime Jaquez Jr.",
    "drop": "Dillon Brooks",
    "ir": null,
    "wk": 0.217,
-   "title": 0.0125
+   "title": 0.0128
   }
  ],
- "createdAt": "2026-11-04T14:43:57.259Z",
- "id": "20261104T1443",
+ "createdAt": "2026-11-04T20:43:35.086Z",
+ "id": "20261104T2043",
  "rosterSig": "Anthony Davis|Austin Reaves|Brandon Miller|Collin Gillespie|Dillon Brooks|James Harden|Karl-Anthony Towns|Michael Porter Jr.|Miles Bridges|Norman Powell|Rudy Gobert|Shai Gilgeous-Alexander|Tyler Herro#Kyrie Irving",
- "newItems": [
-  3
- ]
+ "newItems": []
 }
