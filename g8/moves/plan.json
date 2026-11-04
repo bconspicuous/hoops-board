@@ -6,10 +6,10 @@
   "Dillon Brooks"
  ],
  "base": {
-  "wk": 4.965,
-  "champ": 0.0588,
-  "p1": 0.0215,
-  "epct": 0.5169
+  "wk": 4.88,
+  "champ": 0.06,
+  "p1": 0.0349,
+  "epct": 0.5181
  },
  "protect": [
   "Shai Gilgeous-Alexander",
@@ -28,7 +28,7 @@
   {
    "kind": "ir-ineligible",
    "player": "Kyrie Irving",
-   "status": "DTD",
+   "status": "정상",
    "note": "IR 선수가 O가 아님 — ESPN이 영입을 막을 수 있음(감독 판단: DTD는 영입 가능). 첫 사례에서 실제 동작을 기록"
   }
  ],
@@ -41,10 +41,10 @@
    "addOwner": "FA",
    "drop": "Dillon Brooks",
    "ir": null,
-   "weekGain": 0.434,
-   "titleGain": 0.1139,
-   "p1Gain": 0.1102,
-   "epctGain": 0.0307,
+   "weekGain": 0.348,
+   "titleGain": 0.127,
+   "p1Gain": 0.126,
+   "epctGain": 0.0291,
    "addTeam": "POR",
    "addPos": "C",
    "dropValue": -5.68,
@@ -71,10 +71,10 @@
    "addOwner": "FA",
    "drop": "Dillon Brooks",
    "ir": null,
-   "weekGain": 0.28,
-   "titleGain": 0.0238,
-   "p1Gain": 0.0269,
-   "epctGain": 0.0132,
+   "weekGain": 0.245,
+   "titleGain": 0.0219,
+   "p1Gain": 0.0171,
+   "epctGain": 0.0081,
    "addTeam": "NOR",
    "addPos": "SF,PF",
    "dropValue": -5.68,
@@ -96,16 +96,16 @@
   {
    "n": 3,
    "kind": "add/drop",
-   "add": "Precious Achiuwa",
-   "addEspnId": 4431679,
+   "add": "Derik Queen",
+   "addEspnId": 4869780,
    "addOwner": "FA",
    "drop": "Dillon Brooks",
    "ir": null,
-   "weekGain": 0.307,
-   "titleGain": 0.0154,
-   "p1Gain": 0.0163,
-   "epctGain": 0.0073,
-   "addTeam": "SAC",
+   "weekGain": 0.21,
+   "titleGain": 0.0214,
+   "p1Gain": 0.0115,
+   "epctGain": 0.0048,
+   "addTeam": "NOR",
    "addPos": "PF,C",
    "dropValue": -5.68,
    "status": "proposed",
@@ -119,28 +119,28 @@
     "returnDate": null,
     "report": null,
     "g": 7,
-    "min": 28.7
+    "min": 23.7
    },
-   "firstProposedAt": "2026-11-03T20:47:20.397Z"
+   "firstProposedAt": "2026-11-04T02:43:40.289Z"
   },
   {
    "n": 4,
    "kind": "activate",
    "ir": "Kyrie Irving",
    "drop": "Dillon Brooks",
-   "weekGain": 0.166,
-   "titleGain": 0.0491,
-   "p1Gain": 0.0639,
-   "epctGain": 0.0219,
+   "weekGain": 0.263,
+   "titleGain": 0.0523,
+   "p1Gain": 0.0601,
+   "epctGain": 0.0184,
    "dropValue": -5.68,
    "status": "rejected",
-   "note": "IR 복귀(상태 DTD)",
+   "note": "IR 복귀(상태 정상)",
    "addHealth": null,
    "irHealth": {
-    "status": "DTD",
-    "injury": "Knee",
-    "returnDate": "2026-11-04",
-    "report": "Irving (knee) has been ruled out for Monday's game against the Kings.",
+    "status": "정상",
+    "injury": null,
+    "returnDate": null,
+    "report": null,
     "g": 5,
     "min": 28.8
    },
@@ -152,47 +152,47 @@
    "add": "Robert Williams III",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.434,
-   "title": 0.1139
+   "wk": 0.348,
+   "title": 0.127
   },
   {
    "add": "Saddiq Bey",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.28,
-   "title": 0.0238
-  },
-  {
-   "add": "Precious Achiuwa",
-   "drop": "Dillon Brooks",
-   "ir": null,
-   "wk": 0.307,
-   "title": 0.0154
+   "wk": 0.245,
+   "title": 0.0219
   },
   {
    "add": "Derik Queen",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.246,
-   "title": 0.0197
+   "wk": 0.21,
+   "title": 0.0214
+  },
+  {
+   "add": "Jaime Jaquez Jr.",
+   "drop": "Dillon Brooks",
+   "ir": null,
+   "wk": 0.21,
+   "title": 0.0113
   },
   {
    "add": "Alex Caruso",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.302,
-   "title": 0.0113
+   "wk": 0.243,
+   "title": 0.0041
   },
   {
    "add": "Santi Aldama",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.234,
-   "title": 0.0031
+   "wk": 0.199,
+   "title": 0.0043
   }
  ],
- "createdAt": "2026-11-03T20:47:20.397Z",
- "id": "20261103T2047",
+ "createdAt": "2026-11-04T02:43:40.289Z",
+ "id": "20261104T0243",
  "rosterSig": "Anthony Davis|Austin Reaves|Brandon Miller|Collin Gillespie|Dillon Brooks|James Harden|Karl-Anthony Towns|Michael Porter Jr.|Miles Bridges|Norman Powell|Rudy Gobert|Shai Gilgeous-Alexander|Tyler Herro#Kyrie Irving",
  "newItems": [
   3
