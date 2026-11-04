@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-05T05:06+09:00",
+ "asOf": "2026-11-05T06:44+09:00",
  "scoringPeriodId": 16,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -203,30 +203,6 @@
    "bid": 0
   },
   {
-   "id": "5eb331e1-7758-4184-8ac2-1f6838e5de2d",
-   "team": "JYP",
-   "mine": false,
-   "type": "WAIVER",
-   "status": "EXECUTED",
-   "proposed": "2026-11-04 17:03 KST",
-   "processed": "2026-11-04 17:03 KST",
-   "items": [
-    {
-     "type": "ADD",
-     "player": "OG Anunoby",
-     "from": "FA",
-     "to": "JYP"
-    },
-    {
-     "type": "DROP",
-     "player": "Tobias Harris",
-     "from": "JYP",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
    "id": "0997aebd-4b0d-4f5c-a42b-53bc92951ec9",
    "team": "TBG",
    "mine": false,
@@ -269,6 +245,30 @@
      "type": "DROP",
      "player": "Payton Pritchard",
      "from": "IYH",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "5eb331e1-7758-4184-8ac2-1f6838e5de2d",
+   "team": "JYP",
+   "mine": false,
+   "type": "WAIVER",
+   "status": "EXECUTED",
+   "proposed": "2026-11-04 17:03 KST",
+   "processed": "2026-11-04 17:03 KST",
+   "items": [
+    {
+     "type": "ADD",
+     "player": "OG Anunoby",
+     "from": "FA",
+     "to": "JYP"
+    },
+    {
+     "type": "DROP",
+     "player": "Tobias Harris",
+     "from": "JYP",
      "to": "FA"
     }
    ],

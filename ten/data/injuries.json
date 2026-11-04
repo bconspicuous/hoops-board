@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-05T05:06+09:00",
+ "asOf": "2026-11-05T06:44+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -578,6 +578,20 @@
    "long": "Given the tricky nature of hamstring injuries, the Pacers will likely take their time bringing Haliburton back to the court, so don't be surprised if his absence extends beyond this two-week window. Andrew Nembhard (neck) and Pascal Siakam should each get a usage bump as they take over more of the playmaking duties sans Haliburton and there will be more minutes available for Quenton Jackson."
   },
   {
+   "player": "Isaiah Jackson",
+   "team": "LAC",
+   "status": "Day-To-Day",
+   "date": "2026-11-04T20:11Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-04",
+   "detail": null,
+   "side": null,
+   "injury": "Groin",
+   "fantasyStatus": "GTD",
+   "short": "Jackson is questionable for Wednesday's game against the Heat with left groin soreness, per Law Murray of The Athletic.",
+   "long": "Jackson is a late addition to the injury report, which is a bad sign for his chances of playing Wednesday. If Jackson is ultimately downgraded to out, Brook Lopez would likely remain in the starting center position for the Clippers."
+  },
+  {
    "player": "Yanic Konan Niederhauser",
    "team": "LAC",
    "status": "Out",
@@ -984,6 +998,20 @@
    "long": "Hukporti went down with an Achilles injury in Monday's preseason opener against the Knicks, and an MRI has since revealed a rupture. He signed a one-year deal with the 76ers over the summer, so Hukporti will be an unrestricted free agent come season's end. With Hukporti's year already finished, Adem Bona (foot) should assume the backup center role behind Joel Embiid once healthy."
   },
   {
+   "player": "Rasheer Fleming",
+   "team": "PHX",
+   "status": "Out",
+   "date": "2026-11-04T20:17Z",
+   "type": "out",
+   "returnDate": "2026-11-05",
+   "detail": "Sprain",
+   "side": "Left",
+   "injury": "Ankle",
+   "fantasyStatus": "OUT",
+   "short": "Fleming is out for Wednesday's game against the Trail Blazers due to a sprained left ankle.",
+   "long": "Fleming is missing the front end of this back-to-back set with the injury. His next opportunity to suit up arrives Thursday, when the Suns host the Magic."
+  },
+  {
    "player": "Jordan Goodwin",
    "team": "PHX",
    "status": "Day-To-Day",
@@ -996,20 +1024,6 @@
    "fantasyStatus": "GTD",
    "short": "Goodwin (calf) is questionable for Wednesday's game against Portland, Duane Rankin of The Arizona Republic reports.",
    "long": "Goodwin sustained a left calf injury in Monday's 116-113 loss to Golden State, ending his night after just 10 minutes. If Goodwin is sidelined Wednesday, Luke Kennard should see more action."
-  },
-  {
-   "player": "Rasheer Fleming",
-   "team": "PHX",
-   "status": "Day-To-Day",
-   "date": "2026-11-04T00:19Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-04",
-   "detail": "Sprain",
-   "side": "Left",
-   "injury": "Ankle",
-   "fantasyStatus": "GTD",
-   "short": "Fleming is questionable for Wednesday's game against the Trail Blazers due to a sprained left ankle, Duane Rankin of The Arizona Republic reports.",
-   "long": "Fleming must have tweaked his ankle at practice because he's been out of the rotation the past two games. The Suns will update his status closer to Wednesday's tip."
   },
   {
    "player": "Mark Williams",
@@ -1054,18 +1068,18 @@
    "long": "It's a tough blow to the Trail Blazers' depth on the wing ahead of training camp. Sharpe, who is now likely to be sidelined until after the All-Star break, had been ticketed for a reserve role behind Toumani Camara following an injury-plagued 2025-26 campaign, which saw average a career-high 20.8 points, 1.4 steals and 2.1 three-pointers per game over 50 regular-season appearances. The door is now open for Vit Krejci and Jeremy Sochan to compete for bench minutes during camp."
   },
   {
-   "player": "Precious Achiuwa",
+   "player": "Daeqwon Plowden",
    "team": "SAC",
-   "status": "Day-To-Day",
-   "date": "2026-11-04T00:36Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-04",
-   "detail": "Soreness",
-   "side": "Left",
-   "injury": "Ankle",
-   "fantasyStatus": "GTD",
-   "short": "Achiuwa (ankle) is listed as probable for Wednesday's game against the Lakers.",
-   "long": "Achiuwa is currently bothered by left ankle soreness, though it doesn't appear as if it will be enough to keep him off the floor against Los Angeles. The 27-year-old has played well in his seven regular-season appearances in 2026-27, averaging 11.6 points and 1.9 steals, both career highs, along with 6.6 rebounds, 1.3 assists and 1.0 blocks over 28.6 minutes per contest."
+   "status": "Out",
+   "date": "2026-11-04T21:04Z",
+   "type": "out",
+   "returnDate": "2026-11-06",
+   "detail": null,
+   "side": null,
+   "injury": "Illness",
+   "fantasyStatus": "OUT",
+   "short": "Plowden (illness) is out for Wednesday's game against the Lakers.",
+   "long": "Plowden is under the weather and can be considered day-to-day. Dylan Cardwell's (calf) season debut is coming at an opportune time for the Kings on Wednesday."
   },
   {
    "player": "Maxime Raynaud",
@@ -1248,20 +1262,6 @@
    "fantasyStatus": "GTD",
    "short": "Coulibaly (illness) is questionable for Wednesday against the Hawks.",
    "long": "Coulibaly was a late addition to the injury report after waking up under the weather. If the Wizards end up holding Coulibaly out, the team could turn to Khris Middleton and/or Will Riley."
-  },
-  {
-   "player": "Anthony Gill",
-   "team": "WSH",
-   "status": "Day-To-Day",
-   "date": "2026-11-03T21:49Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-04",
-   "detail": "Spasms",
-   "side": null,
-   "injury": "Back",
-   "fantasyStatus": "GTD",
-   "short": "Gill (back) is questionable for Wednesday against the Hawks.",
-   "long": "Gill's availability is uncertain as Washington deals with multiple injuries in its frontcourt. Gill's status should become clearer closer to tipoff, though he remains a limited fantasy option even if cleared to play."
   },
   {
    "player": "Alex Sarr",
