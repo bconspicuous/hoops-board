@@ -1,7 +1,7 @@
 {
- "planId": "20261104T0243",
+ "planId": "20261104T0542",
  "mode": "dry",
- "at": "2026-11-03T21:44-05:00",
+ "at": "2026-11-04T00:43-05:00",
  "items": [
   {
    "n": 1,
@@ -25,7 +25,7 @@
    ],
    "ok": true,
    "add": {
-    "name": "Saddiq Bey",
+    "name": "Jrue Holiday",
     "status": "FREEAGENT"
    },
    "drop": "Dillon Brooks",
