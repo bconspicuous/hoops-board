@@ -6,10 +6,10 @@
   "Dillon Brooks"
  ],
  "base": {
-  "wk": 4.88,
-  "champ": 0.06,
-  "p1": 0.0349,
-  "epct": 0.5181
+  "wk": 4.878,
+  "champ": 0.0491,
+  "p1": 0.0207,
+  "epct": 0.51
  },
  "protect": [
   "Shai Gilgeous-Alexander",
@@ -41,10 +41,10 @@
    "addOwner": "FA",
    "drop": "Dillon Brooks",
    "ir": null,
-   "weekGain": 0.348,
-   "titleGain": 0.127,
-   "p1Gain": 0.126,
-   "epctGain": 0.0291,
+   "weekGain": 0.366,
+   "titleGain": 0.1261,
+   "p1Gain": 0.0941,
+   "epctGain": 0.0268,
    "addTeam": "POR",
    "addPos": "C",
    "dropValue": -5.68,
@@ -66,17 +66,17 @@
   {
    "n": 2,
    "kind": "add/drop",
-   "add": "Saddiq Bey",
-   "addEspnId": 4397136,
+   "add": "Jrue Holiday",
+   "addEspnId": 3995,
    "addOwner": "FA",
    "drop": "Dillon Brooks",
    "ir": null,
-   "weekGain": 0.245,
-   "titleGain": 0.0219,
-   "p1Gain": 0.0171,
-   "epctGain": 0.0081,
-   "addTeam": "NOR",
-   "addPos": "SF,PF",
+   "weekGain": 0.186,
+   "titleGain": 0.0487,
+   "p1Gain": 0.0502,
+   "epctGain": 0.0183,
+   "addTeam": "POR",
+   "addPos": "PG,SG",
    "dropValue": -5.68,
    "status": "proposed",
    "conflicts": [
@@ -88,10 +88,10 @@
     "injury": null,
     "returnDate": null,
     "report": null,
-    "g": 7,
-    "min": 26.1
+    "g": 6,
+    "min": 25.7
    },
-   "firstProposedAt": "2026-11-03T13:55:17.880Z"
+   "firstProposedAt": "2026-11-04T05:42:49.316Z"
   },
   {
    "n": 3,
@@ -101,10 +101,10 @@
    "addOwner": "FA",
    "drop": "Dillon Brooks",
    "ir": null,
-   "weekGain": 0.21,
-   "titleGain": 0.0214,
-   "p1Gain": 0.0115,
-   "epctGain": 0.0048,
+   "weekGain": 0.215,
+   "titleGain": 0.0207,
+   "p1Gain": 0.0087,
+   "epctGain": 0.0057,
    "addTeam": "NOR",
    "addPos": "PF,C",
    "dropValue": -5.68,
@@ -128,10 +128,10 @@
    "kind": "activate",
    "ir": "Kyrie Irving",
    "drop": "Dillon Brooks",
-   "weekGain": 0.263,
-   "titleGain": 0.0523,
-   "p1Gain": 0.0601,
-   "epctGain": 0.0184,
+   "weekGain": 0.252,
+   "titleGain": 0.0347,
+   "p1Gain": 0.0338,
+   "epctGain": 0.0144,
    "dropValue": -5.68,
    "status": "rejected",
    "note": "IR 복귀(상태 정상)",
@@ -152,49 +152,49 @@
    "add": "Robert Williams III",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.348,
-   "title": 0.127
+   "wk": 0.366,
+   "title": 0.1261
   },
   {
-   "add": "Saddiq Bey",
+   "add": "Jrue Holiday",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.245,
-   "title": 0.0219
+   "wk": 0.186,
+   "title": 0.0487
   },
   {
    "add": "Derik Queen",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.21,
-   "title": 0.0214
-  },
-  {
-   "add": "Jaime Jaquez Jr.",
-   "drop": "Dillon Brooks",
-   "ir": null,
-   "wk": 0.21,
-   "title": 0.0113
+   "wk": 0.215,
+   "title": 0.0207
   },
   {
    "add": "Alex Caruso",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.243,
-   "title": 0.0041
+   "wk": 0.255,
+   "title": 0.0145
   },
   {
    "add": "Santi Aldama",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.199,
-   "title": 0.0043
+   "wk": 0.208,
+   "title": 0.0178
+  },
+  {
+   "add": "Jaime Jaquez Jr.",
+   "drop": "Dillon Brooks",
+   "ir": null,
+   "wk": 0.217,
+   "title": 0.0102
   }
  ],
- "createdAt": "2026-11-04T02:43:40.289Z",
- "id": "20261104T0243",
+ "createdAt": "2026-11-04T05:42:49.316Z",
+ "id": "20261104T0542",
  "rosterSig": "Anthony Davis|Austin Reaves|Brandon Miller|Collin Gillespie|Dillon Brooks|James Harden|Karl-Anthony Towns|Michael Porter Jr.|Miles Bridges|Norman Powell|Rudy Gobert|Shai Gilgeous-Alexander|Tyler Herro#Kyrie Irving",
  "newItems": [
-  3
+  2
  ]
 }
