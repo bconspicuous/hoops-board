@@ -1,35 +1,84 @@
 {
- "date": "2026-11-03",
- "scoringPeriodId": 15,
- "hash": "c9665e482b",
- "createdKST": "2026-11-04T13:48+09:00",
+ "date": "2026-11-04",
+ "scoringPeriodId": 16,
+ "hash": "f2e8d293e4",
+ "createdKST": "2026-11-04T19:51+09:00",
  "mode": "plan",
- "moves": [],
+ "moves": [
+  {
+   "playerId": 4017837,
+   "name": "Ivica Zubac",
+   "from": 11,
+   "to": 12,
+   "fromSlot": "UTIL",
+   "toSlot": "BE"
+  },
+  {
+   "playerId": 3062679,
+   "name": "Josh Hart",
+   "from": 12,
+   "to": 1,
+   "fromSlot": "BE",
+   "toSlot": "SG"
+  },
+  {
+   "playerId": 4900671,
+   "name": "Ajay Mitchell",
+   "from": 5,
+   "to": 11,
+   "fromSlot": "G",
+   "toSlot": "UTIL"
+  },
+  {
+   "playerId": 4431736,
+   "name": "Toumani Camara",
+   "from": 6,
+   "to": 12,
+   "fromSlot": "F",
+   "toSlot": "BE"
+  },
+  {
+   "playerId": 3157465,
+   "name": "Duncan Robinson",
+   "from": 1,
+   "to": 6,
+   "fromSlot": "SG",
+   "toSlot": "F"
+  },
+  {
+   "playerId": 4395712,
+   "name": "Andrew Nembhard",
+   "from": 12,
+   "to": 5,
+   "fromSlot": "BE",
+   "toSlot": "G"
+  }
+ ],
  "lineup": [
   {
    "slot": "PG",
    "cur": "PG",
    "name": "Donovan Mitchell",
    "pro": "CLE",
-   "game": false,
+   "game": true,
    "inj": "ACTIVE",
    "out": false
   },
   {
    "slot": "SG",
-   "cur": "SG",
-   "name": "Duncan Robinson",
-   "pro": "DET",
-   "game": false,
-   "inj": "ACTIVE",
+   "cur": "BE",
+   "name": "Josh Hart",
+   "pro": "NYK",
+   "game": true,
+   "inj": "DAY_TO_DAY",
    "out": false
   },
   {
    "slot": "SF",
    "cur": "SF",
-   "name": "Toumani Camara",
-   "pro": "POR",
-   "game": false,
+   "name": "Miles Bridges",
+   "pro": "PHX",
+   "game": true,
    "inj": "ACTIVE",
    "out": false
   },
@@ -38,7 +87,7 @@
    "cur": "PF",
    "name": "Paul Reed",
    "pro": "DET",
-   "game": false,
+   "game": true,
    "inj": "ACTIVE",
    "out": false
   },
@@ -47,34 +96,43 @@
    "cur": "C",
    "name": "Karl-Anthony Towns",
    "pro": "NYK",
-   "game": false,
+   "game": true,
    "inj": "ACTIVE",
    "out": false
   },
   {
    "slot": "G",
-   "cur": "G",
-   "name": "Ajay Mitchell",
-   "pro": "OKC",
-   "game": false,
+   "cur": "BE",
+   "name": "Andrew Nembhard",
+   "pro": "IND",
+   "game": true,
    "inj": "ACTIVE",
    "out": false
   },
   {
    "slot": "F",
-   "cur": "F",
-   "name": "Josh Hart",
-   "pro": "NYK",
-   "game": false,
-   "inj": "DAY_TO_DAY",
+   "cur": "SG",
+   "name": "Duncan Robinson",
+   "pro": "DET",
+   "game": true,
+   "inj": "ACTIVE",
    "out": false
   },
   {
    "slot": "UTIL",
    "cur": "UTIL",
-   "name": "Andrew Nembhard",
-   "pro": "IND",
-   "game": false,
+   "name": "Dejounte Murray",
+   "pro": "NOP",
+   "game": true,
+   "inj": "ACTIVE",
+   "out": false
+  },
+  {
+   "slot": "UTIL",
+   "cur": "G",
+   "name": "Ajay Mitchell",
+   "pro": "OKC",
+   "game": true,
    "inj": "ACTIVE",
    "out": false
   },
@@ -83,43 +141,34 @@
    "cur": "UTIL",
    "name": "Daniel Gafford",
    "pro": "DAL",
-   "game": false,
+   "game": true,
    "inj": "ACTIVE",
    "out": false
   },
   {
-   "slot": "UTIL",
+   "slot": "BE",
    "cur": "UTIL",
-   "name": "Zaccharie Risacher",
-   "pro": "DAL",
-   "game": false,
-   "inj": "ACTIVE",
-   "out": false
-  },
-  {
-   "slot": "BE",
-   "cur": "BE",
-   "name": "Dejounte Murray",
-   "pro": "NOP",
-   "game": false,
-   "inj": "ACTIVE",
-   "out": false
-  },
-  {
-   "slot": "BE",
-   "cur": "BE",
    "name": "Ivica Zubac",
    "pro": "IND",
-   "game": false,
+   "game": true,
    "inj": "OUT",
    "out": true
   },
   {
    "slot": "BE",
+   "cur": "F",
+   "name": "Toumani Camara",
+   "pro": "POR",
+   "game": true,
+   "inj": "ACTIVE",
+   "out": false
+  },
+  {
+   "slot": "BE",
    "cur": "BE",
-   "name": "Miles Bridges",
-   "pro": "PHX",
-   "game": false,
+   "name": "Zaccharie Risacher",
+   "pro": "DAL",
+   "game": true,
    "inj": "ACTIVE",
    "out": false
   }
@@ -128,6 +177,6 @@
   "Kawhi Leonard"
  ],
  "irReturn": [],
- "playing": 0,
+ "playing": 12,
  "status": "planned"
 }
