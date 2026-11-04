@@ -1,5 +1,5 @@
 {
- "createdKST": "2026-11-04T19:53+09:00",
+ "createdKST": "2026-11-05T06:47+09:00",
  "mode": "plan",
  "spid": 16,
  "matchupPeriod": 3,
@@ -16,12 +16,12 @@
   "matchup": "1/7"
  },
  "drop": {
-  "id": 3157465,
-  "name": "Duncan Robinson",
-  "slot": 1,
+  "id": 4278562,
+  "name": "Paul Reed",
+  "slot": 3,
   "inj": "ACTIVE"
  },
- "hash": "a50f8bf701",
+ "hash": "46a340265f",
  "errors": [],
  "warnings": [
   "방출 선수는 24시간 웨이버 — 그 사이 다른 팀이 데려갈 수 있어 되돌릴 수 없음"
