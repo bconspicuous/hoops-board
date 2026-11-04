@@ -2,7 +2,7 @@
  "date": "2026-11-03",
  "scoringPeriodId": 15,
  "hash": "c9665e482b",
- "createdKST": "2026-11-04T06:49+09:00",
+ "createdKST": "2026-11-04T13:48+09:00",
  "mode": "plan",
  "moves": [],
  "lineup": [
@@ -75,7 +75,7 @@
    "name": "Andrew Nembhard",
    "pro": "IND",
    "game": false,
-   "inj": "DAY_TO_DAY",
+   "inj": "ACTIVE",
    "out": false
   },
   {
@@ -102,8 +102,8 @@
    "name": "Dejounte Murray",
    "pro": "NOP",
    "game": false,
-   "inj": "OUT",
-   "out": true
+   "inj": "ACTIVE",
+   "out": false
   },
   {
    "slot": "BE",
