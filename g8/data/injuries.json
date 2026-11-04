@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-05T05:03+09:00",
+ "asOf": "2026-11-05T05:42+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -578,6 +578,20 @@
    "long": "Given the tricky nature of hamstring injuries, the Pacers will likely take their time bringing Haliburton back to the court, so don't be surprised if his absence extends beyond this two-week window. Andrew Nembhard (neck) and Pascal Siakam should each get a usage bump as they take over more of the playmaking duties sans Haliburton and there will be more minutes available for Quenton Jackson."
   },
   {
+   "player": "Isaiah Jackson",
+   "team": "LAC",
+   "status": "Day-To-Day",
+   "date": "2026-11-04T20:11Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-04",
+   "detail": null,
+   "side": null,
+   "injury": "Groin",
+   "fantasyStatus": "GTD",
+   "short": "Jackson is questionable for Wednesday's game against the Heat with left groin soreness, per Law Murray of The Athletic.",
+   "long": "Jackson is a late addition to the injury report, which is a bad sign for his chances of playing Wednesday. If Jackson is ultimately downgraded to out, Brook Lopez would likely remain in the starting center position for the Clippers."
+  },
+  {
    "player": "Yanic Konan Niederhauser",
    "team": "LAC",
    "status": "Out",
@@ -984,6 +998,20 @@
    "long": "Hukporti went down with an Achilles injury in Monday's preseason opener against the Knicks, and an MRI has since revealed a rupture. He signed a one-year deal with the 76ers over the summer, so Hukporti will be an unrestricted free agent come season's end. With Hukporti's year already finished, Adem Bona (foot) should assume the backup center role behind Joel Embiid once healthy."
   },
   {
+   "player": "Rasheer Fleming",
+   "team": "PHX",
+   "status": "Out",
+   "date": "2026-11-04T20:17Z",
+   "type": "out",
+   "returnDate": "2026-11-05",
+   "detail": "Sprain",
+   "side": "Left",
+   "injury": "Ankle",
+   "fantasyStatus": "OUT",
+   "short": "Fleming is out for Wednesday's game against the Trail Blazers due to a sprained left ankle.",
+   "long": "Fleming is missing the front end of this back-to-back set with the injury. His next opportunity to suit up arrives Thursday, when the Suns host the Magic."
+  },
+  {
    "player": "Jordan Goodwin",
    "team": "PHX",
    "status": "Day-To-Day",
@@ -996,20 +1024,6 @@
    "fantasyStatus": "GTD",
    "short": "Goodwin (calf) is questionable for Wednesday's game against Portland, Duane Rankin of The Arizona Republic reports.",
    "long": "Goodwin sustained a left calf injury in Monday's 116-113 loss to Golden State, ending his night after just 10 minutes. If Goodwin is sidelined Wednesday, Luke Kennard should see more action."
-  },
-  {
-   "player": "Rasheer Fleming",
-   "team": "PHX",
-   "status": "Day-To-Day",
-   "date": "2026-11-04T00:19Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-04",
-   "detail": "Sprain",
-   "side": "Left",
-   "injury": "Ankle",
-   "fantasyStatus": "GTD",
-   "short": "Fleming is questionable for Wednesday's game against the Trail Blazers due to a sprained left ankle, Duane Rankin of The Arizona Republic reports.",
-   "long": "Fleming must have tweaked his ankle at practice because he's been out of the rotation the past two games. The Suns will update his status closer to Wednesday's tip."
   },
   {
    "player": "Mark Williams",
