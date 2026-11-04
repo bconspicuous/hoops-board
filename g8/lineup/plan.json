@@ -2,7 +2,7 @@
  "date": "2026-11-04",
  "week": 3,
  "opp": "Songpa Park Kezhang",
- "status": "pending",
+ "status": "minor",
  "playing": 13,
  "starters": [
   "Shai Gilgeous-Alexander",
@@ -24,8 +24,8 @@
  "dtd": [],
  "expected": {
   "best": 5.04,
-  "current": 4.845,
-  "gain": 0.195,
+  "current": 5.032,
+  "gain": 0.008,
   "pcBest": {
    "FG": 0.666,
    "FT": 0.068,
@@ -40,17 +40,17 @@
    "PF": 0.646
   },
   "pcCurrent": {
-   "FG": 0.706,
-   "FT": 0.094,
-   "TPM": 0.893,
-   "REB": 0.303,
+   "FG": 0.674,
+   "FT": 0.083,
+   "TPM": 0.883,
+   "REB": 0.36,
    "AST": 0,
-   "STL": 0.205,
-   "BLK": 0.021,
-   "TO": 0.67,
-   "DD": 0.476,
-   "PTS": 0.87,
-   "PF": 0.606
+   "STL": 0.224,
+   "BLK": 0.028,
+   "TO": 0.777,
+   "DD": 0.5,
+   "PTS": 0.848,
+   "PF": 0.655
   }
  },
  "alternatives": [
@@ -80,7 +80,7 @@
   }
  ],
  "currentBench": [
-  "Miles Bridges",
+  "Austin Reaves",
   "Collin Gillespie",
   "Dillon Brooks"
  ],
@@ -89,31 +89,46 @@
   {
    "name": "Shai Gilgeous-Alexander",
    "from": "PG",
+   "to": "G"
+  },
+  {
+   "name": "Karl-Anthony Towns",
+   "from": "C",
    "to": "UTIL"
   },
   {
-   "name": "James Harden",
-   "from": "G",
-   "to": "BE"
+   "name": "Anthony Davis",
+   "from": "PF",
+   "to": "C"
   },
   {
-   "name": "Austin Reaves",
+   "name": "James Harden",
    "from": "UTIL",
    "to": "BE"
   },
   {
+   "name": "Michael Porter Jr.",
+   "from": "SF",
+   "to": "PF"
+  },
+  {
    "name": "Brandon Miller",
    "from": "F",
+   "to": "UTIL"
+  },
+  {
+   "name": "Tyler Herro",
+   "from": "G",
    "to": "SG"
   },
   {
    "name": "Norman Powell",
    "from": "SG",
-   "to": "G"
+   "to": "SF"
   },
   {
    "name": "Miles Bridges",
-   "from": "BE",
+   "from": "UTIL",
    "to": "F"
   },
   {
@@ -128,23 +143,23 @@
    "slot": "PG"
   },
   {
-   "name": "Brandon Miller",
+   "name": "Tyler Herro",
    "slot": "SG"
   },
   {
-   "name": "Michael Porter Jr.",
+   "name": "Norman Powell",
    "slot": "SF"
   },
   {
-   "name": "Anthony Davis",
+   "name": "Michael Porter Jr.",
    "slot": "PF"
   },
   {
-   "name": "Karl-Anthony Towns",
+   "name": "Anthony Davis",
    "slot": "C"
   },
   {
-   "name": "Norman Powell",
+   "name": "Shai Gilgeous-Alexander",
    "slot": "G"
   },
   {
@@ -152,11 +167,11 @@
    "slot": "F"
   },
   {
-   "name": "Shai Gilgeous-Alexander",
+   "name": "Karl-Anthony Towns",
    "slot": "UTIL"
   },
   {
-   "name": "Tyler Herro",
+   "name": "Brandon Miller",
    "slot": "UTIL"
   },
   {
@@ -176,6 +191,6 @@
    "slot": "BE"
   }
  ],
- "id": "2026-11-04T0543Z",
- "createdAt": "2026-11-04T05:43:42.507Z"
+ "id": "2026-11-04T1013Z",
+ "createdAt": "2026-11-04T10:13:24.599Z"
 }
