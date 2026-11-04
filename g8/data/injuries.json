@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-04T23:42+09:00",
+ "asOf": "2026-11-05T05:03+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -60,6 +60,20 @@
    "long": "Veesaar suffered the injury during a workout on Sept. 15, and an MRI confirmed the diagnosis. The No. 52 overall pick in the 2026 NBA Draft, Veesaar was expected to spend a lot of time with Atlanta's G League affiliate this season."
   },
   {
+   "player": "Jayson Tatum",
+   "team": "BOS",
+   "status": "Out",
+   "date": "2026-11-04T17:48Z",
+   "type": "out",
+   "returnDate": "2026-11-06",
+   "detail": null,
+   "side": null,
+   "injury": "Rest",
+   "fantasyStatus": "OUT",
+   "short": "Tatum will be rested Wednesday against the Bucks, Jack Simone of BostonSportsJournal.com reports.",
+   "long": "The writing was on the wall for this one with the Celtics looking to get Tatum some planned rest. There's been no report of an injury, to be clear. Paul George, who is coming off a maintenance day himself, is in line for a big bump in usage Wednesday."
+  },
+  {
    "player": "Payton Pritchard",
    "team": "BOS",
    "status": "Day-To-Day",
@@ -72,20 +86,6 @@
    "fantasyStatus": "GTD",
    "short": "Pritchard is listed as questionable for Wednesday's game against Milwaukee due to a right shoulder contusion, Taylor Snow of the Celtics' official site reports.",
    "long": "Pritchard's status is uncertain after he struggled in Monday's loss to Houston, finishing with four points on 0-for-7 shooting across 30 minutes. With Jayson Tatum (rest) also questionable and Devin Carter (illness) ruled out, Boston could be shorthanded Wednesday. Pritchard's availability should become clearer closer to tipoff."
-  },
-  {
-   "player": "Jayson Tatum",
-   "team": "BOS",
-   "status": "Day-To-Day",
-   "date": "2026-11-03T21:10Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-04",
-   "detail": null,
-   "side": null,
-   "injury": "Rest",
-   "fantasyStatus": "GTD",
-   "short": "Tatum (rest) is questionable for Wednesday against the Bucks, Taylor Snow of the Celtics' official site reports.",
-   "long": "Tatum's questionable designation suggests Boston could give its star forward a night off for maintenance purposes. His status will be worth monitoring ahead of Wednesday's tipoff, as his potential absence would open up additional scoring opportunities for the Celtics' remaining starters."
   },
   {
    "player": "Devin Carter",
@@ -130,18 +130,18 @@
    "long": "Bilodeau will miss a third straight game to begin the regular season due to a right shoulder sprain. The two-way player's absence shouldn't affect the rotation."
   },
   {
-   "player": "Kon Knueppel",
+   "player": "Grant Williams",
    "team": "CHA",
    "status": "Out",
-   "date": "2026-11-03T22:13Z",
+   "date": "2026-11-04T17:59Z",
    "type": "out",
-   "returnDate": "2026-11-04",
+   "returnDate": "2026-11-09",
    "detail": null,
-   "side": "Left",
+   "side": "Right",
    "injury": "Hamstring",
-   "fantasyStatus": "GTD",
-   "short": "Knueppel (hamstring) is listed as probable for Wednesday's game against the Nets.",
-   "long": "Knueppel hasn't played this season, though it appears he will make his 2026-27 campaign debut versus Brooklyn. It may take him a few games to ramp up. However, Knueppel's return, even in a limited capacity, will presumably send Sion James back to the bench."
+   "fantasyStatus": "OUT",
+   "short": "Charlotte assigned Williams (hamstring) to the G League's Greensboro Swarm on Wednesday.",
+   "long": "Williams will practice with the Swarm and will be recalled directly after. This is the next stage of his rehab as the veteran gets closer to a return for Charlotte."
   },
   {
    "player": "Coby White",
@@ -156,20 +156,6 @@
    "fantasyStatus": "GTD",
    "short": "White (calf) is probable for Wednesday's game in Brooklyn.",
    "long": "White came out of his regular-season debut unscathed and should be available for Wednesday's game. White saw 16 minutes of action in Monday's 124-91 loss to the Pistons, but he should be cleared for more playing time in his second game of the season."
-  },
-  {
-   "player": "Grant Williams",
-   "team": "CHA",
-   "status": "Out",
-   "date": "2026-11-01T22:17Z",
-   "type": "out",
-   "returnDate": "2026-11-09",
-   "detail": null,
-   "side": "Right",
-   "injury": "Hamstring",
-   "fantasyStatus": "OUT",
-   "short": "Williams (hamstring) is listed as out for Monday's game against the Pistons.",
-   "long": "Williams has yet to suit up during the 2026-27 campaign. There hasn't been much revealed about his health. However, until he is cleared to play, he should be considered week-to-week, meaning Royce O'Neale should see more minutes off the bench."
   },
   {
    "player": "Nic Claxton",
@@ -228,6 +214,20 @@
    "long": "This will be Watson's second straight game on the sidelines, and with Friday's game being the first of a back-to-back set, he may need to spend an additional game on the inactive list. Meleek Thomas, Sam Merrill and Mario Hezonja will help pick up the slack in Watson's absence."
   },
   {
+   "player": "Santi Aldama",
+   "team": "DAL",
+   "status": "Out",
+   "date": "2026-11-04T18:56Z",
+   "type": "out",
+   "returnDate": "2026-11-04",
+   "detail": "Surgery",
+   "side": "Right",
+   "injury": "Knee",
+   "fantasyStatus": "GTD",
+   "short": "Aldama (knee) is doubtful for Wednesday's game against the Spurs, per NBA reporter Marc Stein.",
+   "long": "Despite going through shootaround, Aldama still doesn't appear to be ready for his season debut. Assuming he's later ruled out, Aldama's next chance to play would come Friday against Utah."
+  },
+  {
    "player": "Max Christie",
    "team": "DAL",
    "status": "Out",
@@ -240,20 +240,6 @@
    "fantasyStatus": "OUT",
    "short": "Christie (hip) is out for Wednesday's game against the Spurs.",
    "long": "The swingman is missing his first game of the season with a hip injury , which he suffered Monday against the Kings. Naji Marshall and Zaccharie Risacher stand out as the most likely candidates to step into the starting lineup Wednesday."
-  },
-  {
-   "player": "Santi Aldama",
-   "team": "DAL",
-   "status": "Out",
-   "date": "2026-11-03T22:20Z",
-   "type": "out",
-   "returnDate": "2026-11-04",
-   "detail": "Surgery",
-   "side": "Right",
-   "injury": "Knee",
-   "fantasyStatus": "GTD",
-   "short": "Aldama (knee) is questionable for Wednesday's game against the Spurs.",
-   "long": "The questionable tag is an upgrade for Aldama, who has either been listed as out or doubtful ahead of all of Dallas' games this season. If the 25-year-old is cleared to make his season debut following knee surgery, he'll likely operate under a minutes restriction."
   },
   {
    "player": "Tarik Biberovic",
@@ -382,6 +368,20 @@
    "long": "Duren suffered the hamstring injury in Friday's win over Miami and is set to miss an extended period. Paul Reed is expected to join the starting five and carries significant fantasy value until Duren returns. John Collins and Tolu Smith are also candidates to see a bump in minutes in Duren's stead."
   },
   {
+   "player": "Kristaps Porzingis",
+   "team": "GS",
+   "status": "Out",
+   "date": "2026-11-04T17:00Z",
+   "type": "out",
+   "returnDate": "2026-12-01",
+   "detail": null,
+   "side": null,
+   "injury": "Illness",
+   "fantasyStatus": "OUT",
+   "short": "The Warriors have stopped issuing salary payments to Porzingis, who remains away from the team and is considering retirement, Anthony Slater and Shams Charania of ESPN reported Wednesday.",
+   "long": "Porzingis has not returned to the Warriors' facility since leaving in October, and his absence is no longer considered excused by the organization. Golden State continues to explore trading the 31-year-old center's contract ahead of the Feb. 11 deadline rather than voiding his deal. With Porzingis reportedly leaning toward retirement and no timetable for his return, he remains an extremely risky fantasy investment with little reason to expect meaningful production this season."
+  },
+  {
    "player": "Brandon Williams",
    "team": "GS",
    "status": "Day-To-Day",
@@ -424,20 +424,6 @@
    "long": "As expected, Horford will sit out the second leg of this back-to-back set. Fortunately for the Warriors, Draymond Green (back) is set to return to the lineup."
   },
   {
-   "player": "Kristaps Porzingis",
-   "team": "GS",
-   "status": "Out",
-   "date": "2026-10-28T14:25Z",
-   "type": "out",
-   "returnDate": "2026-12-01",
-   "detail": null,
-   "side": null,
-   "injury": "Illness",
-   "fantasyStatus": "OUT",
-   "short": "The Warriors are exploring potential trades involving Porzingis (personal), who remains away from the team indefinitely while dealing with ongoing health concerns, Anthony Slater of ESPN.com reports.",
-   "long": "Porzingis is reportedly contemplating his future in basketball as he continues to battle health issues that have plagued him for nearly two years. Golden State isn't expecting the veteran center to rejoin the team anytime soon, and his contract structure could make him an attractive trade piece despite the uncertainty surrounding his playing future. With no timetable for his return and retirement potentially on the table, Porzingis remains a highly speculative fantasy stash, even in leagues with injured reserve spots."
-  },
-  {
    "player": "Moses Moody",
    "team": "GS",
    "status": "Out",
@@ -468,16 +454,16 @@
   {
    "player": "Clint Capela",
    "team": "HOU",
-   "status": "Day-To-Day",
-   "date": "2026-11-03T22:19Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-04",
+   "status": "Out",
+   "date": "2026-11-04T18:36Z",
+   "type": "out",
+   "returnDate": "2026-11-07",
    "detail": "Sprain",
    "side": "Right",
    "injury": "Ankle",
-   "fantasyStatus": "GTD",
-   "short": "Capela (ankle) is listed as questionable for Wednesday's game against the Timberwolves.",
-   "long": "Capela is in danger of missing his second consecutive contest and third overall of the 2026-27 campaign. With Steven Adams (calf) sidelined, Jabari Smith may spend more time in the middle behind Alperen Sengun. Oscar Tshiebwe might also see a few minutes off the bench."
+   "fantasyStatus": "OUT",
+   "short": "Capela (ankle) is out for Wednesday's game against the Timberwolves.",
+   "long": "The veteran big man is nursing a sprained right ankle, which is costing him a second consecutive contest. His next chance to return arrives Saturday, when the Rockets visit the Suns in Phoenix."
   },
   {
    "player": "Steven Adams",
@@ -651,15 +637,15 @@
    "player": "Adou Thiero",
    "team": "LAL",
    "status": "Out",
-   "date": "2026-11-03T01:30Z",
+   "date": "2026-11-04T18:48Z",
    "type": "out",
    "returnDate": "2026-11-06",
    "detail": "Inflammation",
    "side": "Left",
    "injury": "Knee",
    "fantasyStatus": "OUT",
-   "short": "Head coach JJ Redick said Monday that Thiero (knee) has participated in live action, and the hope is that he'll be available by the end of the week, Khobi Price of The California Post reports.",
-   "long": "Thiero has yet to make his season debut while recovering from a left knee injury, though he's trending in the right direction. However, the second-year forward isn't expected to play a meaningful role once healthy."
+   "short": "The Lakers assigned Thiero (knee) to the G League's Coachella Valley Lakers on Wednesday, per Khobi Price of The California Post.",
+   "long": "Thiero is practicing with the G League club amid his knee recovery. He appears to be close to being cleared for his season debut with the Lakers."
   },
   {
    "player": "Quinten Post",
@@ -690,20 +676,6 @@
    "long": "This will be Pippen's third straight game on the sidelines, which should continue resulting in more minutes for Cam Spencer. Pippen's next chance to play will come Friday against the Thunder."
   },
   {
-   "player": "Myron Gardner",
-   "team": "MIA",
-   "status": "Day-To-Day",
-   "date": "2026-11-04T01:08Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-04",
-   "detail": "Bruise",
-   "side": "Right",
-   "injury": "Quadriceps",
-   "fantasyStatus": "GTD",
-   "short": "Gardner (quadriceps) is listed as questionable for Wednesday's game against the Clippers.",
-   "long": "Gardner is in danger of missing his fourth contest of the 2026-27 campaign. However, he has logged three minutes or less in his four regular-season games, so his absence wouldn't have much of an effect on the rotation."
-  },
-  {
    "player": "Giannis Antetokounmpo",
    "team": "MIA",
    "status": "Day-To-Day",
@@ -718,18 +690,32 @@
    "long": "Antetokounmpo is dealing with a sprained wrist on his shooting hand, but it doesn't appear he has any intention of sitting out Wednesday's game. Check back closer to Wednesday's tipoff for official confirmation on his status."
   },
   {
-   "player": "Terrence Shannon Jr.",
-   "team": "MIN",
+   "player": "Kam Jones",
+   "team": "MIL",
    "status": "Day-To-Day",
-   "date": "2026-11-03T23:11Z",
+   "date": "2026-11-04T17:43Z",
    "type": "day-to-day",
    "returnDate": "2026-11-04",
+   "detail": null,
+   "side": "Right",
+   "injury": "Ankle",
+   "fantasyStatus": "GTD",
+   "short": "Jones (ankle) is questionable for Wednesday against the Celtics.",
+   "long": "Jones is dealing with a right ankle sprain and was a late addition to the injury report. His status doesn't hold much weight in fantasy hoops as he's outside of the current rotation."
+  },
+  {
+   "player": "Terrence Shannon Jr.",
+   "team": "MIN",
+   "status": "Out",
+   "date": "2026-11-04T18:16Z",
+   "type": "out",
+   "returnDate": "2026-11-06",
    "detail": "Bruise",
    "side": "Left",
    "injury": "Hip",
-   "fantasyStatus": "GTD",
-   "short": "Shannon (hip) is listed as questionable for Wednesday's game in Houston.",
-   "long": "Shannon didn't play in Monday's 112-100 win over Milwaukee. The 26-year-old is having the best season of his career, averaging 12.0 points, 3.6 rebounds and 2.6 assists over 22.0 minutes per contest, so being without him once again would be a tough blow for the Timberwolves. If Shannon misses his second consecutive game, Cody Williams, Trey Lyles and Jaylen Clark could each see more minutes."
+   "fantasyStatus": "OUT",
+   "short": "Shannon (hip) is out for Wednesday against the Rockets.",
+   "long": "Shannon was unable to shake his questionable tag for this contest. He's having an excellent season off the bench for Minnesota, and his absence opens the door for players such as Bones Hyland, Isaiah Evans and Jaylen Clark."
   },
   {
    "player": "Anthony Edwards",
@@ -760,6 +746,20 @@
    "long": "DiVincenzo is approaching six months since tearing his right Achilles during the first round of the playoffs and has been rehabbing with the expectation that he'll play at some point this season. The veteran guard has sought advice from Jayson Tatum, Tyrese Haliburton and Damian Lillard during his recovery, though Minnesota has yet to establish a timetable for his return."
   },
   {
+   "player": "Trey Murphy III",
+   "team": "NO",
+   "status": "Day-To-Day",
+   "date": "2026-11-04T18:34Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-04",
+   "detail": null,
+   "side": null,
+   "injury": "Knee",
+   "fantasyStatus": "GTD",
+   "short": "Murphy (knees) is now questionable for Wednesday against the Jazz.",
+   "long": "Murphy was previously labeled as probable, so this is an ominous sign for his availability. If Murphy is unable to give it a go, Saddiq Bey and Herbert Jones could become more involved for the Pelicans."
+  },
+  {
    "player": "Jordan Poole",
    "team": "NO",
    "status": "Out",
@@ -772,20 +772,6 @@
    "fantasyStatus": "GTD",
    "short": "Poole (ankle) is listed as probable for Wednesday's game against Utah.",
    "long": "Poole is expected to return from a three-game layoff for the meeting with the Jazz on Wednesday. The 27-year-old hasn't had a memorable 2026-27 campaign thus far, averaging 6.0 points, 2.0 rebounds, 3.0 assists and 1.3 steals across 16.0 minutes per contest. If Poole is cleared for action, it would likely mean fewer minutes for Bryce McGowens and Trendon Watford."
-  },
-  {
-   "player": "Trey Murphy III",
-   "team": "NO",
-   "status": "Day-To-Day",
-   "date": "2026-11-03T22:52Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-04",
-   "detail": null,
-   "side": null,
-   "injury": "Knee",
-   "fantasyStatus": "GTD",
-   "short": "Murphy (knee) is probable for Wednesday's game versus the Jazz.",
-   "long": "Murphy played through the knee issues and logged 40 minutes in Monday's 135-134 win over the Grizzlies, so it clearly didn't impact his playing time. It appears he'll continue to push through the pain Wednesday."
   },
   {
    "player": "Yves Missi",
@@ -804,16 +790,16 @@
   {
    "player": "Josh Hart",
    "team": "NY",
-   "status": "Day-To-Day",
-   "date": "2026-11-03T21:49Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-04",
+   "status": "Out",
+   "date": "2026-11-04T18:08Z",
+   "type": "out",
+   "returnDate": "2026-11-07",
    "detail": null,
    "side": null,
    "injury": "Ankle",
-   "fantasyStatus": "GTD",
-   "short": "Hart is questionable for Wednesday's game against the Bulls due to right ankle soreness.",
-   "long": "Hart sounds to be nursing a minor issue, and he could go through pregame warmups before the Knicks clarify his status. The door would open for either Landry Shamet and Miles McBride to enter the starting lineup if Harts sits out Wednesday."
+   "fantasyStatus": "OUT",
+   "short": "Hart is out for Wednesday's game against the Bulls due to right ankle soreness.",
+   "long": "Hart is sitting out for the first time this season, though he doesn't sound to be battling a significant issue. With Hart sidelined, fantasy managers can expect either Landry Shamet or Miles McBride to step into the starting lineup for the Knicks on Wednesday."
   },
   {
    "player": "Nikola Topic",
@@ -898,20 +884,6 @@
    "fantasyStatus": "OUT",
    "short": "Williams (leg) underwent successful surgery Wednesday to \"address a fractured left fibula and reconstruction of ankle ligaments following a fracture and dislocation.\" He will be re-evaluated before the end of the regular season, Tim MacMahon of ESPN.com reports.",
    "long": "Williams suffered the injury during Sunday's meeting with the Clippers and was taken off the court on a stretcher. It's unknown when the 25-year-old will be cleared to return, though the Thunder will presumably be overly cautious moving forward. Williams, who signed a five-year extension in July of 2025, has had a productive career, averaging 17.9 points, 4.6 rebounds, 4.4 assists and 1.3 steals over 30.9 minutes per contest. However, after playing at least 69 regular-season games in his first three years in the league, he has appeared in just 36 in the last two seasons combined. With the Thunder having one of the deepest rosters in the NBA, the team may look for more minutes from Jared McCain, Jaylin Williams, and Kenrich Williams for the remainder of the 2026-27 campaign."
-  },
-  {
-   "player": "Anthony Black",
-   "team": "ORL",
-   "status": "Day-To-Day",
-   "date": "2026-11-03T05:35Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-05",
-   "detail": null,
-   "side": null,
-   "injury": "Rest",
-   "fantasyStatus": "GTD",
-   "short": "Black will be rested Monday against the Wizards.",
-   "long": "The Magic are listing him out for left ankle injury management, so they are taking a cautious approach for the second leg of this back-to-back set. He finished with 23 points (6-12 FG, 1-5 3Pt, 10-11 FT), eight rebounds, three assists and two steals over 33 minutes Sunday against Boston. Jase Richardson, Jevon Carter and Jamal Cain could be more involved as a result."
   },
   {
    "player": "Jonathan Isaac",
@@ -1208,6 +1180,20 @@
    "long": "For now, fantasy managers can assume that he's week-to-week. He's not expected to crack the rotation upon his return."
   },
   {
+   "player": "Mo Bamba",
+   "team": "UTAH",
+   "status": "Day-To-Day",
+   "date": "2026-11-04T18:41Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-04",
+   "detail": null,
+   "side": "Right",
+   "injury": "Ankle",
+   "fantasyStatus": "GTD",
+   "short": "Bamba (ankle) participated in Wednesday's morning shootaround, per Shreyas Laddha of The Salt Lake Tribune.",
+   "long": "Bamba is trending in a positive direction ahead of Wednesday's game in New Orleans. He can be tentatively placed on the right side of his questionable designation."
+  },
+  {
    "player": "Jusuf Nurkic",
    "team": "UTAH",
    "status": "Out",
@@ -1220,20 +1206,6 @@
    "fantasyStatus": "OUT",
    "short": "Nurkic (foot) is out for Wednesday's game against the Pelicans.",
    "long": "Nurkic has been a spectator to begin the season, and he's still not ready for game action due to a foot injury. The veteran big man should be considered week-to-week until the Jazz update his recovery, so Jaxson Hayes should remain the team's primary center going forward."
-  },
-  {
-   "player": "Mo Bamba",
-   "team": "UTAH",
-   "status": "Day-To-Day",
-   "date": "2026-11-03T23:04Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-04",
-   "detail": null,
-   "side": "Right",
-   "injury": "Ankle",
-   "fantasyStatus": "GTD",
-   "short": "Bamba is questionable for Wednesday's game in New Orleans due to a sprained right ankle.",
-   "long": "Bamba must have tweaked his ankle during Monday's 119-97 loss to the Spurs, and now he's in danger of sitting out Wednesday's game. If Bamba is forced to the sidelines, Kyle Filipowski would likely pick up most of his minutes."
   },
   {
    "player": "Jaren Jackson Jr.",
@@ -1262,6 +1234,20 @@
    "fantasyStatus": "OUT",
    "short": "Alexander won't play Wednesday against the Grizzlies due to a left knee bone bruise.",
    "long": "Alexander sat out Friday's preseason finale with what the team initially described as a left knee injury, but we now know he's dealing with a bone bruise. Don't be surprised if Alexander misses Friday's game against the Pelicans as well."
+  },
+  {
+   "player": "Bilal Coulibaly",
+   "team": "WSH",
+   "status": "Day-To-Day",
+   "date": "2026-11-04T17:38Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-04",
+   "detail": null,
+   "side": null,
+   "injury": "Illness",
+   "fantasyStatus": "GTD",
+   "short": "Coulibaly (illness) is questionable for Wednesday against the Hawks.",
+   "long": "Coulibaly was a late addition to the injury report after waking up under the weather. If the Wizards end up holding Coulibaly out, the team could turn to Khris Middleton and/or Will Riley."
   },
   {
    "player": "Anthony Gill",
