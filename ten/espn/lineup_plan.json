@@ -1,59 +1,10 @@
 {
  "date": "2026-11-04",
  "scoringPeriodId": 16,
- "hash": "f2e8d293e4",
- "createdKST": "2026-11-04T19:51+09:00",
+ "hash": "369bd1f298",
+ "createdKST": "2026-11-05T06:47+09:00",
  "mode": "plan",
- "moves": [
-  {
-   "playerId": 4017837,
-   "name": "Ivica Zubac",
-   "from": 11,
-   "to": 12,
-   "fromSlot": "UTIL",
-   "toSlot": "BE"
-  },
-  {
-   "playerId": 3062679,
-   "name": "Josh Hart",
-   "from": 12,
-   "to": 1,
-   "fromSlot": "BE",
-   "toSlot": "SG"
-  },
-  {
-   "playerId": 4900671,
-   "name": "Ajay Mitchell",
-   "from": 5,
-   "to": 11,
-   "fromSlot": "G",
-   "toSlot": "UTIL"
-  },
-  {
-   "playerId": 4431736,
-   "name": "Toumani Camara",
-   "from": 6,
-   "to": 12,
-   "fromSlot": "F",
-   "toSlot": "BE"
-  },
-  {
-   "playerId": 3157465,
-   "name": "Duncan Robinson",
-   "from": 1,
-   "to": 6,
-   "fromSlot": "SG",
-   "toSlot": "F"
-  },
-  {
-   "playerId": 4395712,
-   "name": "Andrew Nembhard",
-   "from": 12,
-   "to": 5,
-   "fromSlot": "BE",
-   "toSlot": "G"
-  }
- ],
+ "moves": [],
  "lineup": [
   {
    "slot": "PG",
@@ -66,11 +17,11 @@
   },
   {
    "slot": "SG",
-   "cur": "BE",
-   "name": "Josh Hart",
-   "pro": "NYK",
+   "cur": "SG",
+   "name": "Duncan Robinson",
+   "pro": "DET",
    "game": true,
-   "inj": "DAY_TO_DAY",
+   "inj": "ACTIVE",
    "out": false
   },
   {
@@ -102,18 +53,18 @@
   },
   {
    "slot": "G",
-   "cur": "BE",
-   "name": "Andrew Nembhard",
-   "pro": "IND",
+   "cur": "G",
+   "name": "Ajay Mitchell",
+   "pro": "OKC",
    "game": true,
    "inj": "ACTIVE",
    "out": false
   },
   {
    "slot": "F",
-   "cur": "SG",
-   "name": "Duncan Robinson",
-   "pro": "DET",
+   "cur": "F",
+   "name": "Toumani Camara",
+   "pro": "POR",
    "game": true,
    "inj": "ACTIVE",
    "out": false
@@ -129,9 +80,9 @@
   },
   {
    "slot": "UTIL",
-   "cur": "G",
-   "name": "Ajay Mitchell",
-   "pro": "OKC",
+   "cur": "UTIL",
+   "name": "Andrew Nembhard",
+   "pro": "IND",
    "game": true,
    "inj": "ACTIVE",
    "out": false
@@ -147,7 +98,7 @@
   },
   {
    "slot": "BE",
-   "cur": "UTIL",
+   "cur": "BE",
    "name": "Ivica Zubac",
    "pro": "IND",
    "game": true,
@@ -156,12 +107,12 @@
   },
   {
    "slot": "BE",
-   "cur": "F",
-   "name": "Toumani Camara",
-   "pro": "POR",
+   "cur": "BE",
+   "name": "Josh Hart",
+   "pro": "NYK",
    "game": true,
-   "inj": "ACTIVE",
-   "out": false
+   "inj": "OUT",
+   "out": true
   },
   {
    "slot": "BE",
@@ -177,6 +128,6 @@
   "Kawhi Leonard"
  ],
  "irReturn": [],
- "playing": 12,
+ "playing": 11,
  "status": "planned"
 }
