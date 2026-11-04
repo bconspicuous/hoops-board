@@ -1,51 +1,56 @@
 {
- "planId": "2026-11-04T0026Z",
+ "planId": "2026-11-04T0543Z",
  "mode": "dry",
  "date": "2026-11-04",
- "at": "2026-11-02T19:26-05:00",
+ "at": "2026-11-04T00:44-05:00",
  "moves": [
   {
-   "name": "James Harden",
-   "from": "G",
+   "name": "Shai Gilgeous-Alexander",
+   "from": "PG",
    "to": "UTIL"
   },
   {
+   "name": "James Harden",
+   "from": "G",
+   "to": "BE"
+  },
+  {
    "name": "Austin Reaves",
-   "from": "BE",
-   "to": "G"
+   "from": "UTIL",
+   "to": "BE"
   },
   {
    "name": "Brandon Miller",
    "from": "F",
-   "to": "BE"
-  },
-  {
-   "name": "Tyler Herro",
-   "from": "UTIL",
    "to": "SG"
   },
   {
    "name": "Norman Powell",
    "from": "SG",
-   "to": "BE"
+   "to": "G"
   },
   {
    "name": "Miles Bridges",
    "from": "BE",
    "to": "F"
+  },
+  {
+   "name": "Collin Gillespie",
+   "from": "BE",
+   "to": "PG"
   }
  ],
  "skipped": [],
  "ok": true,
- "scoringPeriodId": 16,
+ "scoringPeriodId": 15,
  "finalLineup": [
   [
    "PG",
-   "Shai Gilgeous-Alexander"
+   "Collin Gillespie"
   ],
   [
    "SG",
-   "Tyler Herro"
+   "Brandon Miller"
   ],
   [
    "SF",
@@ -61,7 +66,7 @@
   ],
   [
    "G",
-   "Austin Reaves"
+   "Norman Powell"
   ],
   [
    "F",
@@ -69,23 +74,23 @@
   ],
   [
    "UTIL",
-   "James Harden"
+   "Shai Gilgeous-Alexander"
+  ],
+  [
+   "UTIL",
+   "Tyler Herro"
   ],
   [
    "UTIL",
    "Rudy Gobert"
   ],
   [
-   "UTIL",
-   "Collin Gillespie"
+   "BE",
+   "James Harden"
   ],
   [
    "BE",
-   "Brandon Miller"
-  ],
-  [
-   "BE",
-   "Norman Powell"
+   "Austin Reaves"
   ],
   [
    "BE",
