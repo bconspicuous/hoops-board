@@ -1,7 +1,7 @@
 {
- "planId": "20261104T0542",
+ "planId": "20261104T1443",
  "mode": "dry",
- "at": "2026-11-04T00:43-05:00",
+ "at": "2026-11-04T09:44-05:00",
  "items": [
   {
    "n": 1,
@@ -39,8 +39,8 @@
    ],
    "ok": true,
    "add": {
-    "name": "Derik Queen",
-    "status": "WAIVERS"
+    "name": "Santi Aldama",
+    "status": "FREEAGENT"
    },
    "drop": "Dillon Brooks",
    "ir": null
@@ -58,7 +58,7 @@
   }
  ],
  "ok": true,
- "scoringPeriodId": 15,
+ "scoringPeriodId": 16,
  "matchupPeriod": 3,
  "addsUsed": 3,
  "rosterMatchesPlan": true,
