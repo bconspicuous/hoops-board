@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-06T05:17+09:00",
+ "asOf": "2026-11-06T05:41+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -749,15 +749,15 @@
    "player": "Trey Murphy III",
    "team": "NO",
    "status": "Day-To-Day",
-   "date": "2026-11-05T15:02Z",
+   "date": "2026-11-05T20:19Z",
    "type": "day-to-day",
    "returnDate": "2026-11-06",
    "detail": null,
    "side": null,
    "injury": "Knee",
    "fantasyStatus": "GTD",
-   "short": "Murphy (knees) is listed as out for Wednesday's game against Utah.",
-   "long": "Murphy was listed as probable initially. However, after being downgraded to questionable, he will now be sidelined for the first time in 2026-27. With Murphy ruled out, Saddiq Bey and Herbert Jones should see more minutes off the bench."
+   "short": "Murphy (knee) is probable for Friday's game against Minnesota.",
+   "long": "Murphy is expected to keep his absence with a knee injury to a one-game minimum. Herbert Jones is likely to revert back to the bench Friday."
   },
   {
    "player": "Yves Missi",
@@ -984,32 +984,32 @@
    "long": "Hukporti went down with an Achilles injury in Monday's preseason opener against the Knicks, and an MRI has since revealed a rupture. He signed a one-year deal with the 76ers over the summer, so Hukporti will be an unrestricted free agent come season's end. With Hukporti's year already finished, Adem Bona (foot) should assume the backup center role behind Joel Embiid once healthy."
   },
   {
-   "player": "Jordan Goodwin",
-   "team": "PHX",
-   "status": "Day-To-Day",
-   "date": "2026-11-05T15:04Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-05",
-   "detail": "Not Specified",
-   "side": "Left",
-   "injury": "Calf",
-   "fantasyStatus": "GTD",
-   "short": "Goodwin (calf) won't play in Wednesday's game against Portland.",
-   "long": "Goodwin suffered a calf injury in Monday's 116-113 loss to the Warriors. His next chance to return will come Thursday versus Orlando. In the meantime, Luke Kennard could be on the floor more than usual."
-  },
-  {
    "player": "Rasheer Fleming",
    "team": "PHX",
-   "status": "Day-To-Day",
-   "date": "2026-11-05T15:04Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-05",
+   "status": "Out",
+   "date": "2026-11-05T20:22Z",
+   "type": "out",
+   "returnDate": "2026-11-07",
    "detail": "Sprain",
    "side": "Left",
    "injury": "Ankle",
-   "fantasyStatus": "GTD",
-   "short": "Fleming is out for Wednesday's game against the Trail Blazers due to a sprained left ankle.",
-   "long": "Fleming is missing the front end of this back-to-back set with the injury. His next opportunity to suit up arrives Thursday, when the Suns host the Magic."
+   "fantasyStatus": "OUT",
+   "short": "Fleming is out for Thursday's game against the Magic due to a sprained left ankle.",
+   "long": "Fleming is missing the back end of this back-to-back set with the injury. His next opportunity to suit up arrives Saturday, when the Suns host the Rockets."
+  },
+  {
+   "player": "Jordan Goodwin",
+   "team": "PHX",
+   "status": "Out",
+   "date": "2026-11-05T20:18Z",
+   "type": "out",
+   "returnDate": "2026-11-07",
+   "detail": "Not Specified",
+   "side": "Left",
+   "injury": "Calf",
+   "fantasyStatus": "OUT",
+   "short": "Goodwin (calf) is out for Thursday's game against Orlando.",
+   "long": "Goodwin will miss his second game in a row for the Suns. In his absence Wednesday, Ryan Dunn and Luke Kennard saw minutes in the teens off the Phoenix bench."
   },
   {
    "player": "Mark Williams",
