@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-05T16:27+09:00",
+ "asOf": "2026-11-05T19:45+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -116,6 +116,20 @@
    "long": "The writing was on the wall for this one with the Celtics looking to get Tatum some planned rest. There's been no report of an injury, to be clear. Paul George, who is coming off a maintenance day himself, is in line for a big bump in usage Wednesday."
   },
   {
+   "player": "Noah Clowney",
+   "team": "BKN",
+   "status": "Day-To-Day",
+   "date": "2026-11-05T07:12Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-07",
+   "detail": "Soreness",
+   "side": "Right",
+   "injury": "Knee",
+   "fantasyStatus": "GTD",
+   "short": "Clowney (knee) supplied seven points (3-6 FG, 1-4 3Pt), one rebound and one assist over 17 minutes during Wednesday's 114-104 victory over the Hornets.",
+   "long": "Despite playing in all eight games thus far, Clowney has been mostly a non-factor for the Nets. In 21.0 minutes per game, Clowney has averaged just 5.6 points and 4.4 rebounds, barely making him a top 300 player. Outside of very deep leagues, there is no reason to pay any attention to Clowney."
+  },
+  {
    "player": "Day'Ron Sharpe",
    "team": "BKN",
    "status": "Day-To-Day",
@@ -128,20 +142,6 @@
    "fantasyStatus": "GTD",
    "short": "Sharpe registered 15 points (5-7 FG, 1-1 3Pt, 4-5 FT), 13 rebounds and four assists across 26 minutes in Sunday's 98-90 win over the Pacers.",
    "long": "Sharpe dominated the glass, collecting four offensive rebounds while shooting efficiently en route to his first double-double of the season. It was also the second time he scored in double digits this season. Sharpe's rebounding provides a useful foundation, although his ceiling will depend on whether Brooklyn consistently gives him enough touches and playing time -- he has played more than 25 minutes just twice all season long."
-  },
-  {
-   "player": "Noah Clowney",
-   "team": "BKN",
-   "status": "Day-To-Day",
-   "date": "2026-11-05T02:13Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-07",
-   "detail": "Soreness",
-   "side": "Right",
-   "injury": "Knee",
-   "fantasyStatus": "GTD",
-   "short": "Clowney won't return to Wednesday's game against the Hornets due to right knee soreness. He'll finish with seven points (3-6 FG, 1-4 3Pt), one rebound and one assist across 17 minutes.",
-   "long": "Chaney Johnson and Josh Minott are candidates to pick up a few extra minutes in Clowney's stead. His next chance to suit up will come Saturday at Atlanta."
   },
   {
    "player": "Egor Demin",
