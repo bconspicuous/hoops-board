@@ -6,10 +6,10 @@
   "Dillon Brooks"
  ],
  "base": {
-  "wk": 4.878,
-  "champ": 0.063,
-  "p1": 0.0416,
-  "epct": 0.5103
+  "wk": 4.88,
+  "champ": 0.0625,
+  "p1": 0.0463,
+  "epct": 0.5136
  },
  "protect": [
   "Shai Gilgeous-Alexander",
@@ -41,10 +41,10 @@
    "addOwner": "FA",
    "drop": "Dillon Brooks",
    "ir": null,
-   "weekGain": 0.366,
-   "titleGain": 0.1338,
-   "p1Gain": 0.1495,
-   "epctGain": 0.028,
+   "weekGain": 0.34,
+   "titleGain": 0.1242,
+   "p1Gain": 0.1243,
+   "epctGain": 0.0241,
    "addTeam": "POR",
    "addPos": "C",
    "dropValue": -5.68,
@@ -58,25 +58,25 @@
     "injury": null,
     "returnDate": null,
     "report": null,
-    "g": 5,
-    "min": 16.6
+    "g": 6,
+    "min": 14.7
    },
    "firstProposedAt": "2026-11-03T00:45:57.209Z"
   },
   {
    "n": 2,
    "kind": "add/drop",
-   "add": "Jrue Holiday",
-   "addEspnId": 3995,
+   "add": "Alex Sarr",
+   "addEspnId": 5160992,
    "addOwner": "FA",
    "drop": "Dillon Brooks",
    "ir": null,
-   "weekGain": 0.186,
-   "titleGain": 0.0675,
-   "p1Gain": 0.0881,
-   "epctGain": 0.0197,
-   "addTeam": "POR",
-   "addPos": "PG,SG",
+   "weekGain": 0.277,
+   "titleGain": 0.1169,
+   "p1Gain": 0.1166,
+   "epctGain": 0.0227,
+   "addTeam": "WAS",
+   "addPos": "PF,C",
    "dropValue": -5.68,
    "status": "proposed",
    "conflicts": [
@@ -88,23 +88,23 @@
     "injury": null,
     "returnDate": null,
     "report": null,
-    "g": 6,
-    "min": 25.7
+    "g": 7,
+    "min": 25.1
    },
-   "firstProposedAt": "2026-11-04T05:42:49.316Z"
+   "firstProposedAt": "2026-11-05T02:42:53.335Z"
   },
   {
    "n": 3,
    "kind": "add/drop",
-   "add": "Santi Aldama",
-   "addEspnId": 4593125,
+   "add": "P.J. Washington",
+   "addEspnId": 4278078,
    "addOwner": "FA",
    "drop": "Dillon Brooks",
    "ir": null,
-   "weekGain": 0.208,
-   "titleGain": 0.0261,
-   "p1Gain": 0.0272,
-   "epctGain": 0.0077,
+   "weekGain": 0.203,
+   "titleGain": 0.0191,
+   "p1Gain": 0.0071,
+   "epctGain": 0.0026,
    "addTeam": "DAL",
    "addPos": "SF,PF",
    "dropValue": -5.68,
@@ -114,24 +114,24 @@
     2
    ],
    "addHealth": {
-    "status": "O",
-    "injury": "Knee",
-    "returnDate": "2026-11-04",
-    "report": "Aldama (knee) is doubtful for Wednesday's game against the Spurs, per NBA reporter Marc Stein.",
-    "g": null,
-    "min": null
+    "status": "정상",
+    "injury": null,
+    "returnDate": null,
+    "report": null,
+    "g": 7,
+    "min": 34.3
    },
-   "firstProposedAt": "2026-11-04T14:43:57.259Z"
+   "firstProposedAt": "2026-11-05T02:42:53.335Z"
   },
   {
    "n": 4,
    "kind": "activate",
    "ir": "Kyrie Irving",
    "drop": "Dillon Brooks",
-   "weekGain": 0.252,
-   "titleGain": 0.0446,
-   "p1Gain": 0.0577,
-   "epctGain": 0.0145,
+   "weekGain": 0.313,
+   "titleGain": 0.0665,
+   "p1Gain": 0.0838,
+   "epctGain": 0.0173,
    "dropValue": -5.68,
    "status": "rejected",
    "note": "IR 복귀(상태 정상)",
@@ -152,47 +152,50 @@
    "add": "Robert Williams III",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.366,
-   "title": 0.1338
+   "wk": 0.34,
+   "title": 0.1242
   },
   {
-   "add": "Jrue Holiday",
+   "add": "Alex Sarr",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.186,
-   "title": 0.0675
+   "wk": 0.277,
+   "title": 0.1169
   },
   {
-   "add": "Santi Aldama",
+   "add": "P.J. Washington",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.208,
-   "title": 0.0261
+   "wk": 0.203,
+   "title": 0.0191
   },
   {
-   "add": "Derik Queen",
+   "add": "Precious Achiuwa",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.215,
-   "title": 0.0221
-  },
-  {
-   "add": "Alex Caruso",
-   "drop": "Dillon Brooks",
-   "ir": null,
-   "wk": 0.255,
-   "title": 0.0158
+   "wk": 0.247,
+   "title": 0.0104
   },
   {
    "add": "Jaime Jaquez Jr.",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.217,
-   "title": 0.0128
+   "wk": 0.222,
+   "title": 0.0043
+  },
+  {
+   "add": "Santi Aldama",
+   "drop": "Dillon Brooks",
+   "ir": null,
+   "wk": 0.215,
+   "title": 0.0047
   }
  ],
- "createdAt": "2026-11-04T20:43:35.086Z",
- "id": "20261104T2043",
+ "createdAt": "2026-11-05T02:42:53.335Z",
+ "id": "20261105T0242",
  "rosterSig": "Anthony Davis|Austin Reaves|Brandon Miller|Collin Gillespie|Dillon Brooks|James Harden|Karl-Anthony Towns|Michael Porter Jr.|Miles Bridges|Norman Powell|Rudy Gobert|Shai Gilgeous-Alexander|Tyler Herro#Kyrie Irving",
- "newItems": []
+ "newItems": [
+  2,
+  3
+ ]
 }
