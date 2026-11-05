@@ -2,7 +2,7 @@
  "date": "2026-11-05",
  "week": 3,
  "opp": "Songpa Park Kezhang",
- "status": "pending",
+ "status": "nochange-starters",
  "playing": 3,
  "starters": [
   "Miles Bridges",
@@ -12,42 +12,39 @@
  "bench": [],
  "dtd": [],
  "expected": {
-  "best": 4.904,
-  "current": 4.84,
-  "gain": 0.064,
+  "best": 5.238,
+  "current": 5.238,
+  "gain": 0,
   "pcBest": {
-   "FG": 0.685,
-   "FT": 0.068,
-   "TPM": 0.749,
-   "REB": 0.402,
-   "AST": 0.001,
-   "STL": 0.116,
-   "BLK": 0.108,
-   "TO": 0.824,
-   "DD": 0.554,
-   "PTS": 0.772,
-   "PF": 0.626
+   "FG": 0.564,
+   "FT": 0.161,
+   "TPM": 0.816,
+   "REB": 0.418,
+   "AST": 0,
+   "STL": 0.009,
+   "BLK": 0.363,
+   "TO": 0.981,
+   "DD": 0.504,
+   "PTS": 0.938,
+   "PF": 0.484
   },
   "pcCurrent": {
-   "FG": 0.711,
-   "FT": 0.076,
-   "TPM": 0.66,
-   "REB": 0.306,
+   "FG": 0.564,
+   "FT": 0.161,
+   "TPM": 0.816,
+   "REB": 0.418,
    "AST": 0,
-   "STL": 0.052,
-   "BLK": 0.098,
-   "TO": 0.903,
-   "DD": 0.537,
-   "PTS": 0.651,
-   "PF": 0.845
+   "STL": 0.009,
+   "BLK": 0.363,
+   "TO": 0.981,
+   "DD": 0.504,
+   "PTS": 0.938,
+   "PF": 0.484
   }
  },
  "alternatives": [],
- "currentBench": [
-  "Collin Gillespie",
-  "Dillon Brooks"
- ],
- "sameStarters": false,
+ "currentBench": [],
+ "sameStarters": true,
  "moves": [
   {
    "name": "Shai Gilgeous-Alexander",
@@ -55,24 +52,34 @@
    "to": "G"
   },
   {
-   "name": "Tyler Herro",
+   "name": "James Harden",
    "from": "G",
-   "to": "BE"
+   "to": "SG"
+  },
+  {
+   "name": "Michael Porter Jr.",
+   "from": "SF",
+   "to": "F"
+  },
+  {
+   "name": "Brandon Miller",
+   "from": "F",
+   "to": "UTIL"
   },
   {
    "name": "Norman Powell",
    "from": "SG",
-   "to": "BE"
+   "to": "UTIL"
+  },
+  {
+   "name": "Miles Bridges",
+   "from": "UTIL",
+   "to": "SF"
   },
   {
    "name": "Collin Gillespie",
-   "from": "BE",
+   "from": "UTIL",
    "to": "PG"
-  },
-  {
-   "name": "Dillon Brooks",
-   "from": "BE",
-   "to": "SG"
   }
  ],
  "slots": [
@@ -81,11 +88,11 @@
    "slot": "PG"
   },
   {
-   "name": "Dillon Brooks",
+   "name": "James Harden",
    "slot": "SG"
   },
   {
-   "name": "Michael Porter Jr.",
+   "name": "Miles Bridges",
    "slot": "SF"
   },
   {
@@ -101,20 +108,24 @@
    "slot": "G"
   },
   {
-   "name": "Brandon Miller",
+   "name": "Michael Porter Jr.",
    "slot": "F"
   },
   {
-   "name": "James Harden",
+   "name": "Brandon Miller",
+   "slot": "UTIL"
+  },
+  {
+   "name": "Norman Powell",
+   "slot": "UTIL"
+  },
+  {
+   "name": "Dillon Brooks",
    "slot": "UTIL"
   },
   {
    "name": "Austin Reaves",
-   "slot": "UTIL"
-  },
-  {
-   "name": "Miles Bridges",
-   "slot": "UTIL"
+   "slot": "BE"
   },
   {
    "name": "Tyler Herro",
@@ -123,12 +134,8 @@
   {
    "name": "Rudy Gobert",
    "slot": "BE"
-  },
-  {
-   "name": "Norman Powell",
-   "slot": "BE"
   }
  ],
- "id": "2026-11-05T0544Z",
- "createdAt": "2026-11-05T05:44:24.823Z"
+ "id": "2026-11-05T1014Z",
+ "createdAt": "2026-11-05T10:14:24.949Z"
 }
