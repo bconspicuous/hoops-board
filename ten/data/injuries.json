@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-06T05:19+09:00",
+ "asOf": "2026-11-06T06:44+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -74,32 +74,18 @@
    "long": "Veesaar suffered the injury during a workout on Sept. 15, and an MRI confirmed the diagnosis. The No. 52 overall pick in the 2026 NBA Draft, Veesaar was expected to spend a lot of time with Atlanta's G League affiliate this season."
   },
   {
-   "player": "Jayson Tatum",
-   "team": "BOS",
-   "status": "Day-To-Day",
-   "date": "2026-11-05T14:58Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-06",
-   "detail": null,
-   "side": null,
-   "injury": "Rest",
-   "fantasyStatus": "GTD",
-   "short": "Tatum will be rested Wednesday against the Bucks, Jack Simone of BostonSportsJournal.com reports.",
-   "long": "The writing was on the wall for this one with the Celtics looking to get Tatum some planned rest. There's been no report of an injury, to be clear. Paul George, who is coming off a maintenance day himself, is in line for a big bump in usage Wednesday."
-  },
-  {
    "player": "Payton Pritchard",
    "team": "BOS",
    "status": "Day-To-Day",
-   "date": "2026-11-05T02:56Z",
+   "date": "2026-11-05T21:09Z",
    "type": "day-to-day",
    "returnDate": "2026-11-06",
    "detail": "Abrasion",
    "side": "Right",
    "injury": "Eye",
    "fantasyStatus": "GTD",
-   "short": "Pritchard exited Wednesday's 109-102 win over the Bucks and did not return due to a right eye abrasion, finishing with 10 points (4-7 FG, 2-2 FT), five assists and one rebound across 18 minutes.",
-   "long": "Pritchard was deemed questionable to return but never checked back in. He can be considered questionable for Friday's game at Charlotte, and if he's forced to miss time, Baylor Scheierman and Mike Conley would be candidates for increased playing time."
+   "short": "Pritchard (eye) is questionable for Friday against Charlotte, Taylor Snow of the Celtics' official site reports.",
+   "long": "Pritchard is day-to-day after leaving Wednesday's win over the Bucks early. Meanwhile, Jayson Tatum (rest) has been cleared to return. Guys like Baylor Scheierman and Mike Conley could see more run if Pritchard is unable to give it a go."
   },
   {
    "player": "Devin Carter",
@@ -746,32 +732,32 @@
    "long": "DiVincenzo is approaching six months since tearing his right Achilles during the first round of the playoffs and has been rehabbing with the expectation that he'll play at some point this season. The veteran guard has sought advice from Jayson Tatum, Tyrese Haliburton and Damian Lillard during his recovery, though Minnesota has yet to establish a timetable for his return."
   },
   {
-   "player": "Trey Murphy III",
-   "team": "NO",
-   "status": "Day-To-Day",
-   "date": "2026-11-05T15:02Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-06",
-   "detail": null,
-   "side": null,
-   "injury": "Knee",
-   "fantasyStatus": "GTD",
-   "short": "Murphy (knees) is listed as out for Wednesday's game against Utah.",
-   "long": "Murphy was listed as probable initially. However, after being downgraded to questionable, he will now be sidelined for the first time in 2026-27. With Murphy ruled out, Saddiq Bey and Herbert Jones should see more minutes off the bench."
-  },
-  {
    "player": "Yves Missi",
    "team": "NO",
    "status": "Out",
-   "date": "2026-10-30T21:32Z",
+   "date": "2026-11-05T20:47Z",
    "type": "out",
    "returnDate": "2026-11-08",
    "detail": "Bruise",
    "side": "Left",
    "injury": "Knee",
    "fantasyStatus": "OUT",
-   "short": "Missi (knee) won't play in Saturday's game against Atlanta.",
-   "long": "Missi sustained a bone bruise in his left knee during the 120-119 loss to Utah on Oct. 23. The 22-year-old hasn't played since, and considering he doesn't have a definitive return date, he should be considered week-to-week. Without Missi on the floor, DeAndre Jordan, Derik Queen and Karlo Matkovic could all see more action, though it appears none of them are a lock to take over the interim starting center job at the moment."
+   "short": "Missi (knee) is out for Friday's game against Minnesota.",
+   "long": "Missi has been sidelined since picking up his injury Oct. 23. He remains without a timetable to return."
+  },
+  {
+   "player": "Trey Murphy III",
+   "team": "NO",
+   "status": "Day-To-Day",
+   "date": "2026-11-05T20:19Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-06",
+   "detail": null,
+   "side": null,
+   "injury": "Knee",
+   "fantasyStatus": "GTD",
+   "short": "Murphy (knee) is probable for Friday's game against Minnesota.",
+   "long": "Murphy is expected to keep his absence with a knee injury to a one-game minimum. Herbert Jones is likely to revert back to the bench Friday."
   },
   {
    "player": "Josh Hart",
@@ -984,32 +970,32 @@
    "long": "Hukporti went down with an Achilles injury in Monday's preseason opener against the Knicks, and an MRI has since revealed a rupture. He signed a one-year deal with the 76ers over the summer, so Hukporti will be an unrestricted free agent come season's end. With Hukporti's year already finished, Adem Bona (foot) should assume the backup center role behind Joel Embiid once healthy."
   },
   {
+   "player": "Rasheer Fleming",
+   "team": "PHX",
+   "status": "Out",
+   "date": "2026-11-05T20:22Z",
+   "type": "out",
+   "returnDate": "2026-11-07",
+   "detail": "Sprain",
+   "side": "Left",
+   "injury": "Ankle",
+   "fantasyStatus": "OUT",
+   "short": "Fleming is out for Thursday's game against the Magic due to a sprained left ankle.",
+   "long": "Fleming is missing the back end of this back-to-back set with the injury. His next opportunity to suit up arrives Saturday, when the Suns host the Rockets."
+  },
+  {
    "player": "Jordan Goodwin",
    "team": "PHX",
    "status": "Out",
-   "date": "2026-11-05T20:19Z",
+   "date": "2026-11-05T20:18Z",
    "type": "out",
    "returnDate": "2026-11-07",
    "detail": "Not Specified",
    "side": "Left",
    "injury": "Calf",
    "fantasyStatus": "OUT",
-   "short": "Goodwin (calf) won't play in Wednesday's game against Portland.",
-   "long": "Goodwin suffered a calf injury in Monday's 116-113 loss to the Warriors. His next chance to return will come Thursday versus Orlando. In the meantime, Luke Kennard could be on the floor more than usual."
-  },
-  {
-   "player": "Rasheer Fleming",
-   "team": "PHX",
-   "status": "Day-To-Day",
-   "date": "2026-11-05T15:04Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-05",
-   "detail": "Sprain",
-   "side": "Left",
-   "injury": "Ankle",
-   "fantasyStatus": "GTD",
-   "short": "Fleming is out for Wednesday's game against the Trail Blazers due to a sprained left ankle.",
-   "long": "Fleming is missing the front end of this back-to-back set with the injury. His next opportunity to suit up arrives Thursday, when the Suns host the Magic."
+   "short": "Goodwin (calf) is out for Thursday's game against Orlando.",
+   "long": "Goodwin will miss his second game in a row for the Suns. In his absence Wednesday, Ryan Dunn and Luke Kennard saw minutes in the teens off the Phoenix bench."
   },
   {
    "player": "Mark Williams",
