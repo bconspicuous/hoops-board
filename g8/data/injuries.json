@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-05T11:41+09:00",
+ "asOf": "2026-11-05T14:42+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -77,15 +77,15 @@
    "player": "Payton Pritchard",
    "team": "BOS",
    "status": "Day-To-Day",
-   "date": "2026-11-05T02:25Z",
+   "date": "2026-11-05T02:56Z",
    "type": "day-to-day",
-   "returnDate": "2026-11-04",
+   "returnDate": "2026-11-06",
    "detail": "Abrasion",
    "side": "Right",
    "injury": "Eye",
    "fantasyStatus": "GTD",
-   "short": "Pritchard is questionable to return to Wednesday's game against the Bucks due to a right eye abrasion.",
-   "long": "Pritchard logged just over 18 minutes before heading back to the locker room with the eye injury. If he's unable to return in the final quarter, Baylor Scheierman would likely see increased playing time."
+   "short": "Pritchard exited Wednesday's 109-102 win over the Bucks and did not return due to a right eye abrasion, finishing with 10 points (4-7 FG, 2-2 FT), five assists and one rebound across 18 minutes.",
+   "long": "Pritchard was deemed questionable to return but never checked back in. He can be considered questionable for Friday's game at Charlotte, and if he's forced to miss time, Baylor Scheierman and Mike Conley would be candidates for increased playing time."
   },
   {
    "player": "Devin Carter",
@@ -200,6 +200,20 @@
    "long": "Williams has yet to make his season debut due to a right hamstring strain. However, he appears to be making progress after joining the Swarm for practice Wednesday."
   },
   {
+   "player": "Zach Collins",
+   "team": "CHI",
+   "status": "Day-To-Day",
+   "date": "2026-11-05T03:04Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-08",
+   "detail": null,
+   "side": null,
+   "injury": "Undisclosed",
+   "fantasyStatus": "GTD",
+   "short": "Collins (undisclosed) exited to the locker room in the fourth quarter of Wednesday's 135-105 loss to the Knicks, finishing with three points (1-4 FG, 0-2 3Pt, 1-1 FT), three assists, one rebound and one steal across 14 minutes.",
+   "long": "Collins headed back to the locker room with a trainer and did not return. He can be considered questionable for Sunday's game against the Sixers until the Bulls offer an update on his status. If the big man is forced to miss time, Leonard Miller could see increased burn."
+  },
+  {
    "player": "Jalen Smith",
    "team": "CHI",
    "status": "Day-To-Day",
@@ -231,15 +245,29 @@
    "player": "Jarrett Allen",
    "team": "CLE",
    "status": "Day-To-Day",
-   "date": "2026-11-05T01:54Z",
+   "date": "2026-11-05T03:36Z",
    "type": "day-to-day",
-   "returnDate": "2026-11-04",
+   "returnDate": "2026-11-06",
    "detail": null,
    "side": "Right",
    "injury": "Knee",
    "fantasyStatus": "GTD",
-   "short": "Allen (knee) is doubtful to return to Wednesday's game against the Thunder, Brett Siegel of ClutchPoints.com reports.",
-   "long": "Allen suffered a right knee injury late in the first quarter and is not expected to check back in. Thomas Bryant figures to see increased burn while Allen is sidelined."
+   "short": "Allen (knee) exited to the locker room in the first quarter of Wednesday's 124-116 loss to the Thunder and did not return, finishing with zero points (0-1 FG) and one rebound in seven minutes.",
+   "long": "Allen exited to the locker room with a right knee injury. The big man was deemed doubtful to return and did not check back in. If he needs to miss time, Thomas Bryant would likely see increased playing time behind Evan Mobley. Mario Hezonja could also see an uptick in minutes."
+  },
+  {
+   "player": "Tyrese Proctor",
+   "team": "CLE",
+   "status": "Day-To-Day",
+   "date": "2026-11-05T03:32Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-06",
+   "detail": null,
+   "side": null,
+   "injury": "Ankle",
+   "fantasyStatus": "GTD",
+   "short": "Proctor exited Wednesday's 124-116 loss to the Thunder in the fourth quarter and did not return due to an apparent ankle injury, finishing with 11 points (4-7 FG, 2-3 3Pt, 1-1 FT), one rebound and one steal across 22 minutes.",
+   "long": "Proctor got the starting nod for the first time this season and for just the second time in his career. He turned in a respectable performance on the offensive end but exited to the locker room late in the fourth quarter. The second-year guard can be considered questionable for Friday's game against the Sixers until Cleveland provides an update on his status. If Proctor needs to miss time, Meleek Thomas and Craig Porter could see increased burn."
   },
   {
    "player": "Jaylon Tyson",
@@ -634,6 +662,20 @@
    "long": "Thiero is practicing with the G League club amid his knee recovery. He appears to be close to being cleared for his season debut with the Lakers."
   },
   {
+   "player": "Isaiah Stewart",
+   "team": "MEM",
+   "status": "Day-To-Day",
+   "date": "2026-11-05T03:40Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-06",
+   "detail": null,
+   "side": "Right",
+   "injury": "Knee",
+   "fantasyStatus": "GTD",
+   "short": "Stewart (knee) exited Wednesday's 107-103 loss to the Pacers and did not return, finishing with six points (3-4 FG) and one rebound in 10 minutes.",
+   "long": "Stewart was deemed doubtful to return and never checked back in. His next chance to suit up will come Friday against the Thunder. If the big man needs to miss time, Quinten Post would likely see an uptick in minutes."
+  },
+  {
    "player": "Scotty Pippen Jr.",
    "team": "MEM",
    "status": "Out",
@@ -903,15 +945,15 @@
    "player": "Adem Bona",
    "team": "PHI",
    "status": "Day-To-Day",
-   "date": "2026-11-05T02:23Z",
+   "date": "2026-11-05T03:01Z",
    "type": "day-to-day",
-   "returnDate": "2026-11-04",
+   "returnDate": "2026-11-06",
    "detail": null,
    "side": null,
    "injury": "Head",
    "fantasyStatus": "GTD",
-   "short": "Bona exited to the locker room in the fourth quarter of Wednesday's game against Detroit due to an apparent head injury, Kris Rhim of ESPN reports.",
-   "long": "Bona briefly remained in the game before heading back to the locker room with trainers. The big man can be considered questionable to return until more information comes to light."
+   "short": "Bona exited Wednesday's 112-106 win over the Pistons in the fourth quarter and did not return due to an apparent head injury, finishing with five points (2-4 FG, 1-1 FT), two rebounds, one assist and one steal across 15 minutes.",
+   "long": "Bona headed back to the locker room with trainers and never checked back in. The big man can be considered questionable ahead of Friday's game at Cleveland."
   },
   {
    "player": "Dominick Barlow",
@@ -982,6 +1024,20 @@
    "fantasyStatus": "OUT",
    "short": "Williams underwent surgery Thursday to repair a torn labrum in his left shoulder and will miss an extended period of time, Shams Charania of ESPN reports.",
    "long": "This is a tough blow for the center with training camp right around the corner. With his status for Opening Night in jeopardy, this will put a lot of eyes on Oso Ighodaro and Khaman Maluach, with the latter already drawing buzz during the Summer League. More clarity on Williams' timeline should be known in the coming weeks."
+  },
+  {
+   "player": "Vit Krejci",
+   "team": "POR",
+   "status": "Out",
+   "date": "2026-11-05T05:17Z",
+   "type": "out",
+   "returnDate": "2027-01-02",
+   "detail": null,
+   "side": "Left",
+   "injury": "Ankle",
+   "fantasyStatus": "OUT",
+   "short": "Head coach Micah Nori said that Krejci suffered a left leg fracture during Wednesday's 132-119 win over the Suns, Brett Siegel of ClutchPoints.com reports.",
+   "long": "Nori did not provide a timetable for Krejci, but it's safe to say that he won't be back soon. His minutes figure to be divvied up amongst Chris Youngblood and Sidy Cissoko."
   },
   {
    "player": "Ja Morant",
