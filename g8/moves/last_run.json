@@ -1,7 +1,7 @@
 {
- "planId": "20261104T1443",
+ "planId": "20261105T0242",
  "mode": "dry",
- "at": "2026-11-04T09:44-05:00",
+ "at": "2026-11-04T21:43-05:00",
  "items": [
   {
    "n": 1,
@@ -25,7 +25,7 @@
    ],
    "ok": true,
    "add": {
-    "name": "Jrue Holiday",
+    "name": "Alex Sarr",
     "status": "FREEAGENT"
    },
    "drop": "Dillon Brooks",
@@ -39,7 +39,7 @@
    ],
    "ok": true,
    "add": {
-    "name": "Santi Aldama",
+    "name": "P.J. Washington",
     "status": "FREEAGENT"
    },
    "drop": "Dillon Brooks",
