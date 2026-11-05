@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-05T13:45+09:00",
+ "asOf": "2026-11-05T16:27+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -1029,15 +1029,15 @@
    "player": "Vit Krejci",
    "team": "POR",
    "status": "Out",
-   "date": "2026-11-05T04:12Z",
+   "date": "2026-11-05T05:17Z",
    "type": "out",
-   "returnDate": "2026-11-06",
+   "returnDate": "2027-01-02",
    "detail": null,
    "side": "Left",
    "injury": "Ankle",
    "fantasyStatus": "OUT",
-   "short": "Krejci won't return to Wednesday's game against the Suns due to a left ankle injury.",
-   "long": "The extent of Krejci's ankle injury isn't yet clear, but for now, he should be considered questionable for Friday's game against the Lakers. If Krejci needs to miss time, Sidy Cissoko could pick up some extra minutes."
+   "short": "Head coach Micah Nori said that Krejci suffered a left leg fracture during Wednesday's 132-119 win over the Suns, Brett Siegel of ClutchPoints.com reports.",
+   "long": "Nori did not provide a timetable for Krejci, but it's safe to say that he won't be back soon. His minutes figure to be divvied up amongst Chris Youngblood and Sidy Cissoko."
   },
   {
    "player": "Ja Morant",
