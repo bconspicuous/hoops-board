@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-05T16:25+09:00",
+ "asOf": "2026-11-05T19:12+09:00",
  "leagueId": "751654965",
  "season": 2027,
  "teams": [
@@ -51,17 +51,18 @@
     "Stephen Curry",
     "Evan Mobley",
     "Lauri Markkanen",
-    "Trey Murphy III",
     "Onyeka Okongwu",
     "De'Aaron Fox",
     "Brandin Podziemski",
     "Immanuel Quickley",
     "Myles Turner",
     "Cedric Coward",
-    "Isaiah Jackson"
+    "De'Anthony Melton",
+    "Klay Thompson"
    ],
    "ir": [
-    "Jalen Williams"
+    "Jalen Williams",
+    "Trey Murphy III"
    ],
    "record": {
     "wins": 10,
@@ -72,9 +73,9 @@
    "acqByPeriod": {
     "1": 4,
     "2": 6,
-    "3": 1
+    "3": 2
    },
-   "acqTotal": 11
+   "acqTotal": 12
   },
   {
    "name": "Garak Twindragons",
@@ -125,12 +126,12 @@
     "Desmond Bane",
     "Franz Wagner",
     "Dyson Daniels",
-    "Josh Hart",
     "Isaiah Hartenstein",
     "Grayson Allen",
     "Reed Sheppard",
     "Duncan Robinson",
-    "Saddiq Bey"
+    "Saddiq Bey",
+    "P.J. Washington"
    ],
    "ir": [
     "Chet Holmgren"
@@ -143,9 +144,9 @@
    },
    "acqByPeriod": {
     "2": 2,
-    "3": 2
+    "3": 3
    },
-   "acqTotal": 4
+   "acqTotal": 5
   },
   {
    "name": "ChaRDaddy",
@@ -226,7 +227,6 @@
    "espnId": 7,
    "me": false,
    "players": [
-    "Jalen Johnson",
     "Bam Adebayo",
     "Josh Giddey",
     "Jamal Murray",
@@ -238,9 +238,11 @@
     "Payton Pritchard",
     "Paul George",
     "CJ McCollum",
-    "Anthony Black"
+    "Anthony Black",
+    "Jalen Green"
    ],
    "ir": [
+    "Jalen Johnson",
     "Tyrese Haliburton"
    ],
    "record": {
@@ -250,9 +252,10 @@
     "percentage": 0.5227272727272727
    },
    "acqByPeriod": {
-    "2": 2
+    "2": 2,
+    "3": 1
    },
-   "acqTotal": 2
+   "acqTotal": 3
   },
   {
    "name": "Brand_New_Neo_HJ",
@@ -260,22 +263,22 @@
    "espnId": 8,
    "me": false,
    "players": [
-    "Jayson Tatum",
     "Cooper Flagg",
     "LaMelo Ball",
     "Kevin Durant",
     "Ty Jerome",
+    "Ivica Zubac",
     "Donovan Clingan",
     "Jaden McDaniels",
     "Yaxel Lendeborg",
     "Kyshawn George",
     "Ajay Mitchell",
     "Davion Mitchell",
-    "Kel'el Ware",
-    "Andrew Nembhard"
+    "Andrew Nembhard",
+    "Derik Queen"
    ],
    "ir": [
-    "Ivica Zubac",
+    "Jayson Tatum",
     "Brandon Ingram"
    ],
    "record": {
@@ -299,7 +302,6 @@
    "Jalen Williams",
    "Trey Murphy III",
    "Chet Holmgren",
-   "Josh Hart",
    "Ja Morant",
    "Nic Claxton",
    "Anthony Edwards",
@@ -310,6 +312,7 @@
    "Tyrese Haliburton",
    "Jayson Tatum",
    "Brandon Ingram",
+   "Josh Hart",
    "Jaren Jackson Jr.",
    "DeMar DeRozan",
    "Tobias Harris",
@@ -321,8 +324,8 @@
    "Jalen Suggs",
    "Scotty Pippen Jr.",
    "Cason Wallace",
-   "Terrence Shannon Jr.",
    "T.J. McConnell",
+   "Terrence Shannon Jr.",
    "Jusuf Nurkic",
    "Shaedon Sharpe",
    "Mark Williams",
