@@ -1,56 +1,51 @@
 {
- "planId": "2026-11-04T0543Z",
+ "planId": "2026-11-05T0544Z",
  "mode": "dry",
- "date": "2026-11-04",
- "at": "2026-11-04T00:44-05:00",
- "moves": [
+ "date": "2026-11-05",
+ "at": "2026-11-05T00:44-05:00",
+ "moves": [],
+ "skipped": [
   {
    "name": "Shai Gilgeous-Alexander",
    "from": "PG",
-   "to": "UTIL"
+   "to": "G",
+   "why": "game started / locked"
   },
   {
-   "name": "James Harden",
+   "name": "Tyler Herro",
    "from": "G",
-   "to": "BE"
-  },
-  {
-   "name": "Austin Reaves",
-   "from": "UTIL",
-   "to": "BE"
-  },
-  {
-   "name": "Brandon Miller",
-   "from": "F",
-   "to": "SG"
+   "to": "BE",
+   "why": "game started / locked"
   },
   {
    "name": "Norman Powell",
    "from": "SG",
-   "to": "G"
-  },
-  {
-   "name": "Miles Bridges",
-   "from": "BE",
-   "to": "F"
+   "to": "BE",
+   "why": "game started / locked"
   },
   {
    "name": "Collin Gillespie",
    "from": "BE",
-   "to": "PG"
+   "to": "PG",
+   "why": "game started / locked"
+  },
+  {
+   "name": "Dillon Brooks",
+   "from": "BE",
+   "to": "SG",
+   "why": "game started / locked"
   }
  ],
- "skipped": [],
  "ok": true,
- "scoringPeriodId": 15,
+ "scoringPeriodId": 16,
  "finalLineup": [
   [
    "PG",
-   "Collin Gillespie"
+   "Shai Gilgeous-Alexander"
   ],
   [
    "SG",
-   "Brandon Miller"
+   "Norman Powell"
   ],
   [
    "SF",
@@ -66,31 +61,31 @@
   ],
   [
    "G",
-   "Norman Powell"
-  ],
-  [
-   "F",
-   "Miles Bridges"
-  ],
-  [
-   "UTIL",
-   "Shai Gilgeous-Alexander"
-  ],
-  [
-   "UTIL",
    "Tyler Herro"
   ],
   [
+   "F",
+   "Brandon Miller"
+  ],
+  [
    "UTIL",
+   "James Harden"
+  ],
+  [
+   "UTIL",
+   "Austin Reaves"
+  ],
+  [
+   "UTIL",
+   "Miles Bridges"
+  ],
+  [
+   "BE",
    "Rudy Gobert"
   ],
   [
    "BE",
-   "James Harden"
-  ],
-  [
-   "BE",
-   "Austin Reaves"
+   "Collin Gillespie"
   ],
   [
    "BE",
