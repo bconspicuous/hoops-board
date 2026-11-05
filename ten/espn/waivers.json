@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-05T06:44+09:00",
+ "asOf": "2026-11-05T13:45+09:00",
  "scoringPeriodId": 16,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -22,7 +22,7 @@
    "team": "KWNG",
    "name": "Saving PakPaks",
    "rank": 1,
-   "acq": 2
+   "acq": 3
   },
   {
    "team": "GGAM",
@@ -34,7 +34,7 @@
    "team": "TBG",
    "name": "Team Bbang Guns",
    "rank": 3,
-   "acq": 8
+   "acq": 9
   },
   {
    "team": "IYH",
@@ -131,49 +131,43 @@
  ],
  "transactions": [
   {
-   "id": "130bf8a7-fa14-4e72-a4f3-a7aefcadc0d0",
-   "team": "KWNG",
+   "id": "ba1962ae-bed6-48ea-b2b4-190edbf9c94a",
+   "team": "TBG",
    "mine": false,
-   "type": "WAIVER",
-   "status": "FAILED_INVALIDPLAYERSOURCE",
-   "proposed": "2026-11-04 17:03 KST",
-   "processed": "2026-11-04 17:03 KST",
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-05 12:50 KST",
+   "processed": null,
    "items": [
     {
      "type": "ADD",
-     "player": "OG Anunoby",
+     "player": "5144091",
      "from": "FA",
-     "to": "KWNG"
+     "to": "TBG"
     },
     {
      "type": "DROP",
-     "player": "Aaron Wiggins",
-     "from": "KWNG",
+     "player": "John Collins",
+     "from": "TBG",
      "to": "FA"
     }
    ],
    "bid": 0
   },
   {
-   "id": "5deeadd2-7694-47aa-8ea2-bb73a72bd857",
-   "team": "KOO",
+   "id": "a6a2f8ab-3070-4822-8b2e-07edd436d86f",
+   "team": "KWNG",
    "mine": false,
-   "type": "WAIVER",
-   "status": "FAILED_INVALIDPLAYERSOURCE",
-   "proposed": "2026-11-04 17:03 KST",
-   "processed": "2026-11-04 17:03 KST",
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-05 08:13 KST",
+   "processed": null,
    "items": [
     {
      "type": "ADD",
-     "player": "OG Anunoby",
+     "player": "Saddiq Bey",
      "from": "FA",
-     "to": "KOO"
-    },
-    {
-     "type": "DROP",
-     "player": "Matisse Thybulle",
-     "from": "KOO",
-     "to": "FA"
+     "to": "KWNG"
     }
    ],
    "bid": 0
@@ -197,30 +191,6 @@
      "type": "DROP",
      "player": "Zaccharie Risacher",
      "from": "GTD",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "0997aebd-4b0d-4f5c-a42b-53bc92951ec9",
-   "team": "TBG",
-   "mine": false,
-   "type": "WAIVER",
-   "status": "FAILED_INVALIDPLAYERSOURCE",
-   "proposed": "2026-11-04 17:03 KST",
-   "processed": "2026-11-04 17:03 KST",
-   "items": [
-    {
-     "type": "ADD",
-     "player": "OG Anunoby",
-     "from": "FA",
-     "to": "TBG"
-    },
-    {
-     "type": "DROP",
-     "player": "John Collins",
-     "from": "TBG",
      "to": "FA"
     }
    ],
@@ -269,6 +239,78 @@
      "type": "DROP",
      "player": "Tobias Harris",
      "from": "JYP",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "130bf8a7-fa14-4e72-a4f3-a7aefcadc0d0",
+   "team": "KWNG",
+   "mine": false,
+   "type": "WAIVER",
+   "status": "FAILED_INVALIDPLAYERSOURCE",
+   "proposed": "2026-11-04 17:03 KST",
+   "processed": "2026-11-04 17:03 KST",
+   "items": [
+    {
+     "type": "ADD",
+     "player": "OG Anunoby",
+     "from": "FA",
+     "to": "KWNG"
+    },
+    {
+     "type": "DROP",
+     "player": "Aaron Wiggins",
+     "from": "KWNG",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "5deeadd2-7694-47aa-8ea2-bb73a72bd857",
+   "team": "KOO",
+   "mine": false,
+   "type": "WAIVER",
+   "status": "FAILED_INVALIDPLAYERSOURCE",
+   "proposed": "2026-11-04 17:03 KST",
+   "processed": "2026-11-04 17:03 KST",
+   "items": [
+    {
+     "type": "ADD",
+     "player": "OG Anunoby",
+     "from": "FA",
+     "to": "KOO"
+    },
+    {
+     "type": "DROP",
+     "player": "Matisse Thybulle",
+     "from": "KOO",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "0997aebd-4b0d-4f5c-a42b-53bc92951ec9",
+   "team": "TBG",
+   "mine": false,
+   "type": "WAIVER",
+   "status": "FAILED_INVALIDPLAYERSOURCE",
+   "proposed": "2026-11-04 17:03 KST",
+   "processed": "2026-11-04 17:03 KST",
+   "items": [
+    {
+     "type": "ADD",
+     "player": "OG Anunoby",
+     "from": "FA",
+     "to": "TBG"
+    },
+    {
+     "type": "DROP",
+     "player": "John Collins",
+     "from": "TBG",
      "to": "FA"
     }
    ],
@@ -996,6 +1038,17 @@
   }
  ],
  "onWaivers": [
+  {
+   "id": 3908845,
+   "name": "John Collins",
+   "pro": "DET",
+   "waiverClears": "2026-11-06 17:00 KST",
+   "inj": "ACTIVE",
+   "droppedBy": {
+    "by": "TBG",
+    "at": "2026-11-05 12:50 KST"
+   }
+  },
   {
    "id": 6440,
    "name": "Tobias Harris",
