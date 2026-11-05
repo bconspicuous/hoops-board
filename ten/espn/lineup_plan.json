@@ -2,7 +2,7 @@
  "date": "2026-11-05",
  "scoringPeriodId": 17,
  "hash": "409aaf5773",
- "createdKST": "2026-11-05T19:48+09:00",
+ "createdKST": "2026-11-06T06:48+09:00",
  "mode": "plan",
  "moves": [],
  "lineup": [
@@ -72,15 +72,6 @@
   {
    "slot": "UTIL",
    "cur": "UTIL",
-   "name": "Josh Hart",
-   "pro": "NYK",
-   "game": false,
-   "inj": "OUT",
-   "out": true
-  },
-  {
-   "slot": "UTIL",
-   "cur": "UTIL",
    "name": "Andrew Nembhard",
    "pro": "IND",
    "game": false,
@@ -92,6 +83,15 @@
    "cur": "UTIL",
    "name": "Daniel Gafford",
    "pro": "DAL",
+   "game": false,
+   "inj": "ACTIVE",
+   "out": false
+  },
+  {
+   "slot": "UTIL",
+   "cur": "UTIL",
+   "name": "Grayson Allen",
+   "pro": "CHA",
    "game": false,
    "inj": "ACTIVE",
    "out": false
@@ -117,10 +117,10 @@
   {
    "slot": "BE",
    "cur": "BE",
-   "name": "Grayson Allen",
-   "pro": "CHA",
+   "name": "Josh Hart",
+   "pro": "NYK",
    "game": false,
-   "inj": "ACTIVE",
+   "inj": "DAY_TO_DAY",
    "out": false
   }
  ],
