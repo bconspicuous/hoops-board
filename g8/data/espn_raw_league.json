@@ -30,7 +30,7 @@
   "previousSeasons": [],
   "standingsUpdateDate": 1793782620175,
   "teamsJoined": 8,
-  "transactionScoringPeriod": 16,
+  "transactionScoringPeriod": 17,
   "waiverLastExecutionDate": 1793782620145,
   "waiverProcessStatus": {
    "2026-10-18T07:35:08.893+00:00": 2,
@@ -41,7 +41,7 @@
  },
  "samplePlayer": {
   "fullName": "Giannis Antetokounmpo",
-  "injuryStatus": "DAY_TO_DAY",
+  "injuryStatus": "ACTIVE",
   "stats": [
    {
     "averageStats": {

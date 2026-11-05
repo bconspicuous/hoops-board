@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-05T05:42+09:00",
+ "asOf": "2026-11-05T11:41+09:00",
  "leagueId": "751654965",
  "season": 2027,
  "teams": [
@@ -71,9 +71,10 @@
    },
    "acqByPeriod": {
     "1": 4,
-    "2": 6
+    "2": 6,
+    "3": 1
    },
-   "acqTotal": 10
+   "acqTotal": 11
   },
   {
    "name": "Garak Twindragons",
@@ -189,11 +190,11 @@
    "espnId": 6,
    "me": false,
    "players": [
-    "Anthony Edwards",
     "Cade Cunningham",
     "Kawhi Leonard",
     "Walker Kessler",
     "Darius Garland",
+    "Kon Knueppel",
     "OG Anunoby",
     "Matas Buzelis",
     "Cameron Boozer",
@@ -204,8 +205,8 @@
     "Christian Braun"
    ],
    "ir": [
-    "Jalen Duren",
-    "Kon Knueppel"
+    "Anthony Edwards",
+    "Jalen Duren"
    ],
    "record": {
     "wins": 8,
@@ -296,6 +297,7 @@
    "Paolo Banchero",
    "Yves Missi",
    "Jalen Williams",
+   "Trey Murphy III",
    "Chet Holmgren",
    "Josh Hart",
    "Ja Morant",
@@ -303,11 +305,13 @@
    "Anthony Edwards",
    "Jalen Duren",
    "Kawhi Leonard",
+   "Kon Knueppel",
+   "Jalen Johnson",
    "Tyrese Haliburton",
    "Jayson Tatum",
-   "Ivica Zubac",
    "Brandon Ingram",
    "Jaren Jackson Jr.",
+   "DeMar DeRozan",
    "Tobias Harris",
    "Peyton Watson",
    "Kristaps Porzingis",
@@ -315,8 +319,6 @@
    "Egor Demin",
    "Jimmy Butler III",
    "Jalen Suggs",
-   "Obi Toppin",
-   "Jordan Poole",
    "Scotty Pippen Jr.",
    "Terrence Shannon Jr.",
    "Cason Wallace",
@@ -326,38 +328,30 @@
    "Mark Williams",
    "Santi Aldama",
    "Dereck Lively II",
+   "Kelly Oubre Jr.",
    "Jaylon Tyson",
+   "Jaylin Williams",
    "Max Christie",
    "Donte DiVincenzo",
+   "Jordan Goodwin",
    "Bradley Beal",
    "Maxime Raynaud",
    "Justin Champagnie",
+   "Gui Santos",
    "Ben Simmons",
    "Isaiah Joe",
    "Jock Landale",
-   "Clint Capela",
-   "Sergio de Larrea"
+   "Sergio de Larrea",
+   "Clint Capela"
   ],
   "DTD": [
-   "Giannis Antetokounmpo",
-   "Trey Murphy III",
-   "Isaiah Jackson",
-   "Jalen Johnson",
+   "Jarrett Allen",
    "Payton Pritchard",
-   "Alex Sarr",
-   "Coby White",
-   "Jakob Poeltl",
-   "Precious Achiuwa",
    "Jalen Smith",
-   "Cameron Johnson",
-   "Bilal Coulibaly",
-   "Kelly Oubre Jr.",
-   "Mo Bamba",
-   "Jaylin Williams",
-   "Jordan Goodwin",
-   "Brandon Williams",
-   "Al Horford",
-   "Gui Santos"
+   "Day'Ron Sharpe",
+   "Isaiah Stewart",
+   "Adem Bona",
+   "Noah Clowney"
   ]
  }
 }
