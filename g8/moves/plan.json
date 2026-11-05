@@ -7,8 +7,8 @@
  ],
  "base": {
   "wk": 5.237,
-  "champ": 0.0291,
-  "p1": 0.0296,
+  "champ": 0.029,
+  "p1": 0.0295,
   "epct": 0.5207
  },
  "protect": [
@@ -42,9 +42,9 @@
    "drop": "Dillon Brooks",
    "ir": null,
    "weekGain": 0.493,
-   "titleGain": 0.0911,
-   "p1Gain": 0.1534,
-   "epctGain": 0.0315,
+   "titleGain": 0.0938,
+   "p1Gain": 0.157,
+   "epctGain": 0.0321,
    "addTeam": "POR",
    "addPos": "C",
    "dropValue": -5.68,
@@ -72,8 +72,8 @@
    "drop": "Dillon Brooks",
    "ir": null,
    "weekGain": 0.359,
-   "titleGain": 0.0118,
-   "p1Gain": 0.0184,
+   "titleGain": 0.0116,
+   "p1Gain": 0.0183,
    "epctGain": 0.0064,
    "addTeam": "DAL",
    "addPos": "SF,PF",
@@ -102,7 +102,7 @@
    "drop": "Dillon Brooks",
    "ir": null,
    "weekGain": 0.356,
-   "titleGain": 0.0115,
+   "titleGain": 0.0118,
    "p1Gain": 0.0188,
    "epctGain": 0.0056,
    "addTeam": "SAC",
@@ -129,8 +129,8 @@
    "ir": "Kyrie Irving",
    "drop": "Dillon Brooks",
    "weekGain": 0.302,
-   "titleGain": 0.0343,
-   "p1Gain": 0.0496,
+   "titleGain": 0.0345,
+   "p1Gain": 0.0492,
    "epctGain": 0.0144,
    "dropValue": -5.68,
    "status": "rejected",
@@ -153,46 +153,46 @@
    "drop": "Dillon Brooks",
    "ir": null,
    "wk": 0.493,
-   "title": 0.0911
+   "title": 0.0938
   },
   {
    "add": "Santi Aldama",
    "drop": "Dillon Brooks",
    "ir": null,
    "wk": 0.359,
-   "title": 0.0118
+   "title": 0.0116
   },
   {
    "add": "Precious Achiuwa",
    "drop": "Dillon Brooks",
    "ir": null,
    "wk": 0.356,
-   "title": 0.0115
+   "title": 0.0118
   },
   {
    "add": "Kel'el Ware",
    "drop": "Dillon Brooks",
    "ir": null,
    "wk": 0.376,
-   "title": 0.0074
+   "title": 0.0075
   },
   {
    "add": "Alex Caruso",
    "drop": "Dillon Brooks",
    "ir": null,
    "wk": 0.323,
-   "title": 0.0061
+   "title": 0.0065
   },
   {
    "add": "Jaime Jaquez Jr.",
    "drop": "Dillon Brooks",
    "ir": null,
    "wk": 0.32,
-   "title": 0.0042
+   "title": 0.0036
   }
  ],
- "createdAt": "2026-11-05T14:43:44.046Z",
- "id": "20261105T1443",
+ "createdAt": "2026-11-05T20:42:53.339Z",
+ "id": "20261105T2042",
  "rosterSig": "Anthony Davis|Austin Reaves|Brandon Miller|Collin Gillespie|Dillon Brooks|James Harden|Karl-Anthony Towns|Michael Porter Jr.|Miles Bridges|Norman Powell|Rudy Gobert|Shai Gilgeous-Alexander|Tyler Herro#Kyrie Irving",
  "newItems": []
 }
