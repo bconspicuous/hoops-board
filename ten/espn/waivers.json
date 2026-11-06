@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-06T06:44+09:00",
+ "asOf": "2026-11-06T13:44+09:00",
  "scoringPeriodId": 17,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -64,7 +64,7 @@
    "team": "SMS",
    "name": "Samseong Homeless",
    "rank": 8,
-   "acq": 6
+   "acq": 7
   },
   {
    "team": "JYP",
@@ -154,6 +154,30 @@
   }
  ],
  "transactions": [
+  {
+   "id": "79dad690-ac8d-4d78-b913-5ca89bee94cf",
+   "team": "SMS",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-06 08:40 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Draymond Green",
+     "from": "FA",
+     "to": "SMS"
+    },
+    {
+     "type": "DROP",
+     "player": "Jarace Walker",
+     "from": "SMS",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
   {
    "id": "74090834-c304-4165-ba48-dee22e8c7a41",
    "team": "GTD",
@@ -1073,7 +1097,7 @@
    "name": "Kon Knueppel",
    "pro": "CHA",
    "waiverClears": "2026-11-06 17:00 KST",
-   "inj": "DAY_TO_DAY",
+   "inj": "OUT",
    "droppedBy": {
     "by": "JYP",
     "at": "2026-11-05 15:57 KST"
@@ -1121,6 +1145,17 @@
    "droppedBy": {
     "by": "GTD",
     "at": "2026-11-05 17:15 KST"
+   }
+  },
+  {
+   "id": 5106060,
+   "name": "Jarace Walker",
+   "pro": "IND",
+   "waiverClears": "2026-11-07 17:00 KST",
+   "inj": "ACTIVE",
+   "droppedBy": {
+    "by": "SMS",
+    "at": "2026-11-06 08:40 KST"
    }
   }
  ],
