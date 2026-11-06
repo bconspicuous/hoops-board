@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-06T19:45+09:00",
+ "asOf": "2026-11-07T04:43+09:00",
  "scoringPeriodId": 18,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -40,7 +40,7 @@
    "team": "IYH",
    "name": "Jongno Karina",
    "rank": 4,
-   "acq": 7
+   "acq": 8
   },
   {
    "team": "Doo",
@@ -154,6 +154,30 @@
   }
  ],
  "transactions": [
+  {
+   "id": "e915767c-8c62-4160-967b-cef831524baa",
+   "team": "IYH",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-07 01:40 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Neemias Queta",
+     "from": "FA",
+     "to": "IYH"
+    },
+    {
+     "type": "DROP",
+     "player": "De'Anthony Melton",
+     "from": "IYH",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
   {
    "id": "79dad690-ac8d-4d78-b913-5ca89bee94cf",
    "team": "SMS",
@@ -1020,6 +1044,17 @@
   }
  ],
  "onWaivers": [
+  {
+   "id": 4066436,
+   "name": "De'Anthony Melton",
+   "pro": "GSW",
+   "waiverClears": "2026-11-08 17:00 KST",
+   "inj": "ACTIVE",
+   "droppedBy": {
+    "by": "IYH",
+    "at": "2026-11-07 01:40 KST"
+   }
+  },
   {
    "id": 5106060,
    "name": "Jarace Walker",

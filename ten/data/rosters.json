@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-06T19:45+09:00",
+ "asOf": "2026-11-07T04:43+09:00",
  "leagueId": "504060248",
  "season": 2027,
  "teams": [
@@ -19,9 +19,9 @@
     "Collin Murray-Boyles",
     "Ace Bailey",
     "Rudy Gobert",
-    "De'Anthony Melton",
     "Collin Gillespie",
-    "Jalen Green"
+    "Jalen Green",
+    "Neemias Queta"
    ],
    "ir": [
     "Jaren Jackson Jr."
@@ -34,15 +34,15 @@
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
-    "acquisitions": 7,
-    "drops": 6,
+    "acquisitions": 8,
+    "drops": 7,
     "matchupAcquisitionTotals": {
      "1": 2,
      "2": 3,
-     "3": 2
+     "3": 3
     },
     "misc": 0,
-    "moveToActive": 89,
+    "moveToActive": 90,
     "moveToIR": 3,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -471,6 +471,7 @@
    "Nic Claxton",
    "Tyrese Haliburton",
    "Jalen Duren",
+   "Moussa Diabate",
    "Anthony Edwards",
    "Kawhi Leonard",
    "Kon Knueppel",
@@ -488,9 +489,11 @@
    "Cason Wallace",
    "T.J. McConnell",
    "Jusuf Nurkic",
+   "Terrence Shannon Jr.",
    "Shaedon Sharpe",
    "Santi Aldama",
    "Mark Williams",
+   "Dennis Schroder",
    "Dereck Lively II",
    "Isaiah Stewart",
    "Jaylon Tyson",
@@ -501,8 +504,8 @@
    "Justin Champagnie",
    "Ben Simmons",
    "Isaiah Joe",
-   "Jock Landale",
    "Sergio de Larrea",
+   "Jock Landale",
    "Vit Krejci",
    "Yanic Konan Niederhauser",
    "Jayden Quaintance",
@@ -511,26 +514,24 @@
   ],
   "DTD": [
    "Scottie Barnes",
+   "Jakob Poeltl",
    "Anthony Davis",
-   "Moussa Diabate",
+   "Kyrie Irving",
+   "Immanuel Quickley",
    "Josh Hart",
    "Jalen Johnson",
    "Jarrett Allen",
-   "Trey Murphy III",
-   "Payton Pritchard",
    "DeMar DeRozan",
    "Peyton Watson",
    "Jalen Smith",
    "Day'Ron Sharpe",
-   "Terrence Shannon Jr.",
-   "Dennis Schroder",
    "Sandro Mamukelashvili",
    "Kelly Oubre Jr.",
    "Max Christie",
    "Jordan Goodwin",
    "Gui Santos",
-   "Clint Capela",
    "Adem Bona",
+   "Clint Capela",
    "Noah Clowney",
    "Rob Dillingham"
   ]
