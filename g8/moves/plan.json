@@ -6,10 +6,10 @@
   "Dillon Brooks"
  ],
  "base": {
-  "wk": 5.237,
-  "champ": 0.029,
-  "p1": 0.0295,
-  "epct": 0.5207
+  "wk": 5.171,
+  "champ": 0.0239,
+  "p1": 0.0241,
+  "epct": 0.5167
  },
  "protect": [
   "Shai Gilgeous-Alexander",
@@ -41,10 +41,10 @@
    "addOwner": "FA",
    "drop": "Dillon Brooks",
    "ir": null,
-   "weekGain": 0.493,
-   "titleGain": 0.0938,
-   "p1Gain": 0.157,
-   "epctGain": 0.0321,
+   "weekGain": 0.47,
+   "titleGain": 0.0783,
+   "p1Gain": 0.1244,
+   "epctGain": 0.0327,
    "addTeam": "POR",
    "addPos": "C",
    "dropValue": -5.68,
@@ -66,17 +66,17 @@
   {
    "n": 2,
    "kind": "add/drop",
-   "add": "Santi Aldama",
-   "addEspnId": 4593125,
+   "add": "Daniel Gafford",
+   "addEspnId": 4278049,
    "addOwner": "FA",
    "drop": "Dillon Brooks",
    "ir": null,
-   "weekGain": 0.359,
-   "titleGain": 0.0116,
-   "p1Gain": 0.0183,
-   "epctGain": 0.0064,
+   "weekGain": 0.38,
+   "titleGain": 0.0058,
+   "p1Gain": 0.0088,
+   "epctGain": 0.0046,
    "addTeam": "DAL",
-   "addPos": "SF,PF",
+   "addPos": "C",
    "dropValue": -5.68,
    "status": "proposed",
    "conflicts": [
@@ -84,29 +84,29 @@
     3
    ],
    "addHealth": {
-    "status": "O",
-    "injury": "Knee",
-    "returnDate": "2026-11-06",
-    "report": "Aldama (knee) is out for Wednesday's game against the Spurs, Grant Afseth of DallasHoopsJournal.com reports.",
-    "g": null,
-    "min": null
+    "status": "정상",
+    "injury": null,
+    "returnDate": null,
+    "report": null,
+    "g": 8,
+    "min": 23.3
    },
-   "firstProposedAt": "2026-11-05T10:13:35.305Z"
+   "firstProposedAt": "2026-11-06T02:42:48.271Z"
   },
   {
    "n": 3,
    "kind": "add/drop",
-   "add": "Precious Achiuwa",
-   "addEspnId": 4431679,
+   "add": "Santi Aldama",
+   "addEspnId": 4593125,
    "addOwner": "FA",
    "drop": "Dillon Brooks",
    "ir": null,
-   "weekGain": 0.356,
-   "titleGain": 0.0118,
-   "p1Gain": 0.0188,
-   "epctGain": 0.0056,
-   "addTeam": "SAC",
-   "addPos": "PF,C",
+   "weekGain": 0.327,
+   "titleGain": 0.0104,
+   "p1Gain": 0.016,
+   "epctGain": 0.0073,
+   "addTeam": "DAL",
+   "addPos": "SF,PF",
    "dropValue": -5.68,
    "status": "proposed",
    "conflicts": [
@@ -114,12 +114,12 @@
     2
    ],
    "addHealth": {
-    "status": "정상",
-    "injury": null,
-    "returnDate": null,
-    "report": null,
-    "g": 8,
-    "min": 27.3
+    "status": "O",
+    "injury": "Knee",
+    "returnDate": "2026-11-06",
+    "report": "Aldama (knee) is probable to suit up for Friday's game against the Jazz.",
+    "g": null,
+    "min": null
    },
    "firstProposedAt": "2026-11-05T10:13:35.305Z"
   },
@@ -128,10 +128,10 @@
    "kind": "activate",
    "ir": "Kyrie Irving",
    "drop": "Dillon Brooks",
-   "weekGain": 0.302,
-   "titleGain": 0.0345,
-   "p1Gain": 0.0492,
-   "epctGain": 0.0144,
+   "weekGain": 0.272,
+   "titleGain": 0.0232,
+   "p1Gain": 0.0254,
+   "epctGain": 0.0124,
    "dropValue": -5.68,
    "status": "rejected",
    "note": "IR 복귀(상태 정상)",
@@ -152,47 +152,49 @@
    "add": "Robert Williams III",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.493,
-   "title": 0.0938
+   "wk": 0.47,
+   "title": 0.0783
+  },
+  {
+   "add": "Daniel Gafford",
+   "drop": "Dillon Brooks",
+   "ir": null,
+   "wk": 0.38,
+   "title": 0.0058
   },
   {
    "add": "Santi Aldama",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.359,
+   "wk": 0.327,
+   "title": 0.0104
+  },
+  {
+   "add": "Jonathan Kuminga",
+   "drop": "Dillon Brooks",
+   "ir": null,
+   "wk": 0.289,
    "title": 0.0116
   },
   {
    "add": "Precious Achiuwa",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.356,
-   "title": 0.0118
-  },
-  {
-   "add": "Kel'el Ware",
-   "drop": "Dillon Brooks",
-   "ir": null,
-   "wk": 0.376,
-   "title": 0.0075
+   "wk": 0.344,
+   "title": -0.0003
   },
   {
    "add": "Alex Caruso",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.323,
-   "title": 0.0065
-  },
-  {
-   "add": "Jaime Jaquez Jr.",
-   "drop": "Dillon Brooks",
-   "ir": null,
-   "wk": 0.32,
-   "title": 0.0036
+   "wk": 0.283,
+   "title": 0.0007
   }
  ],
- "createdAt": "2026-11-05T20:42:53.339Z",
- "id": "20261105T2042",
+ "createdAt": "2026-11-06T02:42:48.271Z",
+ "id": "20261106T0242",
  "rosterSig": "Anthony Davis|Austin Reaves|Brandon Miller|Collin Gillespie|Dillon Brooks|James Harden|Karl-Anthony Towns|Michael Porter Jr.|Miles Bridges|Norman Powell|Rudy Gobert|Shai Gilgeous-Alexander|Tyler Herro#Kyrie Irving",
- "newItems": []
+ "newItems": [
+  2
+ ]
 }
