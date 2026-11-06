@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-06T11:41+09:00",
+ "asOf": "2026-11-06T14:41+09:00",
  "source": "ESPN API sync (GitHub Actions g8-espn)",
  "teams": {
   "Junyoung's Scary Team": {
@@ -194,8 +194,8 @@
   "T.J. McConnell": "O",
   "Jusuf Nurkic": "O",
   "Shaedon Sharpe": "O",
-  "Mark Williams": "O",
   "Santi Aldama": "O",
+  "Mark Williams": "O",
   "Dereck Lively II": "O",
   "Isaiah Stewart": "O",
   "Jaylon Tyson": "O",
@@ -204,7 +204,6 @@
   "Bradley Beal": "O",
   "Maxime Raynaud": "O",
   "Justin Champagnie": "O",
-  "Jordan Goodwin": "O",
   "Gui Santos": "O",
   "Ben Simmons": "O",
   "Isaiah Joe": "O",
@@ -228,6 +227,7 @@
   "Sandro Mamukelashvili": "DTD",
   "Kelly Oubre Jr.": "DTD",
   "Max Christie": "DTD",
+  "Jordan Goodwin": "DTD",
   "Clint Capela": "DTD",
   "Adem Bona": "DTD"
  },
@@ -267,7 +267,6 @@
   "Chet Holmgren": "2027-01-02",
   "Jalen Suggs": "2026-11-10",
   "Paolo Banchero": "2026-11-22",
-  "Jordan Goodwin": "2026-11-07",
   "Mark Williams": "2027-02-03",
   "Vit Krejci": "2027-01-02",
   "Ja Morant": "2026-12-01",
