@@ -1,6 +1,6 @@
 {
- "asOf": "2026-11-06T16:26+09:00",
- "scoringPeriodId": 17,
+ "asOf": "2026-11-06T19:45+09:00",
+ "scoringPeriodId": 18,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
   "waiverHours": 24,
@@ -1017,136 +1017,9 @@
     }
    ],
    "bid": 0
-  },
-  {
-   "id": "b61f53e4-184a-410b-a3fe-ee1e1bb77006",
-   "team": "TBG",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-10-30 13:24 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Pelle Larsson",
-     "from": "FA",
-     "to": "TBG"
-    },
-    {
-     "type": "DROP",
-     "player": "Jaylen Wells",
-     "from": "TBG",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "3e2c1928-e68f-4a0c-a19e-94f5bc8cc86a",
-   "team": "TBG",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-10-30 11:31 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Tristan da Silva",
-     "from": "FA",
-     "to": "TBG"
-    },
-    {
-     "type": "DROP",
-     "player": "Robert Williams III",
-     "from": "TBG",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "0aeb52d5-12b4-4dae-9be5-7297f1353e9d",
-   "team": "KWNG",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-10-30 08:12 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Aaron Wiggins",
-     "from": "FA",
-     "to": "KWNG"
-    },
-    {
-     "type": "DROP",
-     "player": "Reed Sheppard",
-     "from": "KWNG",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
   }
  ],
  "onWaivers": [
-  {
-   "id": 5061575,
-   "name": "Kon Knueppel",
-   "pro": "CHA",
-   "waiverClears": "2026-11-06 17:00 KST",
-   "inj": "OUT",
-   "droppedBy": {
-    "by": "JYP",
-    "at": "2026-11-05 15:57 KST"
-   }
-  },
-  {
-   "id": 4066354,
-   "name": "Payton Pritchard",
-   "pro": "BOS",
-   "waiverClears": "2026-11-06 17:00 KST",
-   "inj": "DAY_TO_DAY",
-   "droppedBy": {
-    "by": "IYH",
-    "at": "2026-11-05 13:55 KST"
-   }
-  },
-  {
-   "id": 3908845,
-   "name": "John Collins",
-   "pro": "DET",
-   "waiverClears": "2026-11-06 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "TBG",
-    "at": "2026-11-05 12:50 KST"
-   }
-  },
-  {
-   "id": 4431767,
-   "name": "Christian Braun",
-   "pro": "DEN",
-   "waiverClears": "2026-11-06 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "SONG",
-    "at": "2026-11-05 14:20 KST"
-   }
-  },
-  {
-   "id": 5211175,
-   "name": "Zaccharie Risacher",
-   "pro": "DAL",
-   "waiverClears": "2026-11-06 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "GTD",
-    "at": "2026-11-05 17:15 KST"
-   }
-  },
   {
    "id": 5106060,
    "name": "Jarace Walker",
