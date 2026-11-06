@@ -6,32 +6,25 @@
   "Dillon Brooks"
  ],
  "base": {
-  "wk": 5.462,
-  "champ": 0.0498,
-  "p1": 0.0427,
-  "epct": 0.527
+  "wk": 5.85,
+  "champ": 0.1234,
+  "p1": 0.094,
+  "epct": 0.5387
  },
  "protect": [
   "Shai Gilgeous-Alexander",
   "Anthony Davis",
+  "Kyrie Irving",
   "James Harden",
   "Karl-Anthony Towns",
   "Austin Reaves",
   "Michael Porter Jr.",
-  "Tyler Herro",
-  "Rudy Gobert"
+  "Tyler Herro"
  ],
  "droppable": [
   "Dillon Brooks"
  ],
- "flags": [
-  {
-   "kind": "ir-ineligible",
-   "player": "Kyrie Irving",
-   "status": "정상",
-   "note": "IR 선수가 O가 아님 — ESPN이 영입을 막을 수 있음(감독 판단: DTD는 영입 가능). 첫 사례에서 실제 동작을 기록"
-  }
- ],
+ "flags": [],
  "items": [
   {
    "n": 1,
@@ -41,14 +34,14 @@
    "addOwner": "FA",
    "drop": "Dillon Brooks",
    "ir": null,
-   "weekGain": 0.512,
-   "titleGain": 0.1055,
-   "p1Gain": 0.1736,
-   "epctGain": 0.0287,
+   "weekGain": 0.525,
+   "titleGain": 0.139,
+   "p1Gain": 0.2382,
+   "epctGain": 0.0277,
    "addTeam": "POR",
    "addPos": "C",
    "dropValue": -5.68,
-   "status": "rejected",
+   "status": "proposed",
    "conflicts": [
     2,
     3
@@ -61,22 +54,22 @@
     "g": 6,
     "min": 16.5
    },
-   "firstProposedAt": "2026-11-03T00:45:57.209Z"
+   "firstProposedAt": "2026-11-06T10:14:00.980Z"
   },
   {
    "n": 2,
    "kind": "add/drop",
-   "add": "Daniel Gafford",
-   "addEspnId": 4278049,
+   "add": "Zaccharie Risacher",
+   "addEspnId": 5211175,
    "addOwner": "FA",
    "drop": "Dillon Brooks",
    "ir": null,
-   "weekGain": 0.351,
-   "titleGain": 0.0095,
-   "p1Gain": 0.0168,
-   "epctGain": 0.0023,
+   "weekGain": 0.26,
+   "titleGain": 0.0104,
+   "p1Gain": 0.0129,
+   "epctGain": 0.002,
    "addTeam": "DAL",
-   "addPos": "C",
+   "addPos": "SF",
    "dropValue": -5.68,
    "status": "proposed",
    "conflicts": [
@@ -89,24 +82,24 @@
     "returnDate": null,
     "report": null,
     "g": 8,
-    "min": 23.3
+    "min": 26.9
    },
-   "firstProposedAt": "2026-11-06T02:42:48.271Z"
+   "firstProposedAt": "2026-11-06T10:14:00.980Z"
   },
   {
    "n": 3,
    "kind": "add/drop",
-   "add": "Precious Achiuwa",
-   "addEspnId": 4431679,
+   "add": "Daniel Gafford",
+   "addEspnId": 4278049,
    "addOwner": "FA",
    "drop": "Dillon Brooks",
    "ir": null,
-   "weekGain": 0.326,
-   "titleGain": 0.0035,
-   "p1Gain": 0.0192,
-   "epctGain": 0.0057,
-   "addTeam": "SAC",
-   "addPos": "PF,C",
+   "weekGain": 0.352,
+   "titleGain": -0.0001,
+   "p1Gain": 0.0122,
+   "epctGain": 0.0005,
+   "addTeam": "DAL",
+   "addPos": "C",
    "dropValue": -5.68,
    "status": "proposed",
    "conflicts": [
@@ -119,32 +112,9 @@
     "returnDate": null,
     "report": null,
     "g": 8,
-    "min": 27.3
+    "min": 23.3
    },
-   "firstProposedAt": "2026-11-06T05:42:43.532Z"
-  },
-  {
-   "n": 4,
-   "kind": "activate",
-   "ir": "Kyrie Irving",
-   "drop": "Dillon Brooks",
-   "weekGain": 0.142,
-   "titleGain": 0.05,
-   "p1Gain": 0.0665,
-   "epctGain": 0.0147,
-   "dropValue": -5.68,
-   "status": "rejected",
-   "note": "IR 복귀(상태 정상)",
-   "addHealth": null,
-   "irHealth": {
-    "status": "정상",
-    "injury": null,
-    "returnDate": null,
-    "report": null,
-    "g": 6,
-    "min": 30
-   },
-   "firstProposedAt": "2026-11-03T10:13:08.421Z"
+   "firstProposedAt": "2026-11-06T10:14:00.980Z"
   }
  ],
  "screened": [
@@ -152,49 +122,51 @@
    "add": "Robert Williams III",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.512,
-   "title": 0.1055
-  },
-  {
-   "add": "Daniel Gafford",
-   "drop": "Dillon Brooks",
-   "ir": null,
-   "wk": 0.351,
-   "title": 0.0095
-  },
-  {
-   "add": "Precious Achiuwa",
-   "drop": "Dillon Brooks",
-   "ir": null,
-   "wk": 0.326,
-   "title": 0.0035
-  },
-  {
-   "add": "Santi Aldama",
-   "drop": "Dillon Brooks",
-   "ir": null,
-   "wk": 0.3,
-   "title": 0.0037
-  },
-  {
-   "add": "Alex Caruso",
-   "drop": "Dillon Brooks",
-   "ir": null,
-   "wk": 0.292,
-   "title": 0.0006
+   "wk": 0.525,
+   "title": 0.139
   },
   {
    "add": "Zaccharie Risacher",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.249,
-   "title": 0.0033
+   "wk": 0.26,
+   "title": 0.0104
+  },
+  {
+   "add": "Daniel Gafford",
+   "drop": "Dillon Brooks",
+   "ir": null,
+   "wk": 0.352,
+   "title": -0.0001
+  },
+  {
+   "add": "Santi Aldama",
+   "drop": "Dillon Brooks",
+   "ir": null,
+   "wk": 0.274,
+   "title": 0.0014
+  },
+  {
+   "add": "Precious Achiuwa",
+   "drop": "Dillon Brooks",
+   "ir": null,
+   "wk": 0.299,
+   "title": -0.0097
+  },
+  {
+   "add": "Alex Caruso",
+   "drop": "Dillon Brooks",
+   "ir": null,
+   "wk": 0.279,
+   "title": -0.0108
   }
  ],
- "createdAt": "2026-11-06T05:42:43.532Z",
- "id": "20261106T0542",
- "rosterSig": "Anthony Davis|Austin Reaves|Brandon Miller|Collin Gillespie|Dillon Brooks|James Harden|Karl-Anthony Towns|Michael Porter Jr.|Miles Bridges|Norman Powell|Rudy Gobert|Shai Gilgeous-Alexander|Tyler Herro#Kyrie Irving",
+ "createdAt": "2026-11-06T10:14:00.980Z",
+ "id": "20261106T1014",
+ "rosterSig": "Anthony Davis|Austin Reaves|Brandon Miller|Dillon Brooks|James Harden|Karl-Anthony Towns|Kyrie Irving|Michael Porter Jr.|Miles Bridges|Norman Powell|Rudy Gobert|Shai Gilgeous-Alexander|Tyler Herro#",
  "newItems": [
+  1,
+  2,
   3
  ]
 }
