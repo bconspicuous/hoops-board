@@ -1,20 +1,20 @@
-# 라인업 제안 2026-11-06 (미국 동부) · 3주차 vs Songpa Park Kezhang · 상태: pending · 기준: 현재 스탯(2026-27 실제 100%)
-출전 7명 · 기대 카테고리 승 5.47 (현재 ESPN 라인업 5.32, +0.15)
+# 라인업 제안 2026-11-06 (미국 동부) · 3주차 vs Songpa Park Kezhang · 상태: nochange-starters · 기준: 현재 스탯(2026-27 실제 100%)
+출전 8명 · 기대 카테고리 승 5.86 (현재 ESPN 라인업 5.86, +0.00)
 벤치(출전 선수 중): 없음 · DTD: Anthony Davis
-변경: Shai Gilgeous-Alexander PG→G, Karl-Anthony Towns C→UTIL, James Harden BE→PG, Austin Reaves G→UTIL, Rudy Gobert BE→C, Collin Gillespie UTIL→BE, Dillon Brooks UTIL→BE
+변경: Austin Reaves G→UTIL, Kyrie Irving UTIL→G
 
 | 슬롯 | 선수 |
 |---|---|
 | PG | James Harden |
 | SG | Tyler Herro |
-| SF | Michael Porter Jr. |
+| SF | Brandon Miller |
 | PF | Anthony Davis |
 | C | Rudy Gobert |
-| G | Shai Gilgeous-Alexander |
-| F | Brandon Miller |
+| G | Kyrie Irving |
+| F | Michael Porter Jr. |
+| UTIL | Shai Gilgeous-Alexander |
 | UTIL | Karl-Anthony Towns |
 | UTIL | Austin Reaves |
-| UTIL | Miles Bridges |
 | BE | Norman Powell |
-| BE | Collin Gillespie |
+| BE | Miles Bridges |
 | BE | Dillon Brooks |

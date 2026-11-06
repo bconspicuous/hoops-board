@@ -2,13 +2,14 @@
  "date": "2026-11-06",
  "week": 3,
  "opp": "Songpa Park Kezhang",
- "status": "pending",
- "playing": 7,
+ "status": "nochange-starters",
+ "playing": 8,
  "starters": [
   "Shai Gilgeous-Alexander",
   "Anthony Davis",
   "James Harden",
   "Austin Reaves",
+  "Kyrie Irving",
   "Brandon Miller",
   "Tyler Herro",
   "Rudy Gobert"
@@ -18,77 +19,49 @@
   "Anthony Davis"
  ],
  "expected": {
-  "best": 5.473,
-  "current": 5.323,
-  "gain": 0.151,
+  "best": 5.861,
+  "current": 5.861,
+  "gain": 0,
   "pcBest": {
-   "FG": 0.584,
-   "FT": 0.203,
-   "TPM": 0.933,
-   "REB": 0.475,
-   "AST": 0,
-   "STL": 0.003,
-   "BLK": 0.309,
-   "TO": 0.972,
-   "DD": 0.478,
-   "PTS": 0.969,
-   "PF": 0.547
+   "FG": 0.667,
+   "FT": 0.4,
+   "TPM": 0.993,
+   "REB": 0.472,
+   "AST": 0.001,
+   "STL": 0.006,
+   "BLK": 0.381,
+   "TO": 0.989,
+   "DD": 0.447,
+   "PTS": 0.996,
+   "PF": 0.509
   },
   "pcCurrent": {
-   "FG": 0.628,
-   "FT": 0.302,
-   "TPM": 0.891,
-   "REB": 0.16,
-   "AST": 0,
-   "STL": 0.002,
-   "BLK": 0.189,
-   "TO": 0.993,
-   "DD": 0.459,
-   "PTS": 0.919,
-   "PF": 0.78
+   "FG": 0.667,
+   "FT": 0.4,
+   "TPM": 0.993,
+   "REB": 0.472,
+   "AST": 0.001,
+   "STL": 0.006,
+   "BLK": 0.381,
+   "TO": 0.989,
+   "DD": 0.447,
+   "PTS": 0.996,
+   "PF": 0.509
   }
  },
  "alternatives": [],
- "currentBench": [
-  "James Harden",
-  "Rudy Gobert"
- ],
- "sameStarters": false,
+ "currentBench": [],
+ "sameStarters": true,
  "moves": [
-  {
-   "name": "Shai Gilgeous-Alexander",
-   "from": "PG",
-   "to": "G"
-  },
-  {
-   "name": "Karl-Anthony Towns",
-   "from": "C",
-   "to": "UTIL"
-  },
-  {
-   "name": "James Harden",
-   "from": "BE",
-   "to": "PG"
-  },
   {
    "name": "Austin Reaves",
    "from": "G",
    "to": "UTIL"
   },
   {
-   "name": "Rudy Gobert",
-   "from": "BE",
-   "to": "C"
-  },
-  {
-   "name": "Collin Gillespie",
+   "name": "Kyrie Irving",
    "from": "UTIL",
-   "to": "BE"
-  },
-  {
-   "name": "Dillon Brooks",
-   "from": "UTIL",
-   "to": "BE"
+   "to": "G"
   }
  ],
  "slots": [
@@ -101,7 +74,7 @@
    "slot": "SG"
   },
   {
-   "name": "Michael Porter Jr.",
+   "name": "Brandon Miller",
    "slot": "SF"
   },
   {
@@ -113,12 +86,16 @@
    "slot": "C"
   },
   {
-   "name": "Shai Gilgeous-Alexander",
+   "name": "Kyrie Irving",
    "slot": "G"
   },
   {
-   "name": "Brandon Miller",
+   "name": "Michael Porter Jr.",
    "slot": "F"
+  },
+  {
+   "name": "Shai Gilgeous-Alexander",
+   "slot": "UTIL"
   },
   {
    "name": "Karl-Anthony Towns",
@@ -129,15 +106,11 @@
    "slot": "UTIL"
   },
   {
-   "name": "Miles Bridges",
-   "slot": "UTIL"
-  },
-  {
    "name": "Norman Powell",
    "slot": "BE"
   },
   {
-   "name": "Collin Gillespie",
+   "name": "Miles Bridges",
    "slot": "BE"
   },
   {
@@ -145,6 +118,6 @@
    "slot": "BE"
   }
  ],
- "id": "2026-11-06T0543Z",
- "createdAt": "2026-11-06T05:43:57.544Z"
+ "id": "2026-11-06T1014Z",
+ "createdAt": "2026-11-06T10:14:48.965Z"
 }
