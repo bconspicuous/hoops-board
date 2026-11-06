@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-07T04:42+09:00",
+ "asOf": "2026-11-07T05:41+09:00",
  "leagueId": "751654965",
  "season": 2027,
  "teams": [
@@ -316,8 +316,8 @@
    "Jimmy Butler III",
    "Jalen Suggs",
    "Scotty Pippen Jr.",
-   "Cason Wallace",
    "T.J. McConnell",
+   "Cason Wallace",
    "Jusuf Nurkic",
    "Terrence Shannon Jr.",
    "Shaedon Sharpe",
@@ -336,7 +336,8 @@
    "Isaiah Joe",
    "Sergio de Larrea",
    "Jock Landale",
-   "Vit Krejci"
+   "Vit Krejci",
+   "Clint Capela"
   ],
   "DTD": [
    "Immanuel Quickley",
@@ -356,8 +357,7 @@
    "Max Christie",
    "Jordan Goodwin",
    "Gui Santos",
-   "Adem Bona",
-   "Clint Capela"
+   "Adem Bona"
   ]
  }
 }

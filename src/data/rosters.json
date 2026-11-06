@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-07T04:42+09:00",
+ "asOf": "2026-11-07T05:41+09:00",
  "source": "ESPN API sync (GitHub Actions g8-espn)",
  "teams": {
   "Junyoung's Scary Team": {
@@ -188,8 +188,8 @@
   "Jimmy Butler III": "O",
   "Jalen Suggs": "O",
   "Scotty Pippen Jr.": "O",
-  "Cason Wallace": "O",
   "T.J. McConnell": "O",
+  "Cason Wallace": "O",
   "Jusuf Nurkic": "O",
   "Terrence Shannon Jr.": "O",
   "Shaedon Sharpe": "O",
@@ -209,6 +209,7 @@
   "Sergio de Larrea": "O",
   "Jock Landale": "O",
   "Vit Krejci": "O",
+  "Clint Capela": "O",
   "Immanuel Quickley": "DTD",
   "Anthony Davis": "DTD",
   "Kyrie Irving": "DTD",
@@ -226,8 +227,7 @@
   "Max Christie": "DTD",
   "Jordan Goodwin": "DTD",
   "Gui Santos": "DTD",
-  "Adem Bona": "DTD",
-  "Clint Capela": "DTD"
+  "Adem Bona": "DTD"
  },
  "unsigned": [
   "Cam Thomas",
@@ -252,6 +252,7 @@
   "Jalen Duren": "2026-11-09",
   "Kristaps Porzingis": "2026-12-01",
   "Jimmy Butler III": "2027-01-02",
+  "Clint Capela": "2026-11-09",
   "T.J. McConnell": "2026-11-09",
   "Tyrese Haliburton": "2026-11-13",
   "Brandon Ingram": "2026-11-08",
