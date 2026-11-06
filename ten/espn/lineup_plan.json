@@ -1,8 +1,8 @@
 {
- "date": "2026-11-05",
- "scoringPeriodId": 17,
- "hash": "409aaf5773",
- "createdKST": "2026-11-06T13:48+09:00",
+ "date": "2026-11-06",
+ "scoringPeriodId": 18,
+ "hash": "81fb28242b",
+ "createdKST": "2026-11-06T19:49+09:00",
  "mode": "plan",
  "moves": [],
  "lineup": [
@@ -11,24 +11,24 @@
    "cur": "PG",
    "name": "Donovan Mitchell",
    "pro": "CLE",
-   "game": false,
+   "game": true,
    "inj": "ACTIVE",
    "out": false
   },
   {
    "slot": "SG",
    "cur": "SG",
-   "name": "Duncan Robinson",
-   "pro": "DET",
-   "game": false,
+   "name": "Grayson Allen",
+   "pro": "CHA",
+   "game": true,
    "inj": "ACTIVE",
    "out": false
   },
   {
    "slot": "SF",
    "cur": "SF",
-   "name": "Miles Bridges",
-   "pro": "PHX",
+   "name": "Toumani Camara",
+   "pro": "POR",
    "game": true,
    "inj": "ACTIVE",
    "out": false
@@ -45,9 +45,9 @@
   {
    "slot": "C",
    "cur": "C",
-   "name": "Karl-Anthony Towns",
-   "pro": "NYK",
-   "game": false,
+   "name": "Daniel Gafford",
+   "pro": "DAL",
+   "game": true,
    "inj": "ACTIVE",
    "out": false
   },
@@ -56,15 +56,33 @@
    "cur": "G",
    "name": "Ajay Mitchell",
    "pro": "OKC",
-   "game": false,
+   "game": true,
    "inj": "ACTIVE",
    "out": false
   },
   {
    "slot": "F",
    "cur": "F",
-   "name": "Toumani Camara",
-   "pro": "POR",
+   "name": "Duncan Robinson",
+   "pro": "DET",
+   "game": false,
+   "inj": "ACTIVE",
+   "out": false
+  },
+  {
+   "slot": "UTIL",
+   "cur": "UTIL",
+   "name": "Dejounte Murray",
+   "pro": "NOP",
+   "game": true,
+   "inj": "ACTIVE",
+   "out": false
+  },
+  {
+   "slot": "UTIL",
+   "cur": "UTIL",
+   "name": "Karl-Anthony Towns",
+   "pro": "NYK",
    "game": false,
    "inj": "ACTIVE",
    "out": false
@@ -74,33 +92,6 @@
    "cur": "UTIL",
    "name": "Andrew Nembhard",
    "pro": "IND",
-   "game": false,
-   "inj": "ACTIVE",
-   "out": false
-  },
-  {
-   "slot": "UTIL",
-   "cur": "UTIL",
-   "name": "Daniel Gafford",
-   "pro": "DAL",
-   "game": false,
-   "inj": "ACTIVE",
-   "out": false
-  },
-  {
-   "slot": "UTIL",
-   "cur": "UTIL",
-   "name": "Grayson Allen",
-   "pro": "CHA",
-   "game": false,
-   "inj": "ACTIVE",
-   "out": false
-  },
-  {
-   "slot": "BE",
-   "cur": "BE",
-   "name": "Dejounte Murray",
-   "pro": "NOP",
    "game": false,
    "inj": "ACTIVE",
    "out": false
@@ -122,12 +113,21 @@
    "game": false,
    "inj": "DAY_TO_DAY",
    "out": false
+  },
+  {
+   "slot": "BE",
+   "cur": "BE",
+   "name": "Miles Bridges",
+   "pro": "PHX",
+   "game": false,
+   "inj": "ACTIVE",
+   "out": false
   }
  ],
  "ir": [
   "Kawhi Leonard"
  ],
  "irReturn": [],
- "playing": 1,
+ "playing": 6,
  "status": "planned"
 }
