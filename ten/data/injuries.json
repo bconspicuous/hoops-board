@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-06T13:44+09:00",
+ "asOf": "2026-11-06T16:26+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -468,14 +468,14 @@
   {
    "player": "Gui Santos",
    "team": "GS",
-   "status": "Out",
-   "date": "2026-11-05T00:52Z",
-   "type": "out",
+   "status": "Day-To-Day",
+   "date": "2026-11-06T05:46Z",
+   "type": "day-to-day",
    "returnDate": "2026-11-07",
    "detail": null,
    "side": null,
    "injury": "Knee",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Santos (knee) has been ruled out for Thursday's game against the Heat.",
    "long": "Santos didn't participate in Wednesday's practice and will remain sidelined for a second straight game Thursday. Will Richard and Georges Niang are candidates for increased burn in Santos' absence."
   },
@@ -1012,32 +1012,32 @@
    "long": "Hukporti went down with an Achilles injury in Monday's preseason opener against the Knicks, and an MRI has since revealed a rupture. He signed a one-year deal with the 76ers over the summer, so Hukporti will be an unrestricted free agent come season's end. With Hukporti's year already finished, Adem Bona (foot) should assume the backup center role behind Joel Embiid once healthy."
   },
   {
-   "player": "Rasheer Fleming",
-   "team": "PHX",
-   "status": "Out",
-   "date": "2026-11-05T20:22Z",
-   "type": "out",
-   "returnDate": "2026-11-07",
-   "detail": "Sprain",
-   "side": "Left",
-   "injury": "Ankle",
-   "fantasyStatus": "OUT",
-   "short": "Fleming is out for Thursday's game against the Magic due to a sprained left ankle.",
-   "long": "Fleming is missing the back end of this back-to-back set with the injury. His next opportunity to suit up arrives Saturday, when the Suns host the Rockets."
-  },
-  {
    "player": "Jordan Goodwin",
    "team": "PHX",
-   "status": "Out",
-   "date": "2026-11-05T20:18Z",
-   "type": "out",
+   "status": "Day-To-Day",
+   "date": "2026-11-06T04:56Z",
+   "type": "day-to-day",
    "returnDate": "2026-11-07",
    "detail": "Not Specified",
    "side": "Left",
    "injury": "Calf",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Goodwin (calf) is out for Thursday's game against Orlando.",
    "long": "Goodwin will miss his second game in a row for the Suns. In his absence Wednesday, Ryan Dunn and Luke Kennard saw minutes in the teens off the Phoenix bench."
+  },
+  {
+   "player": "Rasheer Fleming",
+   "team": "PHX",
+   "status": "Day-To-Day",
+   "date": "2026-11-06T04:56Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-07",
+   "detail": "Sprain",
+   "side": "Left",
+   "injury": "Ankle",
+   "fantasyStatus": "GTD",
+   "short": "Fleming is out for Thursday's game against the Magic due to a sprained left ankle.",
+   "long": "Fleming is missing the back end of this back-to-back set with the injury. His next opportunity to suit up arrives Saturday, when the Suns host the Rockets."
   },
   {
    "player": "Mark Williams",
