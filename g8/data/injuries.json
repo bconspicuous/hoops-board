@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-06T14:41+09:00",
+ "asOf": "2026-11-06T16:25+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -468,14 +468,14 @@
   {
    "player": "Gui Santos",
    "team": "GS",
-   "status": "Out",
-   "date": "2026-11-05T00:52Z",
-   "type": "out",
+   "status": "Day-To-Day",
+   "date": "2026-11-06T05:46Z",
+   "type": "day-to-day",
    "returnDate": "2026-11-07",
    "detail": null,
    "side": null,
    "injury": "Knee",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Santos (knee) has been ruled out for Thursday's game against the Heat.",
    "long": "Santos didn't participate in Wednesday's practice and will remain sidelined for a second straight game Thursday. Will Richard and Georges Niang are candidates for increased burn in Santos' absence."
   },
