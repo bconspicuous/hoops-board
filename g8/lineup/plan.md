@@ -1,20 +1,20 @@
-# 라인업 제안 2026-11-05 (미국 동부) · 3주차 vs Songpa Park Kezhang · 상태: nochange-starters · 기준: 현재 스탯(2026-27 실제 100%)
-출전 3명 · 기대 카테고리 승 5.24 (현재 ESPN 라인업 5.24, +0.00)
-벤치(출전 선수 중): 없음
-변경: Shai Gilgeous-Alexander PG→G, James Harden G→SG, Michael Porter Jr. SF→F, Brandon Miller F→UTIL, Norman Powell SG→UTIL, Miles Bridges UTIL→SF, Collin Gillespie UTIL→PG
+# 라인업 제안 2026-11-06 (미국 동부) · 3주차 vs Songpa Park Kezhang · 상태: pending · 기준: 현재 스탯(2026-27 실제 100%)
+출전 7명 · 기대 카테고리 승 5.47 (현재 ESPN 라인업 5.32, +0.15)
+벤치(출전 선수 중): 없음 · DTD: Anthony Davis
+변경: Shai Gilgeous-Alexander PG→G, Karl-Anthony Towns C→UTIL, James Harden BE→PG, Austin Reaves G→UTIL, Rudy Gobert BE→C, Collin Gillespie UTIL→BE, Dillon Brooks UTIL→BE
 
 | 슬롯 | 선수 |
 |---|---|
-| PG | Collin Gillespie |
-| SG | James Harden |
-| SF | Miles Bridges |
+| PG | James Harden |
+| SG | Tyler Herro |
+| SF | Michael Porter Jr. |
 | PF | Anthony Davis |
-| C | Karl-Anthony Towns |
+| C | Rudy Gobert |
 | G | Shai Gilgeous-Alexander |
-| F | Michael Porter Jr. |
-| UTIL | Brandon Miller |
-| UTIL | Norman Powell |
-| UTIL | Dillon Brooks |
-| BE | Austin Reaves |
-| BE | Tyler Herro |
-| BE | Rudy Gobert |
+| F | Brandon Miller |
+| UTIL | Karl-Anthony Towns |
+| UTIL | Austin Reaves |
+| UTIL | Miles Bridges |
+| BE | Norman Powell |
+| BE | Collin Gillespie |
+| BE | Dillon Brooks |
