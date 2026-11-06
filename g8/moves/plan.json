@@ -6,10 +6,10 @@
   "Dillon Brooks"
  ],
  "base": {
-  "wk": 5.85,
-  "champ": 0.1234,
-  "p1": 0.094,
-  "epct": 0.5387
+  "wk": 5.968,
+  "champ": 0.1237,
+  "p1": 0.0968,
+  "epct": 0.5394
  },
  "protect": [
   "Shai Gilgeous-Alexander",
@@ -34,10 +34,10 @@
    "addOwner": "FA",
    "drop": "Dillon Brooks",
    "ir": null,
-   "weekGain": 0.525,
-   "titleGain": 0.139,
-   "p1Gain": 0.2382,
-   "epctGain": 0.0277,
+   "weekGain": 0.52,
+   "titleGain": 0.1389,
+   "p1Gain": 0.2409,
+   "epctGain": 0.0275,
    "addTeam": "POR",
    "addPos": "C",
    "dropValue": -5.68,
@@ -64,10 +64,10 @@
    "addOwner": "FA",
    "drop": "Dillon Brooks",
    "ir": null,
-   "weekGain": 0.26,
-   "titleGain": 0.0104,
-   "p1Gain": 0.0129,
-   "epctGain": 0.002,
+   "weekGain": 0.266,
+   "titleGain": 0.0093,
+   "p1Gain": 0.013,
+   "epctGain": 0.0019,
    "addTeam": "DAL",
    "addPos": "SF",
    "dropValue": -5.68,
@@ -94,9 +94,9 @@
    "addOwner": "FA",
    "drop": "Dillon Brooks",
    "ir": null,
-   "weekGain": 0.352,
-   "titleGain": -0.0001,
-   "p1Gain": 0.0122,
+   "weekGain": 0.348,
+   "titleGain": -0.0025,
+   "p1Gain": 0.012,
    "epctGain": 0.0005,
    "addTeam": "DAL",
    "addPos": "C",
@@ -122,47 +122,47 @@
    "add": "Robert Williams III",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.525,
-   "title": 0.139
+   "wk": 0.52,
+   "title": 0.1389
   },
   {
    "add": "Zaccharie Risacher",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.26,
-   "title": 0.0104
+   "wk": 0.266,
+   "title": 0.0093
   },
   {
    "add": "Daniel Gafford",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.352,
-   "title": -0.0001
+   "wk": 0.348,
+   "title": -0.0025
   },
   {
    "add": "Santi Aldama",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.274,
-   "title": 0.0014
+   "wk": 0.285,
+   "title": -0.0004
   },
   {
    "add": "Precious Achiuwa",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.299,
-   "title": -0.0097
+   "wk": 0.301,
+   "title": -0.0102
   },
   {
    "add": "Alex Caruso",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.279,
-   "title": -0.0108
+   "wk": 0.282,
+   "title": -0.0113
   }
  ],
- "createdAt": "2026-11-06T14:43:33.918Z",
- "id": "20261106T1443",
+ "createdAt": "2026-11-06T20:43:01.881Z",
+ "id": "20261106T2043",
  "rosterSig": "Anthony Davis|Austin Reaves|Brandon Miller|Dillon Brooks|James Harden|Karl-Anthony Towns|Kyrie Irving|Michael Porter Jr.|Miles Bridges|Norman Powell|Rudy Gobert|Shai Gilgeous-Alexander|Tyler Herro#",
  "newItems": []
 }
