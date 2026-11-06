@@ -6,10 +6,10 @@
   "Dillon Brooks"
  ],
  "base": {
-  "wk": 5.171,
-  "champ": 0.0239,
-  "p1": 0.0241,
-  "epct": 0.5167
+  "wk": 5.462,
+  "champ": 0.0498,
+  "p1": 0.0427,
+  "epct": 0.527
  },
  "protect": [
   "Shai Gilgeous-Alexander",
@@ -41,10 +41,10 @@
    "addOwner": "FA",
    "drop": "Dillon Brooks",
    "ir": null,
-   "weekGain": 0.47,
-   "titleGain": 0.0783,
-   "p1Gain": 0.1244,
-   "epctGain": 0.0327,
+   "weekGain": 0.512,
+   "titleGain": 0.1055,
+   "p1Gain": 0.1736,
+   "epctGain": 0.0287,
    "addTeam": "POR",
    "addPos": "C",
    "dropValue": -5.68,
@@ -71,10 +71,10 @@
    "addOwner": "FA",
    "drop": "Dillon Brooks",
    "ir": null,
-   "weekGain": 0.38,
-   "titleGain": 0.0058,
-   "p1Gain": 0.0088,
-   "epctGain": 0.0046,
+   "weekGain": 0.351,
+   "titleGain": 0.0095,
+   "p1Gain": 0.0168,
+   "epctGain": 0.0023,
    "addTeam": "DAL",
    "addPos": "C",
    "dropValue": -5.68,
@@ -96,17 +96,17 @@
   {
    "n": 3,
    "kind": "add/drop",
-   "add": "Santi Aldama",
-   "addEspnId": 4593125,
+   "add": "Precious Achiuwa",
+   "addEspnId": 4431679,
    "addOwner": "FA",
    "drop": "Dillon Brooks",
    "ir": null,
-   "weekGain": 0.327,
-   "titleGain": 0.0104,
-   "p1Gain": 0.016,
-   "epctGain": 0.0073,
-   "addTeam": "DAL",
-   "addPos": "SF,PF",
+   "weekGain": 0.326,
+   "titleGain": 0.0035,
+   "p1Gain": 0.0192,
+   "epctGain": 0.0057,
+   "addTeam": "SAC",
+   "addPos": "PF,C",
    "dropValue": -5.68,
    "status": "proposed",
    "conflicts": [
@@ -114,24 +114,24 @@
     2
    ],
    "addHealth": {
-    "status": "O",
-    "injury": "Knee",
-    "returnDate": "2026-11-06",
-    "report": "Aldama (knee) is probable to suit up for Friday's game against the Jazz.",
-    "g": null,
-    "min": null
+    "status": "정상",
+    "injury": null,
+    "returnDate": null,
+    "report": null,
+    "g": 8,
+    "min": 27.3
    },
-   "firstProposedAt": "2026-11-05T10:13:35.305Z"
+   "firstProposedAt": "2026-11-06T05:42:43.532Z"
   },
   {
    "n": 4,
    "kind": "activate",
    "ir": "Kyrie Irving",
    "drop": "Dillon Brooks",
-   "weekGain": 0.272,
-   "titleGain": 0.0232,
-   "p1Gain": 0.0254,
-   "epctGain": 0.0124,
+   "weekGain": 0.142,
+   "titleGain": 0.05,
+   "p1Gain": 0.0665,
+   "epctGain": 0.0147,
    "dropValue": -5.68,
    "status": "rejected",
    "note": "IR 복귀(상태 정상)",
@@ -152,49 +152,49 @@
    "add": "Robert Williams III",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.47,
-   "title": 0.0783
+   "wk": 0.512,
+   "title": 0.1055
   },
   {
    "add": "Daniel Gafford",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.38,
-   "title": 0.0058
-  },
-  {
-   "add": "Santi Aldama",
-   "drop": "Dillon Brooks",
-   "ir": null,
-   "wk": 0.327,
-   "title": 0.0104
-  },
-  {
-   "add": "Jonathan Kuminga",
-   "drop": "Dillon Brooks",
-   "ir": null,
-   "wk": 0.289,
-   "title": 0.0116
+   "wk": 0.351,
+   "title": 0.0095
   },
   {
    "add": "Precious Achiuwa",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.344,
-   "title": -0.0003
+   "wk": 0.326,
+   "title": 0.0035
+  },
+  {
+   "add": "Santi Aldama",
+   "drop": "Dillon Brooks",
+   "ir": null,
+   "wk": 0.3,
+   "title": 0.0037
   },
   {
    "add": "Alex Caruso",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.283,
-   "title": 0.0007
+   "wk": 0.292,
+   "title": 0.0006
+  },
+  {
+   "add": "Zaccharie Risacher",
+   "drop": "Dillon Brooks",
+   "ir": null,
+   "wk": 0.249,
+   "title": 0.0033
   }
  ],
- "createdAt": "2026-11-06T02:42:48.271Z",
- "id": "20261106T0242",
+ "createdAt": "2026-11-06T05:42:43.532Z",
+ "id": "20261106T0542",
  "rosterSig": "Anthony Davis|Austin Reaves|Brandon Miller|Collin Gillespie|Dillon Brooks|James Harden|Karl-Anthony Towns|Michael Porter Jr.|Miles Bridges|Norman Powell|Rudy Gobert|Shai Gilgeous-Alexander|Tyler Herro#Kyrie Irving",
  "newItems": [
-  2
+  3
  ]
 }
