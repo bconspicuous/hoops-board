@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-08T05:41+09:00",
+ "asOf": "2026-11-08T07:18+09:00",
  "leagueId": "751654965",
  "season": 2027,
  "teams": [
@@ -85,6 +85,7 @@
    "players": [
     "Shai Gilgeous-Alexander",
     "Karl-Anthony Towns",
+    "Anthony Davis",
     "James Harden",
     "Austin Reaves",
     "Kyrie Irving",
@@ -94,12 +95,9 @@
     "Rudy Gobert",
     "Norman Powell",
     "Miles Bridges",
-    "Dillon Brooks",
-    "Zach Edey"
+    "Dillon Brooks"
    ],
-   "ir": [
-    "Anthony Davis"
-   ],
+   "ir": [],
    "record": {
     "wins": 14,
     "losses": 8,
@@ -324,6 +322,7 @@
    "Cason Wallace",
    "Jusuf Nurkic",
    "Shaedon Sharpe",
+   "Robert Williams III",
    "Terrence Shannon Jr.",
    "Mark Williams",
    "Dennis Schroder",
@@ -340,15 +339,14 @@
    "Isaiah Joe",
    "Sergio de Larrea",
    "Jock Landale",
-   "Vit Krejci",
-   "Clint Capela"
+   "Vit Krejci"
   ],
   "DTD": [
    "Immanuel Quickley",
    "Anthony Davis",
    "Brandon Miller",
    "Scottie Barnes",
-   "DeMar DeRozan",
+   "Luka Doncic",
    "Moussa Diabate",
    "Draymond Green",
    "Jalen Smith",
