@@ -2,7 +2,7 @@
  "date": "2026-11-07",
  "week": 3,
  "opp": "Songpa Park Kezhang",
- "status": "pending",
+ "status": "nochange",
  "playing": 6,
  "starters": [
   "Shai Gilgeous-Alexander",
@@ -15,84 +15,55 @@
  "bench": [],
  "dtd": [],
  "expected": {
-  "best": 5.531,
-  "current": 5.137,
-  "gain": 0.395,
+  "best": 5.321,
+  "current": 5.321,
+  "gain": 0,
   "pcBest": {
-   "FG": 0.854,
-   "FT": 0.217,
-   "TPM": 0.993,
-   "REB": 0.525,
-   "AST": 0.001,
-   "STL": 0.015,
-   "BLK": 0.411,
-   "TO": 0.996,
-   "DD": 0.391,
-   "PTS": 0.998,
-   "PF": 0.131
+   "FG": 0.997,
+   "FT": 0.148,
+   "TPM": 0.988,
+   "REB": 0.399,
+   "AST": 0,
+   "STL": 0.097,
+   "BLK": 0.026,
+   "TO": 1,
+   "DD": 0.634,
+   "PTS": 1,
+   "PF": 0.031
   },
   "pcCurrent": {
-   "FG": 0.797,
-   "FT": 0.221,
-   "TPM": 0.982,
-   "REB": 0.171,
+   "FG": 0.997,
+   "FT": 0.148,
+   "TPM": 0.988,
+   "REB": 0.399,
    "AST": 0,
-   "STL": 0.007,
-   "BLK": 0.336,
+   "STL": 0.097,
+   "BLK": 0.026,
    "TO": 1,
-   "DD": 0.23,
-   "PTS": 0.984,
-   "PF": 0.409
+   "DD": 0.634,
+   "PTS": 1,
+   "PF": 0.031
   }
  },
  "alternatives": [],
- "currentBench": [
-  "Karl-Anthony Towns",
-  "Dillon Brooks"
- ],
- "sameStarters": false,
- "moves": [
-  {
-   "name": "Karl-Anthony Towns",
-   "from": "BE",
-   "to": "C"
-  },
-  {
-   "name": "Tyler Herro",
-   "from": "SG",
-   "to": "UTIL"
-  },
-  {
-   "name": "Rudy Gobert",
-   "from": "UTIL",
-   "to": "BE"
-  },
-  {
-   "name": "Dillon Brooks",
-   "from": "BE",
-   "to": "SG"
-  },
-  {
-   "name": "Zach Edey",
-   "from": "C",
-   "to": "BE"
-  }
- ],
+ "currentBench": [],
+ "sameStarters": true,
+ "moves": [],
  "slots": [
   {
-   "name": "James Harden",
+   "name": "Shai Gilgeous-Alexander",
    "slot": "PG"
   },
   {
-   "name": "Dillon Brooks",
+   "name": "James Harden",
    "slot": "SG"
   },
   {
-   "name": "Brandon Miller",
+   "name": "Miles Bridges",
    "slot": "SF"
   },
   {
-   "name": "Miles Bridges",
+   "name": "Michael Porter Jr.",
    "slot": "PF"
   },
   {
@@ -100,15 +71,15 @@
    "slot": "C"
   },
   {
-   "name": "Austin Reaves",
+   "name": "Dillon Brooks",
    "slot": "G"
   },
   {
-   "name": "Michael Porter Jr.",
+   "name": "Brandon Miller",
    "slot": "F"
   },
   {
-   "name": "Shai Gilgeous-Alexander",
+   "name": "Austin Reaves",
    "slot": "UTIL"
   },
   {
@@ -132,6 +103,6 @@
    "slot": "BE"
   }
  ],
- "id": "2026-11-07T0544Z",
- "createdAt": "2026-11-07T05:44:11.719Z"
+ "id": "2026-11-07T1014Z",
+ "createdAt": "2026-11-07T10:14:18.704Z"
 }
