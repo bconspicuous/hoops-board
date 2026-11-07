@@ -1,25 +1,25 @@
 {
  "week": 3,
  "opp": "Songpa Park Kezhang",
- "acqLeft": 4,
+ "acqLeft": 3,
  "dropCandidates": [
   "Dillon Brooks"
  ],
  "base": {
-  "wk": 5.968,
-  "champ": 0.1237,
-  "p1": 0.0968,
-  "epct": 0.5394
+  "wk": 5.48,
+  "champ": 0.0221,
+  "p1": 0.0074,
+  "epct": 0.5018
  },
  "protect": [
   "Shai Gilgeous-Alexander",
-  "Anthony Davis",
   "Kyrie Irving",
   "James Harden",
   "Karl-Anthony Towns",
   "Austin Reaves",
   "Michael Porter Jr.",
-  "Tyler Herro"
+  "Tyler Herro",
+  "Rudy Gobert"
  ],
  "droppable": [
   "Dillon Brooks"
@@ -34,10 +34,10 @@
    "addOwner": "FA",
    "drop": "Dillon Brooks",
    "ir": null,
-   "weekGain": 0.52,
-   "titleGain": 0.1389,
-   "p1Gain": 0.2409,
-   "epctGain": 0.0275,
+   "weekGain": 0.368,
+   "titleGain": 0.0399,
+   "p1Gain": 0.0395,
+   "epctGain": 0.0236,
    "addTeam": "POR",
    "addPos": "C",
    "dropValue": -5.68,
@@ -54,22 +54,22 @@
     "g": 6,
     "min": 16.5
    },
-   "firstProposedAt": "2026-11-06T10:14:00.980Z"
+   "firstProposedAt": "2026-11-07T02:43:10.308Z"
   },
   {
    "n": 2,
    "kind": "add/drop",
-   "add": "Zaccharie Risacher",
-   "addEspnId": 5211175,
+   "add": "Alex Sarr",
+   "addEspnId": 5160992,
    "addOwner": "FA",
    "drop": "Dillon Brooks",
    "ir": null,
-   "weekGain": 0.266,
-   "titleGain": 0.0093,
-   "p1Gain": 0.013,
-   "epctGain": 0.0019,
-   "addTeam": "DAL",
-   "addPos": "SF",
+   "weekGain": 0.344,
+   "titleGain": 0.0214,
+   "p1Gain": 0.0288,
+   "epctGain": 0.0179,
+   "addTeam": "WAS",
+   "addPos": "PF,C",
    "dropValue": -5.68,
    "status": "proposed",
    "conflicts": [
@@ -82,24 +82,24 @@
     "returnDate": null,
     "report": null,
     "g": 8,
-    "min": 26.9
+    "min": 25.8
    },
-   "firstProposedAt": "2026-11-06T10:14:00.980Z"
+   "firstProposedAt": "2026-11-07T02:43:10.308Z"
   },
   {
    "n": 3,
    "kind": "add/drop",
-   "add": "Daniel Gafford",
-   "addEspnId": 4278049,
+   "add": "Precious Achiuwa",
+   "addEspnId": 4431679,
    "addOwner": "FA",
    "drop": "Dillon Brooks",
    "ir": null,
-   "weekGain": 0.348,
-   "titleGain": -0.0025,
-   "p1Gain": 0.012,
-   "epctGain": 0.0005,
-   "addTeam": "DAL",
-   "addPos": "C",
+   "weekGain": 0.334,
+   "titleGain": -0.002,
+   "p1Gain": 0.0007,
+   "epctGain": 0.0003,
+   "addTeam": "SAC",
+   "addPos": "PF,C",
    "dropValue": -5.68,
    "status": "proposed",
    "conflicts": [
@@ -112,9 +112,9 @@
     "returnDate": null,
     "report": null,
     "g": 8,
-    "min": 23.3
+    "min": 27.3
    },
-   "firstProposedAt": "2026-11-06T10:14:00.980Z"
+   "firstProposedAt": "2026-11-07T02:43:10.308Z"
   }
  ],
  "screened": [
@@ -122,47 +122,51 @@
    "add": "Robert Williams III",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.52,
-   "title": 0.1389
+   "wk": 0.368,
+   "title": 0.0399
   },
   {
-   "add": "Zaccharie Risacher",
+   "add": "Alex Sarr",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.266,
-   "title": 0.0093
-  },
-  {
-   "add": "Daniel Gafford",
-   "drop": "Dillon Brooks",
-   "ir": null,
-   "wk": 0.348,
-   "title": -0.0025
-  },
-  {
-   "add": "Santi Aldama",
-   "drop": "Dillon Brooks",
-   "ir": null,
-   "wk": 0.285,
-   "title": -0.0004
+   "wk": 0.344,
+   "title": 0.0214
   },
   {
    "add": "Precious Achiuwa",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.301,
-   "title": -0.0102
+   "wk": 0.334,
+   "title": -0.002
   },
   {
-   "add": "Alex Caruso",
+   "add": "Zaccharie Risacher",
    "drop": "Dillon Brooks",
    "ir": null,
-   "wk": 0.282,
-   "title": -0.0113
+   "wk": 0.281,
+   "title": -0.0002
+  },
+  {
+   "add": "Tari Eason",
+   "drop": "Dillon Brooks",
+   "ir": null,
+   "wk": 0.213,
+   "title": -0.002
+  },
+  {
+   "add": "Jonathan Kuminga",
+   "drop": "Dillon Brooks",
+   "ir": null,
+   "wk": 0.205,
+   "title": -0.002
   }
  ],
- "createdAt": "2026-11-06T20:43:01.881Z",
- "id": "20261106T2043",
- "rosterSig": "Anthony Davis|Austin Reaves|Brandon Miller|Dillon Brooks|James Harden|Karl-Anthony Towns|Kyrie Irving|Michael Porter Jr.|Miles Bridges|Norman Powell|Rudy Gobert|Shai Gilgeous-Alexander|Tyler Herro#",
- "newItems": []
+ "createdAt": "2026-11-07T02:43:10.308Z",
+ "id": "20261107T0243",
+ "rosterSig": "Austin Reaves|Brandon Miller|Dillon Brooks|James Harden|Karl-Anthony Towns|Kyrie Irving|Michael Porter Jr.|Miles Bridges|Norman Powell|Rudy Gobert|Shai Gilgeous-Alexander|Tyler Herro|Zach Edey#Anthony Davis",
+ "newItems": [
+  1,
+  2,
+  3
+ ]
 }
