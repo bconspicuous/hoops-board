@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-07T11:42+09:00",
+ "asOf": "2026-11-07T14:43+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -147,15 +147,15 @@
    "player": "Brandon Miller",
    "team": "CHA",
    "status": "Day-To-Day",
-   "date": "2026-11-07T01:07Z",
+   "date": "2026-11-07T04:27Z",
    "type": "day-to-day",
    "returnDate": "2026-11-09",
    "detail": "Soreness",
    "side": "Right",
    "injury": "Groin",
    "fantasyStatus": "GTD",
-   "short": "Miller (groin) won't return to Friday's game against the Celtics, Brett Siegel of ClutchPoints.com reports.",
-   "long": "Miller exited the court halfway through the second quarter. He was initially listed as questionable to return, though he has since been ruled out due to right groin soreness. With Miller off the floor, Sion James should see more minutes the rest of the way."
+   "short": "Head coach Charles Lee said Miller (groin) will be re-evaluated over the weekend, and they expect to have more information by Monday, Steve Reed of The Associated Press reports.",
+   "long": "Lee downplayed the groin issue after the game, saying he didn't see exactly when the injury occurred but noticed Miller started limping, and he asked for a sub after a couple of plays. He was ruled out after heading back to the locker room, and Tidjane Salaun started the second half for him. If Miller needs to miss additional time, Coby White and Naz Reid would be asked to step it up on offense, and there would be more minutes available for Salaun and Sion James."
   },
   {
    "player": "Dennis Schroder",
@@ -674,6 +674,20 @@
    "fantasyStatus": "GTD",
    "short": "Jones (ankle/two-way player) is out for Friday's game against Toronto.",
    "long": "It's not clear whether Jones is still dealing with a right ankle injury, or if he's been ruled out due to his status as a two-way player. He'll presumably open the year with the G League's Wisconsin Herd once he's back at full strength."
+  },
+  {
+   "player": "Joan Beringer",
+   "team": "MIN",
+   "status": "Out",
+   "date": "2026-11-07T02:41Z",
+   "type": "out",
+   "returnDate": "2026-11-08",
+   "detail": null,
+   "side": null,
+   "injury": "Fracture",
+   "fantasyStatus": "OUT",
+   "short": "Beringer was ruled out for the second half of Friday's game against the Pelicans due to a nasal fracture, Dane Moore of 'The Dane Moore NBA Podcast' reports.",
+   "long": "Although Beringer's nasal fracture will prevent him from returning to Friday's contest, he may be able to play through the injury during future games while wearing a mask. Trey Lyles stands to benefit from increased minutes in the meantime."
   },
   {
    "player": "Terrence Shannon Jr.",

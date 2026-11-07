@@ -1,20 +1,6 @@
 {
- "asOfET": "2026-11-06T21:42-05:00",
+ "asOfET": "2026-11-07T00:43-05:00",
  "days": {
-  "2026-11-05": [
-   {
-    "id": "401909936",
-    "start": "2026-11-06T02:00Z",
-    "name": "ORL @ PHX",
-    "state": "post"
-   },
-   {
-    "id": "401909937",
-    "start": "2026-11-06T03:00Z",
-    "name": "MIA @ GS",
-    "state": "post"
-   }
-  ],
   "2026-11-06": [
    {
     "id": "401909287",
@@ -32,42 +18,86 @@
     "id": "401909289",
     "start": "2026-11-07T00:30Z",
     "name": "PHI @ CLE",
-    "state": "in"
+    "state": "post"
    },
    {
     "id": "401909290",
     "start": "2026-11-07T01:00Z",
     "name": "UTAH @ DAL",
-    "state": "in"
+    "state": "post"
    },
    {
     "id": "401909291",
     "start": "2026-11-07T01:00Z",
     "name": "OKC @ MEM",
-    "state": "in"
+    "state": "post"
    },
    {
     "id": "401909292",
     "start": "2026-11-07T01:00Z",
     "name": "TOR @ MIL",
-    "state": "in"
+    "state": "post"
    },
    {
     "id": "401909293",
     "start": "2026-11-07T01:00Z",
     "name": "MIN @ NO",
-    "state": "in"
+    "state": "post"
    },
    {
     "id": "401909294",
     "start": "2026-11-07T03:00Z",
     "name": "POR @ LAL",
-    "state": "pre"
+    "state": "in"
    },
    {
     "id": "401909295",
     "start": "2026-11-07T03:00Z",
     "name": "SA @ SAC",
+    "state": "in"
+   }
+  ],
+  "2026-11-07": [
+   {
+    "id": "401909938",
+    "start": "2026-11-07T22:00Z",
+    "name": "DEN VS IND",
+    "state": "pre"
+   },
+   {
+    "id": "401909939",
+    "start": "2026-11-08T00:30Z",
+    "name": "BKN @ ATL",
+    "state": "pre"
+   },
+   {
+    "id": "401909940",
+    "start": "2026-11-08T01:00Z",
+    "name": "NY @ CLE",
+    "state": "pre"
+   },
+   {
+    "id": "401909941",
+    "start": "2026-11-08T01:00Z",
+    "name": "WSH @ OKC",
+    "state": "pre"
+   },
+   {
+    "id": "401909942",
+    "start": "2026-11-08T01:30Z",
+    "name": "ORL @ GS",
+    "state": "pre"
+   },
+   {
+    "id": "401909943",
+    "start": "2026-11-08T02:00Z",
+    "name": "HOU @ PHX",
+    "state": "pre"
+   },
+   {
+    "id": "401909944",
+    "start": "2026-11-08T03:00Z",
+    "name": "SA @ POR",
     "state": "pre"
    }
   ]
