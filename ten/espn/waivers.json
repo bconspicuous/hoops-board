@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-07T22:37+09:00",
+ "asOf": "2026-11-08T06:45+09:00",
  "scoringPeriodId": 19,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -40,7 +40,7 @@
    "team": "IYH",
    "name": "Jongno Karina",
    "rank": 4,
-   "acq": 8
+   "acq": 9
   },
   {
    "team": "Doo",
@@ -64,7 +64,7 @@
    "team": "SMS",
    "name": "Samseong Homeless",
    "rank": 8,
-   "acq": 7
+   "acq": 8
   },
   {
    "team": "JYP",
@@ -154,6 +154,54 @@
   }
  ],
  "transactions": [
+  {
+   "id": "d6856a68-29b3-4853-8bdc-4f170c04c775",
+   "team": "SMS",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-08 02:43 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Nolan Traore",
+     "from": "FA",
+     "to": "SMS"
+    },
+    {
+     "type": "DROP",
+     "player": "Draymond Green",
+     "from": "SMS",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "0f109846-13fb-41f3-854e-a38d1fd0d25a",
+   "team": "IYH",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-08 01:36 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Christian Braun",
+     "from": "FA",
+     "to": "IYH"
+    },
+    {
+     "type": "DROP",
+     "player": "Collin Gillespie",
+     "from": "IYH",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
   {
    "id": "0c60ad05-1788-498d-bdca-6337714ee808",
    "team": "TBG",
@@ -992,6 +1040,28 @@
    "droppedBy": {
     "by": "TBG",
     "at": "2026-11-07 13:32 KST"
+   }
+  },
+  {
+   "id": 4278585,
+   "name": "Collin Gillespie",
+   "pro": "PHX",
+   "waiverClears": "2026-11-09 17:00 KST",
+   "inj": "ACTIVE",
+   "droppedBy": {
+    "by": "IYH",
+    "at": "2026-11-08 01:36 KST"
+   }
+  },
+  {
+   "id": 6589,
+   "name": "Draymond Green",
+   "pro": "GSW",
+   "waiverClears": "2026-11-09 17:00 KST",
+   "inj": "DAY_TO_DAY",
+   "droppedBy": {
+    "by": "SMS",
+    "at": "2026-11-08 02:43 KST"
    }
   },
   {
