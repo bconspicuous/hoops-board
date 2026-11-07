@@ -1,10 +1,99 @@
 {
- "planId": "2026-11-06T2043Z",
+ "planId": "2026-11-07T0544Z",
  "mode": "dry",
- "date": "2026-11-06",
+ "date": "2026-11-07",
  "at": "2026-11-07T00:44-05:00",
- "moves": [],
- "skipped": [],
+ "moves": [
+  {
+   "name": "Karl-Anthony Towns",
+   "from": "BE",
+   "to": "C"
+  },
+  {
+   "name": "Dillon Brooks",
+   "from": "BE",
+   "to": "SG"
+  }
+ ],
+ "skipped": [
+  {
+   "name": "Tyler Herro",
+   "from": "SG",
+   "to": "UTIL",
+   "why": "game started / locked"
+  },
+  {
+   "name": "Rudy Gobert",
+   "from": "UTIL",
+   "to": "BE",
+   "why": "game started / locked"
+  },
+  {
+   "name": "Zach Edey",
+   "from": "C",
+   "to": "BE",
+   "why": "game started / locked"
+  }
+ ],
  "ok": false,
- "error": "plan date is in the past"
+ "scoringPeriodId": 18,
+ "finalLineup": [
+  [
+   "PG",
+   "James Harden"
+  ],
+  [
+   "SG",
+   "Tyler Herro"
+  ],
+  [
+   "SG",
+   "Dillon Brooks"
+  ],
+  [
+   "SF",
+   "Brandon Miller"
+  ],
+  [
+   "PF",
+   "Miles Bridges"
+  ],
+  [
+   "C",
+   "Karl-Anthony Towns"
+  ],
+  [
+   "C",
+   "Zach Edey"
+  ],
+  [
+   "G",
+   "Austin Reaves"
+  ],
+  [
+   "F",
+   "Michael Porter Jr."
+  ],
+  [
+   "UTIL",
+   "Shai Gilgeous-Alexander"
+  ],
+  [
+   "UTIL",
+   "Kyrie Irving"
+  ],
+  [
+   "UTIL",
+   "Rudy Gobert"
+  ],
+  [
+   "BE",
+   "Norman Powell"
+  ],
+  [
+   "IR",
+   "Anthony Davis"
+  ]
+ ],
+ "error": "resulting lineup exceeds slot counts {'C': 2, 'SG': 2} (a locked player blocks a swap?) — nothing submitted"
 }
