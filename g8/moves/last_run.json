@@ -1,7 +1,7 @@
 {
- "planId": "20261106T1014",
+ "planId": "20261107T0243",
  "mode": "dry",
- "at": "2026-11-06T05:14-05:00",
+ "at": "2026-11-06T21:43-05:00",
  "items": [
   {
    "n": 1,
@@ -25,8 +25,8 @@
    ],
    "ok": true,
    "add": {
-    "name": "Zaccharie Risacher",
-    "status": "WAIVERS"
+    "name": "Alex Sarr",
+    "status": "FREEAGENT"
    },
    "drop": "Dillon Brooks",
    "ir": null
@@ -39,7 +39,7 @@
    ],
    "ok": true,
    "add": {
-    "name": "Daniel Gafford",
+    "name": "Precious Achiuwa",
     "status": "FREEAGENT"
    },
    "drop": "Dillon Brooks",
@@ -49,6 +49,6 @@
  "ok": true,
  "scoringPeriodId": 18,
  "matchupPeriod": 3,
- "addsUsed": 3,
+ "addsUsed": 4,
  "rosterMatchesPlan": true
 }
