@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-08T06:44+09:00",
+ "asOf": "2026-11-08T07:22+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -203,15 +203,29 @@
    "player": "Tobe Awaka",
    "team": "CHI",
    "status": "Day-To-Day",
-   "date": "2026-11-07T21:33Z",
+   "date": "2026-11-07T21:36Z",
    "type": "day-to-day",
    "returnDate": "2026-11-08",
    "detail": "Sprain",
    "side": "Left",
    "injury": "Knee",
    "fantasyStatus": "GTD",
-   "short": "Awaka (ankle) is active for Monday's game against the 76ers.",
-   "long": "Awaka was probable to suit up versus Philadelphia with a sprained left ankle, but he's going to play through it for the second straight contest. He'll provide center depth on the bench behind starter Jalen Smith (finger), although Awaka isn't expected to see much playing time."
+   "short": "Awaka (knee) is questionable for Sundays' game against the 76ers.",
+   "long": "Awaka missed Wednesday's 135-105 loss to the Knicks due to a sprained left MCL, and he's now in danger of missing a second consecutive outing with the ailment. Zach Collins (illness) has already been ruled out Sunday, leaving Noa Essengue, Leonard Miller and Patrick Williams as candidates to see more opportunities off Chicago's bench."
+  },
+  {
+   "player": "Jalen Smith",
+   "team": "CHI",
+   "status": "Day-To-Day",
+   "date": "2026-11-07T21:31Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-08",
+   "detail": "Sprain",
+   "side": "Left",
+   "injury": "Finger",
+   "fantasyStatus": "GTD",
+   "short": "Smith (finger) is probable for Sunday's game against Philadelphia.",
+   "long": "Smith left Wednesday's 135-105 loss to the Knicks after just seven minutes of play due to a left finger sprain and was initially deemed questionable for Sunday. His upgraded status is a good sign for Smith, who's been the starting center with Nic Claxton (hamstring) yet to play this season."
   },
   {
    "player": "Nic Claxton",
@@ -240,20 +254,6 @@
    "fantasyStatus": "OUT",
    "short": "Collins (illness) is out for Sunday's game against Philadelphia.",
    "long": "Collins left Wednesday's 135-105 loss to the Knicks with an illness, then missed Friday's practice due to the ailment. He's battling a respiratory issue that will force him to miss his third contest of the season. Noa Essengue, Leonard Miller and Patrick Williams could all see additional minutes versus the 76ers with Collins out."
-  },
-  {
-   "player": "Jalen Smith",
-   "team": "CHI",
-   "status": "Day-To-Day",
-   "date": "2026-11-05T01:35Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-08",
-   "detail": "Sprain",
-   "side": "Left",
-   "injury": "Finger",
-   "fantasyStatus": "GTD",
-   "short": "Smith (hand) won't return to Wednesday's game against the Knicks.",
-   "long": "Smith has been starting for Nic Claxton (hamstring), who hasn't played this season. However, the Bulls will be down another big, at least for the remainder of Wednesday's contest. As a result, Zach Collins should handle most of the minutes in the middle the rest of the way."
   },
   {
    "player": "Jaylon Tyson",
@@ -357,15 +357,43 @@
    "player": "Isaiah Joe",
    "team": "DET",
    "status": "Out",
-   "date": "2026-11-03T21:18Z",
+   "date": "2026-11-07T21:59Z",
    "type": "out",
-   "returnDate": "2026-11-08",
+   "returnDate": "2026-11-09",
    "detail": "Bruise",
    "side": "Right",
    "injury": "Hip",
+   "fantasyStatus": "OUT",
+   "short": "Joe (hip) has been ruled out for Sunday's game against the Lakers.",
+   "long": "Joe is still bothered by the right hip contusion he suffered against the 76ers on Oct. 25, and it will cause him to miss a sixth consecutive game Sunday. He'll have another chance to return to action Monday against Washington."
+  },
+  {
+   "player": "Isaac Jones",
+   "team": "DET",
+   "status": "Day-To-Day",
+   "date": "2026-11-07T21:57Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-08",
+   "detail": null,
+   "side": null,
+   "injury": "Not Injury Related",
    "fantasyStatus": "GTD",
-   "short": "Joe (hip) has been ruled out for Wednesday's game against Philadelphia.",
-   "long": "Joe will miss Wednesday's contest due to a right hip contusion, resulting in his fifth straight absence. This will continue to open up additional minutes on the perimeter for Detroit's reserves. Joe's next opportunity to play will come Sunday against the Lakers."
+   "short": "Jones posted 18 points (6-14 FG, 0-3 3Pt, 3-3 FT), 10 rebounds, an assist, two steals and two blocks in Wednesday's 100-88 Summer League loss to the Suns.",
+   "long": "Jones was one of four Phoenix players who scored at least 15 points, and he also led the team in rebounds and blocks while ranking second in steals. This was Jones' second double-double in four Summer League contests, and the third time he has surpassed the 15-point threshold."
+  },
+  {
+   "player": "Elijah Harkless",
+   "team": "DET",
+   "status": "Day-To-Day",
+   "date": "2026-11-07T21:57Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-08",
+   "detail": null,
+   "side": null,
+   "injury": "Not Injury Related",
+   "fantasyStatus": "GTD",
+   "short": "Harkless signed a two-way contract with the Pistons, Keith Smith of Spotrac.com reports.",
+   "long": "Harkless is no longer a free agent after the Jazz declined his team option back in June. A defensive-minded wing, Harkless will likely play a prominent role for Detroit's G League affiliate in the early going."
   },
   {
    "player": "Jalen Duren",
@@ -590,6 +618,20 @@
    "fantasyStatus": "OUT",
    "short": "Miller underwent surgery Wednesday to repair a torn left rotator cuff and will be re-evaluated in six months, per Law Murray of The Athletic.",
    "long": "It's a tough break for Miller, who had an opportunity to battle for a reserve role during training camp in the fall. The timeline for a return is likely to keep him on the shelf until after the All-Star break. Miller's extended stay on the sidelines gives Kobe Sanders a chance to crack the Clippers' rotation."
+  },
+  {
+   "player": "Luka Doncic",
+   "team": "LAL",
+   "status": "Day-To-Day",
+   "date": "2026-11-07T22:11Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-08",
+   "detail": null,
+   "side": null,
+   "injury": "Back",
+   "fantasyStatus": "GTD",
+   "short": "Doncic (back) is questionable for Sunday's game against the Pistons.",
+   "long": "Doncic dropped his second 50-piece of the season during Friday's 124-118 win over Portland, but the Lakers' superstar is dealing with tightness in his lower back that will leave his status for Sunday's outing up in the air. If Doncic is unable to suit up, Austin Reaves will take over primary offensive responsibilities while Quentin Grimes and Collin Sexton would see a substantial increase in minutes for the first night of LA's back-to-back set."
   },
   {
    "player": "Richie Saunders",
