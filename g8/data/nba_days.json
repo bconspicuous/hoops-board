@@ -1,5 +1,5 @@
 {
- "asOfET": "2026-11-06T15:41-05:00",
+ "asOfET": "2026-11-06T21:42-05:00",
  "days": {
   "2026-11-05": [
    {
@@ -20,43 +20,43 @@
     "id": "401909287",
     "start": "2026-11-07T00:00Z",
     "name": "WSH @ ATL",
-    "state": "pre"
+    "state": "post"
    },
    {
     "id": "401909288",
     "start": "2026-11-07T00:00Z",
     "name": "BOS @ CHA",
-    "state": "pre"
+    "state": "post"
    },
    {
     "id": "401909289",
     "start": "2026-11-07T00:30Z",
     "name": "PHI @ CLE",
-    "state": "pre"
+    "state": "in"
    },
    {
     "id": "401909290",
     "start": "2026-11-07T01:00Z",
     "name": "UTAH @ DAL",
-    "state": "pre"
+    "state": "in"
    },
    {
     "id": "401909291",
     "start": "2026-11-07T01:00Z",
     "name": "OKC @ MEM",
-    "state": "pre"
+    "state": "in"
    },
    {
     "id": "401909292",
     "start": "2026-11-07T01:00Z",
     "name": "TOR @ MIL",
-    "state": "pre"
+    "state": "in"
    },
    {
     "id": "401909293",
     "start": "2026-11-07T01:00Z",
     "name": "MIN @ NO",
-    "state": "pre"
+    "state": "in"
    },
    {
     "id": "401909294",
