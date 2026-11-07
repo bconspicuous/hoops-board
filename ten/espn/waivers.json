@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-07T06:45+09:00",
+ "asOf": "2026-11-07T13:44+09:00",
  "scoringPeriodId": 18,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -34,7 +34,7 @@
    "team": "TBG",
    "name": "Team Bbang Guns",
    "rank": 3,
-   "acq": 9
+   "acq": 10
   },
   {
    "team": "IYH",
@@ -58,7 +58,7 @@
    "team": "SONG",
    "name": "Kfinco_ThePianist",
    "rank": 7,
-   "acq": 12
+   "acq": 14
   },
   {
    "team": "SMS",
@@ -154,6 +154,78 @@
   }
  ],
  "transactions": [
+  {
+   "id": "0c60ad05-1788-498d-bdca-6337714ee808",
+   "team": "TBG",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-07 13:32 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "2995706",
+     "from": "FA",
+     "to": "TBG"
+    },
+    {
+     "type": "DROP",
+     "player": "Kel'el Ware",
+     "from": "TBG",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "27ebbca4-8014-4a25-b1b7-cdc230b8f925",
+   "team": "SONG",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-07 12:03 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "4433192",
+     "from": "FA",
+     "to": "SONG"
+    },
+    {
+     "type": "DROP",
+     "player": "Aday Mara",
+     "from": "SONG",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "8eea6f7d-9e5b-459e-9471-27e41d2e33e3",
+   "team": "SONG",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-07 11:59 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "4711272",
+     "from": "FA",
+     "to": "SONG"
+    },
+    {
+     "type": "DROP",
+     "player": "Jonathan Kuminga",
+     "from": "SONG",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
   {
    "id": "e915767c-8c62-4160-967b-cef831524baa",
    "team": "IYH",
@@ -1044,6 +1116,39 @@
   }
  ],
  "onWaivers": [
+  {
+   "id": 4433247,
+   "name": "Jonathan Kuminga",
+   "pro": "MIN",
+   "waiverClears": "2026-11-08 17:00 KST",
+   "inj": "ACTIVE",
+   "droppedBy": {
+    "by": "SONG",
+    "at": "2026-11-07 11:59 KST"
+   }
+  },
+  {
+   "id": 5105623,
+   "name": "Kel'el Ware",
+   "pro": "MIL",
+   "waiverClears": "2026-11-08 17:00 KST",
+   "inj": "ACTIVE",
+   "droppedBy": {
+    "by": "TBG",
+    "at": "2026-11-07 13:32 KST"
+   }
+  },
+  {
+   "id": 5174983,
+   "name": "Aday Mara",
+   "pro": "OKC",
+   "waiverClears": "2026-11-08 17:00 KST",
+   "inj": "ACTIVE",
+   "droppedBy": {
+    "by": "SONG",
+    "at": "2026-11-07 12:03 KST"
+   }
+  },
   {
    "id": 4066436,
    "name": "De'Anthony Melton",
