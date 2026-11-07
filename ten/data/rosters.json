@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-07T15:40+09:00",
+ "asOf": "2026-11-07T19:45+09:00",
  "leagueId": "504060248",
  "season": 2027,
  "teams": [
@@ -42,7 +42,7 @@
      "3": 3
     },
     "misc": 0,
-    "moveToActive": 90,
+    "moveToActive": 94,
     "moveToIR": 3,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -88,7 +88,7 @@
      "3": 1
     },
     "misc": 0,
-    "moveToActive": 45,
+    "moveToActive": 48,
     "moveToIR": 1,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -112,8 +112,8 @@
     "Kyshawn George",
     "Cedric Coward",
     "Anthony Black",
-    "Aday Mara",
-    "Jonathan Kuminga"
+    "Reed Sheppard",
+    "Tari Eason"
    ],
    "ir": [
     "Brandon Ingram"
@@ -134,7 +134,7 @@
      "3": 5
     },
     "misc": 0,
-    "moveToActive": 57,
+    "moveToActive": 61,
     "moveToIR": 1,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -180,7 +180,7 @@
      "3": 1
     },
     "misc": 0,
-    "moveToActive": 51,
+    "moveToActive": 54,
     "moveToIR": 5,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -226,7 +226,7 @@
      "3": 2
     },
     "misc": 0,
-    "moveToActive": 49,
+    "moveToActive": 51,
     "moveToIR": 3,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -272,7 +272,7 @@
      "3": 1
     },
     "misc": 0,
-    "moveToActive": 55,
+    "moveToActive": 58,
     "moveToIR": 2,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -288,7 +288,6 @@
     "Jamal Murray",
     "Jaylen Brown",
     "Tyler Herro",
-    "Kel'el Ware",
     "Dyson Daniels",
     "Dylan Harper",
     "Immanuel Quickley",
@@ -297,7 +296,8 @@
     "Pelle Larsson",
     "Giannis Antetokounmpo",
     "Julius Randle",
-    "Jeremiah Fears"
+    "Jeremiah Fears",
+    "Mario Hezonja"
    ],
    "ir": [
     "Anthony Edwards"
@@ -318,7 +318,7 @@
      "3": 2
     },
     "misc": 0,
-    "moveToActive": 53,
+    "moveToActive": 56,
     "moveToIR": 2,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -364,7 +364,7 @@
      "3": 2
     },
     "misc": 0,
-    "moveToActive": 65,
+    "moveToActive": 68,
     "moveToIR": 4,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -410,7 +410,7 @@
      "3": 2
     },
     "misc": 0,
-    "moveToActive": 48,
+    "moveToActive": 51,
     "moveToIR": 3,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -455,7 +455,7 @@
      "3": 1
     },
     "misc": 0,
-    "moveToActive": 41,
+    "moveToActive": 44,
     "moveToIR": 2,
     "paid": 0.0,
     "teamCharges": 0.0,

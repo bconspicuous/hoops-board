@@ -1,6 +1,6 @@
 {
- "asOf": "2026-11-07T15:40+09:00",
- "scoringPeriodId": 18,
+ "asOf": "2026-11-07T19:45+09:00",
+ "scoringPeriodId": 19,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
   "waiverHours": 24,
@@ -165,7 +165,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "2995706",
+     "player": "Mario Hezonja",
      "from": "FA",
      "to": "TBG"
     },
@@ -189,7 +189,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "4433192",
+     "player": "Tari Eason",
      "from": "FA",
      "to": "SONG"
     },
@@ -213,7 +213,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "4711272",
+     "player": "Reed Sheppard",
      "from": "FA",
      "to": "SONG"
     },
@@ -969,150 +969,6 @@
     }
    ],
    "bid": 0
-  },
-  {
-   "id": "368b4ddc-5d77-4977-8bc1-a09ce7b1ab13",
-   "team": "IYH",
-   "mine": false,
-   "type": "WAIVER",
-   "status": "CANCELED",
-   "proposed": "2026-10-31 15:33 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Jrue Holiday",
-     "from": "FA",
-     "to": "IYH"
-    },
-    {
-     "type": "DROP",
-     "player": "Day'Ron Sharpe",
-     "from": "IYH",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "85cc8050-4e39-4db0-95f7-785b3788579c",
-   "team": "GTD",
-   "mine": true,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-10-31 15:21 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Duncan Robinson",
-     "from": "FA",
-     "to": "GTD"
-    },
-    {
-     "type": "DROP",
-     "player": "Matas Buzelis",
-     "from": "GTD",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "283d9655-a871-43a8-9af6-ef111c1323cb",
-   "team": "SONG",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-10-31 11:20 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Jalen Smith",
-     "from": "FA",
-     "to": "SONG"
-    },
-    {
-     "type": "DROP",
-     "player": "Jonathan Kuminga",
-     "from": "SONG",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "5be7b764-4732-425f-b7b7-5803cc081fdb",
-   "team": "SMS",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-10-31 07:11 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Ja'Kobe Walter",
-     "from": "FA",
-     "to": "SMS"
-    },
-    {
-     "type": "DROP",
-     "player": "Ja Morant",
-     "from": "SMS",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "c1c70577-57d4-4641-b4bb-c23ffcc7f061",
-   "team": "GGAM",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-10-31 01:05 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Bobby Portis",
-     "from": "FA",
-     "to": "GGAM"
-    },
-    {
-     "type": "DROP",
-     "player": "Jrue Holiday",
-     "from": "GGAM",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "09e5fcdf-a802-41b5-af2b-2d308e22b272",
-   "team": "GTD",
-   "mine": true,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-10-30 16:22 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Miles Bridges",
-     "from": "FA",
-     "to": "GTD"
-    },
-    {
-     "type": "DROP",
-     "player": "Jared McCain",
-     "from": "GTD",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
   }
  ],
  "onWaivers": [
@@ -1158,17 +1014,6 @@
    "droppedBy": {
     "by": "IYH",
     "at": "2026-11-07 01:40 KST"
-   }
-  },
-  {
-   "id": 5106060,
-   "name": "Jarace Walker",
-   "pro": "IND",
-   "waiverClears": "2026-11-07 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "SMS",
-    "at": "2026-11-06 08:40 KST"
    }
   }
  ],
