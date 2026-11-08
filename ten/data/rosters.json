@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-08T22:55+09:00",
+ "asOf": "2026-11-09T06:45+09:00",
  "leagueId": "504060248",
  "season": 2027,
  "teams": [
@@ -80,12 +80,13 @@
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
-    "acquisitions": 9,
-    "drops": 8,
+    "acquisitions": 10,
+    "drops": 9,
     "matchupAcquisitionTotals": {
      "1": 3,
      "2": 3,
-     "3": 3
+     "3": 3,
+     "4": 1
     },
     "misc": 0,
     "moveToActive": 53,
@@ -332,9 +333,9 @@
    "me": true,
    "players": [
     "Donovan Mitchell",
+    "Kawhi Leonard",
     "Dejounte Murray",
     "Ivica Zubac",
-    "Josh Hart",
     "Ajay Mitchell",
     "Toumani Camara",
     "Miles Bridges",
@@ -346,7 +347,7 @@
     "Grayson Allen"
    ],
    "ir": [
-    "Kawhi Leonard"
+    "Josh Hart"
    ],
    "record": {
     "wins": 7,
@@ -356,16 +357,17 @@
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
-    "acquisitions": 12,
-    "drops": 11,
+    "acquisitions": 13,
+    "drops": 12,
     "matchupAcquisitionTotals": {
      "1": 4,
      "2": 6,
-     "3": 2
+     "3": 2,
+     "4": 1
     },
     "misc": 0,
     "moveToActive": 71,
-    "moveToIR": 4,
+    "moveToIR": 5,
     "paid": 0.0,
     "teamCharges": 0.0,
     "trades": 3
@@ -410,7 +412,7 @@
      "3": 2
     },
     "misc": 0,
-    "moveToActive": 53,
+    "moveToActive": 54,
     "moveToIR": 3,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -467,36 +469,30 @@
   "O": [
    "Jaren Jackson Jr.",
    "Paolo Banchero",
-   "Anthony Davis",
-   "Desmond Bane",
    "Brandon Ingram",
-   "Nic Claxton",
+   "Luka Doncic",
    "Tyrese Haliburton",
    "Jalen Duren",
+   "Norman Powell",
    "Anthony Edwards",
    "Kawhi Leonard",
-   "Josh Hart",
-   "Jarrett Allen",
    "Kon Knueppel",
    "Ja Morant",
    "Chet Holmgren",
    "Jalen Williams",
    "Tobias Harris",
    "Kristaps Porzingis",
-   "Keegan Murray",
    "Egor Demin",
    "Jimmy Butler III",
    "Jalen Suggs",
    "Yves Missi",
-   "Deandre Ayton",
    "Scotty Pippen Jr.",
    "Cason Wallace",
    "Mikel Brown Jr.",
    "Jusuf Nurkic",
-   "Isaiah Jackson",
    "Shaedon Sharpe",
+   "Isaiah Jackson",
    "Mark Williams",
-   "Robert Williams III",
    "Dennis Schroder",
    "Dereck Lively II",
    "Isaiah Stewart",
@@ -506,7 +502,6 @@
    "Bradley Beal",
    "Maxime Raynaud",
    "Justin Champagnie",
-   "Sam Merrill",
    "Jordan Goodwin",
    "Ben Simmons",
    "Isaiah Joe",
@@ -516,20 +511,25 @@
    "Jock Landale",
    "Clint Capela",
    "Yanic Konan Niederhauser",
-   "Jayden Quaintance",
    "Moses Moody",
+   "Jayden Quaintance",
    "Steven Adams"
   ],
   "DTD": [
    "Scottie Barnes",
-   "Joel Embiid",
+   "Keyonte George",
+   "Anthony Davis",
+   "Desmond Bane",
    "Lauri Markkanen",
-   "Luka Doncic",
    "Brandon Miller",
    "Moussa Diabate",
    "Immanuel Quickley",
-   "Jalen Smith",
-   "Joan Beringer",
+   "Josh Hart",
+   "Jarrett Allen",
+   "Mitchell Robinson",
+   "Deandre Ayton",
+   "Robert Williams III",
+   "Sam Merrill",
    "Rob Dillingham"
   ]
  }
