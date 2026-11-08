@@ -1,200 +1,97 @@
 {
  "week": 3,
  "opp": "Songpa Park Kezhang",
- "acqLeft": 3,
+ "acqLeft": 1,
  "dropCandidates": [
   "Dillon Brooks"
  ],
  "base": {
-  "wk": 5.553,
-  "champ": 0.0325,
-  "p1": 0.0142,
-  "epct": 0.5043
+  "wk": 5.709,
+  "champ": 0.2341,
+  "p1": 0.2199,
+  "epct": 0.5444
  },
  "protect": [
   "Shai Gilgeous-Alexander",
+  "Anthony Davis",
   "Kyrie Irving",
   "James Harden",
   "Karl-Anthony Towns",
   "Austin Reaves",
   "Michael Porter Jr.",
-  "Tyler Herro",
-  "Rudy Gobert"
+  "Tyler Herro"
  ],
  "droppable": [
   "Dillon Brooks"
  ],
- "flags": [
-  {
-   "kind": "ir-ineligible",
-   "player": "Anthony Davis",
-   "status": "DTD",
-   "note": "IR 선수가 O가 아님 — ESPN이 영입을 막을 수 있음(감독 판단: DTD는 영입 가능). 첫 사례에서 실제 동작을 기록"
-  }
- ],
+ "flags": [],
  "items": [
   {
    "n": 1,
-   "kind": "add/drop",
-   "add": "Robert Williams III",
-   "addEspnId": 4066211,
-   "addOwner": "FA",
-   "drop": "Dillon Brooks",
-   "ir": null,
-   "weekGain": 0.159,
-   "titleGain": 0.0924,
-   "p1Gain": 0.0914,
-   "epctGain": 0.0311,
-   "addTeam": "POR",
-   "addPos": "C",
-   "dropValue": -5.68,
-   "status": "proposed",
-   "conflicts": [
-    2,
-    3
-   ],
-   "addHealth": {
-    "status": "정상",
-    "injury": null,
-    "returnDate": null,
-    "report": null,
-    "g": 7,
-    "min": 16.4
-   },
-   "firstProposedAt": "2026-11-07T02:43:10.308Z"
-  },
-  {
-   "n": 2,
-   "kind": "add/drop",
-   "add": "Tari Eason",
-   "addEspnId": 4433192,
-   "addOwner": "FA",
-   "drop": "Dillon Brooks",
-   "ir": null,
-   "weekGain": 0.146,
-   "titleGain": 0.0147,
-   "p1Gain": 0.0157,
-   "epctGain": 0.0107,
-   "addTeam": "HOU",
-   "addPos": "SF,PF",
-   "dropValue": -5.68,
-   "status": "proposed",
-   "conflicts": [
-    1,
-    3
-   ],
-   "addHealth": {
-    "status": "정상",
-    "injury": null,
-    "returnDate": null,
-    "report": null,
-    "g": 9,
-    "min": 24.6
-   },
-   "firstProposedAt": "2026-11-07T10:13:32.951Z"
-  },
-  {
-   "n": 3,
-   "kind": "add/drop",
-   "add": "Day'Ron Sharpe",
-   "addEspnId": 4432194,
-   "addOwner": "FA",
-   "drop": "Dillon Brooks",
-   "ir": null,
-   "weekGain": 0.259,
-   "titleGain": 0.0012,
-   "p1Gain": 0,
-   "epctGain": 0.0004,
-   "addTeam": "BKN",
-   "addPos": "C",
-   "dropValue": -5.68,
-   "status": "proposed",
-   "conflicts": [
-    1,
-    2
-   ],
-   "addHealth": {
-    "status": "DTD",
-    "injury": "Undisclosed",
-    "returnDate": "2026-11-04",
-    "report": "Sharpe registered 15 points (5-7 FG, 1-1 3Pt, 4-5 FT), 13 rebounds and four assists across 26 minutes in Sunday's 98-90 win over the Pacers.",
-    "g": 8,
-    "min": 23.1
-   },
-   "firstProposedAt": "2026-11-07T10:13:32.951Z"
-  },
-  {
-   "n": 4,
-   "kind": "activate",
+   "kind": "ir",
    "ir": "Anthony Davis",
-   "drop": "Dillon Brooks",
-   "weekGain": 0.188,
-   "titleGain": 0.2294,
-   "p1Gain": 0.307,
-   "epctGain": 0.0537,
-   "dropValue": -5.68,
    "status": "proposed",
-   "note": "IR 복귀(상태 DTD)",
+   "note": "O 상태 — IR로 이동하면 로스터 1자리가 빔(영입 없이)",
    "addHealth": null,
    "irHealth": {
-    "status": "DTD",
+    "status": "O",
     "injury": "Ankle",
-    "returnDate": "2026-11-07",
-    "report": "Davis (ankle) is questionable for Saturday's game against the Thunder.",
+    "returnDate": "2026-11-09",
+    "report": "Davis (ankle) won't play Saturday against the Thunder.",
     "g": 8,
     "min": 33.1
    },
-   "firstProposedAt": "2026-11-07T20:42:50.149Z"
+   "firstProposedAt": "2026-11-08T02:43:26.452Z"
   }
  ],
  "screened": [
   {
-   "add": "Robert Williams III",
-   "drop": "Dillon Brooks",
-   "ir": null,
-   "wk": 0.159,
-   "title": 0.0924
+   "add": "Day'Ron Sharpe",
+   "drop": null,
+   "ir": "Anthony Davis",
+   "wk": 0.331,
+   "title": -0.1845
+  },
+  {
+   "add": "Daniel Gafford",
+   "drop": null,
+   "ir": "Anthony Davis",
+   "wk": 0.246,
+   "title": -0.1769
   },
   {
    "add": "Tari Eason",
-   "drop": "Dillon Brooks",
-   "ir": null,
-   "wk": 0.146,
-   "title": 0.0147
-  },
-  {
-   "add": "Day'Ron Sharpe",
-   "drop": "Dillon Brooks",
-   "ir": null,
-   "wk": 0.259,
-   "title": 0.0012
-  },
-  {
-   "add": "Precious Achiuwa",
-   "drop": "Dillon Brooks",
-   "ir": null,
-   "wk": 0.122,
-   "title": 0.0054
+   "drop": null,
+   "ir": "Anthony Davis",
+   "wk": 0.214,
+   "title": -0.1764
   },
   {
    "add": "Kris Dunn",
-   "drop": "Dillon Brooks",
-   "ir": null,
-   "wk": 0.13,
-   "title": 0.004
+   "drop": null,
+   "ir": "Anthony Davis",
+   "wk": 0.224,
+   "title": -0.1813
   },
   {
-   "add": "Zaccharie Risacher",
-   "drop": "Dillon Brooks",
-   "ir": null,
-   "wk": 0.12,
-   "title": 0.003
+   "add": "Precious Achiuwa",
+   "drop": null,
+   "ir": "Anthony Davis",
+   "wk": 0.21,
+   "title": -0.1817
+  },
+  {
+   "add": "Nolan Traore",
+   "drop": null,
+   "ir": "Anthony Davis",
+   "wk": 0.253,
+   "title": -0.1898
   }
  ],
- "createdAt": "2026-11-07T20:42:50.149Z",
- "id": "20261107T2042",
- "rosterSig": "Austin Reaves|Brandon Miller|Dillon Brooks|James Harden|Karl-Anthony Towns|Kyrie Irving|Michael Porter Jr.|Miles Bridges|Norman Powell|Rudy Gobert|Shai Gilgeous-Alexander|Tyler Herro|Zach Edey#Anthony Davis",
+ "createdAt": "2026-11-08T02:43:26.452Z",
+ "id": "20261108T0243",
+ "rosterSig": "Anthony Davis|Austin Reaves|Brandon Miller|Dillon Brooks|James Harden|Karl-Anthony Towns|Kyrie Irving|Michael Porter Jr.|Miles Bridges|Norman Powell|Rudy Gobert|Shai Gilgeous-Alexander|Tyler Herro#",
  "newItems": [
-  4
+  1
  ]
 }
