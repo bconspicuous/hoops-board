@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-08T23:42+09:00",
+ "asOf": "2026-11-09T05:42+09:00",
  "leagueId": "751654965",
  "season": 2027,
  "teams": [
@@ -166,7 +166,7 @@
     "Jabari Smith Jr.",
     "Stephon Castle",
     "Jrue Holiday",
-    "Aaron Nesmith"
+    "Pelle Larsson"
    ],
    "ir": [
     "Ja Morant",
@@ -181,9 +181,9 @@
    "acqByPeriod": {
     "1": 6,
     "2": 7,
-    "3": 5
+    "3": 6
    },
-   "acqTotal": 18
+   "acqTotal": 19
   },
   {
    "name": "Kunhyo's Chokeslam",
@@ -218,9 +218,10 @@
    "acqByPeriod": {
     "1": 6,
     "2": 2,
-    "3": 1
+    "3": 1,
+    "4": 1
    },
-   "acqTotal": 9
+   "acqTotal": 10
   },
   {
    "name": "Songpa Park kezhang",
@@ -300,35 +301,29 @@
    "Paolo Banchero",
    "Yves Missi",
    "Jalen Williams",
-   "Anthony Davis",
+   "Norman Powell",
    "Chet Holmgren",
-   "Desmond Bane",
+   "Luka Doncic",
    "Ja Morant",
-   "Nic Claxton",
    "Anthony Edwards",
    "Jalen Duren",
    "Kawhi Leonard",
    "Kon Knueppel",
    "Tyrese Haliburton",
-   "Jarrett Allen",
    "Brandon Ingram",
-   "Josh Hart",
    "Jaren Jackson Jr.",
    "Tobias Harris",
    "Kristaps Porzingis",
-   "Keegan Murray",
    "Egor Demin",
    "Jimmy Butler III",
    "Jalen Suggs",
-   "Deandre Ayton",
    "Scotty Pippen Jr.",
    "Cason Wallace",
    "Mikel Brown Jr.",
    "Jusuf Nurkic",
-   "Isaiah Jackson",
    "Shaedon Sharpe",
+   "Isaiah Jackson",
    "Mark Williams",
-   "Robert Williams III",
    "Dennis Schroder",
    "Dereck Lively II",
    "Isaiah Stewart",
@@ -338,7 +333,6 @@
    "Bradley Beal",
    "Maxime Raynaud",
    "Justin Champagnie",
-   "Sam Merrill",
    "Jordan Goodwin",
    "Ben Simmons",
    "Isaiah Joe",
@@ -348,15 +342,20 @@
    "Jock Landale"
   ],
   "DTD": [
+   "Keyonte George",
    "Lauri Markkanen",
    "Immanuel Quickley",
+   "Anthony Davis",
    "Brandon Miller",
    "Scottie Barnes",
-   "Luka Doncic",
-   "Joel Embiid",
+   "Desmond Bane",
+   "Jarrett Allen",
+   "Josh Hart",
    "Moussa Diabate",
-   "Jalen Smith",
-   "Joan Beringer"
+   "Mitchell Robinson",
+   "Deandre Ayton",
+   "Robert Williams III",
+   "Sam Merrill"
   ]
  }
 }
