@@ -1,6 +1,6 @@
 {
- "asOf": "2026-11-08T15:45+09:00",
- "scoringPeriodId": 19,
+ "asOf": "2026-11-08T19:45+09:00",
+ "scoringPeriodId": 20,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
   "waiverHours": 24,
@@ -61,22 +61,22 @@
    "acq": 14
   },
   {
-   "team": "SMS",
-   "name": "Samseong Homeless",
-   "rank": 8,
-   "acq": 8
-  },
-  {
    "team": "JYP",
    "name": "PaloAlto Wenoja",
-   "rank": 9,
+   "rank": 8,
    "acq": 8
   },
   {
    "team": "GTD",
    "name": "Garak Twindragons",
-   "rank": 10,
+   "rank": 9,
    "acq": 12
+  },
+  {
+   "team": "SMS",
+   "name": "Samseong Homeless",
+   "rank": 10,
+   "acq": 9
   }
  ],
  "myPending": [
@@ -155,6 +155,30 @@
  ],
  "transactions": [
   {
+   "id": "5889f14e-91d4-4de5-8082-9bccc05d265d",
+   "team": "SMS",
+   "mine": false,
+   "type": "WAIVER",
+   "status": "EXECUTED",
+   "proposed": "2026-11-08 17:26 KST",
+   "processed": "2026-11-08 17:26 KST",
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Jonathan Kuminga",
+     "from": "FA",
+     "to": "SMS"
+    },
+    {
+     "type": "DROP",
+     "player": "Ja'Kobe Walter",
+     "from": "SMS",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
    "id": "0929a16f-1704-4f1f-801a-da0a61384e0c",
    "team": "IYH",
    "mine": false,
@@ -165,7 +189,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "5082206",
+     "player": "Brayden Burries",
      "from": "FA",
      "to": "IYH"
     },
@@ -975,97 +999,9 @@
     }
    ],
    "bid": 0
-  },
-  {
-   "id": "6bdbe43c-fb04-4e64-a86b-d97b2cf6c977",
-   "team": "GTD",
-   "mine": true,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-01 16:13 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Daniel Gafford",
-     "from": "FA",
-     "to": "GTD"
-    },
-    {
-     "type": "DROP",
-     "player": "Saddiq Bey",
-     "from": "GTD",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "84797c03-de7a-41d4-a9fa-45744bf0a5f9",
-   "team": "IYH",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-01 15:06 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "De'Anthony Melton",
-     "from": "FA",
-     "to": "IYH"
-    },
-    {
-     "type": "DROP",
-     "player": "Ryan Rollins",
-     "from": "IYH",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "43c54d7c-5502-463b-baf4-efe054c0a0c1",
-   "team": "GGAM",
-   "mine": false,
-   "type": "ROSTER",
-   "status": "EXECUTED",
-   "proposed": "2026-10-31 23:50 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "DROP",
-     "player": "Bobby Portis",
-     "from": "GGAM",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
   }
  ],
  "onWaivers": [
-  {
-   "id": 4433247,
-   "name": "Jonathan Kuminga",
-   "pro": "MIN",
-   "waiverClears": "2026-11-08 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "SONG",
-    "at": "2026-11-07 11:59 KST"
-   }
-  },
-  {
-   "id": 5105623,
-   "name": "Kel'el Ware",
-   "pro": "MIL",
-   "waiverClears": "2026-11-08 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "TBG",
-    "at": "2026-11-07 13:32 KST"
-   }
-  },
   {
    "id": 4278585,
    "name": "Collin Gillespie",
@@ -1089,25 +1025,14 @@
    }
   },
   {
-   "id": 5174983,
-   "name": "Aday Mara",
-   "pro": "OKC",
-   "waiverClears": "2026-11-08 17:00 KST",
+   "id": 4684272,
+   "name": "Ja'Kobe Walter",
+   "pro": "TOR",
+   "waiverClears": "2026-11-09 17:00 KST",
    "inj": "ACTIVE",
    "droppedBy": {
-    "by": "SONG",
-    "at": "2026-11-07 12:03 KST"
-   }
-  },
-  {
-   "id": 4066436,
-   "name": "De'Anthony Melton",
-   "pro": "GSW",
-   "waiverClears": "2026-11-08 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "IYH",
-    "at": "2026-11-07 01:40 KST"
+    "by": "SMS",
+    "at": "2026-11-08 17:26 KST"
    }
   }
  ],
@@ -1116,7 +1041,6 @@
   "gameId",
   "id",
   "members",
-  "pendingTransactions",
   "scoringPeriodId",
   "seasonId",
   "segmentId",
