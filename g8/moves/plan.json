@@ -6,10 +6,10 @@
   "Dillon Brooks"
  ],
  "base": {
-  "wk": 5.709,
-  "champ": 0.2341,
-  "p1": 0.2199,
-  "epct": 0.5444
+  "wk": 4.919,
+  "champ": 0.2308,
+  "p1": 0.2086,
+  "epct": 0.5434
  },
  "protect": [
   "Shai Gilgeous-Alexander",
@@ -28,6 +28,33 @@
  "items": [
   {
    "n": 1,
+   "kind": "add/drop",
+   "add": "VJ Edgecombe",
+   "addEspnId": null,
+   "addOwner": "FA",
+   "drop": "Dillon Brooks",
+   "ir": null,
+   "weekGain": 0.231,
+   "titleGain": 0.0204,
+   "p1Gain": 0.094,
+   "epctGain": 0.0094,
+   "addTeam": "PHI",
+   "addPos": "SG",
+   "dropValue": -5.68,
+   "status": "proposed",
+   "conflicts": [],
+   "addHealth": {
+    "status": "정상",
+    "injury": null,
+    "returnDate": null,
+    "report": null,
+    "g": null,
+    "min": null
+   },
+   "firstProposedAt": "2026-11-08T05:43:23.140Z"
+  },
+  {
+   "n": 2,
    "kind": "ir",
    "ir": "Anthony Davis",
    "status": "proposed",
@@ -46,50 +73,50 @@
  ],
  "screened": [
   {
-   "add": "Day'Ron Sharpe",
-   "drop": null,
-   "ir": "Anthony Davis",
-   "wk": 0.331,
-   "title": -0.1845
+   "add": "VJ Edgecombe",
+   "drop": "Dillon Brooks",
+   "ir": null,
+   "wk": 0.231,
+   "title": 0.0204
   },
   {
-   "add": "Daniel Gafford",
-   "drop": null,
-   "ir": "Anthony Davis",
-   "wk": 0.246,
-   "title": -0.1769
-  },
-  {
-   "add": "Tari Eason",
-   "drop": null,
-   "ir": "Anthony Davis",
-   "wk": 0.214,
-   "title": -0.1764
-  },
-  {
-   "add": "Kris Dunn",
-   "drop": null,
-   "ir": "Anthony Davis",
-   "wk": 0.224,
-   "title": -0.1813
+   "add": "Jalen Smith",
+   "drop": "Dillon Brooks",
+   "ir": null,
+   "wk": 0.25,
+   "title": 0.0141
   },
   {
    "add": "Precious Achiuwa",
-   "drop": null,
-   "ir": "Anthony Davis",
-   "wk": 0.21,
-   "title": -0.1817
+   "drop": "Dillon Brooks",
+   "ir": null,
+   "wk": 0.231,
+   "title": 0.0098
   },
   {
-   "add": "Nolan Traore",
-   "drop": null,
-   "ir": "Anthony Davis",
-   "wk": 0.253,
-   "title": -0.1898
+   "add": "Bobby Portis",
+   "drop": "Dillon Brooks",
+   "ir": null,
+   "wk": 0.261,
+   "title": 0.0051
+  },
+  {
+   "add": "Day'Ron Sharpe",
+   "drop": "Dillon Brooks",
+   "ir": null,
+   "wk": 0.308,
+   "title": -0.0005
+  },
+  {
+   "add": "Kel'el Ware",
+   "drop": "Dillon Brooks",
+   "ir": null,
+   "wk": 0.339,
+   "title": -0.0061
   }
  ],
- "createdAt": "2026-11-08T02:43:26.452Z",
- "id": "20261108T0243",
+ "createdAt": "2026-11-08T05:43:23.140Z",
+ "id": "20261108T0543",
  "rosterSig": "Anthony Davis|Austin Reaves|Brandon Miller|Dillon Brooks|James Harden|Karl-Anthony Towns|Kyrie Irving|Michael Porter Jr.|Miles Bridges|Norman Powell|Rudy Gobert|Shai Gilgeous-Alexander|Tyler Herro#",
  "newItems": [
   1
