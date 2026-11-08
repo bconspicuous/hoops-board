@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-08T19:12+09:00",
+ "asOf": "2026-11-08T23:42+09:00",
  "source": "ESPN API sync (GitHub Actions g8-espn)",
  "teams": {
   "Junyoung's Scary Team": {
@@ -36,8 +36,8 @@
     "Brandin Podziemski",
     "Myles Turner",
     "Cedric Coward",
-    "Fred VanVleet",
-    "Nolan Traore"
+    "Nolan Traore",
+    "Klay Thompson"
    ],
    "ir": [
     "Jalen Williams",
@@ -194,10 +194,10 @@
   "Jalen Suggs": "O",
   "Deandre Ayton": "O",
   "Scotty Pippen Jr.": "O",
-  "Mikel Brown Jr.": "O",
   "Cason Wallace": "O",
-  "Isaiah Jackson": "O",
+  "Mikel Brown Jr.": "O",
   "Jusuf Nurkic": "O",
+  "Isaiah Jackson": "O",
   "Shaedon Sharpe": "O",
   "Mark Williams": "O",
   "Robert Williams III": "O",
@@ -216,8 +216,8 @@
   "Isaiah Joe": "O",
   "Sergio de Larrea": "O",
   "Adem Bona": "O",
-  "Jock Landale": "O",
   "Vit Krejci": "O",
+  "Jock Landale": "O",
   "Lauri Markkanen": "DTD",
   "Immanuel Quickley": "DTD",
   "Brandon Miller": "DTD",
