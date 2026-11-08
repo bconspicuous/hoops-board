@@ -2,112 +2,70 @@
  "date": "2026-11-08",
  "week": 3,
  "opp": "Songpa Park Kezhang",
- "status": "minor",
- "playing": 6,
+ "status": "nochange",
+ "playing": 8,
  "starters": [
   "Austin Reaves",
   "Kyrie Irving",
   "Michael Porter Jr.",
   "Tyler Herro",
   "Rudy Gobert",
-  "Norman Powell"
+  "Norman Powell",
+  "Jeremiah Fears",
+  "VJ Edgecombe"
  ],
  "bench": [],
  "dtd": [],
  "expected": {
-  "best": 4.918,
-  "current": 4.943,
-  "gain": -0.024,
+  "best": 6.213,
+  "current": 6.213,
+  "gain": 0,
   "pcBest": {
    "FG": 1,
-   "FT": 0.144,
-   "TPM": 0.998,
-   "REB": 0.214,
+   "FT": 0.279,
+   "TPM": 1,
+   "REB": 0.981,
    "AST": 0,
-   "STL": 0.023,
-   "BLK": 0.008,
+   "STL": 0.013,
+   "BLK": 0.003,
    "TO": 1,
-   "DD": 0.514,
+   "DD": 0.938,
    "PTS": 1,
-   "PF": 0.017
+   "PF": 0
   },
   "pcCurrent": {
    "FG": 1,
-   "FT": 0.31,
-   "TPM": 0.993,
-   "REB": 0.011,
+   "FT": 0.279,
+   "TPM": 1,
+   "REB": 0.981,
    "AST": 0,
-   "STL": 0.005,
-   "BLK": 0.001,
+   "STL": 0.013,
+   "BLK": 0.003,
    "TO": 1,
-   "DD": 0.485,
+   "DD": 0.938,
    "PTS": 1,
-   "PF": 0.138
+   "PF": 0
   }
  },
  "alternatives": [],
- "currentBench": [
-  "Rudy Gobert",
-  "Norman Powell"
- ],
- "sameStarters": false,
- "moves": [
-  {
-   "name": "Shai Gilgeous-Alexander",
-   "from": "PG",
-   "to": "UTIL"
-  },
-  {
-   "name": "Karl-Anthony Towns",
-   "from": "C",
-   "to": "UTIL"
-  },
-  {
-   "name": "James Harden",
-   "from": "SG",
-   "to": "BE"
-  },
-  {
-   "name": "Kyrie Irving",
-   "from": "UTIL",
-   "to": "G"
-  },
-  {
-   "name": "Tyler Herro",
-   "from": "UTIL",
-   "to": "PG"
-  },
-  {
-   "name": "Rudy Gobert",
-   "from": "BE",
-   "to": "C"
-  },
-  {
-   "name": "Norman Powell",
-   "from": "BE",
-   "to": "SG"
-  },
-  {
-   "name": "Dillon Brooks",
-   "from": "G",
-   "to": "BE"
-  }
- ],
+ "currentBench": [],
+ "sameStarters": true,
+ "moves": [],
  "slots": [
   {
-   "name": "Tyler Herro",
+   "name": "Kyrie Irving",
    "slot": "PG"
   },
   {
-   "name": "Norman Powell",
+   "name": "VJ Edgecombe",
    "slot": "SG"
   },
   {
-   "name": "Michael Porter Jr.",
+   "name": "Norman Powell",
    "slot": "SF"
   },
   {
-   "name": "Anthony Davis",
+   "name": "Michael Porter Jr.",
    "slot": "PF"
   },
   {
@@ -115,16 +73,12 @@
    "slot": "C"
   },
   {
-   "name": "Kyrie Irving",
+   "name": "Tyler Herro",
    "slot": "G"
   },
   {
    "name": "Miles Bridges",
    "slot": "F"
-  },
-  {
-   "name": "Shai Gilgeous-Alexander",
-   "slot": "UTIL"
   },
   {
    "name": "Karl-Anthony Towns",
@@ -135,18 +89,22 @@
    "slot": "UTIL"
   },
   {
+   "name": "Jeremiah Fears",
+   "slot": "UTIL"
+  },
+  {
+   "name": "Shai Gilgeous-Alexander",
+   "slot": "BE"
+  },
+  {
    "name": "James Harden",
    "slot": "BE"
   },
   {
    "name": "Brandon Miller",
    "slot": "BE"
-  },
-  {
-   "name": "Dillon Brooks",
-   "slot": "BE"
   }
  ],
- "id": "2026-11-08T0544Z",
- "createdAt": "2026-11-08T05:44:22.671Z"
+ "id": "2026-11-08T1014Z",
+ "createdAt": "2026-11-08T10:14:54.458Z"
 }
