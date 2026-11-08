@@ -1,5 +1,5 @@
 {
- "asOfET": "2026-11-07T17:18-05:00",
+ "asOfET": "2026-11-07T21:42-05:00",
  "days": {
   "2026-11-06": [
    {
@@ -62,37 +62,37 @@
     "id": "401909938",
     "start": "2026-11-07T22:00Z",
     "name": "DEN VS IND",
-    "state": "in"
+    "state": "post"
    },
    {
     "id": "401909939",
     "start": "2026-11-08T00:30Z",
     "name": "BKN @ ATL",
-    "state": "pre"
+    "state": "in"
    },
    {
     "id": "401909940",
     "start": "2026-11-08T01:00Z",
     "name": "NY @ CLE",
-    "state": "pre"
+    "state": "in"
    },
    {
     "id": "401909941",
     "start": "2026-11-08T01:00Z",
     "name": "WSH @ OKC",
-    "state": "pre"
+    "state": "in"
    },
    {
     "id": "401909942",
     "start": "2026-11-08T01:30Z",
     "name": "ORL @ GS",
-    "state": "pre"
+    "state": "in"
    },
    {
     "id": "401909943",
     "start": "2026-11-08T02:00Z",
     "name": "HOU @ PHX",
-    "state": "pre"
+    "state": "in"
    },
    {
     "id": "401909944",
