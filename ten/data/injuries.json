@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-08T13:44+09:00",
+ "asOf": "2026-11-08T15:45+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -527,11 +527,11 @@
    "status": "Out",
    "date": "2026-11-02T16:12Z",
    "type": "out",
-   "returnDate": "2026-11-08",
+   "returnDate": "2026-11-10",
    "detail": "Surgery",
    "side": "Right",
    "injury": "Foot",
-   "fantasyStatus": "GTD",
+   "fantasyStatus": "OUT",
    "short": "The Clippers recalled Niederhauser (foot) from the G League's San Diego Clippers on Sunday.",
    "long": "Niederhauser remains unlikely to play a meaningful role in the short term following a seven-month recovery from foot surgery. The 23-year-old might instead make a phased return to action, possibly seeing limited minutes at some point in upcoming weeks and making some appearances in the G League. Last season, he averaged 4.3 points, 2.9 rebounds and 0.3 assists per regular-season game during his rookie year."
   },
