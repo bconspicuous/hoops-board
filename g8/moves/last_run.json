@@ -1,10 +1,22 @@
 {
- "planId": "20261108T0243",
+ "planId": "20261108T0543",
  "mode": "dry",
- "at": "2026-11-07T21:43-05:00",
+ "at": "2026-11-08T00:43-05:00",
  "items": [
   {
    "n": 1,
+   "kind": "add/drop",
+   "checks": [
+    "✗ VJ Edgecombe not found in the player pool",
+    "✗ not executable"
+   ],
+   "ok": false,
+   "add": null,
+   "drop": "Dillon Brooks",
+   "ir": null
+  },
+  {
+   "n": 2,
    "kind": "ir",
    "checks": [
     "✓ checks passed"
@@ -15,7 +27,7 @@
    "ir": "Anthony Davis"
   }
  ],
- "ok": true,
+ "ok": false,
  "scoringPeriodId": 19,
  "matchupPeriod": 3,
  "addsUsed": 6,
