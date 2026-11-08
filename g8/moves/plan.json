@@ -4,10 +4,10 @@
  "acqLeft": 1,
  "dropCandidates": [],
  "base": {
-  "wk": 6.213,
-  "champ": 0.0438,
-  "p1": 0.0222,
-  "epct": 0.5118
+  "wk": 6.216,
+  "champ": 0.0369,
+  "p1": 0.0216,
+  "epct": 0.515
  },
  "protect": [
   "Shai Gilgeous-Alexander",
@@ -20,11 +20,99 @@
   "Rudy Gobert"
  ],
  "droppable": [],
- "flags": [],
- "items": [],
- "screened": [],
- "createdAt": "2026-11-08T14:42:48.188Z",
- "id": "20261108T1442",
+ "flags": [
+  {
+   "kind": "ir-ineligible",
+   "player": "Anthony Davis",
+   "status": "DTD",
+   "note": "IR 선수가 O가 아님 — ESPN이 영입을 막을 수 있음(감독 판단: DTD는 영입 가능). 첫 사례에서 실제 동작을 기록"
+  }
+ ],
+ "items": [
+  {
+   "n": 1,
+   "kind": "ir+add",
+   "add": "Daniel Gafford",
+   "addEspnId": 4278049,
+   "addOwner": "FA",
+   "drop": null,
+   "ir": "Norman Powell",
+   "weekGain": 0.059,
+   "titleGain": 0.0269,
+   "p1Gain": 0.0356,
+   "epctGain": 0.0098,
+   "addTeam": "DAL",
+   "addPos": "C",
+   "dropValue": null,
+   "status": "proposed",
+   "conflicts": [],
+   "addHealth": {
+    "status": "정상",
+    "injury": null,
+    "returnDate": null,
+    "report": null,
+    "g": 9,
+    "min": 22.7
+   },
+   "irHealth": {
+    "status": "O",
+    "injury": "Shoulder",
+    "returnDate": "2026-11-11",
+    "report": "Powell (shoulder) has been ruled out for Sunday's game against the 76ers, Adam Aaronson of PhillyVoice.com reports.",
+    "g": 8,
+    "min": 28.9
+   },
+   "firstProposedAt": "2026-11-08T20:43:14.529Z"
+  }
+ ],
+ "screened": [
+  {
+   "add": "Daniel Gafford",
+   "drop": null,
+   "ir": "Norman Powell",
+   "wk": 0.059,
+   "title": 0.0269
+  },
+  {
+   "add": "Jalen Smith",
+   "drop": null,
+   "ir": "Norman Powell",
+   "wk": 0.049,
+   "title": 0.01
+  },
+  {
+   "add": "Ziaire Williams",
+   "drop": null,
+   "ir": "Norman Powell",
+   "wk": 0.054,
+   "title": 0.0086
+  },
+  {
+   "add": "Kel'el Ware",
+   "drop": null,
+   "ir": "Norman Powell",
+   "wk": 0.053,
+   "title": 0.0082
+  },
+  {
+   "add": "Matisse Thybulle",
+   "drop": null,
+   "ir": "Norman Powell",
+   "wk": 0.046,
+   "title": 0.0083
+  },
+  {
+   "add": "Kris Dunn",
+   "drop": null,
+   "ir": "Norman Powell",
+   "wk": 0.076,
+   "title": 0.004
+  }
+ ],
+ "createdAt": "2026-11-08T20:43:14.529Z",
+ "id": "20261108T2043",
  "rosterSig": "Austin Reaves|Brandon Miller|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Michael Porter Jr.|Miles Bridges|Norman Powell|Rudy Gobert|Shai Gilgeous-Alexander|Tyler Herro|VJ Edgecombe#Anthony Davis",
- "newItems": []
+ "newItems": [
+  1
+ ]
 }
