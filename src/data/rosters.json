@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-08T11:42+09:00",
+ "asOf": "2026-11-08T14:42+09:00",
  "source": "ESPN API sync (GitHub Actions g8-espn)",
  "teams": {
   "Junyoung's Scary Team": {
@@ -190,7 +190,9 @@
   "Egor Demin": "O",
   "Jimmy Butler III": "O",
   "Jalen Suggs": "O",
+  "Deandre Ayton": "O",
   "Scotty Pippen Jr.": "O",
+  "Mikel Brown Jr.": "O",
   "Cason Wallace": "O",
   "Isaiah Jackson": "O",
   "Jusuf Nurkic": "O",
@@ -214,7 +216,6 @@
   "Adem Bona": "O",
   "Jock Landale": "O",
   "Vit Krejci": "O",
-  "Clint Capela": "O",
   "Lauri Markkanen": "DTD",
   "Immanuel Quickley": "DTD",
   "Brandon Miller": "DTD",
@@ -223,7 +224,6 @@
   "Joel Embiid": "DTD",
   "Moussa Diabate": "DTD",
   "Jalen Smith": "DTD",
-  "Day'Ron Sharpe": "DTD",
   "Joan Beringer": "DTD"
  },
  "unsigned": [
@@ -236,6 +236,7 @@
  ],
  "returns": {
   "Jock Landale": "2026-11-09",
+  "Mikel Brown Jr.": "2026-11-11",
   "Egor Demin": "2026-11-11",
   "Dennis Schroder": "2026-11-09",
   "Kon Knueppel": "2026-11-09",
@@ -249,7 +250,6 @@
   "Jalen Duren": "2026-11-09",
   "Kristaps Porzingis": "2027-01-02",
   "Jimmy Butler III": "2027-01-02",
-  "Clint Capela": "2026-11-09",
   "Tyrese Haliburton": "2026-11-13",
   "Brandon Ingram": "2026-11-10",
   "Isaiah Jackson": "2026-11-10",
@@ -280,6 +280,7 @@
   "Kawhi Leonard": "2026-11-23",
   "Jusuf Nurkic": "2026-11-20",
   "Jaren Jackson Jr.": "2026-12-14",
+  "Deandre Ayton": "2026-11-09",
   "Anthony Davis": "2026-11-09",
   "Justin Champagnie": "2027-02-25"
  }

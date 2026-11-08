@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-08T11:42+09:00",
+ "asOf": "2026-11-08T14:42+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -74,18 +74,18 @@
    "long": "Veesaar suffered the injury during a workout on Sept. 15, and an MRI confirmed the diagnosis. The No. 52 overall pick in the 2026 NBA Draft, Veesaar was expected to spend a lot of time with Atlanta's G League affiliate this season."
   },
   {
-   "player": "Day'Ron Sharpe",
+   "player": "Mikel Brown Jr.",
    "team": "BKN",
-   "status": "Day-To-Day",
-   "date": "2026-11-05T02:29Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-04",
+   "status": "Out",
+   "date": "2026-11-08T04:04Z",
+   "type": "out",
+   "returnDate": "2026-11-11",
    "detail": null,
    "side": null,
-   "injury": "Undisclosed",
-   "fantasyStatus": "GTD",
-   "short": "Sharpe registered 15 points (5-7 FG, 1-1 3Pt, 4-5 FT), 13 rebounds and four assists across 26 minutes in Sunday's 98-90 win over the Pacers.",
-   "long": "Sharpe dominated the glass, collecting four offensive rebounds while shooting efficiently en route to his first double-double of the season. It was also the second time he scored in double digits this season. Sharpe's rebounding provides a useful foundation, although his ceiling will depend on whether Brooklyn consistently gives him enough touches and playing time -- he has played more than 25 minutes just twice all season long."
+   "injury": "Rest",
+   "fantasyStatus": "OUT",
+   "short": "Brown, who finished with 18 points (5-13 FG, 3-8 3Pt, 5-7 FT), one rebound, three assists and one steal over 25 minutes in Saturday's 124-121 loss to Atlanta, won't play in Sunday's game against Dallas, Erik Slater of ClutchPoints.com reports.",
+   "long": "Brown logged his fifth consecutive double-digit scoring performance Saturday. However, his efforts weren't enough to help the Nets hold off a late Hawks comeback and earn their third win of the 2026-27 campaign. Head coach Jordi Fernandez mentioned after the game that the rookie won't suit up Sunday versus the Mavericks, the second game of a back-to-back. Without Brown in the lineup, Terance Mann should see more minutes off the bench. Keon Ellis, who didn't get on the floor versus Atlanta, might also get involved."
   },
   {
    "player": "Egor Demin",
@@ -1150,6 +1150,20 @@
    "fantasyStatus": "OUT",
    "short": "Jackson has been diagnosed with a torn MCL in his right knee and will be sidelined for 6-to-8 weeks, per Shams Charania of ESPN.",
    "long": "Jackson sustained the injury early in Monday's loss to Memphis, and he's now expected to miss at least a month and a half of action. The star big man's absence creates a major void in the Utah lineup, one that is likely to be filled by a timeshare of Jaxson Hayes (shoulder), Kyle Filipowski and Mo Bamba. The Jazz could also shift Lauri Markkanen (wrist), when healthy, to the center spot at times, perhaps allowing Ace Bailey to spend more time at power forward."
+  },
+  {
+   "player": "Deandre Ayton",
+   "team": "WSH",
+   "status": "Out",
+   "date": "2026-11-08T02:47Z",
+   "type": "out",
+   "returnDate": "2026-11-09",
+   "detail": null,
+   "side": "Not Specified",
+   "injury": "Leg",
+   "fantasyStatus": "OUT",
+   "short": "Ayton won't return to Saturday's game against the Thunder due to a lower leg injury.",
+   "long": "Ayton will end his evening with two points (1-2 FG), one rebound and one turnover in seven minutes. For now, he should be considered questionable for Monday's game in Detroit."
   },
   {
    "player": "Anthony Davis",
