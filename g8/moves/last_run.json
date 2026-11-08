@@ -1,68 +1,23 @@
 {
- "planId": "20261107T2042",
+ "planId": "20261108T0243",
  "mode": "dry",
- "at": "2026-11-07T15:43-05:00",
+ "at": "2026-11-07T21:43-05:00",
  "items": [
   {
    "n": 1,
-   "kind": "add/drop",
-   "checks": [
-    "✓ checks passed"
-   ],
-   "ok": true,
-   "add": {
-    "name": "Robert Williams III",
-    "status": "FREEAGENT"
-   },
-   "drop": "Dillon Brooks",
-   "ir": null
-  },
-  {
-   "n": 2,
-   "kind": "add/drop",
-   "checks": [
-    "✓ checks passed"
-   ],
-   "ok": true,
-   "add": {
-    "name": "Tari Eason",
-    "status": "FREEAGENT"
-   },
-   "drop": "Dillon Brooks",
-   "ir": null
-  },
-  {
-   "n": 3,
-   "kind": "add/drop",
-   "checks": [
-    "✓ checks passed"
-   ],
-   "ok": true,
-   "add": {
-    "name": "Day'Ron Sharpe",
-    "status": "FREEAGENT"
-   },
-   "drop": "Dillon Brooks",
-   "ir": null
-  },
-  {
-   "n": 4,
-   "kind": "activate",
+   "kind": "ir",
    "checks": [
     "✓ checks passed"
    ],
    "ok": true,
    "add": null,
-   "drop": "Dillon Brooks",
+   "drop": null,
    "ir": "Anthony Davis"
   }
  ],
  "ok": true,
  "scoringPeriodId": 19,
  "matchupPeriod": 3,
- "addsUsed": 4,
- "rosterMatchesPlan": true,
- "irNotOut": [
-  "Anthony Davis (DAY_TO_DAY)"
- ]
+ "addsUsed": 6,
+ "rosterMatchesPlan": true
 }
