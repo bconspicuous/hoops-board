@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-08T07:22+09:00",
+ "asOf": "2026-11-08T13:44+09:00",
  "scoringPeriodId": 19,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -40,7 +40,7 @@
    "team": "IYH",
    "name": "Jongno Karina",
    "rank": 4,
-   "acq": 9
+   "acq": 10
   },
   {
    "team": "Doo",
@@ -154,6 +154,30 @@
   }
  ],
  "transactions": [
+  {
+   "id": "0929a16f-1704-4f1f-801a-da0a61384e0c",
+   "team": "IYH",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-08 09:28 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "5082206",
+     "from": "FA",
+     "to": "IYH"
+    },
+    {
+     "type": "DROP",
+     "player": "Christian Braun",
+     "from": "IYH",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
   {
    "id": "d6856a68-29b3-4853-8bdc-4f170c04c775",
    "team": "SMS",
@@ -1058,7 +1082,7 @@
    "name": "Draymond Green",
    "pro": "GSW",
    "waiverClears": "2026-11-09 17:00 KST",
-   "inj": "DAY_TO_DAY",
+   "inj": "ACTIVE",
    "droppedBy": {
     "by": "SMS",
     "at": "2026-11-08 02:43 KST"
@@ -1092,6 +1116,7 @@
   "gameId",
   "id",
   "members",
+  "pendingTransactions",
   "scoringPeriodId",
   "seasonId",
   "segmentId",
