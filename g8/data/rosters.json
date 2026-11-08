@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-08T15:43+09:00",
+ "asOf": "2026-11-08T19:12+09:00",
  "leagueId": "751654965",
  "season": 2027,
  "teams": [
@@ -57,8 +57,8 @@
     "Brandin Podziemski",
     "Myles Turner",
     "Cedric Coward",
-    "Toumani Camara",
-    "Fred VanVleet"
+    "Fred VanVleet",
+    "Nolan Traore"
    ],
    "ir": [
     "Jalen Williams",
@@ -85,7 +85,6 @@
    "players": [
     "Shai Gilgeous-Alexander",
     "Karl-Anthony Towns",
-    "Anthony Davis",
     "James Harden",
     "Austin Reaves",
     "Kyrie Irving",
@@ -95,9 +94,12 @@
     "Rudy Gobert",
     "Norman Powell",
     "Miles Bridges",
-    "Dillon Brooks"
+    "Jeremiah Fears",
+    "VJ Edgecombe"
    ],
-   "ir": [],
+   "ir": [
+    "Anthony Davis"
+   ],
    "record": {
     "wins": 14,
     "losses": 8,
@@ -121,7 +123,6 @@
     "Scottie Barnes",
     "Jalen Brunson",
     "Trae Young",
-    "Desmond Bane",
     "Franz Wagner",
     "Dyson Daniels",
     "Isaiah Hartenstein",
@@ -132,7 +133,8 @@
     "P.J. Washington"
    ],
    "ir": [
-    "Chet Holmgren"
+    "Chet Holmgren",
+    "Desmond Bane"
    ],
    "record": {
     "wins": 10,
@@ -226,12 +228,12 @@
    "espnId": 7,
    "me": false,
    "players": [
+    "Jalen Johnson",
     "Bam Adebayo",
     "Josh Giddey",
     "Jamal Murray",
     "Nickeil Alexander-Walker",
     "LeBron James",
-    "Jarrett Allen",
     "Joel Embiid",
     "Caleb Wilson",
     "Payton Pritchard",
@@ -241,8 +243,8 @@
     "Jalen Green"
    ],
    "ir": [
-    "Jalen Johnson",
-    "Tyrese Haliburton"
+    "Tyrese Haliburton",
+    "Jarrett Allen"
    ],
    "record": {
     "wins": 11,
