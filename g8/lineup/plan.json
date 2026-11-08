@@ -1,108 +1,152 @@
 {
- "date": "2026-11-07",
+ "date": "2026-11-08",
  "week": 3,
  "opp": "Songpa Park Kezhang",
- "status": "nochange",
+ "status": "minor",
  "playing": 6,
  "starters": [
-  "Shai Gilgeous-Alexander",
-  "Karl-Anthony Towns",
-  "James Harden",
+  "Austin Reaves",
+  "Kyrie Irving",
   "Michael Porter Jr.",
-  "Miles Bridges",
-  "Dillon Brooks"
+  "Tyler Herro",
+  "Rudy Gobert",
+  "Norman Powell"
  ],
  "bench": [],
  "dtd": [],
  "expected": {
-  "best": 5.551,
-  "current": 5.551,
-  "gain": 0,
+  "best": 4.918,
+  "current": 4.943,
+  "gain": -0.024,
   "pcBest": {
-   "FG": 0.998,
-   "FT": 0.121,
-   "TPM": 0.988,
-   "REB": 0.599,
+   "FG": 1,
+   "FT": 0.144,
+   "TPM": 0.998,
+   "REB": 0.214,
    "AST": 0,
-   "STL": 0.119,
-   "BLK": 0.051,
+   "STL": 0.023,
+   "BLK": 0.008,
    "TO": 1,
-   "DD": 0.656,
+   "DD": 0.514,
    "PTS": 1,
-   "PF": 0.018
+   "PF": 0.017
   },
   "pcCurrent": {
-   "FG": 0.998,
-   "FT": 0.121,
-   "TPM": 0.988,
-   "REB": 0.599,
+   "FG": 1,
+   "FT": 0.31,
+   "TPM": 0.993,
+   "REB": 0.011,
    "AST": 0,
-   "STL": 0.119,
-   "BLK": 0.051,
+   "STL": 0.005,
+   "BLK": 0.001,
    "TO": 1,
-   "DD": 0.656,
+   "DD": 0.485,
    "PTS": 1,
-   "PF": 0.018
+   "PF": 0.138
   }
  },
  "alternatives": [],
- "currentBench": [],
- "sameStarters": true,
- "moves": [],
- "slots": [
+ "currentBench": [
+  "Rudy Gobert",
+  "Norman Powell"
+ ],
+ "sameStarters": false,
+ "moves": [
   {
    "name": "Shai Gilgeous-Alexander",
-   "slot": "PG"
-  },
-  {
-   "name": "James Harden",
-   "slot": "SG"
-  },
-  {
-   "name": "Miles Bridges",
-   "slot": "SF"
-  },
-  {
-   "name": "Michael Porter Jr.",
-   "slot": "PF"
+   "from": "PG",
+   "to": "UTIL"
   },
   {
    "name": "Karl-Anthony Towns",
-   "slot": "C"
+   "from": "C",
+   "to": "UTIL"
+  },
+  {
+   "name": "James Harden",
+   "from": "SG",
+   "to": "BE"
+  },
+  {
+   "name": "Kyrie Irving",
+   "from": "UTIL",
+   "to": "G"
+  },
+  {
+   "name": "Tyler Herro",
+   "from": "UTIL",
+   "to": "PG"
+  },
+  {
+   "name": "Rudy Gobert",
+   "from": "BE",
+   "to": "C"
+  },
+  {
+   "name": "Norman Powell",
+   "from": "BE",
+   "to": "SG"
   },
   {
    "name": "Dillon Brooks",
+   "from": "G",
+   "to": "BE"
+  }
+ ],
+ "slots": [
+  {
+   "name": "Tyler Herro",
+   "slot": "PG"
+  },
+  {
+   "name": "Norman Powell",
+   "slot": "SG"
+  },
+  {
+   "name": "Michael Porter Jr.",
+   "slot": "SF"
+  },
+  {
+   "name": "Anthony Davis",
+   "slot": "PF"
+  },
+  {
+   "name": "Rudy Gobert",
+   "slot": "C"
+  },
+  {
+   "name": "Kyrie Irving",
    "slot": "G"
   },
   {
-   "name": "Brandon Miller",
+   "name": "Miles Bridges",
    "slot": "F"
+  },
+  {
+   "name": "Shai Gilgeous-Alexander",
+   "slot": "UTIL"
+  },
+  {
+   "name": "Karl-Anthony Towns",
+   "slot": "UTIL"
   },
   {
    "name": "Austin Reaves",
    "slot": "UTIL"
   },
   {
-   "name": "Kyrie Irving",
-   "slot": "UTIL"
-  },
-  {
-   "name": "Tyler Herro",
-   "slot": "UTIL"
-  },
-  {
-   "name": "Rudy Gobert",
+   "name": "James Harden",
    "slot": "BE"
   },
   {
-   "name": "Norman Powell",
+   "name": "Brandon Miller",
    "slot": "BE"
   },
   {
-   "name": "Zach Edey",
+   "name": "Dillon Brooks",
    "slot": "BE"
   }
  ],
- "id": "2026-11-07T2043Z",
- "createdAt": "2026-11-07T20:43:05.323Z"
+ "id": "2026-11-08T0544Z",
+ "createdAt": "2026-11-08T05:44:22.671Z"
 }
