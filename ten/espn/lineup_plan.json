@@ -2,7 +2,7 @@
  "date": "2026-11-08",
  "scoringPeriodId": 20,
  "hash": "5066d297b8",
- "createdKST": "2026-11-08T19:48+09:00",
+ "createdKST": "2026-11-09T06:48+09:00",
  "mode": "plan",
  "moves": [],
  "lineup": [
@@ -99,19 +99,19 @@
   {
    "slot": "BE",
    "cur": "BE",
-   "name": "Ivica Zubac",
-   "pro": "IND",
+   "name": "Kawhi Leonard",
+   "pro": "TOR",
    "game": false,
-   "inj": "ACTIVE",
+   "inj": "OUT",
    "out": true
   },
   {
    "slot": "BE",
    "cur": "BE",
-   "name": "Josh Hart",
-   "pro": "NYK",
+   "name": "Ivica Zubac",
+   "pro": "IND",
    "game": false,
-   "inj": "OUT",
+   "inj": "ACTIVE",
    "out": true
   },
   {
@@ -125,9 +125,11 @@
   }
  ],
  "ir": [
-  "Kawhi Leonard"
+  "Josh Hart"
  ],
- "irReturn": [],
+ "irReturn": [
+  "Josh Hart"
+ ],
  "playing": 4,
  "status": "planned"
 }
