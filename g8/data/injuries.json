@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-10T05:41+09:00",
+ "asOf": "2026-11-10T07:42+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -30,20 +30,6 @@
    "fantasyStatus": "OUT",
    "short": "Gilbert (knee) has been ruled out for Monday's game against the Lakers.",
    "long": "Gilbert will miss a third straight game due to left knee inflammation. However, his absence shouldn't affect the rotation."
-  },
-  {
-   "player": "Jock Landale",
-   "team": "ATL",
-   "status": "Out",
-   "date": "2026-11-08T22:11Z",
-   "type": "out",
-   "returnDate": "2026-11-09",
-   "detail": null,
-   "side": "Left",
-   "injury": "Hip",
-   "fantasyStatus": "GTD",
-   "short": "Landale (hip) is listed as questionable for Monday's game against the Lakers.",
-   "long": "Landale is in danger of missing a fifth consecutive contest due to a left hip strain. If the big man is unable to return Monday, Zuby Ejiofor figures to continue seeing increased burn."
   },
   {
    "player": "Mouhamed Gueye",
@@ -118,16 +104,16 @@
   {
    "player": "Moussa Diabate",
    "team": "CHA",
-   "status": "Day-To-Day",
-   "date": "2026-11-09T17:32Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-09",
+   "status": "Out",
+   "date": "2026-11-09T22:16Z",
+   "type": "out",
+   "returnDate": "2026-11-12",
    "detail": null,
    "side": "Right",
    "injury": "Quadriceps",
-   "fantasyStatus": "GTD",
-   "short": "Diabate (quadriceps) is doubtful for Monday's game against the Cavaliers.",
-   "long": "Diabate has been downgraded from questionable to doubtful and will likely miss a second straight game, opening the door for Ryan Kalkbrenner to draw another start. Diabate's next chance to suit up will come Thursday in Phoenix."
+   "fantasyStatus": "OUT",
+   "short": "Diabate (quadriceps) has been downgraded to out for Monday's game against Cleveland.",
+   "long": "The Hornets initially appeared optimistic about the big man's status for Monday, as he was added to the injury report as questionable Sunday. However, he was downgraded to doubtful earlier in the day Monday and has since been ruled out. The Michigan product will miss his second straight matchup due to right quadriceps tendinopathy."
   },
   {
    "player": "Grant Williams",
@@ -415,7 +401,7 @@
    "status": "Out",
    "date": "2026-11-09T18:54Z",
    "type": "out",
-   "returnDate": "2026-11-12",
+   "returnDate": "2026-11-17",
    "detail": "Bruise",
    "side": "Right",
    "injury": "Hip",
@@ -690,6 +676,20 @@
    "long": "It's a tough break for Miller, who had an opportunity to battle for a reserve role during training camp in the fall. The timeline for a return is likely to keep him on the shelf until after the All-Star break. Miller's extended stay on the sidelines gives Kobe Sanders a chance to crack the Clippers' rotation."
   },
   {
+   "player": "Austin Reaves",
+   "team": "LAL",
+   "status": "Out",
+   "date": "2026-11-09T22:32Z",
+   "type": "out",
+   "returnDate": "2026-11-11",
+   "detail": null,
+   "side": null,
+   "injury": "Illness",
+   "fantasyStatus": "OUT",
+   "short": "Reaves is questionable for Monday's game against the Hawks due to an illness, per Dave McMenamin of ESPN.com.",
+   "long": "The star guard is at risk of missing the second leg of this back-to-back set. Luka Doncic would dominate the usage for the Lakers if Reaves sits out, and Ziaire Williams would likely enter the starting lineup in this case."
+  },
+  {
    "player": "Quentin Grimes",
    "team": "LAL",
    "status": "Out",
@@ -702,20 +702,6 @@
    "fantasyStatus": "OUT",
    "short": "Grimes (finger) is out for Monday's game against Atlanta, per Dave McMenamin of ESPN.com.",
    "long": "Grimes sustained a sprained right finger Sunday in Detroit, so he's sitting out the second part of this back-to-back set. With Austin Reaves (illness) questionable to play, Collin Sexton could be thrust into a larger role in the backcourt."
-  },
-  {
-   "player": "Austin Reaves",
-   "team": "LAL",
-   "status": "Day-To-Day",
-   "date": "2026-11-09T18:09Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-09",
-   "detail": null,
-   "side": null,
-   "injury": "Illness",
-   "fantasyStatus": "GTD",
-   "short": "Reaves is questionable for Monday's game against the Hawks due to an illness, per Dave McMenamin of ESPN.com.",
-   "long": "The star guard is at risk of missing the second leg of this back-to-back set. Luka Doncic would dominate the usage for the Lakers if Reaves sits out, and Ziaire Williams would likely enter the starting lineup in this case."
   },
   {
    "player": "Scotty Pippen Jr.",
@@ -760,6 +746,20 @@
    "long": "Saunders is still on the mend from a torn right ACL that he suffered during his final year at BYU. However, he has been cleared for on-court activities and will be allowed to practice with the Grizzlies now that he's officially signed with the team."
   },
   {
+   "player": "Tyler Herro",
+   "team": "MIL",
+   "status": "Day-To-Day",
+   "date": "2026-11-09T22:21Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-10",
+   "detail": null,
+   "side": "Right",
+   "injury": "Bruise",
+   "fantasyStatus": "GTD",
+   "short": "Herro (contusion) is listed as questionable for Tuesday's game against the Knicks.",
+   "long": "Herro exited to the locker room during Sunday's loss to the Celtics after suffering an apparent knee injury, though he later returned to the game. However, he's since been added to the injury report with a contusion. If the veteran guard is ultimately ruled out for the front end of this back-to-back set, Brayden Burries and Ryan Rollins would likely see expanded roles. AJ Green could also see increased playing time if Herro is ruled out."
+  },
+  {
    "player": "Gary Trent Jr.",
    "team": "MIL",
    "status": "Day-To-Day",
@@ -802,6 +802,48 @@
    "long": "DiVincenzo is approaching six months since tearing his right Achilles during the first round of the playoffs and has been rehabbing with the expectation that he'll play at some point this season. The veteran guard has sought advice from Jayson Tatum, Tyrese Haliburton and Damian Lillard during his recovery, though Minnesota has yet to establish a timetable for his return."
   },
   {
+   "player": "Zion Williamson",
+   "team": "NO",
+   "status": "Out",
+   "date": "2026-11-09T21:49Z",
+   "type": "out",
+   "returnDate": "2026-11-11",
+   "detail": null,
+   "side": null,
+   "injury": "Rest",
+   "fantasyStatus": "OUT",
+   "short": "Williamson (rest) is out for Monday's game against the Warriors.",
+   "long": "The Pelicans are giving the star forward a maintenance day on the second half of this back-to-back, but Williamson should be able to play Wednesday against the Nets. With Trey Murphy (knees) also sidelined, Derik Queen, Saddiq Bey and Herbert Jones stand out as the most likely candidates to enter the starting lineup Monday."
+  },
+  {
+   "player": "Trendon Watford",
+   "team": "NO",
+   "status": "Out",
+   "date": "2026-11-09T20:50Z",
+   "type": "out",
+   "returnDate": "2026-11-11",
+   "detail": null,
+   "side": null,
+   "injury": "Ankle",
+   "fantasyStatus": "OUT",
+   "short": "Watford (ankle) is out for Monday's game versus Utah.",
+   "long": "Watford presumably picked up a right ankle sprain in Sunday's loss to the Clippers. His timeline for a return is uncertain."
+  },
+  {
+   "player": "Trey Murphy III",
+   "team": "NO",
+   "status": "Out",
+   "date": "2026-11-09T20:49Z",
+   "type": "out",
+   "returnDate": "2026-11-11",
+   "detail": "Tendinitis",
+   "side": "Not Specified",
+   "injury": "Knee",
+   "fantasyStatus": "OUT",
+   "short": "Murphy (knees) has been ruled out for Monday's game against Golden State.",
+   "long": "Murphy will be held out of the second leg of this back-to-back set due to bilateral patellar tendinopathy. The 26-year-old wing's next chance to play will come Wednesday against Brooklyn, and his absence should open up additional minutes for the likes of Herbert Jones, Saddiq Bey and Bennedict Mathurin."
+  },
+  {
    "player": "Yves Missi",
    "team": "NO",
    "status": "Out",
@@ -819,15 +861,15 @@
    "player": "Josh Hart",
    "team": "NY",
    "status": "Day-To-Day",
-   "date": "2026-11-08T16:01Z",
+   "date": "2026-11-09T22:04Z",
    "type": "day-to-day",
    "returnDate": "2026-11-10",
    "detail": null,
    "side": null,
    "injury": "Ankle",
    "fantasyStatus": "GTD",
-   "short": "Hart is out for Saturday's game against the Cavaliers due to right ankle soreness.",
-   "long": "Hart practiced Friday, per Steve Popper of Newsday, but he's getting a bit more time to recover. Landry Shamet should draw a second consecutive start for the Knicks on Saturday."
+   "short": "Hart is questionable for Tuesday's game against the Bucks due to right ankle soreness.",
+   "long": "Hart is aiming to avoid missing a third straight contest with the issue. Once Hart is ready to return to the court, Landry Shamet will likely revert back to his typical role off the bench."
   },
   {
    "player": "Jaylin Williams",
@@ -986,16 +1028,16 @@
   {
    "player": "Adem Bona",
    "team": "PHI",
-   "status": "Day-To-Day",
-   "date": "2026-11-09T15:41Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-10",
+   "status": "Out",
+   "date": "2026-11-09T22:03Z",
+   "type": "out",
+   "returnDate": "2026-11-12",
    "detail": "Sprain",
    "side": null,
    "injury": "Back",
-   "fantasyStatus": "GTD",
-   "short": "Bona (back) is out for Sunday's game in Chicago.",
-   "long": "Bona will miss his second straight game Sunday, which should again result in some extra minutes for Jabari Walker. Bona's next chance to play will come Tuesday against the Celtics."
+   "fantasyStatus": "OUT",
+   "short": "Bona (back) is out for Tuesday's game against the Celtics.",
+   "long": "Bona will miss his third consecutive matchup while nursing a cervical spine sprain. Jabari Walker should once again receive extra looks behind Joel Embiid with Bona and Dominick Barlow (back) sidelined."
   },
   {
    "player": "Dominick Barlow",

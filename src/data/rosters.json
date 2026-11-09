@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-10T05:41+09:00",
+ "asOf": "2026-11-10T07:42+09:00",
  "source": "ESPN API sync (GitHub Actions g8-espn)",
  "teams": {
   "Junyoung's Scary Team": {
@@ -98,12 +98,11 @@
     "Zach LaVine",
     "Jabari Smith Jr.",
     "Stephon Castle",
-    "Jrue Holiday",
-    "Pelle Larsson"
+    "Pelle Larsson",
+    "Jakob Poeltl"
    ],
    "ir": [
-    "Ja Morant",
-    "Nic Claxton"
+    "Ja Morant"
    ]
   },
   "Kunhyo's Chokeslam": {
@@ -171,8 +170,11 @@
  },
  "status": {
   "Paolo Banchero": "O",
+  "Zion Williamson": "O",
   "Yves Missi": "O",
   "Jalen Williams": "O",
+  "Trey Murphy III": "O",
+  "Austin Reaves": "O",
   "Brandon Miller": "O",
   "Chet Holmgren": "O",
   "Ja Morant": "O",
@@ -183,12 +185,13 @@
   "Tyrese Haliburton": "O",
   "Brandon Ingram": "O",
   "Jaren Jackson Jr.": "O",
+  "Moussa Diabate": "O",
   "Tobias Harris": "O",
   "Devin Vassell": "O",
   "Kristaps Porzingis": "O",
-  "Quentin Grimes": "O",
   "Jimmy Butler III": "O",
   "Egor Demin": "O",
+  "Quentin Grimes": "O",
   "Jalen Suggs": "O",
   "Scotty Pippen Jr.": "O",
   "Cason Wallace": "O",
@@ -210,15 +213,14 @@
   "Jordan Goodwin": "O",
   "Sergio de Larrea": "O",
   "Vit Krejci": "O",
-  "Jock Landale": "O",
-  "Clint Capela": "O",
+  "Adem Bona": "O",
   "Domantas Sabonis": "DTD",
   "Keyonte George": "DTD",
   "Nikola Jokic": "DTD",
   "Lauri Markkanen": "DTD",
   "Immanuel Quickley": "DTD",
   "Anthony Davis": "DTD",
-  "Austin Reaves": "DTD",
+  "Tyler Herro": "DTD",
   "Norman Powell": "DTD",
   "Scottie Barnes": "DTD",
   "Desmond Bane": "DTD",
@@ -227,7 +229,6 @@
   "Josh Hart": "DTD",
   "DeMar DeRozan": "DTD",
   "Aaron Gordon": "DTD",
-  "Moussa Diabate": "DTD",
   "Christian Braun": "DTD",
   "Collin Murray-Boyles": "DTD",
   "Cameron Johnson": "DTD",
@@ -237,8 +238,7 @@
   "Isaiah Jackson": "DTD",
   "Bilal Coulibaly": "DTD",
   "Robert Williams III": "DTD",
-  "Gui Santos": "DTD",
-  "Adem Bona": "DTD"
+  "Gui Santos": "DTD"
  },
  "unsigned": [
   "Cam Thomas",
@@ -249,8 +249,8 @@
   "Russell Westbrook"
  ],
  "returns": {
-  "Jock Landale": "2026-11-09",
   "Egor Demin": "2026-11-11",
+  "Moussa Diabate": "2026-11-12",
   "Kon Knueppel": "2026-12-12",
   "Dennis Schroder": "2026-11-25",
   "Brandon Miller": "2026-11-12",
@@ -258,25 +258,28 @@
   "Jaylon Tyson": "2026-11-11",
   "Sergio de Larrea": "2026-11-12",
   "Dereck Lively II": "2026-11-12",
-  "Isaiah Joe": "2026-11-12",
+  "Isaiah Joe": "2026-11-17",
   "Jalen Duren": "2026-11-24",
   "Kristaps Porzingis": "2027-01-02",
   "Jimmy Butler III": "2027-01-02",
-  "Clint Capela": "2026-11-11",
   "Tyrese Haliburton": "2026-11-13",
   "Brandon Ingram": "2026-11-10",
   "Bradley Beal": "2026-11-29",
+  "Austin Reaves": "2026-11-11",
   "Quentin Grimes": "2026-11-11",
   "Scotty Pippen Jr.": "2026-11-11",
   "Isaiah Stewart": "2026-11-11",
   "Anthony Edwards": "2026-12-21",
   "Donte DiVincenzo": "2027-04-02",
+  "Zion Williamson": "2026-11-11",
+  "Trey Murphy III": "2026-11-11",
   "Yves Missi": "2026-11-16",
   "Jaylin Williams": "2026-11-10",
   "Cason Wallace": "2027-03-02",
   "Chet Holmgren": "2027-01-02",
   "Jalen Suggs": "2026-11-10",
   "Paolo Banchero": "2026-11-22",
+  "Adem Bona": "2026-11-12",
   "Jordan Goodwin": "2026-11-09",
   "Mark Williams": "2027-02-03",
   "Ja Morant": "2026-12-01",
