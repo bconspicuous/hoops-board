@@ -4,10 +4,10 @@
  "acqLeft": 1,
  "dropCandidates": [],
  "base": {
-  "wk": 6.216,
-  "champ": 0.0369,
-  "p1": 0.0216,
-  "epct": 0.515
+  "wk": 6.129,
+  "champ": 0.0544,
+  "p1": 0.0353,
+  "epct": 0.5169
  },
  "protect": [
   "Shai Gilgeous-Alexander",
@@ -36,11 +36,11 @@
    "addEspnId": 4278049,
    "addOwner": "FA",
    "drop": null,
-   "ir": "Norman Powell",
-   "weekGain": 0.059,
-   "titleGain": 0.0269,
-   "p1Gain": 0.0356,
-   "epctGain": 0.0098,
+   "ir": "Brandon Miller",
+   "weekGain": 0.042,
+   "titleGain": 0.0178,
+   "p1Gain": 0.0243,
+   "epctGain": 0.0064,
    "addTeam": "DAL",
    "addPos": "C",
    "dropValue": null,
@@ -51,9 +51,26 @@
     "injury": null,
     "returnDate": null,
     "report": null,
-    "g": 9,
-    "min": 22.7
+    "g": 10,
+    "min": 22.3
    },
+   "irHealth": {
+    "status": "O",
+    "injury": "Groin",
+    "returnDate": "2026-11-12",
+    "report": "Miller (groin) is listed as out for Monday's game against Cleveland.",
+    "g": 10,
+    "min": 31
+   },
+   "firstProposedAt": "2026-11-09T02:43:03.455Z"
+  },
+  {
+   "n": 2,
+   "kind": "ir",
+   "ir": "Norman Powell",
+   "status": "proposed",
+   "note": "O 상태 — IR로 이동하면 로스터 1자리가 빔(영입 없이)",
+   "addHealth": null,
    "irHealth": {
     "status": "O",
     "injury": "Shoulder",
@@ -62,57 +79,58 @@
     "g": 8,
     "min": 28.9
    },
-   "firstProposedAt": "2026-11-08T20:43:14.529Z"
+   "firstProposedAt": "2026-11-09T02:43:03.455Z"
   }
  ],
  "screened": [
   {
    "add": "Daniel Gafford",
    "drop": null,
-   "ir": "Norman Powell",
-   "wk": 0.059,
-   "title": 0.0269
+   "ir": "Brandon Miller",
+   "wk": 0.042,
+   "title": 0.0178
   },
   {
    "add": "Jalen Smith",
    "drop": null,
-   "ir": "Norman Powell",
-   "wk": 0.049,
-   "title": 0.01
+   "ir": "Brandon Miller",
+   "wk": 0.034,
+   "title": 0.0159
   },
   {
-   "add": "Ziaire Williams",
+   "add": "Day'Ron Sharpe",
    "drop": null,
-   "ir": "Norman Powell",
-   "wk": 0.054,
-   "title": 0.0086
-  },
-  {
-   "add": "Kel'el Ware",
-   "drop": null,
-   "ir": "Norman Powell",
-   "wk": 0.053,
-   "title": 0.0082
-  },
-  {
-   "add": "Matisse Thybulle",
-   "drop": null,
-   "ir": "Norman Powell",
-   "wk": 0.046,
-   "title": 0.0083
+   "ir": "Brandon Miller",
+   "wk": 0.033,
+   "title": 0.0025
   },
   {
    "add": "Kris Dunn",
    "drop": null,
-   "ir": "Norman Powell",
-   "wk": 0.076,
-   "title": 0.004
+   "ir": "Brandon Miller",
+   "wk": 0.044,
+   "title": 0.0009
+  },
+  {
+   "add": "Matisse Thybulle",
+   "drop": null,
+   "ir": "Brandon Miller",
+   "wk": 0.032,
+   "title": -0.0007
+  },
+  {
+   "add": "Ziaire Williams",
+   "drop": null,
+   "ir": "Brandon Miller",
+   "wk": 0.026,
+   "title": -0.0071
   }
  ],
- "createdAt": "2026-11-08T20:43:14.529Z",
- "id": "20261108T2043",
+ "createdAt": "2026-11-09T02:43:03.455Z",
+ "id": "20261109T0243",
  "rosterSig": "Austin Reaves|Brandon Miller|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Michael Porter Jr.|Miles Bridges|Norman Powell|Rudy Gobert|Shai Gilgeous-Alexander|Tyler Herro|VJ Edgecombe#Anthony Davis",
  "newItems": [
-  1
+  1,
+  2
  ]
 }
