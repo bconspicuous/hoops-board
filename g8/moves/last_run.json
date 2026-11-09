@@ -1,7 +1,7 @@
 {
- "planId": "20261108T2043",
+ "planId": "20261109T0243",
  "mode": "dry",
- "at": "2026-11-08T15:43-05:00",
+ "at": "2026-11-08T21:43-05:00",
  "items": [
   {
    "n": 1,
@@ -14,6 +14,17 @@
     "name": "Daniel Gafford",
     "status": "FREEAGENT"
    },
+   "drop": null,
+   "ir": "Brandon Miller"
+  },
+  {
+   "n": 2,
+   "kind": "ir",
+   "checks": [
+    "✓ checks passed"
+   ],
+   "ok": true,
+   "add": null,
    "drop": null,
    "ir": "Norman Powell"
   }
