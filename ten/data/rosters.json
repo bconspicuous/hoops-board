@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-09T16:16+09:00",
+ "asOf": "2026-11-09T19:45+09:00",
  "leagueId": "504060248",
  "season": 2027,
  "teams": [
@@ -27,10 +27,10 @@
     "Jaren Jackson Jr."
    ],
    "record": {
-    "wins": 9,
-    "losses": 13,
+    "wins": 12,
+    "losses": 21,
     "ties": 0,
-    "percentage": 0.4090909090909091
+    "percentage": 0.36363636363636365
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
@@ -42,7 +42,7 @@
      "3": 5
     },
     "misc": 0,
-    "moveToActive": 101,
+    "moveToActive": 108,
     "moveToIR": 3,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -66,17 +66,17 @@
     "Jakob Poeltl",
     "Devin Vassell",
     "Isaiah Hartenstein",
-    "Nolan Traore",
-    "Jonathan Kuminga"
+    "Jonathan Kuminga",
+    "Peyton Watson"
    ],
    "ir": [
     "Paolo Banchero"
    ],
    "record": {
-    "wins": 17,
-    "losses": 5,
+    "wins": 25,
+    "losses": 8,
     "ties": 0,
-    "percentage": 0.7727272727272727
+    "percentage": 0.7575757575757576
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
@@ -89,7 +89,7 @@
      "4": 1
     },
     "misc": 0,
-    "moveToActive": 53,
+    "moveToActive": 56,
     "moveToIR": 1,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -120,10 +120,10 @@
     "Brandon Ingram"
    ],
    "record": {
-    "wins": 12,
-    "losses": 8,
-    "ties": 2,
-    "percentage": 0.5909090909090909
+    "wins": 20,
+    "losses": 10,
+    "ties": 3,
+    "percentage": 0.6515151515151515
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
@@ -135,7 +135,7 @@
      "3": 5
     },
     "misc": 0,
-    "moveToActive": 67,
+    "moveToActive": 72,
     "moveToIR": 1,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -149,7 +149,6 @@
    "me": false,
    "players": [
     "Cooper Flagg",
-    "Domantas Sabonis",
     "Devin Booker",
     "Pascal Siakam",
     "Lauri Markkanen",
@@ -160,16 +159,17 @@
     "Myles Turner",
     "Jaime Jaquez Jr.",
     "Wendell Carter Jr.",
-    "Kris Dunn"
-   ],
-   "ir": [
+    "Kris Dunn",
     "Nic Claxton"
    ],
+   "ir": [
+    "Domantas Sabonis"
+   ],
    "record": {
-    "wins": 11,
-    "losses": 10,
-    "ties": 1,
-    "percentage": 0.5227272727272727
+    "wins": 19,
+    "losses": 12,
+    "ties": 2,
+    "percentage": 0.6060606060606061
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
@@ -182,7 +182,7 @@
     },
     "misc": 0,
     "moveToActive": 57,
-    "moveToIR": 5,
+    "moveToIR": 6,
     "paid": 0.0,
     "teamCharges": 0.0,
     "trades": 0
@@ -212,10 +212,10 @@
     "Tyrese Haliburton"
    ],
    "record": {
-    "wins": 13,
-    "losses": 9,
+    "wins": 22,
+    "losses": 11,
     "ties": 0,
-    "percentage": 0.5909090909090909
+    "percentage": 0.6666666666666666
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
@@ -227,7 +227,7 @@
      "3": 2
     },
     "misc": 0,
-    "moveToActive": 53,
+    "moveToActive": 55,
     "moveToIR": 3,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -258,10 +258,10 @@
     "Jalen Duren"
    ],
    "record": {
-    "wins": 8,
-    "losses": 14,
-    "ties": 0,
-    "percentage": 0.36363636363636365
+    "wins": 10,
+    "losses": 22,
+    "ties": 1,
+    "percentage": 0.3181818181818182
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
@@ -273,7 +273,7 @@
      "3": 1
     },
     "misc": 0,
-    "moveToActive": 59,
+    "moveToActive": 62,
     "moveToIR": 2,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -304,10 +304,10 @@
     "Anthony Edwards"
    ],
    "record": {
-    "wins": 11,
-    "losses": 10,
-    "ties": 1,
-    "percentage": 0.5227272727272727
+    "wins": 13,
+    "losses": 18,
+    "ties": 2,
+    "percentage": 0.42424242424242425
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
@@ -319,7 +319,7 @@
      "3": 2
     },
     "misc": 0,
-    "moveToActive": 59,
+    "moveToActive": 63,
     "moveToIR": 2,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -340,20 +340,20 @@
     "Toumani Camara",
     "Miles Bridges",
     "Karl-Anthony Towns",
-    "Paul Reed",
     "Duncan Robinson",
     "Andrew Nembhard",
     "Daniel Gafford",
-    "Grayson Allen"
+    "Grayson Allen",
+    "Jamal Shead"
    ],
    "ir": [
     "Josh Hart"
    ],
    "record": {
-    "wins": 7,
-    "losses": 15,
+    "wins": 9,
+    "losses": 24,
     "ties": 0,
-    "percentage": 0.3181818181818182
+    "percentage": 0.2727272727272727
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
@@ -366,7 +366,7 @@
      "4": 1
     },
     "misc": 0,
-    "moveToActive": 71,
+    "moveToActive": 75,
     "moveToIR": 5,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -397,10 +397,10 @@
     "Jalen Johnson"
    ],
    "record": {
-    "wins": 10,
-    "losses": 12,
-    "ties": 0,
-    "percentage": 0.45454545454545453
+    "wins": 14,
+    "losses": 18,
+    "ties": 1,
+    "percentage": 0.4393939393939394
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
@@ -430,7 +430,7 @@
     "James Harden",
     "Deni Avdija",
     "Naz Reid",
-    "Mikal Bridges",
+    "Trey Murphy III",
     "VJ Edgecombe",
     "Zach Edey",
     "Derik Queen",
@@ -439,14 +439,12 @@
     "Aaron Wiggins",
     "Saddiq Bey"
    ],
-   "ir": [
-    "Trey Murphy III"
-   ],
+   "ir": [],
    "record": {
-    "wins": 9,
-    "losses": 11,
-    "ties": 2,
-    "percentage": 0.45454545454545453
+    "wins": 15,
+    "losses": 15,
+    "ties": 3,
+    "percentage": 0.5
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
@@ -457,7 +455,7 @@
      "3": 1
     },
     "misc": 0,
-    "moveToActive": 46,
+    "moveToActive": 49,
     "moveToIR": 2,
     "paid": 0.0,
     "teamCharges": 0.0,

@@ -1,6 +1,6 @@
 {
- "asOf": "2026-11-09T16:16+09:00",
- "scoringPeriodId": 20,
+ "asOf": "2026-11-09T19:45+09:00",
+ "scoringPeriodId": 21,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
   "waiverHours": 24,
@@ -183,7 +183,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "4576087",
+     "player": "Peyton Watson",
      "from": "FA",
      "to": "SMS"
     },
@@ -207,7 +207,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "4432241",
+     "player": "Jamal Shead",
      "from": "FA",
      "to": "GTD"
     },
@@ -915,7 +915,7 @@
     },
     {
      "type": "DROP",
-     "player": "4576087",
+     "player": "Peyton Watson",
      "from": "GTD",
      "to": "FA"
     }
@@ -969,102 +969,6 @@
     }
    ],
    "bid": 0
-  },
-  {
-   "id": "18fc7f54-4a76-41db-8779-d0e3b0c3742e",
-   "team": "Doo",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-02 07:23 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Dillon Brooks",
-     "from": "FA",
-     "to": "Doo"
-    },
-    {
-     "type": "DROP",
-     "player": "Derrick Jones Jr.",
-     "from": "Doo",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "6014e775-b32e-4440-be9e-1efa719249d1",
-   "team": "IYH",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-02 07:23 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Collin Gillespie",
-     "from": "FA",
-     "to": "IYH"
-    },
-    {
-     "type": "DROP",
-     "player": "Day'Ron Sharpe",
-     "from": "IYH",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "42aa73df-6ff5-474f-9cd0-400a8842a21c",
-   "team": "SMS",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-01 20:58 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Jarace Walker",
-     "from": "FA",
-     "to": "SMS"
-    },
-    {
-     "type": "DROP",
-     "player": "De'Andre Hunter",
-     "from": "SMS",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "6e76b808-196a-470f-a147-546dd7a846ea",
-   "team": "Doo",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-01 19:08 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Derrick Jones Jr.",
-     "from": "FA",
-     "to": "Doo"
-    },
-    {
-     "type": "DROP",
-     "player": "Chet Holmgren",
-     "from": "Doo",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
   }
  ],
  "onWaivers": [
@@ -1091,28 +995,6 @@
    }
   },
   {
-   "id": 4278585,
-   "name": "Collin Gillespie",
-   "pro": "PHX",
-   "waiverClears": "2026-11-09 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "IYH",
-    "at": "2026-11-08 01:36 KST"
-   }
-  },
-  {
-   "id": 6589,
-   "name": "Draymond Green",
-   "pro": "GSW",
-   "waiverClears": "2026-11-09 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "SMS",
-    "at": "2026-11-08 02:43 KST"
-   }
-  },
-  {
    "id": 5279130,
    "name": "Nolan Traore",
    "pro": "BKN",
@@ -1121,17 +1003,6 @@
    "droppedBy": {
     "by": "SMS",
     "at": "2026-11-09 06:07 KST"
-   }
-  },
-  {
-   "id": 4684272,
-   "name": "Ja'Kobe Walter",
-   "pro": "TOR",
-   "waiverClears": "2026-11-09 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "SMS",
-    "at": "2026-11-08 17:26 KST"
    }
   }
  ],
