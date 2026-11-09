@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-09T16:13+09:00",
+ "asOf": "2026-11-09T19:12+09:00",
  "source": "ESPN API sync (GitHub Actions g8-espn)",
  "teams": {
   "Junyoung's Scary Team": {
@@ -29,11 +29,11 @@
     "Amen Thompson",
     "Stephen Curry",
     "Evan Mobley",
-    "Lauri Markkanen",
     "Trey Murphy III",
     "Onyeka Okongwu",
     "De'Aaron Fox",
     "Brandin Podziemski",
+    "Immanuel Quickley",
     "Myles Turner",
     "Cedric Coward",
     "Nolan Traore",
@@ -41,27 +41,28 @@
    ],
    "ir": [
     "Jalen Williams",
-    "Immanuel Quickley"
+    "Lauri Markkanen"
    ]
   },
   "Garak Twindragons": {
    "active": [
     "Shai Gilgeous-Alexander",
     "Karl-Anthony Towns",
+    "Anthony Davis",
     "James Harden",
     "Austin Reaves",
     "Kyrie Irving",
     "Michael Porter Jr.",
-    "Brandon Miller",
     "Tyler Herro",
-    "Rudy Gobert",
-    "Norman Powell",
     "Miles Bridges",
     "Jeremiah Fears",
-    "VJ Edgecombe"
+    "Alex Sarr",
+    "Peyton Watson",
+    "Daniel Gafford"
    ],
    "ir": [
-    "Anthony Davis"
+    "Brandon Miller",
+    "Norman Powell"
    ]
   },
   "Zero Sugar": {
@@ -115,11 +116,11 @@
     "OG Anunoby",
     "Matas Buzelis",
     "Cameron Boozer",
-    "AJ Dybantsa",
     "Ausar Thompson",
     "Dylan Harper",
-    "Ace Bailey",
-    "Derik Queen"
+    "Aday Mara",
+    "RJ Barrett",
+    "Dillon Brooks"
    ],
    "ir": [
     "Anthony Edwards",
