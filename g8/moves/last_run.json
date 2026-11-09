@@ -1,21 +1,19 @@
 {
- "planId": "20261109T0243",
+ "planId": "20261109T0543",
  "mode": "dry",
- "at": "2026-11-08T21:43-05:00",
+ "at": "2026-11-09T00:43-05:00",
  "items": [
   {
    "n": 1,
    "kind": "ir+add",
    "checks": [
-    "✓ checks passed"
+    "✗ Alex Sarr not found in the player pool",
+    "✗ not executable"
    ],
-   "ok": true,
-   "add": {
-    "name": "Daniel Gafford",
-    "status": "FREEAGENT"
-   },
+   "ok": false,
+   "add": null,
    "drop": null,
-   "ir": "Brandon Miller"
+   "ir": "Norman Powell"
   },
   {
    "n": 2,
@@ -26,10 +24,10 @@
    "ok": true,
    "add": null,
    "drop": null,
-   "ir": "Norman Powell"
+   "ir": "Brandon Miller"
   }
  ],
- "ok": true,
+ "ok": false,
  "scoringPeriodId": 20,
  "matchupPeriod": 3,
  "addsUsed": 6,
