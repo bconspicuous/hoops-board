@@ -1,20 +1,20 @@
-# 라인업 제안 2026-11-08 (미국 동부) · 3주차 vs Songpa Park Kezhang · 상태: nochange · 기준: 현재 스탯(2026-27 실제 100%)
-출전 8명 · 기대 카테고리 승 6.21 (현재 ESPN 라인업 6.21, +0.00)
+# 라인업 제안 2026-11-09 (미국 동부) · 4주차 vs Junyoung's Scary Team · 상태: pending · 기준: 현재 스탯(2026-27 실제 100%)
+출전 4명 · 기대 카테고리 승 5.69 (현재 ESPN 라인업 5.54, +0.15)
 벤치(출전 선수 중): 없음
-변경: 없음
+변경: Karl-Anthony Towns UTIL→C, James Harden BE→SG, Austin Reaves UTIL→PG, Kyrie Irving PG→G, Michael Porter Jr. PF→SF, Tyler Herro G→UTIL, Rudy Gobert C→UTIL, Norman Powell SF→BE, VJ Edgecombe SG→BE
 
 | 슬롯 | 선수 |
 |---|---|
-| PG | Kyrie Irving |
-| SG | VJ Edgecombe |
-| SF | Norman Powell |
-| PF | Michael Porter Jr. |
-| C | Rudy Gobert |
-| G | Tyler Herro |
+| PG | Austin Reaves |
+| SG | James Harden |
+| SF | Michael Porter Jr. |
+| C | Karl-Anthony Towns |
+| G | Kyrie Irving |
 | F | Miles Bridges |
-| UTIL | Karl-Anthony Towns |
-| UTIL | Austin Reaves |
+| UTIL | Tyler Herro |
+| UTIL | Rudy Gobert |
 | UTIL | Jeremiah Fears |
 | BE | Shai Gilgeous-Alexander |
-| BE | James Harden |
 | BE | Brandon Miller |
+| BE | Norman Powell |
+| BE | VJ Edgecombe |
