@@ -2,7 +2,7 @@
  "date": "2026-11-09",
  "week": 4,
  "opp": "Junyoung's Scary Team",
- "status": "minor",
+ "status": "nochange-starters",
  "playing": 8,
  "starters": [
   "Anthony Davis",
@@ -16,78 +16,72 @@
  ],
  "bench": [],
  "dtd": [
-  "Anthony Davis"
+  "Anthony Davis",
+  "Austin Reaves"
  ],
  "expected": {
-  "best": 6.692,
-  "current": 6.741,
-  "gain": -0.05,
+  "best": 6.695,
+  "current": 6.695,
+  "gain": 0,
   "pcBest": {
-   "FG": 0.341,
-   "FT": 0.756,
-   "TPM": 0.906,
-   "REB": 0.942,
-   "AST": 0.221,
-   "STL": 0.138,
-   "BLK": 0.997,
-   "TO": 0.533,
-   "DD": 0.568,
-   "PTS": 0.934,
-   "PF": 0.355
+   "FG": 0.433,
+   "FT": 0.717,
+   "TPM": 0.825,
+   "REB": 0.935,
+   "AST": 0.235,
+   "STL": 0.104,
+   "BLK": 0.994,
+   "TO": 0.501,
+   "DD": 0.614,
+   "PTS": 0.921,
+   "PF": 0.416
   },
   "pcCurrent": {
-   "FG": 0.309,
-   "FT": 0.769,
-   "TPM": 0.904,
-   "REB": 0.915,
-   "AST": 0.196,
-   "STL": 0.123,
+   "FG": 0.433,
+   "FT": 0.717,
+   "TPM": 0.825,
+   "REB": 0.935,
+   "AST": 0.235,
+   "STL": 0.104,
    "BLK": 0.994,
-   "TO": 0.578,
-   "DD": 0.568,
-   "PTS": 0.916,
-   "PF": 0.47
+   "TO": 0.501,
+   "DD": 0.614,
+   "PTS": 0.921,
+   "PF": 0.416
   }
  },
  "alternatives": [],
- "currentBench": [
-  "Daniel Gafford"
- ],
- "sameStarters": false,
+ "currentBench": [],
+ "sameStarters": true,
  "moves": [
   {
+   "name": "James Harden",
+   "from": "SG",
+   "to": "G"
+  },
+  {
    "name": "Austin Reaves",
-   "from": "UTIL",
-   "to": "PG"
+   "from": "PG",
+   "to": "SG"
   },
   {
    "name": "Kyrie Irving",
-   "from": "PG",
+   "from": "G",
    "to": "UTIL"
   },
   {
-   "name": "Michael Porter Jr.",
-   "from": "PF",
-   "to": "BE"
-  },
-  {
-   "name": "Alex Sarr",
-   "from": "C",
-   "to": "PF"
-  },
-  {
-   "name": "Daniel Gafford",
-   "from": "BE",
-   "to": "C"
+   "name": "Jeremiah Fears",
+   "from": "UTIL",
+   "to": "PG"
   }
  ],
  "slots": [
   {
-   "name": "Austin Reaves",
+   "name": "Jeremiah Fears",
    "slot": "PG"
   },
   {
-   "name": "Jeremiah Fears",
+   "name": "Austin Reaves",
    "slot": "SG"
   },
   {
@@ -95,7 +89,7 @@
    "slot": "SF"
   },
   {
-   "name": "Alex Sarr",
+   "name": "Anthony Davis",
    "slot": "PF"
   },
   {
@@ -107,7 +101,7 @@
    "slot": "G"
   },
   {
-   "name": "Miles Bridges",
+   "name": "Alex Sarr",
    "slot": "F"
   },
   {
@@ -115,11 +109,11 @@
    "slot": "UTIL"
   },
   {
-   "name": "Anthony Davis",
+   "name": "Kyrie Irving",
    "slot": "UTIL"
   },
   {
-   "name": "Kyrie Irving",
+   "name": "Miles Bridges",
    "slot": "UTIL"
   },
   {
@@ -135,6 +129,6 @@
    "slot": "BE"
   }
  ],
- "id": "2026-11-09T1443Z",
- "createdAt": "2026-11-09T14:43:28.687Z"
+ "id": "2026-11-09T2042Z",
+ "createdAt": "2026-11-09T20:42:50.669Z"
 }
