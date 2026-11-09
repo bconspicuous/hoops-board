@@ -1,136 +1,30 @@
 {
  "week": 4,
  "opp": "Junyoung's Scary Team",
- "acqLeft": 1,
+ "acqLeft": 4,
  "dropCandidates": [],
  "base": {
-  "wk": 5.686,
-  "champ": 0.0594,
-  "p1": 0.0539,
-  "epct": 0.5193
+  "wk": 6.692,
+  "champ": 0.6346,
+  "p1": 0.7743,
+  "epct": 0.5929
  },
  "protect": [
   "Shai Gilgeous-Alexander",
+  "Anthony Davis",
   "Kyrie Irving",
   "James Harden",
   "Karl-Anthony Towns",
   "Austin Reaves",
   "Michael Porter Jr.",
-  "Tyler Herro",
-  "Rudy Gobert"
+  "Tyler Herro"
  ],
  "droppable": [],
- "flags": [
-  {
-   "kind": "ir-ineligible",
-   "player": "Anthony Davis",
-   "status": "DTD",
-   "note": "IR 선수가 O가 아님 — ESPN이 영입을 막을 수 있음(감독 판단: DTD는 영입 가능). 첫 사례에서 실제 동작을 기록"
-  }
- ],
- "items": [
-  {
-   "n": 1,
-   "kind": "ir+add",
-   "add": "Alex Sarr",
-   "addEspnId": null,
-   "addOwner": "FA",
-   "drop": null,
-   "ir": "Norman Powell",
-   "weekGain": 0.793,
-   "titleGain": 0.109,
-   "p1Gain": 0.1743,
-   "epctGain": 0.0267,
-   "addTeam": "WAS",
-   "addPos": "PF,C",
-   "dropValue": null,
-   "status": "proposed",
-   "conflicts": [],
-   "addHealth": {
-    "status": "정상",
-    "injury": null,
-    "returnDate": null,
-    "report": null,
-    "g": null,
-    "min": null
-   },
-   "irHealth": {
-    "status": "O",
-    "injury": "Shoulder",
-    "returnDate": "2026-11-11",
-    "report": "Powell (shoulder) has been ruled out for Sunday's game against the 76ers, Adam Aaronson of PhillyVoice.com reports.",
-    "g": 8,
-    "min": 28.9
-   },
-   "firstProposedAt": "2026-11-09T05:43:15.809Z"
-  },
-  {
-   "n": 2,
-   "kind": "ir",
-   "ir": "Brandon Miller",
-   "status": "proposed",
-   "note": "O 상태 — IR로 이동하면 로스터 1자리가 빔(영입 없이)",
-   "addHealth": null,
-   "irHealth": {
-    "status": "O",
-    "injury": "Groin",
-    "returnDate": "2026-11-12",
-    "report": "Miller (groin) is listed as out for Monday's game against Cleveland.",
-    "g": 10,
-    "min": 31
-   },
-   "firstProposedAt": "2026-11-09T05:43:15.809Z"
-  }
- ],
- "screened": [
-  {
-   "add": "Alex Sarr",
-   "drop": null,
-   "ir": "Norman Powell",
-   "wk": 0.793,
-   "title": 0.109
-  },
-  {
-   "add": "Tari Eason",
-   "drop": null,
-   "ir": "Norman Powell",
-   "wk": 0.532,
-   "title": 0.0308
-  },
-  {
-   "add": "Jalen Smith",
-   "drop": null,
-   "ir": "Norman Powell",
-   "wk": 0.485,
-   "title": 0.028
-  },
-  {
-   "add": "Zach Edey",
-   "drop": null,
-   "ir": "Norman Powell",
-   "wk": 0.496,
-   "title": 0.0248
-  },
-  {
-   "add": "Peyton Watson",
-   "drop": null,
-   "ir": "Norman Powell",
-   "wk": 0.467,
-   "title": 0.0172
-  },
-  {
-   "add": "Alex Caruso",
-   "drop": null,
-   "ir": "Norman Powell",
-   "wk": 0.386,
-   "title": 0.013
-  }
- ],
- "createdAt": "2026-11-09T05:43:15.809Z",
- "id": "20261109T0543",
- "rosterSig": "Austin Reaves|Brandon Miller|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Michael Porter Jr.|Miles Bridges|Norman Powell|Rudy Gobert|Shai Gilgeous-Alexander|Tyler Herro|VJ Edgecombe#Anthony Davis",
- "newItems": [
-  1,
-  2
- ]
+ "flags": [],
+ "items": [],
+ "screened": [],
+ "createdAt": "2026-11-09T10:13:11.723Z",
+ "id": "20261109T1013",
+ "rosterSig": "Alex Sarr|Anthony Davis|Austin Reaves|Daniel Gafford|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Michael Porter Jr.|Miles Bridges|Peyton Watson|Shai Gilgeous-Alexander|Tyler Herro#Brandon Miller|Norman Powell",
+ "newItems": []
 }
