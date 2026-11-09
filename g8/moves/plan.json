@@ -1,13 +1,13 @@
 {
- "week": 3,
- "opp": "Songpa Park Kezhang",
+ "week": 4,
+ "opp": "Junyoung's Scary Team",
  "acqLeft": 1,
  "dropCandidates": [],
  "base": {
-  "wk": 6.129,
-  "champ": 0.0544,
-  "p1": 0.0353,
-  "epct": 0.5169
+  "wk": 5.686,
+  "champ": 0.0594,
+  "p1": 0.0539,
+  "epct": 0.5193
  },
  "protect": [
   "Shai Gilgeous-Alexander",
@@ -32,17 +32,17 @@
   {
    "n": 1,
    "kind": "ir+add",
-   "add": "Daniel Gafford",
-   "addEspnId": 4278049,
+   "add": "Alex Sarr",
+   "addEspnId": null,
    "addOwner": "FA",
    "drop": null,
-   "ir": "Brandon Miller",
-   "weekGain": 0.042,
-   "titleGain": 0.0178,
-   "p1Gain": 0.0243,
-   "epctGain": 0.0064,
-   "addTeam": "DAL",
-   "addPos": "C",
+   "ir": "Norman Powell",
+   "weekGain": 0.793,
+   "titleGain": 0.109,
+   "p1Gain": 0.1743,
+   "epctGain": 0.0267,
+   "addTeam": "WAS",
+   "addPos": "PF,C",
    "dropValue": null,
    "status": "proposed",
    "conflicts": [],
@@ -51,26 +51,9 @@
     "injury": null,
     "returnDate": null,
     "report": null,
-    "g": 10,
-    "min": 22.3
+    "g": null,
+    "min": null
    },
-   "irHealth": {
-    "status": "O",
-    "injury": "Groin",
-    "returnDate": "2026-11-12",
-    "report": "Miller (groin) is listed as out for Monday's game against Cleveland.",
-    "g": 10,
-    "min": 31
-   },
-   "firstProposedAt": "2026-11-09T02:43:03.455Z"
-  },
-  {
-   "n": 2,
-   "kind": "ir",
-   "ir": "Norman Powell",
-   "status": "proposed",
-   "note": "O 상태 — IR로 이동하면 로스터 1자리가 빔(영입 없이)",
-   "addHealth": null,
    "irHealth": {
     "status": "O",
     "injury": "Shoulder",
@@ -79,55 +62,72 @@
     "g": 8,
     "min": 28.9
    },
-   "firstProposedAt": "2026-11-09T02:43:03.455Z"
+   "firstProposedAt": "2026-11-09T05:43:15.809Z"
+  },
+  {
+   "n": 2,
+   "kind": "ir",
+   "ir": "Brandon Miller",
+   "status": "proposed",
+   "note": "O 상태 — IR로 이동하면 로스터 1자리가 빔(영입 없이)",
+   "addHealth": null,
+   "irHealth": {
+    "status": "O",
+    "injury": "Groin",
+    "returnDate": "2026-11-12",
+    "report": "Miller (groin) is listed as out for Monday's game against Cleveland.",
+    "g": 10,
+    "min": 31
+   },
+   "firstProposedAt": "2026-11-09T05:43:15.809Z"
   }
  ],
  "screened": [
   {
-   "add": "Daniel Gafford",
+   "add": "Alex Sarr",
    "drop": null,
-   "ir": "Brandon Miller",
-   "wk": 0.042,
-   "title": 0.0178
+   "ir": "Norman Powell",
+   "wk": 0.793,
+   "title": 0.109
+  },
+  {
+   "add": "Tari Eason",
+   "drop": null,
+   "ir": "Norman Powell",
+   "wk": 0.532,
+   "title": 0.0308
   },
   {
    "add": "Jalen Smith",
    "drop": null,
-   "ir": "Brandon Miller",
-   "wk": 0.034,
-   "title": 0.0159
+   "ir": "Norman Powell",
+   "wk": 0.485,
+   "title": 0.028
   },
   {
-   "add": "Day'Ron Sharpe",
+   "add": "Zach Edey",
    "drop": null,
-   "ir": "Brandon Miller",
-   "wk": 0.033,
-   "title": 0.0025
+   "ir": "Norman Powell",
+   "wk": 0.496,
+   "title": 0.0248
   },
   {
-   "add": "Kris Dunn",
+   "add": "Peyton Watson",
    "drop": null,
-   "ir": "Brandon Miller",
-   "wk": 0.044,
-   "title": 0.0009
+   "ir": "Norman Powell",
+   "wk": 0.467,
+   "title": 0.0172
   },
   {
-   "add": "Matisse Thybulle",
+   "add": "Alex Caruso",
    "drop": null,
-   "ir": "Brandon Miller",
-   "wk": 0.032,
-   "title": -0.0007
-  },
-  {
-   "add": "Ziaire Williams",
-   "drop": null,
-   "ir": "Brandon Miller",
-   "wk": 0.026,
-   "title": -0.0071
+   "ir": "Norman Powell",
+   "wk": 0.386,
+   "title": 0.013
   }
  ],
- "createdAt": "2026-11-09T02:43:03.455Z",
- "id": "20261109T0243",
+ "createdAt": "2026-11-09T05:43:15.809Z",
+ "id": "20261109T0543",
  "rosterSig": "Austin Reaves|Brandon Miller|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Michael Porter Jr.|Miles Bridges|Norman Powell|Rudy Gobert|Shai Gilgeous-Alexander|Tyler Herro|VJ Edgecombe#Anthony Davis",
  "newItems": [
   1,
