@@ -1,62 +1,86 @@
 {
- "planId": "2026-11-07T0544Z",
+ "planId": "2026-11-09T0544Z",
  "mode": "dry",
- "date": "2026-11-07",
- "at": "2026-11-07T00:44-05:00",
+ "date": "2026-11-09",
+ "at": "2026-11-09T00:44-05:00",
  "moves": [
   {
    "name": "Karl-Anthony Towns",
-   "from": "BE",
+   "from": "UTIL",
    "to": "C"
   },
   {
-   "name": "Dillon Brooks",
+   "name": "James Harden",
    "from": "BE",
    "to": "SG"
   }
  ],
  "skipped": [
   {
+   "name": "Austin Reaves",
+   "from": "UTIL",
+   "to": "PG",
+   "why": "game started / locked"
+  },
+  {
+   "name": "Kyrie Irving",
+   "from": "PG",
+   "to": "G",
+   "why": "game started / locked"
+  },
+  {
+   "name": "Michael Porter Jr.",
+   "from": "PF",
+   "to": "SF",
+   "why": "game started / locked"
+  },
+  {
    "name": "Tyler Herro",
-   "from": "SG",
+   "from": "G",
    "to": "UTIL",
    "why": "game started / locked"
   },
   {
    "name": "Rudy Gobert",
-   "from": "UTIL",
+   "from": "C",
+   "to": "UTIL",
+   "why": "game started / locked"
+  },
+  {
+   "name": "Norman Powell",
+   "from": "SF",
    "to": "BE",
    "why": "game started / locked"
   },
   {
-   "name": "Zach Edey",
-   "from": "C",
+   "name": "VJ Edgecombe",
+   "from": "SG",
    "to": "BE",
    "why": "game started / locked"
   }
  ],
  "ok": false,
- "scoringPeriodId": 18,
+ "scoringPeriodId": 20,
  "finalLineup": [
   [
    "PG",
+   "Kyrie Irving"
+  ],
+  [
+   "SG",
    "James Harden"
   ],
   [
    "SG",
-   "Tyler Herro"
-  ],
-  [
-   "SG",
-   "Dillon Brooks"
+   "VJ Edgecombe"
   ],
   [
    "SF",
-   "Brandon Miller"
+   "Norman Powell"
   ],
   [
    "PF",
-   "Miles Bridges"
+   "Michael Porter Jr."
   ],
   [
    "C",
@@ -64,31 +88,31 @@
   ],
   [
    "C",
-   "Zach Edey"
-  ],
-  [
-   "G",
-   "Austin Reaves"
-  ],
-  [
-   "F",
-   "Michael Porter Jr."
-  ],
-  [
-   "UTIL",
-   "Shai Gilgeous-Alexander"
-  ],
-  [
-   "UTIL",
-   "Kyrie Irving"
-  ],
-  [
-   "UTIL",
    "Rudy Gobert"
   ],
   [
+   "G",
+   "Tyler Herro"
+  ],
+  [
+   "F",
+   "Miles Bridges"
+  ],
+  [
+   "UTIL",
+   "Austin Reaves"
+  ],
+  [
+   "UTIL",
+   "Jeremiah Fears"
+  ],
+  [
    "BE",
-   "Norman Powell"
+   "Shai Gilgeous-Alexander"
+  ],
+  [
+   "BE",
+   "Brandon Miller"
   ],
   [
    "IR",
