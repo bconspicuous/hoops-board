@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-10T06:44+09:00",
+ "asOf": "2026-11-10T07:45+09:00",
  "scoringPeriodId": 21,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -28,7 +28,7 @@
    "team": "GGAM",
    "name": "Garibong CHaRdaddy",
    "rank": 2,
-   "acq": 9
+   "acq": 10
   },
   {
    "team": "TBG",
@@ -154,6 +154,30 @@
   }
  ],
  "transactions": [
+  {
+   "id": "bf57b5fe-b4fe-4e78-ac35-be515fd41dfa",
+   "team": "GGAM",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-10 07:21 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Draymond Green",
+     "from": "FA",
+     "to": "GGAM"
+    },
+    {
+     "type": "DROP",
+     "player": "Nic Claxton",
+     "from": "GGAM",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
   {
    "id": "2c36297a-1c20-402d-bc3e-041fd82ab547",
    "team": "KWNG",
@@ -981,6 +1005,17 @@
    "droppedBy": {
     "by": "KWNG",
     "at": "2026-11-09 10:53 KST"
+   }
+  },
+  {
+   "id": 4278067,
+   "name": "Nic Claxton",
+   "pro": "CHI",
+   "waiverClears": "2026-11-11 17:00 KST",
+   "inj": "ACTIVE",
+   "droppedBy": {
+    "by": "GGAM",
+    "at": "2026-11-10 07:21 KST"
    }
   },
   {
