@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-09T07:32+09:00",
+ "asOf": "2026-11-09T13:44+09:00",
  "scoringPeriodId": 20,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -154,6 +154,24 @@
   }
  ],
  "transactions": [
+  {
+   "id": "2c36297a-1c20-402d-bc3e-041fd82ab547",
+   "team": "KWNG",
+   "mine": false,
+   "type": "ROSTER",
+   "status": "EXECUTED",
+   "proposed": "2026-11-09 10:53 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "DROP",
+     "player": "Mikal Bridges",
+     "from": "KWNG",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
   {
    "id": "b33d18d2-5195-42a7-bbc0-43b0043190ef",
    "team": "SMS",
@@ -1051,6 +1069,17 @@
  ],
  "onWaivers": [
   {
+   "id": 3147657,
+   "name": "Mikal Bridges",
+   "pro": "NYK",
+   "waiverClears": "2026-11-10 17:00 KST",
+   "inj": "ACTIVE",
+   "droppedBy": {
+    "by": "KWNG",
+    "at": "2026-11-09 10:53 KST"
+   }
+  },
+  {
    "id": 4278562,
    "name": "Paul Reed",
    "pro": "DET",
@@ -1073,17 +1102,6 @@
    }
   },
   {
-   "id": 5279130,
-   "name": "Nolan Traore",
-   "pro": "BKN",
-   "waiverClears": "2026-11-10 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "SMS",
-    "at": "2026-11-09 06:07 KST"
-   }
-  },
-  {
    "id": 6589,
    "name": "Draymond Green",
    "pro": "GSW",
@@ -1092,6 +1110,17 @@
    "droppedBy": {
     "by": "SMS",
     "at": "2026-11-08 02:43 KST"
+   }
+  },
+  {
+   "id": 5279130,
+   "name": "Nolan Traore",
+   "pro": "BKN",
+   "waiverClears": "2026-11-10 17:00 KST",
+   "inj": "ACTIVE",
+   "droppedBy": {
+    "by": "SMS",
+    "at": "2026-11-09 06:07 KST"
    }
   },
   {
