@@ -34,7 +34,11 @@ sm = {'asOf': META['asOf'], 'me': me, 'week': {'v1': w1, 'v2': w2, 'remDays': WK
       'base': plan['sum']['base'], 'next': nxt, 'teams': order, 'acq': next(t for t in RO['teams'] if t['me'])['transactions']['acquisitions']}
 json.dump(sm, open(W + 'out/summary.json', 'w'), ensure_ascii=False, indent=1)
 pc = lambda v: f"{v * 100:.0f}%"
-md = [f"# 10팀 리그 시뮬레이션 · {META['asOf'].replace('T', ' ')[:16]} KST", '',
+_PS = json.load(open(W + 'proj_1023.json'))['summary']
+sm['projection'] = {'actualOnly': bool(_PS.get('actualOnly')), 'nActual': _PS.get('nActual'), 'noActual': _PS.get('noActual', [])}
+json.dump(sm, open(W + 'out/summary.json', 'w'), ensure_ascii=False, indent=1)
+_PL = (f"- 프로젝션: 2026-27 시즌 실제 경기당 성적만 사용({_PS.get('nActual')}명) · 올 시즌 기록 없는 {len(_PS.get('noActual', []))}명만 기존 모델" if _PS.get('actualOnly') else "- 프로젝션: v1 회귀+ESPN+주차 가중 / v2 시즌 초 회귀")
+md = [f"# 10팀 리그 시뮬레이션 · {META['asOf'].replace('T', ' ')[:16]} KST", _PL, '',
       f"## 우리 팀 예상 순위: 권장 교체안 실행 시 {me['planRank']}위 · 일반 교체 가정 시 {me['projRank']}위 (현재 {me['curRank']}위, {me['rec']})",
       f"- 4강 {pc(me['p4'])}(v2 {pc(me['p4v2'])}) · 우승 {me['champ'] * 100:.1f}% · 권장 교체안 실행 시 4강 {pc(sm['plans']['rec']['p4'])}, 우승 {sm['plans']['rec']['champ'] * 100:.1f}%", '',
       f"## 이번 주({WK['week']}주차) vs {w1['oppName']} ({w1['opp']})",

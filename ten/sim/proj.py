@@ -100,6 +100,16 @@ for fn, src in [('actual_2027_a.csv', 'BR 10/21'), ('actual_espn_1024.csv', 'ESP
 WEEK = int(os.environ.get('WEEK', '1'))
 WACT_TABLE = [(3, 0.10), (6, 0.30), (9, 0.50), (12, 0.60), (15, 0.70), (99, 0.80)]
 WACT = next(w for k, w in WACT_TABLE if WEEK <= k)
+# user setting (proj_config.json): projection = 2026-27 actual per-game line only (players with no 2026-27 games keep the model)
+CFG = json.load(open(W + 'proj_config.json')) if os.path.exists(W + 'proj_config.json') else {}
+ACT_ONLY = bool(CFG.get('actualOnly')); MING = float(CFG.get('minGames', 1))
+DD27 = {}
+if ACT_ONLY and os.path.exists(W + '../data/players_2027.csv'):
+    for r in csv.DictReader(open(W + '../data/players_2027.csv', encoding='utf-8')):
+        try:
+            if float(r['G'] or 0) > 0: DD27[norm(r['Player'])] = float(r['DD'] or 0)
+        except ValueError: pass
+if ACT_ONLY: WACT = 1.0
 # ---------- pool
 rostered = {n for t in R['teams'] for n in t['players'] + t['ir']} | set(R['trade']['give']) | set(R['trade']['get'])
 pool = [p for p in PL if (p.get('espnRank') and p['espnRank'] <= 300) or p['name'] in rostered]
@@ -141,14 +151,19 @@ for p in pool:
     rec['blend'] = {s: round(bl[s], 3) for s in STATS}
     a = ACT.get(norm(p['name']))
     fin = dict(bl)
-    if a and a['G'] >= 1:
+    if a and a['G'] >= (MING if ACT_ONLY else 1):
         for s in STATS: fin[s] = (1 - WACT) * bl[s] + WACT * a[s]
         rec['actual'] = {k: a[k] for k in ['G'] + STATS}; rec['actual']['src'] = a['src']; rec['wAct'] = WACT
     rec['final'] = {s: round(fin[s], 3) for s in STATS}
     # DD: ratio-adjust the existing per-player DD rate by the change in second-best stat
     rec['DDg'] = round(min(0.95, p['DDg'] * fdd(s2(fin)) / fdd(s2(E))), 4) if p['gp'] > 0 else 0
+    if ACT_ONLY:
+        if a and a['G'] >= MING:
+            rec['actOnly'] = True
+            if norm(p['name']) in DD27: rec['DDg'] = round(DD27[norm(p['name'])], 4)
+        else: rec['actOnly'] = False
     out.append(rec)
-summary = {'RREG': RREG, 'RNAIVE': RNAIVE, 'RESPN': RESPN, 'NBT': NBT, 'WACT': WACT, 'WEEK': WEEK, 'WACT_TABLE': WACT_TABLE, 'pool': len(out), 'noHistory': unmatched}
+summary = {'RREG': RREG, 'RNAIVE': RNAIVE, 'RESPN': RESPN, 'NBT': NBT, 'WACT': WACT, 'WEEK': WEEK, 'WACT_TABLE': WACT_TABLE, 'actualOnly': ACT_ONLY, 'nActual': sum(1 for r in out if r.get('actOnly')), 'noActual': [r['name'] for r in out if ACT_ONLY and not r.get('actOnly')], 'pool': len(out), 'noHistory': unmatched}
 json.dump({'players': out, 'summary': summary}, open(W + 'proj_1023.json', 'w'), ensure_ascii=False)
 print('pool', len(out), 'matched', sum(1 for r in out if r['n']), 'no history', len(unmatched))
 print('NBT', NBT)

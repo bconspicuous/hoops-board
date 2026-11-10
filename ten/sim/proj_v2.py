@@ -62,10 +62,14 @@ for r in csv.DictReader(open(W + 'actual_espn_live.csv', encoding='utf-8')):
     ACT[norm(r['Player'])] = (int(round(g)), {'MP': float(r['MP']), 'FGM': float(r['FG']), 'FGA': float(r['FGA']), 'TPM': float(r['3P']), 'FTM': float(r['FT']), 'FTA': float(r['FTA']),
                                              'REB': float(r['TRB']), 'AST': float(r['AST']), 'STL': float(r['STL']), 'BLK': float(r['BLK']), 'TO': float(r['TOV']), 'PTS': float(r['PTS'])})
 out = json.loads(json.dumps(PJ)); used = 0
+CFG = json.load(open(W + 'proj_config.json')) if os.path.exists(W + 'proj_config.json') else {}
+ACT_ONLY = bool(CFG.get('actualOnly')); MING = float(CFG.get('minGames', 1))
 for p in out['players']:
     E = p.get('espn') or {}
     if not E: continue
     g, a = ACT.get(norm(p['name']), (0, None)); b = bucket(g) if g else 0
+    if ACT_ONLY and a and g >= MING:   # user setting: 2026-27 actual line only (same as v1 final)
+        p['v1final'] = p['final']; p['method'] = 'v2'; p['v2'] = {'games': g, 'bucket': b, 'actualOnly': True}; used += 1; continue
     fin = {}
     for k in ST:
         c = COEF.get((k, b)) or COEF[(k, 0)]
