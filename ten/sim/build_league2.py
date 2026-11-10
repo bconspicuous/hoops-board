@@ -19,7 +19,12 @@ for t in d['teams']:
         base+=f" 기여 최저: {'·'.join(low)}."
     t['note']=extra.get(t['abbr'],'')+(' ' if t['abbr'] in extra else '')+base
 _M=json.load(open(os.path.join(W, '..', 'data', '')+'meta.json')); d['asOf']=_M['asOf']; _SYNC='ESPN API 동기화 '+_M['asOf'][5:10].replace('-','/')+' '+_M['asOf'][11:16]
-d['fresh']=[['일별 상위 10명·연속경기 규칙·주 2회 교체 반영',1],[_SYNC,0],['로스터·부상·대진 = ESPN 실시간',0],['실제 기록 ESPN API(최대 3경기)',0],['1주차 최종 반영',0],[_UP.get('headline','사용자 운영 계획 반영'),1],['부상자 복귀일 = ESPN 리포트',0],['Basketball Reference 2021~2026',0],['NBA 일정 1~14주 실제',0]]
+_PS=d.get('summary',{}); _RS0=json.load(open(W+'rosters_espn.json')); _ME=next((t for t in _RS0['teams'] if t['me']),{'ir':[]})
+_IR=[f"IR {n}"+(f" · ESPN 예상 복귀 {_RS0['returns'][n][5:].replace('-','/')}" if _RS0.get('returns',{}).get(n) else '') for n in _ME.get('ir',[])]
+d['fresh']=[[_SYNC,0],['로스터·부상·대진 = ESPN 실시간',0],
+ [f"프로젝션 = 2026-27 실제 경기당 성적({_PS.get('nActual')}명) · 기록 없는 선수만 기존 모델",1] if _PS.get('actualOnly') else ['프로젝션 = 회귀+ESPN+실제 기록 가중',0],
+ *[[x,1] for x in _IR], *([[_UP['headline'],1]] if _UP.get('headline') else []),
+ ['일별 상위 10명 집계 · 전 팀 주 2회 교체 가정',0],['부상자 복귀일 = ESPN 리포트',0]]
 _RS=json.load(open(W+'rosters_espn.json')); _fd=_RS['current'].get('fromDate','2026-10-26'); import datetime as _d2
 _last=(_d2.date.fromisoformat(_fd)-_d2.timedelta(days=1)).strftime('%m/%d')
 _SC=json.load(open(W+'nba_sched.json')); _cp=_RS['current']['period']; _ws=_d2.date.fromisoformat(_SC['starts'][_cp-1]); _we=_ws+_d2.timedelta(days=6)
@@ -99,8 +104,8 @@ d['kawhiNote']='결장 경기 = 2주차(10/26)부터 복귀 전까지 TOR 실제
 SM=d['summary']
 d['foot']=[
  '데이터: ESPN Fantasy API(리그 504060248, GitHub Actions 동기화 2026-10-26 16:21 KST) — 로스터·IR·부상 상태·1주차 카테고리 합계·22주 대진표·선수별 2027 시즌 평균. 과거 기록 = Basketball Reference 경기당 기록(sumitrodatta/bball-reference-datasets). 신인 NCAA 기록 = 위키피디아. ESPN 2027 프로젝션 = ESPN 300.',
- f'선수별 실제 기록: ESPN API 2027 시즌 평균(253명, 10/25 경기까지 최대 3경기). 1~3주차 반영 비중 {round(SM["WACT"]*100)}%라 영향은 제한적입니다.',
- '시뮬레이션(일별): 매일 경기가 있는 선수 중 ESPN 포지션 규칙(PG·SG·SF·PF·C·G·F·UTIL×3)에 맞는 상위 10명만 집계하고, 출전 불확실분은 벤치 선수가 채우는 기대값으로 계산. 1~14주는 실제 NBA 일정, 15주 이후는 2~14주 요일 패턴 반복. Embiid·LeBron·Curry·Kyrie는 연속 이틀 경기 중 1경기만 출전(사용자 지정). 날짜별 로스터: Gobert ↔ Nembhard 11/2 처리 가정(이번 주는 Gobert 우리 팀), Paul Reed → Gafford 11/2부터, Kawhi IR 11/23 복귀, 복귀 시 Saddiq Bey 방출(가정). Ajay Mitchell = Jalen Williams 경기당 기록 승계(사용자 지정, 출전 경기 수는 Ajay 기준). 어퀴지션 70회 한도를 고려해 3주차부터 전 팀이 매주 2회 교체: 가치가 가장 낮은 2명을 그 주 빈 슬롯을 가장 많이 채우는 팀의 무소속 선수(무소속 가치 6~30위 평균 기록)로 교체. 주간 변동: 카운팅 카테고리 경기당 변동계수, FG%·FT%는 시도 수 기반 이항분포.',
+ (f'선수별 프로젝션: 2026-27 시즌 실제 경기당 성적({SM.get("nActual")}명, ESPN API). 올 시즌 출전 기록이 없는 {len(SM.get("noActual",[]))}명만 기존 모델(BR 2021~2026 회귀 + ESPN 프로젝션) 사용.' if SM.get('actualOnly') else f'선수별 실제 기록: ESPN API 2027 시즌 평균, 반영 비중 {round(SM["WACT"]*100)}%.'),
+ '시뮬레이션(일별): 매일 경기가 있는 선수 중 ESPN 포지션 규칙(PG·SG·SF·PF·C·G·F·UTIL×3)에 맞는 상위 10명만 집계하고, 출전 불확실분은 벤치 선수가 채우는 기대값으로 계산. 1~14주는 실제 NBA 일정, 15주 이후는 2~14주 요일 패턴 반복. Embiid·LeBron·Curry·Kyrie는 연속 이틀 경기 중 1경기만 출전(사용자 지정). IR 선수는 ESPN 예상 복귀일부터 합류. Ajay Mitchell = Jalen Williams 경기당 기록 승계(사용자 지정, 출전 경기 수는 Ajay 기준). 어퀴지션 70회 한도를 고려해 3주차부터 전 팀이 매주 2회 교체: 가치가 가장 낮은 2명을 그 주 빈 슬롯을 가장 많이 채우는 팀의 무소속 선수(무소속 가치 6~30위 평균 기록)로 교체. 주간 변동: 카운팅 카테고리 경기당 변동계수, FG%·FT%는 시도 수 기반 이항분포.',
  '부상 가정: ESPN NBA 부상 리포트(site.api.espn.com)의 예상 복귀일부터 출전 가능으로 보고, 실제 NBA 일정에서 그 전 경기는 결장 처리(Kawhi 무릎 염증 11/23 포함 전원 ESPN 기준). IR 선수도 복귀일 이후 로스터에 합류하며, 13명 한도를 넘으면 가치가 가장 낮은 선수를 대체한다고 가정. 날짜가 없는 OUT 선수는 2주차까지 결장, DTD는 정상 출전으로 처리. Jalen Williams는 시즌 아웃(사용자 지정).',
  '대진: ESPN API의 실제 22주 대진표 사용(1주차는 최종 카테고리 합계로 확정). 플레이오프 4팀(1v4·2v3 → 결승, 각 1주).',
  '불확실성: 시즌마다 선수 성적 ±10%, 20% 확률로 장기 결장(예상 경기의 35~85%), NBA 팀 승수 ±6승을 무작위 적용해 1만 회 반복.',
