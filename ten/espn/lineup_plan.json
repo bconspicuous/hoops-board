@@ -2,7 +2,7 @@
  "date": "2026-11-10",
  "scoringPeriodId": 22,
  "hash": "4ad33a6261",
- "createdKST": "2026-11-10T19:47+09:00",
+ "createdKST": "2026-11-10T20:06+09:00",
  "mode": "plan",
  "moves": [],
  "lineup": [
@@ -81,8 +81,8 @@
   {
    "slot": "UTIL",
    "cur": "UTIL",
-   "name": "Daniel Gafford",
-   "pro": "DAL",
+   "name": "Grayson Allen",
+   "pro": "CHA",
    "game": false,
    "inj": "ACTIVE",
    "out": false
@@ -90,9 +90,9 @@
   {
    "slot": "UTIL",
    "cur": "UTIL",
-   "name": "Grayson Allen",
-   "pro": "CHA",
-   "game": false,
+   "name": "Kyle Kuzma",
+   "pro": "MIL",
+   "game": true,
    "inj": "ACTIVE",
    "out": false
   },
@@ -128,6 +128,6 @@
   "Kawhi Leonard"
  ],
  "irReturn": [],
- "playing": 5,
+ "playing": 6,
  "status": "planned"
 }
