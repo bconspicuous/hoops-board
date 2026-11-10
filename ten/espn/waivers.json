@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-10T13:47+09:00",
+ "asOf": "2026-11-10T16:48+09:00",
  "scoringPeriodId": 21,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -58,7 +58,7 @@
    "team": "SONG",
    "name": "Kfinco_ThePianist",
    "rank": 7,
-   "acq": 15
+   "acq": 16
   },
   {
    "team": "JYP",
@@ -155,6 +155,30 @@
  ],
  "transactions": [
   {
+   "id": "ab5a896d-bdbc-458a-8907-b94cb7039b10",
+   "team": "SONG",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-10 14:02 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "4279888",
+     "from": "FA",
+     "to": "SONG"
+    },
+    {
+     "type": "DROP",
+     "player": "Collin Gillespie",
+     "from": "SONG",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
    "id": "3340863a-0ac2-4850-bcd7-69fd106f1c4b",
    "team": "TBG",
    "mine": false,
@@ -213,7 +237,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "4278585",
+     "player": "Collin Gillespie",
      "from": "FA",
      "to": "SONG"
     },
@@ -471,7 +495,7 @@
     },
     {
      "type": "DROP",
-     "player": "4278585",
+     "player": "Collin Gillespie",
      "from": "IYH",
      "to": "FA"
     }
