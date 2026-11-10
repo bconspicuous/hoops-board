@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-10T20:04+09:00",
+ "asOf": "2026-11-10T23:42+09:00",
  "leagueId": "751654965",
  "season": 2027,
  "teams": [
@@ -94,9 +94,9 @@
     "Tyler Herro",
     "Miles Bridges",
     "Jeremiah Fears",
-    "Peyton Watson",
     "Daniel Gafford",
-    "Darryn Peterson"
+    "Darryn Peterson",
+    "AJ Dybantsa"
    ],
    "ir": [
     "Brandon Miller"
@@ -111,9 +111,9 @@
     "1": 6,
     "2": 7,
     "3": 6,
-    "4": 4
+    "4": 5
    },
-   "acqTotal": 23
+   "acqTotal": 24
   },
   {
    "name": "Zero Sugar",

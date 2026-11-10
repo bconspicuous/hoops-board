@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-10T19:12+09:00",
+ "asOf": "2026-11-10T23:42+09:00",
  "week": 4,
  "through": "2026-11-09",
  "source": "ESPN API sync — current matchup totals through yesterday (US Eastern)",
@@ -112,7 +112,7 @@
  "adds": {
   "Junyoung's Scary Team": 0,
   "Gatori Team": 1,
-  "Garak Twindragons": 4,
+  "Garak Twindragons": 5,
   "Zero Sugar": 0,
   "ChaRDaddy": 2,
   "Kunhyo's Chokeslam": 5,
