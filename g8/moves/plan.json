@@ -4,10 +4,10 @@
  "acqLeft": 3,
  "dropCandidates": [],
  "base": {
-  "wk": 6.923,
-  "champ": 0.5183,
-  "p1": 0.7088,
-  "epct": 0.5824
+  "wk": 6.84,
+  "champ": 0.4424,
+  "p1": 0.5948,
+  "epct": 0.5755
  },
  "protect": [
   "Shai Gilgeous-Alexander",
@@ -20,11 +20,24 @@
   "Alex Sarr"
  ],
  "droppable": [],
- "flags": [],
+ "flags": [
+  {
+   "kind": "ir-ineligible",
+   "player": "Austin Reaves",
+   "status": "DTD",
+   "note": "IR 선수가 O가 아님 — ESPN이 영입을 막을 수 있음(감독 판단: DTD는 영입 가능). 첫 사례에서 실제 동작을 기록"
+  },
+  {
+   "kind": "ir-ineligible",
+   "player": "Brandon Miller",
+   "status": "DTD",
+   "note": "IR 선수가 O가 아님 — ESPN이 영입을 막을 수 있음(감독 판단: DTD는 영입 가능). 첫 사례에서 실제 동작을 기록"
+  }
+ ],
  "items": [],
  "screened": [],
- "createdAt": "2026-11-10T02:42:56.460Z",
- "id": "20261110T0242",
+ "createdAt": "2026-11-10T05:43:40.380Z",
+ "id": "20261110T0543",
  "rosterSig": "Alex Sarr|Anthony Davis|Daniel Gafford|Darryn Peterson|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Michael Porter Jr.|Miles Bridges|Peyton Watson|Shai Gilgeous-Alexander|Tyler Herro#Austin Reaves|Brandon Miller",
  "newItems": []
 }
