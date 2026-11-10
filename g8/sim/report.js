@@ -3,6 +3,9 @@
    usage (repo root): node g8/sim/report.js   env: CHROMIUM (default /opt/pw-browsers/chromium), PW (playwright module path) */
 const fs = require('fs'), path = require('path');
 const ROOT = path.resolve(__dirname, '..', '..');
+/* simulation basis (g8/config.json simBasis): "actual" = every player with 2026-27 games simulated from his actual per-game line only
+   (weight 1, players without a 2026-27 game keep the projection), "model" = dashboard blend (projection + weekly actual weight) */
+const SIMBASIS = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'g8', 'config.json'), 'utf8')).simBasis || 'model'; } catch (e) { return 'model'; } })();
 let pw; try { pw = require(process.env.PW || '/opt/node-tools/node_modules/playwright'); } catch (e) { pw = require('playwright'); }
 (async () => {
   const exe = process.env.CHROMIUM || (fs.existsSync('/opt/pw-browsers/chromium') ? '/opt/pw-browsers/chromium' : undefined);
@@ -11,7 +14,11 @@ let pw; try { pw = require(process.env.PW || '/opt/node-tools/node_modules/playw
   await p.route(/^https?:\/\/(?!cdn\.jsdelivr)/, r => r.abort());   // offline: fonts etc. are not needed
   await p.goto('file://' + path.join(ROOT, 'index.html'));
   await p.waitForFunction(() => typeof state !== 'undefined' && state.base && !state.busy, null, { timeout: 600000 });
-  const d = await p.evaluate(() => {
+  const d = await p.evaluate((BASIS) => {
+    const wModel = actWeight(currentWeek());
+    if (BASIS === 'actual') { actWeight = () => 1; buildPlayers(); PLAYC = new Map(); state.base = computeAll(null); }
+    const ACT = (state.docs['league/actuals'] || {}).players || {}, RR = rosters() || {};
+    const noAct = Object.keys(RR).flatMap(t => [...(RR[t].active || []), ...(RR[t].ir || [])].filter(n => !(ACT[n] && ACT[n].g > 0 || ACT[n] && ACT[n].G > 0)).map(n => n + '(' + t + ')'));
     const R = state.base, cw = currentWeek(), o = oppOf(ME, cw), g = gameOf(R, ME, cw), L = liveFor(cw), tw = R.TW[ME + '|' + cw];
     const add = (iso, n) => { const t = new Date(iso + 'T00:00:00Z'); t.setUTCDate(t.getUTCDate() + n); return t.toISOString().slice(5, 10); };
     const season = REF.teams.map(t => { const s = R.season[t], r = record(t); return { team: t, rec: `${r.w}-${r.l}-${r.t}`, epct: s.epct, po: s.po, p1: s.p1, champ: s.champ }; }).sort((a, b) => b.epct - a.epct);
@@ -20,8 +27,8 @@ let pw; try { pw = require(process.env.PW || '/opt/node-tools/node_modules/playw
     const st = (state.docs['league/rosters'] || {}).status || {}, ros = rosterFor(ME, cw, null);
     return { asOf: (state.docs['league/rosters'] || {}).asOf, week: cw + 1, weekRange: [REF.starts[cw], REF.ends[cw]], opp: o.opp, through: L && L.through,
       live: L ? { me: L.cats[ME], opp: L.cats[o.opp], adds: L.adds[ME] } : null, wk: wkWLT(R, ME, cw), pc, plan, season,
-      roster: ros, injured: ros.filter(n => st[n]).map(n => n + ' (' + st[n] + ')'), ir: (rosters()[ME] || {}).ir || [] };
-  });
+      basis: BASIS, wModel, noAct, roster: ros, injured: ros.filter(n => st[n]).map(n => n + ' (' + st[n] + ')'), ir: (rosters()[ME] || {}).ir || [] };
+  }, SIMBASIS);
   await b.close();
   const lastP = path.join(__dirname, 'last.json'), prev = fs.existsSync(lastP) ? JSON.parse(fs.readFileSync(lastP, 'utf8')) : null;
   const me = d.season.find(s => s.team === 'Garak Twindragons'), pm = prev && prev.season.find(s => s.team === 'Garak Twindragons');
@@ -36,7 +43,9 @@ let pw; try { pw = require(process.env.PW || '/opt/node-tools/node_modules/playw
   } catch (e) {}
   d.watch = watch;
   const lines = [];
-  lines.push(`# G League 시뮬레이션 — ${d.asOf}`);
+  const BL = b => b === 'actual' ? '2026-27 실제 스탯 100%' : '모델(프로젝션+실적 가중)';
+  lines.push(`# G League 시뮬레이션 — ${d.asOf} · 기준: ${BL(d.basis)}${prev && (prev.basis || 'model') !== d.basis ? ` (직전 리포트는 ${BL(prev.basis || 'model')} 기준 — 증감은 기준 변경 효과 포함)` : ''}`);
+  if (d.basis === 'actual' && d.noAct.length) lines.push(`2026-27 경기 기록 없음(프로젝션 유지): ${d.noAct.length}명 — ${d.noAct.join(', ')}`);
   lines.push(`**우리 팀** 기대승률 ${pct(me.epct)}${dp(me.epct, pm && pm.epct)} · 정규 1위 ${pct(me.p1)}${dp(me.p1, pm && pm.p1)} · 우승 ${pct(me.champ)}${dp(me.champ, pm && pm.champ)}`);
   const top = d.season.slice().sort((a, b) => b.champ - a.champ)[0];
   if (top.team !== 'Garak Twindragons') lines.push(`⚠ 우승확률 1위: ${top.team} ${pct(top.champ)}`);
