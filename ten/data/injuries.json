@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-11T05:03+09:00",
+ "asOf": "2026-11-11T06:44+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -328,44 +328,44 @@
   {
    "player": "Gary Payton II",
    "team": "GS",
-   "status": "Day-To-Day",
-   "date": "2026-11-10T05:26Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-11",
+   "status": "Out",
+   "date": "2026-11-10T21:36Z",
+   "type": "out",
+   "returnDate": "2026-11-13",
    "detail": "Inflammation",
    "side": "Left",
    "injury": "Knee",
-   "fantasyStatus": "GTD",
-   "short": "Payton (knee) has been ruled out for Monday's game against the Pelicans.",
-   "long": "Payton was labeled questionable heading into the contest versus New Orleans, so the Warriors are opting to give the veteran some time to rest. His next chance to suit up will come against the Rockets on Wednesday."
-  },
-  {
-   "player": "Brandon Williams",
-   "team": "GS",
-   "status": "Day-To-Day",
-   "date": "2026-11-10T04:41Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-11",
-   "detail": "Not Specified",
-   "side": "Left",
-   "injury": "Hamstring",
-   "fantasyStatus": "GTD",
-   "short": "Williams has been ruled out for the remainder of Monday's game against the Pelicans due to a left hamstring injury, Danny Emerman of SFStandard.com reports. He'll finish with four points (2-3 FG) in two minutes.",
-   "long": "Williams didn't see much action Monday before going down with a hamstring injury. He dealt with a left quadriceps contusion earlier in November and has evidently picked up a hamstring issue on the same leg. Williams can be considered day-to-day until Golden State shares more on the severity of the injury."
+   "fantasyStatus": "OUT",
+   "short": "Payton (knee) is out for Wednesday's game against Houston.",
+   "long": "Payton is sidelined for a second consecutive contest with knee inflammation. Will Richard (thumb) could slot into Payton's spot in the backcourt rotation Wednesday."
   },
   {
    "player": "Will Richard",
    "team": "GS",
    "status": "Out",
-   "date": "2026-11-10T01:26Z",
+   "date": "2026-11-10T21:34Z",
    "type": "out",
-   "returnDate": "2026-11-16",
+   "returnDate": "2026-11-11",
    "detail": null,
    "side": "Left",
    "injury": "Thumb",
+   "fantasyStatus": "GTD",
+   "short": "Richard (thumb) is questionable for Wednesday's game against Houston.",
+   "long": "Richard has a chance to keep his absence to a one-game minimum with a left thumb UCL tear. It sounds like the guard is opting against surgery and will play with a splint once healthy enough to suit up."
+  },
+  {
+   "player": "Brandon Williams",
+   "team": "GS",
+   "status": "Out",
+   "date": "2026-11-10T21:24Z",
+   "type": "out",
+   "returnDate": "2026-11-22",
+   "detail": "Not Specified",
+   "side": "Left",
+   "injury": "Hamstring",
    "fantasyStatus": "OUT",
-   "short": "Richard is deciding between getting surgery or playing with a splint, Luca Evans of the San Francisco Chronicle reports.",
-   "long": "Richard tore the UCL in his left thumb, presumably in Saturday's 126-119 overtime win against Orlando. He and the Warriors continue to look at treatment options for now, but the team will provide further updates once the swelling goes down in the next week or so."
+   "short": "Williams (hamstring) will miss at least one week, per Anthony Slater of ESPN.com.",
+   "long": "Williams has been diagnosed with a hamstring strain in the aftermath of Monday's game against the Pelicans, and his status for Golden State's upcoming five-game road trip is in serious doubt. With Williams facing an extended absence, the Warriors are likely to lean more on De'Anthony Melton in the backourt."
   },
   {
    "player": "Kristaps Porzingis",
@@ -408,20 +408,6 @@
    "fantasyStatus": "OUT",
    "short": "Butler (knee) could return sometime between January and February as he continues recovering from a torn right ACL, Anthony Slater of ESPN reports.",
    "long": "Butler, who underwent surgery after suffering the injury Jan. 19, has progressed to individual court work but still has several rehabilitation milestones to clear. His next step involves landing comfortably after a game-speed jump. Coach Steve Kerr is hopeful Butler can rejoin Golden State for the latter portion of the season, though no official return date has been announced. The 37-year-old forward remains a significant part of the Warriors' plans and could provide a substantial boost during the second half of the campaign."
-  },
-  {
-   "player": "Oscar Tshiebwe",
-   "team": "HOU",
-   "status": "Day-To-Day",
-   "date": "2026-11-10T03:59Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-11",
-   "detail": null,
-   "side": null,
-   "injury": "Illness",
-   "fantasyStatus": "GTD",
-   "short": "Tshiebwe has been ruled out for Monday's game against the Nuggets due to an illness.",
-   "long": "With Clint Capela (ankle) and Steven Adams (calf) sidelined, Tshiebwe has been able to appear in six straight games, averaging 6.8 minutes a night. With all three backup centers unavailable, Jabari Smith and Tari Eason might play some small-ball five minutes behind Alperen Sengun."
   },
   {
    "player": "Clint Capela",
@@ -768,7 +754,7 @@
    "returnDate": "2026-11-10",
    "detail": null,
    "side": null,
-   "injury": "Ankle",
+   "injury": "Illness",
    "fantasyStatus": "GTD",
    "short": "Hart is doubtful for Tuesday's game against the Bucks due to an illness.",
    "long": "Hart is in line to miss a third straight contest, but it appears he's moved past ankle soreness that previously bothered him. Until Hart is ready to return to the court, Landry Shamet will likely continue to start for the Knicks."
@@ -970,20 +956,6 @@
    "long": "Hukporti went down with an Achilles injury in Monday's preseason opener against the Knicks, and an MRI has since revealed a rupture. He signed a one-year deal with the 76ers over the summer, so Hukporti will be an unrestricted free agent come season's end. With Hukporti's year already finished, Adem Bona (foot) should assume the backup center role behind Joel Embiid once healthy."
   },
   {
-   "player": "Jordan Goodwin",
-   "team": "PHX",
-   "status": "Out",
-   "date": "2026-11-10T00:21Z",
-   "type": "out",
-   "returnDate": "2026-11-10",
-   "detail": "Not Specified",
-   "side": "Right",
-   "injury": "Calf",
-   "fantasyStatus": "GTD",
-   "short": "Goodwin (calf) has been ruled out for Monday's game against the Spurs, Kellan Olson of ArizonaSports.com reports.",
-   "long": "Goodwin will miss a fourth consecutive contest due to a right calf injury, with his next chance to return coming Tuesday against the Clippers. Luke Kennard and Ryan Dunn are candidates for increased playing time in Goodwin's stead."
-  },
-  {
    "player": "Mark Williams",
    "team": "PHX",
    "status": "Out",
@@ -1052,34 +1024,6 @@
    "fantasyStatus": "OUT",
    "short": "Raynaud (knee) has been ruled out for Tuesday's game against Orlando.",
    "long": "Raynaud is expected to be re-evaluated soon, though he can be considered week-to-week until the Kings offer an update on his status. Dylan Cardwell and Precious Achiuwa will likely continue seeing increased burn in Raynaud's absence."
-  },
-  {
-   "player": "Keegan Murray",
-   "team": "SAC",
-   "status": "Day-To-Day",
-   "date": "2026-11-10T00:36Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-10",
-   "detail": "Soreness",
-   "side": "Right",
-   "injury": "Wrist",
-   "fantasyStatus": "GTD",
-   "short": "Murray is questionable for Tuesday's game against the Magic due to right wrist soreness.",
-   "long": "Murray made his return to court Sunday against Miami following a seven-game absence due to an ankle injury, and it now appears he's dealing with a wrist issue. The Kings will presumably monitor him closely during shootaround and warmups to determine if he can suit up Tuesday."
-  },
-  {
-   "player": "Domantas Sabonis",
-   "team": "SAC",
-   "status": "Day-To-Day",
-   "date": "2026-11-10T00:35Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-10",
-   "detail": "Soreness",
-   "side": "Left",
-   "injury": "Knee",
-   "fantasyStatus": "GTD",
-   "short": "Sabonis (knee) is questionable to play Tuesday's game against the Magic.",
-   "long": "Sabonis missed Sunday's 114-108 loss to the Heat with left knee soreness, making it his first absence of the season through 10 games. Dylan Cardwell earned the start with Sabonis sidelined, so if the latter is forced to miss a second straight contest, the former would be the top candidate to start once again."
   },
   {
    "player": "Ben Simmons",

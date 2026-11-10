@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-11T05:03+09:00",
+ "asOf": "2026-11-11T06:44+09:00",
  "scoringPeriodId": 22,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -64,7 +64,7 @@
    "team": "JYP",
    "name": "PaloAlto Wenoja",
    "rank": 8,
-   "acq": 8
+   "acq": 9
   },
   {
    "team": "GTD",
@@ -106,6 +106,30 @@
   }
  ],
  "transactions": [
+  {
+   "id": "4df10db0-8fd0-417c-b3a4-1df9d68c5e79",
+   "team": "JYP",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-11 06:37 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Andre Drummond",
+     "from": "FA",
+     "to": "JYP"
+    },
+    {
+     "type": "DROP",
+     "player": "Julian Champagnie",
+     "from": "JYP",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
   {
    "id": "b38518b9-d2cd-4ab1-a46b-6e30de967fb7",
    "team": "SONG",
@@ -1080,6 +1104,17 @@
    "droppedBy": {
     "by": "GGAM",
     "at": "2026-11-10 07:21 KST"
+   }
+  },
+  {
+   "id": 4592479,
+   "name": "Julian Champagnie",
+   "pro": "SAS",
+   "waiverClears": "2026-11-12 17:00 KST",
+   "inj": "ACTIVE",
+   "droppedBy": {
+    "by": "JYP",
+    "at": "2026-11-11 06:37 KST"
    }
   },
   {
