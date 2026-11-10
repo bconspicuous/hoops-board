@@ -129,7 +129,7 @@
   }
  ],
  "basis": "actual",
- "wModel": 0.3,
+ "wModel": 1,
  "noAct": [
   "Brandon Ingram(Brand_New_Neo_HJ)"
  ],
@@ -165,5 +165,5 @@
    "reb": 6.9
   }
  },
- "at": "2026-11-10T11:41:35.937Z"
+ "at": "2026-11-10T11:54:01.617Z"
 }

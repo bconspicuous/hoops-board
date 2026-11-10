@@ -12,6 +12,15 @@ docs = {"league/rosters": load("rosters", "seed_rosters.json"), "league/meta": l
 for k in ("actuals", "results", "live", "fa", "rules"):
     v = load(k, None)
     if v is not None: docs["league/" + k] = v
+# 감독 지정(2026-11-10): g8/config.json simBasis = "actual" -> dashboard simulates every player with 2026-27 games from his
+# actual per-game line only (weight 1 for all weeks); meta.json itself stays untouched, the override is applied at build time
+try:
+    _cfg = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "g8", "config.json")))
+except Exception:
+    _cfg = {}
+if _cfg.get("simBasis") == "actual" and docs.get("league/meta") is not None:
+    docs["league/meta"] = dict(docs["league/meta"], actualWeights=[[1, 99, 1.0]],
+                               actualWeightsNote="감독 지정(2026-11-10): 2026-27 실제 경기당 기록 100%(기록 없는 선수만 프로젝션) — g8/config.json simBasis=actual")
 emb = {"asOf": docs["league/rosters"]["asOf"], "docs": docs}
 t = open("v22/template.html", encoding="utf8").read(); ref = open("ref22.json", encoding="utf8").read().strip()
 es = json.dumps(emb, ensure_ascii=False, separators=(",", ":"))
