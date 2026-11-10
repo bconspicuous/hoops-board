@@ -1,5 +1,5 @@
 # 라인업 제안 2026-11-10 (미국 동부) · 4주차 vs Junyoung's Scary Team · 상태: nochange · 기준: 현재 스탯(2026-27 실제 100%)
-출전 5명 · 기대 카테고리 승 7.11 (현재 ESPN 라인업 7.11, +0.00)
+출전 5명 · 기대 카테고리 승 7.23 (현재 ESPN 라인업 7.23, +0.00)
 벤치(출전 선수 중): 없음 · DTD: Tyler Herro
 변경: 없음
 
@@ -17,4 +17,4 @@
 | UTIL | Daniel Gafford |
 | BE | James Harden |
 | BE | Jeremiah Fears |
-| BE | Peyton Watson |
+| BE | AJ Dybantsa |
