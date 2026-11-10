@@ -37,7 +37,7 @@
   ],
   "standingsUpdateDate": 1794211653242,
   "teamsJoined": 10,
-  "transactionScoringPeriod": 21,
+  "transactionScoringPeriod": 22,
   "waiverLastExecutionDate": 1794211653236,
   "waiverProcessStatus": {
    "2026-10-22T07:20:10.595+00:00": 8,
@@ -158,8 +158,8 @@
     "id": "05401909949",
     "lastUpdateInfo": {
      "clientAddress": null,
-     "platform": "lm-processor",
-     "source": "ProGamePoller"
+     "platform": null,
+     "source": null
     },
     "proTeamId": 2,
     "scoringPeriodId": 20,
