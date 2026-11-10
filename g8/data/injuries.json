@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-10T23:42+09:00",
+ "asOf": "2026-11-11T05:01+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -662,6 +662,20 @@
    "long": "Antetokounmpo has found his way onto the injury report over Miami's last few matchups due to a wrist issue, but he's yet to miss any time. That trend looks like it will continue Tuesday in Utah."
   },
   {
+   "player": "Kel'el Ware",
+   "team": "MIL",
+   "status": "Day-To-Day",
+   "date": "2026-11-10T17:18Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-10",
+   "detail": "Sprain",
+   "side": "Left",
+   "injury": "Ankle",
+   "fantasyStatus": "GTD",
+   "short": "Ware is questionable for Tuesday's game against the Knicks due to a left ankle sprain.",
+   "long": "Ware was a late addition to the injury report, which is never a good sign, but the severity of the issue remains unclear. If the backup big man is unable to suit up, Jericho Sims, Nate Ament and Ousmane Dieng would be candidates for increased roles."
+  },
+  {
    "player": "Tyler Herro",
    "team": "MIL",
    "status": "Day-To-Day",
@@ -706,44 +720,30 @@
   {
    "player": "Trendon Watford",
    "team": "NO",
-   "status": "Day-To-Day",
-   "date": "2026-11-10T05:28Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-11",
+   "status": "Out",
+   "date": "2026-11-10T19:26Z",
+   "type": "out",
+   "returnDate": "2026-11-13",
    "detail": null,
    "side": null,
    "injury": "Ankle",
-   "fantasyStatus": "GTD",
-   "short": "Watford (ankle) is out for Monday's game versus Utah.",
-   "long": "Watford presumably picked up a right ankle sprain in Sunday's loss to the Clippers. His timeline for a return is uncertain."
+   "fantasyStatus": "OUT",
+   "short": "Watford (ankle) is out for Wednesday's game against the Nets.",
+   "long": "Watford continues to nurse a right ankle sprain. The forward lacks a concrete timetable for a return to the floor."
   },
   {
    "player": "Trey Murphy III",
    "team": "NO",
    "status": "Day-To-Day",
-   "date": "2026-11-10T05:28Z",
+   "date": "2026-11-10T19:22Z",
    "type": "day-to-day",
    "returnDate": "2026-11-11",
    "detail": "Tendinitis",
    "side": "Not Specified",
    "injury": "Knee",
    "fantasyStatus": "GTD",
-   "short": "Murphy (knees) has been ruled out for Monday's game against Golden State.",
-   "long": "Murphy will be held out of the second leg of this back-to-back set due to bilateral patellar tendinopathy. The 26-year-old wing's next chance to play will come Wednesday against Brooklyn, and his absence should open up additional minutes for the likes of Herbert Jones, Saddiq Bey and Bennedict Mathurin."
-  },
-  {
-   "player": "Zion Williamson",
-   "team": "NO",
-   "status": "Day-To-Day",
-   "date": "2026-11-10T05:27Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-11",
-   "detail": null,
-   "side": null,
-   "injury": "Rest",
-   "fantasyStatus": "GTD",
-   "short": "Williamson (rest) is out for Monday's game against the Warriors.",
-   "long": "The Pelicans are giving the star forward a maintenance day on the second half of this back-to-back, but Williamson should be able to play Wednesday against the Nets. With Trey Murphy (knees) also sidelined, Derik Queen, Saddiq Bey and Herbert Jones stand out as the most likely candidates to enter the starting lineup Monday."
+   "short": "Murphy (knee) is probable for Wednesday's game against the Nets.",
+   "long": "The star forward sat out the second leg of the Pelicans' latest back-to-back set due to bilateral patellar tendinopathy, but he's set to return to action Wednesday. Saddiq Bey is likely to shift back to bench but should maintain a significant role."
   },
   {
    "player": "Yves Missi",
@@ -763,15 +763,15 @@
    "player": "Josh Hart",
    "team": "NY",
    "status": "Day-To-Day",
-   "date": "2026-11-09T22:04Z",
+   "date": "2026-11-10T19:20Z",
    "type": "day-to-day",
    "returnDate": "2026-11-10",
    "detail": null,
    "side": null,
    "injury": "Ankle",
    "fantasyStatus": "GTD",
-   "short": "Hart is questionable for Tuesday's game against the Bucks due to right ankle soreness.",
-   "long": "Hart is aiming to avoid missing a third straight contest with the issue. Once Hart is ready to return to the court, Landry Shamet will likely revert back to his typical role off the bench."
+   "short": "Hart is doubtful for Tuesday's game against the Bucks due to an illness.",
+   "long": "Hart is in line to miss a third straight contest, but it appears he's moved past ankle soreness that previously bothered him. Until Hart is ready to return to the court, Landry Shamet will likely continue to start for the Knicks."
   },
   {
    "player": "Jaylin Williams",
@@ -844,6 +844,20 @@
    "long": "Williams suffered the injury during Sunday's meeting with the Clippers and was taken off the court on a stretcher. It's unknown when the 25-year-old will be cleared to return, though the Thunder will presumably be overly cautious moving forward. Williams, who signed a five-year extension in July of 2025, has had a productive career, averaging 17.9 points, 4.6 rebounds, 4.4 assists and 1.3 steals over 30.9 minutes per contest. However, after playing at least 69 regular-season games in his first three years in the league, he has appeared in just 36 in the last two seasons combined. With the Thunder having one of the deepest rosters in the NBA, the team may look for more minutes from Jared McCain, Jaylin Williams, and Kenrich Williams for the remainder of the 2026-27 campaign."
   },
   {
+   "player": "Tristan da Silva",
+   "team": "ORL",
+   "status": "Day-To-Day",
+   "date": "2026-11-10T16:50Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-10",
+   "detail": "Strain",
+   "side": "Left",
+   "injury": "Calf",
+   "fantasyStatus": "GTD",
+   "short": "Da Silva is questionable for Tuesday's game against the Kings due to a left calf strain.",
+   "long": "Da Silva was a late addition to the injury report, which is never a good sign, but the severity of the issue remains unclear. If he joins Jalen Suggs (knee) and Paolo Banchero (ankle) on the sidelines, Jase Richardson, Jamal Cain and Jevon Carter would be candidates for increased roles."
+  },
+  {
    "player": "Jalen Suggs",
    "team": "ORL",
    "status": "Out",
@@ -863,7 +877,7 @@
    "status": "Out",
    "date": "2026-11-09T23:10Z",
    "type": "out",
-   "returnDate": "2026-11-11",
+   "returnDate": "2026-11-16",
    "detail": "Not Specified",
    "side": "Left",
    "injury": "Knee",
@@ -1124,6 +1138,20 @@
    "long": "The Spurs are expected to exercise extreme caution with the big man, as Quaintance suffered a torn ACL and meniscus with Arizona State in February 2025 before appearing in only four games with Kentucky last season due to severe complications and persistent swelling. The 19-year-old underwent a cleanup procedure on his meniscus in mid-July, and the Spurs will likely want him at 100 percent before ramping him up to basketball activities."
   },
   {
+   "player": "Kawhi Leonard",
+   "team": "TOR",
+   "status": "Out",
+   "date": "2026-11-10T17:33Z",
+   "type": "out",
+   "returnDate": "2026-11-23",
+   "detail": "Inflammation",
+   "side": "Left",
+   "injury": "Knee",
+   "fantasyStatus": "OUT",
+   "short": "Leonard (knee) is continuing the reconditioning process, and another update will be provided in one week, Blake Murphy of Sportsnet.ca reports.",
+   "long": "With Leonard still in the rehab phase of his recovery from left knee swelling, there remains no indication of an imminent return to game action. The one-week update timeline suggests Toronto is continuing to monitor his progress before advancing to the next step, keeping his near-term availability uncertain."
+  },
+  {
    "player": "Immanuel Quickley",
    "team": "TOR",
    "status": "Day-To-Day",
@@ -1180,18 +1208,18 @@
    "long": "Bittle has been battling a foot injury for a couple of months. It's unknown when the rookie will be cleared to suit up for the Raptors, so he should be considered week-to-week for now."
   },
   {
-   "player": "Kawhi Leonard",
-   "team": "TOR",
+   "player": "Lauri Markkanen",
+   "team": "UTAH",
    "status": "Out",
-   "date": "2026-11-04T00:14Z",
+   "date": "2026-11-10T18:30Z",
    "type": "out",
-   "returnDate": "2026-11-23",
-   "detail": "Inflammation",
-   "side": "Left",
-   "injury": "Knee",
+   "returnDate": "2026-11-11",
+   "detail": "Sprain",
+   "side": "Right",
+   "injury": "Wrist",
    "fantasyStatus": "OUT",
-   "short": "Leonard has completed treatment to reduce swelling in his left knee and he will be re-evaluated in one week, Brett Siegel of ClutchPoints.com reports.",
-   "long": "Leonard will now begin the next phase of his rehab, and while he'll be re-evaluated by Nov. 10, it's still unlikely we'll see him back on the floor until the end of November. Ja'Kobe Walter should continue to start while Leonard is sidelined, and it'll be Scottie Barnes, Immanuel Quickley and RJ Barrett running the show on offense."
+   "short": "Markkanen is out for Tuesday's game versus the Heat with a right wrist sprain.",
+   "long": "The star forward is missing a second consecutive contest, and he faces a short turnaround to return ahead of Wednesday's tilt against the Magic. Josh Green figures to draw a second straight start, while Brice Sensabaugh and Josh Okogie should see a bump in playing time."
   },
   {
    "player": "Keyonte George",
@@ -1206,20 +1234,6 @@
    "fantasyStatus": "OUT",
    "short": "George (ankle) has been ruled out for Tuesday's game against the Heat.",
    "long": "George sustained a right ankle sprain in Sunday's loss to Minnesota and will be sidelined for the front end of this back-to-back set. His next opportunity to play will come Wednesday against Orlando, and the 23-year-old's absence should open up additional minutes for guys like Isaiah Collier and Svi Mykhailiuk. Moreover, Darryn Peterson figures to take on additional on-ball duties."
-  },
-  {
-   "player": "Lauri Markkanen",
-   "team": "UTAH",
-   "status": "Day-To-Day",
-   "date": "2026-11-10T00:08Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-10",
-   "detail": "Sprain",
-   "side": "Right",
-   "injury": "Wrist",
-   "fantasyStatus": "GTD",
-   "short": "Markkanen (wrist) is questionable for Tuesday's game against Miami.",
-   "long": "Markkanen was held out Sunday due to a right wrist sprain, but the fact that he's been upgraded to questionable is a positive sign. Utah should have another update on the forward's availability closer to tipoff."
   },
   {
    "player": "Jusuf Nurkic",
