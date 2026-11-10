@@ -1,13 +1,13 @@
 {
- "createdKST": "2026-11-10T20:07+09:00",
+ "createdKST": "2026-11-10T20:45+09:00",
  "mode": "plan",
  "spid": 22,
  "matchupPeriod": 4,
  "add": {
-  "id": 3147657,
-  "name": "Mikal Bridges",
+  "id": 2991350,
+  "name": "Alex Caruso",
   "status": "FREEAGENT",
-  "pro": "NYK",
+  "pro": "OKC",
   "inj": "ACTIVE"
  },
  "type": "FREEAGENT",
@@ -16,12 +16,12 @@
   "matchup": "2/7"
  },
  "drop": {
-  "id": 4432241,
-  "name": "Jamal Shead",
-  "slot": 12,
+  "id": 3135045,
+  "name": "Grayson Allen",
+  "slot": 11,
   "inj": "ACTIVE"
  },
- "hash": "a372b9cf65",
+ "hash": "b6cb15e95c",
  "errors": [],
  "warnings": [
   "방출 선수는 24시간 웨이버 — 그 사이 다른 팀이 데려갈 수 있어 되돌릴 수 없음"
