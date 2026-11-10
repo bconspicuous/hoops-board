@@ -30,7 +30,7 @@
   "previousSeasons": [],
   "standingsUpdateDate": 1794211617112,
   "teamsJoined": 8,
-  "transactionScoringPeriod": 21,
+  "transactionScoringPeriod": 22,
   "waiverLastExecutionDate": 1794211617107,
   "waiverProcessStatus": {
    "2026-10-18T07:35:08.893+00:00": 2,
@@ -41,15 +41,15 @@
  },
  "samplePlayer": {
   "fullName": "Giannis Antetokounmpo",
-  "injuryStatus": "ACTIVE",
+  "injuryStatus": "DAY_TO_DAY",
   "stats": [
    {
     "externalId": "401909951",
     "id": "05401909951",
     "lastUpdateInfo": {
      "clientAddress": null,
-     "platform": null,
-     "source": null
+     "platform": "lm-processor",
+     "source": "ProGamePoller"
     },
     "proTeamId": 14,
     "scoringPeriodId": 20,
