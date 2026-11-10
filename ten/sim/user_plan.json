@@ -1,7 +1,5 @@
 {
- "boost": {
-  "Ajay Mitchell": "Jalen Williams"
- },
+ "boost": {},
  "windows": {},
  "b2bOne": [
   "Joel Embiid",
@@ -48,7 +46,5 @@
   "Dejounte Murray"
  ],
  "coreNote": "사용자 지정 상위 10명 고정(방출 금지). 로스터에 없는 선수는 자동 제외.",
- "notes": {
-  "GTD": "Ajay Mitchell은 Jalen Williams 역할 승계(스탯 상향 가정)."
- }
+ "notes": {}
 }
