@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-10T05:41+09:00",
+ "asOf": "2026-11-10T11:42+09:00",
  "week": 4,
  "weekRange": [
   "2026-11-09",
@@ -37,64 +37,64 @@
   "adds": 3
  },
  "wk": [
-  7.11578941538844,
-  3.676135109421111,
-  0.20807547519044872
+  7.383561622730946,
+  3.4414248758075408,
+  0.1750135014615124
  ],
  "pc": {
-  "FG": 0.5942838744511192,
-  "FT": 0.8837663375529747,
-  "TPM": 0.8260597885270009,
-  "REB": 0.9885270804502964,
-  "AST": 0.17172565159980852,
-  "STL": 0.49509576970415514,
-  "BLK": 0.9963551279933194,
-  "TO": 0.5522038525442781,
-  "DD": 0.6925251880692913,
-  "PTS": 0.9025294548522143,
-  "PF": 0.11675502723920661
+  "FG": 0.7010841183900414,
+  "FT": 0.732509370233235,
+  "TPM": 0.7430817046806564,
+  "REB": 0.9991021734356947,
+  "AST": 0.647383114142414,
+  "STL": 0.6456228472988819,
+  "BLK": 0.999085242023469,
+  "TO": 0.1800105713686109,
+  "DD": 0.8060909020549598,
+  "PTS": 0.9962691945046105,
+  "PF": 0.02082913532912939
  },
  "plan": [
   {
-   "name": "Ace Bailey",
-   "team": "UTA",
+   "name": "Jrue Holiday",
+   "team": "POR",
    "from": "11-10",
    "to": "11-10"
   },
   {
-   "name": "Tari Eason",
-   "team": "HOU",
+   "name": "Tre Jones",
+   "team": "CHI",
    "from": "11-11",
-   "to": "11-15"
-  },
-  {
-   "name": "Cam Spencer",
-   "team": "MEM",
-   "from": "11-09",
-   "to": "11-09"
-  },
-  {
-   "name": "Ryan Rollins",
-   "team": "MIL",
-   "from": "11-10",
-   "to": "11-10"
-  },
-  {
-   "name": "Obi Toppin",
-   "team": "IND",
-   "from": "11-11",
-   "to": "11-11"
-  },
-  {
-   "name": "Collin Murray-Boyles",
-   "team": "TOR",
-   "from": "11-12",
-   "to": "11-12"
+   "to": "11-14"
   },
   {
    "name": "Alex Caruso",
    "team": "OKC",
-   "from": "11-13",
+   "from": "11-15",
+   "to": "11-15"
+  },
+  {
+   "name": "Aaron Gordon",
+   "team": "DEN",
+   "from": "11-09",
+   "to": "11-09"
+  },
+  {
+   "name": "Jaime Jaquez Jr.",
+   "team": "MIL",
+   "from": "11-10",
+   "to": "11-13"
+  },
+  {
+   "name": "Aaron Gordon",
+   "team": "DEN",
+   "from": "11-14",
+   "to": "11-14"
+  },
+  {
+   "name": "Collin Murray-Boyles",
+   "team": "TOR",
+   "from": "11-15",
    "to": "11-15"
   }
  ],
@@ -102,64 +102,64 @@
   {
    "team": "Garak Twindragons",
    "rec": "20-13-0",
-   "epct": 0.6068405595605861,
-   "po": 0.99995,
-   "p1": 0.91655,
-   "champ": 0.68125
+   "epct": 0.5964309346360009,
+   "po": 0.9999,
+   "p1": 0.83735,
+   "champ": 0.59455
   },
   {
    "team": "Gatori Team",
    "rec": "16-16-1",
-   "epct": 0.5385404805680021,
-   "po": 0.98265,
-   "p1": 0.05035,
-   "champ": 0.16275
+   "epct": 0.5445391321456557,
+   "po": 0.98705,
+   "p1": 0.09785,
+   "champ": 0.2273
   },
   {
    "team": "Zero Sugar",
    "rec": "20-12-1",
-   "epct": 0.5170946790571305,
-   "po": 0.9479,
-   "p1": 0.01585,
-   "champ": 0.0332
+   "epct": 0.5235815701534283,
+   "po": 0.9594,
+   "p1": 0.0327,
+   "champ": 0.0258
   },
   {
    "team": "Songpa Park Kezhang",
    "rec": "16-16-1",
-   "epct": 0.5078142401721915,
-   "po": 0.8938,
-   "p1": 0.00755,
-   "champ": 0.079
-  },
-  {
-   "team": "ChaRDaddy",
-   "rec": "18-15-0",
-   "epct": 0.5021261158489467,
-   "po": 0.88835,
-   "p1": 0.00465,
-   "champ": 0.0286
+   "epct": 0.5127112610892695,
+   "po": 0.90205,
+   "p1": 0.0174,
+   "champ": 0.0952
   },
   {
    "team": "Junyoung's Scary Team",
    "rec": "15-18-0",
-   "epct": 0.5008127308209865,
-   "po": 0.8745,
-   "p1": 0.0047,
-   "champ": 0.01175
+   "epct": 0.5059586894509249,
+   "po": 0.89675,
+   "p1": 0.01,
+   "champ": 0.02205
+  },
+  {
+   "team": "ChaRDaddy",
+   "rec": "18-15-0",
+   "epct": 0.49505416917908185,
+   "po": 0.81535,
+   "p1": 0.00335,
+   "champ": 0.032
   },
   {
    "team": "Brand_New_Neo_HJ",
    "rec": "16-17-0",
-   "epct": 0.4652915182361108,
-   "po": 0.41205,
-   "p1": 0.00035,
-   "champ": 0.00345
+   "epct": 0.46926193633230684,
+   "po": 0.43905,
+   "p1": 0.00135,
+   "champ": 0.0031
   },
   {
    "team": "Kunhyo's Chokeslam",
    "rec": "9-23-1",
-   "epct": 0.3614796757360463,
-   "po": 0.0008,
+   "epct": 0.3524623070133322,
+   "po": 0.00045,
    "p1": 0,
    "champ": 0
   }
@@ -169,7 +169,6 @@
   "Karl-Anthony Towns",
   "Anthony Davis",
   "James Harden",
-  "Austin Reaves",
   "Kyrie Irving",
   "Michael Porter Jr.",
   "Tyler Herro",
@@ -177,15 +176,15 @@
   "Jeremiah Fears",
   "Alex Sarr",
   "Peyton Watson",
-  "Daniel Gafford"
+  "Daniel Gafford",
+  "Darryn Peterson"
  ],
  "injured": [
-  "Anthony Davis (DTD)",
-  "Austin Reaves (DTD)"
+  "Tyler Herro (DTD)"
  ],
  "ir": [
-  "Brandon Miller",
-  "Norman Powell"
+  "Austin Reaves",
+  "Brandon Miller"
  ],
  "watch": {
   "Kel'el Ware": {
@@ -197,5 +196,5 @@
    "reb": 6.9
   }
  },
- "at": "2026-11-09T20:42:11.266Z"
+ "at": "2026-11-10T02:42:29.786Z"
 }

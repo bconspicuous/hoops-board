@@ -1,13 +1,13 @@
 {
  "week": 4,
  "opp": "Junyoung's Scary Team",
- "acqLeft": 4,
+ "acqLeft": 3,
  "dropCandidates": [],
  "base": {
-  "wk": 6.695,
-  "champ": 0.6242,
-  "p1": 0.7864,
-  "epct": 0.5929
+  "wk": 6.923,
+  "champ": 0.5183,
+  "p1": 0.7088,
+  "epct": 0.5824
  },
  "protect": [
   "Shai Gilgeous-Alexander",
@@ -15,23 +15,16 @@
   "Kyrie Irving",
   "James Harden",
   "Karl-Anthony Towns",
-  "Austin Reaves",
   "Michael Porter Jr.",
-  "Tyler Herro"
+  "Tyler Herro",
+  "Alex Sarr"
  ],
  "droppable": [],
- "flags": [
-  {
-   "kind": "ir-ineligible",
-   "player": "Norman Powell",
-   "status": "DTD",
-   "note": "IR 선수가 O가 아님 — ESPN이 영입을 막을 수 있음(감독 판단: DTD는 영입 가능). 첫 사례에서 실제 동작을 기록"
-  }
- ],
+ "flags": [],
  "items": [],
  "screened": [],
- "createdAt": "2026-11-09T20:42:37.229Z",
- "id": "20261109T2042",
- "rosterSig": "Alex Sarr|Anthony Davis|Austin Reaves|Daniel Gafford|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Michael Porter Jr.|Miles Bridges|Peyton Watson|Shai Gilgeous-Alexander|Tyler Herro#Brandon Miller|Norman Powell",
+ "createdAt": "2026-11-10T02:42:56.460Z",
+ "id": "20261110T0242",
+ "rosterSig": "Alex Sarr|Anthony Davis|Daniel Gafford|Darryn Peterson|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Michael Porter Jr.|Miles Bridges|Peyton Watson|Shai Gilgeous-Alexander|Tyler Herro#Austin Reaves|Brandon Miller",
  "newItems": []
 }
