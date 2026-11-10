@@ -1,6 +1,6 @@
 {
- "asOf": "2026-11-10T16:48+09:00",
- "scoringPeriodId": 21,
+ "asOf": "2026-11-10T19:45+09:00",
+ "scoringPeriodId": 22,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
   "waiverHours": 24,
@@ -103,54 +103,6 @@
     }
    ],
    "bid": 0
-  },
-  {
-   "id": "451a28d3-63e4-4e8e-aa6f-0dd0432c00ce",
-   "team": "GTD",
-   "mine": true,
-   "type": "WAIVER",
-   "status": "PENDING",
-   "proposed": "2026-11-03 13:48 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "OG Anunoby",
-     "from": "FA",
-     "to": "GTD"
-    },
-    {
-     "type": "DROP",
-     "player": "Zaccharie Risacher",
-     "from": "GTD",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "9e98b02c-69e9-40f6-b9ff-8eb836bb735d",
-   "team": "GTD",
-   "mine": true,
-   "type": "WAIVER",
-   "status": "PENDING",
-   "proposed": "2026-11-03 06:32 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "OG Anunoby",
-     "from": "FA",
-     "to": "GTD"
-    },
-    {
-     "type": "DROP",
-     "player": "Paul Reed",
-     "from": "GTD",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
   }
  ],
  "transactions": [
@@ -165,7 +117,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "4279888",
+     "player": "Ja Morant",
      "from": "FA",
      "to": "SONG"
     },
@@ -189,7 +141,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "4683778",
+     "player": "Jared McCain",
      "from": "FA",
      "to": "TBG"
     },
@@ -213,7 +165,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "5174983",
+     "player": "Aday Mara",
      "from": "FA",
      "to": "IYH"
     },
@@ -543,7 +495,7 @@
     },
     {
      "type": "DROP",
-     "player": "5174983",
+     "player": "Aday Mara",
      "from": "SONG",
      "to": "FA"
     }
@@ -939,7 +891,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "5174983",
+     "player": "Aday Mara",
      "from": "FA",
      "to": "SONG"
     },
@@ -1011,164 +963,9 @@
     }
    ],
    "bid": 0
-  },
-  {
-   "id": "451a28d3-63e4-4e8e-aa6f-0dd0432c00ce",
-   "team": "GTD",
-   "mine": true,
-   "type": "WAIVER",
-   "status": "PENDING",
-   "proposed": "2026-11-03 13:48 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "OG Anunoby",
-     "from": "FA",
-     "to": "GTD"
-    },
-    {
-     "type": "DROP",
-     "player": "Zaccharie Risacher",
-     "from": "GTD",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "b773a06b-16af-461e-acf6-d08850f5ba01",
-   "team": "GTD",
-   "mine": true,
-   "type": "WAIVER",
-   "status": "CANCELED",
-   "proposed": "2026-11-03 10:13 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "OG Anunoby",
-     "from": "FA",
-     "to": "GTD"
-    },
-    {
-     "type": "DROP",
-     "player": "Paul Reed",
-     "from": "GTD",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "33c35295-65a7-4605-8d51-59eade3c9667",
-   "team": "KOO",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-03 07:45 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Coby White",
-     "from": "FA",
-     "to": "KOO"
-    },
-    {
-     "type": "DROP",
-     "player": "Terrence Shannon Jr.",
-     "from": "KOO",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "d6e9b38d-84e5-4f16-a9e4-591e2a8e4399",
-   "team": "GTD",
-   "mine": true,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-03 06:34 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Zaccharie Risacher",
-     "from": "FA",
-     "to": "GTD"
-    },
-    {
-     "type": "DROP",
-     "player": "Peyton Watson",
-     "from": "GTD",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "9e98b02c-69e9-40f6-b9ff-8eb836bb735d",
-   "team": "GTD",
-   "mine": true,
-   "type": "WAIVER",
-   "status": "PENDING",
-   "proposed": "2026-11-03 06:32 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "OG Anunoby",
-     "from": "FA",
-     "to": "GTD"
-    },
-    {
-     "type": "DROP",
-     "player": "Paul Reed",
-     "from": "GTD",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "0f100e2d-1d00-4c67-b090-bedb7102394e",
-   "team": "SONG",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-02 17:56 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Christian Braun",
-     "from": "FA",
-     "to": "SONG"
-    },
-    {
-     "type": "DROP",
-     "player": "OG Anunoby",
-     "from": "SONG",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
   }
  ],
  "onWaivers": [
-  {
-   "id": 3147657,
-   "name": "Mikal Bridges",
-   "pro": "NYK",
-   "waiverClears": "2026-11-10 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "KWNG",
-    "at": "2026-11-09 10:53 KST"
-   }
-  },
   {
    "id": 4711272,
    "name": "Reed Sheppard",
@@ -1192,17 +989,6 @@
    }
   },
   {
-   "id": 4278562,
-   "name": "Paul Reed",
-   "pro": "DET",
-   "waiverClears": "2026-11-10 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "GTD",
-    "at": "2026-11-09 05:55 KST"
-   }
-  },
-  {
    "id": 4395630,
    "name": "Devin Vassell",
    "pro": "SAS",
@@ -1222,17 +1008,6 @@
    "droppedBy": {
     "by": "JYP",
     "at": "2026-11-10 08:21 KST"
-   }
-  },
-  {
-   "id": 5279130,
-   "name": "Nolan Traore",
-   "pro": "BKN",
-   "waiverClears": "2026-11-10 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "SMS",
-    "at": "2026-11-09 06:07 KST"
    }
   },
   {
