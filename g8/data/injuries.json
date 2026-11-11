@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-11T23:42+09:00",
+ "asOf": "2026-11-12T04:52+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -60,6 +60,34 @@
    "long": "Veesaar suffered the injury during a workout on Sept. 15, and an MRI confirmed the diagnosis. The No. 52 overall pick in the 2026 NBA Draft, Veesaar was expected to spend a lot of time with Atlanta's G League affiliate this season."
   },
   {
+   "player": "Paul George",
+   "team": "BOS",
+   "status": "Out",
+   "date": "2026-11-11T17:55Z",
+   "type": "out",
+   "returnDate": "2026-11-15",
+   "detail": null,
+   "side": null,
+   "injury": "Illness",
+   "fantasyStatus": "OUT",
+   "short": "George (illness) has been ruled out for Wednesday's game against Toronto, Taylor Snow of the Celtics' official site reports.",
+   "long": "George will sit out the second leg of this back-to-back set due to an illness, and his next opportunity to play will come Sunday against the Mavericks. With the veteran forward sidelined, Baylor Scheierman, Sam Hauser and Hugo Gonzalez are all candidates to see increased playing time."
+  },
+  {
+   "player": "Mikel Brown Jr.",
+   "team": "BKN",
+   "status": "Out",
+   "date": "2026-11-11T16:40Z",
+   "type": "out",
+   "returnDate": "2026-11-14",
+   "detail": "Not Specified",
+   "side": "Not Specified",
+   "injury": "Illness",
+   "fantasyStatus": "OUT",
+   "short": "Brown has been ruled out for Wednesday's game against the Pelicans due to an illness, Sharif Phillips-Keaton of USA Today reports.",
+   "long": "Brown had been sidelined for Sunday's 130-93 loss to the Mavericks due to back injury management and was slated to return to action Wednesday. However, he appears to have fallen ill overnight, as the Nets added him to the injury report as questionable earlier Wednesday before downgrading him to out."
+  },
+  {
    "player": "Nolan Traore",
    "team": "BKN",
    "status": "Day-To-Day",
@@ -72,34 +100,6 @@
    "fantasyStatus": "GTD",
    "short": "Traore (calf) is listed as questionable for Wednesday's game against New Orleans.",
    "long": "Traore has played well throughout the 2026-27 campaign. He has appeared in 10 regular-season games, starting seven, and has averaged 12.9 points, 2.0 rebounds, 2.6 assists and 1.4 steals while shooting 46.2 percent from deep over 22.1 minutes per contest. The 20-year-old is now in danger of missing his first game of the season Wednesday versus New Orleans. If that happens, Mikel Brown, Keon Ellis and Terance Mann are candidates for more minutes. Egor Demin (leg) is also expected to suit up after being sidelined since the 125-124 overtime loss to Boston on Oct. 27."
-  },
-  {
-   "player": "Egor Demin",
-   "team": "BKN",
-   "status": "Out",
-   "date": "2026-11-10T22:51Z",
-   "type": "out",
-   "returnDate": "2026-11-11",
-   "detail": "Bruise",
-   "side": "Right",
-   "injury": "Leg",
-   "fantasyStatus": "GTD",
-   "short": "Demin (leg) is probable for Wednesday's game against the Pelicans, Erik Slater of ClutchPoints.com reports.",
-   "long": "Brian Lewis of the New York Post reported earlier Tuesday that Demin practiced as well. With Demin previously sidelined by a right leg bone bruise, this designation suggests he is trending toward returning to Brooklyn's backcourt Wednesday. If he is cleared to play, the guard would be in position to reclaim the top spot at point guard."
-  },
-  {
-   "player": "Grant Nelson",
-   "team": "BKN",
-   "status": "Day-To-Day",
-   "date": "2026-11-08T16:21Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-10",
-   "detail": null,
-   "side": "Left",
-   "injury": "Knee",
-   "fantasyStatus": "GTD",
-   "short": "Nelson signed a two-way contract with the Nets on Friday, Michael Scotto of HoopsHype.com reports.",
-   "long": "Nelson appeared in four regular-season games for the Nets during the 2025-26 campaign and will link up with the franchise again. He's expected to spend the bulk of his time with their G League affiliate to open the season."
   },
   {
    "player": "Brandon Miller",
@@ -172,6 +172,34 @@
    "long": "Schroder, who missed Friday's game due to what was described as a left thigh injury, has been diagnosed with a hamstring strain. He is set to be reevaluated in two weeks, suggesting he will miss at least the next five games. Christian Anderson and Sion James could see extra minutes with Schroder sidelined."
   },
   {
+   "player": "Tobe Awaka",
+   "team": "CHI",
+   "status": "Out",
+   "date": "2026-11-11T19:18Z",
+   "type": "out",
+   "returnDate": "2026-11-13",
+   "detail": null,
+   "side": null,
+   "injury": "Back",
+   "fantasyStatus": "OUT",
+   "short": "Awaka (back) has been ruled out for Wednesday's game against the Spurs.",
+   "long": "Awaka will be held out of Wednesday's contest due to lower-back tightness. However, his absence shouldn't cause any significant waves in the rotation."
+  },
+  {
+   "player": "Caleb Wilson",
+   "team": "CHI",
+   "status": "Day-To-Day",
+   "date": "2026-11-11T18:21Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-11",
+   "detail": "Soreness",
+   "side": "Right",
+   "injury": "Hip",
+   "fantasyStatus": "GTD",
+   "short": "Wilson has been downgraded to questionable for Wednesday's game against the Spurs due to right hip soreness.",
+   "long": "Wilson was a late addition to the injury report and will likely be a game-time decision ahead of tipoff at 8:00 p.m. ET. If the rookie forward isn't cleared to play, Leonard Miller and Noa Essengue would likely see increased playing time."
+  },
+  {
    "player": "Norman Powell",
    "team": "CHI",
    "status": "Day-To-Day",
@@ -184,20 +212,6 @@
    "fantasyStatus": "GTD",
    "short": "Powell (shoulder) is listed as questionable for Wednesday's game versus the Spurs.",
    "long": "Powell didn't suit up for Sunday's 127-121 loss to Philadelphia, marking his first absence of the 2026-27 campaign. Isaac Okoro took his place in the starting lineup, and that will likely remain the case if Powell misses a second consecutive game Wednesday."
-  },
-  {
-   "player": "Tobe Awaka",
-   "team": "CHI",
-   "status": "Day-To-Day",
-   "date": "2026-11-10T22:19Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-11",
-   "detail": null,
-   "side": null,
-   "injury": "Back",
-   "fantasyStatus": "GTD",
-   "short": "Awaka (back) is questionable for Wednesday's game against the Spurs.",
-   "long": "Awaka's status is uncertain due to a nagging back issue. His availability should be decided at some point closer to tipoff Wednesday."
   },
   {
    "player": "Zach Collins",
@@ -312,6 +326,20 @@
    "long": "Strawther suffered the injury in Wednesday's preseason game against the Clippers. The 24-year-old has appeared in 172 regular-season games for the Nuggets since entering the league in 2023, averaging 7.1 points, 2.0 rebounds and 1.1 assists over 16.2 minutes per contest. He was in line to compete for an expanded role during the 2026-27 campaign. While that may be the case once Strawther is cleared to suit up, Tyus Jones and potentially Ryan Nembhard are candidates to receive more minutes in the interim."
   },
   {
+   "player": "Ugonna Onyenso",
+   "team": "DET",
+   "status": "Day-To-Day",
+   "date": "2026-11-11T15:16Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-13",
+   "detail": null,
+   "side": "Left",
+   "injury": "Foot",
+   "fantasyStatus": "GTD",
+   "short": "Onyenso agreed to a two-way contract with the Pistons on Thursday.",
+   "long": "The No. 53 overall pick in the 2026 NBA Draft, Onyenso appears poised to see run in the G League after putting pen to paper on a two-way deal. He'll likely face an uphill battle to carve out a role in the rotation, so Detroit will presumably allow him to continue his development with Motor City."
+  },
+  {
    "player": "Isaiah Joe",
    "team": "DET",
    "status": "Out",
@@ -340,6 +368,20 @@
    "long": "Duren is progressing in his rehab after suffering a right hamstring strain Oct. 23, though he'll remain on the inactive list for at least the next two weeks while ramping up toward a return to game action. Paul Reed should continue to play a sizable role in Duren's stead."
   },
   {
+   "player": "Will Richard",
+   "team": "GS",
+   "status": "Day-To-Day",
+   "date": "2026-11-11T19:09Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-11",
+   "detail": null,
+   "side": "Left",
+   "injury": "Thumb",
+   "fantasyStatus": "GTD",
+   "short": "Richard (thumb) has been upgraded to probable for Wednesday's game at Houston.",
+   "long": "Richard is expected to play through a torn UCL in his left thumb. Over his last five games (two starts), the 23-year-old has averaged 5.2 points, 2.0 rebounds and 1.6 assists in 18.2 minutes per tilt."
+  },
+  {
    "player": "Gary Payton II",
    "team": "GS",
    "status": "Out",
@@ -352,20 +394,6 @@
    "fantasyStatus": "OUT",
    "short": "Payton (knee) is out for Wednesday's game against Houston.",
    "long": "Payton is sidelined for a second consecutive contest with knee inflammation. Will Richard (thumb) could slot into Payton's spot in the backcourt rotation Wednesday."
-  },
-  {
-   "player": "Will Richard",
-   "team": "GS",
-   "status": "Out",
-   "date": "2026-11-10T21:34Z",
-   "type": "out",
-   "returnDate": "2026-11-11",
-   "detail": null,
-   "side": "Left",
-   "injury": "Thumb",
-   "fantasyStatus": "GTD",
-   "short": "Richard (thumb) is questionable for Wednesday's game against Houston.",
-   "long": "Richard has a chance to keep his absence to a one-game minimum with a left thumb UCL tear. It sounds like the guard is opting against surgery and will play with a splint once healthy enough to suit up."
   },
   {
    "player": "Brandon Williams",
@@ -510,14 +538,14 @@
   {
    "player": "Cam Christie",
    "team": "LAC",
-   "status": "Out",
-   "date": "2026-11-11T01:39Z",
-   "type": "out",
+   "status": "Day-To-Day",
+   "date": "2026-11-11T14:59Z",
+   "type": "day-to-day",
    "returnDate": "2026-11-13",
    "detail": null,
    "side": null,
    "injury": "Ankle",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Christie (ankle) is listed as out for Tuesday's game against Phoenix.",
    "long": "Christie will miss his fifth game of the 2026-27 campaign. The 21-year-old rookie has averaged only 6.0 minutes per contest in his five regular-season appearances, so his absence won't have much of an effect on the rotation."
   },
@@ -545,7 +573,7 @@
    "detail": "Surgery",
    "side": "Right",
    "injury": "Achilles",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Ingram (Achilles) has been ruled out for Tuesday's game at Phoenix, Ohm Youngmisuk of ESPN.com reports.",
    "long": "Ingram is nearing a return to action, though he won't make his season debut Tuesday. The veteran swingman's next opportunity to suit up will come Friday against Oklahoma City."
   },
@@ -580,16 +608,16 @@
   {
    "player": "Quentin Grimes",
    "team": "LAL",
-   "status": "Day-To-Day",
-   "date": "2026-11-10T23:07Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-11",
+   "status": "Out",
+   "date": "2026-11-11T19:06Z",
+   "type": "out",
+   "returnDate": "2026-11-15",
    "detail": null,
    "side": null,
    "injury": "Finger",
-   "fantasyStatus": "GTD",
-   "short": "Grimes (finger) is listed as questionable for Wednesday's game in Milwaukee.",
-   "long": "Grimes injured his finger in Sunday's game against Detroit and didn't suit up for the 124-114 win over Atlanta on Monday. With Luka Doncic and Austin Reaves (illness) both available, Grimes is expected to head back to the bench. However, another absence could mean more minutes for Sandro Mamukelashvili, Ziaire Williams and Collin Sexton."
+   "fantasyStatus": "OUT",
+   "short": "Grimes (finger) has been ruled out for Wednesday's game against the Bucks.",
+   "long": "Grimes didn't play Monday in Atlanta after scoring 12 points in 32 minutes as a starter in Detroit on Sunday. However, it appears that absence wasn't simply rest during the second night of a back-to-back set, as Grimes will now miss a second straight game. In his absence, Collin Sexton and Cameron Carr could remain involved with the second unit."
   },
   {
    "player": "Isaiah Stewart",
@@ -650,16 +678,30 @@
   {
    "player": "Tyler Herro",
    "team": "MIL",
-   "status": "Out",
-   "date": "2026-11-10T23:24Z",
-   "type": "out",
+   "status": "Day-To-Day",
+   "date": "2026-11-11T19:05Z",
+   "type": "day-to-day",
    "returnDate": "2026-11-11",
    "detail": "Bruise",
    "side": "Right",
    "injury": "Knee",
+   "fantasyStatus": "GTD",
+   "short": "Herro (knee) is listed as questionable for Wednesday's game against the Lakers.",
+   "long": "Herro is in jeopardy of missing a second consecutive contest due to a right knee contusion. If the star guard remains on the inactive list, Ryan Rollins would likely stay in the starting five, while Kasparas Jakucionis could continue seeing increased burn off the bench."
+  },
+  {
+   "player": "Myles Turner",
+   "team": "MIL",
+   "status": "Out",
+   "date": "2026-11-11T19:03Z",
+   "type": "out",
+   "returnDate": "2026-11-13",
+   "detail": null,
+   "side": null,
+   "injury": "Rest",
    "fantasyStatus": "OUT",
-   "short": "Herro (knee) is listed as out for Tuesday's game against New York.",
-   "long": "Herro was listed as questionable ahead of this contest. However, he has been downgraded to out, meaning his next opportunity to suit up will come Wednesday versus the Lakers. With Herro sidelined, Ryan Rollins could enter the starting lineup for the first time since the 136-111 loss to Cleveland on Oct. 31."
+   "short": "Turner has been ruled out for Wednesday's game against the Lakers due to rest.",
+   "long": "Turner will miss his first game of the season after totaling only three points in 27 minutes during Tuesday's blowout loss in New York. In Turner's absence, Kel'el Ware and Jericho Sims are candidates for increased roles. Turner should return to action Friday in Orlando."
   },
   {
    "player": "Anthony Edwards",
@@ -690,32 +732,46 @@
    "long": "DiVincenzo is approaching six months since tearing his right Achilles during the first round of the playoffs and has been rehabbing with the expectation that he'll play at some point this season. The veteran guard has sought advice from Jayson Tatum, Tyrese Haliburton and Damian Lillard during his recovery, though Minnesota has yet to establish a timetable for his return."
   },
   {
-   "player": "Trendon Watford",
+   "player": "Bennedict Mathurin",
    "team": "NO",
    "status": "Out",
-   "date": "2026-11-10T19:26Z",
+   "date": "2026-11-11T16:55Z",
    "type": "out",
    "returnDate": "2026-11-13",
-   "detail": null,
-   "side": null,
-   "injury": "Ankle",
+   "detail": "Sprain",
+   "side": "Right",
+   "injury": "Thumb",
    "fantasyStatus": "OUT",
-   "short": "Watford (ankle) is out for Wednesday's game against the Nets.",
-   "long": "Watford continues to nurse a right ankle sprain. The forward lacks a concrete timetable for a return to the floor."
+   "short": "Mathurin has been ruled out for Wednesday's game against the Nets due to a right thumb sprain.",
+   "long": "Mathurin wasn't listed on the initial injury report, and the extent of the issue remains unclear. While he's not a major part of the regular rotation, Mathurin, Trey Murphy and Trendon Watford are all expected to be unavailable Wednesday, opening the door for Saddiq Bey, Herbert Jones and potentially Jordan Poole to play more minutes."
   },
   {
    "player": "Trey Murphy III",
    "team": "NO",
    "status": "Day-To-Day",
-   "date": "2026-11-10T19:22Z",
+   "date": "2026-11-11T16:53Z",
    "type": "day-to-day",
    "returnDate": "2026-11-11",
    "detail": "Tendinitis",
    "side": "Not Specified",
    "injury": "Knee",
    "fantasyStatus": "GTD",
-   "short": "Murphy (knee) is probable for Wednesday's game against the Nets.",
-   "long": "The star forward sat out the second leg of the Pelicans' latest back-to-back set due to bilateral patellar tendinopathy, but he's set to return to action Wednesday. Saddiq Bey is likely to shift back to bench but should maintain a significant role."
+   "short": "Murphy (knee) is doubtful for Wednesday's game against the Nets.",
+   "long": "Murphy was initially listed as probable but is now expected to miss a second straight game. If the sharpshooter is ruled out, it'll be his third absence over the past five games, with only one of them coming during a back-to-back set. Saddiq Bey and Herbert Jones are candidates for increased roles until Murphy returns to action."
+  },
+  {
+   "player": "Trendon Watford",
+   "team": "NO",
+   "status": "Out",
+   "date": "2026-11-10T19:26Z",
+   "type": "out",
+   "returnDate": "2026-11-13",
+   "detail": "Sprain",
+   "side": "Right",
+   "injury": "Ankle",
+   "fantasyStatus": "OUT",
+   "short": "Watford (ankle) is out for Wednesday's game against the Nets.",
+   "long": "Watford continues to nurse a right ankle sprain. The forward lacks a concrete timetable for a return to the floor."
   },
   {
    "player": "Yves Missi",
@@ -732,18 +788,32 @@
    "long": "Missi has been sidelined since picking up his injury Oct. 23. He remains without a timetable to return."
   },
   {
+   "player": "Karl-Anthony Towns",
+   "team": "NY",
+   "status": "Day-To-Day",
+   "date": "2026-11-11T18:06Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-11",
+   "detail": "Soreness",
+   "side": "Left",
+   "injury": "Calf",
+   "fantasyStatus": "GTD",
+   "short": "Towns (calf) is listed as questionable for Wednesday's game against Cleveland.",
+   "long": "Towns may be held out of the second half of this back-to-back set due to a sore left calf. If the star big man is unable to play, Andre Drummond, Mohamed Diawara and James Wiseman would be candidates for increased playing time."
+  },
+  {
    "player": "Josh Hart",
    "team": "NY",
    "status": "Out",
-   "date": "2026-11-10T22:58Z",
+   "date": "2026-11-11T18:06Z",
    "type": "out",
    "returnDate": "2026-11-11",
    "detail": null,
    "side": null,
    "injury": "Illness",
-   "fantasyStatus": "OUT",
-   "short": "Hart (illness) won't play Tuesday against the Bucks, Kristian Winfield of the New York Daily News reports.",
-   "long": "Hart is sick in addition to dealing with a sore right ankle, so he'll skip Tuesday's game, which will be the first of a back-to-back set. Landry Shamet should continue to start in Hart's absence, and Jordan Clarkson will have the chance for some extra minutes."
+   "fantasyStatus": "GTD",
+   "short": "Hart (illness) is probable for Wednesday's game against the Cavaliers.",
+   "long": "Hart has missed three games in a row. First, he was sidelined for two contests due to a knee injury but didn't play Tuesday against the Bucks due to an illness. It appears he's moved past both issues and will return to action Wednesday. However, the veteran wing has been off to a slow start this season, averaging 8.6 points, 7.3 rebounds, 3.9 assists and 2.1 steals in 31.6 minutes per game."
   },
   {
    "player": "Jaylin Williams",
@@ -755,7 +825,7 @@
    "detail": "Spasms",
    "side": null,
    "injury": "Back",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Williams (back) has been ruled out for Tuesday's game against the Trail Blazers.",
    "long": "Williams will miss a fourth consecutive contest due to lower-back spasms. Aday Mara and Kenrich Williams will likely continue to start for OKC, while Micah Peavy and Bennett Stirtz will keep earning increased playing time off the bench."
   },
@@ -818,14 +888,14 @@
   {
    "player": "Tristan da Silva",
    "team": "ORL",
-   "status": "Out",
-   "date": "2026-11-11T01:34Z",
-   "type": "out",
+   "status": "Day-To-Day",
+   "date": "2026-11-11T15:00Z",
+   "type": "day-to-day",
    "returnDate": "2026-11-11",
    "detail": "Strain",
    "side": "Left",
    "injury": "Calf",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Da Silva (calf) has been ruled out for Tuesday's game against the Kings, Jason Beede of the Orlando Sentinel reports.",
    "long": "Da Silva was questionable to suit up due to a left calf strain, and he will indeed miss his first contest of the 2026-27 campaign with the ailment. Tuesday is the first night of a back-to-back set for Orlando, so the hope is that he'll be able to return for the road tilt against Utah. Jase Richardson, Jamal Cain and Jevon Carter should all see an uptick in minutes, but we'll have to wait for confirmation on who's replacing da Silva in the starting lineup."
   },
@@ -909,7 +979,7 @@
    "detail": "Sprain",
    "side": null,
    "injury": "Back",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Bona (back) is out for Tuesday's game against the Celtics.",
    "long": "Bona will miss his third consecutive matchup while nursing a cervical spine sprain. Jabari Walker should once again receive extra looks behind Joel Embiid with Bona and Dominick Barlow (back) sidelined."
   },
@@ -1000,14 +1070,14 @@
   {
    "player": "Precious Achiuwa",
    "team": "SAC",
-   "status": "Out",
-   "date": "2026-11-11T06:04Z",
-   "type": "out",
+   "status": "Day-To-Day",
+   "date": "2026-11-11T14:44Z",
+   "type": "day-to-day",
    "returnDate": "2026-11-13",
    "detail": "Bruise",
    "side": "Left",
    "injury": "Lower Leg",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Achiuwa left Tuesday's 107-100 loss to the Magic with a left lower leg contusion and did not return, Matt George of ABC 10 Sacramento reports.",
    "long": "With Achiuwa exiting the game after 14 minutes, more minutes became available for Dylan Cardwell. If Achiuwa needs to miss Friday's game against the Trail Blazers, Keegan Murray would likely return to the starting lineup, and Cardwell would have the chance for some extended run."
   },
@@ -1084,16 +1154,16 @@
   {
    "player": "Trayce Jackson-Davis",
    "team": "TOR",
-   "status": "Day-To-Day",
-   "date": "2026-11-10T21:54Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-11",
+   "status": "Out",
+   "date": "2026-11-11T17:37Z",
+   "type": "out",
+   "returnDate": "2026-11-12",
    "detail": null,
    "side": null,
    "injury": "Illness",
-   "fantasyStatus": "GTD",
-   "short": "Jackson-Davis is questionable for Wednesday's game against Boston with an illness.",
-   "long": "Toronto is likely to re-evaluate Jackson-Davis at some point closer to tipoff Wednesday. Jakob Poeltl would likely handle a larger share of the center minutes if Jackson-Davis isn't feeling well enough to play."
+   "fantasyStatus": "OUT",
+   "short": "Jackson-Davis (illness) has been ruled out for Wednesday's game against the Celtics, Blake Murphy of Sportsnet.ca reports.",
+   "long": "Jackson-Davis is under the weather and will sit out the front end of this back-to-back set. If Collin Murray-Boyles (illness) joins Jackson-Davis on the inactive list, Jamison Battle and Kyle Anderson would likely see increased burn."
   },
   {
    "player": "Collin Murray-Boyles",
@@ -1169,27 +1239,27 @@
    "player": "Lauri Markkanen",
    "team": "UTAH",
    "status": "Out",
-   "date": "2026-11-10T18:30Z",
+   "date": "2026-11-11T18:22Z",
    "type": "out",
-   "returnDate": "2026-11-11",
-   "detail": "Sprain",
+   "returnDate": "2027-01-04",
+   "detail": "Fracture",
    "side": "Right",
-   "injury": "Wrist",
+   "injury": "Hand",
    "fantasyStatus": "OUT",
-   "short": "Markkanen is out for Tuesday's game versus the Heat with a right wrist sprain.",
-   "long": "The star forward is missing a second consecutive contest, and he faces a short turnaround to return ahead of Wednesday's tilt against the Magic. Josh Green figures to draw a second straight start, while Brice Sensabaugh and Josh Okogie should see a bump in playing time."
+   "short": "Markkanen has been diagnosed with a non-displaced fracture in his right hand and will be sidelined for at least one month, Shams Charania of ESPN reports.",
+   "long": "Markkanen has missed two straight games due to what was being described as a right wrist sprain, but it appears the issue was much worse than initially thought. The talented big man now joins Jusuf Nurkic (foot) and Jaren Jackson (knee) on Utah's long-term injury list, while Keyonte George's status moving forward is unclear while dealing with an ankle sprain. Given all of the injuries, Ace Bailey and Darryn Peterson will have to lead the offense, while Isaiah Collier, Brice Sensabaugh, Svi Mykhailiuk, Josh Okogie and Josh Green are candidates for increased roles."
   },
   {
    "player": "Keyonte George",
    "team": "UTAH",
-   "status": "Out",
-   "date": "2026-11-10T00:08Z",
-   "type": "out",
+   "status": "Day-To-Day",
+   "date": "2026-11-11T15:00Z",
+   "type": "day-to-day",
    "returnDate": "2026-11-11",
    "detail": "Sprain",
    "side": "Right",
    "injury": "Ankle",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "George (ankle) has been ruled out for Tuesday's game against the Heat.",
    "long": "George sustained a right ankle sprain in Sunday's loss to Minnesota and will be sidelined for the front end of this back-to-back set. His next opportunity to play will come Wednesday against Orlando, and the 23-year-old's absence should open up additional minutes for guys like Isaiah Collier and Svi Mykhailiuk. Moreover, Darryn Peterson figures to take on additional on-ball duties."
   },
