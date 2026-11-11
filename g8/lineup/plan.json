@@ -2,7 +2,7 @@
  "date": "2026-11-11",
  "week": 4,
  "opp": "Junyoung's Scary Team",
- "status": "pending",
+ "status": "nochange-starters",
  "playing": 10,
  "starters": [
   "Shai Gilgeous-Alexander",
@@ -19,96 +19,62 @@
  "bench": [],
  "dtd": [],
  "expected": {
-  "best": 6.581,
-  "current": 6.527,
-  "gain": 0.054,
+  "best": 6.549,
+  "current": 6.549,
+  "gain": 0,
   "pcBest": {
-   "FG": 0.49,
-   "FT": 0.959,
-   "TPM": 0.958,
-   "REB": 0.927,
-   "AST": 0.355,
-   "STL": 0.183,
-   "BLK": 0.986,
-   "TO": 0.08,
-   "DD": 0.482,
-   "PTS": 0.999,
-   "PF": 0.162
+   "FG": 0.227,
+   "FT": 0.921,
+   "TPM": 0.957,
+   "REB": 0.943,
+   "AST": 0.577,
+   "STL": 0.231,
+   "BLK": 0.921,
+   "TO": 0.004,
+   "DD": 0.553,
+   "PTS": 1,
+   "PF": 0.216
   },
   "pcCurrent": {
-   "FG": 0.563,
-   "FT": 0.96,
-   "TPM": 0.91,
-   "REB": 0.802,
-   "AST": 0.137,
-   "STL": 0.101,
-   "BLK": 0.975,
-   "TO": 0.235,
-   "DD": 0.473,
-   "PTS": 0.994,
-   "PF": 0.379
+   "FG": 0.227,
+   "FT": 0.921,
+   "TPM": 0.957,
+   "REB": 0.943,
+   "AST": 0.577,
+   "STL": 0.231,
+   "BLK": 0.921,
+   "TO": 0.004,
+   "DD": 0.553,
+   "PTS": 1,
+   "PF": 0.216
   }
  },
  "alternatives": [],
- "currentBench": [
-  "James Harden",
-  "Jeremiah Fears",
-  "AJ Dybantsa"
- ],
- "sameStarters": false,
+ "currentBench": [],
+ "sameStarters": true,
  "moves": [
   {
-   "name": "Shai Gilgeous-Alexander",
-   "from": "PG",
-   "to": "G"
-  },
-  {
    "name": "James Harden",
-   "from": "BE",
-   "to": "UTIL"
-  },
-  {
-   "name": "Kyrie Irving",
    "from": "UTIL",
-   "to": "BE"
-  },
-  {
-   "name": "Miles Bridges",
-   "from": "SF",
-   "to": "BE"
-  },
-  {
-   "name": "Jeremiah Fears",
-   "from": "BE",
    "to": "PG"
   },
   {
-   "name": "Daniel Gafford",
-   "from": "UTIL",
-   "to": "BE"
-  },
-  {
    "name": "Darryn Peterson",
-   "from": "G",
+   "from": "PG",
    "to": "UTIL"
-  },
-  {
-   "name": "AJ Dybantsa",
-   "from": "BE",
-   "to": "SF"
   }
  ],
  "slots": [
   {
-   "name": "Jeremiah Fears",
+   "name": "James Harden",
    "slot": "PG"
   },
   {
-   "name": "Brayden Burries",
+   "name": "Austin Reaves",
    "slot": "SG"
   },
   {
-   "name": "AJ Dybantsa",
+   "name": "Michael Porter Jr.",
    "slot": "SF"
   },
   {
@@ -120,19 +86,19 @@
    "slot": "C"
   },
   {
-   "name": "Shai Gilgeous-Alexander",
+   "name": "Brayden Burries",
    "slot": "G"
   },
   {
-   "name": "Michael Porter Jr.",
+   "name": "AJ Dybantsa",
    "slot": "F"
   },
   {
-   "name": "James Harden",
+   "name": "Shai Gilgeous-Alexander",
    "slot": "UTIL"
   },
   {
-   "name": "Austin Reaves",
+   "name": "Jeremiah Fears",
    "slot": "UTIL"
   },
   {
@@ -152,6 +118,6 @@
    "slot": "BE"
   }
  ],
- "id": "2026-11-11T0543Z",
- "createdAt": "2026-11-11T05:43:16.651Z"
+ "id": "2026-11-11T1013Z",
+ "createdAt": "2026-11-11T10:13:50.775Z"
 }
