@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-11T19:45+09:00",
+ "asOf": "2026-11-12T04:53+09:00",
  "leagueId": "504060248",
  "season": 2027,
  "teams": [
@@ -161,8 +161,8 @@
     "Myles Turner",
     "Jaime Jaquez Jr.",
     "Wendell Carter Jr.",
-    "Kris Dunn",
-    "Draymond Green"
+    "Draymond Green",
+    "Nic Claxton"
    ],
    "ir": [
     "Lauri Markkanen"
@@ -175,16 +175,16 @@
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
-    "acquisitions": 10,
-    "drops": 9,
+    "acquisitions": 11,
+    "drops": 10,
     "matchupAcquisitionTotals": {
      "1": 6,
      "2": 2,
      "3": 1,
-     "4": 1
+     "4": 2
     },
     "misc": 0,
-    "moveToActive": 68,
+    "moveToActive": 70,
     "moveToIR": 7,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -471,16 +471,14 @@
    "Scottie Barnes",
    "Jaren Jackson Jr.",
    "Paolo Banchero",
-   "Keyonte George",
    "Brandon Ingram",
    "Ja Morant",
    "Lauri Markkanen",
+   "Myles Turner",
    "Tyrese Haliburton",
+   "Paul George",
    "Jalen Duren",
    "Anthony Edwards",
-   "Tyler Herro",
-   "Precious Achiuwa",
-   "Tristan da Silva",
    "Kawhi Leonard",
    "Josh Hart",
    "Kon Knueppel",
@@ -489,11 +487,13 @@
    "Tobias Harris",
    "Kristaps Porzingis",
    "Jimmy Butler III",
-   "Egor Demin",
+   "Quentin Grimes",
    "Jalen Suggs",
    "Yves Missi",
    "Scotty Pippen Jr.",
+   "Bennedict Mathurin",
    "Cason Wallace",
+   "Mikel Brown Jr.",
    "Jusuf Nurkic",
    "Shaedon Sharpe",
    "Mark Williams",
@@ -510,8 +510,8 @@
    "Isaiah Joe",
    "Sam Merrill",
    "Sergio de Larrea",
-   "Vit Krejci",
    "Adem Bona",
+   "Vit Krejci",
    "Clint Capela",
    "Yanic Konan Niederhauser",
    "Moses Moody",
@@ -520,18 +520,24 @@
    "Gary Payton II"
   ],
   "DTD": [
+   "Caleb Wilson",
+   "Keyonte George",
    "Brandon Miller",
    "Norman Powell",
    "Moussa Diabate",
+   "Tyler Herro",
    "Immanuel Quickley",
+   "Precious Achiuwa",
+   "Tristan da Silva",
+   "Karl-Anthony Towns",
    "Trey Murphy III",
    "Devin Vassell",
-   "Quentin Grimes",
    "Nolan Traore",
    "Collin Murray-Boyles",
    "T.J. McConnell",
    "Morez Johnson Jr.",
    "Isaiah Stewart",
+   "Jamal Cain",
    "Rob Dillingham"
   ]
  }

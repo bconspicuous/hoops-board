@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-11T19:45+09:00",
+ "asOf": "2026-11-12T04:53+09:00",
  "scoringPeriodId": 23,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -28,7 +28,7 @@
    "team": "GGAM",
    "name": "Garibong CHaRdaddy",
    "rank": 2,
-   "acq": 10
+   "acq": 11
   },
   {
    "team": "TBG",
@@ -106,6 +106,30 @@
   }
  ],
  "transactions": [
+  {
+   "id": "8b1d3a93-8f8c-47e1-a905-ffbb4369d45c",
+   "team": "GGAM",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-12 03:35 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Nic Claxton",
+     "from": "FA",
+     "to": "GGAM"
+    },
+    {
+     "type": "DROP",
+     "player": "Kris Dunn",
+     "from": "GGAM",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
   {
    "id": "3a3e8742-77cb-4a36-8014-327493e5e3d0",
    "team": "IYH",
@@ -1044,6 +1068,17 @@
    "droppedBy": {
     "by": "JYP",
     "at": "2026-11-11 06:37 KST"
+   }
+  },
+  {
+   "id": 2991139,
+   "name": "Kris Dunn",
+   "pro": "LAC",
+   "waiverClears": "2026-11-13 17:00 KST",
+   "inj": "ACTIVE",
+   "droppedBy": {
+    "by": "GGAM",
+    "at": "2026-11-12 03:35 KST"
    }
   },
   {
