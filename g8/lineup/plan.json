@@ -14,39 +14,41 @@
   "Jeremiah Fears",
   "Darryn Peterson",
   "AJ Dybantsa",
-  "Brayden Burries"
+  "Norman Powell"
  ],
  "bench": [],
- "dtd": [],
+ "dtd": [
+  "Norman Powell"
+ ],
  "expected": {
-  "best": 6.549,
-  "current": 6.549,
+  "best": 6.381,
+  "current": 6.381,
   "gain": 0,
   "pcBest": {
-   "FG": 0.227,
-   "FT": 0.921,
-   "TPM": 0.957,
-   "REB": 0.943,
-   "AST": 0.577,
-   "STL": 0.231,
-   "BLK": 0.921,
-   "TO": 0.004,
-   "DD": 0.553,
+   "FG": 0.23,
+   "FT": 0.94,
+   "TPM": 0.951,
+   "REB": 0.944,
+   "AST": 0.374,
+   "STL": 0.293,
+   "BLK": 0.972,
+   "TO": 0.002,
+   "DD": 0.568,
    "PTS": 1,
-   "PF": 0.216
+   "PF": 0.106
   },
   "pcCurrent": {
-   "FG": 0.227,
-   "FT": 0.921,
-   "TPM": 0.957,
-   "REB": 0.943,
-   "AST": 0.577,
-   "STL": 0.231,
-   "BLK": 0.921,
-   "TO": 0.004,
-   "DD": 0.553,
+   "FG": 0.23,
+   "FT": 0.94,
+   "TPM": 0.951,
+   "REB": 0.944,
+   "AST": 0.374,
+   "STL": 0.293,
+   "BLK": 0.972,
+   "TO": 0.002,
+   "DD": 0.568,
    "PTS": 1,
-   "PF": 0.216
+   "PF": 0.106
   }
  },
  "alternatives": [],
@@ -86,7 +88,7 @@
    "slot": "C"
   },
   {
-   "name": "Brayden Burries",
+   "name": "Norman Powell",
    "slot": "G"
   },
   {
@@ -118,6 +120,6 @@
    "slot": "BE"
   }
  ],
- "id": "2026-11-11T1013Z",
- "createdAt": "2026-11-11T10:13:50.775Z"
+ "id": "2026-11-11T1443Z",
+ "createdAt": "2026-11-11T14:43:47.952Z"
 }
