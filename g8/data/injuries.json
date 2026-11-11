@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-11T14:41+09:00",
+ "asOf": "2026-11-11T16:10+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -996,6 +996,20 @@
    "fantasyStatus": "OUT",
    "short": "Sharpe suffered a torn meniscus in his knee and is expected to miss six months, per Shams Charania of ESPN.",
    "long": "It's a tough blow to the Trail Blazers' depth on the wing ahead of training camp. Sharpe, who is now likely to be sidelined until after the All-Star break, had been ticketed for a reserve role behind Toumani Camara following an injury-plagued 2025-26 campaign, which saw average a career-high 20.8 points, 1.4 steals and 2.1 three-pointers per game over 50 regular-season appearances. The door is now open for Vit Krejci and Jeremy Sochan to compete for bench minutes during camp."
+  },
+  {
+   "player": "Precious Achiuwa",
+   "team": "SAC",
+   "status": "Out",
+   "date": "2026-11-11T06:04Z",
+   "type": "out",
+   "returnDate": "2026-11-13",
+   "detail": "Bruise",
+   "side": "Left",
+   "injury": "Lower Leg",
+   "fantasyStatus": "OUT",
+   "short": "Achiuwa left Tuesday's 107-100 loss to the Magic with a left lower leg contusion and did not return, Matt George of ABC 10 Sacramento reports.",
+   "long": "With Achiuwa exiting the game after 14 minutes, more minutes became available for Dylan Cardwell. If Achiuwa needs to miss Friday's game against the Trail Blazers, Keegan Murray would likely return to the starting lineup, and Cardwell would have the chance for some extended run."
   },
   {
    "player": "Maxime Raynaud",
