@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-11T19:12+09:00",
+ "asOf": "2026-11-11T23:42+09:00",
  "leagueId": "751654965",
  "season": 2027,
  "teams": [
@@ -97,7 +97,7 @@
     "Daniel Gafford",
     "Darryn Peterson",
     "AJ Dybantsa",
-    "Brayden Burries"
+    "Norman Powell"
    ],
    "ir": [
     "Brandon Miller",
@@ -113,9 +113,9 @@
     "1": 6,
     "2": 7,
     "3": 6,
-    "4": 6
+    "4": 7
    },
-   "acqTotal": 25
+   "acqTotal": 26
   },
   {
    "name": "Zero Sugar",
@@ -170,9 +170,9 @@
     "Julius Randle",
     "Zach LaVine",
     "Jabari Smith Jr.",
-    "Pelle Larsson",
     "Jakob Poeltl",
-    "Rudy Gobert"
+    "Rudy Gobert",
+    "Alex Sarr"
    ],
    "ir": [
     "Ja Morant"
@@ -187,9 +187,9 @@
     "1": 6,
     "2": 7,
     "3": 6,
-    "4": 2
+    "4": 3
    },
-   "acqTotal": 21
+   "acqTotal": 22
   },
   {
    "name": "Kunhyo's Chokeslam",
@@ -207,9 +207,9 @@
     "Dylan Harper",
     "Aday Mara",
     "RJ Barrett",
-    "Dillon Brooks",
     "Fred VanVleet",
-    "Stephon Castle"
+    "Stephon Castle",
+    "Anthony Black"
    ],
    "ir": [
     "Anthony Edwards",
@@ -225,9 +225,9 @@
     "1": 6,
     "2": 2,
     "3": 1,
-    "4": 6
+    "4": 7
    },
-   "acqTotal": 15
+   "acqTotal": 16
   },
   {
    "name": "Songpa Park kezhang",
@@ -281,9 +281,9 @@
     "Jaden McDaniels",
     "Yaxel Lendeborg",
     "Kyshawn George",
-    "Ajay Mitchell",
     "Davion Mitchell",
-    "Andrew Nembhard"
+    "Andrew Nembhard",
+    "Jamal Shead"
    ],
    "ir": [
     "Brandon Ingram"
@@ -297,9 +297,10 @@
    "acqByPeriod": {
     "1": 6,
     "2": 7,
-    "3": 3
+    "3": 3,
+    "4": 1
    },
-   "acqTotal": 16
+   "acqTotal": 17
   }
  ],
  "status": {
@@ -346,8 +347,8 @@
    "Isaiah Joe",
    "Sam Merrill",
    "Sergio de Larrea",
-   "Vit Krejci",
-   "Adem Bona"
+   "Adem Bona",
+   "Vit Krejci"
   ],
   "DTD": [
    "Trey Murphy III",
