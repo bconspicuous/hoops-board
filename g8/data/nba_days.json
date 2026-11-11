@@ -1,90 +1,102 @@
 {
- "asOfET": "2026-11-10T21:41-05:00",
+ "asOfET": "2026-11-11T00:41-05:00",
  "days": {
-  "2026-11-09": [
-   {
-    "id": "401909952",
-    "start": "2026-11-10T00:00Z",
-    "name": "LAL @ ATL",
-    "state": "post"
-   },
-   {
-    "id": "401909953",
-    "start": "2026-11-10T00:00Z",
-    "name": "CLE @ CHA",
-    "state": "post"
-   },
-   {
-    "id": "401909954",
-    "start": "2026-11-10T00:00Z",
-    "name": "WSH @ DET",
-    "state": "post"
-   },
-   {
-    "id": "401909955",
-    "start": "2026-11-10T00:30Z",
-    "name": "MEM @ TOR",
-    "state": "post"
-   },
-   {
-    "id": "401909956",
-    "start": "2026-11-10T01:00Z",
-    "name": "IND @ DAL",
-    "state": "post"
-   },
-   {
-    "id": "401909957",
-    "start": "2026-11-10T01:30Z",
-    "name": "DEN @ HOU",
-    "state": "post"
-   },
-   {
-    "id": "401909958",
-    "start": "2026-11-10T02:00Z",
-    "name": "SA @ PHX",
-    "state": "post"
-   },
-   {
-    "id": "401909959",
-    "start": "2026-11-10T03:00Z",
-    "name": "NO @ GS",
-    "state": "post"
-   }
-  ],
   "2026-11-10": [
    {
     "id": "401909960",
     "start": "2026-11-11T00:30Z",
     "name": "MIL @ NY",
-    "state": "in"
+    "state": "post"
    },
    {
     "id": "401909961",
     "start": "2026-11-11T01:00Z",
     "name": "BOS @ PHI",
-    "state": "in"
+    "state": "post"
    },
    {
     "id": "401909962",
     "start": "2026-11-11T02:00Z",
     "name": "LAC @ PHX",
-    "state": "in"
+    "state": "post"
    },
    {
     "id": "401909963",
     "start": "2026-11-11T02:00Z",
     "name": "MIA @ UTAH",
-    "state": "in"
+    "state": "post"
    },
    {
     "id": "401909964",
     "start": "2026-11-11T03:00Z",
     "name": "ORL @ SAC",
-    "state": "pre"
+    "state": "post"
    },
    {
     "id": "401909965",
     "start": "2026-11-11T04:00Z",
+    "name": "OKC @ POR",
+    "state": "in"
+   }
+  ],
+  "2026-11-11": [
+   {
+    "id": "401909966",
+    "start": "2026-11-12T00:00Z",
+    "name": "WSH @ IND",
+    "state": "pre"
+   },
+   {
+    "id": "401909967",
+    "start": "2026-11-12T00:00Z",
+    "name": "CLE @ NY",
+    "state": "pre"
+   },
+   {
+    "id": "401909968",
+    "start": "2026-11-12T00:00Z",
+    "name": "BOS @ TOR",
+    "state": "pre"
+   },
+   {
+    "id": "401909969",
+    "start": "2026-11-12T01:00Z",
+    "name": "SA @ CHI",
+    "state": "pre"
+   },
+   {
+    "id": "401909970",
+    "start": "2026-11-12T01:00Z",
+    "name": "DEN @ MEM",
+    "state": "pre"
+   },
+   {
+    "id": "401909971",
+    "start": "2026-11-12T01:00Z",
+    "name": "LAL @ MIL",
+    "state": "pre"
+   },
+   {
+    "id": "401909972",
+    "start": "2026-11-12T01:00Z",
+    "name": "BKN @ NO",
+    "state": "pre"
+   },
+   {
+    "id": "401909973",
+    "start": "2026-11-12T02:00Z",
+    "name": "ORL @ UTAH",
+    "state": "pre"
+   },
+   {
+    "id": "401909974",
+    "start": "2026-11-12T02:30Z",
+    "name": "GS @ HOU",
+    "state": "pre"
+   },
+   {
+    "id": "401909975",
+    "start": "2026-11-12T03:00Z",
     "name": "OKC @ POR",
     "state": "pre"
    }
