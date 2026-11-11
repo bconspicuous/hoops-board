@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-11T16:10+09:00",
+ "asOf": "2026-11-11T19:12+09:00",
  "source": "ESPN API sync (GitHub Actions g8-espn)",
  "teams": {
   "Junyoung's Scary Team": {
@@ -68,7 +68,6 @@
   "Zero Sugar": {
    "active": [
     "Victor Wembanyama",
-    "Scottie Barnes",
     "Jalen Brunson",
     "Trae Young",
     "Desmond Bane",
@@ -79,9 +78,11 @@
     "Reed Sheppard",
     "Duncan Robinson",
     "Saddiq Bey",
-    "P.J. Washington"
+    "P.J. Washington",
+    "Jared McCain"
    ],
    "ir": [
+    "Scottie Barnes",
     "Chet Holmgren"
    ]
   },
@@ -118,8 +119,8 @@
     "Aday Mara",
     "RJ Barrett",
     "Dillon Brooks",
-    "Aaron Wiggins",
-    "Fred VanVleet"
+    "Fred VanVleet",
+    "Stephon Castle"
    ],
    "ir": [
     "Anthony Edwards",
