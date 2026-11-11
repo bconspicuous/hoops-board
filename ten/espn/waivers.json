@@ -1,6 +1,6 @@
 {
- "asOf": "2026-11-11T16:16+09:00",
- "scoringPeriodId": 22,
+ "asOf": "2026-11-11T19:45+09:00",
+ "scoringPeriodId": 23,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
   "waiverHours": 24,
@@ -40,7 +40,7 @@
    "team": "IYH",
    "name": "Jongno Karina",
    "rank": 4,
-   "acq": 12
+   "acq": 13
   },
   {
    "team": "Doo",
@@ -106,6 +106,30 @@
   }
  ],
  "transactions": [
+  {
+   "id": "3a3e8742-77cb-4a36-8014-327493e5e3d0",
+   "team": "IYH",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-11 16:41 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Day'Ron Sharpe",
+     "from": "FA",
+     "to": "IYH"
+    },
+    {
+     "type": "DROP",
+     "player": "Jalen Green",
+     "from": "IYH",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
   {
    "id": "4df10db0-8fd0-417c-b3a4-1df9d68c5e79",
    "team": "JYP",
@@ -975,93 +999,20 @@
     }
    ],
    "bid": 0
-  },
-  {
-   "id": "4d5d9619-6b37-489a-8b13-ef72880336b1",
-   "team": "SONG",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-04 09:24 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Aday Mara",
-     "from": "FA",
-     "to": "SONG"
-    },
-    {
-     "type": "DROP",
-     "player": "Jalen Smith",
-     "from": "SONG",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "4bf0bcf4-b65b-4410-825b-b3838b6f7c1a",
-   "team": "GGAM",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-03 22:25 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Nic Claxton",
-     "from": "FA",
-     "to": "GGAM"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "43f44e53-6293-4d1d-9a05-7df1467d25f0",
-   "team": "GGAM",
-   "mine": false,
-   "type": "WAIVER",
-   "status": "CANCELED",
-   "proposed": "2026-11-03 22:22 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "OG Anunoby",
-     "from": "FA",
-     "to": "GGAM"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "b5b7916d-65ad-4bc6-a455-588dae752c4e",
-   "team": "KOO",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-03 19:38 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Jrue Holiday",
-     "from": "FA",
-     "to": "KOO"
-    },
-    {
-     "type": "DROP",
-     "player": "Grayson Allen",
-     "from": "KOO",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
   }
  ],
  "onWaivers": [
+  {
+   "id": 4437244,
+   "name": "Jalen Green",
+   "pro": "PHX",
+   "waiverClears": "2026-11-12 17:00 KST",
+   "inj": "ACTIVE",
+   "droppedBy": {
+    "by": "IYH",
+    "at": "2026-11-11 16:41 KST"
+   }
+  },
   {
    "id": 5144091,
    "name": "Jeremiah Fears",
@@ -1071,17 +1022,6 @@
    "droppedBy": {
     "by": "TBG",
     "at": "2026-11-10 21:50 KST"
-   }
-  },
-  {
-   "id": 4711272,
-   "name": "Reed Sheppard",
-   "pro": "HOU",
-   "waiverClears": "2026-11-11 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "SONG",
-    "at": "2026-11-10 09:35 KST"
    }
   },
   {
@@ -1096,17 +1036,6 @@
    }
   },
   {
-   "id": 4278067,
-   "name": "Nic Claxton",
-   "pro": "CHI",
-   "waiverClears": "2026-11-11 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "GGAM",
-    "at": "2026-11-10 07:21 KST"
-   }
-  },
-  {
    "id": 4592479,
    "name": "Julian Champagnie",
    "pro": "SAS",
@@ -1118,28 +1047,6 @@
    }
   },
   {
-   "id": 4395630,
-   "name": "Devin Vassell",
-   "pro": "SAS",
-   "waiverClears": "2026-11-11 17:00 KST",
-   "inj": "DAY_TO_DAY",
-   "droppedBy": {
-    "by": "SMS",
-    "at": "2026-11-10 08:27 KST"
-   }
-  },
-  {
-   "id": 6475,
-   "name": "Klay Thompson",
-   "pro": "MIA",
-   "waiverClears": "2026-11-11 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "JYP",
-    "at": "2026-11-10 08:21 KST"
-   }
-  },
-  {
    "id": 4433192,
    "name": "Tari Eason",
    "pro": "HOU",
@@ -1148,28 +1055,6 @@
    "droppedBy": {
     "by": "SONG",
     "at": "2026-11-10 22:35 KST"
-   }
-  },
-  {
-   "id": 5093267,
-   "name": "Collin Murray-Boyles",
-   "pro": "TOR",
-   "waiverClears": "2026-11-11 17:00 KST",
-   "inj": "DAY_TO_DAY",
-   "droppedBy": {
-    "by": "IYH",
-    "at": "2026-11-10 08:48 KST"
-   }
-  },
-  {
-   "id": 2995706,
-   "name": "Mario Hezonja",
-   "pro": "CLE",
-   "waiverClears": "2026-11-11 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "TBG",
-    "at": "2026-11-10 13:15 KST"
    }
   }
  ],
