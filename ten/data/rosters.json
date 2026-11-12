@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-12T16:48+09:00",
+ "asOf": "2026-11-12T19:44+09:00",
  "leagueId": "504060248",
  "season": 2027,
  "teams": [
@@ -18,10 +18,10 @@
     "Brandin Podziemski",
     "Ace Bailey",
     "Rudy Gobert",
-    "Neemias Queta",
     "Brayden Burries",
     "Aday Mara",
-    "Day'Ron Sharpe"
+    "Day'Ron Sharpe",
+    "Jeremiah Fears"
    ],
    "ir": [
     "Jaren Jackson Jr."
@@ -34,16 +34,16 @@
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
-    "acquisitions": 13,
-    "drops": 12,
+    "acquisitions": 14,
+    "drops": 13,
     "matchupAcquisitionTotals": {
      "1": 2,
      "2": 3,
      "3": 5,
-     "4": 3
+     "4": 4
     },
     "misc": 0,
-    "moveToActive": 121,
+    "moveToActive": 124,
     "moveToIR": 3,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -90,7 +90,7 @@
      "4": 2
     },
     "misc": 0,
-    "moveToActive": 65,
+    "moveToActive": 67,
     "moveToIR": 1,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -137,7 +137,7 @@
      "4": 3
     },
     "misc": 0,
-    "moveToActive": 81,
+    "moveToActive": 83,
     "moveToIR": 2,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -184,7 +184,7 @@
      "4": 3
     },
     "misc": 0,
-    "moveToActive": 71,
+    "moveToActive": 74,
     "moveToIR": 8,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -230,7 +230,7 @@
      "3": 2
     },
     "misc": 0,
-    "moveToActive": 59,
+    "moveToActive": 62,
     "moveToIR": 3,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -277,7 +277,7 @@
      "4": 1
     },
     "misc": 0,
-    "moveToActive": 67,
+    "moveToActive": 70,
     "moveToIR": 2,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -296,13 +296,13 @@
     "Dyson Daniels",
     "Dylan Harper",
     "Immanuel Quickley",
-    "Tristan da Silva",
     "Pelle Larsson",
     "Giannis Antetokounmpo",
     "Julius Randle",
     "Jared McCain",
     "Payton Pritchard",
-    "Obi Toppin"
+    "Obi Toppin",
+    "John Collins"
    ],
    "ir": [
     "Anthony Edwards"
@@ -324,7 +324,7 @@
      "4": 4
     },
     "misc": 0,
-    "moveToActive": 72,
+    "moveToActive": 76,
     "moveToIR": 2,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -349,7 +349,7 @@
     "Andrew Nembhard",
     "Grayson Allen",
     "Jamal Shead",
-    "Kyle Kuzma"
+    "Paul Reed"
    ],
    "ir": [
     "Kawhi Leonard"
@@ -362,16 +362,16 @@
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
-    "acquisitions": 14,
-    "drops": 13,
+    "acquisitions": 15,
+    "drops": 14,
     "matchupAcquisitionTotals": {
      "1": 4,
      "2": 6,
      "3": 2,
-     "4": 2
+     "4": 3
     },
     "misc": 0,
-    "moveToActive": 83,
+    "moveToActive": 87,
     "moveToIR": 6,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -396,7 +396,7 @@
     "Yaxel Lendeborg",
     "Cam Spencer",
     "OG Anunoby",
-    "Andre Drummond"
+    "Naji Marshall"
    ],
    "ir": [],
    "record": {
@@ -416,7 +416,7 @@
      "4": 2
     },
     "misc": 0,
-    "moveToActive": 63,
+    "moveToActive": 66,
     "moveToIR": 3,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -459,7 +459,7 @@
      "3": 1
     },
     "misc": 0,
-    "moveToActive": 54,
+    "moveToActive": 57,
     "moveToIR": 2,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -480,7 +480,6 @@
    "Brandon Miller",
    "Norman Powell",
    "Anthony Edwards",
-   "Tristan da Silva",
    "Kawhi Leonard",
    "Ajay Mitchell",
    "Trey Murphy III",
@@ -501,8 +500,8 @@
    "Bennedict Mathurin",
    "Cason Wallace",
    "Jusuf Nurkic",
-   "Mikel Brown Jr.",
    "Shaedon Sharpe",
+   "Mikel Brown Jr.",
    "Mark Williams",
    "Dereck Lively II",
    "Dennis Schroder",
@@ -516,9 +515,9 @@
    "Isaiah Joe",
    "Sam Merrill",
    "Sergio de Larrea",
-   "Jamal Cain",
    "Adem Bona",
    "Vit Krejci",
+   "Jamal Cain",
    "Clint Capela",
    "Yanic Konan Niederhauser",
    "Moses Moody",

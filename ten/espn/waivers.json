@@ -1,6 +1,6 @@
 {
- "asOf": "2026-11-12T16:48+09:00",
- "scoringPeriodId": 23,
+ "asOf": "2026-11-12T19:44+09:00",
+ "scoringPeriodId": 24,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
   "waiverHours": 24,
@@ -37,75 +37,98 @@
    "acq": 14
   },
   {
-   "team": "IYH",
-   "name": "Jongno Karina",
-   "rank": 4,
-   "acq": 13
-  },
-  {
    "team": "Doo",
    "name": "Helio honeymoons",
-   "rank": 5,
+   "rank": 4,
    "acq": 6
   },
   {
    "team": "KOO",
    "name": "Seoul Dreamers",
-   "rank": 6,
+   "rank": 5,
    "acq": 7
   },
   {
    "team": "SONG",
    "name": "Kfinco_ThePianist",
-   "rank": 7,
+   "rank": 6,
    "acq": 17
   },
   {
    "team": "JYP",
    "name": "PaloAlto Wenoja",
-   "rank": 8,
+   "rank": 7,
    "acq": 10
   },
   {
    "team": "GTD",
    "name": "Garak Twindragons",
-   "rank": 9,
-   "acq": 14
+   "rank": 8,
+   "acq": 15
   },
   {
    "team": "SMS",
    "name": "Samseong Homeless",
-   "rank": 10,
+   "rank": 9,
    "acq": 11
+  },
+  {
+   "team": "IYH",
+   "name": "Jongno Karina",
+   "rank": 10,
+   "acq": 14
   }
  ],
- "myPending": [
+ "myPending": [],
+ "transactions": [
   {
-   "id": "47d11560-854a-48aa-8789-e949b1f151a8",
+   "id": "80dce3a8-2973-4d86-8b0f-939e2bbda87f",
    "team": "GTD",
    "mine": true,
-   "type": "WAIVER",
-   "status": "PENDING",
-   "proposed": "2026-11-05 14:18 KST",
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-12 19:31 KST",
    "processed": null,
    "items": [
     {
      "type": "ADD",
-     "player": "Grayson Allen",
+     "player": "Paul Reed",
      "from": "FA",
      "to": "GTD"
     },
     {
      "type": "DROP",
-     "player": "Zaccharie Risacher",
+     "player": "Kyle Kuzma",
      "from": "GTD",
      "to": "FA"
     }
    ],
    "bid": 0
-  }
- ],
- "transactions": [
+  },
+  {
+   "id": "f34e23ea-ae6c-44cb-aeb1-621bae471310",
+   "team": "IYH",
+   "mine": false,
+   "type": "WAIVER",
+   "status": "EXECUTED",
+   "proposed": "2026-11-12 17:41 KST",
+   "processed": "2026-11-12 17:41 KST",
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Jeremiah Fears",
+     "from": "FA",
+     "to": "IYH"
+    },
+    {
+     "type": "DROP",
+     "player": "Neemias Queta",
+     "from": "IYH",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
   {
    "id": "a98e18df-c0da-4cff-8b67-e99f875b7055",
    "team": "TBG",
@@ -117,7 +140,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "3908845",
+     "player": "John Collins",
      "from": "FA",
      "to": "TBG"
     },
@@ -141,7 +164,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "4278594",
+     "player": "Naji Marshall",
      "from": "FA",
      "to": "JYP"
     },
@@ -897,288 +920,6 @@
     }
    ],
    "bid": 0
-  },
-  {
-   "id": "825602ab-7e8a-4f11-94f4-607adceaba43",
-   "team": "JYP",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-05 15:57 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Klay Thompson",
-     "from": "FA",
-     "to": "JYP"
-    },
-    {
-     "type": "DROP",
-     "player": "Kon Knueppel",
-     "from": "JYP",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "108603df-8b46-4edb-a759-322cb433d6d4",
-   "team": "SONG",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-05 14:20 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Jonathan Kuminga",
-     "from": "FA",
-     "to": "SONG"
-    },
-    {
-     "type": "DROP",
-     "player": "Christian Braun",
-     "from": "SONG",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "47d11560-854a-48aa-8789-e949b1f151a8",
-   "team": "GTD",
-   "mine": true,
-   "type": "WAIVER",
-   "status": "PENDING",
-   "proposed": "2026-11-05 14:18 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Grayson Allen",
-     "from": "FA",
-     "to": "GTD"
-    },
-    {
-     "type": "DROP",
-     "player": "Zaccharie Risacher",
-     "from": "GTD",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "ca24b20b-01ef-4349-9a2f-d3daff61f8c7",
-   "team": "IYH",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-05 13:55 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Jalen Green",
-     "from": "FA",
-     "to": "IYH"
-    },
-    {
-     "type": "DROP",
-     "player": "Payton Pritchard",
-     "from": "IYH",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "ba1962ae-bed6-48ea-b2b4-190edbf9c94a",
-   "team": "TBG",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-05 12:50 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Jeremiah Fears",
-     "from": "FA",
-     "to": "TBG"
-    },
-    {
-     "type": "DROP",
-     "player": "3908845",
-     "from": "TBG",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "a6a2f8ab-3070-4822-8b2e-07edd436d86f",
-   "team": "KWNG",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-05 08:13 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Saddiq Bey",
-     "from": "FA",
-     "to": "KWNG"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "e88295a7-21ee-42c7-8a07-8371cb7efd33",
-   "team": "GTD",
-   "mine": true,
-   "type": "WAIVER",
-   "status": "FAILED_INVALIDPLAYERSOURCE",
-   "proposed": "2026-11-04 17:03 KST",
-   "processed": "2026-11-04 17:03 KST",
-   "items": [
-    {
-     "type": "ADD",
-     "player": "OG Anunoby",
-     "from": "FA",
-     "to": "GTD"
-    },
-    {
-     "type": "DROP",
-     "player": "Zaccharie Risacher",
-     "from": "GTD",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "f7a8b8be-f6fc-45be-850e-04f00a75b7db",
-   "team": "IYH",
-   "mine": false,
-   "type": "WAIVER",
-   "status": "FAILED_INVALIDPLAYERSOURCE",
-   "proposed": "2026-11-04 17:03 KST",
-   "processed": "2026-11-04 17:03 KST",
-   "items": [
-    {
-     "type": "ADD",
-     "player": "OG Anunoby",
-     "from": "FA",
-     "to": "IYH"
-    },
-    {
-     "type": "DROP",
-     "player": "Payton Pritchard",
-     "from": "IYH",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "5deeadd2-7694-47aa-8ea2-bb73a72bd857",
-   "team": "KOO",
-   "mine": false,
-   "type": "WAIVER",
-   "status": "FAILED_INVALIDPLAYERSOURCE",
-   "proposed": "2026-11-04 17:03 KST",
-   "processed": "2026-11-04 17:03 KST",
-   "items": [
-    {
-     "type": "ADD",
-     "player": "OG Anunoby",
-     "from": "FA",
-     "to": "KOO"
-    },
-    {
-     "type": "DROP",
-     "player": "Matisse Thybulle",
-     "from": "KOO",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "0997aebd-4b0d-4f5c-a42b-53bc92951ec9",
-   "team": "TBG",
-   "mine": false,
-   "type": "WAIVER",
-   "status": "FAILED_INVALIDPLAYERSOURCE",
-   "proposed": "2026-11-04 17:03 KST",
-   "processed": "2026-11-04 17:03 KST",
-   "items": [
-    {
-     "type": "ADD",
-     "player": "OG Anunoby",
-     "from": "FA",
-     "to": "TBG"
-    },
-    {
-     "type": "DROP",
-     "player": "3908845",
-     "from": "TBG",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "5eb331e1-7758-4184-8ac2-1f6838e5de2d",
-   "team": "JYP",
-   "mine": false,
-   "type": "WAIVER",
-   "status": "EXECUTED",
-   "proposed": "2026-11-04 17:03 KST",
-   "processed": "2026-11-04 17:03 KST",
-   "items": [
-    {
-     "type": "ADD",
-     "player": "OG Anunoby",
-     "from": "FA",
-     "to": "JYP"
-    },
-    {
-     "type": "DROP",
-     "player": "Tobias Harris",
-     "from": "JYP",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "130bf8a7-fa14-4e72-a4f3-a7aefcadc0d0",
-   "team": "KWNG",
-   "mine": false,
-   "type": "WAIVER",
-   "status": "FAILED_INVALIDPLAYERSOURCE",
-   "proposed": "2026-11-04 17:03 KST",
-   "processed": "2026-11-04 17:03 KST",
-   "items": [
-    {
-     "type": "ADD",
-     "player": "OG Anunoby",
-     "from": "FA",
-     "to": "KWNG"
-    },
-    {
-     "type": "DROP",
-     "player": "Aaron Wiggins",
-     "from": "KWNG",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
   }
  ],
  "onWaivers": [
@@ -1194,39 +935,6 @@
    }
   },
   {
-   "id": 4437244,
-   "name": "Jalen Green",
-   "pro": "PHX",
-   "waiverClears": "2026-11-12 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "IYH",
-    "at": "2026-11-11 16:41 KST"
-   }
-  },
-  {
-   "id": 5144091,
-   "name": "Jeremiah Fears",
-   "pro": "NOP",
-   "waiverClears": "2026-11-12 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "TBG",
-    "at": "2026-11-10 21:50 KST"
-   }
-  },
-  {
-   "id": 4278049,
-   "name": "Daniel Gafford",
-   "pro": "DAL",
-   "waiverClears": "2026-11-12 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "GTD",
-    "at": "2026-11-10 19:57 KST"
-   }
-  },
-  {
    "id": 4433249,
    "name": "Moussa Diabate",
    "pro": "CHA",
@@ -1235,17 +943,6 @@
    "droppedBy": {
     "by": "Doo",
     "at": "2026-11-12 08:48 KST"
-   }
-  },
-  {
-   "id": 4592479,
-   "name": "Julian Champagnie",
-   "pro": "SAS",
-   "waiverClears": "2026-11-12 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "JYP",
-    "at": "2026-11-11 06:37 KST"
    }
   },
   {
@@ -1260,6 +957,17 @@
    }
   },
   {
+   "id": 4397424,
+   "name": "Neemias Queta",
+   "pro": "BOS",
+   "waiverClears": "2026-11-13 17:00 KST",
+   "inj": "ACTIVE",
+   "droppedBy": {
+    "by": "IYH",
+    "at": "2026-11-12 17:41 KST"
+   }
+  },
+  {
    "id": 4431679,
    "name": "Precious Achiuwa",
    "pro": "SAC",
@@ -1271,14 +979,14 @@
    }
   },
   {
-   "id": 4433192,
-   "name": "Tari Eason",
-   "pro": "HOU",
-   "waiverClears": "2026-11-12 17:00 KST",
+   "id": 3134907,
+   "name": "Kyle Kuzma",
+   "pro": "MIL",
+   "waiverClears": "2026-11-14 17:00 KST",
    "inj": "ACTIVE",
    "droppedBy": {
-    "by": "SONG",
-    "at": "2026-11-10 22:35 KST"
+    "by": "GTD",
+    "at": "2026-11-12 19:31 KST"
    }
   },
   {
