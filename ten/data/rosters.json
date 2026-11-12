@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-12T14:28+09:00",
+ "asOf": "2026-11-12T15:04+09:00",
  "leagueId": "504060248",
  "season": 2027,
  "teams": [
@@ -328,7 +328,7 @@
     "moveToIR": 2,
     "paid": 0.0,
     "teamCharges": 0.0,
-    "trades": 2
+    "trades": 3
    }
   },
   {
@@ -463,7 +463,7 @@
     "moveToIR": 2,
     "paid": 0.0,
     "teamCharges": 0.0,
-    "trades": 0
+    "trades": 1
    }
   }
  ],
@@ -515,8 +515,8 @@
    "Ben Simmons",
    "Isaiah Joe",
    "Sam Merrill",
-   "Jamal Cain",
    "Sergio de Larrea",
+   "Jamal Cain",
    "Adem Bona",
    "Vit Krejci",
    "Clint Capela",

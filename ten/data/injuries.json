@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-12T14:28+09:00",
+ "asOf": "2026-11-12T15:04+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -357,15 +357,15 @@
    "player": "Stephen Curry",
    "team": "GS",
    "status": "Day-To-Day",
-   "date": "2026-11-12T03:19Z",
+   "date": "2026-11-12T05:39Z",
    "type": "day-to-day",
    "returnDate": "2026-11-13",
    "detail": "Soreness",
    "side": "Right",
    "injury": "Abdomen",
    "fantasyStatus": "GTD",
-   "short": "Curry won't return to Wednesday's game against the Rockets due to right abdominal soreness, Anthony Slater of ESPN.com reports. He'll finish with three points (1-3 FG, 1-2 3Pt) across six minutes.",
-   "long": "Curry was seen grabbing at his right side multiple times before heading back to the locker room in the opening quarter. The superstar floor general's status will be worth monitoring ahead of Friday's game at San Antonio. With Curry sidelined, LJ Cryer and De'Anthony Melton are candidates for increased playing time."
+   "short": "Steve Kerr told reporters Wednesday that Curry said he tweaked something in his abdominal area and \"had never done it before.\" Kerr added that the concern level is high, but they will await the MRI results, Kelly Iko of Yahoo Sports reports.",
+   "long": "For now, Curry should be considered highly questionable for Friday's game in San Antonio. De'Anthony Melton started the second half for him after he left Wednesday's game, so Melton will likely get the starting nod if Curry can't play Friday. Brandin Podziemski and Yaxel Lendeborg should also see plenty of offensive opportunities sans Curry."
   },
   {
    "player": "Gary Payton II",
