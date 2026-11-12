@@ -15,7 +15,9 @@ const TCODE = { SA: 'SAS', NY: 'NYK', GS: 'GSW', NO: 'NOR', UTAH: 'UTA', WSH: 'W
 const P = PJ.players.map((p, id) => ({ id, name: p.name, abbr: p.abbr, sc: TCODE[p.abbr] || p.abbr, pos: p.pos, elig: p.elig.split(/[,\/]/).map(s => s.trim()),
   gp: p.gp, TWg: p.TWg, DDg: p.DDg, f: p.final, espnRank: p.espnRank, method: p.method, status: '' }));
 const BY = {}; P.forEach(p => BY[p.name] = p);
-const O = new Set(R.status.O), DTD = new Set(R.status.DTD);
+// user override (user_plan gpOverride): expected games per 82 = this season's games played / team games
+for (const [n, g] of Object.entries(R.gpOverride || {})) if (BY[n]) BY[n].gp = g;
+const O =new Set(R.status.O), DTD = new Set(R.status.DTD);
 P.forEach(p => { p.status = O.has(p.name) ? 'O' : DTD.has(p.name) ? 'DTD' : ''; });
 // role boost (user): a player inherits another player's per-game line (e.g. Ajay Mitchell takes Jalen Williams's role)
 for (const [to, from] of Object.entries(R.boost || {})) if (BY[to] && BY[from]) { BY[to].f = { ...BY[from].f }; BY[to].DDg = BY[from].DDg; BY[to].boosted = from; }

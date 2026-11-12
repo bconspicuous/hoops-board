@@ -46,7 +46,9 @@
   "Dejounte Murray"
  ],
  "coreNote": "사용자 지정 상위 10명 고정(방출 금지). 로스터에 없는 선수는 자동 제외.",
- "notes": {},
+ "notes": {
+  "gpOverride": "사용자 요청(11/12): Mitchell·George는 올 시즌 출전율로 출전 경기 가정(Mitchell 12/12 → 82, George 10/12 → 68). 경기당 성적은 원래 올 시즌 실제 기록 사용."
+ },
  "pendingTrades": [
   {
    "a": "KOO",
@@ -74,5 +76,9 @@
    "effective": "2026-11-13",
    "note": "ESPN 11/12 13:12 수락, 리뷰 중 · 사용자 요청으로 실행 전제"
   }
- ]
+ ],
+ "gpOverride": {
+  "Donovan Mitchell": 82.0,
+  "Paul George": 68.3
+ }
 }
