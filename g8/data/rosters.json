@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-12T04:52+09:00",
+ "asOf": "2026-11-12T11:41+09:00",
  "leagueId": "751654965",
  "season": 2027,
  "teams": [
@@ -37,9 +37,9 @@
     "1": 4,
     "2": 3,
     "3": 2,
-    "4": 1
+    "4": 2
    },
-   "acqTotal": 10
+   "acqTotal": 11
   },
   {
    "name": "Gatori Team",
@@ -92,16 +92,16 @@
     "Austin Reaves",
     "Kyrie Irving",
     "Michael Porter Jr.",
+    "Tyler Herro",
     "Miles Bridges",
     "Jeremiah Fears",
     "Daniel Gafford",
     "Darryn Peterson",
-    "AJ Dybantsa",
-    "Norman Powell"
+    "AJ Dybantsa"
    ],
    "ir": [
     "Brandon Miller",
-    "Tyler Herro"
+    "Norman Powell"
    ],
    "record": {
     "wins": 20,
@@ -245,12 +245,13 @@
     "Joel Embiid",
     "Caleb Wilson",
     "Payton Pritchard",
-    "Paul George",
     "CJ McCollum",
-    "Jalen Green"
+    "Jalen Green",
+    "Toumani Camara"
    ],
    "ir": [
-    "Tyrese Haliburton"
+    "Tyrese Haliburton",
+    "Paul George"
    ],
    "record": {
     "wins": 16,
@@ -261,9 +262,9 @@
    "acqByPeriod": {
     "2": 2,
     "3": 1,
-    "4": 1
+    "4": 2
    },
-   "acqTotal": 4
+   "acqTotal": 5
   },
   {
    "name": "Brand_New_Neo_HJ",
@@ -298,9 +299,9 @@
     "1": 6,
     "2": 7,
     "3": 3,
-    "4": 1
+    "4": 2
    },
-   "acqTotal": 17
+   "acqTotal": 18
   }
  ],
  "status": {
@@ -309,7 +310,10 @@
    "Yves Missi",
    "Jalen Williams",
    "Lauri Markkanen",
+   "Trey Murphy III",
    "Myles Turner",
+   "Brandon Miller",
+   "Norman Powell",
    "Scottie Barnes",
    "Chet Holmgren",
    "Ja Morant",
@@ -320,23 +324,25 @@
    "Paul George",
    "Brandon Ingram",
    "Kon Knueppel",
-   "Josh Hart",
+   "Ajay Mitchell",
    "Jaren Jackson Jr.",
    "Tobias Harris",
+   "Devin Vassell",
    "Kristaps Porzingis",
    "Jimmy Butler III",
    "Quentin Grimes",
    "Jalen Suggs",
+   "Nolan Traore",
+   "Tristan da Silva",
    "Scotty Pippen Jr.",
    "Bennedict Mathurin",
    "Cason Wallace",
-   "Mikel Brown Jr.",
    "Jusuf Nurkic",
+   "Mikel Brown Jr.",
    "Shaedon Sharpe",
    "Mark Williams",
    "Dereck Lively II",
    "Dennis Schroder",
-   "Jaylon Tyson",
    "Donte DiVincenzo",
    "Maxime Raynaud",
    "Bradley Beal",
@@ -346,29 +352,19 @@
    "Ben Simmons",
    "Isaiah Joe",
    "Sam Merrill",
+   "Jamal Cain",
    "Sergio de Larrea",
    "Adem Bona",
    "Vit Krejci"
   ],
   "DTD": [
-   "Trey Murphy III",
-   "Immanuel Quickley",
-   "Karl-Anthony Towns",
-   "Brandon Miller",
-   "Tyler Herro",
-   "Norman Powell",
+   "LeBron James",
+   "Joel Embiid",
    "Caleb Wilson",
-   "Keyonte George",
    "Moussa Diabate",
-   "Devin Vassell",
    "Precious Achiuwa",
-   "Nolan Traore",
-   "Collin Murray-Boyles",
-   "Tristan da Silva",
-   "T.J. McConnell",
-   "Morez Johnson Jr.",
-   "Isaiah Stewart",
-   "Jamal Cain"
+   "Aaron Nesmith",
+   "Morez Johnson Jr."
   ]
  }
 }
