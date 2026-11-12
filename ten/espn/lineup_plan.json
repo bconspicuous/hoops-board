@@ -1,43 +1,108 @@
 {
- "date": "2026-11-11",
- "scoringPeriodId": 23,
- "hash": "ce8d5545c6",
- "createdKST": "2026-11-12T13:53+09:00",
+ "date": "2026-11-12",
+ "scoringPeriodId": 24,
+ "hash": "3e04a57bf5",
+ "createdKST": "2026-11-12T19:32+09:00",
  "mode": "plan",
- "moves": [],
+ "moves": [
+  {
+   "playerId": 3062679,
+   "name": "Josh Hart",
+   "from": 6,
+   "to": 1,
+   "fromSlot": "F",
+   "toSlot": "SG"
+  },
+  {
+   "playerId": 4431736,
+   "name": "Toumani Camara",
+   "from": 3,
+   "to": 2,
+   "fromSlot": "PF",
+   "toSlot": "SF"
+  },
+  {
+   "playerId": 4066383,
+   "name": "Miles Bridges",
+   "from": 2,
+   "to": 6,
+   "fromSlot": "SF",
+   "toSlot": "F"
+  },
+  {
+   "playerId": 3157465,
+   "name": "Duncan Robinson",
+   "from": 1,
+   "to": 5,
+   "fromSlot": "SG",
+   "toSlot": "G"
+  },
+  {
+   "playerId": 4395712,
+   "name": "Andrew Nembhard",
+   "from": 11,
+   "to": 12,
+   "fromSlot": "UTIL",
+   "toSlot": "BE"
+  },
+  {
+   "playerId": 3135045,
+   "name": "Grayson Allen",
+   "from": 5,
+   "to": 0,
+   "fromSlot": "G",
+   "toSlot": "PG"
+  },
+  {
+   "playerId": 4432241,
+   "name": "Jamal Shead",
+   "from": 0,
+   "to": 11,
+   "fromSlot": "PG",
+   "toSlot": "UTIL"
+  },
+  {
+   "playerId": 4278562,
+   "name": "Paul Reed",
+   "from": 12,
+   "to": 3,
+   "fromSlot": "BE",
+   "toSlot": "PF"
+  }
+ ],
  "lineup": [
   {
    "slot": "PG",
-   "cur": "PG",
-   "name": "Donovan Mitchell",
-   "pro": "CLE",
+   "cur": "G",
+   "name": "Grayson Allen",
+   "pro": "CHA",
    "game": true,
    "inj": "ACTIVE",
    "out": false
   },
   {
    "slot": "SG",
-   "cur": "SG",
-   "name": "Dejounte Murray",
-   "pro": "NOP",
-   "game": true,
+   "cur": "F",
+   "name": "Josh Hart",
+   "pro": "NYK",
+   "game": false,
    "inj": "ACTIVE",
    "out": false
   },
   {
    "slot": "SF",
-   "cur": "SF",
-   "name": "Josh Hart",
-   "pro": "NYK",
-   "game": true,
+   "cur": "PF",
+   "name": "Toumani Camara",
+   "pro": "POR",
+   "game": false,
    "inj": "ACTIVE",
    "out": false
   },
   {
    "slot": "PF",
-   "cur": "PF",
-   "name": "Kyle Kuzma",
-   "pro": "MIL",
+   "cur": "BE",
+   "name": "Paul Reed",
+   "pro": "DET",
    "game": true,
    "inj": "ACTIVE",
    "out": false
@@ -47,24 +112,24 @@
    "cur": "C",
    "name": "Karl-Anthony Towns",
    "pro": "NYK",
-   "game": true,
+   "game": false,
    "inj": "ACTIVE",
    "out": false
   },
   {
    "slot": "G",
-   "cur": "G",
-   "name": "Andrew Nembhard",
-   "pro": "IND",
+   "cur": "SG",
+   "name": "Duncan Robinson",
+   "pro": "DET",
    "game": true,
    "inj": "ACTIVE",
    "out": false
   },
   {
    "slot": "F",
-   "cur": "F",
-   "name": "Toumani Camara",
-   "pro": "POR",
+   "cur": "SF",
+   "name": "Miles Bridges",
+   "pro": "PHX",
    "game": true,
    "inj": "ACTIVE",
    "out": false
@@ -72,9 +137,9 @@
   {
    "slot": "UTIL",
    "cur": "UTIL",
-   "name": "Ivica Zubac",
-   "pro": "IND",
-   "game": true,
+   "name": "Donovan Mitchell",
+   "pro": "CLE",
+   "game": false,
    "inj": "ACTIVE",
    "out": false
   },
@@ -83,13 +148,13 @@
    "cur": "UTIL",
    "name": "Ajay Mitchell",
    "pro": "OKC",
-   "game": true,
+   "game": false,
    "inj": "OUT",
    "out": true
   },
   {
    "slot": "UTIL",
-   "cur": "UTIL",
+   "cur": "PG",
    "name": "Jamal Shead",
    "pro": "TOR",
    "game": true,
@@ -99,8 +164,8 @@
   {
    "slot": "BE",
    "cur": "BE",
-   "name": "Miles Bridges",
-   "pro": "PHX",
+   "name": "Dejounte Murray",
+   "pro": "NOP",
    "game": false,
    "inj": "ACTIVE",
    "out": false
@@ -108,17 +173,17 @@
   {
    "slot": "BE",
    "cur": "BE",
-   "name": "Duncan Robinson",
-   "pro": "DET",
+   "name": "Ivica Zubac",
+   "pro": "IND",
    "game": false,
    "inj": "ACTIVE",
    "out": false
   },
   {
    "slot": "BE",
-   "cur": "BE",
-   "name": "Grayson Allen",
-   "pro": "CHA",
+   "cur": "UTIL",
+   "name": "Andrew Nembhard",
+   "pro": "IND",
    "game": false,
    "inj": "ACTIVE",
    "out": false
@@ -128,6 +193,6 @@
   "Kawhi Leonard"
  ],
  "irReturn": [],
- "playing": 9,
+ "playing": 5,
  "status": "planned"
 }
