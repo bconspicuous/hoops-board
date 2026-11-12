@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-12T14:43+09:00",
+ "asOf": "2026-11-12T19:11+09:00",
  "source": "ESPN API sync (GitHub Actions g8-espn)",
  "teams": {
   "Junyoung's Scary Team": {
@@ -16,7 +16,7 @@
     "Ayo Dosunmu",
     "Wendell Carter Jr.",
     "Collin Gillespie",
-    "Mikal Bridges"
+    "Jamal Shead"
    ],
    "ir": [
     "Paolo Banchero",
@@ -140,8 +140,7 @@
     "Caleb Wilson",
     "Payton Pritchard",
     "CJ McCollum",
-    "Jalen Green",
-    "Toumani Camara"
+    "Jalen Green"
    ],
    "ir": [
     "Tyrese Haliburton",
@@ -161,8 +160,8 @@
     "Yaxel Lendeborg",
     "Kyshawn George",
     "Davion Mitchell",
-    "Andrew Nembhard",
-    "Jamal Shead"
+    "Daniss Jenkins",
+    "Keyonte George"
    ],
    "ir": [
     "Brandon Ingram"
@@ -201,8 +200,8 @@
   "Bennedict Mathurin": "O",
   "Cason Wallace": "O",
   "Jusuf Nurkic": "O",
-  "Mikel Brown Jr.": "O",
   "Shaedon Sharpe": "O",
+  "Mikel Brown Jr.": "O",
   "Mark Williams": "O",
   "Dereck Lively II": "O",
   "Dennis Schroder": "O",
@@ -216,7 +215,7 @@
   "Isaiah Joe": "O",
   "Sam Merrill": "O",
   "Sergio de Larrea": "O",
-  "Jamal Cain": "O",
+  "Adem Bona": "O",
   "Stephen Curry": "DTD",
   "Austin Reaves": "DTD",
   "Luka Doncic": "DTD",
@@ -270,9 +269,9 @@
   "Cason Wallace": "2027-03-02",
   "Chet Holmgren": "2027-01-02",
   "Tristan da Silva": "2026-11-13",
-  "Jamal Cain": "2026-11-13",
   "Jalen Suggs": "2026-11-16",
   "Paolo Banchero": "2026-11-22",
+  "Adem Bona": "2026-11-18",
   "Mark Williams": "2027-02-03",
   "Ja Morant": "2026-12-01",
   "Shaedon Sharpe": "2027-03-02",
