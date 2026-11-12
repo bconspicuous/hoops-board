@@ -1,79 +1,14 @@
 {
  "date": "2026-11-12",
  "scoringPeriodId": 24,
- "hash": "3e04a57bf5",
- "createdKST": "2026-11-12T19:32+09:00",
- "mode": "execute",
- "moves": [
-  {
-   "playerId": 3062679,
-   "name": "Josh Hart",
-   "from": 6,
-   "to": 1,
-   "fromSlot": "F",
-   "toSlot": "SG"
-  },
-  {
-   "playerId": 4431736,
-   "name": "Toumani Camara",
-   "from": 3,
-   "to": 2,
-   "fromSlot": "PF",
-   "toSlot": "SF"
-  },
-  {
-   "playerId": 4066383,
-   "name": "Miles Bridges",
-   "from": 2,
-   "to": 6,
-   "fromSlot": "SF",
-   "toSlot": "F"
-  },
-  {
-   "playerId": 3157465,
-   "name": "Duncan Robinson",
-   "from": 1,
-   "to": 5,
-   "fromSlot": "SG",
-   "toSlot": "G"
-  },
-  {
-   "playerId": 4395712,
-   "name": "Andrew Nembhard",
-   "from": 11,
-   "to": 12,
-   "fromSlot": "UTIL",
-   "toSlot": "BE"
-  },
-  {
-   "playerId": 3135045,
-   "name": "Grayson Allen",
-   "from": 5,
-   "to": 0,
-   "fromSlot": "G",
-   "toSlot": "PG"
-  },
-  {
-   "playerId": 4432241,
-   "name": "Jamal Shead",
-   "from": 0,
-   "to": 11,
-   "fromSlot": "PG",
-   "toSlot": "UTIL"
-  },
-  {
-   "playerId": 4278562,
-   "name": "Paul Reed",
-   "from": 12,
-   "to": 3,
-   "fromSlot": "BE",
-   "toSlot": "PF"
-  }
- ],
+ "hash": "383fae9da9",
+ "createdKST": "2026-11-12T19:48+09:00",
+ "mode": "plan",
+ "moves": [],
  "lineup": [
   {
    "slot": "PG",
-   "cur": "G",
+   "cur": "PG",
    "name": "Grayson Allen",
    "pro": "CHA",
    "game": true,
@@ -82,7 +17,7 @@
   },
   {
    "slot": "SG",
-   "cur": "F",
+   "cur": "SG",
    "name": "Josh Hart",
    "pro": "NYK",
    "game": false,
@@ -91,7 +26,7 @@
   },
   {
    "slot": "SF",
-   "cur": "PF",
+   "cur": "SF",
    "name": "Toumani Camara",
    "pro": "POR",
    "game": false,
@@ -100,7 +35,7 @@
   },
   {
    "slot": "PF",
-   "cur": "BE",
+   "cur": "PF",
    "name": "Paul Reed",
    "pro": "DET",
    "game": true,
@@ -118,7 +53,7 @@
   },
   {
    "slot": "G",
-   "cur": "SG",
+   "cur": "G",
    "name": "Duncan Robinson",
    "pro": "DET",
    "game": true,
@@ -127,7 +62,7 @@
   },
   {
    "slot": "F",
-   "cur": "SF",
+   "cur": "F",
    "name": "Miles Bridges",
    "pro": "PHX",
    "game": true,
@@ -154,7 +89,7 @@
   },
   {
    "slot": "UTIL",
-   "cur": "PG",
+   "cur": "UTIL",
    "name": "Jamal Shead",
    "pro": "TOR",
    "game": true,
@@ -181,7 +116,7 @@
   },
   {
    "slot": "BE",
-   "cur": "UTIL",
+   "cur": "BE",
    "name": "Andrew Nembhard",
    "pro": "IND",
    "game": false,
@@ -194,21 +129,5 @@
  ],
  "irReturn": [],
  "playing": 5,
- "status": "executed",
- "espn": {
-  "http": 200,
-  "status": "EXECUTED",
-  "type": "ROSTER",
-  "id": "e79650a7-55ae-400b-b81e-2aa156ab63f6"
- },
- "applied": [
-  "Josh Hart",
-  "Toumani Camara",
-  "Miles Bridges",
-  "Duncan Robinson",
-  "Andrew Nembhard",
-  "Grayson Allen",
-  "Jamal Shead",
-  "Paul Reed"
- ]
+ "status": "planned"
 }
