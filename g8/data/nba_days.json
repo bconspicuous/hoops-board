@@ -1,44 +1,6 @@
 {
- "asOfET": "2026-11-11T21:41-05:00",
+ "asOfET": "2026-11-12T00:43-05:00",
  "days": {
-  "2026-11-10": [
-   {
-    "id": "401909960",
-    "start": "2026-11-11T00:30Z",
-    "name": "MIL @ NY",
-    "state": "post"
-   },
-   {
-    "id": "401909961",
-    "start": "2026-11-11T01:00Z",
-    "name": "BOS @ PHI",
-    "state": "post"
-   },
-   {
-    "id": "401909962",
-    "start": "2026-11-11T02:00Z",
-    "name": "LAC @ PHX",
-    "state": "post"
-   },
-   {
-    "id": "401909963",
-    "start": "2026-11-11T02:00Z",
-    "name": "MIA @ UTAH",
-    "state": "post"
-   },
-   {
-    "id": "401909964",
-    "start": "2026-11-11T03:00Z",
-    "name": "ORL @ SAC",
-    "state": "post"
-   },
-   {
-    "id": "401909965",
-    "start": "2026-11-11T04:00Z",
-    "name": "OKC @ POR",
-    "state": "post"
-   }
-  ],
   "2026-11-11": [
    {
     "id": "401909966",
@@ -62,42 +24,68 @@
     "id": "401909969",
     "start": "2026-11-12T01:00Z",
     "name": "SA @ CHI",
-    "state": "in"
+    "state": "post"
    },
    {
     "id": "401909970",
     "start": "2026-11-12T01:00Z",
     "name": "DEN @ MEM",
-    "state": "in"
+    "state": "post"
    },
    {
     "id": "401909971",
     "start": "2026-11-12T01:00Z",
     "name": "LAL @ MIL",
-    "state": "in"
+    "state": "post"
    },
    {
     "id": "401909972",
     "start": "2026-11-12T01:00Z",
     "name": "BKN @ NO",
-    "state": "in"
+    "state": "post"
    },
    {
     "id": "401909973",
     "start": "2026-11-12T02:00Z",
     "name": "ORL @ UTAH",
-    "state": "in"
+    "state": "post"
    },
    {
     "id": "401909974",
     "start": "2026-11-12T02:30Z",
     "name": "GS @ HOU",
-    "state": "pre"
+    "state": "post"
    },
    {
     "id": "401909975",
     "start": "2026-11-12T03:00Z",
     "name": "OKC @ POR",
+    "state": "post"
+   }
+  ],
+  "2026-11-12": [
+   {
+    "id": "401909976",
+    "start": "2026-11-13T00:00Z",
+    "name": "TOR @ PHI",
+    "state": "pre"
+   },
+   {
+    "id": "401909977",
+    "start": "2026-11-13T00:00Z",
+    "name": "DET @ WSH",
+    "state": "pre"
+   },
+   {
+    "id": "401909978",
+    "start": "2026-11-13T01:00Z",
+    "name": "DAL @ MIN",
+    "state": "pre"
+   },
+   {
+    "id": "401909979",
+    "start": "2026-11-13T02:00Z",
+    "name": "CHA @ PHX",
     "state": "pre"
    }
   ]

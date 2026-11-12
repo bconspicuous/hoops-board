@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-12T11:41+09:00",
+ "asOf": "2026-11-12T14:43+09:00",
  "source": "ESPN API sync (GitHub Actions g8-espn)",
  "teams": {
   "Junyoung's Scary Team": {
@@ -185,7 +185,6 @@
   "Jalen Duren": "O",
   "Kawhi Leonard": "O",
   "Tyrese Haliburton": "O",
-  "Paul George": "O",
   "Brandon Ingram": "O",
   "Kon Knueppel": "O",
   "Ajay Mitchell": "O",
@@ -216,17 +215,21 @@
   "Ben Simmons": "O",
   "Isaiah Joe": "O",
   "Sam Merrill": "O",
-  "Jamal Cain": "O",
   "Sergio de Larrea": "O",
-  "Adem Bona": "O",
-  "Vit Krejci": "O",
+  "Jamal Cain": "O",
+  "Stephen Curry": "DTD",
+  "Austin Reaves": "DTD",
+  "Luka Doncic": "DTD",
   "LeBron James": "DTD",
   "Joel Embiid": "DTD",
   "Caleb Wilson": "DTD",
+  "Paul George": "DTD",
+  "Ryan Rollins": "DTD",
   "Moussa Diabate": "DTD",
   "Precious Achiuwa": "DTD",
-  "Aaron Nesmith": "DTD",
-  "Morez Johnson Jr.": "DTD"
+  "Collin Sexton": "DTD",
+  "Morez Johnson Jr.": "DTD",
+  "Aaron Nesmith": "DTD"
  },
  "unsigned": [
   "Cam Thomas",
@@ -237,7 +240,6 @@
   "Russell Westbrook"
  ],
  "returns": {
-  "Paul George": "2026-11-15",
   "Nolan Traore": "2026-11-14",
   "Mikel Brown Jr.": "2026-11-14",
   "Brandon Miller": "2026-11-15",
@@ -271,9 +273,7 @@
   "Jamal Cain": "2026-11-13",
   "Jalen Suggs": "2026-11-16",
   "Paolo Banchero": "2026-11-22",
-  "Adem Bona": "2026-11-18",
   "Mark Williams": "2027-02-03",
-  "Vit Krejci": "2027-01-12",
   "Ja Morant": "2026-12-01",
   "Shaedon Sharpe": "2027-03-02",
   "Maxime Raynaud": "2026-11-15",
