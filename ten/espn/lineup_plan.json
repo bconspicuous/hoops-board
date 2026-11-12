@@ -2,15 +2,15 @@
  "date": "2026-11-12",
  "scoringPeriodId": 24,
  "hash": "383fae9da9",
- "createdKST": "2026-11-12T19:48+09:00",
+ "createdKST": "2026-11-13T06:47+09:00",
  "mode": "plan",
  "moves": [],
  "lineup": [
   {
    "slot": "PG",
    "cur": "PG",
-   "name": "Grayson Allen",
-   "pro": "CHA",
+   "name": "Jamal Shead",
+   "pro": "TOR",
    "game": true,
    "inj": "ACTIVE",
    "out": false
@@ -18,18 +18,18 @@
   {
    "slot": "SG",
    "cur": "SG",
-   "name": "Josh Hart",
-   "pro": "NYK",
-   "game": false,
+   "name": "Duncan Robinson",
+   "pro": "DET",
+   "game": true,
    "inj": "ACTIVE",
    "out": false
   },
   {
    "slot": "SF",
    "cur": "SF",
-   "name": "Toumani Camara",
-   "pro": "POR",
-   "game": false,
+   "name": "Miles Bridges",
+   "pro": "PHX",
+   "game": true,
    "inj": "ACTIVE",
    "out": false
   },
@@ -54,8 +54,8 @@
   {
    "slot": "G",
    "cur": "G",
-   "name": "Duncan Robinson",
-   "pro": "DET",
+   "name": "Grayson Allen",
+   "pro": "CHA",
    "game": true,
    "inj": "ACTIVE",
    "out": false
@@ -63,9 +63,9 @@
   {
    "slot": "F",
    "cur": "F",
-   "name": "Miles Bridges",
-   "pro": "PHX",
-   "game": true,
+   "name": "Toumani Camara",
+   "pro": "POR",
+   "game": false,
    "inj": "ACTIVE",
    "out": false
   },
@@ -84,15 +84,15 @@
    "name": "Ajay Mitchell",
    "pro": "OKC",
    "game": false,
-   "inj": "OUT",
-   "out": true
+   "inj": "DAY_TO_DAY",
+   "out": false
   },
   {
    "slot": "UTIL",
    "cur": "UTIL",
-   "name": "Jamal Shead",
-   "pro": "TOR",
-   "game": true,
+   "name": "Andrew Nembhard",
+   "pro": "IND",
+   "game": false,
    "inj": "ACTIVE",
    "out": false
   },
@@ -117,8 +117,8 @@
   {
    "slot": "BE",
    "cur": "BE",
-   "name": "Andrew Nembhard",
-   "pro": "IND",
+   "name": "Josh Hart",
+   "pro": "NYK",
    "game": false,
    "inj": "ACTIVE",
    "out": false
