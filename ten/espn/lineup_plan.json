@@ -3,7 +3,7 @@
  "scoringPeriodId": 24,
  "hash": "3e04a57bf5",
  "createdKST": "2026-11-12T19:32+09:00",
- "mode": "plan",
+ "mode": "execute",
  "moves": [
   {
    "playerId": 3062679,
@@ -194,5 +194,21 @@
  ],
  "irReturn": [],
  "playing": 5,
- "status": "planned"
+ "status": "executed",
+ "espn": {
+  "http": 200,
+  "status": "EXECUTED",
+  "type": "ROSTER",
+  "id": "e79650a7-55ae-400b-b81e-2aa156ab63f6"
+ },
+ "applied": [
+  "Josh Hart",
+  "Toumani Camara",
+  "Miles Bridges",
+  "Duncan Robinson",
+  "Andrew Nembhard",
+  "Grayson Allen",
+  "Jamal Shead",
+  "Paul Reed"
+ ]
 }
