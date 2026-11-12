@@ -4,10 +4,10 @@
  "acqLeft": 0,
  "dropCandidates": [],
  "base": {
-  "wk": 7.187,
-  "champ": 0.2171,
-  "p1": 0.2016,
-  "epct": 0.5421
+  "wk": 7.04,
+  "champ": 0.218,
+  "p1": 0.1913,
+  "epct": 0.5409
  },
  "protect": [
   "Shai Gilgeous-Alexander",
@@ -20,11 +20,18 @@
   "Tyler Herro"
  ],
  "droppable": [],
- "flags": [],
+ "flags": [
+  {
+   "kind": "ir-ineligible",
+   "player": "Norman Powell",
+   "status": "DTD",
+   "note": "IR 선수가 O가 아님 — ESPN이 영입을 막을 수 있음(감독 판단: DTD는 영입 가능). 첫 사례에서 실제 동작을 기록"
+  }
+ ],
  "items": [],
  "screened": [],
- "createdAt": "2026-11-12T14:43:25.269Z",
- "id": "20261112T1443",
+ "createdAt": "2026-11-12T20:43:05.694Z",
+ "id": "20261112T2043",
  "rosterSig": "AJ Dybantsa|Anthony Davis|Austin Reaves|Daniel Gafford|Darryn Peterson|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Michael Porter Jr.|Miles Bridges|Shai Gilgeous-Alexander|Tyler Herro#Brandon Miller|Norman Powell",
  "newItems": []
 }
