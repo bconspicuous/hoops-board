@@ -2,7 +2,7 @@
  "date": "2026-11-11",
  "scoringPeriodId": 23,
  "hash": "ce8d5545c6",
- "createdKST": "2026-11-12T06:47+09:00",
+ "createdKST": "2026-11-12T13:53+09:00",
  "mode": "plan",
  "moves": [],
  "lineup": [
@@ -30,8 +30,8 @@
    "name": "Josh Hart",
    "pro": "NYK",
    "game": true,
-   "inj": "OUT",
-   "out": true
+   "inj": "ACTIVE",
+   "out": false
   },
   {
    "slot": "PF",
@@ -48,7 +48,7 @@
    "name": "Karl-Anthony Towns",
    "pro": "NYK",
    "game": true,
-   "inj": "DAY_TO_DAY",
+   "inj": "ACTIVE",
    "out": false
   },
   {
@@ -128,6 +128,6 @@
   "Kawhi Leonard"
  ],
  "irReturn": [],
- "playing": 8,
+ "playing": 9,
  "status": "planned"
 }
