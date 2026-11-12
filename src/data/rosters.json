@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-12T19:11+09:00",
+ "asOf": "2026-11-12T23:42+09:00",
  "source": "ESPN API sync (GitHub Actions g8-espn)",
  "teams": {
   "Junyoung's Scary Team": {
@@ -29,7 +29,6 @@
     "Amen Thompson",
     "Stephen Curry",
     "Evan Mobley",
-    "Trey Murphy III",
     "Onyeka Okongwu",
     "De'Aaron Fox",
     "Brandin Podziemski",
@@ -37,11 +36,12 @@
     "Myles Turner",
     "Cedric Coward",
     "Klay Thompson",
-    "VJ Edgecombe"
+    "VJ Edgecombe",
+    "Ja'Kobe Walter"
    ],
    "ir": [
-    "Jalen Williams",
-    "Lauri Markkanen"
+    "Lauri Markkanen",
+    "Trey Murphy III"
    ]
   },
   "Garak Twindragons": {
@@ -171,7 +171,6 @@
  "status": {
   "Paolo Banchero": "O",
   "Yves Missi": "O",
-  "Jalen Williams": "O",
   "Lauri Markkanen": "O",
   "Trey Murphy III": "O",
   "Myles Turner": "O",
@@ -188,6 +187,7 @@
   "Kon Knueppel": "O",
   "Ajay Mitchell": "O",
   "Jaren Jackson Jr.": "O",
+  "Jalen Williams": "O",
   "Tobias Harris": "O",
   "Devin Vassell": "O",
   "Kristaps Porzingis": "O",
