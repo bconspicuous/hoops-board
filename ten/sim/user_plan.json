@@ -47,7 +47,7 @@
  ],
  "coreNote": "사용자 지정 상위 10명 고정(방출 금지). 로스터에 없는 선수는 자동 제외.",
  "notes": {
-  "gpOverride": "사용자 요청(11/12): Mitchell·George는 올 시즌 출전율로 출전 경기 가정(Mitchell 12/12 → 82, George 10/12 → 68). 경기당 성적은 원래 올 시즌 실제 기록 사용."
+  "gpOverride": "사용자 요청(11/12): Mitchell·George 출전 경기 동일 가정 = 75경기(올 시즌 출전율 82·68의 중간). 경기당 성적은 올 시즌 실제 기록."
  },
  "pendingTrades": [
   {
@@ -78,7 +78,7 @@
   }
  ],
  "gpOverride": {
-  "Donovan Mitchell": 82.0,
-  "Paul George": 68.3
+  "Donovan Mitchell": 75.0,
+  "Paul George": 75.0
  }
 }
