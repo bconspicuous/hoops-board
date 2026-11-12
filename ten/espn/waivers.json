@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-12T19:44+09:00",
+ "asOf": "2026-11-13T05:29+09:00",
  "scoringPeriodId": 24,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -58,7 +58,7 @@
    "team": "JYP",
    "name": "PaloAlto Wenoja",
    "rank": 7,
-   "acq": 10
+   "acq": 11
   },
   {
    "team": "GTD",
@@ -81,6 +81,24 @@
  ],
  "myPending": [],
  "transactions": [
+  {
+   "id": "41e3069a-b71a-4b62-858d-ee12b9b224a2",
+   "team": "JYP",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-13 05:02 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Collin Gillespie",
+     "from": "FA",
+     "to": "JYP"
+    }
+   ],
+   "bid": 0
+  },
   {
    "id": "80dce3a8-2973-4d86-8b0f-939e2bbda87f",
    "team": "GTD",
@@ -939,7 +957,7 @@
    "name": "Moussa Diabate",
    "pro": "CHA",
    "waiverClears": "2026-11-13 17:00 KST",
-   "inj": "DAY_TO_DAY",
+   "inj": "ACTIVE",
    "droppedBy": {
     "by": "Doo",
     "at": "2026-11-12 08:48 KST"
@@ -994,7 +1012,7 @@
    "name": "Tristan da Silva",
    "pro": "ORL",
    "waiverClears": "2026-11-13 17:00 KST",
-   "inj": "OUT",
+   "inj": "DAY_TO_DAY",
    "droppedBy": {
     "by": "TBG",
     "at": "2026-11-12 10:44 KST"
