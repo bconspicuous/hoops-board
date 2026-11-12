@@ -46,5 +46,33 @@
   "Dejounte Murray"
  ],
  "coreNote": "사용자 지정 상위 10명 고정(방출 금지). 로스터에 없는 선수는 자동 제외.",
- "notes": {}
+ "notes": {},
+ "pendingTrades": [
+  {
+   "a": "KOO",
+   "b": "TBG",
+   "aGives": [
+    "Kevin Durant",
+    "Onyeka Okongwu"
+   ],
+   "bGives": [
+    "Giannis Antetokounmpo",
+    "Julius Randle"
+   ],
+   "effective": "2026-11-13",
+   "note": "ESPN 11/12 13:11 수락, 리뷰 중 · 사용자 요청으로 실행 전제"
+  },
+  {
+   "a": "GTD",
+   "b": "KOO",
+   "aGives": [
+    "Donovan Mitchell"
+   ],
+   "bGives": [
+    "Paul George"
+   ],
+   "effective": "2026-11-13",
+   "note": "ESPN 11/12 13:12 수락, 리뷰 중 · 사용자 요청으로 실행 전제"
+  }
+ ]
 }

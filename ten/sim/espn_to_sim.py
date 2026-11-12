@@ -67,8 +67,9 @@ out['current']['fromDate'] = ((_now - _dt.timedelta(hours=38)).date() + _dt.time
 PLAN = json.load(open(W + 'user_plan.json'))
 out.update(PLAN)
 # pending trade (accepted, in 24h review): swap rosters for the season; current week split by date via teamWindows/curExtra
-TRD = PLAN.get('pendingTrade')
-if TRD:
+# several trades: user_plan 'pendingTrades' (list) and/or the legacy single 'pendingTrade'; windows/curExtra merge per team
+_TRDS = list(PLAN.get('pendingTrades') or []) + ([PLAN['pendingTrade']] if PLAN.get('pendingTrade') else [])
+for TRD in _TRDS:
     tA = next(t for t in out['teams'] if t['abbr'] == TRD['a']); tB = next(t for t in out['teams'] if t['abbr'] == TRD['b'])
     ga = [n for n in TRD['aGives'] if n in tA['players']]; gb = [n for n in TRD['bGives'] if n in tB['players']]
     eff = TRD['effective']; prev = (_dt.date.fromisoformat(eff) - _dt.timedelta(days=1)).isoformat()
@@ -77,9 +78,10 @@ if TRD:
     if ga and gb:   # not yet processed by ESPN
         tA['players'] = [n for n in tA['players'] if n not in ga] + gb; tB['players'] = [n for n in tB['players'] if n not in gb] + ga
         if out['current']['fromDate'] < eff:
-            out['curExtra'] = {TRD['a']: ga, TRD['b']: gb}
-            out['teamWindows'] = {TRD['a']: {**{n: {'to': prev} for n in ga}, **{n: {'from': eff} for n in gb}},
-                                  TRD['b']: {**{n: {'to': prev} for n in gb}, **{n: {'from': eff} for n in ga}}}
+            _ce = out.setdefault('curExtra', {}); _tw = out.setdefault('teamWindows', {})
+            _ce.setdefault(TRD['a'], []).extend(ga); _ce.setdefault(TRD['b'], []).extend(gb)
+            _tw.setdefault(TRD['a'], {}).update({**{n: {'to': prev} for n in ga}, **{n: {'from': eff} for n in gb}})
+            _tw.setdefault(TRD['b'], {}).update({**{n: {'to': prev} for n in gb}, **{n: {'from': eff} for n in ga}})
         TRD['status'] = 'pending (applied in sim)'
     elif not TRD.get('status', '').startswith('expired'): TRD['status'] = 'processed by ESPN'
     print('trade', TRD['status'], ga, gb)
