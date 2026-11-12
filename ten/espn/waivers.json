@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-12T06:45+09:00",
+ "asOf": "2026-11-12T13:50+09:00",
  "scoringPeriodId": 23,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -28,13 +28,13 @@
    "team": "GGAM",
    "name": "Garibong CHaRdaddy",
    "rank": 2,
-   "acq": 11
+   "acq": 12
   },
   {
    "team": "TBG",
    "name": "Team Bbang Guns",
    "rank": 3,
-   "acq": 12
+   "acq": 14
   },
   {
    "team": "IYH",
@@ -46,7 +46,7 @@
    "team": "Doo",
    "name": "Helio honeymoons",
    "rank": 5,
-   "acq": 5
+   "acq": 6
   },
   {
    "team": "KOO",
@@ -64,7 +64,7 @@
    "team": "JYP",
    "name": "PaloAlto Wenoja",
    "rank": 8,
-   "acq": 9
+   "acq": 10
   },
   {
    "team": "GTD",
@@ -106,6 +106,162 @@
   }
  ],
  "transactions": [
+  {
+   "id": "a98e18df-c0da-4cff-8b67-e99f875b7055",
+   "team": "TBG",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-12 10:44 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "3908845",
+     "from": "FA",
+     "to": "TBG"
+    },
+    {
+     "type": "DROP",
+     "player": "Tristan da Silva",
+     "from": "TBG",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "2470e502-cff6-4bff-ad4d-c0317430d1eb",
+   "team": "JYP",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-12 10:09 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "4278594",
+     "from": "FA",
+     "to": "JYP"
+    },
+    {
+     "type": "DROP",
+     "player": "Andre Drummond",
+     "from": "JYP",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "ff7ff985-6e35-40d1-9cc1-22ed0457a73c",
+   "team": "IYH",
+   "mine": false,
+   "type": "WAIVER",
+   "status": "CANCELED",
+   "proposed": "2026-11-12 09:34 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Jeremiah Fears",
+     "from": "FA",
+     "to": "IYH"
+    },
+    {
+     "type": "DROP",
+     "player": "Neemias Queta",
+     "from": "IYH",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "fb6021aa-1a20-4bdb-a168-f3e5f71926ce",
+   "team": "Doo",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-12 08:48 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Collin Murray-Boyles",
+     "from": "FA",
+     "to": "Doo"
+    },
+    {
+     "type": "DROP",
+     "player": "Moussa Diabate",
+     "from": "Doo",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "6a7b7ec0-57fd-4f28-8dc5-559704e925f6",
+   "team": "GGAM",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-12 08:07 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Jalen Smith",
+     "from": "FA",
+     "to": "GGAM"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "f47c615a-84f8-4c17-96fd-9e595da38bf1",
+   "team": "GGAM",
+   "mine": false,
+   "type": "ROSTER",
+   "status": "EXECUTED",
+   "proposed": "2026-11-12 08:01 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "DROP",
+     "player": "Lauri Markkanen",
+     "from": "GGAM",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "eb7b3e4c-d815-4020-aad8-f4e17e73bf1f",
+   "team": "TBG",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-12 07:27 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Obi Toppin",
+     "from": "FA",
+     "to": "TBG"
+    },
+    {
+     "type": "DROP",
+     "player": "Precious Achiuwa",
+     "from": "TBG",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
   {
    "id": "8b1d3a93-8f8c-47e1-a905-ffbb4369d45c",
    "team": "GGAM",
@@ -855,7 +1011,7 @@
     },
     {
      "type": "DROP",
-     "player": "John Collins",
+     "player": "3908845",
      "from": "TBG",
      "to": "FA"
     }
@@ -969,7 +1125,7 @@
     },
     {
      "type": "DROP",
-     "player": "John Collins",
+     "player": "3908845",
      "from": "TBG",
      "to": "FA"
     }
@@ -1027,6 +1183,17 @@
  ],
  "onWaivers": [
   {
+   "id": 4066336,
+   "name": "Lauri Markkanen",
+   "pro": "UTA",
+   "waiverClears": "2026-11-13 17:00 KST",
+   "inj": "OUT",
+   "droppedBy": {
+    "by": "GGAM",
+    "at": "2026-11-12 08:01 KST"
+   }
+  },
+  {
    "id": 4437244,
    "name": "Jalen Green",
    "pro": "PHX",
@@ -1060,6 +1227,17 @@
    }
   },
   {
+   "id": 4433249,
+   "name": "Moussa Diabate",
+   "pro": "CHA",
+   "waiverClears": "2026-11-13 17:00 KST",
+   "inj": "DAY_TO_DAY",
+   "droppedBy": {
+    "by": "Doo",
+    "at": "2026-11-12 08:48 KST"
+   }
+  },
+  {
    "id": 4592479,
    "name": "Julian Champagnie",
    "pro": "SAS",
@@ -1082,6 +1260,17 @@
    }
   },
   {
+   "id": 4431679,
+   "name": "Precious Achiuwa",
+   "pro": "SAC",
+   "waiverClears": "2026-11-13 17:00 KST",
+   "inj": "DAY_TO_DAY",
+   "droppedBy": {
+    "by": "TBG",
+    "at": "2026-11-12 07:27 KST"
+   }
+  },
+  {
    "id": 4433192,
    "name": "Tari Eason",
    "pro": "HOU",
@@ -1090,6 +1279,28 @@
    "droppedBy": {
     "by": "SONG",
     "at": "2026-11-10 22:35 KST"
+   }
+  },
+  {
+   "id": 4702382,
+   "name": "Tristan da Silva",
+   "pro": "ORL",
+   "waiverClears": "2026-11-13 17:00 KST",
+   "inj": "OUT",
+   "droppedBy": {
+    "by": "TBG",
+    "at": "2026-11-12 10:44 KST"
+   }
+  },
+  {
+   "id": 6585,
+   "name": "Andre Drummond",
+   "pro": "NYK",
+   "waiverClears": "2026-11-13 17:00 KST",
+   "inj": "ACTIVE",
+   "droppedBy": {
+    "by": "JYP",
+    "at": "2026-11-12 10:09 KST"
    }
   }
  ],
