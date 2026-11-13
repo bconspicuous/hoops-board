@@ -2,7 +2,7 @@
  "date": "2026-11-13",
  "scoringPeriodId": 25,
  "hash": "830a096cf6",
- "createdKST": "2026-11-13T19:49+09:00",
+ "createdKST": "2026-11-14T06:47+09:00",
  "mode": "plan",
  "moves": [],
  "lineup": [
@@ -12,8 +12,8 @@
    "name": "Dejounte Murray",
    "pro": "NOP",
    "game": true,
-   "inj": "ACTIVE",
-   "out": false
+   "inj": "OUT",
+   "out": true
   },
   {
    "slot": "SG",
@@ -128,6 +128,6 @@
   "Kawhi Leonard"
  ],
  "irReturn": [],
- "playing": 8,
+ "playing": 7,
  "status": "planned"
 }
