@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-13T12:39+09:00",
+ "asOf": "2026-11-13T12:41+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -1028,14 +1028,14 @@
   {
    "player": "LeBron James",
    "team": "PHI",
-   "status": "Out",
-   "date": "2026-11-12T18:07Z",
-   "type": "out",
+   "status": "Day-To-Day",
+   "date": "2026-11-13T03:28Z",
+   "type": "day-to-day",
    "returnDate": "2026-11-15",
    "detail": null,
    "side": null,
    "injury": "Back",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "James (back) is out for Thursday's game against Toronto.",
    "long": "The future Hall of Famer is getting Thursday night off for maintenace purposes. Tyrese Maxey and Jaylen Brown should do the heavy lifting offensively, while Dean Wade and Kentavious Caldwell-Pope should soak up extra minutes for the 76ers."
   },
