@@ -25,6 +25,9 @@ jobs:
         run: |
           if [ -z "$ESPN_S2" ] || [ -z "$ESPN_SWID" ]; then echo "::notice title=ESPN sync::ESPN_S2 / ESPN_SWID secrets not set - private league, skipping"; exit 0; fi
           python ten/espn/fetch_espn.py
+      - name: NBA box scores, last 15 days (public API, for role/depth projections)
+        continue-on-error: true
+        run: python ten/espn/fetch_boxscores.py
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
