@@ -31,5 +31,12 @@ i = page.index("</style>") + len("</style>")
 head = page[:i].replace('<meta name="claude:viewport-fit-sides" content="cover">\n', "").replace("<style>\n", "<style>\n[hidden] { display: none !important; }\n", 1)
 doc = ('<!doctype html>\n<html lang="ko">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">\n'
        '<meta name="robots" content="noindex, nofollow">\n' + head + "\n</head>\n<body>\n" + page[i:].lstrip("\n") + "\n</body>\n</html>\n")
+# 감독 지정(2026-11-13): external page (GitHub Pages) is titled "8인 리그 시즌 전망"; the claude.ai artifact keeps its own title
+WEB_TITLE = "8인 리그 시즌 전망"
+for a, b in [("<title>리그 팀별 대시보드 v2.2</title>", f"<title>{WEB_TITLE}</title>"),
+             ('<h1><span id="h1-team">Twindragons</span> 시즌 대시보드 <small class="ver">v2.2</small></h1>', f'<h1>{WEB_TITLE} <small class="ver" id="h1-team">Twindragons</small></h1>'),
+             ("document.title = `${sh(ME)} · 리그 팀별 대시보드 v2.2`;", f"document.title = \"{WEB_TITLE}\";")]:
+    assert doc.count(a) == 1, a
+    doc = doc.replace(a, b)
 os.makedirs("web", exist_ok=True); open("web/index.html", "w", encoding="utf8").write(doc)
 print("snapshot", emb["asOf"], "| artifact", len(page), "| web/index.html", len(doc))

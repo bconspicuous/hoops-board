@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<title>리그 팀별 대시보드 v2.2</title>
+<title>8인 리그 시즌 전망</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap">
@@ -282,7 +282,7 @@ section:not([hidden]) > .stack > *:nth-child(4) { animation-delay: .15s; } secti
 <div class="wrap">
   <header class="top">
     <div>
-      <h1><span id="h1-team">Twindragons</span> 시즌 대시보드 <small class="ver">v2.2</small></h1>
+      <h1>8인 리그 시즌 전망 <small class="ver" id="h1-team">Twindragons</small></h1>
       <p class="sub">8팀 H2H 카테고리별 승패 11개(FG% FT% 3PM REB AST STL BLK TO↓ DD PTS PF↓) · 순위 = 누적 카테고리 승률(무 = 0.5승) · 정규시즌 14주 · 플레이오프 6팀(1·2·2주)</p>
     </div>
     <div class="fresh" id="fresh"></div>
@@ -1283,7 +1283,7 @@ function renderTeamUI() {
   const sel = $("team-sel");
   if (!sel.options.length) sel.innerHTML = REF.teams.map(t => `<option value="${esc(t)}">${esc(t)}${t === OWN ? " (내 팀)" : ""}</option>`).join("");
   sel.value = ME; $("b2b-on").checked = state.b2b; $("st-on").checked = state.stream.on; $("st-acq").value = String(state.stream.acq); $("st-mine").value = String(state.stream.mine); $("gp-mode").value = gpMode(); $("st-acq").disabled = $("st-mine").disabled = !state.stream.on;
-  $("h1-team").textContent = sh(ME); document.title = `${sh(ME)} · 리그 팀별 대시보드 v2.2`;
+  $("h1-team").textContent = sh(ME); document.title = "8인 리그 시즌 전망";
   $("roster-title").textContent = `${sh(ME)} 로스터`; $("rec-title").textContent = `FA 추천 (${sh(ME)})`;
 }
 /* Switching team: the league-wide computation (all 8 teams) is reused; only the scenario and FA ranking belong to a team, so they reset. */
