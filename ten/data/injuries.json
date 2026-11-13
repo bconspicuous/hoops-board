@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-13T12:41+09:00",
+ "asOf": "2026-11-13T12:43+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -1273,7 +1273,7 @@
    "detail": "Soreness",
    "side": "Left",
    "injury": "Groin",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Barnes (groin) is out for Thursday's game against Philadelphia.",
    "long": "The star forward is missing a fourth straight game with a groin strain. Ja'Kobe Walter should continue to take on additional playmaking responsibilites in Barnes' stead, while Collin Murray-Boyles should keep starting at power forward."
   },
