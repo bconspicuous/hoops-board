@@ -4,11 +4,11 @@
  "spid": 25,
  "matchupPeriod": 4,
  "add": {
-  "id": 6475,
-  "name": "Klay Thompson",
+  "id": 5061589,
+  "name": "Yves Missi",
   "status": "FREEAGENT",
-  "pro": "MIA",
-  "inj": "DAY_TO_DAY"
+  "pro": "NOP",
+  "inj": "OUT"
  },
  "type": "FREEAGENT",
  "limits": {
@@ -16,14 +16,15 @@
   "matchup": "4/7"
  },
  "drop": {
-  "id": 4278562,
-  "name": "Paul Reed",
+  "id": 3135045,
+  "name": "Grayson Allen",
   "slot": 12,
   "inj": "ACTIVE"
  },
- "hash": "3591f7fe4f",
+ "hash": "14ea01e983",
  "errors": [],
  "warnings": [
+  "Yves Missi 현재 OUT",
   "방출 선수는 24시간 웨이버 — 그 사이 다른 팀이 데려갈 수 있어 되돌릴 수 없음"
  ],
  "status": "planned"
