@@ -5,9 +5,9 @@
  "dropCandidates": [],
  "base": {
   "wk": 6.998,
-  "champ": 0.1776,
-  "p1": 0.1537,
-  "epct": 0.5345
+  "champ": 0.159,
+  "p1": 0.1356,
+  "epct": 0.5323
  },
  "protect": [
   "Shai Gilgeous-Alexander",
@@ -36,8 +36,8 @@
  ],
  "items": [],
  "screened": [],
- "createdAt": "2026-11-13T10:15:34.351Z",
- "id": "20261113T1015",
+ "createdAt": "2026-11-13T14:43:55.678Z",
+ "id": "20261113T1443",
  "rosterSig": "AJ Dybantsa|Anthony Davis|Austin Reaves|Daniel Gafford|Darryn Peterson|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Michael Porter Jr.|Miles Bridges|Shai Gilgeous-Alexander|Tyler Herro#Brandon Miller|Norman Powell",
  "newItems": []
 }
