@@ -1,13 +1,13 @@
 {
- "createdKST": "2026-11-13T06:48+09:00",
+ "createdKST": "2026-11-13T12:51+09:00",
  "mode": "plan",
  "spid": 24,
  "matchupPeriod": 4,
  "add": {
-  "id": 4592479,
-  "name": "Julian Champagnie",
+  "id": 4576060,
+  "name": "Ryan Kalkbrenner",
   "status": "FREEAGENT",
-  "pro": "SAS",
+  "pro": "CHA",
   "inj": "ACTIVE"
  },
  "type": "FREEAGENT",
@@ -16,12 +16,12 @@
   "matchup": "3/7"
  },
  "drop": {
-  "id": 4431736,
-  "name": "Toumani Camara",
-  "slot": 6,
+  "id": 4432241,
+  "name": "Jamal Shead",
+  "slot": 0,
   "inj": "ACTIVE"
  },
- "hash": "ad99804930",
+ "hash": "298b1ac5e1",
  "errors": [],
  "warnings": [
   "방출 선수는 24시간 웨이버 — 그 사이 다른 팀이 데려갈 수 있어 되돌릴 수 없음"
