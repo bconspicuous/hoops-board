@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-13T11:41+09:00",
+ "asOf": "2026-11-13T14:42+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -118,14 +118,14 @@
   {
    "player": "Brandon Miller",
    "team": "CHA",
-   "status": "Out",
-   "date": "2026-11-12T00:06Z",
-   "type": "out",
+   "status": "Day-To-Day",
+   "date": "2026-11-13T04:46Z",
+   "type": "day-to-day",
    "returnDate": "2026-11-15",
    "detail": "Soreness",
    "side": "Right",
    "injury": "Groin",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Miller (groin) is listed as out for Thursday's game against Phoenix.",
    "long": "Miller injured his groin during the 119-80 loss to Boston on Friday and subsequently missed Monday's meeting with Cleveland. Now that Miller is confirmed to be sidelined for a second consecutive contest, Sion James is the favorite to remain in the starting lineup."
   },
@@ -1028,14 +1028,14 @@
   {
    "player": "LeBron James",
    "team": "PHI",
-   "status": "Out",
-   "date": "2026-11-12T18:07Z",
-   "type": "out",
+   "status": "Day-To-Day",
+   "date": "2026-11-13T03:28Z",
+   "type": "day-to-day",
    "returnDate": "2026-11-15",
    "detail": null,
    "side": null,
    "injury": "Back",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "James (back) is out for Thursday's game against Toronto.",
    "long": "The future Hall of Famer is getting Thursday night off for maintenace purposes. Tyrese Maxey and Jaylen Brown should do the heavy lifting offensively, while Dean Wade and Kentavious Caldwell-Pope should soak up extra minutes for the 76ers."
   },
@@ -1252,14 +1252,14 @@
   {
    "player": "Trayce Jackson-Davis",
    "team": "TOR",
-   "status": "Out",
-   "date": "2026-11-12T18:09Z",
-   "type": "out",
+   "status": "Day-To-Day",
+   "date": "2026-11-13T03:27Z",
+   "type": "day-to-day",
    "returnDate": "2026-11-15",
    "detail": null,
    "side": null,
    "injury": "Illness",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Jackson-Davis is out for Thursday's game against the 76ers due to an illness.",
    "long": "Jackson-Davis is missing both ends of Toronto's back-to-back set with the ailment. Jamison Battle should handle a larger role in the frontcourt Thursday."
   },
@@ -1273,7 +1273,7 @@
    "detail": "Soreness",
    "side": "Left",
    "injury": "Groin",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Barnes (groin) is out for Thursday's game against Philadelphia.",
    "long": "The star forward is missing a fourth straight game with a groin strain. Ja'Kobe Walter should continue to take on additional playmaking responsibilites in Barnes' stead, while Collin Murray-Boyles should keep starting at power forward."
   },
@@ -1301,7 +1301,7 @@
    "detail": "Fracture",
    "side": "Right",
    "injury": "Foot",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Bittle (foot) is listed as out for Monday's game against Memphis.",
    "long": "Bittle has been battling a foot injury for a couple of months. It's unknown when the rookie will be cleared to suit up for the Raptors, so he should be considered week-to-week for now."
   },
@@ -1360,6 +1360,20 @@
    "fantasyStatus": "OUT",
    "short": "Jackson has been diagnosed with a torn MCL in his right knee and will be sidelined for 6-to-8 weeks, per Shams Charania of ESPN.",
    "long": "Jackson sustained the injury early in Monday's loss to Memphis, and he's now expected to miss at least a month and a half of action. The star big man's absence creates a major void in the Utah lineup, one that is likely to be filled by a timeshare of Jaxson Hayes (shoulder), Kyle Filipowski and Mo Bamba. The Jazz could also shift Lauri Markkanen (wrist), when healthy, to the center spot at times, perhaps allowing Ace Bailey to spend more time at power forward."
+  },
+  {
+   "player": "Bub Carrington",
+   "team": "WSH",
+   "status": "Day-To-Day",
+   "date": "2026-11-13T03:26Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-15",
+   "detail": null,
+   "side": null,
+   "injury": "Chest",
+   "fantasyStatus": "GTD",
+   "short": "Carrington (chest) has been ruled out for the remainder of Thursday's game against the Pistons.",
+   "long": "Carrington played 16 minutes before exiting the contest due to a chest contusion. He had two points (1-6 FG, 0-3 3Pt) and two assists before being ruled out. Washington will provide an injury update when available."
   },
   {
    "player": "Tristan Vukcevic",
