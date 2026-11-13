@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-14T05:06+09:00",
+ "asOf": "2026-11-14T06:45+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -595,15 +595,43 @@
    "player": "Quentin Grimes",
    "team": "LAL",
    "status": "Day-To-Day",
-   "date": "2026-11-12T15:01Z",
+   "date": "2026-11-13T21:26Z",
    "type": "day-to-day",
    "returnDate": "2026-11-15",
    "detail": null,
    "side": null,
    "injury": "Finger",
    "fantasyStatus": "GTD",
-   "short": "Grimes (finger) has been ruled out for Wednesday's game against the Bucks.",
-   "long": "Grimes didn't play Monday in Atlanta after scoring 12 points in 32 minutes as a starter in Detroit on Sunday. However, it appears that absence wasn't simply rest during the second night of a back-to-back set, as Grimes will now miss a second straight game. In his absence, Collin Sexton and Cameron Carr could remain involved with the second unit."
+   "short": "Grimes (finger) said he expects to return to action Sunday against the Suns, according to Ricardo Sandoval of Lakers on SI.",
+   "long": "Grimes has missed the Lakers' last two games, but it sounds as if he could return to the rotation Sunday. It's unclear whether he'd be a starter, but he'd have a chance if Austin Reaves (heel) isn't cleared. Grimes is averaging 8.0 points per game this season, but that number rises to 17.5 points per game in his two starts."
+  },
+  {
+   "player": "Austin Reaves",
+   "team": "LAL",
+   "status": "Day-To-Day",
+   "date": "2026-11-13T20:40Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-15",
+   "detail": null,
+   "side": "Left",
+   "injury": "Heel",
+   "fantasyStatus": "GTD",
+   "short": "Reaves (heel) won't undergo imaging and is considered day-to-day ahead of Sunday's game against the Suns, Jovan Buha of The Athletic reports.",
+   "long": "An official designation for Reaves' status will be given Saturday, according to Buha, and head coach JJ Redick also said Reaves has a bruise on his heel. The star guard is enjoying an excellent start to the season and is averaging 24.7 points, 3.3 rebounds, 4.7 assists and 1.2 steals per game. If he's sidelined, expect Ziaire Williams to start in the backcourt alongside Luka Doncic."
+  },
+  {
+   "player": "Luka Doncic",
+   "team": "LAL",
+   "status": "Day-To-Day",
+   "date": "2026-11-13T20:40Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-15",
+   "detail": null,
+   "side": "Right",
+   "injury": "Ankle",
+   "fantasyStatus": "GTD",
+   "short": "Head coach JJ Redick said Friday that Doncic (ankle) is \"fine,\" per Law Murray of The Athletic.",
+   "long": "The superstar guard exited to the locker room late in the fourth quarter of Wednesday's win over the Bucks due to an apparent right ankle injury and did not return. Doncic can be tentatively placed on the right side of the questionable marker until the Lakers release an official injury report at some point prior to Sunday's matchup in Phoenix."
   },
   {
    "player": "Collin Sexton",
@@ -618,34 +646,6 @@
    "fantasyStatus": "GTD",
    "short": "Sexton did not return to Wednesday's 123-112 win over the Bucks and required stitches to close a cut on his forehead, Thuc Nhi Nguyen of the Los Angeles Times reports.",
    "long": "Sexton knocked noggins with Ryan Rollins, but it sounds like he's avoided a concussion, so he should be able to get out there for Sunday's game in Phoenix. Austin Reaves (heel) also exited Wednesday's game, and if he needs to sit out Sunday, Sexton would have the chance for some extended minutes."
-  },
-  {
-   "player": "Austin Reaves",
-   "team": "LAL",
-   "status": "Day-To-Day",
-   "date": "2026-11-12T04:11Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-15",
-   "detail": null,
-   "side": "Left",
-   "injury": "Heel",
-   "fantasyStatus": "GTD",
-   "short": "Head coach JJ Redick said that X-rays on Reaves' left heel came back negative, but they won't have another update until he undergoes further imaging back in Los Angeles on Thursday, Dave McMenamin of ESPN.com reports.",
-   "long": "Reaves hurt his heel coming down after a layup attempt, but the good news is that an Achilles injury has been ruled out. The Lakers are off until Sunday, but if Reaves needs to miss that game, Ziaire Williams would have a chance to start and Luka Doncic would be extremely busy on offense."
-  },
-  {
-   "player": "Luka Doncic",
-   "team": "LAL",
-   "status": "Day-To-Day",
-   "date": "2026-11-12T03:34Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-15",
-   "detail": null,
-   "side": "Right",
-   "injury": "Ankle",
-   "fantasyStatus": "GTD",
-   "short": "Doncic finished Wednesday's 123-112 win over the Bucks with 32 points (10-25 FG, 5-12 3Pt, 7-10 FT), five rebounds, five assists and three steals across 32 minutes. He exited to the locker room late in the fourth quarter due to an apparent right ankle injury and did not return, Thuc Nhi Nguyen of the Los Angeles Times reports.",
-   "long": "Doncic didn't deliver his most efficient shooting effort, though he still led all players in scoring while knocking down a game-high-tying five triples. He has now reached the 30-point threshold in each of his last nine appearances. The superstar floor general also tied for the game-best mark in steals, logging multiple swipes for the fourth time over his last six outings. However, Doncic's status will be worth monitoring ahead of Sunday's game at Phoenix, as he landed on Kyle Kuzma's foot and exited to the locker room Wednesday."
   },
   {
    "player": "Quinten Post",
@@ -762,16 +762,16 @@
   {
    "player": "Dejounte Murray",
    "team": "NO",
-   "status": "Day-To-Day",
-   "date": "2026-11-13T19:57Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-13",
+   "status": "Out",
+   "date": "2026-11-13T20:19Z",
+   "type": "out",
+   "returnDate": "2026-11-20",
    "detail": null,
    "side": null,
    "injury": "Ankle",
-   "fantasyStatus": "GTD",
-   "short": "Murray (ankle) requested a trade from the Pelicans on Friday, per Shams Charania of ESPN.",
-   "long": "Charania also notes Murray's his agent and team officials have begun working toward a resolution. Murray, who's listed as doubtful for Friday's game against Memphis with an ankle sprain, could miss more time beyond that while New Orleans looks to find him a new destination."
+   "fantasyStatus": "OUT",
+   "short": "Murray (ankle) is out for Friday's game against Memphis.",
+   "long": "This was the expectation after the star guard requested a trade from the Pelicans earlier Friday. Given his standing with the club, Murray can be tentatively considered doubtful for future contests while New Orleans tries to find him another home."
   },
   {
    "player": "Bryce McGowens",
@@ -1168,16 +1168,16 @@
   {
    "player": "Precious Achiuwa",
    "team": "SAC",
-   "status": "Day-To-Day",
-   "date": "2026-11-13T00:22Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-13",
+   "status": "Out",
+   "date": "2026-11-13T21:20Z",
+   "type": "out",
+   "returnDate": "2026-11-15",
    "detail": "Soreness",
    "side": "Left",
    "injury": "Ankle",
-   "fantasyStatus": "GTD",
-   "short": "Achiuwa (ankle) is questionable to play Friday's game against the Trail Blazers.",
-   "long": "Achiuwa is dealing with left ankle soreness after exiting Tuesday's 107-100 loss to Orlando during the third quarter. He was unable to return to the contest, and his questionable designation suggests there's a decent chance he'll be forced to sit out against Portland. If Achiuwa is sidelined, Dylan Cardwell and Keegan Murray should earn the vacated minutes, with Murray the likeliest to join the starting unit."
+   "fantasyStatus": "OUT",
+   "short": "Achiuwa (ankle) is out for Friday's game against the Trail Blazers.",
+   "long": "Achiuwa is sitting out Friday for the first time this season due to left ankle soreness, and he can be deemed day-to-day going forward. His absence likely paves the way for Keegan Murray to re-enter the starting lineup after opening 2026-27 as the Kings' starting power forward."
   },
   {
    "player": "Maxime Raynaud",
