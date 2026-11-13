@@ -37,8 +37,8 @@ def read_json(path_q, extra=None):
         return json.loads(r.read().decode("utf-8"))
 
 
-def league():
-    d = read_json("?view=mRoster&view=mTeam&view=mSettings&view=mStatus")
+def league(spid=None):
+    d = read_json("?view=mRoster&view=mTeam&view=mSettings&view=mStatus" + (f"&scoringPeriodId={spid}" if spid else ""))
     me = next((t for t in d.get("teams", []) if f"{t.get('location', '')} {t.get('nickname', '')}".strip() == F.MY_TEAM or t.get("name") == F.MY_TEAM), None)
     if not me:
         F.die("our team was not found in the league response")
@@ -160,6 +160,10 @@ def main():
             res["espn"] = out
             _, me2, rows2, _, _ = league()
             ids = {r["id"]: r["slot"] for r in rows2}
+            ok_now = (not plan.get("add") or plan["add"]["id"] in ids) and (not plan.get("drop") or plan["drop"]["id"] not in ids)
+            if not ok_now and all(x.get("http") == 200 for x in out):   # roster locked for today: ESPN applies the move from the next scoring period
+                _, _, rows3, _, _ = league(spid + 1)
+                ids = {r["id"]: r["slot"] for r in rows3}; res["effective"] = f"next scoring period ({spid + 1})"
             chk = []
             if plan.get("add") and plan["type"] == "FREEAGENT": chk.append(("영입", plan["add"]["id"] in ids))
             if plan.get("drop"): chk.append(("방출", plan["drop"]["id"] not in ids))
