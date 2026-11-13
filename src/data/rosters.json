@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-13T14:42+09:00",
+ "asOf": "2026-11-13T16:20+09:00",
  "source": "ESPN API sync (GitHub Actions g8-espn)",
  "teams": {
   "Junyoung's Scary Team": {
@@ -209,6 +209,7 @@
   "Isaiah Joe": "O",
   "Sam Merrill": "O",
   "Sergio de Larrea": "O",
+  "Adem Bona": "O",
   "Giannis Antetokounmpo": "DTD",
   "Trey Murphy III": "DTD",
   "De'Aaron Fox": "DTD",
@@ -271,6 +272,7 @@
   "Chet Holmgren": "2027-01-02",
   "Jalen Suggs": "2026-11-13",
   "Paolo Banchero": "2026-11-22",
+  "Adem Bona": "2026-11-18",
   "Mark Williams": "2027-02-03",
   "Ja Morant": "2026-12-01",
   "Shaedon Sharpe": "2027-03-02",
