@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-14T05:04+09:00",
+ "asOf": "2026-11-14T05:45+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -762,16 +762,16 @@
   {
    "player": "Dejounte Murray",
    "team": "NO",
-   "status": "Day-To-Day",
-   "date": "2026-11-13T19:57Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-13",
+   "status": "Out",
+   "date": "2026-11-13T20:19Z",
+   "type": "out",
+   "returnDate": "2026-11-20",
    "detail": null,
    "side": null,
    "injury": "Ankle",
-   "fantasyStatus": "GTD",
-   "short": "Murray (ankle) requested a trade from the Pelicans on Friday, per Shams Charania of ESPN.",
-   "long": "Charania also notes Murray's his agent and team officials have begun working toward a resolution. Murray, who's listed as doubtful for Friday's game against Memphis with an ankle sprain, could miss more time beyond that while New Orleans looks to find him a new destination."
+   "fantasyStatus": "OUT",
+   "short": "Murray (ankle) is out for Friday's game against Memphis.",
+   "long": "This was the expectation after the star guard requested a trade from the Pelicans earlier Friday. Given his standing with the club, Murray can be tentatively considered doubtful for future contests while New Orleans tries to find him another home."
   },
   {
    "player": "Bryce McGowens",

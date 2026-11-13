@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-14T05:04+09:00",
+ "asOf": "2026-11-14T05:45+09:00",
  "source": "ESPN API sync (GitHub Actions g8-espn)",
  "teams": {
   "Junyoung's Scary Team": {
@@ -170,6 +170,7 @@
   }
  },
  "status": {
+  "Dejounte Murray": "O",
   "Paolo Banchero": "O",
   "Yves Missi": "O",
   "Stephen Curry": "O",
@@ -187,8 +188,8 @@
   "Brandon Ingram": "O",
   "Kon Knueppel": "O",
   "Jaren Jackson Jr.": "O",
-  "Zach Edey": "O",
   "Jalen Williams": "O",
+  "Zach Edey": "O",
   "Tobias Harris": "O",
   "Kristaps Porzingis": "O",
   "Jimmy Butler III": "O",
@@ -212,7 +213,7 @@
   "Sam Merrill": "O",
   "Sergio de Larrea": "O",
   "Adem Bona": "O",
-  "Dejounte Murray": "DTD",
+  "Vit Krejci": "O",
   "De'Aaron Fox": "DTD",
   "Klay Thompson": "DTD",
   "Austin Reaves": "DTD",
@@ -267,6 +268,7 @@
   "Scotty Pippen Jr.": "2026-11-21",
   "Anthony Edwards": "2026-12-21",
   "Donte DiVincenzo": "2027-04-02",
+  "Dejounte Murray": "2026-11-20",
   "Yves Missi": "2026-11-14",
   "Trey Murphy III": "2026-11-14",
   "Jaylin Williams": "2026-11-15",
@@ -276,6 +278,7 @@
   "Paolo Banchero": "2026-11-22",
   "Adem Bona": "2026-11-18",
   "Mark Williams": "2027-02-03",
+  "Vit Krejci": "2027-01-12",
   "Ja Morant": "2026-12-01",
   "Shaedon Sharpe": "2027-03-02",
   "Maxime Raynaud": "2026-11-15",
