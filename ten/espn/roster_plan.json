@@ -1,42 +1,30 @@
 {
- "createdKST": "2026-11-13T13:22+09:00",
- "mode": "execute",
+ "createdKST": "2026-11-13T13:48+09:00",
+ "mode": "plan",
  "spid": 24,
  "matchupPeriod": 4,
  "add": {
-  "id": 4592479,
-  "name": "Julian Champagnie",
+  "id": 6475,
+  "name": "Klay Thompson",
   "status": "FREEAGENT",
-  "pro": "SAS",
-  "inj": "ACTIVE"
+  "pro": "MIA",
+  "inj": "DAY_TO_DAY"
  },
  "type": "FREEAGENT",
  "limits": {
-  "season": "15/70",
-  "matchup": "3/7"
+  "season": "16/70",
+  "matchup": "4/7"
  },
  "drop": {
-  "id": 4432241,
-  "name": "Jamal Shead",
-  "slot": 0,
+  "id": 4431736,
+  "name": "Toumani Camara",
+  "slot": 6,
   "inj": "ACTIVE"
  },
- "hash": "6078b2d676",
+ "hash": "0ba43d7c5b",
  "errors": [],
  "warnings": [
   "방출 선수는 24시간 웨이버 — 그 사이 다른 팀이 데려갈 수 있어 되돌릴 수 없음"
  ],
- "status": "partial/failed: 영입 미반영, 방출 미반영",
- "espn": [
-  {
-   "http": 200,
-   "status": "EXECUTED",
-   "type": "FREEAGENT",
-   "id": "f4533486-c216-440e-9c43-f59677e9cd57"
-  }
- ],
- "verified": {
-  "영입": false,
-  "방출": false
- }
+ "status": "planned"
 }
