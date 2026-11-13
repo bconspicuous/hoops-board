@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-13T06:44+09:00",
+ "asOf": "2026-11-13T12:39+09:00",
  "leagueId": "504060248",
  "season": 2027,
  "teams": [
@@ -472,6 +472,7 @@
  "status": {
   "O": [
    "Scottie Barnes",
+   "Evan Mobley",
    "Jaren Jackson Jr.",
    "Paolo Banchero",
    "Brandon Ingram",
@@ -482,7 +483,7 @@
    "Anthony Edwards",
    "Kawhi Leonard",
    "Stephen Curry",
-   "LeBron James",
+   "Zach Edey",
    "Caleb Wilson",
    "Lauri Markkanen",
    "Kon Knueppel",
@@ -504,14 +505,15 @@
    "Maxime Raynaud",
    "Bradley Beal",
    "Jaylin Williams",
+   "Marcus Smart",
    "Brandon Williams",
    "Justin Champagnie",
    "Ben Simmons",
    "Isaiah Joe",
    "Sam Merrill",
    "Sergio de Larrea",
-   "Vit Krejci",
    "Adem Bona",
+   "Vit Krejci",
    "Clint Capela",
    "Yanic Konan Niederhauser",
    "Moses Moody",
@@ -519,17 +521,16 @@
    "Steven Adams"
   ],
   "DTD": [
-   "Joel Embiid",
    "Austin Reaves",
-   "Myles Turner",
+   "De'Aaron Fox",
    "Luka Doncic",
    "Paul George",
    "Norman Powell",
    "Pelle Larsson",
    "Giannis Antetokounmpo",
    "Ajay Mitchell",
+   "LeBron James",
    "Trey Murphy III",
-   "Ryan Rollins",
    "Devin Vassell",
    "Klay Thompson",
    "Quentin Grimes",
@@ -537,12 +538,14 @@
    "Precious Achiuwa",
    "Nolan Traore",
    "Tristan da Silva",
+   "T.J. McConnell",
    "Bennedict Mathurin",
    "Mikel Brown Jr.",
-   "Morez Johnson Jr.",
+   "Kingston Flemings",
    "Aaron Nesmith",
-   "Jamal Cain",
-   "Gary Payton II"
+   "Bub Carrington",
+   "Charles Bassey",
+   "Jamal Cain"
   ]
  }
 }
