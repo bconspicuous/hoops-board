@@ -1,14 +1,14 @@
 {
- "createdKST": "2026-11-13T13:49+09:00",
+ "createdKST": "2026-11-13T19:49+09:00",
  "mode": "plan",
- "spid": 24,
+ "spid": 25,
  "matchupPeriod": 4,
  "add": {
-  "id": 5061589,
-  "name": "Yves Missi",
+  "id": 6475,
+  "name": "Klay Thompson",
   "status": "FREEAGENT",
-  "pro": "NOP",
-  "inj": "OUT"
+  "pro": "MIA",
+  "inj": "DAY_TO_DAY"
  },
  "type": "FREEAGENT",
  "limits": {
@@ -18,13 +18,12 @@
  "drop": {
   "id": 4278562,
   "name": "Paul Reed",
-  "slot": 3,
+  "slot": 12,
   "inj": "ACTIVE"
  },
- "hash": "4f74fdd004",
+ "hash": "3591f7fe4f",
  "errors": [],
  "warnings": [
-  "Yves Missi 현재 OUT",
   "방출 선수는 24시간 웨이버 — 그 사이 다른 팀이 데려갈 수 있어 되돌릴 수 없음"
  ],
  "status": "planned"
