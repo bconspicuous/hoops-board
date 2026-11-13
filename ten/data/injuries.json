@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-13T13:51+09:00",
+ "asOf": "2026-11-13T16:25+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -118,14 +118,14 @@
   {
    "player": "Brandon Miller",
    "team": "CHA",
-   "status": "Out",
-   "date": "2026-11-12T00:06Z",
-   "type": "out",
+   "status": "Day-To-Day",
+   "date": "2026-11-13T04:46Z",
+   "type": "day-to-day",
    "returnDate": "2026-11-15",
    "detail": "Soreness",
    "side": "Right",
    "injury": "Groin",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Miller (groin) is listed as out for Thursday's game against Phoenix.",
    "long": "Miller injured his groin during the 119-80 loss to Boston on Friday and subsequently missed Monday's meeting with Cleveland. Now that Miller is confirmed to be sidelined for a second consecutive contest, Sion James is the favorite to remain in the starting lineup."
   },

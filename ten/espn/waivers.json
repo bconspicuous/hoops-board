@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-13T13:51+09:00",
+ "asOf": "2026-11-13T16:25+09:00",
  "scoringPeriodId": 24,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -76,11 +76,35 @@
    "team": "IYH",
    "name": "Jongno Karina",
    "rank": 10,
-   "acq": 14
+   "acq": 15
   }
  ],
  "myPending": [],
  "transactions": [
+  {
+   "id": "47947f16-a4d3-4393-a25f-678b8939a260",
+   "team": "IYH",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-13 14:28 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "4433192",
+     "from": "FA",
+     "to": "IYH"
+    },
+    {
+     "type": "DROP",
+     "player": "Jaren Jackson Jr.",
+     "from": "IYH",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
   {
    "id": "f4533486-c216-440e-9c43-f59677e9cd57",
    "team": "GTD",
@@ -440,7 +464,7 @@
     },
     {
      "type": "DROP",
-     "player": "Tari Eason",
+     "player": "4433192",
      "from": "SONG",
      "to": "FA"
     }
@@ -878,7 +902,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "Tari Eason",
+     "player": "4433192",
      "from": "FA",
      "to": "SONG"
     },
@@ -1012,6 +1036,17 @@
    }
   },
   {
+   "id": 4277961,
+   "name": "Jaren Jackson Jr.",
+   "pro": "UTA",
+   "waiverClears": "2026-11-14 17:00 KST",
+   "inj": "OUT",
+   "droppedBy": {
+    "by": "IYH",
+    "at": "2026-11-13 14:28 KST"
+   }
+  },
+  {
    "id": 4433249,
    "name": "Moussa Diabate",
    "pro": "CHA",
@@ -1105,7 +1140,6 @@
   "gameId",
   "id",
   "members",
-  "pendingTransactions",
   "scoringPeriodId",
   "seasonId",
   "segmentId",
