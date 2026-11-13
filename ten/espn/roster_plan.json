@@ -1,6 +1,6 @@
 {
- "createdKST": "2026-11-13T13:03+09:00",
- "mode": "plan",
+ "createdKST": "2026-11-13T13:22+09:00",
+ "mode": "execute",
  "spid": 24,
  "matchupPeriod": 4,
  "add": {
@@ -26,5 +26,17 @@
  "warnings": [
   "방출 선수는 24시간 웨이버 — 그 사이 다른 팀이 데려갈 수 있어 되돌릴 수 없음"
  ],
- "status": "planned"
+ "status": "partial/failed: 영입 미반영, 방출 미반영",
+ "espn": [
+  {
+   "http": 200,
+   "status": "EXECUTED",
+   "type": "FREEAGENT",
+   "id": "f4533486-c216-440e-9c43-f59677e9cd57"
+  }
+ ],
+ "verified": {
+  "영입": false,
+  "방출": false
+ }
 }
