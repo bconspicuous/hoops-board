@@ -4,13 +4,13 @@
  "spid": 24,
  "matchupPeriod": 4,
  "add": {
-  "id": 4395630,
-  "name": "Devin Vassell",
-  "status": "FREEAGENT",
-  "pro": "SAS",
-  "inj": "DAY_TO_DAY"
+  "id": 4433249,
+  "name": "Moussa Diabate",
+  "status": "WAIVERS",
+  "pro": "CHA",
+  "inj": "ACTIVE"
  },
- "type": "FREEAGENT",
+ "type": "WAIVER",
  "limits": {
   "season": "15/70",
   "matchup": "3/7"
@@ -21,9 +21,10 @@
   "slot": 0,
   "inj": "ACTIVE"
  },
- "hash": "eda4168689",
+ "hash": "140b2bd018",
  "errors": [],
  "warnings": [
+  "Moussa Diabate은(는) 웨이버 상태 — 즉시 영입이 아니라 웨이버 신청(ESPN 처리 시각 8시, 순번 우선)",
   "방출 선수는 24시간 웨이버 — 그 사이 다른 팀이 데려갈 수 있어 되돌릴 수 없음"
  ],
  "status": "planned"
