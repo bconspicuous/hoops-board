@@ -32,7 +32,16 @@
    ]
   }
  ],
- "swaps": {},
+ "swaps": {
+  "GTD": [
+   {
+    "add": "Julian Champagnie",
+    "drop": "Jamal Shead",
+    "from": "2026-11-13",
+    "note": "ESPN 실행 완료(11/13 13:22 KST) — 11/12 로스터 잠금으로 11/13 경기부터 반영"
+   }
+  ]
+ },
  "core": [
   "Karl-Anthony Towns",
   "Kawhi Leonard",
