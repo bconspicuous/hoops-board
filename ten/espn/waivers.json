@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-13T19:45+09:00",
+ "asOf": "2026-11-14T05:06+09:00",
  "scoringPeriodId": 25,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -40,7 +40,7 @@
    "team": "Doo",
    "name": "Helio honeymoons",
    "rank": 4,
-   "acq": 7
+   "acq": 8
   },
   {
    "team": "KOO",
@@ -52,13 +52,13 @@
    "team": "SONG",
    "name": "Kfinco_ThePianist",
    "rank": 6,
-   "acq": 17
+   "acq": 18
   },
   {
    "team": "JYP",
    "name": "PaloAlto Wenoja",
    "rank": 7,
-   "acq": 11
+   "acq": 12
   },
   {
    "team": "GTD",
@@ -70,7 +70,7 @@
    "team": "SMS",
    "name": "Samseong Homeless",
    "rank": 9,
-   "acq": 12
+   "acq": 13
   },
   {
    "team": "IYH",
@@ -81,6 +81,102 @@
  ],
  "myPending": [],
  "transactions": [
+  {
+   "id": "cf271b34-a337-4f8e-982d-2a860df3cbb6",
+   "team": "SONG",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-14 04:27 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Robert Williams III",
+     "from": "FA",
+     "to": "SONG"
+    },
+    {
+     "type": "DROP",
+     "player": "Ja Morant",
+     "from": "SONG",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "061dcbff-55c2-4be9-bf3d-e5cf6b59957e",
+   "team": "SMS",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-14 03:55 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Klay Thompson",
+     "from": "FA",
+     "to": "SMS"
+    },
+    {
+     "type": "DROP",
+     "player": "Ja'Kobe Walter",
+     "from": "SMS",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "5ac9897b-f7be-453a-acd2-3aed76ceee04",
+   "team": "JYP",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-14 03:03 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Meleek Thomas",
+     "from": "FA",
+     "to": "JYP"
+    },
+    {
+     "type": "DROP",
+     "player": "Collin Gillespie",
+     "from": "JYP",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "7b086f88-95da-4d3a-bd28-27b88d3d45be",
+   "team": "Doo",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-13 21:35 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Jaylen Wells",
+     "from": "FA",
+     "to": "Doo"
+    },
+    {
+     "type": "DROP",
+     "player": "Aaron Gordon",
+     "from": "Doo",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
   {
    "id": "5bb496e4-7f21-4c15-ab64-2cc4aa155dee",
    "team": "Doo",
@@ -1001,6 +1097,17 @@
    }
   },
   {
+   "id": 4279888,
+   "name": "Ja Morant",
+   "pro": "POR",
+   "waiverClears": "2026-11-15 17:00 KST",
+   "inj": "OUT",
+   "droppedBy": {
+    "by": "SONG",
+    "at": "2026-11-14 04:27 KST"
+   }
+  },
+  {
    "id": 4277961,
    "name": "Jaren Jackson Jr.",
    "pro": "UTA",
@@ -1009,6 +1116,17 @@
    "droppedBy": {
     "by": "IYH",
     "at": "2026-11-13 14:28 KST"
+   }
+  },
+  {
+   "id": 3064290,
+   "name": "Aaron Gordon",
+   "pro": "DEN",
+   "waiverClears": "2026-11-15 17:00 KST",
+   "inj": "ACTIVE",
+   "droppedBy": {
+    "by": "Doo",
+    "at": "2026-11-13 21:35 KST"
    }
   },
   {
@@ -1031,6 +1149,17 @@
    "droppedBy": {
     "by": "GTD",
     "at": "2026-11-12 19:31 KST"
+   }
+  },
+  {
+   "id": 4684272,
+   "name": "Ja'Kobe Walter",
+   "pro": "TOR",
+   "waiverClears": "2026-11-15 17:00 KST",
+   "inj": "ACTIVE",
+   "droppedBy": {
+    "by": "SMS",
+    "at": "2026-11-14 03:55 KST"
    }
   },
   {
