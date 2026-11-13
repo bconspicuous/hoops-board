@@ -123,6 +123,35 @@ def player_row(p, owner, slot=None, status=None):
             "PTS": a.get("PTS", ""), "DD": a.get("DD", ""), "TW": a.get("TW", ""), "espnId": p.get("id"), "elig": "/".join(SLOT[x] for x in (p.get("eligibleSlots") or []) if x in (0, 1, 2, 3, 4))}
 
 
+SPLIT = {0: "season", 1: "l7", 2: "l15", 3: "l30"}
+SPLIT_COLS = ["GP", "GS", "MIN", "FGM", "FGA", "3PM", "FTM", "FTA", "REB", "AST", "STL", "BLK", "TO", "PTS", "DD", "TW"]
+
+
+def fetch_splits():
+    """Per-game averages for season / last 7 / last 15 / last 30 days (incl. GS = share of games started) for the
+    ~450 most-rostered players -> players_splits.csv. Used for role (starter/bench) and depth-adjusted projections."""
+    flt = {"players": {"filterStatus": {"value": ["FREEAGENT", "WAIVERS", "ONTEAM"]}, "limit": 450, "sortPercOwned": {"sortPriority": 1, "sortAsc": False},
+                       "filterStatsForTopScoringPeriodIds": {"value": 4, "additionalValue": [f"00{SEASON}", f"01{SEASON}", f"02{SEASON}", f"03{SEASON}"]}}}
+    d = get(["kona_player_info"], {"X-Fantasy-Filter": json.dumps(flt)})
+    out = []
+    for pe in d.get("players") or []:
+        p = pe.get("player") or {}
+        for s in p.get("stats") or []:
+            if s.get("seasonId") != SEASON or s.get("statSourceId") != 0 or s.get("statSplitTypeId") not in SPLIT:
+                continue
+            a = {}
+            for k, v in (s.get("averageStats") or {}).items():
+                try: a[STAT.get(int(k), f"s{k}")] = round(float(v), 3)
+                except (TypeError, ValueError): pass
+            if not a.get("GP"):
+                continue
+            out.append({"Player": p.get("fullName"), "espnId": p.get("id"), "Team": PRO.get(p.get("proTeamId"), str(p.get("proTeamId"))), "split": SPLIT[s["statSplitTypeId"]],
+                        **{c: a.get(c, "") for c in SPLIT_COLS}})
+    with open(os.path.join(OUT, "players_splits.csv"), "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=["Player", "espnId", "Team", "split"] + SPLIT_COLS); w.writeheader(); w.writerows(out)
+    return len(out)
+
+
 def main():
     os.makedirs(OUT, exist_ok=True)
     lg = get(["mSettings", "mTeam", "mRoster", "mMatchupScore", "mScoreboard", "mStatus"])
@@ -183,6 +212,12 @@ def main():
     json.dump(trim, open(os.path.join(OUT, "espn_raw_league.json"), "w"), ensure_ascii=False, indent=1)
     json.dump({"asOf": now, "scoringPeriodId": lg.get("scoringPeriodId"), "currentMatchupPeriod": sp, "teams": len(teams), "players": len(rows),
                "auth": bool(os.environ.get("ESPN_S2"))}, open(os.path.join(OUT, "meta.json"), "w"), indent=1)
+    try:
+        print("splits rows", fetch_splits())
+    except SystemExit:
+        raise
+    except Exception as e:  # optional data: keep the sync alive
+        print(f"::warning title=ESPN splits::{e}")
     inj, ierr = fetch_injuries()
     json.dump({"asOf": now, "source": "site.api.espn.com nba/injuries", "error": ierr, "injuries": inj}, open(os.path.join(OUT, "injuries.json"), "w"), ensure_ascii=False, indent=1)
     print(f"injuries: {len(inj)} {ierr or ''}")
