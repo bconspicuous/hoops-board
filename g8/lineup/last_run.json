@@ -1,65 +1,67 @@
 {
- "planId": "2026-11-12T0544Z",
+ "planId": "2026-11-13T0543Z",
  "mode": "dry",
- "date": "2026-11-12",
- "at": "2026-11-12T00:44-05:00",
+ "date": "2026-11-13",
+ "at": "2026-11-13T00:44-05:00",
  "moves": [
   {
-   "name": "Kyrie Irving",
+   "name": "Shai Gilgeous-Alexander",
+   "from": "G",
+   "to": "UTIL"
+  },
+  {
+   "name": "Karl-Anthony Towns",
+   "from": "UTIL",
+   "to": "C"
+  },
+  {
+   "name": "James Harden",
+   "from": "BE",
+   "to": "G"
+  },
+  {
+   "name": "Austin Reaves",
+   "from": "SG",
+   "to": "UTIL"
+  },
+  {
+   "name": "Michael Porter Jr.",
+   "from": "UTIL",
+   "to": "SF"
+  },
+  {
+   "name": "Jeremiah Fears",
+   "from": "BE",
+   "to": "SG"
+  },
+  {
+   "name": "Darryn Peterson",
    "from": "BE",
    "to": "PG"
-  },
-  {
-   "name": "Miles Bridges",
-   "from": "BE",
-   "to": "PF"
-  },
-  {
-   "name": "Daniel Gafford",
-   "from": "BE",
-   "to": "UTIL"
   }
  ],
  "skipped": [
   {
-   "name": "Shai Gilgeous-Alexander",
-   "from": "UTIL",
-   "to": "G",
-   "why": "game started / locked"
-  },
-  {
-   "name": "Karl-Anthony Towns",
-   "from": "C",
-   "to": "UTIL",
-   "why": "game started / locked"
-  },
-  {
-   "name": "Anthony Davis",
-   "from": "PF",
-   "to": "C",
-   "why": "game started / locked"
-  },
-  {
-   "name": "Tyler Herro",
-   "from": "G",
-   "to": "BE",
-   "why": "game started / locked"
-  },
-  {
-   "name": "Jeremiah Fears",
-   "from": "UTIL",
-   "to": "BE",
-   "why": "game started / locked"
-  },
-  {
-   "name": "Darryn Peterson",
+   "name": "Kyrie Irving",
    "from": "PG",
+   "to": "BE",
+   "why": "game started / locked"
+  },
+  {
+   "name": "Daniel Gafford",
+   "from": "C",
+   "to": "BE",
+   "why": "game started / locked"
+  },
+  {
+   "name": "AJ Dybantsa",
+   "from": "SF",
    "to": "BE",
    "why": "game started / locked"
   }
  ],
  "ok": false,
- "scoringPeriodId": 23,
+ "scoringPeriodId": 24,
  "finalLineup": [
   [
    "PG",
@@ -71,7 +73,11 @@
   ],
   [
    "SG",
-   "James Harden"
+   "Jeremiah Fears"
+  ],
+  [
+   "SF",
+   "Michael Porter Jr."
   ],
   [
    "SF",
@@ -82,20 +88,20 @@
    "Anthony Davis"
   ],
   [
-   "PF",
-   "Miles Bridges"
-  ],
-  [
    "C",
    "Karl-Anthony Towns"
   ],
   [
+   "C",
+   "Daniel Gafford"
+  ],
+  [
    "G",
-   "Tyler Herro"
+   "James Harden"
   ],
   [
    "F",
-   "Michael Porter Jr."
+   "Miles Bridges"
   ],
   [
    "UTIL",
@@ -107,11 +113,7 @@
   ],
   [
    "UTIL",
-   "Jeremiah Fears"
-  ],
-  [
-   "UTIL",
-   "Daniel Gafford"
+   "Tyler Herro"
   ],
   [
    "IR",
@@ -122,5 +124,5 @@
    "Norman Powell"
   ]
  ],
- "error": "resulting lineup exceeds slot counts {'UTIL': 4, 'PF': 2, 'PG': 2} (a locked player blocks a swap?) — nothing submitted"
+ "error": "resulting lineup exceeds slot counts {'C': 2, 'PG': 2, 'SF': 2} (a locked player blocks a swap?) — nothing submitted"
 }
