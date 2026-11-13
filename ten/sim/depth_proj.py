@@ -117,6 +117,14 @@ def main():
                 n_dep += 1
                 r = {'Player': r['Player'], 'Team': r['Team'], 'G': L['G'], 'MP': L['MP'], **{COL[s]: L[s] for s in ST}}
             w.writerow({c: r.get(c, '') for c in fields})
+        # players with recent games but missing from the ESPN season file (e.g. just added to a roster whose ESPN
+        # roster for today is still locked, or outside the top-200 FA list) get their depth line too
+        nm = {norm(n): n for n in report}
+        for k, L in lines.items():
+            if k in seen or k not in nm: continue
+            n_dep += 1; full = nm[k]
+            w.writerow({'Player': full, 'Team': report[full]['team'], 'G': L['G'], 'MP': L['MP'], **{COL[s]: L[s] for s in ST}})
+            if k in dd: dd_out[full] = dd[k]
     json.dump(dd_out, open(W + 'actual_dd.json', 'w'), ensure_ascii=False)
     json.dump({'asOf': max((r['date'] for r in logs), default=''), 'days': len({r['date'] for r in logs}), 'players': report,
                'method': 'last-15-day per-minute rate (regressed to season, 150-min prior) x minutes weighted by rotation similarity to today and recency'},
