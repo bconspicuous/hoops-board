@@ -110,6 +110,8 @@ if ACT_ONLY and os.path.exists(W + '../data/players_2027.csv'):
             if float(r['G'] or 0) > 0: DD27[norm(r['Player'])] = float(r['DD'] or 0)
         except ValueError: pass
 if ACT_ONLY: WACT = 1.0
+if ACT_ONLY and CFG.get('basis') == 'last15depth' and os.path.exists(W + 'actual_dd.json'):   # depth-aware DD rate (depth_proj.py)
+    DD27.update({norm(k): v for k, v in json.load(open(W + 'actual_dd.json')).items()})
 # ---------- pool
 rostered = {n for t in R['teams'] for n in t['players'] + t['ir']} | set(R['trade']['give']) | set(R['trade']['get'])
 pool = [p for p in PL if (p.get('espnRank') and p['espnRank'] <= 300) or p['name'] in rostered]

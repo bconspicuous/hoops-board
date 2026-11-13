@@ -3,6 +3,8 @@
 set -uo pipefail
 cd "$(dirname "$0")"
 python3 -I espn_to_sim.py | grep -E "trade|swaps|teams"
+# user setting: depth-aware last-15-day lines (proj_config.basis = last15depth) replace season lines in actual_espn_live.csv
+python3 -I -c "import json,sys; sys.exit(0 if json.load(open('proj_config.json')).get('basis')=='last15depth' else 1)" && python3 -I depth_proj.py
 read CUR FROM ACQ <<<"$(python3 -I -c "
 import json; r=json.load(open('rosters_espn.json')); g=json.load(open('../data/rosters.json'))
 print(r['current']['period'], r['current']['fromDate'], next(t for t in g['teams'] if t['me'])['transactions']['acquisitions'])")"
