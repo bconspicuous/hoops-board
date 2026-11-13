@@ -548,7 +548,11 @@ function availOf(p, w, perGame, b2b) {
   /* planned rest (league/meta.restB2B, the manager's decision): out on every 2nd night of a team back-to-back. Season availability is
      kept at the projected GP/82 (same principle as the back-to-back layer); REST_KEEP_GP = false treats the rest as extra absences. */
   if (p.team && state.restB2B.has(p.name)) { const s = REF.b2bShare[p.team] || .18; pN = REST_KEEP_GP ? Math.min(1, g / (1 - s)) : g; pB = 0; rEff = 1; }
-  if (w === currentWeek()) { const st = statusOf(p.name); if (st === "O" && !returnIdx(p.name, w)) { pN = pB = 0; } else if (st === "DTD") { pN *= .8; pB *= .8; } }
+  /* injuries: OUT with an ESPN estimated return date -> out for every week that ends before it (partial week via returnIdx in playsOf);
+     OUT without a date -> out this week only; DTD -> 80% this week */
+  if (w >= currentWeek()) { const st = statusOf(p.name), rd = ((state.docs["league/rosters"] || {}).returns || {})[p.name];
+    if (st === "O") { if (rd ? rd > REF.ends[w] : w === currentWeek()) { pN = pB = 0; } }
+    else if (st === "DTD" && w === currentWeek()) { pN *= .8; pB *= .8; } }
   if (state.seasonOut && state.seasonOut.has(p.name)) { pN = pB = 0; }
   return { pN, pB, rEff };
 }
@@ -567,8 +571,8 @@ const XC = ["TPM", "REB", "AST", "STL", "BLK", "TO", "PTS", "PF"];
 let PLAYC = new Map();
 /* OUT with an ESPN estimated return date inside week w -> index of the first day he can play (null = out all week / no date) */
 function returnIdx(n, w) {
-  const rd = ((state.docs["league/rosters"] || {}).returns || {})[n]; if (!rd || statusOf(n) !== "O" || w !== currentWeek()) return null;
-  if (rd > REF.ends[w]) return null; return Math.max(1, dayOffset(w, rd));
+  const rd = ((state.docs["league/rosters"] || {}).returns || {})[n]; if (!rd || statusOf(n) !== "O" || w < currentWeek()) return null;
+  if (rd > REF.ends[w] || rd <= REF.starts[w]) return null; return Math.max(1, dayOffset(w, rd));
 }
 function playsOf(p, w, D, perGame, b2b) {
   const key = w + "|" + p.name + "|" + D + "|" + (perGame ? 1 : 0) + (b2b ? 1 : 0); let o = PLAYC.get(key); if (o) return o;
