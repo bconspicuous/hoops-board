@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-13T13:22+09:00",
+ "asOf": "2026-11-13T13:24+09:00",
  "scoringPeriodId": 24,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -489,6 +489,498 @@
     {
      "type": "DROP",
      "player": "Daniel Gafford",
+     "from": "GTD",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "ab5a896d-bdbc-458a-8907-b94cb7039b10",
+   "team": "SONG",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-10 14:02 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Ja Morant",
+     "from": "FA",
+     "to": "SONG"
+    },
+    {
+     "type": "DROP",
+     "player": "Collin Gillespie",
+     "from": "SONG",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "3340863a-0ac2-4850-bcd7-69fd106f1c4b",
+   "team": "TBG",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-10 13:15 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Jared McCain",
+     "from": "FA",
+     "to": "TBG"
+    },
+    {
+     "type": "DROP",
+     "player": "Mario Hezonja",
+     "from": "TBG",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "d568c705-a8f8-4113-ab50-98a93df55ed5",
+   "team": "IYH",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-10 12:44 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Aday Mara",
+     "from": "FA",
+     "to": "IYH"
+    },
+    {
+     "type": "DROP",
+     "player": "Khaman Maluach",
+     "from": "IYH",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "8885cb03-30e3-42ed-8374-f02e089125e7",
+   "team": "SONG",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-10 09:35 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Collin Gillespie",
+     "from": "FA",
+     "to": "SONG"
+    },
+    {
+     "type": "DROP",
+     "player": "Reed Sheppard",
+     "from": "SONG",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "4e660283-a82f-41ed-9528-a134fa2c9555",
+   "team": "IYH",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-10 08:48 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Khaman Maluach",
+     "from": "FA",
+     "to": "IYH"
+    },
+    {
+     "type": "DROP",
+     "player": "Collin Murray-Boyles",
+     "from": "IYH",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "4b724c1a-bece-46f9-b9be-847ad4ffc381",
+   "team": "SMS",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-10 08:27 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Ja'Kobe Walter",
+     "from": "FA",
+     "to": "SMS"
+    },
+    {
+     "type": "DROP",
+     "player": "Devin Vassell",
+     "from": "SMS",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "1421708b-6712-497b-98ce-89f29b7e83b8",
+   "team": "JYP",
+   "mine": false,
+   "type": "ROSTER",
+   "status": "EXECUTED",
+   "proposed": "2026-11-10 08:21 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "DROP",
+     "player": "Klay Thompson",
+     "from": "JYP",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "bf57b5fe-b4fe-4e78-ac35-be515fd41dfa",
+   "team": "GGAM",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-10 07:21 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Draymond Green",
+     "from": "FA",
+     "to": "GGAM"
+    },
+    {
+     "type": "DROP",
+     "player": "Nic Claxton",
+     "from": "GGAM",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "2c36297a-1c20-402d-bc3e-041fd82ab547",
+   "team": "KWNG",
+   "mine": false,
+   "type": "ROSTER",
+   "status": "EXECUTED",
+   "proposed": "2026-11-09 10:53 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "DROP",
+     "player": "Mikal Bridges",
+     "from": "KWNG",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "b33d18d2-5195-42a7-bbc0-43b0043190ef",
+   "team": "SMS",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-09 06:07 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Peyton Watson",
+     "from": "FA",
+     "to": "SMS"
+    },
+    {
+     "type": "DROP",
+     "player": "Nolan Traore",
+     "from": "SMS",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "a56e80f9-107f-4561-8478-c5e14478bff9",
+   "team": "GTD",
+   "mine": true,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-09 05:55 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Jamal Shead",
+     "from": "FA",
+     "to": "GTD"
+    },
+    {
+     "type": "DROP",
+     "player": "Paul Reed",
+     "from": "GTD",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "5889f14e-91d4-4de5-8082-9bccc05d265d",
+   "team": "SMS",
+   "mine": false,
+   "type": "WAIVER",
+   "status": "EXECUTED",
+   "proposed": "2026-11-08 17:26 KST",
+   "processed": "2026-11-08 17:26 KST",
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Jonathan Kuminga",
+     "from": "FA",
+     "to": "SMS"
+    },
+    {
+     "type": "DROP",
+     "player": "Ja'Kobe Walter",
+     "from": "SMS",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "0929a16f-1704-4f1f-801a-da0a61384e0c",
+   "team": "IYH",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-08 09:28 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Brayden Burries",
+     "from": "FA",
+     "to": "IYH"
+    },
+    {
+     "type": "DROP",
+     "player": "Christian Braun",
+     "from": "IYH",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "d6856a68-29b3-4853-8bdc-4f170c04c775",
+   "team": "SMS",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-08 02:43 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Nolan Traore",
+     "from": "FA",
+     "to": "SMS"
+    },
+    {
+     "type": "DROP",
+     "player": "Draymond Green",
+     "from": "SMS",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "0f109846-13fb-41f3-854e-a38d1fd0d25a",
+   "team": "IYH",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-08 01:36 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Christian Braun",
+     "from": "FA",
+     "to": "IYH"
+    },
+    {
+     "type": "DROP",
+     "player": "Collin Gillespie",
+     "from": "IYH",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "0c60ad05-1788-498d-bdca-6337714ee808",
+   "team": "TBG",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-07 13:32 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Mario Hezonja",
+     "from": "FA",
+     "to": "TBG"
+    },
+    {
+     "type": "DROP",
+     "player": "Kel'el Ware",
+     "from": "TBG",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "27ebbca4-8014-4a25-b1b7-cdc230b8f925",
+   "team": "SONG",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-07 12:03 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Tari Eason",
+     "from": "FA",
+     "to": "SONG"
+    },
+    {
+     "type": "DROP",
+     "player": "Aday Mara",
+     "from": "SONG",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "8eea6f7d-9e5b-459e-9471-27e41d2e33e3",
+   "team": "SONG",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-07 11:59 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Reed Sheppard",
+     "from": "FA",
+     "to": "SONG"
+    },
+    {
+     "type": "DROP",
+     "player": "Jonathan Kuminga",
+     "from": "SONG",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "e915767c-8c62-4160-967b-cef831524baa",
+   "team": "IYH",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-07 01:40 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Neemias Queta",
+     "from": "FA",
+     "to": "IYH"
+    },
+    {
+     "type": "DROP",
+     "player": "De'Anthony Melton",
+     "from": "IYH",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "79dad690-ac8d-4d78-b913-5ca89bee94cf",
+   "team": "SMS",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-06 08:40 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Draymond Green",
+     "from": "FA",
+     "to": "SMS"
+    },
+    {
+     "type": "DROP",
+     "player": "Jarace Walker",
+     "from": "SMS",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "74090834-c304-4165-ba48-dee22e8c7a41",
+   "team": "GTD",
+   "mine": true,
+   "type": "WAIVER",
+   "status": "EXECUTED",
+   "proposed": "2026-11-05 17:15 KST",
+   "processed": "2026-11-05 17:15 KST",
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Grayson Allen",
+     "from": "FA",
+     "to": "GTD"
+    },
+    {
+     "type": "DROP",
+     "player": "Zaccharie Risacher",
      "from": "GTD",
      "to": "FA"
     }
