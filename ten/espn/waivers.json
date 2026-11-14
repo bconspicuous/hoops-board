@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-14T19:45+09:00",
+ "asOf": "2026-11-15T03:32+09:00",
  "scoringPeriodId": 26,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -22,7 +22,7 @@
    "team": "KWNG",
    "name": "Saving PakPaks",
    "rank": 1,
-   "acq": 3
+   "acq": 4
   },
   {
    "team": "GGAM",
@@ -81,6 +81,24 @@
  ],
  "myPending": [],
  "transactions": [
+  {
+   "id": "d085497f-94ae-42a0-9666-5f20d8e7029c",
+   "team": "KWNG",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-14 22:17 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Cameron Johnson",
+     "from": "FA",
+     "to": "KWNG"
+    }
+   ],
+   "bid": 0
+  },
   {
    "id": "eeb22cfe-5660-4318-b6f0-e1f9d9d364e1",
    "team": "Doo",
@@ -1228,7 +1246,7 @@
    "name": "Pelle Larsson",
    "pro": "MIA",
    "waiverClears": "2026-11-15 17:00 KST",
-   "inj": "OUT",
+   "inj": "DAY_TO_DAY",
    "droppedBy": {
     "by": "TBG",
     "at": "2026-11-14 08:29 KST"
