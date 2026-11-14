@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-14T14:41+09:00",
+ "asOf": "2026-11-14T19:12+09:00",
  "source": "ESPN API sync (GitHub Actions g8-espn)",
  "teams": {
   "Junyoung's Scary Team": {
@@ -16,7 +16,7 @@
     "Ayo Dosunmu",
     "Wendell Carter Jr.",
     "Aaron Wiggins",
-    "Kris Dunn"
+    "Meleek Thomas"
    ],
    "ir": [
     "Dejounte Murray",
@@ -37,7 +37,7 @@
     "Cedric Coward",
     "Klay Thompson",
     "VJ Edgecombe",
-    "Ja'Kobe Walter"
+    "Paul Reed"
    ],
    "ir": [
     "Stephen Curry",
@@ -56,13 +56,12 @@
     "Tyler Herro",
     "Miles Bridges",
     "Jeremiah Fears",
-    "Daniel Gafford",
     "Darryn Peterson",
-    "AJ Dybantsa"
+    "AJ Dybantsa",
+    "Norman Powell"
    ],
    "ir": [
-    "Brandon Miller",
-    "Norman Powell"
+    "Brandon Miller"
    ]
   },
   "Zero Sugar": {
@@ -75,11 +74,11 @@
     "Dyson Daniels",
     "Isaiah Hartenstein",
     "Grayson Allen",
-    "Reed Sheppard",
     "Duncan Robinson",
     "Saddiq Bey",
     "P.J. Washington",
-    "Jared McCain"
+    "Jared McCain",
+    "Bones Hyland"
    ],
    "ir": [
     "Scottie Barnes",
@@ -100,7 +99,7 @@
     "Jabari Smith Jr.",
     "Rudy Gobert",
     "Alex Sarr",
-    "Jaime Jaquez Jr."
+    "Matas Buzelis"
    ],
    "ir": [
     "Ja Morant"
@@ -141,7 +140,7 @@
     "Paul George",
     "CJ McCollum",
     "Jalen Green",
-    "Andrew Nembhard"
+    "Jaylen Wells"
    ],
    "ir": [
     "Tyrese Haliburton",
@@ -215,6 +214,7 @@
   "Isaiah Joe": "O",
   "Sam Merrill": "O",
   "Sergio de Larrea": "O",
+  "Vit Krejci": "O",
   "Austin Reaves": "DTD",
   "Brandon Miller": "DTD",
   "Luka Doncic": "DTD",
@@ -273,6 +273,7 @@
   "Chet Holmgren": "2027-01-02",
   "Paolo Banchero": "2026-11-22",
   "Mark Williams": "2027-02-03",
+  "Vit Krejci": "2027-01-12",
   "Ja Morant": "2026-12-01",
   "Shaedon Sharpe": "2027-03-02",
   "Precious Achiuwa": "2026-11-15",

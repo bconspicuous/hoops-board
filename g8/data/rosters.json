@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-14T16:03+09:00",
+ "asOf": "2026-11-14T19:12+09:00",
  "leagueId": "751654965",
  "season": 2027,
  "teams": [
@@ -21,7 +21,7 @@
     "Ayo Dosunmu",
     "Wendell Carter Jr.",
     "Aaron Wiggins",
-    "Kris Dunn"
+    "Meleek Thomas"
    ],
    "ir": [
     "Dejounte Murray",
@@ -37,9 +37,9 @@
     "1": 4,
     "2": 3,
     "3": 2,
-    "4": 4
+    "4": 5
    },
-   "acqTotal": 13
+   "acqTotal": 14
   },
   {
    "name": "Gatori Team",
@@ -59,7 +59,7 @@
     "Cedric Coward",
     "Klay Thompson",
     "VJ Edgecombe",
-    "Ja'Kobe Walter"
+    "Paul Reed"
    ],
    "ir": [
     "Stephen Curry",
@@ -75,9 +75,9 @@
     "1": 4,
     "2": 6,
     "3": 6,
-    "4": 2
+    "4": 3
    },
-   "acqTotal": 18
+   "acqTotal": 19
   },
   {
    "name": "Garak Twindragons",
@@ -95,13 +95,12 @@
     "Tyler Herro",
     "Miles Bridges",
     "Jeremiah Fears",
-    "Daniel Gafford",
     "Darryn Peterson",
-    "AJ Dybantsa"
+    "AJ Dybantsa",
+    "Norman Powell"
    ],
    "ir": [
-    "Brandon Miller",
-    "Norman Powell"
+    "Brandon Miller"
    ],
    "record": {
     "wins": 20,
@@ -131,11 +130,11 @@
     "Dyson Daniels",
     "Isaiah Hartenstein",
     "Grayson Allen",
-    "Reed Sheppard",
     "Duncan Robinson",
     "Saddiq Bey",
     "P.J. Washington",
-    "Jared McCain"
+    "Jared McCain",
+    "Bones Hyland"
    ],
    "ir": [
     "Scottie Barnes",
@@ -150,9 +149,9 @@
    "acqByPeriod": {
     "2": 2,
     "3": 3,
-    "4": 1
+    "4": 2
    },
-   "acqTotal": 6
+   "acqTotal": 7
   },
   {
    "name": "ChaRDaddy",
@@ -172,7 +171,7 @@
     "Jabari Smith Jr.",
     "Rudy Gobert",
     "Alex Sarr",
-    "Jaime Jaquez Jr."
+    "Matas Buzelis"
    ],
    "ir": [
     "Ja Morant"
@@ -247,7 +246,7 @@
     "Paul George",
     "CJ McCollum",
     "Jalen Green",
-    "Andrew Nembhard"
+    "Jaylen Wells"
    ],
    "ir": [
     "Tyrese Haliburton",
@@ -262,9 +261,9 @@
    "acqByPeriod": {
     "2": 2,
     "3": 1,
-    "4": 3
+    "4": 4
    },
-   "acqTotal": 6
+   "acqTotal": 7
   },
   {
    "name": "Brand_New_Neo_HJ",
@@ -350,7 +349,8 @@
    "Ben Simmons",
    "Isaiah Joe",
    "Sam Merrill",
-   "Sergio de Larrea"
+   "Sergio de Larrea",
+   "Vit Krejci"
   ],
   "DTD": [
    "Austin Reaves",
