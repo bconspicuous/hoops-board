@@ -1,6 +1,6 @@
 {
- "asOf": "2026-11-14T16:06+09:00",
- "scoringPeriodId": 25,
+ "asOf": "2026-11-14T19:45+09:00",
+ "scoringPeriodId": 26,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
   "waiverHours": 24,
@@ -40,7 +40,7 @@
    "team": "Doo",
    "name": "Helio honeymoons",
    "rank": 4,
-   "acq": 8
+   "acq": 9
   },
   {
    "team": "KOO",
@@ -82,6 +82,30 @@
  "myPending": [],
  "transactions": [
   {
+   "id": "eeb22cfe-5660-4318-b6f0-e1f9d9d364e1",
+   "team": "Doo",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-14 16:29 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Egor Demin",
+     "from": "FA",
+     "to": "Doo"
+    },
+    {
+     "type": "DROP",
+     "player": "Keldon Johnson",
+     "from": "Doo",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
    "id": "5bcb3d66-6a1a-4c62-ac8b-cddbed93c502",
    "team": "IYH",
    "mine": false,
@@ -92,7 +116,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "5107173",
+     "player": "Danny Wolf",
      "from": "FA",
      "to": "IYH"
     },
@@ -116,7 +140,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "4591725",
+     "player": "Ryan Rollins",
      "from": "FA",
      "to": "GTD"
     },
@@ -140,7 +164,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "4278049",
+     "player": "Daniel Gafford",
      "from": "FA",
      "to": "SONG"
     },
@@ -776,7 +800,7 @@
     },
     {
      "type": "DROP",
-     "player": "4278049",
+     "player": "Daniel Gafford",
      "from": "GTD",
      "to": "FA"
     }
@@ -1130,116 +1154,9 @@
     }
    ],
    "bid": 0
-  },
-  {
-   "id": "0c60ad05-1788-498d-bdca-6337714ee808",
-   "team": "TBG",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-07 13:32 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Mario Hezonja",
-     "from": "FA",
-     "to": "TBG"
-    },
-    {
-     "type": "DROP",
-     "player": "Kel'el Ware",
-     "from": "TBG",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "27ebbca4-8014-4a25-b1b7-cdc230b8f925",
-   "team": "SONG",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-07 12:03 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Tari Eason",
-     "from": "FA",
-     "to": "SONG"
-    },
-    {
-     "type": "DROP",
-     "player": "Aday Mara",
-     "from": "SONG",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "8eea6f7d-9e5b-459e-9471-27e41d2e33e3",
-   "team": "SONG",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-07 11:59 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Reed Sheppard",
-     "from": "FA",
-     "to": "SONG"
-    },
-    {
-     "type": "DROP",
-     "player": "Jonathan Kuminga",
-     "from": "SONG",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "e915767c-8c62-4160-967b-cef831524baa",
-   "team": "IYH",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-07 01:40 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Neemias Queta",
-     "from": "FA",
-     "to": "IYH"
-    },
-    {
-     "type": "DROP",
-     "player": "De'Anthony Melton",
-     "from": "IYH",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
   }
  ],
  "onWaivers": [
-  {
-   "id": 5095151,
-   "name": "Caleb Wilson",
-   "pro": "CHI",
-   "waiverClears": "2026-11-14 17:00 KST",
-   "inj": "OUT",
-   "droppedBy": {
-    "by": "SMS",
-    "at": "2026-11-13 06:39 KST"
-   }
-  },
   {
    "id": 3907497,
    "name": "Dejounte Murray",
@@ -1260,17 +1177,6 @@
    "droppedBy": {
     "by": "SONG",
     "at": "2026-11-14 04:27 KST"
-   }
-  },
-  {
-   "id": 4277961,
-   "name": "Jaren Jackson Jr.",
-   "pro": "UTA",
-   "waiverClears": "2026-11-14 17:00 KST",
-   "inj": "OUT",
-   "droppedBy": {
-    "by": "IYH",
-    "at": "2026-11-13 14:28 KST"
    }
   },
   {
@@ -1307,17 +1213,6 @@
    }
   },
   {
-   "id": 3134907,
-   "name": "Kyle Kuzma",
-   "pro": "MIL",
-   "waiverClears": "2026-11-14 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "GTD",
-    "at": "2026-11-12 19:31 KST"
-   }
-  },
-  {
    "id": 4684272,
    "name": "Ja'Kobe Walter",
    "pro": "TOR",
@@ -1348,17 +1243,6 @@
    "droppedBy": {
     "by": "IYH",
     "at": "2026-11-14 12:55 KST"
-   }
-  },
-  {
-   "id": 4432241,
-   "name": "Jamal Shead",
-   "pro": "TOR",
-   "waiverClears": "2026-11-14 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "GTD",
-    "at": "2026-11-13 13:22 KST"
    }
   }
  ],
