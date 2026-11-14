@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-14T11:42+09:00",
+ "asOf": "2026-11-14T14:41+09:00",
  "leagueId": "751654965",
  "season": 2027,
  "teams": [
@@ -187,9 +187,9 @@
     "1": 6,
     "2": 7,
     "3": 6,
-    "4": 4
+    "4": 5
    },
-   "acqTotal": 23
+   "acqTotal": 24
   },
   {
    "name": "Kunhyo's Chokeslam",
@@ -350,8 +350,7 @@
    "Ben Simmons",
    "Isaiah Joe",
    "Sam Merrill",
-   "Sergio de Larrea",
-   "Vit Krejci"
+   "Sergio de Larrea"
   ],
   "DTD": [
    "Austin Reaves",
@@ -359,11 +358,15 @@
    "Luka Doncic",
    "LeBron James",
    "Paul George",
+   "Jalen Smith",
    "Quentin Grimes",
    "Collin Sexton",
+   "Jaxson Hayes",
    "Nolan Traore",
    "Mikel Brown Jr.",
+   "Kingston Flemings",
    "Morez Johnson Jr.",
+   "Aaron Nesmith",
    "Bub Carrington",
    "Max Christie"
   ]

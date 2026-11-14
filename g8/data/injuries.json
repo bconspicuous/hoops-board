@@ -1,8 +1,22 @@
 {
- "asOf": "2026-11-14T11:42+09:00",
+ "asOf": "2026-11-14T14:41+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
+  {
+   "player": "Kingston Flemings",
+   "team": "ATL",
+   "status": "Day-To-Day",
+   "date": "2026-11-14T03:20Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-15",
+   "detail": null,
+   "side": null,
+   "injury": "Back",
+   "fantasyStatus": "GTD",
+   "short": "Flemings (back tightness) will not return to Friday's game against the Bulls.",
+   "long": "Flemings carried a questionable tag into this game, and it appears as though he irritated his injury again. He ended up finishing scoreless with one rebound and one assist in 17 minutes. Consider him questionable for Sunday against the Bucks."
+  },
   {
    "player": "Mouhamed Gueye",
    "team": "ATL",
@@ -142,6 +156,20 @@
    "fantasyStatus": "OUT",
    "short": "Schroder has been diagnosed with a left hamstring strain and will be reevaluated in two weeks, Michael Scotto of HoopsHype.com reports.",
    "long": "Schroder, who missed Friday's game due to what was described as a left thigh injury, has been diagnosed with a hamstring strain. He is set to be reevaluated in two weeks, suggesting he will miss at least the next five games. Christian Anderson and Sion James could see extra minutes with Schroder sidelined."
+  },
+  {
+   "player": "Jalen Smith",
+   "team": "CHI",
+   "status": "Day-To-Day",
+   "date": "2026-11-14T03:50Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-14",
+   "detail": null,
+   "side": "Left",
+   "injury": "Hand",
+   "fantasyStatus": "GTD",
+   "short": "Smith (hand) exited Friday's 125-117 win over the Hawks in overtime and did not return, finishing with 15 points (6-15 FG, 1-6 3Pt, 2-2 FT), 12 rebounds, three assists and three steals across 32 minutes.",
+   "long": "Smith secured his third double-double of the season while tying his season-high mark in steals. However, the big man came down on his left hand in overtime and exited to the locker room. His status will be worth monitoring ahead of Saturday's game at Minnesota."
   },
   {
    "player": "Dailyn Swain",
@@ -464,6 +492,20 @@
    "fantasyStatus": "OUT",
    "short": "Head coach Ime Udoka said Monday that Adams could return as soon as Sunday's game at Washington, Lachard Binkley of SI.com reports.",
    "long": "The veteran center is still recovering from a right soleus strain and hasn't played since Oct. 23. With Adams and Clint Capela (ankle) both sidelined, Tari Eason and Jabari Smith figure to see increased burn at center."
+  },
+  {
+   "player": "Aaron Nesmith",
+   "team": "IND",
+   "status": "Day-To-Day",
+   "date": "2026-11-14T03:02Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-15",
+   "detail": null,
+   "side": "Not Specified",
+   "injury": "Hand",
+   "fantasyStatus": "GTD",
+   "short": "Nesmith exited to the locker room in the final seconds of Friday's 106-104 win over the Knicks due to an apparent hand/wrist injury, Tony East of Forbes.com reports. He posted 18 points (7-10 FG, 2-3 3Pt, 2-2 FT), seven rebounds and one assist in 33 minutes.",
+   "long": "Nesmith turned in an extremely efficient performance and finished as Indiana's second-leading scorer. He was also second on the club in rebounds. However, the swingman's status will be worth monitoring ahead of Sunday's game at Philadelphia after he exited Friday's win early."
   },
   {
    "player": "Tyrese Haliburton",
@@ -802,6 +844,20 @@
    "long": "Friday marks a third consecutive absence for Watford, who has no timetable for a return with a sprained ankle. His absence solidifies DeAndre Jordan's spot in the center rotation."
   },
   {
+   "player": "Ajay Mitchell",
+   "team": "OKC",
+   "status": "Out",
+   "date": "2026-11-14T02:34Z",
+   "type": "out",
+   "returnDate": "2026-11-15",
+   "detail": "Sprain",
+   "side": "Left",
+   "injury": "Ankle",
+   "fantasyStatus": "OUT",
+   "short": "Mitchell (ankle) has been ruled out for Friday's game against the Clippers.",
+   "long": "Mitchell will miss a second consecutive contest due to a let ankle sprain, and his next chance to play will come Sunday at Sacramento. With the 24-year-old guard out, Jared McCain, Bennett Stirtz and Nique Clifford are candidates for increased playing time."
+  },
+  {
    "player": "Thomas Sorber",
    "team": "OKC",
    "status": "Out",
@@ -814,20 +870,6 @@
    "fantasyStatus": "OUT",
    "short": "Sorber (knee) has been ruled out for Friday's game against the Clippers.",
    "long": "Sorber is still recovering from knee surgery and remains without a timetable to return. He can be considered week-to-week until the Thunder offer an update on his status."
-  },
-  {
-   "player": "Ajay Mitchell",
-   "team": "OKC",
-   "status": "Day-To-Day",
-   "date": "2026-11-13T01:03Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-15",
-   "detail": "Sprain",
-   "side": "Left",
-   "injury": "Ankle",
-   "fantasyStatus": "OUT",
-   "short": "Mitchell (ankle) is questionable for Friday's game against the Clippers.",
-   "long": "Mitchell is in danger of missing a second straight game while nursing a left ankle sprain. He'll likely need to test the ankle out during shootaround and warmups to determine whether he can go Friday night."
   },
   {
    "player": "Jaylin Williams",
@@ -895,7 +937,7 @@
    "detail": "Not Specified",
    "side": "Left",
    "injury": "Knee",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Isaac (knee) is out for Tuesday's game against Sacramento.",
    "long": "Isaac has yet to make his 2026-27 debut while continuing his rehab from a left knee injury. His next opportunity to take the court will arrive Wednesday in Utah."
   },
@@ -1220,6 +1262,20 @@
    "fantasyStatus": "GTD",
    "short": "Bittle (foot) is listed as out for Monday's game against Memphis.",
    "long": "Bittle has been battling a foot injury for a couple of months. It's unknown when the rookie will be cleared to suit up for the Raptors, so he should be considered week-to-week for now."
+  },
+  {
+   "player": "Jaxson Hayes",
+   "team": "UTAH",
+   "status": "Day-To-Day",
+   "date": "2026-11-14T02:58Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-15",
+   "detail": null,
+   "side": "Left",
+   "injury": "Knee",
+   "fantasyStatus": "GTD",
+   "short": "Hayes won't return to Friday's game against the Rockets due to a left knee issue.",
+   "long": "Hayes will end up missing the entire second half. He was playing well prior to the injury, finishing with 12 points on 5-of-6 shooting with five rebounds and one assist in 13 minutes. Mo Bamba could be in line for more run with this news."
   },
   {
    "player": "Trey Alexander",
