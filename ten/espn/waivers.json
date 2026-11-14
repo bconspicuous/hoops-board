@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-14T06:45+09:00",
+ "asOf": "2026-11-14T13:45+09:00",
  "scoringPeriodId": 25,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -34,7 +34,7 @@
    "team": "TBG",
    "name": "Team Bbang Guns",
    "rank": 3,
-   "acq": 14
+   "acq": 15
   },
   {
    "team": "Doo",
@@ -46,13 +46,13 @@
    "team": "KOO",
    "name": "Seoul Dreamers",
    "rank": 5,
-   "acq": 7
+   "acq": 8
   },
   {
    "team": "SONG",
    "name": "Kfinco_ThePianist",
    "rank": 6,
-   "acq": 18
+   "acq": 19
   },
   {
    "team": "JYP",
@@ -64,23 +64,167 @@
    "team": "GTD",
    "name": "Garak Twindragons",
    "rank": 8,
-   "acq": 16
+   "acq": 17
   },
   {
    "team": "SMS",
    "name": "Samseong Homeless",
    "rank": 9,
-   "acq": 13
+   "acq": 14
   },
   {
    "team": "IYH",
    "name": "Jongno Karina",
    "rank": 10,
-   "acq": 15
+   "acq": 16
   }
  ],
  "myPending": [],
  "transactions": [
+  {
+   "id": "5bcb3d66-6a1a-4c62-ac8b-cddbed93c502",
+   "team": "IYH",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-14 12:55 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "5107173",
+     "from": "FA",
+     "to": "IYH"
+    },
+    {
+     "type": "DROP",
+     "player": "Brayden Burries",
+     "from": "IYH",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "a5b1c053-9d56-4de9-bf7a-f069d63ffcd8",
+   "team": "GTD",
+   "mine": true,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-14 11:57 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "4591725",
+     "from": "FA",
+     "to": "GTD"
+    },
+    {
+     "type": "DROP",
+     "player": "Dejounte Murray",
+     "from": "GTD",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "6d95f901-5b8e-4072-9973-074ba5f61af2",
+   "team": "SONG",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-14 09:00 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "4278049",
+     "from": "FA",
+     "to": "SONG"
+    },
+    {
+     "type": "DROP",
+     "player": "Robert Williams III",
+     "from": "SONG",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "7a4e6212-ba25-48b2-b7c8-9cb5a33e08b3",
+   "team": "SMS",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-14 08:30 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Tristan da Silva",
+     "from": "FA",
+     "to": "SMS"
+    },
+    {
+     "type": "DROP",
+     "player": "Klay Thompson",
+     "from": "SMS",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "6771be77-66d5-497d-b21c-4f9e6c0df303",
+   "team": "TBG",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-14 08:29 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Christian Braun",
+     "from": "FA",
+     "to": "TBG"
+    },
+    {
+     "type": "DROP",
+     "player": "Pelle Larsson",
+     "from": "TBG",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "d9251ff1-1ade-4e36-8b20-acc902636d0c",
+   "team": "KOO",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-14 07:31 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Jalen Suggs",
+     "from": "FA",
+     "to": "KOO"
+    },
+    {
+     "type": "DROP",
+     "player": "Coby White",
+     "from": "KOO",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
   {
    "id": "cf271b34-a337-4f8e-982d-2a860df3cbb6",
    "team": "SONG",
@@ -632,7 +776,7 @@
     },
     {
      "type": "DROP",
-     "player": "Daniel Gafford",
+     "player": "4278049",
      "from": "GTD",
      "to": "FA"
     }
@@ -1097,6 +1241,17 @@
    }
   },
   {
+   "id": 3907497,
+   "name": "Dejounte Murray",
+   "pro": "NOP",
+   "waiverClears": "2026-11-15 17:00 KST",
+   "inj": "OUT",
+   "droppedBy": {
+    "by": "GTD",
+    "at": "2026-11-14 11:57 KST"
+   }
+  },
+  {
    "id": 4279888,
    "name": "Ja Morant",
    "pro": "POR",
@@ -1116,6 +1271,17 @@
    "droppedBy": {
     "by": "IYH",
     "at": "2026-11-13 14:28 KST"
+   }
+  },
+  {
+   "id": 4395651,
+   "name": "Coby White",
+   "pro": "CHA",
+   "waiverClears": "2026-11-15 17:00 KST",
+   "inj": "ACTIVE",
+   "droppedBy": {
+    "by": "KOO",
+    "at": "2026-11-14 07:31 KST"
    }
   },
   {
@@ -1160,6 +1326,28 @@
    "droppedBy": {
     "by": "SMS",
     "at": "2026-11-14 03:55 KST"
+   }
+  },
+  {
+   "id": 4601025,
+   "name": "Pelle Larsson",
+   "pro": "MIA",
+   "waiverClears": "2026-11-15 17:00 KST",
+   "inj": "OUT",
+   "droppedBy": {
+    "by": "TBG",
+    "at": "2026-11-14 08:29 KST"
+   }
+  },
+  {
+   "id": 5082206,
+   "name": "Brayden Burries",
+   "pro": "MIL",
+   "waiverClears": "2026-11-15 17:00 KST",
+   "inj": "ACTIVE",
+   "droppedBy": {
+    "by": "IYH",
+    "at": "2026-11-14 12:55 KST"
    }
   },
   {
