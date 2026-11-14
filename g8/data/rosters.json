@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-15T05:42+09:00",
+ "asOf": "2026-11-15T07:45+09:00",
  "leagueId": "751654965",
  "season": 2027,
  "teams": [
@@ -307,7 +307,6 @@
   "O": [
    "Dejounte Murray",
    "Paolo Banchero",
-   "Yves Missi",
    "Stephen Curry",
    "Evan Mobley",
    "Lauri Markkanen",
@@ -318,7 +317,9 @@
    "Anthony Edwards",
    "Jalen Duren",
    "Kawhi Leonard",
+   "Fred VanVleet",
    "Tyrese Haliburton",
+   "Joel Embiid",
    "Caleb Wilson",
    "Ty Jerome",
    "Brandon Ingram",
@@ -356,14 +357,14 @@
    "Brandon Miller",
    "Norman Powell",
    "Donovan Mitchell",
-   "LeBron James",
+   "Alex Sarr",
    "Jarrett Allen",
-   "Paul George",
    "Ajay Mitchell",
    "Nic Claxton",
    "Peyton Watson",
    "Zach Edey",
    "Jalen Smith",
+   "Keegan Murray",
    "Quentin Grimes",
    "Collin Sexton",
    "Precious Achiuwa",
@@ -371,11 +372,13 @@
    "Nolan Traore",
    "Jerami Grant",
    "Pelle Larsson",
+   "T.J. McConnell",
    "Mikel Brown Jr.",
    "Kingston Flemings",
    "Morez Johnson Jr.",
    "Aaron Nesmith",
    "Bub Carrington",
+   "Tre Johnson",
    "Max Christie"
   ]
  }
