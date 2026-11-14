@@ -4,10 +4,10 @@
  "acqLeft": 0,
  "dropCandidates": [],
  "base": {
-  "wk": 6.407,
-  "champ": 0.1578,
-  "p1": 0.0956,
-  "epct": 0.5233
+  "wk": 7.405,
+  "champ": 0.2014,
+  "p1": 0.1452,
+  "epct": 0.5291
  },
  "protect": [
   "Shai Gilgeous-Alexander",
@@ -26,18 +26,12 @@
    "player": "Brandon Miller",
    "status": "DTD",
    "note": "IR 선수가 O가 아님 — ESPN이 영입을 막을 수 있음(감독 판단: DTD는 영입 가능). 첫 사례에서 실제 동작을 기록"
-  },
-  {
-   "kind": "ir-ineligible",
-   "player": "Norman Powell",
-   "status": "정상",
-   "note": "IR 선수가 O가 아님 — ESPN이 영입을 막을 수 있음(감독 판단: DTD는 영입 가능). 첫 사례에서 실제 동작을 기록"
   }
  ],
  "items": [],
  "screened": [],
- "createdAt": "2026-11-14T05:43:10.287Z",
- "id": "20261114T0543",
- "rosterSig": "AJ Dybantsa|Anthony Davis|Austin Reaves|Daniel Gafford|Darryn Peterson|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Michael Porter Jr.|Miles Bridges|Shai Gilgeous-Alexander|Tyler Herro#Brandon Miller|Norman Powell",
+ "createdAt": "2026-11-14T10:13:14.026Z",
+ "id": "20261114T1013",
+ "rosterSig": "AJ Dybantsa|Anthony Davis|Austin Reaves|Darryn Peterson|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Michael Porter Jr.|Miles Bridges|Norman Powell|Shai Gilgeous-Alexander|Tyler Herro#Brandon Miller",
  "newItems": []
 }
