@@ -1,76 +1,103 @@
 {
- "date": "2026-11-13",
+ "date": "2026-11-14",
  "week": 4,
  "opp": "Junyoung's Scary Team",
- "status": "nochange-starters",
- "playing": 6,
+ "status": "pending",
+ "playing": 5,
  "starters": [
-  "Shai Gilgeous-Alexander",
-  "Karl-Anthony Towns",
   "James Harden",
-  "Tyler Herro",
+  "Kyrie Irving",
+  "Michael Porter Jr.",
   "Jeremiah Fears",
-  "Darryn Peterson"
+  "Daniel Gafford"
  ],
  "bench": [],
  "dtd": [],
  "expected": {
-  "best": 7.143,
-  "current": 7.143,
-  "gain": 0,
+  "best": 6.409,
+  "current": 6.195,
+  "gain": 0.215,
   "pcBest": {
-   "FG": 0.3,
-   "FT": 0.984,
-   "TPM": 0.924,
-   "REB": 0.999,
-   "AST": 0.812,
-   "STL": 0.385,
-   "BLK": 0.979,
-   "TO": 0.016,
-   "DD": 0.699,
+   "FG": 0.231,
+   "FT": 0.979,
+   "TPM": 0.847,
+   "REB": 0.997,
+   "AST": 0.449,
+   "STL": 0.108,
+   "BLK": 0.915,
+   "TO": 0.026,
+   "DD": 0.729,
    "PTS": 1,
-   "PF": 0.043
+   "PF": 0.13
   },
   "pcCurrent": {
-   "FG": 0.3,
-   "FT": 0.984,
-   "TPM": 0.924,
-   "REB": 0.999,
-   "AST": 0.812,
-   "STL": 0.385,
-   "BLK": 0.979,
-   "TO": 0.016,
-   "DD": 0.699,
-   "PTS": 1,
-   "PF": 0.043
+   "FG": 0.192,
+   "FT": 0.981,
+   "TPM": 0.74,
+   "REB": 0.989,
+   "AST": 0.281,
+   "STL": 0.061,
+   "BLK": 0.813,
+   "TO": 0.055,
+   "DD": 0.729,
+   "PTS": 0.997,
+   "PF": 0.357
   }
  },
  "alternatives": [],
- "currentBench": [],
- "sameStarters": true,
+ "currentBench": [
+  "Kyrie Irving",
+  "Daniel Gafford"
+ ],
+ "sameStarters": false,
  "moves": [
   {
-   "name": "Michael Porter Jr.",
-   "from": "F",
-   "to": "SF"
+   "name": "Shai Gilgeous-Alexander",
+   "from": "UTIL",
+   "to": "G"
   },
   {
-   "name": "Miles Bridges",
-   "from": "SF",
-   "to": "F"
+   "name": "Karl-Anthony Towns",
+   "from": "C",
+   "to": "UTIL"
+  },
+  {
+   "name": "James Harden",
+   "from": "PG",
+   "to": "SG"
+  },
+  {
+   "name": "Kyrie Irving",
+   "from": "BE",
+   "to": "PG"
+  },
+  {
+   "name": "Tyler Herro",
+   "from": "SG",
+   "to": "BE"
+  },
+  {
+   "name": "Daniel Gafford",
+   "from": "BE",
+   "to": "C"
+  },
+  {
+   "name": "Darryn Peterson",
+   "from": "G",
+   "to": "BE"
   }
  ],
  "slots": [
   {
-   "name": "James Harden",
+   "name": "Kyrie Irving",
    "slot": "PG"
   },
   {
-   "name": "Tyler Herro",
+   "name": "James Harden",
    "slot": "SG"
   },
   {
-   "name": "Michael Porter Jr.",
+   "name": "Miles Bridges",
    "slot": "SF"
   },
   {
@@ -78,19 +105,19 @@
    "slot": "PF"
   },
   {
-   "name": "Karl-Anthony Towns",
+   "name": "Daniel Gafford",
    "slot": "C"
   },
   {
-   "name": "Darryn Peterson",
+   "name": "Shai Gilgeous-Alexander",
    "slot": "G"
   },
   {
-   "name": "Miles Bridges",
+   "name": "Michael Porter Jr.",
    "slot": "F"
   },
   {
-   "name": "Shai Gilgeous-Alexander",
+   "name": "Karl-Anthony Towns",
    "slot": "UTIL"
   },
   {
@@ -102,11 +129,11 @@
    "slot": "UTIL"
   },
   {
-   "name": "Kyrie Irving",
+   "name": "Tyler Herro",
    "slot": "BE"
   },
   {
-   "name": "Daniel Gafford",
+   "name": "Darryn Peterson",
    "slot": "BE"
   },
   {
@@ -114,6 +141,6 @@
    "slot": "BE"
   }
  ],
- "id": "2026-11-13T2046Z",
- "createdAt": "2026-11-13T20:46:20.164Z"
+ "id": "2026-11-14T0543Z",
+ "createdAt": "2026-11-14T05:43:21.392Z"
 }
