@@ -2,7 +2,7 @@
  "date": "2026-11-14",
  "scoringPeriodId": 26,
  "hash": "cbfe45ed89",
- "createdKST": "2026-11-14T19:48+09:00",
+ "createdKST": "2026-11-15T06:49+09:00",
  "mode": "plan",
  "moves": [],
  "lineup": [
@@ -12,8 +12,8 @@
    "name": "Ajay Mitchell",
    "pro": "OKC",
    "game": false,
-   "inj": "OUT",
-   "out": true
+   "inj": "DAY_TO_DAY",
+   "out": false
   },
   {
    "slot": "SG",
