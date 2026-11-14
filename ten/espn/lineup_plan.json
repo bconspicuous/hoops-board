@@ -2,15 +2,15 @@
  "date": "2026-11-13",
  "scoringPeriodId": 25,
  "hash": "830a096cf6",
- "createdKST": "2026-11-14T06:47+09:00",
+ "createdKST": "2026-11-14T13:47+09:00",
  "mode": "plan",
  "moves": [],
  "lineup": [
   {
    "slot": "PG",
    "cur": "PG",
-   "name": "Dejounte Murray",
-   "pro": "NOP",
+   "name": "Ajay Mitchell",
+   "pro": "OKC",
    "game": true,
    "inj": "OUT",
    "out": true
@@ -27,8 +27,8 @@
   {
    "slot": "SF",
    "cur": "SF",
-   "name": "Josh Hart",
-   "pro": "NYK",
+   "name": "Julian Champagnie",
+   "pro": "SAS",
    "game": true,
    "inj": "ACTIVE",
    "out": false
@@ -54,19 +54,19 @@
   {
    "slot": "G",
    "cur": "G",
-   "name": "Ajay Mitchell",
-   "pro": "OKC",
+   "name": "Josh Hart",
+   "pro": "NYK",
    "game": true,
-   "inj": "DAY_TO_DAY",
+   "inj": "ACTIVE",
    "out": false
   },
   {
    "slot": "F",
    "cur": "F",
-   "name": "Julian Champagnie",
-   "pro": "SAS",
-   "game": true,
-   "inj": "ACTIVE",
+   "name": "Paul George",
+   "pro": "BOS",
+   "game": false,
+   "inj": "DAY_TO_DAY",
    "out": false
   },
   {
@@ -90,20 +90,20 @@
   {
    "slot": "UTIL",
    "cur": "UTIL",
-   "name": "Paul George",
-   "pro": "BOS",
-   "game": false,
-   "inj": "DAY_TO_DAY",
-   "out": false
-  },
-  {
-   "slot": "BE",
-   "cur": "BE",
    "name": "Duncan Robinson",
    "pro": "DET",
    "game": false,
    "inj": "ACTIVE",
    "out": false
+  },
+  {
+   "slot": "BE",
+   "cur": "BE",
+   "name": "Kawhi Leonard",
+   "pro": "TOR",
+   "game": false,
+   "inj": "OUT",
+   "out": true
   },
   {
    "slot": "BE",
@@ -125,9 +125,9 @@
   }
  ],
  "ir": [
-  "Kawhi Leonard"
+  "Dejounte Murray"
  ],
  "irReturn": [],
- "playing": 7,
+ "playing": 6,
  "status": "planned"
 }
