@@ -4,10 +4,10 @@
  "acqLeft": 0,
  "dropCandidates": [],
  "base": {
-  "wk": 7.309,
-  "champ": 0.1925,
-  "p1": 0.1178,
-  "epct": 0.5267
+  "wk": 7.568,
+  "champ": 0.04,
+  "p1": 0.0095,
+  "epct": 0.4974
  },
  "protect": [
   "Shai Gilgeous-Alexander",
@@ -15,118 +15,16 @@
   "Kyrie Irving",
   "James Harden",
   "Karl-Anthony Towns",
-  "Austin Reaves",
-  "Michael Porter Jr.",
-  "Tyler Herro"
+  "Tyler Herro",
+  "Miles Bridges",
+  "Norman Powell"
  ],
  "droppable": [],
- "flags": [
-  {
-   "kind": "ir-ineligible",
-   "player": "Brandon Miller",
-   "status": "정상",
-   "note": "IR 선수가 O가 아님 — ESPN이 영입을 막을 수 있음(감독 판단: DTD는 영입 가능). 첫 사례에서 실제 동작을 기록"
-  }
- ],
- "items": [
-  {
-   "n": 1,
-   "kind": "ir",
-   "ir": "James Harden",
-   "status": "proposed",
-   "note": "O 상태 — IR로 이동하면 로스터 1자리가 빔(영입 없이)",
-   "addHealth": null,
-   "irHealth": {
-    "status": "O",
-    "injury": "Calf",
-    "returnDate": "2026-11-16",
-    "report": "Harden (calf) has been ruled out for Saturday's game against Dallas.",
-    "g": 13,
-    "min": 32.8
-   },
-   "firstProposedAt": "2026-11-15T02:43:13.185Z"
-  },
-  {
-   "n": 2,
-   "kind": "ir",
-   "ir": "Austin Reaves",
-   "status": "proposed",
-   "note": "O 상태 — IR로 이동하면 로스터 1자리가 빔(영입 없이)",
-   "addHealth": null,
-   "irHealth": {
-    "status": "O",
-    "injury": "Heel",
-    "returnDate": "2026-11-17",
-    "report": "Reaves (heel) has been ruled out for Sunday's game against the Suns, Daniel Starkand of LakersNation.com reports.",
-    "g": 12,
-    "min": 35.3
-   },
-   "firstProposedAt": "2026-11-15T02:43:13.185Z"
-  },
-  {
-   "n": 3,
-   "kind": "ir",
-   "ir": "Michael Porter Jr.",
-   "status": "proposed",
-   "note": "O 상태 — IR로 이동하면 로스터 1자리가 빔(영입 없이)",
-   "addHealth": null,
-   "irHealth": {
-    "status": "O",
-    "injury": "Personal",
-    "returnDate": "2026-11-16",
-    "report": "Porter (personal) is out for Saturday's game against the Grizzlies, Brian Lewis of the New York Post reports.",
-    "g": 11,
-    "min": 32.5
-   },
-   "firstProposedAt": "2026-11-15T02:43:13.185Z"
-  }
- ],
- "screened": [
-  {
-   "add": "Julian Champagnie",
-   "drop": null,
-   "ir": "James Harden",
-   "wk": 0.237,
-   "title": 0.0164
-  },
-  {
-   "add": "Alex Caruso",
-   "drop": null,
-   "ir": "James Harden",
-   "wk": 0.264,
-   "title": 0.0105
-  },
-  {
-   "add": "Devin Vassell",
-   "drop": null,
-   "ir": "James Harden",
-   "wk": 0.241,
-   "title": 0.0066
-  },
-  {
-   "add": "Andrew Nembhard",
-   "drop": null,
-   "ir": "James Harden",
-   "wk": 0.357,
-   "title": -0.0401
-  },
-  {
-   "add": "Ziaire Williams",
-   "drop": null,
-   "ir": "James Harden",
-   "wk": 0.284,
-   "title": -0.034
-  },
-  {
-   "add": "Kris Dunn",
-   "drop": null,
-   "ir": "James Harden",
-   "wk": 0.309,
-   "title": -0.0383
-  }
- ],
- "createdAt": "2026-11-15T05:43:07.438Z",
- "id": "20261115T0543",
- "rosterSig": "AJ Dybantsa|Anthony Davis|Austin Reaves|Darryn Peterson|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Michael Porter Jr.|Miles Bridges|Norman Powell|Shai Gilgeous-Alexander|Tyler Herro#Brandon Miller",
+ "flags": [],
+ "items": [],
+ "screened": [],
+ "createdAt": "2026-11-15T10:12:55.723Z",
+ "id": "20261115T1012",
+ "rosterSig": "AJ Dybantsa|Anthony Davis|Brandon Miller|Darryn Peterson|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Miles Bridges|Norman Powell|Shai Gilgeous-Alexander|Tyler Herro#Austin Reaves|Michael Porter Jr.",
  "newItems": []
 }
