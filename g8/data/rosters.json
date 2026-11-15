@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-16T04:07+09:00",
+ "asOf": "2026-11-16T05:42+09:00",
  "leagueId": "751654965",
  "season": 2027,
  "teams": [
@@ -311,6 +311,7 @@
    "Stephen Curry",
    "Lauri Markkanen",
    "Trey Murphy III",
+   "De'Aaron Fox",
    "Austin Reaves",
    "Scottie Barnes",
    "Chet Holmgren",
@@ -354,13 +355,11 @@
   ],
   "DTD": [
    "Evan Mobley",
-   "De'Aaron Fox",
    "James Harden",
    "Kyrie Irving",
    "Michael Porter Jr.",
    "Duncan Robinson",
    "Donovan Mitchell",
-   "Alex Sarr",
    "Jarrett Allen",
    "Ty Jerome",
    "Ajay Mitchell",
@@ -370,14 +369,11 @@
    "Zach Edey",
    "Peyton Watson",
    "Jalen Smith",
-   "Keegan Murray",
-   "Collin Sexton",
    "Precious Achiuwa",
    "Jerami Grant",
    "Pelle Larsson",
    "Bennedict Mathurin",
    "Santi Aldama",
-   "Bub Carrington",
    "Tre Johnson",
    "Max Christie",
    "GG Jackson"
