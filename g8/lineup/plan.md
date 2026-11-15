@@ -1,20 +1,20 @@
-# 라인업 제안 2026-11-14 (미국 동부) · 4주차 vs Junyoung's Scary Team · 상태: nochange · 기준: 현재 스탯(2026-27 실제 100%)
-출전 5명 · 기대 카테고리 승 7.42 (현재 ESPN 라인업 7.42, +0.00)
-벤치(출전 선수 중): 없음 · DTD: James Harden, Norman Powell
-변경: 없음
+# 라인업 제안 2026-11-15 (미국 동부) · 4주차 vs Junyoung's Scary Team · 상태: pending · 기준: 현재 스탯(2026-27 실제 100%)
+출전 7명 · 기대 카테고리 승 7.31 (현재 ESPN 라인업 7.08, +0.23)
+벤치(출전 선수 중): 없음
+변경: Shai Gilgeous-Alexander UTIL→PG, James Harden SG→UTIL, Kyrie Irving PG→BE, Tyler Herro BE→G, Jeremiah Fears G→BE, Darryn Peterson BE→SG, AJ Dybantsa BE→SF, Norman Powell SF→BE
 
 | 슬롯 | 선수 |
 |---|---|
-| PG | Kyrie Irving |
-| SG | James Harden |
-| SF | Norman Powell |
+| PG | Shai Gilgeous-Alexander |
+| SG | Darryn Peterson |
+| SF | AJ Dybantsa |
 | PF | Michael Porter Jr. |
 | C | Karl-Anthony Towns |
-| G | Jeremiah Fears |
+| G | Tyler Herro |
 | F | Anthony Davis |
-| UTIL | Shai Gilgeous-Alexander |
+| UTIL | James Harden |
 | UTIL | Austin Reaves |
 | UTIL | Miles Bridges |
-| BE | Tyler Herro |
-| BE | Darryn Peterson |
-| BE | AJ Dybantsa |
+| BE | Kyrie Irving |
+| BE | Jeremiah Fears |
+| BE | Norman Powell |

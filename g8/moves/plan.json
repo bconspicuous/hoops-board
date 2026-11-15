@@ -4,10 +4,10 @@
  "acqLeft": 0,
  "dropCandidates": [],
  "base": {
-  "wk": 7.084,
-  "champ": 0.1966,
-  "p1": 0.1328,
-  "epct": 0.5284
+  "wk": 7.309,
+  "champ": 0.1925,
+  "p1": 0.1178,
+  "epct": 0.5267
  },
  "protect": [
   "Shai Gilgeous-Alexander",
@@ -83,54 +83,50 @@
  ],
  "screened": [
   {
-   "add": "Matisse Thybulle",
+   "add": "Julian Champagnie",
    "drop": null,
    "ir": "James Harden",
-   "wk": 0.172,
-   "title": 0.0375
-  },
-  {
-   "add": "Cam Spencer",
-   "drop": null,
-   "ir": "James Harden",
-   "wk": 0.265,
-   "title": 0.0169
+   "wk": 0.237,
+   "title": 0.0164
   },
   {
    "add": "Alex Caruso",
    "drop": null,
    "ir": "James Harden",
-   "wk": 0.221,
-   "title": -0.0037
+   "wk": 0.264,
+   "title": 0.0105
   },
   {
-   "add": "Derrick Jones Jr.",
+   "add": "Devin Vassell",
    "drop": null,
    "ir": "James Harden",
-   "wk": 0.182,
-   "title": -0.0358
-  },
-  {
-   "add": "Kris Dunn",
-   "drop": null,
-   "ir": "James Harden",
-   "wk": 0.222,
-   "title": -0.0451
+   "wk": 0.241,
+   "title": 0.0066
   },
   {
    "add": "Andrew Nembhard",
    "drop": null,
    "ir": "James Harden",
-   "wk": 0.23,
-   "title": -0.0499
+   "wk": 0.357,
+   "title": -0.0401
+  },
+  {
+   "add": "Ziaire Williams",
+   "drop": null,
+   "ir": "James Harden",
+   "wk": 0.284,
+   "title": -0.034
+  },
+  {
+   "add": "Kris Dunn",
+   "drop": null,
+   "ir": "James Harden",
+   "wk": 0.309,
+   "title": -0.0383
   }
  ],
- "createdAt": "2026-11-15T02:43:13.185Z",
- "id": "20261115T0243",
+ "createdAt": "2026-11-15T05:43:07.438Z",
+ "id": "20261115T0543",
  "rosterSig": "AJ Dybantsa|Anthony Davis|Austin Reaves|Darryn Peterson|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Michael Porter Jr.|Miles Bridges|Norman Powell|Shai Gilgeous-Alexander|Tyler Herro#Brandon Miller",
- "newItems": [
-  1,
-  2,
-  3
- ]
+ "newItems": []
 }
