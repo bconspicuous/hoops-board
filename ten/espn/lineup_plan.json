@@ -2,7 +2,7 @@
  "date": "2026-11-15",
  "scoringPeriodId": 27,
  "hash": "feda2554df",
- "createdKST": "2026-11-15T19:48+09:00",
+ "createdKST": "2026-11-16T06:48+09:00",
  "mode": "plan",
  "moves": [],
  "lineup": [
@@ -93,7 +93,7 @@
    "name": "Ryan Rollins",
    "pro": "MIL",
    "game": true,
-   "inj": "ACTIVE",
+   "inj": "DAY_TO_DAY",
    "out": false
   },
   {
