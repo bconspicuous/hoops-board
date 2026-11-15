@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-15T19:44+09:00",
+ "asOf": "2026-11-16T04:09+09:00",
  "leagueId": "504060248",
  "season": 2027,
  "teams": [
@@ -34,13 +34,14 @@
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
-    "acquisitions": 17,
-    "drops": 16,
+    "acquisitions": 18,
+    "drops": 17,
     "matchupAcquisitionTotals": {
      "1": 2,
      "2": 3,
      "3": 5,
-     "4": 7
+     "4": 7,
+     "5": 1
     },
     "misc": 0,
     "moveToActive": 149,
@@ -162,7 +163,7 @@
     "Jaime Jaquez Jr.",
     "Wendell Carter Jr.",
     "Draymond Green",
-    "Nic Claxton"
+    "Andre Drummond"
    ],
    "ir": [
     "Jalen Smith"
@@ -175,16 +176,16 @@
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
-    "acquisitions": 12,
-    "drops": 11,
+    "acquisitions": 13,
+    "drops": 12,
     "matchupAcquisitionTotals": {
      "1": 6,
      "2": 2,
      "3": 1,
-     "4": 3
+     "4": 4
     },
     "misc": 0,
-    "moveToActive": 81,
+    "moveToActive": 83,
     "moveToIR": 9,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -476,24 +477,17 @@
  "status": {
   "O": [
    "Scottie Barnes",
-   "Evan Mobley",
    "Joel Embiid",
    "Paolo Banchero",
    "Fred VanVleet",
    "Austin Reaves",
-   "Michael Porter Jr.",
-   "Ty Jerome",
    "Brandon Ingram",
-   "Nic Claxton",
-   "Jalen Smith",
    "Tyrese Haliburton",
-   "Donovan Mitchell",
    "Jalen Duren",
    "Anthony Edwards",
-   "James Harden",
    "Kawhi Leonard",
+   "Andrew Nembhard",
    "Stephen Curry",
-   "Jarrett Allen",
    "Trey Murphy III",
    "Caleb Wilson",
    "Dejounte Murray",
@@ -502,31 +496,23 @@
    "Lauri Markkanen",
    "Chet Holmgren",
    "Jaren Jackson Jr.",
-   "Daniel Gafford",
    "Jalen Williams",
    "Tobias Harris",
-   "Peyton Watson",
-   "Zach Edey",
    "Kristaps Porzingis",
    "Jimmy Butler III",
    "Jaxson Hayes",
-   "Jerami Grant",
-   "Pelle Larsson",
    "Scotty Pippen Jr.",
-   "Bennedict Mathurin",
    "Cason Wallace",
    "Jusuf Nurkic",
    "Shaedon Sharpe",
    "Mark Williams",
-   "Kingston Flemings",
    "Dereck Lively II",
+   "Kingston Flemings",
    "Dennis Schroder",
    "Maxime Raynaud",
    "Donte DiVincenzo",
    "Bradley Beal",
    "Jaylin Williams",
-   "Max Christie",
-   "GG Jackson",
    "Marcus Smart",
    "Brandon Williams",
    "Justin Champagnie",
@@ -539,21 +525,38 @@
    "Clint Capela",
    "Yanic Konan Niederhauser",
    "Moses Moody",
-   "Jayden Quaintance",
-   "Steven Adams"
+   "Jayden Quaintance"
   ],
   "DTD": [
+   "Evan Mobley",
+   "Michael Porter Jr.",
+   "Kyrie Irving",
+   "Ty Jerome",
+   "De'Aaron Fox",
+   "Jalen Smith",
+   "Donovan Mitchell",
+   "James Harden",
    "Ajay Mitchell",
    "Duncan Robinson",
-   "Andrew Nembhard",
+   "Ryan Rollins",
+   "Jarrett Allen",
    "Alex Sarr",
+   "Nic Claxton",
+   "Daniel Gafford",
+   "Zach Edey",
+   "Peyton Watson",
    "Keegan Murray",
    "Collin Sexton",
    "Precious Achiuwa",
-   "T.J. McConnell",
-   "Aaron Nesmith",
+   "Jerami Grant",
+   "Pelle Larsson",
+   "Bennedict Mathurin",
+   "Santi Aldama",
    "Bub Carrington",
-   "Tre Johnson"
+   "Tre Johnson",
+   "Max Christie",
+   "GG Jackson",
+   "Jock Landale"
   ]
  }
 }

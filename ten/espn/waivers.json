@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-15T19:45+09:00",
+ "asOf": "2026-11-16T04:09+09:00",
  "scoringPeriodId": 27,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -28,7 +28,7 @@
    "team": "GGAM",
    "name": "Garibong CHaRdaddy",
    "rank": 2,
-   "acq": 12
+   "acq": 13
   },
   {
    "team": "TBG",
@@ -76,11 +76,71 @@
    "team": "IYH",
    "name": "Jongno Karina",
    "rank": 10,
-   "acq": 17
+   "acq": 18
   }
  ],
  "myPending": [],
  "transactions": [
+  {
+   "id": "afd31a51-5c37-4952-8b9e-0a936667a57f",
+   "team": "IYH",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-16 03:00 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "4395651",
+     "from": "FA",
+     "to": "IYH"
+    },
+    {
+     "type": "DROP",
+     "player": "Kel'el Ware",
+     "from": "IYH",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "f8d48757-707a-4626-997b-7a0201ef5f66",
+   "team": "GGAM",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-15 22:26 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Andre Drummond",
+     "from": "FA",
+     "to": "GGAM"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "1719f9db-9df0-4d8b-9a30-748c6c235008",
+   "team": "GGAM",
+   "mine": false,
+   "type": "ROSTER",
+   "status": "EXECUTED",
+   "proposed": "2026-11-15 22:20 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "DROP",
+     "player": "Nic Claxton",
+     "from": "GGAM",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
   {
    "id": "ca7c73b2-e4b1-46d2-8a70-7f0c4c124c54",
    "team": "KWNG",
@@ -452,7 +512,7 @@
     },
     {
      "type": "DROP",
-     "player": "Coby White",
+     "player": "4395651",
      "from": "KOO",
      "to": "FA"
     }
@@ -1307,25 +1367,25 @@
    }
   },
   {
+   "id": 4278067,
+   "name": "Nic Claxton",
+   "pro": "CHI",
+   "waiverClears": "2026-11-17 17:00 KST",
+   "inj": "DAY_TO_DAY",
+   "droppedBy": {
+    "by": "GGAM",
+    "at": "2026-11-15 22:20 KST"
+   }
+  },
+  {
    "id": 4278049,
    "name": "Daniel Gafford",
    "pro": "DAL",
    "waiverClears": "2026-11-16 17:00 KST",
-   "inj": "OUT",
+   "inj": "DAY_TO_DAY",
    "droppedBy": {
     "by": "SONG",
     "at": "2026-11-15 10:09 KST"
-   }
-  },
-  {
-   "id": 4576087,
-   "name": "Peyton Watson",
-   "pro": "CLE",
-   "waiverClears": "2026-11-16 17:00 KST",
-   "inj": "OUT",
-   "droppedBy": {
-    "by": "SMS",
-    "at": "2026-11-15 08:30 KST"
    }
   },
   {
@@ -1333,10 +1393,21 @@
    "name": "Zach Edey",
    "pro": "MEM",
    "waiverClears": "2026-11-16 17:00 KST",
-   "inj": "OUT",
+   "inj": "DAY_TO_DAY",
    "droppedBy": {
     "by": "KWNG",
     "at": "2026-11-15 15:58 KST"
+   }
+  },
+  {
+   "id": 4576087,
+   "name": "Peyton Watson",
+   "pro": "CLE",
+   "waiverClears": "2026-11-16 17:00 KST",
+   "inj": "DAY_TO_DAY",
+   "droppedBy": {
+    "by": "SMS",
+    "at": "2026-11-15 08:30 KST"
    }
   },
   {
