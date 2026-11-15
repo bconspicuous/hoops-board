@@ -1,7 +1,7 @@
 {
- "asOf": "2026-11-14T19:12+09:00",
+ "asOf": "2026-11-15T14:42+09:00",
  "week": 4,
- "through": "2026-11-13",
+ "through": "2026-11-14",
  "source": "ESPN API sync — current matchup totals through yesterday (US Eastern)",
  "cats": {
   "Garak Twindragons": {
@@ -114,7 +114,7 @@
   "Gatori Team": 3,
   "Garak Twindragons": 7,
   "Zero Sugar": 2,
-  "ChaRDaddy": 5,
+  "ChaRDaddy": 6,
   "Kunhyo's Chokeslam": 7,
   "Songpa Park Kezhang": 4,
   "Brand_New_Neo_HJ": 3

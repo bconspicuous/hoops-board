@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-15T11:42+09:00",
+ "asOf": "2026-11-15T14:42+09:00",
  "leagueId": "751654965",
  "season": 2027,
  "teams": [
@@ -332,10 +332,10 @@
    "Jaren Jackson Jr.",
    "Nic Claxton",
    "Daniel Gafford",
-   "Peyton Watson",
    "Jalen Williams",
-   "Zach Edey",
+   "Peyton Watson",
    "Tobias Harris",
+   "Zach Edey",
    "Jalen Smith",
    "Kristaps Porzingis",
    "Jimmy Butler III",
@@ -351,8 +351,8 @@
    "Kingston Flemings",
    "Dereck Lively II",
    "Dennis Schroder",
-   "Donte DiVincenzo",
    "Maxime Raynaud",
+   "Donte DiVincenzo",
    "Bradley Beal",
    "Jaylin Williams",
    "Max Christie",
@@ -364,7 +364,6 @@
    "Isaiah Joe",
    "Sam Merrill",
    "Sergio de Larrea",
-   "Adem Bona",
    "Vit Krejci"
   ],
   "DTD": [

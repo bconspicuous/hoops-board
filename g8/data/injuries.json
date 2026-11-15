@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-15T11:42+09:00",
+ "asOf": "2026-11-15T14:42+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -272,16 +272,16 @@
   {
    "player": "Daniel Gafford",
    "team": "DAL",
-   "status": "Day-To-Day",
-   "date": "2026-11-15T02:14Z",
-   "type": "day-to-day",
+   "status": "Out",
+   "date": "2026-11-15T02:31Z",
+   "type": "out",
    "returnDate": "2026-11-15",
    "detail": null,
    "side": null,
    "injury": "Face",
    "fantasyStatus": "OUT",
-   "short": "Gafford (face) exited Saturday's game against the Cavaliers, Mike Curtis of The Dallas Morning News reports.",
-   "long": "Gafford took a shot to the face from Thomas Bryant in the second half. He left the game, but after returning briefly to shoot his free throws, he exited again and went to the locker room. Gafford should be considered questionable to return, with Morez Johnson and Santi Aldama potentially in line to handle things in the middle."
+   "short": "Gafford (face) won't return to Saturday's game against the Cavaliers, Grant Afseth of DallasHoopsJournal.com reports.",
+   "long": "Gafford took a shot by Thomas Bryant and exited the game after making two free throws earlier, but the center won't return. This means Morez Johnson and Santi Aldama should see more time in the frontcourt. Gafford ends the contest with 10 points (4-5 FG, 1-1 3Pt, 1-2 FT), three rebounds and an assist across 17 minutes. His next chance to play will come Sunday against the Celtics on the second leg of a back-to-back set."
   },
   {
    "player": "Max Christie",
@@ -352,6 +352,20 @@
    "fantasyStatus": "OUT",
    "short": "Strawther (knee) was diagnosed with a left knee sprain Friday and will be re-evaluated in six weeks, Vinny Benedetto of The Denver Gazette reports.",
    "long": "Strawther suffered the injury in Wednesday's preseason game against the Clippers. The 24-year-old has appeared in 172 regular-season games for the Nuggets since entering the league in 2023, averaging 7.1 points, 2.0 rebounds and 1.1 assists over 16.2 minutes per contest. He was in line to compete for an expanded role during the 2026-27 campaign. While that may be the case once Strawther is cleared to suit up, Tyus Jones and potentially Ryan Nembhard are candidates to receive more minutes in the interim."
+  },
+  {
+   "player": "Duncan Robinson",
+   "team": "DET",
+   "status": "Day-To-Day",
+   "date": "2026-11-15T02:40Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-14",
+   "detail": "Soreness",
+   "side": "Left",
+   "injury": "Thigh",
+   "fantasyStatus": "GTD",
+   "short": "Robinson (thigh) is questionable to return to Saturday's game against Miami.",
+   "long": "Robinson is dealing with soreness in his left thigh and is questionable to return. Across 17 minutes of play prior to his exit, he tallied 10 points (3-8 FG, 2-6 3Pt, 2-2 FT), one rebound and one assist. Javonte Green and Kevin Huerter will likely see increased burn."
   },
   {
    "player": "Ugonna Onyenso",
@@ -707,15 +721,15 @@
    "player": "GG Jackson",
    "team": "MEM",
    "status": "Out",
-   "date": "2026-11-15T01:56Z",
+   "date": "2026-11-15T04:09Z",
    "type": "out",
    "returnDate": "2026-11-16",
    "detail": null,
    "side": "Left",
    "injury": "Foot",
    "fantasyStatus": "OUT",
-   "short": "Jackson (foot) has been ruled out for the remainder of Saturday's game against the Nets.",
-   "long": "Jackson scored three points (1-1 FG, 1-1 3Pt) in three minutes off the bench prior to exiting Saturday's game due to a left foot injury. Taylor Hendricks and Olivier-Maxence Prosper should get a slight bump in minutes with Jackson out."
+   "short": "According to Grizzlies head coach Tuomas Iisalo, Jackson suffered a \"relatively serious\" foot injury in Saturday's 129-110 win over Brooklyn, Michael Wallace of the Grizzlies' official site reports.",
+   "long": "Jackson logged only three minutes versus the Nets before exiting the contest and eventually being ruled out. While \"the team will continue to evaluate\" his status, it doesn't sound like he will be on the floor Monday in Washington. The 21-year-old has appeared in 12 regular-season games during the 2026-27 campaign, averaging 6.7 points, 3.0 rebounds and 1.0 assists across 15.0 minutes per outing. Assuming Jackson misses time, Olivier-Maxence Prosper and Taylor Hendricks could see more minutes."
   },
   {
    "player": "Zach Edey",
