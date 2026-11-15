@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-16T04:09+09:00",
+ "asOf": "2026-11-16T06:45+09:00",
  "scoringPeriodId": 27,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -1371,7 +1371,7 @@
    "name": "Nic Claxton",
    "pro": "CHI",
    "waiverClears": "2026-11-17 17:00 KST",
-   "inj": "DAY_TO_DAY",
+   "inj": "ACTIVE",
    "droppedBy": {
     "by": "GGAM",
     "at": "2026-11-15 22:20 KST"
