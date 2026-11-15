@@ -2,7 +2,7 @@
  "date": "2026-11-14",
  "scoringPeriodId": 26,
  "hash": "cbfe45ed89",
- "createdKST": "2026-11-15T06:49+09:00",
+ "createdKST": "2026-11-15T13:47+09:00",
  "mode": "plan",
  "moves": [],
  "lineup": [
@@ -21,7 +21,7 @@
    "name": "Duncan Robinson",
    "pro": "DET",
    "game": true,
-   "inj": "ACTIVE",
+   "inj": "DAY_TO_DAY",
    "out": false
   },
   {
@@ -30,7 +30,7 @@
    "name": "Paul George",
    "pro": "BOS",
    "game": false,
-   "inj": "DAY_TO_DAY",
+   "inj": "ACTIVE",
    "out": false
   },
   {
@@ -57,7 +57,7 @@
    "name": "Andrew Nembhard",
    "pro": "IND",
    "game": false,
-   "inj": "ACTIVE",
+   "inj": "DAY_TO_DAY",
    "out": false
   },
   {
