@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-15T23:42+09:00",
+ "asOf": "2026-11-16T04:07+09:00",
  "leagueId": "751654965",
  "season": 2027,
  "teams": [
@@ -246,7 +246,8 @@
     "Payton Pritchard",
     "Paul George",
     "CJ McCollum",
-    "Jalen Green"
+    "Jalen Green",
+    "Ace Bailey"
    ],
    "ir": [
     "Tyrese Haliburton",
@@ -261,9 +262,9 @@
    "acqByPeriod": {
     "2": 2,
     "3": 1,
-    "4": 4
+    "4": 5
    },
-   "acqTotal": 7
+   "acqTotal": 8
   },
   {
    "name": "Brand_New_Neo_HJ",
@@ -308,42 +309,29 @@
    "Dejounte Murray",
    "Paolo Banchero",
    "Stephen Curry",
-   "Evan Mobley",
    "Lauri Markkanen",
    "Trey Murphy III",
-   "James Harden",
    "Austin Reaves",
-   "Michael Porter Jr.",
    "Scottie Barnes",
    "Chet Holmgren",
-   "Donovan Mitchell",
    "Ja Morant",
+   "Andrew Nembhard",
    "Anthony Edwards",
    "Jalen Duren",
    "Kawhi Leonard",
    "Fred VanVleet",
    "Tyrese Haliburton",
-   "Jarrett Allen",
    "Joel Embiid",
    "Caleb Wilson",
-   "Ty Jerome",
    "Brandon Ingram",
    "Kon Knueppel",
    "Jaren Jackson Jr.",
-   "Nic Claxton",
-   "Daniel Gafford",
    "Jalen Williams",
    "Tobias Harris",
-   "Zach Edey",
-   "Peyton Watson",
-   "Jalen Smith",
    "Kristaps Porzingis",
    "Jimmy Butler III",
    "Jaxson Hayes",
-   "Jerami Grant",
-   "Pelle Larsson",
    "Scotty Pippen Jr.",
-   "Bennedict Mathurin",
    "Cason Wallace",
    "Jusuf Nurkic",
    "Shaedon Sharpe",
@@ -355,8 +343,6 @@
    "Donte DiVincenzo",
    "Bradley Beal",
    "Jaylin Williams",
-   "Max Christie",
-   "GG Jackson",
    "Marcus Smart",
    "Brandon Williams",
    "Justin Champagnie",
@@ -367,17 +353,34 @@
    "Vit Krejci"
   ],
   "DTD": [
+   "Evan Mobley",
+   "De'Aaron Fox",
+   "James Harden",
+   "Kyrie Irving",
+   "Michael Porter Jr.",
    "Duncan Robinson",
+   "Donovan Mitchell",
    "Alex Sarr",
-   "Andrew Nembhard",
+   "Jarrett Allen",
+   "Ty Jerome",
    "Ajay Mitchell",
+   "Ryan Rollins",
+   "Nic Claxton",
+   "Daniel Gafford",
+   "Zach Edey",
+   "Peyton Watson",
+   "Jalen Smith",
    "Keegan Murray",
    "Collin Sexton",
    "Precious Achiuwa",
-   "T.J. McConnell",
-   "Aaron Nesmith",
+   "Jerami Grant",
+   "Pelle Larsson",
+   "Bennedict Mathurin",
+   "Santi Aldama",
    "Bub Carrington",
-   "Tre Johnson"
+   "Tre Johnson",
+   "Max Christie",
+   "GG Jackson"
   ]
  }
 }
