@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-16T19:45+09:00",
+ "asOf": "2026-11-17T06:45+09:00",
  "scoringPeriodId": 28,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -46,7 +46,7 @@
    "team": "SONG",
    "name": "Kfinco_ThePianist",
    "rank": 5,
-   "acq": 21
+   "acq": 22
   },
   {
    "team": "JYP",
@@ -155,6 +155,30 @@
  ],
  "transactions": [
   {
+   "id": "96496036-180c-4cd1-b0e4-436b4cbe5f83",
+   "team": "SONG",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-17 06:25 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Joan Beringer",
+     "from": "FA",
+     "to": "SONG"
+    },
+    {
+     "type": "DROP",
+     "player": "Neemias Queta",
+     "from": "SONG",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
    "id": "03468e6b-245c-463a-834b-2f4b15a12a01",
    "team": "GGAM",
    "mine": false,
@@ -173,30 +197,6 @@
      "type": "DROP",
      "player": "Andre Drummond",
      "from": "GGAM",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "9a335e13-1829-4fcf-95cf-a4e8c26fdbb0",
-   "team": "GTD",
-   "mine": true,
-   "type": "WAIVER",
-   "status": "FAILED_INVALIDPLAYERSOURCE",
-   "proposed": "2026-11-16 17:07 KST",
-   "processed": "2026-11-16 17:07 KST",
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Anthony Black",
-     "from": "FA",
-     "to": "GTD"
-    },
-    {
-     "type": "DROP",
-     "player": "Julian Champagnie",
-     "from": "GTD",
      "to": "FA"
     }
    ],
@@ -245,6 +245,30 @@
      "type": "DROP",
      "player": "Sandro Mamukelashvili",
      "from": "Doo",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "9a335e13-1829-4fcf-95cf-a4e8c26fdbb0",
+   "team": "GTD",
+   "mine": true,
+   "type": "WAIVER",
+   "status": "FAILED_INVALIDPLAYERSOURCE",
+   "proposed": "2026-11-16 17:07 KST",
+   "processed": "2026-11-16 17:07 KST",
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Anthony Black",
+     "from": "FA",
+     "to": "GTD"
+    },
+    {
+     "type": "DROP",
+     "player": "Julian Champagnie",
+     "from": "GTD",
      "to": "FA"
     }
    ],
@@ -1681,6 +1705,17 @@
    "droppedBy": {
     "by": "GTD",
     "at": "2026-11-16 07:12 KST"
+   }
+  },
+  {
+   "id": 4397424,
+   "name": "Neemias Queta",
+   "pro": "BOS",
+   "waiverClears": "2026-11-18 17:00 KST",
+   "inj": "DAY_TO_DAY",
+   "droppedBy": {
+    "by": "SONG",
+    "at": "2026-11-17 06:25 KST"
    }
   },
   {
