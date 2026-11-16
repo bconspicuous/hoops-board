@@ -36,7 +36,15 @@ const BASIS = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, '
     const espnRow = n => rows.find(r => nrm(r.Player) === nrm(n)) || {};
     const acqLeft = Math.max(0, acqFor(cw) - acqUsed), und = undroppable();
     const wk = names => { PLAYC = new Map(); const t = teamWeekL(ME, names, cw, { draws: 700, b2b: state.b2b, perGame: new Set(names.filter(n => !roster.includes(n))), stream: null }), o = pcat3(t, oT); return CATS.reduce((s, c) => s + o[c].w + o[c].t / 2, 0); };
-    const season = (out, inn) => { const moves = { [ME]: { out: new Set(out), in: new Set(inn) } }; const S = computeAll({ team: ME, drop: new Set(out), add: new Set(inn), moves, partners: [], trade: false, from: cw, perGame: true }); const s = S.season[ME]; return { epct: s.epct, p1: s.p1, champ: s.champ }; };
+    /* conservative mode (league/meta.conservative): a move's season effect = the SMALLEST gain over three assumptions — the base model,
+       another random seed, and no streaming (player value alone) — so streaming chaos or one lucky draw cannot inflate it */
+    const VARS = consv() ? [[0, state.stream], [7, state.stream], [0, NOSTREAM]] : [[0, state.stream]];
+    const runV = (scen, [sd, st]) => { state.seed = sd; PLAYC = new Map(); const s = computeAll(scen, state.b2b, st).season[ME]; state.seed = 0; PLAYC = new Map(); return s; };
+    const BV = VARS.map(v => runV(null, v));
+    const season = (out, inn) => { const moves = { [ME]: { out: new Set(out), in: new Set(inn) } }, scen = { team: ME, drop: new Set(out), add: new Set(inn), moves, partners: [], trade: false, from: cw, perGame: true };
+      const d = VARS.map((v, i) => { const s = runV(scen, v); return { epct: s.epct - BV[i].epct, p1: s.p1 - BV[i].p1, champ: s.champ - BV[i].champ }; });
+      const b = state.base.season[ME], m = k => d.reduce((x, y) => Math.min(x, y[k]), Infinity);
+      return { epct: b.epct + m('epct'), p1: b.p1 + m('p1'), champ: b.champ + m('champ'), variants: d.map(x => +(x.champ * 100).toFixed(1)) }; };
     const base = { wk: wk(roster), ...(() => { const s = state.base.season[ME]; return { epct: s.epct, p1: s.p1, champ: s.champ }; })() };
     const byVal = roster.slice().sort((a, c) => state.PL[c].value - state.PL[a].value), protect = new Set(byVal.slice(0, P.PROTECT));
     const want = (cfg.dropCandidates || []).map(nrm), drops = want.length ? roster.filter(n => want.includes(nrm(n)) && !und.has(n)) : roster.filter(n => !und.has(n) && !protect.has(n));

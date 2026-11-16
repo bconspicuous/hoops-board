@@ -414,7 +414,7 @@ REF.players.forEach(a => { const o = {}; REF.fields.forEach((f, i) => o[f] = a[i
 const state = { db: "pending", docs: {}, tab: "now", PL: {}, base: null, scen: null, simSel: { drop: new Set(), add: new Set() }, simOther: false, b2b: false, baseOff: null, baseNS: null, rec: null, stream: { on: true, acq: 0, mine: 99 }, restB2B: new Set() };
 state.b2b = true; try { const v = localStorage.getItem("td22-b2b2"); if (v != null) state.b2b = v === "1"; } catch (e) {}
 try { const a = localStorage.getItem("td27-actmode2"); if (a === "fixed" || a === "sample" || a === "calib") state.actMode = a; } catch (e) {}
-try { const g = localStorage.getItem("td22-gpmode2"); if (["full", "neutral", "mine", "fair"].includes(g)) state.gpModeUser = g; } catch (e) {}
+try { const g = localStorage.getItem("td22-gpmode3"); if (["full", "neutral", "mine", "fair"].includes(g)) state.gpModeUser = g; } catch (e) {}
 try { const s = JSON.parse(localStorage.getItem("td22-stream3") || "null"); if (s && typeof s.on === "boolean" && [0, 5, 6, 7].includes(s.acq)) state.stream = { on: s.on, acq: s.acq, mine: [1, 2, 99].includes(s.mine) ? s.mine : 99 }; } catch (e) {}
 const NOSTREAM = { on: false, acq: 0, mine: 2 };
 try { const t = localStorage.getItem("td-tab"); if (t === "fc" || t === "now" || t === "proj") state.tab = t; } catch (e) {}
@@ -448,6 +448,12 @@ const ACT_G_FULL = 10;
    at which the stat's per-game rate becomes about half signal (counting stats) or attempts for FG%/FT%. Players without games keep the
    corrected projection. The season value moves with the same valuation as the projection pipeline. */
 const CAL_N0 = { FGA: 5, FTA: 8, PTS: 5, TPM: 10, REB: 6, AST: 6, STL: 20, BLK: 15, TO: 10, PF: 12, DDg: 15 }, CAL_FG0 = 150, CAL_FT0 = 80;
+/* conservative mode (manager rule 2026-11-17, league/meta.conservative): suppress over-estimation — stronger shrinkage of small samples
+   (n0 x n0Scale), every team streams under the same spot rule at its own observed add rate (ESPN adds per completed matchup) */
+function consv() { return (state.docs["league/meta"] || {}).conservative || null; }
+function calK() { const c = consv(); return c && c.n0Scale || 1; }
+function acqTeam(t, w) { const c = consv(), r = (state.docs["league/rosters"] || {}).acqRate; if (state.stream.acq || !c || !c.observedAdds || !r || r[t] == null) return acqFor(w);
+  return Math.max(0, Math.min(acqFor(w), Math.round(r[t] * REF.sched[w].length / 7))); }
 const actLine = a => ({ FGM: a.fgm, FGA: a.fga, FTM: a.ftm, FTA: a.fta, TPM: a.tpm, REB: a.reb, AST: a.ast, STL: a.stl, BLK: a.blk, TO: a.to, PTS: a.pts, PF: a.pf, DDg: a.dd != null ? a.dd / a.g : null });
 function calibStats(act) {
   const s = {}, t = {}, ae = {}, n = {}, cnt = {};
@@ -471,7 +477,7 @@ function makeVal() {
 function actMode() { return state.actMode || ((state.docs["league/meta"] || {}).actualWeightMode) || "fixed"; }
 function buildPlayers() {
   const act = (state.docs["league/actuals"] || {}).players || {}, wA = actWeight(currentWeek()), sm = actMode() === "sample", PL = {};
-  const cm = actMode() === "calib", CAL = cm ? calibStats(act) : null, valF = cm ? makeVal() : null; state.calib = CAL;
+  const cm = actMode() === "calib", K = calK(), CAL = cm ? calibStats(act) : null, valF = cm ? makeVal() : null; state.calib = CAL;
   for (const n in BASE) {
     const b = BASE[n], a = act[n], p = Object.assign({}, b);
     if (gpMode() === "full" && b.vFull != null) { p.gp = 82; p.value = b.vFull; p.gpFull = true; }
@@ -480,9 +486,9 @@ function buildPlayers() {
       const c = {}; KEYS.forEach(k => c[k] = (b[k] || 0) * (CAL.f[k] || 1));
       if (a && a.g > 0) {
         const A = actLine(a), g = a.g;
-        ["FGA", "FTA", "TPM", "REB", "AST", "STL", "BLK", "TO", "PTS", "PF", "DDg"].forEach(k => { p[k] = A[k] != null && isFinite(A[k]) ? c[k] + g / (g + CAL_N0[k]) * (A[k] - c[k]) : c[k]; });
-        const fg = (c.FGM / Math.max(c.FGA, 1e-9) * CAL_FG0 + (a.fgm || 0) * g) / (CAL_FG0 + (a.fga || 0) * g), ft = (c.FTM / Math.max(c.FTA, 1e-9) * CAL_FT0 + (a.ftm || 0) * g) / (CAL_FT0 + (a.fta || 0) * g);
-        p.FGM = fg * p.FGA; p.FTM = ft * p.FTA; p.actual = a; p.actW = g / (g + CAL_N0.PTS);
+        ["FGA", "FTA", "TPM", "REB", "AST", "STL", "BLK", "TO", "PTS", "PF", "DDg"].forEach(k => { p[k] = A[k] != null && isFinite(A[k]) ? c[k] + g / (g + CAL_N0[k] * K) * (A[k] - c[k]) : c[k]; });
+        const fg = (c.FGM / Math.max(c.FGA, 1e-9) * CAL_FG0 * K + (a.fgm || 0) * g) / (CAL_FG0 * K + (a.fga || 0) * g), ft = (c.FTM / Math.max(c.FTA, 1e-9) * CAL_FT0 * K + (a.ftm || 0) * g) / (CAL_FT0 * K + (a.fta || 0) * g);
+        p.FGM = fg * p.FGA; p.FTM = ft * p.FTA; p.actual = a; p.actW = g / (g + CAL_N0.PTS * K);
       } else KEYS.forEach(k => p[k] = c[k]);
       const gg = p.gp || b.gp || 82; p.value = p.value + valF(p, gg) - valF(b, gg); p.calib = true;
     } else if (a && a.g > 0) {
@@ -832,7 +838,7 @@ function computeAll(scen, b2b = state.b2b, stream = state.stream) {
     const occ = new Map(), pool = stOn ? streamPoolFor(w, scen) : null;
     for (const t of stOn ? priorityOrder(w) : T) {
       const before = stOn ? new Map(occ) : null;
-      TW[t + "|" + w] = teamWeekL(t, rosterFor(t, w, scen), w, { perGame: scen && scen.perGame && scen.moves[t] ? scen.moves[t].in : null, b2b, stream: stOn ? { acq: stream.acq || acqFor(w), pool, occ, slots: t === ME ? stream.mine : STREAM_SLOTS } : null });
+      TW[t + "|" + w] = teamWeekL(t, rosterFor(t, w, scen), w, { perGame: scen && scen.perGame && scen.moves[t] ? scen.moves[t].in : null, b2b, stream: stOn ? { acq: stream.acq || acqTeam(t, w), pool, occ, slots: t === ME || (consv() && consv().symmetricStream) ? stream.mine : STREAM_SLOTS } : null });
       if (stOn) { TW[t + "|" + w].occBefore = before; TW[t + "|" + w].prio = priorityOrder(w).indexOf(t) + 1; }
     }
   }
@@ -863,7 +869,7 @@ function pMatchCats(A, B) {
   let w = 0; for (let i = NC + 1; i < d.length; i++) w += d[i]; return { w, t: d[NC] };
 }
 function seasonSim(games, S = 20000, TW = null) {
-  const T = REF.teams, ix = Object.fromEntries(T.map((t, i) => [t, i])), n = T.length, r = rng(20261020), NC = CATS.length;
+  const T = REF.teams, ix = Object.fromEntries(T.map((t, i) => [t, i])), n = T.length, r = rng(state.seed || 20261020), NC = CATS.length;
   const fW = new Float64Array(n), fL = new Float64Array(n), fT = new Float64Array(n), tot = new Float64Array(n), eW = new Float64Array(n), eL = new Float64Array(n), eT = new Float64Array(n), H0 = new Float64Array(n * n);
   const live = [];
   games.forEach(g => {
@@ -937,7 +943,7 @@ function renderStreamPanel(R, cw) {
       const slot = k => { const g = pl.segs.filter(x => x.slot === k); if (k >= (pl.slots || 2)) return `<span class="note">스트리밍 안 함</span>`; const lead = pl.orig[k] && g.length && !g[0].orig ? `${esc(pl.orig[k])} <span class="note">첫날 방출</span> → ` : ""; return g.length ? lead + g.map(x => segText(cw, x, days)).join(" → ") : `<span class="note">${pl.orig[k] ? esc(pl.orig[k]) + " 방출 후 비움" : "빈 자리"}</span>`; };
       const p1 = wp(R, t, cw), p0 = wp(state.baseNS, t, cw);
       return `<tr class="${t === ME ? "me" : ""}"><td class="r num">${A.prio}</td><td>${esc(sh(t))}</td><td class="stseq">${(() => { const ks = pl.all ? [...new Set(pl.segs.filter(x => !x.orig).map(x => x.slot))] : [0, 1]; return ks.length ? ks.map((k, i) => `<span class="sl"><span class="sn">${"①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬"[i]}</span>${slot(k)}</span>`).join("") : '<span class="note">스트리밍 안 함 (모든 자리 유지가 유리)</span>'; })()}</td><td class="r num">${pl.acq}</td><td class="r num">${A.n.toFixed(1)} <span class="note">(${dlt(A.n - N.n, 1)})</span></td><td class="r num">${pctP(p1)} <span class="note">(${dpp(p1 - p0)})</span></td></tr>`; }).join("") + `</tbody></table>`;
-  $("st-note").textContent = `각 팀은 시즌 가치 하위 2명 자리(빈 자리 포함${state.stream.mine === 1 ? `, ${sh(ME)}는 설정에 따라 최하위 1자리` : state.stream.mine >= 99 ? `, ${sh(ME)}는 방출 불가 선수를 뺀 모든 자리(감독 지정: 그날 FA가 더 유리할 때만 교체)` : ""})를 주간 영입 한도(${acqLabel()}, 이번 주 ${acqFor(cw)}회) 안에서 그날 라인업 빈칸을 채울 FA로 교체한다고 가정합니다. 우선순위는 매주 한 칸씩 순환(가정)하며, 앞 순위 팀이 보유 중이거나 방출 후 2일(웨이버) 이내인 선수는 쓸 수 없습니다. 같은 팀이 방출한 선수의 재영입도 2일 뒤부터. ` +
+  $("st-note").textContent = `${consv() ? `보수 모드(과대추정 억제): 전 팀이 같은 규칙(방출 불가 선수를 뺀 전 자리)으로, 팀별 지난 매치업 평균 실제 영입 수(${Object.entries((state.docs["league/rosters"] || {}).acqRate || {}).map(([t, v]) => sh(t) + " " + v).join(", ")})만큼 스트리밍한다고 가정합니다. 실제 기록 수축 강도 ${calK()}배. 아래 기본 설명보다 우선. ` : ""}각 팀은 시즌 가치 하위 2명 자리(빈 자리 포함${state.stream.mine === 1 ? `, ${sh(ME)}는 설정에 따라 최하위 1자리` : state.stream.mine >= 99 ? `, ${sh(ME)}는 방출 불가 선수를 뺀 모든 자리(감독 지정: 그날 FA가 더 유리할 때만 교체)` : ""})를 주간 영입 한도(${acqLabel()}, 이번 주 ${acqFor(cw)}회) 안에서 그날 라인업 빈칸을 채울 FA로 교체한다고 가정합니다. 우선순위는 매주 한 칸씩 순환(가정)하며, 앞 순위 팀이 보유 중이거나 방출 후 2일(웨이버) 이내인 선수는 쓸 수 없습니다. 같은 팀이 방출한 선수의 재영입도 2일 뒤부터. ` +
     (f ? `FA 목록: ${(f.asOf || "").slice(0, 16).replace("T", " ")} 캡처(프로젝션 보유 ${Object.keys(f.players).length}명${f.unprojected && f.unprojected.length ? ", 프로젝션 없는 " + f.unprojected.length + "명 제외" : ""}), 웨이버 선수는 클레임일부터, 상태(O·DTD)는 이번 주에만 반영.` : "FA 목록 캡처가 없어 프로젝션 풀의 미보유 선수 전체를 FA로 간주합니다.") +
     ` 괄호 = 스트리밍 미반영 대비 변화.`;
 }
@@ -1406,7 +1412,7 @@ document.addEventListener("change", e => {
   else if (t.id === "team-sel") setTeam(t.value);
   else if (t.id === "b2b-on") { state.b2b = t.checked; try { localStorage.setItem("td22-b2b2", t.checked ? "1" : "0"); } catch (e) {} state.rec = null; state.busy = true; renderFresh(); recompute(); }
   else if (t.id === "st-on" || t.id === "st-acq" || t.id === "st-mine") { state.stream = { on: $("st-on").checked, acq: +$("st-acq").value, mine: [1, 2, 99].includes(+$("st-mine").value) ? +$("st-mine").value : 99 }; try { localStorage.setItem("td22-stream3", JSON.stringify(state.stream)); } catch (e) {} state.rec = null; state.busy = true; renderTeamUI(); renderFresh(); recompute(); }
-  else if (t.id === "gp-mode") { state.gpModeUser = t.value; try { localStorage.setItem("td22-gpmode2", t.value); } catch (e) {} state.rec = null; state.scen = null; state.busy = true; renderFresh(); recompute(); }
+  else if (t.id === "gp-mode") { state.gpModeUser = t.value; try { localStorage.setItem("td22-gpmode3", t.value); } catch (e) {} state.rec = null; state.scen = null; state.busy = true; renderFresh(); recompute(); }
   else if (t.id === "sim-other") { state.simOther = t.checked; if (!t.checked) { const own = ownerMap(); [...state.simSel.add].forEach(n => { if (own[n]) state.simSel.add.delete(n); }); } renderSimControls(); }
   else if (t.id === "sim-week") renderSimControls();
 });

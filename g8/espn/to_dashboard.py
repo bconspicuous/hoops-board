@@ -87,7 +87,12 @@ def main(build=True):
     for x in inj.get("injuries") or []:
         n = pname(x.get("player") or "")
         if status.get(n) == "O" and x.get("returnDate") and n not in ov: returns[n] = str(x["returnDate"])[:10]
-    if dump("rosters", {"asOf": asOf, "source": "ESPN API sync (GitHub Actions g8-espn)", "teams": teams, "status": status, "unsigned": unsigned, "returns": returns}): changed.append("rosters")
+    # observed adds per completed matchup (ESPN transactionCounter): the conservative simulation streams each team at its own rate
+    cur0 = sb.get("currentMatchupPeriod") or 0; acqRate = {}
+    for t in ros["teams"]:
+        tn = tname(t["name"]); a = t.get("acqByPeriod") or {}
+        if tn and cur0 > 1: acqRate[tn] = round(sum(int(a.get(str(k), 0) or 0) for k in range(1, cur0)) / (cur0 - 1), 2)
+    if dump("rosters", {"asOf": asOf, "source": "ESPN API sync (GitHub Actions g8-espn)", "teams": teams, "status": status, "unsigned": unsigned, "returns": returns, "acqRate": acqRate}): changed.append("rosters")
     # ---- matchups: results (final periods) and live (current period)
     cur = sb.get("currentMatchupPeriod"); games = sb.get("matchups") or []
     def side_cats(s): return {CATS[k]: v for k, v in (s.get("cats") or {}).items() if k in CATS}
