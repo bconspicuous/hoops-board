@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-17T07:19+09:00",
+ "asOf": "2026-11-17T07:32+09:00",
  "source": "ESPN API sync (GitHub Actions g8-espn)",
  "teams": {
   "Junyoung's Scary Team": {
@@ -216,7 +216,6 @@
   "Sam Merrill": "O",
   "Sergio de Larrea": "O",
   "Amen Thompson": "DTD",
-  "De'Aaron Fox": "DTD",
   "Austin Reaves": "DTD",
   "Kyrie Irving": "DTD",
   "Duncan Robinson": "DTD",
@@ -234,7 +233,6 @@
   "Santi Aldama": "DTD",
   "Kingston Flemings": "DTD",
   "Jaylon Tyson": "DTD",
-  "Tre Johnson": "DTD",
   "Max Christie": "DTD",
   "Nikola Jovic": "DTD",
   "Ryan Dunn": "DTD",
