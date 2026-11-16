@@ -228,23 +228,27 @@ function rng(seed) { let s = seed >>> 0; return () => { s = (s * 1664525 + 10139
 function gauss(r) { let u = 0; while (u === 0) u = r(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * r()); }
 const NBA = Object.keys(WT);
 let PLANW = null; function setPlan(m) { PLANW = m; }
+// actual standings (ESPN overall category record = completed matchups). Completed weeks are NOT re-simulated:
+// the season starts from these records and simulates only the current week (banked + remaining) and later weeks.
+const REC = (() => { try { const g = JSON.parse(fs.readFileSync(W + '../data/rosters.json')); const m = Object.fromEntries(g.teams.map(t => [t.abbr, [+(t.record || {}).wins || 0, +(t.record || {}).losses || 0, +(t.record || {}).ties || 0]]));
+  return TEAMS.every(t => m[t.abbr]) && CURW >= 1 && !process.env.RESIM_PAST ? TEAMS.map(t => m[t.abbr]) : null; } catch (e) { return null; } })();
 function season(rPre, rPost, S, seed, noisy = true) {
-  const r = rng(seed), W1R = week1(rPre, rPost);
+  const r = rng(seed), W1R = REC ? null : week1(rPre, rPost);
   const fin = Array.from({ length: T }, () => new Array(T).fill(0)), po = new Array(T).fill(0), ch = new Array(T).fill(0), fz = new Array(T).fill(0);
   const W = new Array(T).fill(0), L = new Array(T).fill(0), Ti = new Array(T).fill(0), w1win = new Array(T).fill(0);
   const ids = [...new Set(rPost.flat().concat(PLANW ? Object.values(PLANW).flat() : []))];
   for (let s = 0; s < S; s++) {
     const scale = {}; if (noisy) { scale.tw = {}; NBA.forEach(t => scale.tw[TCODE[t] || t] = Math.min(0.9, Math.max(0.1, (WT[t] + 6 * gauss(r)) / 82)));
       for (const id of ids) { const f = Math.max(0.6, 1 + 0.10 * gauss(r)), a = r() < 0.2 ? 0.35 + 0.5 * r() : 1; scale[id] = f * a; } }
-    const w = new Array(T).fill(0), l = new Array(T).fill(0), t = new Array(T).fill(0);
+    const w = REC ? REC.map(x => x[0]) : new Array(T).fill(0), l = REC ? REC.map(x => x[1]) : new Array(T).fill(0), t = REC ? REC.map(x => x[2]) : new Array(T).fill(0);
     const play = (msA, msB, i, j) => { let wi = 0, wj = 0;
       for (const c of CATS) { const d = (c === 'TO' ? -1 : 1) * (msA[c][0] - msB[c][0]), sd = Math.sqrt(msA[c][1] ** 2 + msB[c][1] ** 2), x = d + sd * gauss(r);
         if (INTC[c] ? x > 0.5 : x > 0) wi++; else if (INTC[c] ? x < -0.5 : x < 0) wj++; else { t[i]++; t[j]++; } }
       w[i] += wi; l[i] += wj; w[j] += wj; l[j] += wi; return [wi, wj]; };
     // week 1 (banked + remaining; production noise applied only to the remaining part)
-    for (const [i, j] of PAIRS) { const [a, b] = play(W1R[i].ms, W1R[j].ms, i, j); if (a > b) w1win[i]++; else if (b > a) w1win[j]++; }
-    for (let wk = 1; wk < NW; wk++) { const ms = rPost.map((ro0, ti) => { const ro = (ti === ME && PLANW && PLANW[wk]) ? PLANW[wk] : ro0; return wk === CURW ? catMS(weekSums(ro, wk, noisy ? scale : null, ti, FROM), BANK[ti]) : catMS(weekSums(ro, wk, noisy ? scale : null, ti)); });
-      for (const [i, j] of SCHED[wk]) play(ms[i], ms[j], i, j); }
+    if (!REC) for (const [i, j] of PAIRS) { const [a, b] = play(W1R[i].ms, W1R[j].ms, i, j); if (a > b) w1win[i]++; else if (b > a) w1win[j]++; }
+    for (let wk = REC ? CURW : 1; wk < NW; wk++) { const ms = rPost.map((ro0, ti) => { const ro = (ti === ME && PLANW && PLANW[wk]) ? PLANW[wk] : ro0; return wk === CURW ? catMS(weekSums(ro, wk, noisy ? scale : null, ti, FROM), BANK[ti]) : catMS(weekSums(ro, wk, noisy ? scale : null, ti)); });
+      for (const [i, j] of SCHED[wk]) { const [a, b] = play(ms[i], ms[j], i, j); if (REC && wk === CURW) { if (a > b) w1win[i]++; else if (b > a) w1win[j]++; } } }
     const pct = i => (w[i] + t[i] / 2) / (w[i] + l[i] + t[i]);
     const order = [...Array(T).keys()].map(i => [i, pct(i) + r() * 1e-6]).sort((a, b) => b[1] - a[1]).map(x => x[0]);
     order.forEach((tm, k) => { fin[tm][k]++; W[tm] += w[tm]; L[tm] += l[tm]; Ti[tm] += t[tm]; if (k < 4) po[tm]++; });
