@@ -2,7 +2,7 @@
  "date": "2026-11-16",
  "week": 5,
  "opp": "Zero Sugar",
- "status": "nochange-starters",
+ "status": "nochange",
  "playing": 8,
  "starters": [
   "Anthony Davis",
@@ -17,51 +17,40 @@
  "bench": [],
  "dtd": [],
  "expected": {
-  "best": 5.378,
-  "current": 5.378,
+  "best": 5.299,
+  "current": 5.299,
   "gain": 0,
   "pcBest": {
-   "FG": 0.552,
-   "FT": 0.43,
-   "TPM": 0.29,
-   "REB": 0.99,
-   "AST": 0.087,
-   "STL": 0.508,
-   "BLK": 0.58,
-   "TO": 0.153,
-   "DD": 0.642,
-   "PTS": 0.882,
-   "PF": 0.264
+   "FG": 0.461,
+   "FT": 0.55,
+   "TPM": 0.377,
+   "REB": 0.986,
+   "AST": 0.033,
+   "STL": 0.317,
+   "BLK": 0.614,
+   "TO": 0.291,
+   "DD": 0.6,
+   "PTS": 0.768,
+   "PF": 0.302
   },
   "pcCurrent": {
-   "FG": 0.552,
-   "FT": 0.43,
-   "TPM": 0.29,
-   "REB": 0.99,
-   "AST": 0.087,
-   "STL": 0.508,
-   "BLK": 0.58,
-   "TO": 0.153,
-   "DD": 0.642,
-   "PTS": 0.882,
-   "PF": 0.264
+   "FG": 0.461,
+   "FT": 0.55,
+   "TPM": 0.377,
+   "REB": 0.986,
+   "AST": 0.033,
+   "STL": 0.317,
+   "BLK": 0.614,
+   "TO": 0.291,
+   "DD": 0.6,
+   "PTS": 0.768,
+   "PF": 0.302
   }
  },
  "alternatives": [],
  "currentBench": [],
  "sameStarters": true,
- "moves": [
-  {
-   "name": "James Harden",
-   "from": "UTIL",
-   "to": "PG"
-  },
-  {
-   "name": "Darryn Peterson",
-   "from": "PG",
-   "to": "UTIL"
-  }
- ],
+ "moves": [],
  "slots": [
   {
    "name": "James Harden",
@@ -72,7 +61,7 @@
    "slot": "SG"
   },
   {
-   "name": "Miles Bridges",
+   "name": "AJ Dybantsa",
    "slot": "SF"
   },
   {
@@ -96,16 +85,12 @@
    "slot": "UTIL"
   },
   {
-   "name": "Darryn Peterson",
-   "slot": "UTIL"
-  },
-  {
-   "name": "AJ Dybantsa",
-   "slot": "UTIL"
-  },
-  {
    "name": "Karl-Anthony Towns",
-   "slot": "BE"
+   "slot": "UTIL"
+  },
+  {
+   "name": "Miles Bridges",
+   "slot": "UTIL"
   },
   {
    "name": "Brandon Miller",
@@ -114,8 +99,12 @@
   {
    "name": "Tyler Herro",
    "slot": "BE"
+  },
+  {
+   "name": "Darryn Peterson",
+   "slot": "BE"
   }
  ],
- "id": "2026-11-16T1014Z",
- "createdAt": "2026-11-16T10:14:08.382Z"
+ "id": "2026-11-16T1443Z",
+ "createdAt": "2026-11-16T14:43:23.850Z"
 }
