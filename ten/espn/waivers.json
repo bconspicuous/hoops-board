@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-17T06:45+09:00",
+ "asOf": "2026-11-17T07:28+09:00",
  "scoringPeriodId": 28,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -1712,7 +1712,7 @@
    "name": "Neemias Queta",
    "pro": "BOS",
    "waiverClears": "2026-11-18 17:00 KST",
-   "inj": "DAY_TO_DAY",
+   "inj": "OUT",
    "droppedBy": {
     "by": "SONG",
     "at": "2026-11-17 06:25 KST"
