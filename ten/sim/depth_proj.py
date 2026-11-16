@@ -36,29 +36,8 @@ def f(x):
     except (TypeError, ValueError): return 0.0
 
 
-def main():
-    if not os.path.exists(D + 'gamelogs.csv'):
-        print('depth_proj: no gamelogs.csv - season lines kept'); return
-    logs = list(csv.DictReader(open(D + 'gamelogs.csv', encoding='utf-8')))
-    WINDOW = int(os.environ.get('DEPTH_DAYS', '15'))   # user basis: last 15 days
-    logs = [r for r in logs if r['date'] <= os.environ.get('DEPTH_ASOF', '9999')]   # back-tests: only games up to this date
-    if logs:
-        last = max(r['date'] for r in logs)
-        cut = (date.fromisoformat(last) - __import__('datetime').timedelta(days=WINDOW - 1)).isoformat()
-        logs = [r for r in logs if r['date'] >= cut]
-    season = {}
-    if os.path.exists(D + 'players_splits.csv'):
-        for r in csv.DictReader(open(D + 'players_splits.csv', encoding='utf-8')):
-            if r['split'] == 'season': season[norm(r['Player'])] = r
-    ro = json.load(open(D + 'rosters.json'))
-    out_now = {norm(n) for n in ro.get('status', {}).get('O', [])}
-    try:
-        for i in json.load(open(D + 'injuries.json')).get('injuries', []):
-            if (i.get('fantasyStatus') or '').upper() == 'OUT' or (i.get('status') or '').lower() == 'out': out_now.add(norm(i.get('player')))
-    except Exception: pass
-    today = date.today().isoformat()
-    for n, d in json.load(open(W + 'user_plan.json')).get('returnOverrides', {}).items():
-        if d > today: out_now.add(norm(n))
+def compute(logs, season, out_now, K_MIN=K_MIN, DECAY=DECAY, SIM_POW=SIM_POW):
+    """Depth lines from box scores: returns (lines, dd, report) keyed by normalized name."""
     # team games (most recent first)
     by_game = defaultdict(list)
     for r in logs: by_game[(r['team'], r['date'], r['game'])].append(r)
@@ -110,6 +89,52 @@ def main():
             raw = [f(rows[g][k]['MIN']) for dt, g in games if k in rows[g] and played(rows[g][k])]
             report[name[k]] = {'team': t, 'projMin': round(pm, 1), 'startShare': round(wst / ws, 2), 'min15': round(sum(raw) / max(1, len(raw)), 1), 'g15': gp,
                                'seasonMin': round(smin, 1), 'lastMin': m7[:4], 'role': 'starter' if wst / ws >= 0.5 else 'bench'}
+    return lines, dd, report
+
+
+def apply_calib(lines, report, cal):
+    """Back-test calibration (depth_backtest.py): minutes shrink toward the player's raw recent average and per-stat
+    multipliers by role, fitted on day-ahead projections vs actual box scores."""
+    a = cal.get('minShrink', 0.0)
+    nmk = {norm(n): n for n in report}
+    for k, L in lines.items():
+        R = report.get(nmk.get(k)) or {}
+        role = R.get('role', 'bench')
+        pm0 = L['MP']; pm = (1 - a) * pm0 + a * R.get('min15', pm0)
+        sc = pm / pm0 if pm0 > 0 else 1.0
+        mult = (cal.get('mult') or {}).get(role) or {}
+        for s in ST: L[s] = round(L[s] * sc * mult.get(s, 1.0), 3)
+        L['FGM'] = min(L['FGM'], L['FGA']); L['FTM'] = min(L['FTM'], L['FTA']); L['MP'] = round(pm, 2)
+        if R: R['projMinCal'] = round(pm, 1)
+
+
+def main():
+    if not os.path.exists(D + 'gamelogs.csv'):
+        print('depth_proj: no gamelogs.csv - season lines kept'); return
+    logs = list(csv.DictReader(open(D + 'gamelogs.csv', encoding='utf-8')))
+    WINDOW = int(os.environ.get('DEPTH_DAYS', '15'))   # user basis: last 15 days
+    logs = [r for r in logs if r['date'] <= os.environ.get('DEPTH_ASOF', '9999')]   # back-tests: only games up to this date
+    if logs:
+        last = max(r['date'] for r in logs)
+        cut = (date.fromisoformat(last) - __import__('datetime').timedelta(days=WINDOW - 1)).isoformat()
+        logs = [r for r in logs if r['date'] >= cut and r['date'] >= '2026-10-20']   # regular season only
+    season = {}
+    if os.path.exists(D + 'players_splits.csv'):
+        for r in csv.DictReader(open(D + 'players_splits.csv', encoding='utf-8')):
+            if r['split'] == 'season': season[norm(r['Player'])] = r
+    ro = json.load(open(D + 'rosters.json'))
+    out_now = {norm(n) for n in ro.get('status', {}).get('O', [])}
+    try:
+        for i in json.load(open(D + 'injuries.json')).get('injuries', []):
+            if (i.get('fantasyStatus') or '').upper() == 'OUT' or (i.get('status') or '').lower() == 'out': out_now.add(norm(i.get('player')))
+    except Exception: pass
+    today = date.today().isoformat()
+    for n, d in json.load(open(W + 'user_plan.json')).get('returnOverrides', {}).items():
+        if d > today: out_now.add(norm(n))
+    CAL = json.load(open(W + 'depth_calib.json')) if os.path.exists(W + 'depth_calib.json') else None
+    PRM = {k: CAL[k] for k in ('K_MIN', 'DECAY', 'SIM_POW') if CAL and k in CAL}   # back-test fitted (depth_backtest.py)
+    lines, dd, report = compute(logs, season, out_now, **PRM)
+    if CAL: apply_calib(lines, report, CAL)
     # rewrite actual_espn_live.csv: depth line where available, season line otherwise
     src = list(csv.DictReader(open(W + 'actual_espn_live.csv', encoding='utf-8')))
     fields = ['Player', 'Team', 'G', 'MP', 'FG', 'FGA', '3P', 'FT', 'FTA', 'TRB', 'AST', 'STL', 'BLK', 'TOV', 'PTS']

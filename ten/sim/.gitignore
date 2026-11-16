@@ -24,3 +24,4 @@ wk_next.json
 simdata.json
 simdata_v2.json
 actual_dd.json
+__pycache__/

@@ -161,7 +161,12 @@ function weekSums(ids, w, scale, teamIdx, fromDate) {
   return s;
 }
 // category mean/sd from sums (cur = already-banked totals for week 1)
+// weekly category spread multiplier, fitted on actual weekly category results (depth_backtest / proj_config.catSpread)
+const SPREAD = (() => { try { return +JSON.parse(fs.readFileSync(W + 'proj_config.json')).catSpread || 1; } catch (e) { return 1; } })();
 function catMS(s, cur) {
+  const o = catMS0(s, cur); if (SPREAD !== 1) for (const c in o) o[c][1] *= SPREAD; return o;
+}
+function catMS0(s, cur) {
   const o = {};
   const FGM = s.FGM + (cur ? cur.FGM : 0), FGA = s.FGA + (cur ? cur.FGA : 0), FTM = s.FTM + (cur ? cur.FTM : 0), FTA = s.FTA + (cur ? cur.FTA : 0);
   const fgp = FGM / Math.max(FGA, 1e-9), ftp = FTM / Math.max(FTA, 1e-9), rf = s.FGA / Math.max(FGA, 1e-9), rt = s.FTA / Math.max(FTA, 1e-9);

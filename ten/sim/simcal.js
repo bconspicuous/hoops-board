@@ -11,7 +11,7 @@ function ms(s, b) { const g = k => s[SK[k]] + (b ? b[SK[k]] : 0), o = {};
   const FGA = g('FGA'), FTA = g('FTA'), fgp = g('FGM') / Math.max(FGA, 1e-9), ftp = g('FTM') / Math.max(FTA, 1e-9);
   o.FG = [fgp, Math.sqrt(fgp * (1 - fgp) / Math.max(s[SK.FGA], 1)) * s[SK.FGA] / Math.max(FGA, 1e-9)]; o.FT = [ftp, Math.sqrt(ftp * (1 - ftp) / Math.max(s[SK.FTA], 1)) * s[SK.FTA] / Math.max(FTA, 1e-9)];
   const n = Math.max(s[SK.NPG], 1); ['TPM', 'REB', 'AST', 'STL', 'BLK', 'TO', 'PTS'].forEach(c => o[c] = [g(c), CV[c] * s[SK[c]] / Math.sqrt(n)]);
-  o.DD = [g('DD'), Math.sqrt(Math.max(s[SK.DD], 1e-6))]; o.TW = [g('TW'), Math.sqrt(Math.max(s[SK.TW] * (1 - s[SK.TW] / n), 1e-6) * 1.3)]; return o; }
+  o.DD = [g('DD'), Math.sqrt(Math.max(s[SK.DD], 1e-6))]; o.TW = [g('TW'), Math.sqrt(Math.max(s[SK.TW] * (1 - s[SK.TW] / n), 1e-6) * 1.3)]; const SP = SD.spread || 1; if (SP !== 1) for (const c in o) o[c][1] *= SP; return o; }
 function ncdf(x) { const z = Math.abs(x) / Math.SQRT2, t = 1 / (1 + 0.3275911 * z); const y = 1 - (((((1.061405429 * t - 1.453152027) * t) + 1.421413741) * t - 0.284496736) * t + 0.254829592) * t * Math.exp(-z * z); return x >= 0 ? 0.5 * (1 + y) : 0.5 * (1 - y); }
 function pw(a, b, c, f) { const d = (c === 'TO' ? -1 : 1) * (a[c][0] - b[c][0]), s = (Math.sqrt(a[c][1] ** 2 + b[c][1] ** 2) || 1e-6) * f;
   if (!INT[c]) return [ncdf(d / s), 0]; return [1 - ncdf((0.5 - d) / s), ncdf((0.5 - d) / s) - ncdf((-0.5 - d) / s)]; }

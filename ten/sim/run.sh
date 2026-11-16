@@ -4,6 +4,12 @@ set -uo pipefail
 cd "$(dirname "$0")"
 python3 -I espn_to_sim.py | grep -E "trade|swaps|teams"
 # user setting: depth-aware last-15-day lines (proj_config.basis = last15depth) replace season lines in actual_espn_live.csv
+# back-test calibration (projection vs actual box scores): refit once per new game day
+python3 -I -c "
+import json,csv,os,sys
+last=max(r['date'] for r in csv.DictReader(open('../data/gamelogs.csv'))) if os.path.exists('../data/gamelogs.csv') else ''
+fit=json.load(open('depth_calib.json')).get('fittedTo','') if os.path.exists('depth_calib.json') else ''
+sys.exit(0 if last and fit < last else 1)" && python3 -I depth_backtest.py > out/backtest.log 2>&1
 python3 -I -c "import json,sys; sys.exit(0 if json.load(open('proj_config.json')).get('basis')=='last15depth' else 1)" && python3 -I depth_proj.py
 read CUR FROM ACQ <<<"$(python3 -I -c "
 import json; r=json.load(open('rosters_espn.json')); g=json.load(open('../data/rosters.json'))

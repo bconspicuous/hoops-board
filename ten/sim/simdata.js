@@ -31,6 +31,6 @@ const SV = P[VIRT[NBA[0]]];
 const stream = { f: ['FGM', 'FGA', 'FTM', 'FTA', 'TPM', 'REB', 'AST', 'STL', 'BLK', 'TO', 'PTS'].map(k => r1(SV.f[k] || 0)), dd: r1(SV.DDg), v: r1(SV.value), a: 0.92, el: SV.elig, tw: Object.fromEntries(NBA.map(t => [t, Math.round(P[VIRT[t]].TWg * 1000) / 1000])) };
 const SF = RJ.streamFromWeek != null ? RJ.streamFromWeek : 99, SN = RJ.streamPerWeek || 0, SO = RJ.streamOverride || {};
 const kNode = TEAMS.map(t => weeks.map(w => w >= SF ? ((SO[t.abbr] || {})[w] != null ? SO[t.abbr][w] : SN) : 0));
-const out = { nba: NBA, days, fromIdx, stream, kNode, streamPerWeek: SN, curw: CURW, from: FROM, weeks, starts: weeks.map(start), pairs: weeks.map(w => SCHED[w]), sums, bank, players, keys: KEYS };
+const out = { spread: (() => { try { return +JSON.parse(fs.readFileSync(__dirname + '/proj_config.json')).catSpread || 1; } catch (e) { return 1; } })(), nba: NBA, days, fromIdx, stream, kNode, streamPerWeek: SN, curw: CURW, from: FROM, weeks, starts: weeks.map(start), pairs: weeks.map(w => SCHED[w]), sums, bank, players, keys: KEYS };
 fs.writeFileSync(process.argv[2] || 'simdata.json', JSON.stringify(out));
 console.log('simdata', weeks.length, 'weeks', players.length, 'players', JSON.stringify(out).length, 'bytes');
