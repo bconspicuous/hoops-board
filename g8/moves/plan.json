@@ -4,10 +4,10 @@
  "acqLeft": 6,
  "dropCandidates": [],
  "base": {
-  "wk": 5.3,
-  "champ": 0.116,
-  "p1": 0.0525,
-  "epct": 0.5167
+  "wk": 5.78,
+  "champ": 0.362,
+  "p1": 0.418,
+  "epct": 0.557
  },
  "protect": [
   "Shai Gilgeous-Alexander",
@@ -34,10 +34,90 @@
    "note": "IR 선수가 O가 아님 — ESPN이 영입을 막을 수 있음(감독 판단: DTD는 영입 가능). 첫 사례에서 실제 동작을 기록"
   }
  ],
- "items": [],
+ "items": [
+  {
+   "n": 1,
+   "kind": "add/drop",
+   "add": "Robert Williams III",
+   "addEspnId": 4066211,
+   "addOwner": "FA",
+   "drop": "Jeremiah Fears",
+   "ir": null,
+   "weekGain": 0.3,
+   "titleGain": 0.186,
+   "p1Gain": 0.275,
+   "conflicts": [
+    2
+   ],
+   "status": "proposed",
+   "note": "C · POR 월화목토 · 화요일부터 반영 시 주간 +0.18 수준"
+  },
+  {
+   "n": 2,
+   "kind": "add/drop",
+   "add": "Robert Williams III",
+   "addEspnId": 4066211,
+   "addOwner": "FA",
+   "drop": "Brandon Miller",
+   "ir": null,
+   "weekGain": 0.25,
+   "titleGain": 0.176,
+   "p1Gain": 0.282,
+   "conflicts": [
+    1,
+    3,
+    4
+   ],
+   "status": "proposed",
+   "note": "원안(Miller 방출) · 화요일부터 반영 시 주간 +0.18"
+  },
+  {
+   "n": 3,
+   "kind": "add/drop",
+   "add": "Mikal Bridges",
+   "addEspnId": 3147657,
+   "addOwner": "FA",
+   "drop": "Brandon Miller",
+   "ir": null,
+   "weekGain": 0.24,
+   "titleGain": 0.024,
+   "p1Gain": 0.0,
+   "conflicts": [
+    2,
+    4
+   ],
+   "status": "proposed",
+   "note": "NYK 화목토일 · 월요일 경기 이후 승인돼도 주간 효과 유지"
+  },
+  {
+   "n": 4,
+   "kind": "add/drop",
+   "add": "Cam Spencer",
+   "addEspnId": 4433083,
+   "addOwner": "FA",
+   "drop": "Brandon Miller",
+   "ir": null,
+   "weekGain": 0.28,
+   "titleGain": 0.024,
+   "p1Gain": 0.071,
+   "conflicts": [
+    2,
+    3
+   ],
+   "status": "proposed",
+   "note": "MEM 월수목토 · 화요일부터 반영 시 주간 +0.15"
+  }
+ ],
  "screened": [],
- "createdAt": "2026-11-16T20:43:47.908Z",
- "id": "20261116T2043",
+ "createdAt": "2026-11-16T22:29:10Z",
+ "id": "20261116T2229",
  "rosterSig": "AJ Dybantsa|Anthony Davis|Brandon Miller|Darryn Peterson|Day'Ron Sharpe|James Harden|Jeremiah Fears|Karl-Anthony Towns|Michael Porter Jr.|Miles Bridges|Norman Powell|Shai Gilgeous-Alexander|Tyler Herro#Austin Reaves|Kyrie Irving",
- "newItems": []
+ "newItems": [
+  1,
+  2,
+  3,
+  4
+ ],
+ "basis": "calib + 우리 팀 전 자리 스트리밍",
+ "note": "감독 요청(2026-11-17): Miller(이번 주 2경기) 자리 영입 후보. 1번은 Claude 대안(Miller 유지, Fears 방출)"
 }
