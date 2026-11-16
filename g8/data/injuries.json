@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-16T11:42+09:00",
+ "asOf": "2026-11-16T14:42+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -44,20 +44,6 @@
    "fantasyStatus": "OUT",
    "short": "Gueye (foot) is ready to begin on-court activities and will be re-evaluated in four weeks, Brad Rowland of the Locked On Podcast Network reports.",
    "long": "The team stated in July that the big man would remain sidelined for the next 3-to-4 months after undergoing surgery to repair a fractured left foot, and he's continuing to make progress in his rehab. A timetable for Gueye's 2026-27 debut has yet to be established, thought a date could come into focus following his next evaluation in mid-December."
-  },
-  {
-   "player": "Keshon Gilbert",
-   "team": "ATL",
-   "status": "Out",
-   "date": "2026-11-12T23:10Z",
-   "type": "out",
-   "returnDate": "2026-11-20",
-   "detail": "Inflammation",
-   "side": "Left",
-   "injury": "Knee",
-   "fantasyStatus": "OUT",
-   "short": "Gilbert (knee) has been ruled out for Friday's game against the Bulls.",
-   "long": "Gilbert continues to deal with lingering knee inflammation and is without a timetable to return. He can be considered week-to-week until the Hawks offer an update on his progress."
   },
   {
    "player": "Asa Newell",
