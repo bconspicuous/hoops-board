@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-16T19:12+09:00",
+ "asOf": "2026-11-16T23:42+09:00",
  "source": "ESPN API sync (GitHub Actions g8-espn)",
  "teams": {
   "Junyoung's Scary Team": {
@@ -68,6 +68,7 @@
   "Zero Sugar": {
    "active": [
     "Victor Wembanyama",
+    "Scottie Barnes",
     "Jalen Brunson",
     "Trae Young",
     "Desmond Bane",
@@ -77,12 +78,10 @@
     "Grayson Allen",
     "Duncan Robinson",
     "Saddiq Bey",
-    "P.J. Washington",
     "Jared McCain",
     "Bones Hyland"
    ],
    "ir": [
-    "Scottie Barnes",
     "Chet Holmgren"
    ]
   },
@@ -99,8 +98,8 @@
     "Jabari Smith Jr.",
     "Rudy Gobert",
     "Alex Sarr",
-    "Andrew Nembhard",
-    "Jamal Shead"
+    "Jamal Shead",
+    "Toumani Camara"
    ],
    "ir": [
     "Ja Morant",
@@ -226,10 +225,9 @@
   "Isaiah Joe": "O",
   "Sam Merrill": "O",
   "Sergio de Larrea": "O",
-  "Vit Krejci": "O",
   "Duncan Robinson": "DTD",
-  "Andrew Nembhard": "DTD",
   "Joel Embiid": "DTD",
+  "Andrew Nembhard": "DTD",
   "Zach Edey": "DTD",
   "Peyton Watson": "DTD",
   "Jalen Smith": "DTD",
@@ -284,7 +282,6 @@
   "Chet Holmgren": "2027-01-02",
   "Paolo Banchero": "2026-11-22",
   "Mark Williams": "2027-02-03",
-  "Vit Krejci": "2027-01-12",
   "Ja Morant": "2026-12-01",
   "Shaedon Sharpe": "2027-03-02",
   "De'Andre Hunter": "2026-11-18",
