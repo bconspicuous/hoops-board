@@ -1,13 +1,13 @@
 {
- "week": 4,
- "opp": "Junyoung's Scary Team",
+ "week": 5,
+ "opp": "Zero Sugar",
  "acqLeft": 0,
  "dropCandidates": [],
  "base": {
-  "wk": 7.64,
-  "champ": 0.0279,
-  "p1": 0.0083,
-  "epct": 0.4901
+  "wk": 5.144,
+  "champ": 0.0347,
+  "p1": 0.0169,
+  "epct": 0.4973
  },
  "protect": [
   "Shai Gilgeous-Alexander",
@@ -30,8 +30,8 @@
  ],
  "items": [],
  "screened": [],
- "createdAt": "2026-11-16T02:43:26.407Z",
- "id": "20261116T0243",
+ "createdAt": "2026-11-16T05:43:21.391Z",
+ "id": "20261116T0543",
  "rosterSig": "AJ Dybantsa|Anthony Davis|Brandon Miller|Darryn Peterson|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Miles Bridges|Norman Powell|Shai Gilgeous-Alexander|Tyler Herro#Austin Reaves|Michael Porter Jr.",
  "newItems": []
 }
