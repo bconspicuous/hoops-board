@@ -2,110 +2,69 @@
  "date": "2026-11-16",
  "week": 5,
  "opp": "Zero Sugar",
- "status": "pending",
- "playing": 6,
+ "status": "nochange-starters",
+ "playing": 8,
  "starters": [
   "Anthony Davis",
   "James Harden",
+  "Michael Porter Jr.",
   "Miles Bridges",
   "Jeremiah Fears",
   "AJ Dybantsa",
-  "Norman Powell"
+  "Norman Powell",
+  "Day'Ron Sharpe"
  ],
  "bench": [],
  "dtd": [],
  "expected": {
-  "best": 5.143,
-  "current": 4.993,
-  "gain": 0.151,
+  "best": 5.378,
+  "current": 5.378,
+  "gain": 0,
   "pcBest": {
-   "FG": 0.515,
-   "FT": 0.54,
-   "TPM": 0.234,
-   "REB": 0.855,
-   "AST": 0.061,
-   "STL": 0.401,
-   "BLK": 0.317,
-   "TO": 0.339,
-   "DD": 0.52,
-   "PTS": 0.782,
-   "PF": 0.58
+   "FG": 0.552,
+   "FT": 0.43,
+   "TPM": 0.29,
+   "REB": 0.99,
+   "AST": 0.087,
+   "STL": 0.508,
+   "BLK": 0.58,
+   "TO": 0.153,
+   "DD": 0.642,
+   "PTS": 0.882,
+   "PF": 0.264
   },
   "pcCurrent": {
-   "FG": 0.517,
-   "FT": 0.553,
-   "TPM": 0.164,
-   "REB": 0.771,
-   "AST": 0.027,
-   "STL": 0.288,
-   "BLK": 0.27,
-   "TO": 0.503,
-   "DD": 0.512,
-   "PTS": 0.605,
-   "PF": 0.781
+   "FG": 0.552,
+   "FT": 0.43,
+   "TPM": 0.29,
+   "REB": 0.99,
+   "AST": 0.087,
+   "STL": 0.508,
+   "BLK": 0.58,
+   "TO": 0.153,
+   "DD": 0.642,
+   "PTS": 0.882,
+   "PF": 0.264
   }
  },
  "alternatives": [],
- "currentBench": [
-  "Jeremiah Fears",
-  "Norman Powell"
- ],
- "sameStarters": false,
+ "currentBench": [],
+ "sameStarters": true,
  "moves": [
   {
-   "name": "Shai Gilgeous-Alexander",
+   "name": "James Harden",
    "from": "UTIL",
-   "to": "G"
-  },
-  {
-   "name": "Karl-Anthony Towns",
-   "from": "C",
-   "to": "UTIL"
-  },
-  {
-   "name": "Anthony Davis",
-   "from": "PF",
-   "to": "C"
-  },
-  {
-   "name": "Kyrie Irving",
-   "from": "G",
-   "to": "UTIL"
-  },
-  {
-   "name": "Tyler Herro",
-   "from": "SG",
-   "to": "BE"
-  },
-  {
-   "name": "Miles Bridges",
-   "from": "SF",
-   "to": "PF"
-  },
-  {
-   "name": "Jeremiah Fears",
-   "from": "BE",
    "to": "PG"
   },
   {
    "name": "Darryn Peterson",
    "from": "PG",
-   "to": "BE"
-  },
-  {
-   "name": "AJ Dybantsa",
-   "from": "UTIL",
-   "to": "SF"
-  },
-  {
-   "name": "Norman Powell",
-   "from": "BE",
-   "to": "SG"
+   "to": "UTIL"
   }
  ],
  "slots": [
   {
-   "name": "Jeremiah Fears",
+   "name": "James Harden",
    "slot": "PG"
   },
   {
@@ -113,46 +72,50 @@
    "slot": "SG"
   },
   {
-   "name": "AJ Dybantsa",
+   "name": "Miles Bridges",
    "slot": "SF"
   },
   {
-   "name": "Miles Bridges",
+   "name": "Anthony Davis",
    "slot": "PF"
   },
   {
-   "name": "Anthony Davis",
+   "name": "Day'Ron Sharpe",
    "slot": "C"
   },
   {
-   "name": "Shai Gilgeous-Alexander",
+   "name": "Jeremiah Fears",
    "slot": "G"
   },
   {
-   "name": "Brandon Miller",
+   "name": "Michael Porter Jr.",
    "slot": "F"
   },
   {
+   "name": "Shai Gilgeous-Alexander",
+   "slot": "UTIL"
+  },
+  {
+   "name": "Darryn Peterson",
+   "slot": "UTIL"
+  },
+  {
+   "name": "AJ Dybantsa",
+   "slot": "UTIL"
+  },
+  {
    "name": "Karl-Anthony Towns",
-   "slot": "UTIL"
+   "slot": "BE"
   },
   {
-   "name": "James Harden",
-   "slot": "UTIL"
-  },
-  {
-   "name": "Kyrie Irving",
-   "slot": "UTIL"
+   "name": "Brandon Miller",
+   "slot": "BE"
   },
   {
    "name": "Tyler Herro",
    "slot": "BE"
-  },
-  {
-   "name": "Darryn Peterson",
-   "slot": "BE"
   }
  ],
- "id": "2026-11-16T0543Z",
- "createdAt": "2026-11-16T05:43:44.587Z"
+ "id": "2026-11-16T1014Z",
+ "createdAt": "2026-11-16T10:14:08.382Z"
 }

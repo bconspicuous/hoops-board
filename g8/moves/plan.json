@@ -1,37 +1,30 @@
 {
  "week": 5,
  "opp": "Zero Sugar",
- "acqLeft": 0,
+ "acqLeft": 6,
  "dropCandidates": [],
  "base": {
-  "wk": 5.144,
-  "champ": 0.0347,
-  "p1": 0.0169,
-  "epct": 0.4973
+  "wk": 5.378,
+  "champ": 0.1075,
+  "p1": 0.0712,
+  "epct": 0.5153
  },
  "protect": [
   "Shai Gilgeous-Alexander",
   "Anthony Davis",
-  "Kyrie Irving",
   "James Harden",
   "Karl-Anthony Towns",
+  "Michael Porter Jr.",
   "Tyler Herro",
   "Miles Bridges",
   "Norman Powell"
  ],
  "droppable": [],
- "flags": [
-  {
-   "kind": "ir-ineligible",
-   "player": "Michael Porter Jr.",
-   "status": "정상",
-   "note": "IR 선수가 O가 아님 — ESPN이 영입을 막을 수 있음(감독 판단: DTD는 영입 가능). 첫 사례에서 실제 동작을 기록"
-  }
- ],
+ "flags": [],
  "items": [],
  "screened": [],
- "createdAt": "2026-11-16T05:43:21.391Z",
- "id": "20261116T0543",
- "rosterSig": "AJ Dybantsa|Anthony Davis|Brandon Miller|Darryn Peterson|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Miles Bridges|Norman Powell|Shai Gilgeous-Alexander|Tyler Herro#Austin Reaves|Michael Porter Jr.",
+ "createdAt": "2026-11-16T10:13:51.931Z",
+ "id": "20261116T1013",
+ "rosterSig": "AJ Dybantsa|Anthony Davis|Brandon Miller|Darryn Peterson|Day'Ron Sharpe|James Harden|Jeremiah Fears|Karl-Anthony Towns|Michael Porter Jr.|Miles Bridges|Norman Powell|Shai Gilgeous-Alexander|Tyler Herro#Austin Reaves|Kyrie Irving",
  "newItems": []
 }
