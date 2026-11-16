@@ -1,31 +1,31 @@
-# 10팀 리그 시뮬레이션 · 2026-11-16 16:22 KST
+# 10팀 리그 시뮬레이션 · 2026-11-16 18:24 KST
 - 프로젝션: 2026-27 최근 15일 · 팀 뎁스 보정(분당 생산성 × 현재 로테이션 기준 예상 출전시간)
 
-## 우리 팀 예상 순위: 권장 교체안 실행 시 3위 · 일반 교체 가정 시 9위 (현재 10위, 9-24-0)
-- 4강 19%(v2 19%) · 우승 1.9% · 권장 교체안 실행 시 4강 73%, 우승 2.8%
+## 우리 팀 예상 순위: 권장 교체안 실행 시 3위 · 일반 교체 가정 시 8위 (현재 10위, 14-30-0)
+- 4강 18%(v2 18%) · 우승 2.4% · 권장 교체안 실행 시 4강 61%, 우승 4.4%
 
-## 이번 주(4주차) vs Saving PakPaks (KWNG)
-- 현재 6-5-0 · 승리 확률 100%(v2 100%) · 남은 0일
-- 카테고리 승률: FG% 0%, FT% 100%, 3PM 0%, REB 100%, AST 100%, STL 0%, BLK 0%, TO 100%, DD 100%, PTS 0%, TW 100%
+## 이번 주(5주차) vs Team Bbang Guns (TBG)
+- 현재 0-0-11 · 승리 확률 27%(v2 26%) · 남은 7일
+- 카테고리 승률: FG% 56%, FT% 57%, 3PM 82%, REB 30%, AST 12%, STL 12%, BLK 20%, TO 54%, DD 77%, PTS 36%, TW 37%
 
 ## 이번 주 교체 플랜
-- 이번 주 남은 일정 0일 · 교체는 다음 주 플랜으로 이월
-- 5주차(11/16~) vs TBG: Ryan Rollins → Kevin Huerter, Grayson Allen → Anthony Black · 승리 18% → 63%
-- 6주차(11/23~) vs Doo: Paul Reed → Tobias Harris, Julian Champagnie → Derrick Jones Jr., Andrew Nembhard → Robert Williams III · 승리 47% → 65% · IR 복귀로 Paul Reed 방출
+- 권장(남은 경기 기준): Grayson Allen → Kevin Huerter(DET, 4경기), Ryan Rollins → Nic Claxton(CHI, 4경기) · 승리 27% → 63%
+- 6주차(11/23~) vs Doo: Andrew Nembhard → Robert Williams III, Grayson Allen → Kel'el Ware · 승리 37% → 55% · IR 복귀로 Ryan Rollins 방출
+- 7주차(11/30~) vs IYH: Ryan Rollins → Ja Morant, Collin Gillespie → Kevin Huerter, Julian Champagnie → Tobias Harris · 승리 59% → 68%
 
-## 추천 라인업 (5주차 vs TBG, 권장 교체 반영)
+## 추천 라인업 (5주차 vs TBG, 현재 로스터)
 - 10명 초과일 없음 · 출전 가능 전원 선발
 
 ## 예상 순위 · 팀별 현황
 | 예상 | 팀 | 현재 성적(순위) | 예상 카테고리 성적 | 4강 | 우승 |
 |---|---|---|---|---|---|
-| 1 | Seoul Dreamers (KOO) | 22-11-0 (2위) | 149-87-7 | 97% | 56.6% |
-| 2 | Kfinco_ThePianist (SONG) | 20-10-3 (3위) | 135-101-7 | 86% | 15.4% |
-| 3 | Team Bbang Guns (TBG) | 13-18-2 (7위) | 120-116-6 | 51% | 9.3% |
-| 4 | Garibong CHaRdaddy (GGAM) | 19-12-2 (4위) | 114-122-7 | 32% | 3.8% |
-| 5 | Samseong Homeless (SMS) | 25-8-0 (1위) | 114-121-7 | 32% | 6.0% |
-| 6 | Saving PakPaks (KWNG) | 15-15-3 (5위) | 112-122-8 | 28% | 5.2% |
-| 7 | Jongno Karina (IYH) | 12-21-0 (8위) | 111-124-7 | 24% | 0.4% |
-| 8 | PaloAlto Wenoja (JYP) | 14-18-1 (6위) | 110-125-7 | 23% | 1.0% |
-| 9 | **Garak Twindragons (GTD)** | 9-24-0 (10위) | 110-126-6 | 19% | 1.9% |
-| 10 | Helio honeymoons (Doo) | 10-22-1 (9위) | 103-132-7 | 8% | 0.3% |
+| 1 | Seoul Dreamers (KOO) | 28-16-0 (3위) | 147-90-5 | 97% | 47.1% |
+| 2 | Kfinco_ThePianist (SONG) | 28-13-3 (2위) | 127-109-6 | 72% | 19.6% |
+| 3 | Team Bbang Guns (TBG) | 15-26-3 (7위) | 123-114-5 | 60% | 9.7% |
+| 4 | Saving PakPaks (KWNG) | 21-20-3 (6위) | 115-120-7 | 35% | 7.4% |
+| 5 | Jongno Karina (IYH) | 15-29-0 (9위) | 115-122-5 | 32% | 1.7% |
+| 6 | Samseong Homeless (SMS) | 30-14-0 (1위) | 113-124-5 | 24% | 5.0% |
+| 7 | Garibong CHaRdaddy (GGAM) | 25-17-2 (4위) | 112-124-6 | 24% | 3.7% |
+| 8 | **Garak Twindragons (GTD)** | 14-30-0 (10위) | 111-126-5 | 18% | 2.4% |
+| 9 | PaloAlto Wenoja (JYP) | 22-20-2 (5위) | 110-126-6 | 20% | 1.6% |
+| 10 | Helio honeymoons (Doo) | 15-28-1 (8위) | 110-127-5 | 18% | 1.8% |

@@ -1,203 +1,243 @@
 {
- "asOf": "2026-11-16T16:22+09:00",
+ "asOf": "2026-11-16T18:24+09:00",
  "me": {
   "abbr": "GTD",
   "name": "Garak Twindragons",
   "me": true,
-  "rec": "9-24-0",
-  "pct": 0.2727272727272727,
-  "ec": 0.45190855061449026,
-  "W": 109.6257,
-  "L": 125.9354,
-  "T": 6.4389,
-  "p4": 0.1897,
-  "champ": 0.0192,
-  "avgRank": 6.7943,
-  "p4v2": 0.1886,
-  "Wv2": 109.6155,
-  "projRank": 9,
+  "rec": "14-30-0",
+  "pct": 0.3181818181818182,
+  "ec": 0.46244530925356553,
+  "W": 110.5582,
+  "L": 126.1884,
+  "T": 5.2534,
+  "p4": 0.1777,
+  "champ": 0.024,
+  "avgRank": 6.9303,
+  "p4v2": 0.1779,
+  "Wv2": 110.531,
+  "projRank": 8,
   "curRank": 10,
-  "planW": 127.47625,
+  "planW": 123.8205,
   "planRank": 3
  },
  "week": {
   "v1": {
-   "opp": "KWNG",
-   "oppName": "Saving PakPaks",
-   "record": "6-5-0",
-   "win": 1,
-   "lose": 0,
+   "opp": "TBG",
+   "oppName": "Team Bbang Guns",
+   "record": "0-0-11",
+   "win": 0.26872887990498623,
+   "lose": 0.6821198346014773,
    "cats": {
-    "FG": 0,
-    "FT": 100,
-    "TPM": 0,
-    "REB": 100,
-    "AST": 100,
-    "STL": 0,
-    "BLK": 0,
-    "TO": 100,
-    "DD": 100,
-    "PTS": 0,
-    "TW": 100
+    "FG": 56,
+    "FT": 57,
+    "TPM": 82,
+    "REB": 30,
+    "AST": 12,
+    "STL": 12,
+    "BLK": 20,
+    "TO": 54,
+    "DD": 77,
+    "PTS": 36,
+    "TW": 37
    }
   },
   "v2": {
-   "opp": "KWNG",
-   "oppName": "Saving PakPaks",
-   "record": "6-5-0",
-   "win": 1,
-   "lose": 0,
+   "opp": "TBG",
+   "oppName": "Team Bbang Guns",
+   "record": "0-0-11",
+   "win": 0.25858507714248086,
+   "lose": 0.6928985978951329,
    "cats": {
-    "FG": 0,
-    "FT": 100,
-    "TPM": 0,
-    "REB": 100,
-    "AST": 100,
-    "STL": 0,
-    "BLK": 0,
-    "TO": 100,
-    "DD": 100,
-    "PTS": 0,
-    "TW": 100
+    "FG": 54,
+    "FT": 57,
+    "TPM": 82,
+    "REB": 30,
+    "AST": 12,
+    "STL": 13,
+    "BLK": 20,
+    "TO": 54,
+    "DD": 76,
+    "PTS": 34,
+    "TW": 37
    }
   },
-  "remDays": 0,
+  "remDays": 7,
   "base": {
-   "e": 6,
-   "win": 1,
-   "tie": 0,
+   "e": 4.728478302299127,
+   "win": 0.26872887990498623,
+   "tie": 0.049151285493536256,
    "per": {
-    "FG": 0,
-    "FT": 1,
-    "TPM": 0,
-    "REB": 1,
-    "AST": 1,
-    "STL": 0,
-    "BLK": 0,
-    "TO": 1,
-    "DD": 1,
-    "PTS": 0,
-    "TW": 1
+    "FG": 0.5550186910816604,
+    "FT": 0.566878639338859,
+    "TPM": 0.821820487072431,
+    "REB": 0.2984705497880412,
+    "AST": 0.12441803738563917,
+    "STL": 0.12203059698075813,
+    "BLK": 0.20225312819949154,
+    "TO": 0.5358783172090994,
+    "DD": 0.7739266756940546,
+    "PTS": 0.35974267063026905,
+    "TW": 0.36804050891882284
    }
   },
-  "nowMove": null,
-  "alts": []
+  "nowMove": {
+   "moves": [
+    {
+     "drop": "Grayson Allen",
+     "add": "Kevin Huerter",
+     "team": "DET",
+     "g": 4,
+     "gDrop": 2
+    },
+    {
+     "drop": "Ryan Rollins",
+     "add": "Nic Claxton",
+     "team": "CHI",
+     "g": 4,
+     "gDrop": 3
+    }
+   ],
+   "e": 6.097146940970192,
+   "win": 0.6342336304189334,
+   "per": {
+    "FG": 0.6759185256996054,
+    "FT": 0.486710173379326,
+    "TPM": 0.8165057530129372,
+    "REB": 0.5574529327684906,
+    "AST": 0.22085888966060124,
+    "STL": 0.14104685269402883,
+    "BLK": 0.7818160768376746,
+    "TO": 0.5909031836226202,
+    "DD": 0.7739266756940546,
+    "PTS": 0.5668379583087684,
+    "TW": 0.48516991929208414
+   }
+  },
+  "alts": [
+   {
+    "moves": [
+     {
+      "drop": "Grayson Allen",
+      "add": "Kevin Huerter",
+      "team": "DET",
+      "g": 4,
+      "gDrop": 2
+     }
+    ],
+    "e": 5.480021375395227,
+    "win": 0.46530441481973933,
+    "per": {
+     "FG": 0.5778673620613479,
+     "FT": 0.4838087696273574,
+     "TPM": 0.8544833859788343,
+     "REB": 0.38888270332525704,
+     "AST": 0.20496942432113485,
+     "STL": 0.18583201953894185,
+     "BLK": 0.5369122150988136,
+     "TO": 0.5038903512305393,
+     "DD": 0.7739266756940546,
+     "PTS": 0.5171665714058675,
+     "TW": 0.4522818971130783
+    }
+   },
+   {
+    "moves": [
+     {
+      "drop": "Grayson Allen",
+      "add": "Nic Claxton",
+      "team": "CHI",
+      "g": 4,
+      "gDrop": 2
+     }
+    ],
+    "e": 5.442129427923175,
+    "win": 0.45790853474573057,
+    "per": {
+     "FG": 0.6303946913507008,
+     "FT": 0.5063620958757653,
+     "TPM": 0.7612148633265726,
+     "REB": 0.5631536031932274,
+     "AST": 0.17967594350865912,
+     "STL": 0.09443751454285504,
+     "BLK": 0.5401553372349237,
+     "TO": 0.5676242440899004,
+     "DD": 0.7739266756940546,
+     "PTS": 0.4202193452928997,
+     "TW": 0.40496511381361633
+    }
+   },
+   {
+    "moves": [
+     {
+      "drop": "Ryan Rollins",
+      "add": "Kevin Huerter",
+      "team": "DET",
+      "g": 4,
+      "gDrop": 3
+     }
+    ],
+    "e": 5.442375987732974,
+    "win": 0.4554503350194079,
+    "per": {
+     "FG": 0.6059695610316642,
+     "FT": 0.5439977394376305,
+     "TPM": 0.8644444559486744,
+     "REB": 0.2909513196738044,
+     "AST": 0.15777322220912254,
+     "STL": 0.17511568937143895,
+     "BLK": 0.518591062708376,
+     "TO": 0.5585704858664675,
+     "DD": 0.7739266756940546,
+     "PTS": 0.5045915788947972,
+     "TW": 0.44844419689694337
+    }
+   }
+  ]
  },
  "plans": {
   "rec": {
-   "p4": 0.726,
-   "champ": 0.028125,
-   "used": 40,
-   "W": 127.47625,
-   "L": 108.291375
+   "p4": 0.608125,
+   "champ": 0.04375,
+   "used": 37,
+   "W": 123.8205,
+   "L": 113.07975
   },
   "c2": {
-   "p4": 0.702125,
-   "champ": 0.027625,
-   "used": 37,
-   "W": 126.509875,
-   "L": 109.33375
+   "p4": 0.57,
+   "champ": 0.042625,
+   "used": 35,
+   "W": 122.7155,
+   "L": 114.2125
   },
   "free": {
-   "p4": 0.875,
-   "champ": 0.03475,
-   "used": 41,
-   "W": 134.9745,
-   "L": 100.89525
+   "p4": 0.694375,
+   "champ": 0.043625,
+   "used": 39,
+   "W": 126.5,
+   "L": 110.471
   }
  },
  "base": {
-  "W": 98.579125,
-  "L": 137.251875,
-  "T": 6.169,
-  "p4": 0.0305,
-  "champ": 0.003375,
-  "p1": 0,
+  "W": 104.06525,
+  "L": 132.764875,
+  "T": 5.169875,
+  "p4": 0.062625,
+  "champ": 0.00725,
+  "p1": 0.00075,
   "fin": [
-   0,
-   0.002125,
-   0.00825,
-   0.020125,
-   0.035875,
-   0.0635,
-   0.0965,
-   0.143125,
-   0.245875,
-   0.384625
+   0.00075,
+   0.006625,
+   0.01875,
+   0.0365,
+   0.05925,
+   0.078,
+   0.110375,
+   0.160875,
+   0.222,
+   0.306875
   ]
  },
  "next": [
-  {
-   "week": 5,
-   "start": "2026-11-16",
-   "opp": "TBG",
-   "oppName": "Team Bbang Guns",
-   "moves": [
-    {
-     "drop": "Ryan Rollins",
-     "add": "Kevin Huerter",
-     "g": 4,
-     "gDrop": 3,
-     "gain": 0.863567205655503
-    },
-    {
-     "drop": "Grayson Allen",
-     "add": "Anthony Black",
-     "g": 4,
-     "gDrop": 2,
-     "gain": 0.7583486261221299
-    }
-   ],
-   "nMoves": 2,
-   "before": 4.464964403496498,
-   "after": 6.086880235274131,
-   "perBefore": {
-    "FG": 0.5528815526234739,
-    "FT": 0.4075669990630731,
-    "TPM": 0.6287559844946903,
-    "REB": 0.8174799484513497,
-    "AST": 0.03529354002665486,
-    "STL": 0.039466276751160656,
-    "BLK": 0.09580413271956928,
-    "TO": 0.4739952311272366,
-    "DD": 0.9043024309355018,
-    "PTS": 0.10810895548983157,
-    "TW": 0.401309351813956
-   },
-   "winBefore": 0.1841662858401261,
-   "winAfter": 0.6336222375122254,
-   "per": {
-    "FG": 0.6041955387159784,
-    "FT": 0.3659703907265516,
-    "TPM": 0.781103346150781,
-    "REB": 0.9493364528084113,
-    "AST": 0.25445762817820194,
-    "STL": 0.2146987987312125,
-    "BLK": 0.6955326980656773,
-    "TO": 0.15048991550876717,
-    "DD": 0.9224311789958899,
-    "PTS": 0.5220631585356288,
-    "TW": 0.6266011288570319
-   },
-   "roster": [
-    "Ivica Zubac",
-    "Josh Hart",
-    "Ajay Mitchell",
-    "Toumani Camara",
-    "Miles Bridges",
-    "Karl-Anthony Towns",
-    "Duncan Robinson",
-    "Andrew Nembhard",
-    "Anthony Black",
-    "Paul Reed",
-    "Paul George",
-    "Julian Champagnie",
-    "Kevin Huerter",
-    "Kawhi Leonard"
-   ],
-   "joint": true,
-   "forced": null
-  },
   {
    "week": 6,
    "start": "2026-11-23",
@@ -205,75 +245,145 @@
    "oppName": "Helio honeymoons",
    "moves": [
     {
-     "drop": "Paul Reed",
-     "add": "Tobias Harris",
-     "g": 4,
-     "gDrop": 3,
-     "gain": 0
-    },
-    {
-     "drop": "Julian Champagnie",
-     "add": "Derrick Jones Jr.",
-     "g": 4,
-     "gDrop": 4,
-     "gain": 0.18986020840565843
-    },
-    {
      "drop": "Andrew Nembhard",
      "add": "Robert Williams III",
      "g": 4,
      "gDrop": 3,
-     "gain": 0.40794068260484107
+     "gain": 0.316722004648728
+    },
+    {
+     "drop": "Grayson Allen",
+     "add": "Kel'el Ware",
+     "g": 4,
+     "gDrop": 3,
+     "gain": 0.28505078692973296
     }
    ],
-   "nMoves": 3,
-   "before": 5.512772049927121,
-   "after": 6.110572940937621,
+   "nMoves": 2,
+   "before": 5.170234994521895,
+   "after": 5.772007786100356,
    "perBefore": {
-    "FG": 0.3997881325933476,
-    "FT": 0.8612371585140014,
-    "TPM": 0.8837454561693046,
-    "REB": 0.1437063058878552,
-    "AST": 0.014664733973609956,
-    "STL": 0.8029672451477639,
-    "BLK": 0.1162032934178942,
-    "TO": 0.9438114896793077,
-    "DD": 0.5405476023882893,
-    "PTS": 0.07675164857693495,
-    "TW": 0.729348983578812
+    "FG": 0.5041013009244791,
+    "FT": 0.8284278862840484,
+    "TPM": 0.9255908443334269,
+    "REB": 0.06386532496213648,
+    "AST": 0.026376586194161944,
+    "STL": 0.559653508266803,
+    "BLK": 0.061683898977649865,
+    "TO": 0.9327114036844912,
+    "DD": 0.4615056975866755,
+    "PTS": 0.21223983389506607,
+    "TW": 0.594078709412956
    },
-   "winBefore": 0.4673478545191242,
-   "winAfter": 0.6487027649417694,
+   "winBefore": 0.36797290697879853,
+   "winAfter": 0.5532146384334741,
    "per": {
-    "FG": 0.6530476184834334,
-    "FT": 0.7872907371959466,
-    "TPM": 0.7458611770038369,
-    "REB": 0.3858956347933359,
-    "AST": 0.0001335510474748669,
-    "STL": 0.8539107385599979,
-    "BLK": 0.5651594579005214,
-    "TO": 0.9584202822666218,
-    "DD": 0.4932401538655841,
-    "PTS": 0.05854150472290659,
-    "TW": 0.6090720850979608
+    "FG": 0.5622147238023514,
+    "FT": 0.7564594327275536,
+    "TPM": 0.8369650279914008,
+    "REB": 0.4088736215775062,
+    "AST": 0.0017637150426199066,
+    "STL": 0.6213459217398867,
+    "BLK": 0.3476473409007844,
+    "TO": 0.9641046716182362,
+    "DD": 0.5007927765424398,
+    "PTS": 0.15694586527029275,
+    "TW": 0.6148946888872835
    },
    "roster": [
+    "Kawhi Leonard",
     "Ivica Zubac",
-    "Josh Hart",
     "Ajay Mitchell",
     "Toumani Camara",
     "Miles Bridges",
     "Karl-Anthony Towns",
     "Duncan Robinson",
     "Robert Williams III",
-    "Anthony Black",
+    "Kel'el Ware",
     "Paul George",
-    "Derrick Jones Jr.",
-    "Kevin Huerter",
-    "Kawhi Leonard"
+    "Julian Champagnie",
+    "Klay Thompson",
+    "Collin Gillespie"
    ],
    "joint": true,
-   "forced": "Paul Reed"
+   "forced": "Ryan Rollins"
+  },
+  {
+   "week": 7,
+   "start": "2026-11-30",
+   "opp": "IYH",
+   "oppName": "Jongno Karina",
+   "moves": [
+    {
+     "drop": "Ryan Rollins",
+     "add": "Ja Morant",
+     "g": 2,
+     "gDrop": 2,
+     "gain": 0
+    },
+    {
+     "drop": "Collin Gillespie",
+     "add": "Kevin Huerter",
+     "g": 2,
+     "gDrop": 2,
+     "gain": 0.22044514075440702
+    },
+    {
+     "drop": "Julian Champagnie",
+     "add": "Tobias Harris",
+     "g": 2,
+     "gDrop": 2,
+     "gain": 0.13505148839720515
+    }
+   ],
+   "nMoves": 3,
+   "before": 5.954982667637401,
+   "after": 6.310479296789013,
+   "perBefore": {
+    "FG": 0.3912615148362991,
+    "FT": 0.7659137607708268,
+    "TPM": 0.9064230437199146,
+    "REB": 0.4919561793028224,
+    "AST": 0.04977916000615207,
+    "STL": 0.6701626692283745,
+    "BLK": 0.2857380673472071,
+    "TO": 0.7973535936749091,
+    "DD": 0.5339810646258305,
+    "PTS": 0.4848221432673,
+    "TW": 0.5775914708577639
+   },
+   "winBefore": 0.5933497312310709,
+   "winAfter": 0.6828951803070629,
+   "per": {
+    "FG": 0.44975195320908806,
+    "FT": 0.758040540869871,
+    "TPM": 0.8779648524896724,
+    "REB": 0.5557553654788334,
+    "AST": 0.05565872012959533,
+    "STL": 0.6621179805154054,
+    "BLK": 0.4483048502598174,
+    "TO": 0.7791222797423158,
+    "DD": 0.5335303258120143,
+    "PTS": 0.5958517156909933,
+    "TW": 0.5943807125914063
+   },
+   "roster": [
+    "Kawhi Leonard",
+    "Ivica Zubac",
+    "Ajay Mitchell",
+    "Toumani Camara",
+    "Miles Bridges",
+    "Karl-Anthony Towns",
+    "Duncan Robinson",
+    "Robert Williams III",
+    "Kel'el Ware",
+    "Paul George",
+    "Tobias Harris",
+    "Klay Thompson",
+    "Kevin Huerter"
+   ],
+   "joint": true,
+   "forced": null
   }
  ],
  "teams": [
@@ -281,183 +391,183 @@
    "abbr": "KOO",
    "name": "Seoul Dreamers",
    "me": false,
-   "rec": "22-11-0",
-   "pct": 0.6666666666666666,
-   "ec": 0.6471718968903926,
-   "W": 148.7389,
-   "L": 86.6705,
-   "T": 6.5906,
+   "rec": "28-16-0",
+   "pct": 0.6363636363636364,
+   "ec": 0.6257801836891235,
+   "W": 147.283,
+   "L": 89.9608,
+   "T": 4.7562,
    "p4": 0.9719,
-   "champ": 0.566,
-   "avgRank": 1.4784,
-   "p4v2": 0.971,
-   "Wv2": 148.7071,
+   "champ": 0.4708,
+   "avgRank": 1.4034,
+   "p4v2": 0.9716,
+   "Wv2": 147.1846,
    "projRank": 1,
-   "curRank": 2
+   "curRank": 3
   },
   {
    "abbr": "SONG",
    "name": "Kfinco_ThePianist",
    "me": false,
-   "rec": "20-10-3",
-   "pct": 0.6515151515151515,
-   "ec": 0.5630871061638394,
-   "W": 134.5495,
-   "L": 100.5077,
-   "T": 6.9428,
-   "p4": 0.8643,
-   "champ": 0.1543,
-   "avgRank": 2.6881,
-   "p4v2": 0.8648,
-   "Wv2": 134.5532,
+   "rec": "28-13-3",
+   "pct": 0.6704545454545454,
+   "ec": 0.5533000030764867,
+   "W": 127.0098,
+   "L": 109.0828,
+   "T": 5.9074,
+   "p4": 0.721,
+   "champ": 0.196,
+   "avgRank": 3.6386,
+   "p4v2": 0.7187,
+   "Wv2": 126.9657,
    "projRank": 2,
-   "curRank": 3
+   "curRank": 2
   },
   {
    "abbr": "TBG",
    "name": "Team Bbang Guns",
    "me": false,
-   "rec": "13-18-2",
-   "pct": 0.42424242424242425,
-   "ec": 0.5230549327677918,
-   "W": 119.847,
-   "L": 116.0642,
-   "T": 6.0888,
-   "p4": 0.5088,
-   "champ": 0.0928,
-   "avgRank": 4.9049,
-   "p4v2": 0.5129,
-   "Wv2": 119.9333,
+   "rec": "15-26-3",
+   "pct": 0.375,
+   "ec": 0.5088073180230189,
+   "W": 123.1748,
+   "L": 113.5193,
+   "T": 5.3059,
+   "p4": 0.5995,
+   "champ": 0.097,
+   "avgRank": 4.3489,
+   "p4v2": 0.5991,
+   "Wv2": 123.2344,
    "projRank": 3,
    "curRank": 7
-  },
-  {
-   "abbr": "GGAM",
-   "name": "Garibong CHaRdaddy",
-   "me": false,
-   "rec": "19-12-2",
-   "pct": 0.6060606060606061,
-   "ec": 0.47967831935829425,
-   "W": 113.6,
-   "L": 121.6888,
-   "T": 6.7112,
-   "p4": 0.3198,
-   "champ": 0.0381,
-   "avgRank": 5.9985,
-   "p4v2": 0.3181,
-   "Wv2": 113.5647,
-   "projRank": 4,
-   "curRank": 4
-  },
-  {
-   "abbr": "SMS",
-   "name": "Samseong Homeless",
-   "me": false,
-   "rec": "25-8-0",
-   "pct": 0.7575757575757576,
-   "ec": 0.4576269546727502,
-   "W": 113.5651,
-   "L": 120.9975,
-   "T": 7.4374,
-   "p4": 0.3183,
-   "champ": 0.0603,
-   "avgRank": 5.9589,
-   "p4v2": 0.316,
-   "Wv2": 113.4884,
-   "projRank": 5,
-   "curRank": 1
   },
   {
    "abbr": "KWNG",
    "name": "Saving PakPaks",
    "me": false,
-   "rec": "15-15-3",
-   "pct": 0.5,
-   "ec": 0.47713512911734685,
-   "W": 112.096,
-   "L": 121.8758,
-   "T": 8.0282,
-   "p4": 0.28,
-   "champ": 0.0524,
-   "avgRank": 6.1574,
-   "p4v2": 0.2798,
-   "Wv2": 112.1045,
-   "projRank": 6,
-   "curRank": 5
+   "rec": "21-20-3",
+   "pct": 0.5113636363636364,
+   "ec": 0.48550444541698434,
+   "W": 114.9625,
+   "L": 120.2773,
+   "T": 6.7602,
+   "p4": 0.3451,
+   "champ": 0.074,
+   "avgRank": 5.8377,
+   "p4v2": 0.3452,
+   "Wv2": 115.0098,
+   "projRank": 4,
+   "curRank": 6
   },
   {
    "abbr": "IYH",
    "name": "Jongno Karina",
    "me": false,
-   "rec": "12-21-0",
-   "pct": 0.36363636363636365,
-   "ec": 0.48028334575361437,
-   "W": 110.8284,
-   "L": 124.3854,
-   "T": 6.7862,
-   "p4": 0.2392,
-   "champ": 0.0043,
-   "avgRank": 6.4979,
-   "p4v2": 0.2403,
-   "Wv2": 110.8614,
-   "projRank": 7,
-   "curRank": 8
+   "rec": "15-29-0",
+   "pct": 0.3409090909090909,
+   "ec": 0.47710956808864724,
+   "W": 114.9507,
+   "L": 121.6413,
+   "T": 5.408,
+   "p4": 0.3208,
+   "champ": 0.0167,
+   "avgRank": 5.9723,
+   "p4v2": 0.3213,
+   "Wv2": 115.0034,
+   "projRank": 5,
+   "curRank": 9
   },
   {
-   "abbr": "JYP",
-   "name": "PaloAlto Wenoja",
+   "abbr": "SMS",
+   "name": "Samseong Homeless",
    "me": false,
-   "rec": "14-18-1",
-   "pct": 0.4393939393939394,
-   "ec": 0.4689357946981948,
-   "W": 109.901,
-   "L": 125.1978,
-   "T": 6.9012,
-   "p4": 0.2251,
-   "champ": 0.0099,
-   "avgRank": 6.6773,
-   "p4v2": 0.2258,
-   "Wv2": 109.9492,
-   "projRank": 8,
-   "curRank": 6
+   "rec": "30-14-0",
+   "pct": 0.6818181818181818,
+   "ec": 0.4572512553406553,
+   "W": 112.5873,
+   "L": 124.0472,
+   "T": 5.3655,
+   "p4": 0.2392,
+   "champ": 0.0503,
+   "avgRank": 6.4568,
+   "p4v2": 0.2427,
+   "Wv2": 112.6231,
+   "projRank": 6,
+   "curRank": 1
+  },
+  {
+   "abbr": "GGAM",
+   "name": "Garibong CHaRdaddy",
+   "me": false,
+   "rec": "25-17-2",
+   "pct": 0.5909090909090909,
+   "ec": 0.4739848357507753,
+   "W": 111.9548,
+   "L": 124.4824,
+   "T": 5.5628,
+   "p4": 0.2413,
+   "champ": 0.037,
+   "avgRank": 6.5468,
+   "p4v2": 0.2416,
+   "Wv2": 111.9963,
+   "projRank": 7,
+   "curRank": 4
   },
   {
    "abbr": "GTD",
    "name": "Garak Twindragons",
    "me": true,
-   "rec": "9-24-0",
-   "pct": 0.2727272727272727,
-   "ec": 0.45190855061449026,
-   "W": 109.6257,
-   "L": 125.9354,
-   "T": 6.4389,
-   "p4": 0.1897,
-   "champ": 0.0192,
-   "avgRank": 6.7943,
-   "p4v2": 0.1886,
-   "Wv2": 109.6155,
-   "projRank": 9,
+   "rec": "14-30-0",
+   "pct": 0.3181818181818182,
+   "ec": 0.46244530925356553,
+   "W": 110.5582,
+   "L": 126.1884,
+   "T": 5.2534,
+   "p4": 0.1777,
+   "champ": 0.024,
+   "avgRank": 6.9303,
+   "p4v2": 0.1779,
+   "Wv2": 110.531,
+   "projRank": 8,
    "curRank": 10,
-   "planW": 127.47625,
+   "planW": 123.8205,
    "planRank": 3
+  },
+  {
+   "abbr": "JYP",
+   "name": "PaloAlto Wenoja",
+   "me": false,
+   "rec": "22-20-2",
+   "pct": 0.5227272727272727,
+   "ec": 0.4808285259856167,
+   "W": 110.1038,
+   "L": 126.2606,
+   "T": 5.6356,
+   "p4": 0.1985,
+   "champ": 0.0164,
+   "avgRank": 6.8983,
+   "p4v2": 0.1977,
+   "Wv2": 110.1128,
+   "projRank": 9,
+   "curRank": 5
   },
   {
    "abbr": "Doo",
    "name": "Helio honeymoons",
    "me": false,
-   "rec": "10-22-1",
-   "pct": 0.3181818181818182,
-   "ec": 0.4511179699632854,
-   "W": 103.0173,
-   "L": 132.4458,
-   "T": 6.5369,
-   "p4": 0.0829,
-   "champ": 0.0027,
-   "avgRank": 7.8443,
-   "p4v2": 0.0827,
-   "Wv2": 103.0412,
+   "rec": "15-28-1",
+   "pct": 0.3522727272727273,
+   "ec": 0.4749885553751269,
+   "W": 109.7428,
+   "L": 126.8676,
+   "T": 5.3896,
+   "p4": 0.185,
+   "champ": 0.0178,
+   "avgRank": 6.9669,
+   "p4v2": 0.1842,
+   "Wv2": 109.739,
    "projRank": 10,
-   "curRank": 9
+   "curRank": 8
   }
  ],
  "acq": 19,
@@ -502,145 +612,150 @@
  "lineup": {
   "week": 5,
   "opp": "TBG",
-  "rosterMode": "plan",
+  "rosterMode": "current",
   "lev": {
-   "FG": 11.448348959144267,
-   "FT": 7.0818425491246435,
-   "TPM": 0.025750522085100813,
-   "REB": 0.006559967632734997,
-   "AST": 0.014974490121840569,
-   "STL": 0.02810082742555945,
-   "BLK": 0.08144682297479817,
-   "TO": 0.03408836304104483,
-   "DD": 0.04686121165152625,
-   "PTS": 0.0073825427432337,
-   "TW": 0.0787909400414893
+   "FG": 7.793362597045458,
+   "FT": 4.964231749836903,
+   "TPM": 0.01194185362141301,
+   "REB": 0.011617880456673231,
+   "AST": 0.00797514499193989,
+   "STL": 0.01656293770518378,
+   "BLK": 0.045856769157533,
+   "TO": 0.03151342149906081,
+   "DD": 0.06781535484874167,
+   "PTS": 0.004683249131037289,
+   "TW": 0.05173401133258561
   },
   "rank": [
    {
     "name": "Karl-Anthony Towns",
-    "score": 0.45708759714718405
+    "score": 0.38819646049664397
    },
    {
     "name": "Kawhi Leonard",
-    "score": 0.3877140202121086
-   },
-   {
-    "name": "Kevin Huerter",
-    "score": 0.3682495293631838
-   },
-   {
-    "name": "Paul George",
-    "score": 0.3660361547766293
-   },
-   {
-    "name": "Duncan Robinson",
-    "score": 0.33027423519772087
+    "score": 0.2646424125716907
    },
    {
     "name": "Miles Bridges",
-    "score": 0.3288737059560636
-   },
-   {
-    "name": "Anthony Black",
-    "score": 0.32758501583166266
-   },
-   {
-    "name": "Andrew Nembhard",
-    "score": 0.3186356359519661
-   },
-   {
-    "name": "Ajay Mitchell",
-    "score": 0.31804203744415993
-   },
-   {
-    "name": "Toumani Camara",
-    "score": 0.3126240162312989
+    "score": 0.23471286483049436
    },
    {
     "name": "Ivica Zubac",
-    "score": 0.266938360506541
+    "score": 0.2288336317908381
+   },
+   {
+    "name": "Klay Thompson",
+    "score": 0.2220005947506425
+   },
+   {
+    "name": "Paul George",
+    "score": 0.21790420378196534
+   },
+   {
+    "name": "Ajay Mitchell",
+    "score": 0.20626642594543015
+   },
+   {
+    "name": "Toumani Camara",
+    "score": 0.20135979069342405
+   },
+   {
+    "name": "Duncan Robinson",
+    "score": 0.19141312072834898
+   },
+   {
+    "name": "Andrew Nembhard",
+    "score": 0.18755703113879751
    },
    {
     "name": "Julian Champagnie",
-    "score": 0.23984282742703883
+    "score": 0.16996955005314612
    },
    {
-    "name": "Paul Reed",
-    "score": 0.22705763647994148
+    "name": "Grayson Allen",
+    "score": 0.16757651693357495
    },
    {
-    "name": "Josh Hart",
-    "score": 0.17541137414177613
+    "name": "Collin Gillespie",
+    "score": 0.14521269543428006
+   },
+   {
+    "name": "Ryan Rollins",
+    "score": 0.1036206475804346
    }
   ],
   "rankCur": [
    {
     "name": "Karl-Anthony Towns",
-    "score": 0.45708759714718405
+    "score": 0.38819646049664397
    },
    {
     "name": "Kawhi Leonard",
-    "score": 0.3877140202121086
-   },
-   {
-    "name": "Paul George",
-    "score": 0.3660361547766293
-   },
-   {
-    "name": "Duncan Robinson",
-    "score": 0.33027423519772087
+    "score": 0.2646424125716907
    },
    {
     "name": "Miles Bridges",
-    "score": 0.3288737059560636
-   },
-   {
-    "name": "Andrew Nembhard",
-    "score": 0.3186356359519661
-   },
-   {
-    "name": "Ajay Mitchell",
-    "score": 0.31804203744415993
-   },
-   {
-    "name": "Toumani Camara",
-    "score": 0.3126240162312989
-   },
-   {
-    "name": "Grayson Allen",
-    "score": 0.2686439116190554
+    "score": 0.23471286483049436
    },
    {
     "name": "Ivica Zubac",
-    "score": 0.266938360506541
+    "score": 0.2288336317908381
+   },
+   {
+    "name": "Klay Thompson",
+    "score": 0.2220005947506425
+   },
+   {
+    "name": "Paul George",
+    "score": 0.21790420378196534
+   },
+   {
+    "name": "Ajay Mitchell",
+    "score": 0.20626642594543015
+   },
+   {
+    "name": "Toumani Camara",
+    "score": 0.20135979069342405
+   },
+   {
+    "name": "Duncan Robinson",
+    "score": 0.19141312072834898
+   },
+   {
+    "name": "Andrew Nembhard",
+    "score": 0.18755703113879751
    },
    {
     "name": "Julian Champagnie",
-    "score": 0.23984282742703883
+    "score": 0.16996955005314612
    },
    {
-    "name": "Paul Reed",
-    "score": 0.22705763647994148
+    "name": "Grayson Allen",
+    "score": 0.16757651693357495
    },
    {
-    "name": "Josh Hart",
-    "score": 0.17541137414177613
+    "name": "Collin Gillespie",
+    "score": 0.14521269543428006
    },
    {
     "name": "Ryan Rollins",
-    "score": 0.17196686209488682
+    "score": 0.1036206475804346
    }
   ],
   "days": [
    {
     "date": "2026-11-16",
-    "n": 4,
+    "n": 5,
     "start": [
      {
       "slot": "PG",
-      "name": "Anthony Black",
-      "team": "ORL"
+      "name": "Collin Gillespie",
+      "team": "PHO"
+     },
+     {
+      "slot": "SG",
+      "name": "Klay Thompson",
+      "team": "MIA"
      },
      {
       "slot": "SF",
@@ -649,43 +764,47 @@
      },
      {
       "slot": "PF",
-      "name": "Miles Bridges",
-      "team": "PHO"
+      "name": "Paul George",
+      "team": "BOS"
      },
      {
       "slot": "F",
-      "name": "Paul George",
-      "team": "BOS"
+      "name": "Miles Bridges",
+      "team": "PHO"
      }
     ],
     "bench": [],
     "out": [],
     "idle": [
+     "Kawhi Leonard",
      "Ivica Zubac",
-     "Josh Hart",
      "Ajay Mitchell",
      "Karl-Anthony Towns",
      "Duncan Robinson",
      "Andrew Nembhard",
-     "Paul Reed",
+     "Grayson Allen",
      "Julian Champagnie",
-     "Kevin Huerter",
-     "Kawhi Leonard"
+     "Ryan Rollins"
     ]
    },
    {
     "date": "2026-11-17",
-    "n": 7,
+    "n": 5,
     "start": [
      {
+      "slot": "PG",
+      "name": "Grayson Allen",
+      "team": "CHA"
+     },
+     {
       "slot": "SG",
-      "name": "Josh Hart",
-      "team": "NYK"
+      "name": "Duncan Robinson",
+      "team": "DET"
      },
      {
       "slot": "SF",
-      "name": "Kevin Huerter",
-      "team": "DET"
+      "name": "Julian Champagnie",
+      "team": "SAS"
      },
      {
       "slot": "PF",
@@ -694,21 +813,6 @@
      },
      {
       "slot": "C",
-      "name": "Paul Reed",
-      "team": "DET"
-     },
-     {
-      "slot": "G",
-      "name": "Duncan Robinson",
-      "team": "DET"
-     },
-     {
-      "slot": "F",
-      "name": "Julian Champagnie",
-      "team": "SAS"
-     },
-     {
-      "slot": "UTIL",
       "name": "Karl-Anthony Towns",
       "team": "NYK"
      }
@@ -722,8 +826,10 @@
      "Ajay Mitchell",
      "Miles Bridges",
      "Andrew Nembhard",
-     "Anthony Black",
-     "Paul George"
+     "Paul George",
+     "Klay Thompson",
+     "Collin Gillespie",
+     "Ryan Rollins"
     ]
    },
    {
@@ -732,13 +838,13 @@
     "start": [
      {
       "slot": "PG",
-      "name": "Andrew Nembhard",
-      "team": "IND"
+      "name": "Ryan Rollins",
+      "team": "MIL"
      },
      {
       "slot": "SG",
-      "name": "Duncan Robinson",
-      "team": "DET"
+      "name": "Ajay Mitchell",
+      "team": "OKC"
      },
      {
       "slot": "SF",
@@ -747,8 +853,8 @@
      },
      {
       "slot": "PF",
-      "name": "Paul Reed",
-      "team": "DET"
+      "name": "Miles Bridges",
+      "team": "PHO"
      },
      {
       "slot": "C",
@@ -757,22 +863,22 @@
      },
      {
       "slot": "G",
-      "name": "Ajay Mitchell",
-      "team": "OKC"
-     },
-     {
-      "slot": "F",
-      "name": "Miles Bridges",
+      "name": "Collin Gillespie",
       "team": "PHO"
      },
      {
-      "slot": "UTIL",
-      "name": "Anthony Black",
-      "team": "ORL"
+      "slot": "F",
+      "name": "Klay Thompson",
+      "team": "MIA"
      },
      {
       "slot": "UTIL",
-      "name": "Kevin Huerter",
+      "name": "Andrew Nembhard",
+      "team": "IND"
+     },
+     {
+      "slot": "UTIL",
+      "name": "Duncan Robinson",
       "team": "DET"
      }
     ],
@@ -781,9 +887,9 @@
      "Kawhi Leonard"
     ],
     "idle": [
-     "Josh Hart",
      "Toumani Camara",
      "Karl-Anthony Towns",
+     "Grayson Allen",
      "Julian Champagnie"
     ]
    },
@@ -792,9 +898,9 @@
     "n": 4,
     "start": [
      {
-      "slot": "SG",
-      "name": "Josh Hart",
-      "team": "NYK"
+      "slot": "PG",
+      "name": "Ryan Rollins",
+      "team": "MIL"
      },
      {
       "slot": "SF",
@@ -815,41 +921,41 @@
     "bench": [],
     "out": [],
     "idle": [
+     "Kawhi Leonard",
      "Ivica Zubac",
      "Ajay Mitchell",
      "Miles Bridges",
      "Duncan Robinson",
      "Andrew Nembhard",
-     "Anthony Black",
-     "Paul Reed",
+     "Grayson Allen",
      "Paul George",
-     "Kevin Huerter",
-     "Kawhi Leonard"
+     "Klay Thompson",
+     "Collin Gillespie"
     ]
    },
    {
     "date": "2026-11-20",
-    "n": 8,
+    "n": 7,
     "start": [
      {
       "slot": "PG",
-      "name": "Andrew Nembhard",
-      "team": "IND"
+      "name": "Collin Gillespie",
+      "team": "PHO"
      },
      {
       "slot": "SG",
+      "name": "Grayson Allen",
+      "team": "CHA"
+     },
+     {
+      "slot": "SF",
       "name": "Duncan Robinson",
       "team": "DET"
      },
      {
-      "slot": "SF",
+      "slot": "PF",
       "name": "Miles Bridges",
       "team": "PHO"
-     },
-     {
-      "slot": "PF",
-      "name": "Paul Reed",
-      "team": "DET"
      },
      {
       "slot": "C",
@@ -858,18 +964,13 @@
      },
      {
       "slot": "G",
-      "name": "Ajay Mitchell",
-      "team": "OKC"
-     },
-     {
-      "slot": "F",
-      "name": "Kevin Huerter",
-      "team": "DET"
+      "name": "Andrew Nembhard",
+      "team": "IND"
      },
      {
       "slot": "UTIL",
-      "name": "Anthony Black",
-      "team": "ORL"
+      "name": "Ajay Mitchell",
+      "team": "OKC"
      }
     ],
     "bench": [],
@@ -877,11 +978,12 @@
      "Kawhi Leonard"
     ],
     "idle": [
-     "Josh Hart",
      "Toumani Camara",
      "Karl-Anthony Towns",
      "Paul George",
-     "Julian Champagnie"
+     "Julian Champagnie",
+     "Klay Thompson",
+     "Ryan Rollins"
     ]
    },
    {
@@ -889,9 +991,9 @@
     "n": 5,
     "start": [
      {
-      "slot": "SG",
-      "name": "Josh Hart",
-      "team": "NYK"
+      "slot": "PG",
+      "name": "Ryan Rollins",
+      "team": "MIL"
      },
      {
       "slot": "SF",
@@ -917,34 +1019,34 @@
     "bench": [],
     "out": [],
     "idle": [
+     "Kawhi Leonard",
      "Ivica Zubac",
      "Ajay Mitchell",
      "Miles Bridges",
      "Duncan Robinson",
      "Andrew Nembhard",
-     "Anthony Black",
-     "Paul Reed",
-     "Kevin Huerter",
-     "Kawhi Leonard"
+     "Grayson Allen",
+     "Klay Thompson",
+     "Collin Gillespie"
     ]
    },
    {
     "date": "2026-11-22",
-    "n": 10,
+    "n": 7,
     "start": [
      {
       "slot": "PG",
-      "name": "Anthony Black",
-      "team": "ORL"
+      "name": "Andrew Nembhard",
+      "team": "IND"
      },
      {
       "slot": "SG",
-      "name": "Josh Hart",
-      "team": "NYK"
+      "name": "Ajay Mitchell",
+      "team": "OKC"
      },
      {
       "slot": "SF",
-      "name": "Kevin Huerter",
+      "name": "Duncan Robinson",
       "team": "DET"
      },
      {
@@ -954,42 +1056,30 @@
      },
      {
       "slot": "C",
-      "name": "Paul Reed",
-      "team": "DET"
-     },
-     {
-      "slot": "G",
-      "name": "Andrew Nembhard",
+      "name": "Ivica Zubac",
       "team": "IND"
      },
      {
-      "slot": "F",
-      "name": "Duncan Robinson",
-      "team": "DET"
+      "slot": "G",
+      "name": "Klay Thompson",
+      "team": "MIA"
      },
      {
       "slot": "UTIL",
       "name": "Karl-Anthony Towns",
       "team": "NYK"
-     },
-     {
-      "slot": "UTIL",
-      "name": "Ajay Mitchell",
-      "team": "OKC"
-     },
-     {
-      "slot": "UTIL",
-      "name": "Ivica Zubac",
-      "team": "IND"
      }
     ],
     "bench": [],
     "out": [],
     "idle": [
+     "Kawhi Leonard",
      "Toumani Camara",
      "Miles Bridges",
+     "Grayson Allen",
      "Julian Champagnie",
-     "Kawhi Leonard"
+     "Collin Gillespie",
+     "Ryan Rollins"
     ]
    }
   ]
