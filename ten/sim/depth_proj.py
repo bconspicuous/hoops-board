@@ -40,6 +40,12 @@ def main():
     if not os.path.exists(D + 'gamelogs.csv'):
         print('depth_proj: no gamelogs.csv - season lines kept'); return
     logs = list(csv.DictReader(open(D + 'gamelogs.csv', encoding='utf-8')))
+    WINDOW = int(os.environ.get('DEPTH_DAYS', '15'))   # user basis: last 15 days
+    logs = [r for r in logs if r['date'] <= os.environ.get('DEPTH_ASOF', '9999')]   # back-tests: only games up to this date
+    if logs:
+        last = max(r['date'] for r in logs)
+        cut = (date.fromisoformat(last) - __import__('datetime').timedelta(days=WINDOW - 1)).isoformat()
+        logs = [r for r in logs if r['date'] >= cut]
     season = {}
     if os.path.exists(D + 'players_splits.csv'):
         for r in csv.DictReader(open(D + 'players_splits.csv', encoding='utf-8')):

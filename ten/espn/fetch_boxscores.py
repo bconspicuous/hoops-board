@@ -3,13 +3,13 @@
 
 One row per player per game: date, game id, team, opponent, win, starter, dnp (+ reason), minutes and counting stats.
 Used to project each player's CURRENT role (minutes, starter vs bench) given who is healthy on his team now.
-Env: DAYS (default 15). Stdlib only.
+Env: DAYS (default 40). Stdlib only.
 """
 import csv, json, os, sys, time, urllib.request
 from datetime import datetime, timedelta, timezone
 
 OUT = os.environ.get("ESPN_OUT", os.path.join(os.path.dirname(__file__), "..", "data"))
-DAYS = int(os.environ.get("DAYS", "15"))
+DAYS = int(os.environ.get("DAYS", "40"))   # 40 days kept for projection back-tests; depth_proj.py uses the last 15
 SITE = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba"
 FIX = {"GS": "GSW", "NY": "NYK", "SA": "SAS", "NO": "NOP", "UTAH": "UTA", "WSH": "WAS"}
 
