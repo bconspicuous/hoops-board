@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-16T18:24+09:00",
+ "asOf": "2026-11-16T19:45+09:00",
  "scoringPeriodId": 28,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -28,7 +28,7 @@
    "team": "GGAM",
    "name": "Garibong CHaRdaddy",
    "rank": 2,
-   "acq": 13
+   "acq": 14
   },
   {
    "team": "TBG",
@@ -154,6 +154,30 @@
   }
  ],
  "transactions": [
+  {
+   "id": "03468e6b-245c-463a-834b-2f4b15a12a01",
+   "team": "GGAM",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-16 19:45 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Bones Hyland",
+     "from": "FA",
+     "to": "GGAM"
+    },
+    {
+     "type": "DROP",
+     "player": "Andre Drummond",
+     "from": "GGAM",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
   {
    "id": "9a335e13-1829-4fcf-95cf-a4e8c26fdbb0",
    "team": "GTD",
