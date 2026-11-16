@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-16T11:42+09:00",
+ "asOf": "2026-11-16T19:12+09:00",
  "source": "ESPN API sync (GitHub Actions g8-espn)",
  "teams": {
   "Junyoung's Scary Team": {
@@ -50,18 +50,19 @@
     "Karl-Anthony Towns",
     "Anthony Davis",
     "James Harden",
-    "Kyrie Irving",
+    "Michael Porter Jr.",
     "Brandon Miller",
     "Tyler Herro",
     "Miles Bridges",
     "Jeremiah Fears",
     "Darryn Peterson",
     "AJ Dybantsa",
-    "Norman Powell"
+    "Norman Powell",
+    "Day'Ron Sharpe"
    ],
    "ir": [
     "Austin Reaves",
-    "Michael Porter Jr."
+    "Kyrie Irving"
    ]
   },
   "Zero Sugar": {
@@ -88,13 +89,13 @@
   "ChaRDaddy": {
    "active": [
     "Luka Doncic",
+    "Donovan Mitchell",
     "Alperen Sengun",
     "Devin Booker",
     "Pascal Siakam",
     "Deni Avdija",
     "Jaylen Brown",
     "Julius Randle",
-    "Zach LaVine",
     "Jabari Smith Jr.",
     "Rudy Gobert",
     "Alex Sarr",
@@ -102,8 +103,8 @@
     "Jamal Shead"
    ],
    "ir": [
-    "Donovan Mitchell",
-    "Ja Morant"
+    "Ja Morant",
+    "Zach LaVine"
    ]
   },
   "Kunhyo's Chokeslam": {
@@ -154,7 +155,6 @@
     "Cooper Flagg",
     "LaMelo Ball",
     "Kevin Durant",
-    "Ty Jerome",
     "Ivica Zubac",
     "Donovan Clingan",
     "Jaden McDaniels",
@@ -162,9 +162,11 @@
     "Kyshawn George",
     "Davion Mitchell",
     "Daniss Jenkins",
-    "Keyonte George"
+    "Keyonte George",
+    "Tari Eason"
    ],
    "ir": [
+    "Ty Jerome",
     "Brandon Ingram"
    ]
   }
@@ -201,8 +203,8 @@
   "Jaxson Hayes": "O",
   "Scotty Pippen Jr.": "O",
   "De'Andre Hunter": "O",
-  "Bennedict Mathurin": "O",
   "Cason Wallace": "O",
+  "Bennedict Mathurin": "O",
   "Jusuf Nurkic": "O",
   "Shaedon Sharpe": "O",
   "Santi Aldama": "O",
