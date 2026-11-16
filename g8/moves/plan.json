@@ -5,9 +5,9 @@
  "dropCandidates": [],
  "base": {
   "wk": 5.3,
-  "champ": 0.1142,
-  "p1": 0.0502,
-  "epct": 0.5171
+  "champ": 0.116,
+  "p1": 0.0525,
+  "epct": 0.5167
  },
  "protect": [
   "Shai Gilgeous-Alexander",
@@ -20,11 +20,24 @@
   "Norman Powell"
  ],
  "droppable": [],
- "flags": [],
+ "flags": [
+  {
+   "kind": "ir-ineligible",
+   "player": "Austin Reaves",
+   "status": "DTD",
+   "note": "IR 선수가 O가 아님 — ESPN이 영입을 막을 수 있음(감독 판단: DTD는 영입 가능). 첫 사례에서 실제 동작을 기록"
+  },
+  {
+   "kind": "ir-ineligible",
+   "player": "Kyrie Irving",
+   "status": "DTD",
+   "note": "IR 선수가 O가 아님 — ESPN이 영입을 막을 수 있음(감독 판단: DTD는 영입 가능). 첫 사례에서 실제 동작을 기록"
+  }
+ ],
  "items": [],
  "screened": [],
- "createdAt": "2026-11-16T14:43:16.772Z",
- "id": "20261116T1443",
+ "createdAt": "2026-11-16T20:43:47.908Z",
+ "id": "20261116T2043",
  "rosterSig": "AJ Dybantsa|Anthony Davis|Brandon Miller|Darryn Peterson|Day'Ron Sharpe|James Harden|Jeremiah Fears|Karl-Anthony Towns|Michael Porter Jr.|Miles Bridges|Norman Powell|Shai Gilgeous-Alexander|Tyler Herro#Austin Reaves|Kyrie Irving",
  "newItems": []
 }
