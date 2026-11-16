@@ -1,8 +1,8 @@
 {
- "date": "2026-11-15",
- "scoringPeriodId": 27,
- "hash": "feda2554df",
- "createdKST": "2026-11-16T13:48+09:00",
+ "date": "2026-11-16",
+ "scoringPeriodId": 28,
+ "hash": "371a529e16",
+ "createdKST": "2026-11-16T19:49+09:00",
  "mode": "plan",
  "moves": [],
  "lineup": [
@@ -11,7 +11,7 @@
    "cur": "PG",
    "name": "Grayson Allen",
    "pro": "CHA",
-   "game": true,
+   "game": false,
    "inj": "ACTIVE",
    "out": false
   },
@@ -20,7 +20,7 @@
    "cur": "SG",
    "name": "Andrew Nembhard",
    "pro": "IND",
-   "game": true,
+   "game": false,
    "inj": "DAY_TO_DAY",
    "out": false
   },
@@ -47,7 +47,7 @@
    "cur": "C",
    "name": "Karl-Anthony Towns",
    "pro": "NYK",
-   "game": true,
+   "game": false,
    "inj": "ACTIVE",
    "out": false
   },
@@ -56,15 +56,33 @@
    "cur": "G",
    "name": "Ajay Mitchell",
    "pro": "OKC",
-   "game": true,
+   "game": false,
    "inj": "ACTIVE",
    "out": false
   },
   {
    "slot": "F",
    "cur": "F",
+   "name": "Toumani Camara",
+   "pro": "POR",
+   "game": true,
+   "inj": "ACTIVE",
+   "out": false
+  },
+  {
+   "slot": "UTIL",
+   "cur": "UTIL",
    "name": "Julian Champagnie",
    "pro": "SAS",
+   "game": false,
+   "inj": "ACTIVE",
+   "out": false
+  },
+  {
+   "slot": "UTIL",
+   "cur": "UTIL",
+   "name": "Klay Thompson",
+   "pro": "MIA",
    "game": true,
    "inj": "ACTIVE",
    "out": false
@@ -72,35 +90,26 @@
   {
    "slot": "UTIL",
    "cur": "UTIL",
-   "name": "Ivica Zubac",
-   "pro": "IND",
+   "name": "Collin Gillespie",
+   "pro": "PHX",
    "game": true,
    "inj": "ACTIVE",
    "out": false
   },
   {
-   "slot": "UTIL",
-   "cur": "UTIL",
-   "name": "Josh Hart",
-   "pro": "NYK",
-   "game": true,
-   "inj": "ACTIVE",
-   "out": false
-  },
-  {
-   "slot": "UTIL",
-   "cur": "UTIL",
-   "name": "Ryan Rollins",
-   "pro": "MIL",
-   "game": true,
+   "slot": "BE",
+   "cur": "BE",
+   "name": "Kawhi Leonard",
+   "pro": "TOR",
+   "game": false,
    "inj": "OUT",
    "out": true
   },
   {
    "slot": "BE",
    "cur": "BE",
-   "name": "Toumani Camara",
-   "pro": "POR",
+   "name": "Ivica Zubac",
+   "pro": "IND",
    "game": false,
    "inj": "ACTIVE",
    "out": false
@@ -113,21 +122,12 @@
    "game": false,
    "inj": "DAY_TO_DAY",
    "out": false
-  },
-  {
-   "slot": "BE",
-   "cur": "BE",
-   "name": "Paul Reed",
-   "pro": "DET",
-   "game": false,
-   "inj": "ACTIVE",
-   "out": false
   }
  ],
  "ir": [
-  "Kawhi Leonard"
+  "Ryan Rollins"
  ],
  "irReturn": [],
- "playing": 9,
+ "playing": 5,
  "status": "planned"
 }
