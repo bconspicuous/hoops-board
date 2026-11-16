@@ -30,6 +30,7 @@ const BASIS = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, '
   await p.waitForFunction(() => typeof state !== 'undefined' && state.base && !state.busy, null, { timeout: 600000 });
   const R = await p.evaluate(([rows, acqUsed, P, cfg, unsignedCsv, BASIS]) => {
     if (BASIS === 'actual') { actWeight = () => 1; buildPlayers(); PLAYC = new Map(); state.base = computeAll(null); }
+    else if (BASIS === 'calib' && actMode() !== 'calib') { state.actMode = 'calib'; buildPlayers(); PLAYC = new Map(); state.base = computeAll(null); }
     const cw = currentWeek(), oT = state.base.TW[oppOf(ME, cw).opp + '|' + cw], roster = rosterFor(ME, cw, null), ir = (rosters()[ME].ir || []);
     const nrm = s => (s || '').normalize('NFKD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[.'`]/g, '').replace(/\b(jr|sr|ii|iii|iv)\b/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
     const espnRow = n => rows.find(r => nrm(r.Player) === nrm(n)) || {};
@@ -95,7 +96,7 @@ const BASIS = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, '
   R.newItems = R.items.filter(i => i.firstProposedAt === R.createdAt).map(i => i.n);
   fs.writeFileSync(prevP, JSON.stringify(R, null, 1));
   const pc = x => (x >= 0 ? '+' : '') + (x * 100).toFixed(1) + '%p';
-  const L = [`# 로스터 이동 제안 · ${R.week}주차 vs ${R.opp} · 이번 주 남은 영입 ${R.acqLeft}회 · 기준: ${BASIS === 'actual' ? '현재 스탯(2026-27 실제 100%)' : '프로젝션'}`];
+  const L = [`# 로스터 이동 제안 · ${R.week}주차 vs ${R.opp} · 이번 주 남은 영입 ${R.acqLeft}회 · 기준: ${BASIS === 'actual' ? '현재 스탯(2026-27 실제 100%)' : BASIS === 'calib' ? '프로젝션 오차 보정(실제 기록 반영)' : '프로젝션'}`];
   R.flags.forEach(f => L.push(`⚠ ${f.player}: IR인데 상태 ${f.status} — ${f.note}`));
   if (!R.items.length) L.push('제안 없음 (기준: 이번 주 +0.05승 또는 우승 +1%p 이상)');
   R.items.forEach(i => L.push(i.kind === 'ir' ? `${i.n}. IR 이동: ${i.ir} (${i.note})` : i.kind === 'activate' ? `${i.n}. IR 복귀 ${i.ir} / 방출 ${i.drop} — 이번 주 ${i.weekGain >= 0 ? '+' : ''}${i.weekGain.toFixed(2)}승 · 우승 ${pc(i.titleGain)} [${i.status}]` :

@@ -285,7 +285,7 @@ section:not([hidden]) > .stack > *:nth-child(4) { animation-delay: .15s; } secti
       <button class="tab" role="tab" id="tab-fc" aria-selected="false" type="button">예측</button>
       <button class="tab" role="tab" id="tab-proj" aria-selected="false" type="button">프로젝션 근거</button>
     </nav>
-    <div class="right"><label class="chk b2bchk"><input type="checkbox" id="b2b-on"> 백투백 반영</label><span class="stsel"><label class="chk b2bchk" style="padding-bottom:0"><input type="checkbox" id="st-on"> 전 팀 스트리밍</label><select id="st-acq" aria-label="팀당 주간 영입 한도"><option value="0">규정 한도</option><option value="5">주 5회</option><option value="6">주 6회</option><option value="7">주 7회</option></select><select id="st-mine" aria-label="선택 팀의 스트리밍 자리 수" title="선택한 팀만 적용, 다른 팀은 항상 2자리"><option value="2">내 팀 2자리</option><option value="1">내 팀 1자리</option></select></span><span class="stsel"><select id="gp-mode" aria-label="출전 경기(GP) 가정" title="출전 경기 가정: 지정 선수만 ESPN 유지 / 부상 시즌 선수 전원 ESPN 유지 / 전원 중립 보정"><option value="full">GP: 전 경기 출전(백투백만 반영)</option><option value="mine">GP: 지정 선수 ESPN 유지</option><option value="fair">GP: 부상 시즌 전원 ESPN 유지</option><option value="neutral">GP: 전원 중립 보정</option></select></span><div class="teamsel"><label for="team-sel">팀</label><select id="team-sel"></select></div></div>
+    <div class="right"><label class="chk b2bchk"><input type="checkbox" id="b2b-on"> 백투백 반영</label><span class="stsel"><label class="chk b2bchk" style="padding-bottom:0"><input type="checkbox" id="st-on"> 전 팀 스트리밍</label><select id="st-acq" aria-label="팀당 주간 영입 한도"><option value="0">규정 한도</option><option value="5">주 5회</option><option value="6">주 6회</option><option value="7">주 7회</option></select><select id="st-mine" aria-label="선택 팀의 스트리밍 자리 수" title="선택한 팀만 적용, 다른 팀은 항상 2자리"><option value="99">내 팀 전 자리</option><option value="2">내 팀 2자리</option><option value="1">내 팀 1자리</option></select></span><span class="stsel"><select id="gp-mode" aria-label="출전 경기(GP) 가정" title="출전 경기 가정: 지정 선수만 ESPN 유지 / 부상 시즌 선수 전원 ESPN 유지 / 전원 중립 보정"><option value="full">GP: 전 경기 출전(백투백만 반영)</option><option value="mine">GP: 지정 선수 ESPN 유지</option><option value="fair">GP: 부상 시즌 전원 ESPN 유지</option><option value="neutral">GP: 전원 중립 보정</option></select></span><div class="teamsel"><label for="team-sel">팀</label><select id="team-sel"></select></div></div>
   </div>
 
   <div id="view-empty" class="empty" hidden><b id="empty-title">로스터를 불러오는 중입니다</b><span id="empty-text">잠시만 기다려 주세요.</span></div>
@@ -371,7 +371,7 @@ section:not([hidden]) > .stack > *:nth-child(4) { animation-delay: .15s; } secti
       <div class="kpis" id="pj-kpis"></div>
       <div class="panel"><h2>팀별 프로젝션 변화 · ESPN 대비</h2><div class="tbl" id="pj-teams"></div><p class="note" id="pj-teams-note"></p></div>
       <div class="panel"><h2 id="pj-title">선수별 프로젝션 근거</h2>
-        <div class="row"><div class="field" style="flex:1 1 180px"><label for="pj-filter">범위</label><select id="pj-filter"></select></div><div class="field" style="flex:1 1 220px"><label for="pj-act">2026-27 실적 반영 방식</label><select id="pj-act"><option value="fixed">주차 고정 가중(사용자 지정)</option><option value="sample">표본 보정(10경기 미만은 비례 축소)</option></select></div><div class="field" style="flex:2 1 220px"><label for="pj-q">검색</label><input type="search" id="pj-q" placeholder="이름·NBA 팀"></div></div>
+        <div class="row"><div class="field" style="flex:1 1 180px"><label for="pj-filter">범위</label><select id="pj-filter"></select></div><div class="field" style="flex:1 1 220px"><label for="pj-act">2026-27 실적 반영 방식</label><select id="pj-act"><option value="calib">프로젝션 오차 보정(감독 지정)</option><option value="fixed">주차 고정 가중(사용자 지정)</option><option value="sample">표본 보정(10경기 미만은 비례 축소)</option></select></div><div class="field" style="flex:2 1 220px"><label for="pj-q">검색</label><input type="search" id="pj-q" placeholder="이름·NBA 팀"></div></div>
         <div class="tbl" id="pj-table"></div><p class="note" id="pj-note"></p></div>
       <div class="grid2">
         <div class="panel"><h2>산출 방법</h2><ol class="pj-steps" id="pj-method"></ol></div>
@@ -411,11 +411,11 @@ const pct = (x, d = 0) => (x * 100).toFixed(d) + "%";
 const BASE = {};
 REF.players.forEach(a => { const o = {}; REF.fields.forEach((f, i) => o[f] = a[i]); o.mask = o.elig.split(",").reduce((m, p) => m | (POSB[p] || 0), POSB[o.pos] || 0); BASE[o.name] = o; });
 
-const state = { db: "pending", docs: {}, tab: "now", PL: {}, base: null, scen: null, simSel: { drop: new Set(), add: new Set() }, simOther: false, b2b: false, baseOff: null, baseNS: null, rec: null, stream: { on: true, acq: 0, mine: 2 }, restB2B: new Set() };
+const state = { db: "pending", docs: {}, tab: "now", PL: {}, base: null, scen: null, simSel: { drop: new Set(), add: new Set() }, simOther: false, b2b: false, baseOff: null, baseNS: null, rec: null, stream: { on: true, acq: 0, mine: 99 }, restB2B: new Set() };
 state.b2b = true; try { const v = localStorage.getItem("td22-b2b2"); if (v != null) state.b2b = v === "1"; } catch (e) {}
-try { const a = localStorage.getItem("td27-actmode"); if (a === "fixed" || a === "sample") state.actMode = a; } catch (e) {}
+try { const a = localStorage.getItem("td27-actmode2"); if (a === "fixed" || a === "sample" || a === "calib") state.actMode = a; } catch (e) {}
 try { const g = localStorage.getItem("td22-gpmode2"); if (["full", "neutral", "mine", "fair"].includes(g)) state.gpModeUser = g; } catch (e) {}
-try { const s = JSON.parse(localStorage.getItem("td22-stream2") || "null"); if (s && typeof s.on === "boolean" && [0, 5, 6, 7].includes(s.acq)) state.stream = { on: s.on, acq: s.acq, mine: s.mine === 1 ? 1 : 2 }; } catch (e) {}
+try { const s = JSON.parse(localStorage.getItem("td22-stream3") || "null"); if (s && typeof s.on === "boolean" && [0, 5, 6, 7].includes(s.acq)) state.stream = { on: s.on, acq: s.acq, mine: [1, 2, 99].includes(s.mine) ? s.mine : 99 }; } catch (e) {}
 const NOSTREAM = { on: false, acq: 0, mine: 2 };
 try { const t = localStorage.getItem("td-tab"); if (t === "fc" || t === "now" || t === "proj") state.tab = t; } catch (e) {}
 try { const t = localStorage.getItem("td2-team"); if (t && REF.teams.includes(t)) ME = t; } catch (e) {}
@@ -442,14 +442,50 @@ function actWeight(w) {
 /* "fixed" (user rule, default): every player with >= 1 game gets the week's weight. "sample" (alternative): the weight is scaled by
    games played up to ACT_G_FULL, so a one-game sample enters at a tenth of the week's weight */
 const ACT_G_FULL = 10;
+/* "calib" (manager rule 2026-11-17): projection error correction. (1) League bias: for each stat, the game-weighted relative error of the
+   pre-season projection against the 2026-27 actual line (players with >= 3 games) rescales every projection (bounded +-25%).
+   (2) Player shrinkage: estimate = corrected projection + w x (actual - corrected projection), w = games / (games + n0) with n0 = games
+   at which the stat's per-game rate becomes about half signal (counting stats) or attempts for FG%/FT%. Players without games keep the
+   corrected projection. The season value moves with the same valuation as the projection pipeline. */
+const CAL_N0 = { FGA: 5, FTA: 8, PTS: 5, TPM: 10, REB: 6, AST: 6, STL: 20, BLK: 15, TO: 10, PF: 12, DDg: 15 }, CAL_FG0 = 150, CAL_FT0 = 80;
+const actLine = a => ({ FGM: a.fgm, FGA: a.fga, FTM: a.ftm, FTA: a.fta, TPM: a.tpm, REB: a.reb, AST: a.ast, STL: a.stl, BLK: a.blk, TO: a.to, PTS: a.pts, PF: a.pf, DDg: a.dd != null ? a.dd / a.g : null });
+function calibStats(act) {
+  const s = {}, t = {}, ae = {}, n = {}, cnt = {};
+  for (const nm in act) { const a = act[nm], b = BASE[nm]; if (!a || !b || !(a.g >= 3)) continue; const A = actLine(a);
+    KEYS.forEach(k => { if (A[k] == null || !isFinite(A[k]) || b[k] == null) return; s[k] = (s[k] || 0) + a.g * (A[k] - b[k]); t[k] = (t[k] || 0) + a.g * b[k]; ae[k] = (ae[k] || 0) + a.g * Math.abs(A[k] - b[k]); n[k] = (n[k] || 0) + a.g; cnt[k] = (cnt[k] || 0) + 1; }); }
+  const f = {}, bias = {}, mae = {}; KEYS.forEach(k => { bias[k] = t[k] > 0 ? s[k] / t[k] : 0; f[k] = Math.max(.75, Math.min(1.25, 1 + bias[k])); mae[k] = n[k] ? ae[k] / n[k] : null; });
+  return { f, bias, mae, players: cnt.PTS || 0 };
+}
+/* valuation used by the projection pipeline (neutral.py): 50% per-game z + 50% season-total z over the top 150 by value */
+function makeVal() {
+  const pool = Object.values(BASE).filter(b => b.value != null).sort((a, b) => b.value - a.value).slice(0, 150), C = ["FG", "FT", "TPM", "REB", "AST", "STL", "BLK", "TO", "DD", "PTS", "PF"];
+  const fgL = pool.reduce((s, b) => s + b.FGM, 0) / pool.reduce((s, b) => s + b.FGA, 0), ftL = pool.reduce((s, b) => s + b.FTM, 0) / pool.reduce((s, b) => s + b.FTA, 0);
+  const raw = (p, c) => c === "FG" ? p.FGM - p.FGA * fgL : c === "FT" ? p.FTM - p.FTA * ftL : c === "DD" ? p.DDg : p[c], gpOf = b => b.gp || 70;
+  const ms = f => { const v = pool.map(f), m = v.reduce((s, x) => s + x, 0) / v.length; return [m, Math.sqrt(v.reduce((s, x) => s + (x - m) * (x - m), 0) / v.length) || 1]; };
+  const Z = {}, ZT = {}; C.forEach(c => { Z[c] = ms(b => raw(b, c)); ZT[c] = ms(b => raw(b, c) * gpOf(b)); });
+  const vpg = p => C.reduce((s, c) => s + (c === "TO" || c === "PF" ? -1 : 1) * (raw(p, c) - Z[c][0]) / Z[c][1], 0);
+  const vt = (p, g) => C.reduce((s, c) => s + (c === "TO" || c === "PF" ? -1 : 1) * (raw(p, c) * g - ZT[c][0]) / ZT[c][1], 0);
+  const sd = a => { const m = a.reduce((s, x) => s + x, 0) / a.length; return Math.sqrt(a.reduce((s, x) => s + (x - m) * (x - m), 0) / a.length) || 1; };
+  const scale = sd(pool.map(vpg)) / sd(pool.map(b => vt(b, gpOf(b)))); return (p, g) => .5 * vpg(p) + .5 * vt(p, g) * scale;
+}
 function actMode() { return state.actMode || ((state.docs["league/meta"] || {}).actualWeightMode) || "fixed"; }
 function buildPlayers() {
   const act = (state.docs["league/actuals"] || {}).players || {}, wA = actWeight(currentWeek()), sm = actMode() === "sample", PL = {};
+  const cm = actMode() === "calib", CAL = cm ? calibStats(act) : null, valF = cm ? makeVal() : null; state.calib = CAL;
   for (const n in BASE) {
     const b = BASE[n], a = act[n], p = Object.assign({}, b);
     if (gpMode() === "full" && b.vFull != null) { p.gp = 82; p.value = b.vFull; p.gpFull = true; }
     else if (keepGP(b)) { p.gp = b.gpE; p.value = b.vKeep; p.gpKept = true; }
-    if (a && a.g > 0) {
+    if (cm) {
+      const c = {}; KEYS.forEach(k => c[k] = (b[k] || 0) * (CAL.f[k] || 1));
+      if (a && a.g > 0) {
+        const A = actLine(a), g = a.g;
+        ["FGA", "FTA", "TPM", "REB", "AST", "STL", "BLK", "TO", "PTS", "PF", "DDg"].forEach(k => { p[k] = A[k] != null && isFinite(A[k]) ? c[k] + g / (g + CAL_N0[k]) * (A[k] - c[k]) : c[k]; });
+        const fg = (c.FGM / Math.max(c.FGA, 1e-9) * CAL_FG0 + (a.fgm || 0) * g) / (CAL_FG0 + (a.fga || 0) * g), ft = (c.FTM / Math.max(c.FTA, 1e-9) * CAL_FT0 + (a.ftm || 0) * g) / (CAL_FT0 + (a.fta || 0) * g);
+        p.FGM = fg * p.FGA; p.FTM = ft * p.FTA; p.actual = a; p.actW = g / (g + CAL_N0.PTS);
+      } else KEYS.forEach(k => p[k] = c[k]);
+      const gg = p.gp || b.gp || 82; p.value = p.value + valF(p, gg) - valF(b, gg); p.calib = true;
+    } else if (a && a.g > 0) {
       const w = sm ? wA * Math.min(1, a.g / ACT_G_FULL) : wA, A = { FGM: a.fgm, FGA: a.fga, FTM: a.ftm, FTA: a.fta, TPM: a.tpm, REB: a.reb, AST: a.ast, STL: a.stl, BLK: a.blk, TO: a.to, PTS: a.pts, PF: a.pf, DDg: a.dd != null ? a.dd / a.g : null };
       KEYS.forEach(k => { if (A[k] != null && isFinite(A[k])) p[k] = (1 - w) * b[k] + w * A[k]; });
       p.actual = a; p.actW = w;
@@ -465,15 +501,7 @@ function buildPlayers() {
      season-total z over the top 150), so lineup order and streaming decisions follow the new line. */
   const ov = M.actualOverride || {};
   if (Object.keys(ov).length) {
-    const pool = Object.values(BASE).filter(b => b.value != null).sort((a, b) => b.value - a.value).slice(0, 150), C = ["FG", "FT", "TPM", "REB", "AST", "STL", "BLK", "TO", "DD", "PTS", "PF"];
-    const fgL = pool.reduce((s, b) => s + b.FGM, 0) / pool.reduce((s, b) => s + b.FGA, 0), ftL = pool.reduce((s, b) => s + b.FTM, 0) / pool.reduce((s, b) => s + b.FTA, 0);
-    const raw = (p, c) => c === "FG" ? p.FGM - p.FGA * fgL : c === "FT" ? p.FTM - p.FTA * ftL : c === "DD" ? p.DDg : p[c], gpOf = b => b.gp || 70;
-    const ms = f => { const v = pool.map(f), m = v.reduce((s, x) => s + x, 0) / v.length; return [m, Math.sqrt(v.reduce((s, x) => s + (x - m) * (x - m), 0) / v.length) || 1]; };
-    const Z = {}, ZT = {}; C.forEach(c => { Z[c] = ms(b => raw(b, c)); ZT[c] = ms(b => raw(b, c) * gpOf(b)); });
-    const vpg = p => C.reduce((s, c) => s + (c === "TO" || c === "PF" ? -1 : 1) * (raw(p, c) - Z[c][0]) / Z[c][1], 0);
-    const vt = (p, g) => C.reduce((s, c) => s + (c === "TO" || c === "PF" ? -1 : 1) * (raw(p, c) * g - ZT[c][0]) / ZT[c][1], 0);
-    const sd = a => { const m = a.reduce((s, x) => s + x, 0) / a.length; return Math.sqrt(a.reduce((s, x) => s + (x - m) * (x - m), 0) / a.length) || 1; };
-    const scale = sd(pool.map(vpg)) / sd(pool.map(b => vt(b, gpOf(b)))), val = (p, g) => .5 * vpg(p) + .5 * vt(p, g) * scale;
+    const val = valF || makeVal();
     for (const n in ov) {
       const d = PL[n], b = BASE[n], a = act[n], w = Math.max(0, Math.min(1, +ov[n])); if (!d || !b || !a || !(a.g > 0)) continue;
       const A = { FGM: a.fgm, FGA: a.fga, FTM: a.ftm, FTA: a.fta, TPM: a.tpm, REB: a.reb, AST: a.ast, STL: a.stl, BLK: a.blk, TO: a.to, PTS: a.pts, PF: a.pf, DDg: a.dd != null ? a.dd / a.g : null };
@@ -641,8 +669,12 @@ function planSlot(cands, orig, origPd, open, days, d0, A) {
 function teamWeek(names, w, opt = {}) {
   const D = opt.draws || 150, b2b = opt.b2b != null ? opt.b2b : state.b2b, days = REF.sched[w].length, ST = opt.stream || null, from = opt.from || 0;
   const all = names.map(n => state.PL[n]).filter(Boolean).sort((a, b) => b.value - a.value);
-  const S = ST ? (ST.slots || STREAM_SLOTS) : 0, nCore = ST ? Math.min(all.length, ROSTER_MAX - S) : all.length;
-  if (ST && nCore < all.length) {   /* ESPN undroppables cannot be streamed out: the slots go to the lowest droppable players */
+  /* ST.slots >= 99 ("all", manager rule 2026-11-17 for the selected team): every droppable roster spot may be streamed; only ESPN
+     undroppables are fixed. Each spot keeps its player unless a free agent is worth more on that day, within the weekly add limit. */
+  const ALLS = !!(ST && ST.slots >= 99);
+  if (ALLS) { const und = undroppable(); all.sort((a, b) => (und.has(b.name) - und.has(a.name)) || (b.value - a.value)); }
+  const S = ST ? (ALLS ? all.length : (ST.slots || STREAM_SLOTS)) : 0, nCore = ST ? (ALLS ? all.filter(p => undroppable().has(p.name)).length : Math.min(all.length, ROSTER_MAX - S)) : all.length;
+  if (ST && !ALLS && nCore < all.length) {   /* ESPN undroppables cannot be streamed out: the slots go to the lowest droppable players */
     const und = undroppable(), out = all.slice().reverse().filter(p => !und.has(p.name)).slice(0, all.length - nCore);
     all.sort((a, b) => (out.includes(a) - out.includes(b)) || (b.value - a.value));
   }
@@ -675,6 +707,33 @@ function teamWeek(names, w, opt = {}) {
     const oA = orig[0] || null, oB = orig[1] || null, oApd = oA ? opd(oA) : null, oBpd = oB ? opd(oB) : null;
     const cands = streamCands(w, ST, nameSet, b2b), coreC = ps.filter(p => p.pos === "C").length;
     const noC = c => c.p.pos !== "C";
+    if (ALLS) {
+      /* pass 1: each spot's value curve for 0..A adds (spots in value order, earlier spots kept); knapsack splits the adds across spots;
+         pass 2: re-plan each spot with its share, in the same order, without reusing a free agent; then replay in the draws */
+      const spots = orig.concat(Array(Math.max(0, ROSTER_MAX - all.length)).fill(null)), isC = q => !!(q && q.pos === "C");
+      /* a drop is permanent while each week is planned on its own: a spot is only streamed if its holder is not worth more for the season
+         than the best free agent available this week (replacement level); better holders are kept */
+      const repl = cands.reduce((m, c) => Math.max(m, c.p.value), -Infinity), canStream = o => !o || o.value <= repl;
+      const cAll = coreC + orig.filter(isC).length, F1 = free.slice(), curves = [];
+      spots.forEach(o => { const cs = cAll - (isC(o) ? 1 : 0) >= 4 ? cands.filter(noC) : cands; const cv = planSlot(cs, o, o ? opd(o) : null, openOf(F1, D, days), days, d0, canStream(o) ? A : 0);
+        curves.push(canStream(o) ? cv : new Array(A + 1).fill(cv[0])); if (o) place(o, from, days - 1, F1, false); });
+      let dp = [new Array(A + 1).fill(0)], pick = [];
+      curves.forEach((cv, i) => { const prev = dp[i], cur = new Array(A + 1).fill(-1e9), ch = new Array(A + 1).fill(0);
+        for (let j = 0; j <= A; j++) for (let k = 0; k <= j; k++) { const v = prev[j - k] + (cv[k].v - cv[0].v); if (v > cur[j] + 1e-12) { cur[j] = v; ch[j] = k; } }
+        dp.push(cur); pick.push(ch); });
+      const share = new Array(spots.length).fill(0); for (let i = spots.length - 1, j = A; i >= 0; i--) { share[i] = pick[i][j]; j -= share[i]; }
+      const Fw = free.slice(), used = new Set(); let cNow = cAll, segsAll = [], ev = 0;
+      spots.forEach((o, i) => {
+        let segs;
+        if (!share[i]) segs = o ? [{ p: o, a: 0, b: days - 1, orig: true }] : [];
+        else { const cs = cands.filter(c => !used.has(c.p) && (cNow - (isC(o) ? 1 : 0) < 4 || noC(c))); const r = planSlot(cs, o, o ? opd(o) : null, openOf(Fw, D, days), days, d0, share[i])[share[i]]; segs = r.segs; ev += r.v;
+          segs.forEach(g => { if (!g.orig) used.add(g.p); }); if (segs.some(g => !g.orig && isC(g.p)) && !isC(o)) cNow++; }
+        segs.forEach(g => place(g.p, Math.max(g.a, from), g.b, Fw, false)); segsAll = segsAll.concat(segs.map(g => Object.assign({ slot: i }, g)));
+      });
+      segsAll.forEach(g => place(g.p, Math.max(g.a, from), g.b, free, true));
+      segsAll.forEach(g => { if (g.orig) return; const m = rangeMask(g.a, Math.min(days - 1, g.b === days - 1 ? g.b : g.b + 2)); ST.occ.set(g.p.name, (ST.occ.get(g.p.name) || 0) | m); });
+      plan = { segs: segsAll, acq: segsAll.filter(g => !g.orig).length, ev, orig: spots.map(p => p ? p.name : null), d0, slots: spots.length, all: true, repl, streamable: spots.filter(canStream).map(p => p ? p.name : "(빈 자리)") };
+    } else {
     const bestA = planSlot(coreC >= 4 ? cands.filter(noC) : cands, oA, oApd, openOf(free, D, days), days, d0, A);
     let best = S === 1 ? { v: bestA[A].v, A: bestA[A], B: { v: 0, segs: [] } } : null;
     for (let a1 = 0; S > 1 && a1 <= A; a1++) {
@@ -689,6 +748,7 @@ function teamWeek(names, w, opt = {}) {
     segs.forEach(g => place(g.p, Math.max(g.a, from), g.b, free, true));
     segs.forEach(g => { if (g.orig) return; const m = rangeMask(g.a, Math.min(days - 1, g.b === days - 1 ? g.b : g.b + 2)); ST.occ.set(g.p.name, (ST.occ.get(g.p.name) || 0) | m); });
     plan = { segs, acq: segs.filter(g => !g.orig).length, ev: best.v, orig: orig.map(p => p.name), d0, slots: S };
+    }
   } else all.slice(nCore).forEach(p => { b2bCnt += place(p, from, days - 1, free, true).nb; });
   const mean = new Float64Array(NK); for (let k = 0; k < D; k++) for (let q = 0; q < NK; q++) mean[q] += tot[k * NK + q] / D;
   const ix = Object.fromEntries(KEYS.map((k, i) => [k, i])), c = {}, sv = {};
@@ -876,8 +936,8 @@ function renderStreamPanel(R, cw) {
     order.map(t => { const A = R.TW[t + "|" + cw], N = state.baseNS.TW[t + "|" + cw], pl = A.plan || { segs: [], acq: 0, orig: [] };
       const slot = k => { const g = pl.segs.filter(x => x.slot === k); if (k >= (pl.slots || 2)) return `<span class="note">스트리밍 안 함</span>`; const lead = pl.orig[k] && g.length && !g[0].orig ? `${esc(pl.orig[k])} <span class="note">첫날 방출</span> → ` : ""; return g.length ? lead + g.map(x => segText(cw, x, days)).join(" → ") : `<span class="note">${pl.orig[k] ? esc(pl.orig[k]) + " 방출 후 비움" : "빈 자리"}</span>`; };
       const p1 = wp(R, t, cw), p0 = wp(state.baseNS, t, cw);
-      return `<tr class="${t === ME ? "me" : ""}"><td class="r num">${A.prio}</td><td>${esc(sh(t))}</td><td class="stseq"><span class="sl"><span class="sn">①</span>${slot(0)}</span><span class="sl"><span class="sn">②</span>${slot(1)}</span></td><td class="r num">${pl.acq}</td><td class="r num">${A.n.toFixed(1)} <span class="note">(${dlt(A.n - N.n, 1)})</span></td><td class="r num">${pctP(p1)} <span class="note">(${dpp(p1 - p0)})</span></td></tr>`; }).join("") + `</tbody></table>`;
-  $("st-note").textContent = `각 팀은 시즌 가치 하위 2명 자리(빈 자리 포함${state.stream.mine === 1 ? `, ${sh(ME)}는 설정에 따라 최하위 1자리` : ""})를 주간 영입 한도(${acqLabel()}, 이번 주 ${acqFor(cw)}회) 안에서 그날 라인업 빈칸을 채울 FA로 교체한다고 가정합니다. 우선순위는 매주 한 칸씩 순환(가정)하며, 앞 순위 팀이 보유 중이거나 방출 후 2일(웨이버) 이내인 선수는 쓸 수 없습니다. 같은 팀이 방출한 선수의 재영입도 2일 뒤부터. ` +
+      return `<tr class="${t === ME ? "me" : ""}"><td class="r num">${A.prio}</td><td>${esc(sh(t))}</td><td class="stseq">${(() => { const ks = pl.all ? [...new Set(pl.segs.filter(x => !x.orig).map(x => x.slot))] : [0, 1]; return ks.length ? ks.map((k, i) => `<span class="sl"><span class="sn">${"①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬"[i]}</span>${slot(k)}</span>`).join("") : '<span class="note">스트리밍 안 함 (모든 자리 유지가 유리)</span>'; })()}</td><td class="r num">${pl.acq}</td><td class="r num">${A.n.toFixed(1)} <span class="note">(${dlt(A.n - N.n, 1)})</span></td><td class="r num">${pctP(p1)} <span class="note">(${dpp(p1 - p0)})</span></td></tr>`; }).join("") + `</tbody></table>`;
+  $("st-note").textContent = `각 팀은 시즌 가치 하위 2명 자리(빈 자리 포함${state.stream.mine === 1 ? `, ${sh(ME)}는 설정에 따라 최하위 1자리` : state.stream.mine >= 99 ? `, ${sh(ME)}는 방출 불가 선수를 뺀 모든 자리(감독 지정: 그날 FA가 더 유리할 때만 교체)` : ""})를 주간 영입 한도(${acqLabel()}, 이번 주 ${acqFor(cw)}회) 안에서 그날 라인업 빈칸을 채울 FA로 교체한다고 가정합니다. 우선순위는 매주 한 칸씩 순환(가정)하며, 앞 순위 팀이 보유 중이거나 방출 후 2일(웨이버) 이내인 선수는 쓸 수 없습니다. 같은 팀이 방출한 선수의 재영입도 2일 뒤부터. ` +
     (f ? `FA 목록: ${(f.asOf || "").slice(0, 16).replace("T", " ")} 캡처(프로젝션 보유 ${Object.keys(f.players).length}명${f.unprojected && f.unprojected.length ? ", 프로젝션 없는 " + f.unprojected.length + "명 제외" : ""}), 웨이버 선수는 클레임일부터, 상태(O·DTD)는 이번 주에만 반영.` : "FA 목록 캡처가 없어 프로젝션 풀의 미보유 선수 전체를 FA로 간주합니다.") +
     ` 괄호 = 스트리밍 미반영 대비 변화.`;
 }
@@ -1345,7 +1405,7 @@ document.addEventListener("change", e => {
   else if (t.dataset && t.dataset.add != null) { t.checked ? state.simSel.add.add(t.dataset.add) : state.simSel.add.delete(t.dataset.add); t.closest("label").classList.toggle("on", t.checked); renderTradeBox(); }
   else if (t.id === "team-sel") setTeam(t.value);
   else if (t.id === "b2b-on") { state.b2b = t.checked; try { localStorage.setItem("td22-b2b2", t.checked ? "1" : "0"); } catch (e) {} state.rec = null; state.busy = true; renderFresh(); recompute(); }
-  else if (t.id === "st-on" || t.id === "st-acq" || t.id === "st-mine") { state.stream = { on: $("st-on").checked, acq: +$("st-acq").value, mine: +$("st-mine").value === 1 ? 1 : 2 }; try { localStorage.setItem("td22-stream2", JSON.stringify(state.stream)); } catch (e) {} state.rec = null; state.busy = true; renderTeamUI(); renderFresh(); recompute(); }
+  else if (t.id === "st-on" || t.id === "st-acq" || t.id === "st-mine") { state.stream = { on: $("st-on").checked, acq: +$("st-acq").value, mine: [1, 2, 99].includes(+$("st-mine").value) ? +$("st-mine").value : 99 }; try { localStorage.setItem("td22-stream3", JSON.stringify(state.stream)); } catch (e) {} state.rec = null; state.busy = true; renderTeamUI(); renderFresh(); recompute(); }
   else if (t.id === "gp-mode") { state.gpModeUser = t.value; try { localStorage.setItem("td22-gpmode2", t.value); } catch (e) {} state.rec = null; state.scen = null; state.busy = true; renderFresh(); recompute(); }
   else if (t.id === "sim-other") { state.simOther = t.checked; if (!t.checked) { const own = ownerMap(); [...state.simSel.add].forEach(n => { if (own[n]) state.simSel.add.delete(n); }); } renderSimControls(); }
   else if (t.id === "sim-week") renderSimControls();
@@ -1355,7 +1415,7 @@ $("tab-now").addEventListener("click", () => setTab("now"));
 $("tab-fc").addEventListener("click", () => setTab("fc"));
 $("tab-proj").addEventListener("click", () => setTab("proj"));
 $("pj-filter").addEventListener("change", e => { state.pjFilter = e.target.value; renderProj(); });
-$("pj-act").addEventListener("change", e => { state.actMode = e.target.value; try { localStorage.setItem("td27-actmode", e.target.value); } catch (x) {} state.rec = null; state.scen = null; state.busy = true; renderFresh(); recompute(); });
+$("pj-act").addEventListener("change", e => { state.actMode = e.target.value; try { localStorage.setItem("td27-actmode2", e.target.value); } catch (x) {} state.rec = null; state.scen = null; state.busy = true; renderFresh(); recompute(); });
 $("pj-q").addEventListener("input", e => { state.pjQ = e.target.value; clearTimeout(state.pjT); state.pjT = setTimeout(renderProj, 120); });
 $("sim-run").addEventListener("click", runSim);
 $("sim-reset").addEventListener("click", () => { state.scen = null; state.simSel.drop.clear(); state.simSel.add.clear(); $("sim-msg").textContent = ""; renderSimControls(); renderForecast(); });

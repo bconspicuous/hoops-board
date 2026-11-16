@@ -23,6 +23,7 @@ const BASIS = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, '
   await p.waitForFunction(() => typeof state !== 'undefined' && state.base && !state.busy, null, { timeout: 600000 });
   const R = await p.evaluate(([cur, date, BASIS]) => {
     if (BASIS === 'actual') { actWeight = () => 1; buildPlayers(); PLAYC = new Map(); state.base = computeAll(null); }
+    else if (BASIS === 'calib' && actMode() !== 'calib') { state.actMode = 'calib'; buildPlayers(); PLAYC = new Map(); state.base = computeAll(null); }
     const nrm = s => (s || '').normalize('NFKD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[.'`]/g, '').replace(/\b(jr|sr|ii|iii|iv)\b/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
     const day = date || todayStr(); let cw = currentWeek(); while (cw < NW - 1 && day > REF.ends[cw]) cw++;
     const d = dayOffset(cw, day), days = REF.sched[cw].length; if (d < 0 || d >= days) return { date: day, status: 'out-of-range' };
@@ -75,7 +76,7 @@ const BASIS = (() => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, '
   if (R.status === 'no-games') L.push(`# 라인업 ${R.date} (미국 동부) — 우리 팀 경기 없음`);
   else if (R.status === 'out-of-range') L.push(`# 라인업 ${R.date} — 시즌 일정 밖`);
   else {
-    L.push(`# 라인업 제안 ${R.date} (미국 동부) · ${R.week}주차 vs ${R.opp} · 상태: ${R.status} · 기준: ${BASIS === 'actual' ? '현재 스탯(2026-27 실제 100%)' : '프로젝션'}`);
+    L.push(`# 라인업 제안 ${R.date} (미국 동부) · ${R.week}주차 vs ${R.opp} · 상태: ${R.status} · 기준: ${BASIS === 'actual' ? '현재 스탯(2026-27 실제 100%)' : BASIS === 'calib' ? '프로젝션 오차 보정(실제 기록 반영)' : '프로젝션'}`);
     L.push(`출전 ${R.playing}명 · 기대 카테고리 승 ${R.expected.best.toFixed(2)} (현재 ESPN 라인업 ${R.expected.current.toFixed(2)}, ${R.expected.gain >= 0 ? '+' : ''}${R.expected.gain.toFixed(2)})`);
     L.push(`벤치(출전 선수 중): ${R.bench.join(', ') || '없음'}${R.dtd.length ? ` · DTD: ${R.dtd.join(', ')}` : ''}`);
     L.push(`변경: ${R.moves.map(m => `${m.name} ${m.from}→${m.to}`).join(', ') || '없음'}`);

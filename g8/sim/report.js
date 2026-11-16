@@ -17,6 +17,7 @@ let pw; try { pw = require(process.env.PW || '/opt/node-tools/node_modules/playw
   const d = await p.evaluate((BASIS) => {
     const wModel = actWeight(currentWeek());
     if (BASIS === 'actual') { actWeight = () => 1; buildPlayers(); PLAYC = new Map(); state.base = computeAll(null); }
+    else if (BASIS === 'calib' && actMode() !== 'calib') { state.actMode = 'calib'; buildPlayers(); PLAYC = new Map(); state.base = computeAll(null); }
     const ACT = (state.docs['league/actuals'] || {}).players || {}, RR = rosters() || {};
     const noAct = Object.keys(RR).flatMap(t => [...(RR[t].active || []), ...(RR[t].ir || [])].filter(n => !(ACT[n] && ACT[n].g > 0 || ACT[n] && ACT[n].G > 0)).map(n => n + '(' + t + ')'));
     const R = state.base, cw = currentWeek(), o = oppOf(ME, cw), g = gameOf(R, ME, cw), L = liveFor(cw), tw = R.TW[ME + '|' + cw];
@@ -43,7 +44,7 @@ let pw; try { pw = require(process.env.PW || '/opt/node-tools/node_modules/playw
   } catch (e) {}
   d.watch = watch;
   const lines = [];
-  const BL = b => b === 'actual' ? '2026-27 실제 스탯 100%' : '모델(프로젝션+실적 가중)';
+  const BL = b => b === 'actual' ? '2026-27 실제 스탯 100%' : b === 'calib' ? '프로젝션 오차 보정(리그 편향 + 선수별 실제 기록 수축)' : '모델(프로젝션+실적 가중)';
   lines.push(`# G League 시뮬레이션 — ${d.asOf} · 기준: ${BL(d.basis)}${prev && (prev.basis || 'model') !== d.basis ? ` (직전 리포트는 ${BL(prev.basis || 'model')} 기준 — 증감은 기준 변경 효과 포함)` : ''}`);
   if (d.basis === 'actual' && d.noAct.length) lines.push(`2026-27 경기 기록 없음(프로젝션 유지): ${d.noAct.length}명 — ${d.noAct.join(', ')}`);
   lines.push(`**우리 팀** 기대승률 ${pct(me.epct)}${dp(me.epct, pm && pm.epct)} · 정규 1위 ${pct(me.p1)}${dp(me.p1, pm && pm.p1)} · 우승 ${pct(me.champ)}${dp(me.champ, pm && pm.champ)}`);
