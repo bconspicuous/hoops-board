@@ -2,7 +2,7 @@
  "date": "2026-11-15",
  "scoringPeriodId": 27,
  "hash": "feda2554df",
- "createdKST": "2026-11-16T06:48+09:00",
+ "createdKST": "2026-11-16T13:48+09:00",
  "mode": "plan",
  "moves": [],
  "lineup": [
@@ -57,7 +57,7 @@
    "name": "Ajay Mitchell",
    "pro": "OKC",
    "game": true,
-   "inj": "DAY_TO_DAY",
+   "inj": "ACTIVE",
    "out": false
   },
   {
@@ -93,8 +93,8 @@
    "name": "Ryan Rollins",
    "pro": "MIL",
    "game": true,
-   "inj": "DAY_TO_DAY",
-   "out": false
+   "inj": "OUT",
+   "out": true
   },
   {
    "slot": "BE",
@@ -128,6 +128,6 @@
   "Kawhi Leonard"
  ],
  "irReturn": [],
- "playing": 10,
+ "playing": 9,
  "status": "planned"
 }
