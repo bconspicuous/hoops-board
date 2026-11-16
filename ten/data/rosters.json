@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-16T16:22+09:00",
+ "asOf": "2026-11-16T18:12+09:00",
  "leagueId": "504060248",
  "season": 2027,
  "teams": [
@@ -21,16 +21,16 @@
     "Day'Ron Sharpe",
     "Jeremiah Fears",
     "Tari Eason",
-    "Kel'el Ware"
+    "Coby White"
    ],
    "ir": [
     "Evan Mobley"
    ],
    "record": {
-    "wins": 12,
-    "losses": 21,
+    "wins": 15,
+    "losses": 29,
     "ties": 0,
-    "percentage": 0.36363636363636365
+    "percentage": 0.3409090909090909
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
@@ -44,7 +44,7 @@
      "5": 1
     },
     "misc": 0,
-    "moveToActive": 149,
+    "moveToActive": 153,
     "moveToIR": 6,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -75,10 +75,10 @@
     "Paolo Banchero"
    ],
    "record": {
-    "wins": 25,
-    "losses": 8,
+    "wins": 30,
+    "losses": 14,
     "ties": 0,
-    "percentage": 0.7575757575757576
+    "percentage": 0.6818181818181818
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
@@ -91,7 +91,7 @@
      "4": 7
     },
     "misc": 0,
-    "moveToActive": 81,
+    "moveToActive": 83,
     "moveToIR": 1,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -122,10 +122,10 @@
     "Brandon Ingram"
    ],
    "record": {
-    "wins": 20,
-    "losses": 10,
+    "wins": 28,
+    "losses": 13,
     "ties": 3,
-    "percentage": 0.6515151515151515
+    "percentage": 0.6704545454545454
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
@@ -138,7 +138,7 @@
      "4": 7
     },
     "misc": 0,
-    "moveToActive": 102,
+    "moveToActive": 107,
     "moveToIR": 3,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -155,7 +155,6 @@
     "Domantas Sabonis",
     "Devin Booker",
     "Pascal Siakam",
-    "De'Aaron Fox",
     "Franz Wagner",
     "Zion Williamson",
     "Darius Acuff Jr.",
@@ -163,16 +162,17 @@
     "Jaime Jaquez Jr.",
     "Wendell Carter Jr.",
     "Draymond Green",
+    "Jalen Smith",
     "Andre Drummond"
    ],
    "ir": [
-    "Jalen Smith"
+    "De'Aaron Fox"
    ],
    "record": {
-    "wins": 19,
-    "losses": 12,
+    "wins": 25,
+    "losses": 17,
     "ties": 2,
-    "percentage": 0.6060606060606061
+    "percentage": 0.5909090909090909
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
@@ -216,10 +216,10 @@
     "Tyrese Haliburton"
    ],
    "record": {
-    "wins": 22,
-    "losses": 11,
+    "wins": 28,
+    "losses": 16,
     "ties": 0,
-    "percentage": 0.6666666666666666
+    "percentage": 0.6363636363636364
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
@@ -232,7 +232,7 @@
      "4": 1
     },
     "misc": 0,
-    "moveToActive": 73,
+    "moveToActive": 76,
     "moveToIR": 3,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -257,29 +257,30 @@
     "Cade Cunningham",
     "Dillon Brooks",
     "Brook Lopez",
-    "Sandro Mamukelashvili"
+    "Anthony Black"
    ],
    "ir": [
     "Jalen Duren"
    ],
    "record": {
-    "wins": 10,
-    "losses": 22,
+    "wins": 15,
+    "losses": 28,
     "ties": 1,
-    "percentage": 0.3181818181818182
+    "percentage": 0.3522727272727273
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
-    "acquisitions": 11,
-    "drops": 10,
+    "acquisitions": 12,
+    "drops": 11,
     "matchupAcquisitionTotals": {
      "1": 3,
      "2": 1,
      "3": 1,
-     "4": 6
+     "4": 6,
+     "5": 1
     },
     "misc": 0,
-    "moveToActive": 80,
+    "moveToActive": 84,
     "moveToIR": 2,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -298,22 +299,22 @@
     "Immanuel Quickley",
     "Jared McCain",
     "Payton Pritchard",
-    "Obi Toppin",
     "John Collins",
     "Onyeka Okongwu",
     "Kevin Durant",
     "James Harden",
     "VJ Edgecombe",
-    "Christian Braun"
+    "Christian Braun",
+    "Tyrese Proctor"
    ],
    "ir": [
     "Anthony Edwards"
    ],
    "record": {
-    "wins": 13,
-    "losses": 18,
-    "ties": 2,
-    "percentage": 0.42424242424242425
+    "wins": 15,
+    "losses": 26,
+    "ties": 3,
+    "percentage": 0.375
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
@@ -327,7 +328,7 @@
      "5": 1
     },
     "misc": 0,
-    "moveToActive": 89,
+    "moveToActive": 93,
     "moveToIR": 2,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -340,8 +341,8 @@
    "espnId": 8,
    "me": true,
    "players": [
+    "Kawhi Leonard",
     "Ivica Zubac",
-    "Josh Hart",
     "Ajay Mitchell",
     "Toumani Camara",
     "Miles Bridges",
@@ -349,19 +350,19 @@
     "Duncan Robinson",
     "Andrew Nembhard",
     "Grayson Allen",
-    "Paul Reed",
     "Paul George",
     "Julian Champagnie",
-    "Ryan Rollins"
+    "Klay Thompson",
+    "Collin Gillespie"
    ],
    "ir": [
-    "Kawhi Leonard"
+    "Ryan Rollins"
    ],
    "record": {
-    "wins": 9,
-    "losses": 24,
+    "wins": 14,
+    "losses": 30,
     "ties": 0,
-    "percentage": 0.2727272727272727
+    "percentage": 0.3181818181818182
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
@@ -375,7 +376,7 @@
      "5": 2
     },
     "misc": 0,
-    "moveToActive": 99,
+    "moveToActive": 102,
     "moveToIR": 9,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -406,10 +407,10 @@
     "Stephen Curry"
    ],
    "record": {
-    "wins": 14,
-    "losses": 18,
-    "ties": 1,
-    "percentage": 0.4393939393939394
+    "wins": 22,
+    "losses": 20,
+    "ties": 2,
+    "percentage": 0.5227272727272727
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
@@ -422,7 +423,7 @@
      "4": 4
     },
     "misc": 0,
-    "moveToActive": 76,
+    "moveToActive": 79,
     "moveToIR": 4,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -453,10 +454,10 @@
     "Trey Murphy III"
    ],
    "record": {
-    "wins": 15,
-    "losses": 15,
+    "wins": 21,
+    "losses": 20,
     "ties": 3,
-    "percentage": 0.5
+    "percentage": 0.5113636363636364
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
