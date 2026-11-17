@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-17T17:34+09:00",
+ "asOf": "2026-11-17T19:44+09:00",
  "leagueId": "504060248",
  "season": 2027,
  "teams": [
@@ -343,7 +343,6 @@
    "espnId": 8,
    "me": true,
    "players": [
-    "Kawhi Leonard",
     "Ivica Zubac",
     "Ajay Mitchell",
     "Toumani Camara",
@@ -354,11 +353,12 @@
     "Grayson Allen",
     "Paul George",
     "Julian Champagnie",
+    "Ryan Rollins",
     "Klay Thompson",
     "Collin Gillespie"
    ],
    "ir": [
-    "Ryan Rollins"
+    "Kawhi Leonard"
    ],
    "record": {
     "wins": 14,
@@ -378,8 +378,8 @@
      "5": 2
     },
     "misc": 0,
-    "moveToActive": 105,
-    "moveToIR": 9,
+    "moveToActive": 106,
+    "moveToIR": 10,
     "paid": 0.0,
     "teamCharges": 0.0,
     "trades": 4
