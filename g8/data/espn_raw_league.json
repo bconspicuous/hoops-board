@@ -23,15 +23,15 @@
   "isWaiverOrderEdited": false,
   "lastUpdateInfo": {
    "clientAddress": null,
-   "platform": "espn-fantasy-app-ios",
-   "source": "{43D0AE9C-FDFF-4E4B-A8F7-27B0589A118F}"
+   "platform": "lm-processor",
+   "source": "NightlyLeagueUpdateTaskProcessor"
   },
   "latestScoringPeriod": 29,
   "previousSeasons": [],
-  "standingsUpdateDate": 1794902400636,
+  "standingsUpdateDate": 1794906007402,
   "teamsJoined": 8,
   "transactionScoringPeriod": 29,
-  "waiverLastExecutionDate": 1794817929296,
+  "waiverLastExecutionDate": 1794906007393,
   "waiverProcessStatus": {
    "2026-10-18T07:35:08.893+00:00": 2,
    "2026-10-22T07:38:00.423+00:00": 1,
@@ -51,8 +51,8 @@
     "id": "05401909998",
     "lastUpdateInfo": {
      "clientAddress": null,
-     "platform": null,
-     "source": null
+     "platform": "lm-processor",
+     "source": "ProGamePoller"
     },
     "proTeamId": 14,
     "scoringPeriodId": 28,

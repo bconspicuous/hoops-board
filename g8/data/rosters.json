@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-17T17:30+09:00",
+ "asOf": "2026-11-18T06:21+09:00",
  "leagueId": "751654965",
  "season": 2027,
  "teams": [
@@ -21,7 +21,7 @@
     "Ayo Dosunmu",
     "Wendell Carter Jr.",
     "Meleek Thomas",
-    "Jonathan Kuminga"
+    "Jrue Holiday"
    ],
    "ir": [
     "Dejounte Murray",
@@ -38,9 +38,9 @@
     "2": 3,
     "3": 2,
     "4": 5,
-    "5": 1
+    "5": 2
    },
-   "acqTotal": 15
+   "acqTotal": 16
   },
   {
    "name": "Gatori Team",
@@ -98,7 +98,7 @@
     "Darryn Peterson",
     "AJ Dybantsa",
     "Norman Powell",
-    "Day'Ron Sharpe"
+    "Moussa Diabate"
    ],
    "ir": [
     "Austin Reaves",
@@ -115,9 +115,9 @@
     "2": 7,
     "3": 6,
     "4": 7,
-    "5": 1
+    "5": 2
    },
-   "acqTotal": 27
+   "acqTotal": 28
   },
   {
    "name": "Zero Sugar",
@@ -329,18 +329,21 @@
    "Walker Kessler",
    "Tyrese Haliburton",
    "Caleb Wilson",
+   "CJ McCollum",
    "Brandon Ingram",
    "Kon Knueppel",
+   "Jonathan Kuminga",
    "Jaren Jackson Jr.",
    "Jalen Williams",
    "Tobias Harris",
    "Kristaps Porzingis",
    "Jimmy Butler III",
    "Jaxson Hayes",
-   "Pelle Larsson",
    "Scotty Pippen Jr.",
+   "Pelle Larsson",
    "Cason Wallace",
    "Jusuf Nurkic",
+   "Bennedict Mathurin",
    "Shaedon Sharpe",
    "Mark Williams",
    "Dereck Lively II",
@@ -356,12 +359,14 @@
    "Isaiah Joe",
    "Sam Merrill",
    "Ronald Holland II",
-   "Sergio de Larrea"
+   "Sergio de Larrea",
+   "Vit Krejci"
   ],
   "DTD": [
-   "Jonathan Kuminga",
    "Amen Thompson",
    "Kyrie Irving",
+   "Scottie Barnes",
+   "Deni Avdija",
    "Jaylen Brown",
    "Zach LaVine",
    "Bam Adebayo",
@@ -370,10 +375,8 @@
    "Andrew Nembhard",
    "Ryan Rollins",
    "Peyton Watson",
-   "Jalen Smith",
    "Neemias Queta",
    "Precious Achiuwa",
-   "Bennedict Mathurin",
    "De'Andre Hunter",
    "Santi Aldama",
    "Kingston Flemings",
@@ -381,7 +384,6 @@
    "Patrick Williams",
    "Jaylon Tyson",
    "Max Christie",
-   "Marcus Smart",
    "Nikola Jovic"
   ]
  }
