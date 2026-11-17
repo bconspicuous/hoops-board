@@ -2,7 +2,7 @@
  "date": "2026-11-16",
  "scoringPeriodId": 28,
  "hash": "371a529e16",
- "createdKST": "2026-11-17T06:48+09:00",
+ "createdKST": "2026-11-17T13:48+09:00",
  "mode": "plan",
  "moves": [],
  "lineup": [
@@ -75,8 +75,8 @@
    "name": "Duncan Robinson",
    "pro": "DET",
    "game": false,
-   "inj": "DAY_TO_DAY",
-   "out": false
+   "inj": "OUT",
+   "out": true
   },
   {
    "slot": "UTIL",
