@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-17T13:44+09:00",
+ "asOf": "2026-11-17T17:34+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -541,7 +541,7 @@
    "status": "Day-To-Day",
    "date": "2026-11-16T15:28Z",
    "type": "day-to-day",
-   "returnDate": "2026-11-16",
+   "returnDate": "2026-11-17",
    "detail": null,
    "side": "Right",
    "injury": "Wrist",
@@ -1085,15 +1085,15 @@
    "player": "Jaylen Brown",
    "team": "PHI",
    "status": "Day-To-Day",
-   "date": "2026-11-17T04:28Z",
+   "date": "2026-11-17T04:56Z",
    "type": "day-to-day",
    "returnDate": "2026-11-18",
    "detail": "Not Specified",
-   "side": "Not Specified",
+   "side": "Left",
    "injury": "Hamstring",
    "fantasyStatus": "GTD",
-   "short": "Brown amassed 31 points (9-19 FG, 3-8 3Pt, 10-13 FT), 13 rebounds, four assists, one steal and one block in 33 minutes during Monday's 135-123 win over Brooklyn.",
-   "long": "Brown matched his season-high scoring total he set in Sunday's 131-124 win against the Pacers. It was the second straight dominant performance from Brown, who also established season highs in free throw makes (10) and attempts (13) while collecting a full line to help the Sixers win their third contest in a row."
+   "short": "Brown (hamstring/head) will undergo further evaluation Tuesday and could receive an MRI, Kris Rhim of ESPN reports.",
+   "long": "Brown turned in a stellar performance with 31 points and 13 rebounds in Monday's win over Brooklyn, but he also dealt with left hamstring tightness and an apparent head issue that contributed to him sitting out the final 1:44 of regulation. The fact that the 30-year-old played through the ailments down the stretch could be an encouraging sign, though he'll undergo further evaluation Tuesday and an MRI is a possibility. Philadelphia's next game is Wednesday at Orlando, and if Brown is sidelined, Kentavious Caldwell-Pope and Anfernee Simons could see an uptick in playing time."
   },
   {
    "player": "LeBron James",
@@ -1339,7 +1339,7 @@
    "status": "Day-To-Day",
    "date": "2026-11-13T15:37Z",
    "type": "day-to-day",
-   "returnDate": "2026-11-16",
+   "returnDate": "2026-11-20",
    "detail": null,
    "side": null,
    "injury": "Illness",

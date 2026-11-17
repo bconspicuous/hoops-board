@@ -1,6 +1,6 @@
 {
- "asOf": "2026-11-17T13:45+09:00",
- "scoringPeriodId": 28,
+ "asOf": "2026-11-17T17:34+09:00",
+ "scoringPeriodId": 29,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
   "waiverHours": 24,
@@ -165,7 +165,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "5093267",
+     "player": "Collin Murray-Boyles",
      "from": "FA",
      "to": "IYH"
     },
@@ -1089,7 +1089,7 @@
     },
     {
      "type": "DROP",
-     "player": "5093267",
+     "player": "Collin Murray-Boyles",
      "from": "Doo",
      "to": "FA"
     }
@@ -1317,7 +1317,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "5093267",
+     "player": "Collin Murray-Boyles",
      "from": "FA",
      "to": "Doo"
     },
@@ -1529,192 +1529,6 @@
      "type": "DROP",
      "player": "Daniel Gafford",
      "from": "GTD",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "ab5a896d-bdbc-458a-8907-b94cb7039b10",
-   "team": "SONG",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-10 14:02 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Ja Morant",
-     "from": "FA",
-     "to": "SONG"
-    },
-    {
-     "type": "DROP",
-     "player": "Collin Gillespie",
-     "from": "SONG",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "3340863a-0ac2-4850-bcd7-69fd106f1c4b",
-   "team": "TBG",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-10 13:15 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Jared McCain",
-     "from": "FA",
-     "to": "TBG"
-    },
-    {
-     "type": "DROP",
-     "player": "Mario Hezonja",
-     "from": "TBG",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "d568c705-a8f8-4113-ab50-98a93df55ed5",
-   "team": "IYH",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-10 12:44 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Aday Mara",
-     "from": "FA",
-     "to": "IYH"
-    },
-    {
-     "type": "DROP",
-     "player": "Khaman Maluach",
-     "from": "IYH",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "8885cb03-30e3-42ed-8374-f02e089125e7",
-   "team": "SONG",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-10 09:35 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Collin Gillespie",
-     "from": "FA",
-     "to": "SONG"
-    },
-    {
-     "type": "DROP",
-     "player": "Reed Sheppard",
-     "from": "SONG",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "4e660283-a82f-41ed-9528-a134fa2c9555",
-   "team": "IYH",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-10 08:48 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Khaman Maluach",
-     "from": "FA",
-     "to": "IYH"
-    },
-    {
-     "type": "DROP",
-     "player": "5093267",
-     "from": "IYH",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "4b724c1a-bece-46f9-b9be-847ad4ffc381",
-   "team": "SMS",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-10 08:27 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Ja'Kobe Walter",
-     "from": "FA",
-     "to": "SMS"
-    },
-    {
-     "type": "DROP",
-     "player": "Devin Vassell",
-     "from": "SMS",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "1421708b-6712-497b-98ce-89f29b7e83b8",
-   "team": "JYP",
-   "mine": false,
-   "type": "ROSTER",
-   "status": "EXECUTED",
-   "proposed": "2026-11-10 08:21 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "DROP",
-     "player": "Klay Thompson",
-     "from": "JYP",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "bf57b5fe-b4fe-4e78-ac35-be515fd41dfa",
-   "team": "GGAM",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-10 07:21 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Draymond Green",
-     "from": "FA",
-     "to": "GGAM"
-    },
-    {
-     "type": "DROP",
-     "player": "Nic Claxton",
-     "from": "GGAM",
      "to": "FA"
     }
    ],
