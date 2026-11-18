@@ -4,26 +4,27 @@
  "spid": 30,
  "matchupPeriod": 5,
  "add": {
-  "id": 5174983,
-  "name": "Aday Mara",
-  "status": "FREEAGENT",
-  "pro": "OKC",
+  "id": 4277847,
+  "name": "Wendell Carter Jr.",
+  "status": "WAIVERS",
+  "pro": "ORL",
   "inj": "ACTIVE"
  },
- "type": "FREEAGENT",
+ "type": "WAIVER",
  "limits": {
   "season": "20/70",
   "matchup": "3/7"
  },
  "drop": {
-  "id": 3135045,
-  "name": "Grayson Allen",
+  "id": 4395723,
+  "name": "Keldon Johnson",
   "slot": 12,
-  "inj": "OUT"
+  "inj": "ACTIVE"
  },
- "hash": "8c92a30b43",
+ "hash": "df16db2c5f",
  "errors": [],
  "warnings": [
+  "Wendell Carter Jr.은(는) 웨이버 상태 — 즉시 영입이 아니라 웨이버 신청(ESPN 처리 시각 8시, 순번 우선)",
   "방출 선수는 24시간 웨이버 — 그 사이 다른 팀이 데려갈 수 있어 되돌릴 수 없음"
  ],
  "status": "planned"
