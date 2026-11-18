@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-18T06:44+09:00",
+ "asOf": "2026-11-18T13:45+09:00",
  "leagueId": "504060248",
  "season": 2027,
  "teams": [
@@ -157,19 +157,17 @@
     "Domantas Sabonis",
     "Devin Booker",
     "Pascal Siakam",
+    "De'Aaron Fox",
     "Franz Wagner",
     "Zion Williamson",
     "Darius Acuff Jr.",
     "Myles Turner",
     "Jaime Jaquez Jr.",
     "Wendell Carter Jr.",
-    "Draymond Green",
     "Jalen Smith",
     "Bones Hyland"
    ],
-   "ir": [
-    "De'Aaron Fox"
-   ],
+   "ir": [],
    "record": {
     "wins": 25,
     "losses": 17,
@@ -179,7 +177,7 @@
    "transactions": {
     "acquisitionBudgetSpent": 0,
     "acquisitions": 14,
-    "drops": 13,
+    "drops": 14,
     "matchupAcquisitionTotals": {
      "1": 6,
      "2": 2,
@@ -188,7 +186,7 @@
      "5": 1
     },
     "misc": 0,
-    "moveToActive": 89,
+    "moveToActive": 90,
     "moveToIR": 10,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -349,14 +347,14 @@
     "Toumani Camara",
     "Miles Bridges",
     "Karl-Anthony Towns",
-    "Duncan Robinson",
     "Andrew Nembhard",
     "Grayson Allen",
     "Paul George",
     "Julian Champagnie",
     "Ryan Rollins",
     "Klay Thompson",
-    "Collin Gillespie"
+    "Collin Gillespie",
+    "Keldon Johnson"
    ],
    "ir": [
     "Kawhi Leonard"
@@ -369,17 +367,17 @@
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
-    "acquisitions": 19,
-    "drops": 18,
+    "acquisitions": 20,
+    "drops": 19,
     "matchupAcquisitionTotals": {
      "1": 4,
      "2": 6,
      "3": 2,
      "4": 5,
-     "5": 2
+     "5": 3
     },
     "misc": 0,
-    "moveToActive": 106,
+    "moveToActive": 107,
     "moveToIR": 10,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -485,16 +483,20 @@
    "Evan Mobley",
    "Paolo Banchero",
    "Austin Reaves",
+   "Ty Jerome",
    "Brandon Ingram",
    "Tyrese Haliburton",
    "Walker Kessler",
    "Jalen Duren",
    "Anthony Edwards",
+   "Jaylen Brown",
    "Kawhi Leonard",
-   "Duncan Robinson",
+   "Grayson Allen",
    "Stephen Curry",
    "CJ McCollum",
+   "Deni Avdija",
    "Trey Murphy III",
+   "Dylan Harper",
    "Caleb Wilson",
    "Ja Morant",
    "Kon Knueppel",
@@ -503,6 +505,7 @@
    "Chet Holmgren",
    "Jonathan Kuminga",
    "Jaren Jackson Jr.",
+   "Duncan Robinson",
    "Jalen Williams",
    "Tobias Harris",
    "Kristaps Porzingis",
@@ -515,6 +518,8 @@
    "Shaedon Sharpe",
    "Mark Williams",
    "Dereck Lively II",
+   "Kingston Flemings",
+   "Isaiah Stewart",
    "Dennis Schroder",
    "Maxime Raynaud",
    "Donte DiVincenzo",
@@ -535,29 +540,20 @@
    "Moses Moody"
   ],
   "DTD": [
-   "Scottie Barnes",
    "Amen Thompson",
-   "Kyrie Irving",
-   "Ty Jerome",
-   "Jaylen Brown",
    "Andrew Nembhard",
-   "Ryan Rollins",
-   "LeBron James",
    "Bam Adebayo",
-   "Deni Avdija",
-   "Zach LaVine",
    "De'Andre Hunter",
    "Peyton Watson",
-   "Neemias Queta",
    "Precious Achiuwa",
+   "T.J. McConnell",
    "Santi Aldama",
-   "Kingston Flemings",
-   "Isaiah Stewart",
-   "Patrick Williams",
    "Jaylon Tyson",
+   "Walter Clayton Jr.",
+   "Patrick Williams",
    "Max Christie",
-   "Nikola Jovic",
-   "Jock Landale"
+   "Al Horford",
+   "Nikola Jovic"
   ]
  }
 }
