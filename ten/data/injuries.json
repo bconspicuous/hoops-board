@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-18T13:45+09:00",
+ "asOf": "2026-11-18T16:59+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -422,6 +422,20 @@
    "fantasyStatus": "OUT",
    "short": "Duren (hamstring) has begun on-court activity and will be re-evaluated in two weeks, Hunter Patterson of The Athletic reports.",
    "long": "Duren is progressing in his rehab after suffering a right hamstring strain Oct. 23, though he'll remain on the inactive list for at least the next two weeks while ramping up toward a return to game action. Paul Reed should continue to play a sizable role in Duren's stead."
+  },
+  {
+   "player": "Draymond Green",
+   "team": "GS",
+   "status": "Day-To-Day",
+   "date": "2026-11-18T05:49Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-18",
+   "detail": "Inflammation",
+   "side": "Right",
+   "injury": "Elbow",
+   "fantasyStatus": "GTD",
+   "short": "Green is questionable for Wednesday's game in Dallas due to inflammation in his right elbow.",
+   "long": "Wednesday's game will be the first of a back-to-back set, so there's a chance Green could get hit with a maintenance day. If he is forced to the sidelines, Gui Santos would have a chance to start, and Georges Niang would have the chance for a bump in minutes."
   },
   {
    "player": "Al Horford",
@@ -1236,6 +1250,20 @@
    "long": "It's a tough blow to the Trail Blazers' depth on the wing ahead of training camp. Sharpe, who is now likely to be sidelined until after the All-Star break, had been ticketed for a reserve role behind Toumani Camara following an injury-plagued 2025-26 campaign, which saw average a career-high 20.8 points, 1.4 steals and 2.1 three-pointers per game over 50 regular-season appearances. The door is now open for Vit Krejci and Jeremy Sochan to compete for bench minutes during camp."
   },
   {
+   "player": "Maxime Raynaud",
+   "team": "SAC",
+   "status": "Out",
+   "date": "2026-11-18T05:54Z",
+   "type": "out",
+   "returnDate": "2026-11-25",
+   "detail": "Dislocated",
+   "side": "Right",
+   "injury": "Knee",
+   "fantasyStatus": "OUT",
+   "short": "Raynaud (knee) will remain on the inactive list for Wednesday's game against the Suns.",
+   "long": "Raynaud continues to get ruled out a full day in advance of tipoff, suggesting he's still not close. He should be considered week-to-week moving forward."
+  },
+  {
    "player": "De'Andre Hunter",
    "team": "SAC",
    "status": "Day-To-Day",
@@ -1264,20 +1292,6 @@
    "long": "Achiuwa has missed the past two games for the Kings, but he was able to get through Tuesday's practice, so maybe he'll be able to return for Wednesday's game. If he is cleared to play, Dylan Cardwell's minutes might dip."
   },
   {
-   "player": "Maxime Raynaud",
-   "team": "SAC",
-   "status": "Out",
-   "date": "2026-11-15T01:00Z",
-   "type": "out",
-   "returnDate": "2026-11-18",
-   "detail": "Dislocated",
-   "side": "Right",
-   "injury": "Knee",
-   "fantasyStatus": "GTD",
-   "short": "Raynaud (knee) has been ruled out for Sunday's game against the Thunder.",
-   "long": "Raynaud will miss his 13th consecutive game to start 2026-27 after injuring his knee during the preseason. It sounds like the Frenchman is getting closer to making his season debut, with his next chance to do so coming Wednesday versus Phoenix."
-  },
-  {
    "player": "Ben Simmons",
    "team": "SAC",
    "status": "Out",
@@ -1294,14 +1308,14 @@
   {
    "player": "Dylan Harper",
    "team": "SA",
-   "status": "Out",
-   "date": "2026-11-18T03:49Z",
-   "type": "out",
+   "status": "Day-To-Day",
+   "date": "2026-11-18T05:07Z",
+   "type": "day-to-day",
    "returnDate": "2026-11-19",
    "detail": null,
    "side": null,
    "injury": "Undisclosed",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Harper left Tuesday's game against the Spurs due to an undisclosed injury after an awkward fall, Chris Mannix reports.",
    "long": "The injury occurred with only 53.6 seconds remaining in the fourth quarter, and Harper stayed down in pain for several minutes before being helped back to the locker room. He tallied 20 points (8-14 FG, 0-4 3Pt, 4-5 FT), four rebounds and two assists in 35 minutes prior to his exit, and we'll have to wait for an update on his status moving forward."
   },
