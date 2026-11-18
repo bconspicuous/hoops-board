@@ -2,7 +2,7 @@
  "date": "2026-11-17",
  "scoringPeriodId": 29,
  "hash": "ea21f2d730",
- "createdKST": "2026-11-18T06:48+09:00",
+ "createdKST": "2026-11-18T13:48+09:00",
  "mode": "plan",
  "moves": [],
  "lineup": [
@@ -12,17 +12,17 @@
    "name": "Grayson Allen",
    "pro": "CHA",
    "game": true,
-   "inj": "ACTIVE",
-   "out": false
+   "inj": "OUT",
+   "out": true
   },
   {
    "slot": "SG",
    "cur": "SG",
-   "name": "Duncan Robinson",
-   "pro": "DET",
-   "game": true,
-   "inj": "OUT",
-   "out": true
+   "name": "Ajay Mitchell",
+   "pro": "OKC",
+   "game": false,
+   "inj": "ACTIVE",
+   "out": false
   },
   {
    "slot": "SF",
@@ -54,8 +54,8 @@
   {
    "slot": "G",
    "cur": "G",
-   "name": "Ajay Mitchell",
-   "pro": "OKC",
+   "name": "Klay Thompson",
+   "pro": "MIA",
    "game": false,
    "inj": "ACTIVE",
    "out": false
@@ -63,6 +63,15 @@
   {
    "slot": "F",
    "cur": "F",
+   "name": "Keldon Johnson",
+   "pro": "SAS",
+   "game": true,
+   "inj": "ACTIVE",
+   "out": false
+  },
+  {
+   "slot": "UTIL",
+   "cur": "UTIL",
    "name": "Miles Bridges",
    "pro": "PHX",
    "game": false,
@@ -88,15 +97,6 @@
    "out": false
   },
   {
-   "slot": "UTIL",
-   "cur": "UTIL",
-   "name": "Klay Thompson",
-   "pro": "MIA",
-   "game": false,
-   "inj": "ACTIVE",
-   "out": false
-  },
-  {
    "slot": "BE",
    "cur": "BE",
    "name": "Ivica Zubac",
@@ -111,7 +111,7 @@
    "name": "Ryan Rollins",
    "pro": "MIL",
    "game": false,
-   "inj": "DAY_TO_DAY",
+   "inj": "ACTIVE",
    "out": false
   },
   {
