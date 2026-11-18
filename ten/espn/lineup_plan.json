@@ -2,7 +2,7 @@
  "date": "2026-11-18",
  "scoringPeriodId": 30,
  "hash": "f42792562c",
- "createdKST": "2026-11-18T19:48+09:00",
+ "createdKST": "2026-11-19T06:49+09:00",
  "mode": "plan",
  "moves": [],
  "lineup": [
@@ -21,8 +21,8 @@
    "name": "Ryan Rollins",
    "pro": "MIL",
    "game": true,
-   "inj": "ACTIVE",
-   "out": false
+   "inj": "OUT",
+   "out": true
   },
   {
    "slot": "SF",
@@ -111,8 +111,8 @@
    "name": "Grayson Allen",
    "pro": "CHA",
    "game": false,
-   "inj": "OUT",
-   "out": true
+   "inj": "DAY_TO_DAY",
+   "out": false
   },
   {
    "slot": "BE",
@@ -128,6 +128,6 @@
   "Kawhi Leonard"
  ],
  "irReturn": [],
- "playing": 8,
+ "playing": 7,
  "status": "planned"
 }
