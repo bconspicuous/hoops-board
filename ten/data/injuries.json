@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-19T05:56+09:00",
+ "asOf": "2026-11-19T06:45+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -692,30 +692,16 @@
   {
    "player": "Austin Reaves",
    "team": "LAL",
-   "status": "Day-To-Day",
-   "date": "2026-11-18T15:02Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-18",
+   "status": "Out",
+   "date": "2026-11-18T21:03Z",
+   "type": "out",
+   "returnDate": "2026-11-20",
    "detail": "Bruise",
    "side": "Left",
    "injury": "Heel",
-   "fantasyStatus": "GTD",
-   "short": "Reaves (heel) is out for Tuesday's game against the Hornets, Dave McMenamin of ESPN.com reports.",
-   "long": "Reaves will miss a second consecutive matchup while tending to a bruised left heel. Quentin Grimes, Collin Sexton and Ziaire Williams should continue to see more minutes in Reaves' absence. His next opportunity to return will arrive Wednesday against Utah."
-  },
-  {
-   "player": "Walker Kessler",
-   "team": "LAL",
-   "status": "Day-To-Day",
-   "date": "2026-11-18T15:02Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-18",
-   "detail": "Soreness",
-   "side": "Right",
-   "injury": "Lower Leg",
-   "fantasyStatus": "GTD",
-   "short": "Head coach JJ Redick said he expects Walker (leg) to be available for Wednesday's game against the Jazz, Thuc Nhi Nguyen of the Los Angeles Times reports.",
-   "long": "Walker won't play Tuesday against the Hornets due to some minor soreness in his right leg, but he'll return for the second leg of the back-to-back set Wednesday. Sandro Mamukelashvili, Jarred Vanderbilt and Kevon Looney will pick up the slack in his absence."
+   "fantasyStatus": "OUT",
+   "short": "Reaves (heel) is out for Wednesday's game against the Jazz.",
+   "long": "The star guard was expected to test out his injured heel prior to the contest, but the Lakers don't quite think he's ready to return. With Reaves out for a third consecutive time, Quentin Grimes is primed for another start after going off for a career-high 47 points Tuesday."
   },
   {
    "player": "GG Jackson",
@@ -1264,34 +1250,6 @@
    "long": "Raynaud continues to get ruled out a full day in advance of tipoff, suggesting he's still not close. He should be considered week-to-week moving forward."
   },
   {
-   "player": "De'Andre Hunter",
-   "team": "SAC",
-   "status": "Day-To-Day",
-   "date": "2026-11-18T00:33Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-18",
-   "detail": "Soreness",
-   "side": "Left",
-   "injury": "Hip",
-   "fantasyStatus": "GTD",
-   "short": "Hunter (hip) is questionable for Wednesday's game against the Suns, James Ham of ESPN 1320 Sacramento reports.",
-   "long": "Hunter missed Sunday's 125-103 loss to Oklahoma City due to left hip soreness, and that same issue has earned him a questionable tag versus Phoenix. If he's unable to suit up, Leaky Black, Emanuel Sharp, Keegan Murray and Malik Monk will continue to get more burn."
-  },
-  {
-   "player": "Precious Achiuwa",
-   "team": "SAC",
-   "status": "Day-To-Day",
-   "date": "2026-11-18T00:29Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-18",
-   "detail": "Soreness",
-   "side": "Left",
-   "injury": "Ankle",
-   "fantasyStatus": "GTD",
-   "short": "Achiuwa (ankle) is questionable for Wednesday's game against the Suns, James Ham of ESPN 1320 Sacramento reports.",
-   "long": "Achiuwa has missed the past two games for the Kings, but he was able to get through Tuesday's practice, so maybe he'll be able to return for Wednesday's game. If he is cleared to play, Dylan Cardwell's minutes might dip."
-  },
-  {
    "player": "Ben Simmons",
    "team": "SAC",
    "status": "Out",
@@ -1407,15 +1365,15 @@
    "player": "Jaxson Hayes",
    "team": "UTAH",
    "status": "Day-To-Day",
-   "date": "2026-11-18T14:59Z",
+   "date": "2026-11-18T21:05Z",
    "type": "day-to-day",
    "returnDate": "2026-11-18",
    "detail": "Strain",
    "side": "Left",
    "injury": "Knee",
    "fantasyStatus": "GTD",
-   "short": "Hayes (knee) has been ruled out for Tuesday's game against the Clippers.",
-   "long": "Hayes will miss a second consecutive game due to a left knee strain, with his next chance to suit up coming Wednesday in the second half of the Jazz's back-to-back set. Mo Bamba is likely to remain in the starting lineup after faring well in his first start Sunday. On the year, Hayes is averaging 8.8 points, 6.0 rebounds, 1.6 assists and 1.3 blocks across 12 appearances (10 starts)."
+   "short": "Hayes (knee) is questionable for Wednesday's game against the Lakers.",
+   "long": "Hayes is aiming to finish a two-game absence Wednesday due to a knee strain. If the big man is unable to play, Mo Bamba would remain worth streaming in the majority of fantasy leagues."
   },
   {
    "player": "Lauri Markkanen",
