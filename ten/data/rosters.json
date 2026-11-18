@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-18T16:59+09:00",
+ "asOf": "2026-11-18T19:44+09:00",
  "leagueId": "504060248",
  "season": 2027,
  "teams": [
@@ -44,7 +44,7 @@
      "5": 3
     },
     "misc": 0,
-    "moveToActive": 160,
+    "moveToActive": 166,
     "moveToIR": 6,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -92,7 +92,7 @@
      "5": 1
     },
     "misc": 0,
-    "moveToActive": 89,
+    "moveToActive": 93,
     "moveToIR": 1,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -140,7 +140,7 @@
      "5": 2
     },
     "misc": 0,
-    "moveToActive": 112,
+    "moveToActive": 120,
     "moveToIR": 3,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -163,9 +163,9 @@
     "Darius Acuff Jr.",
     "Myles Turner",
     "Jaime Jaquez Jr.",
-    "Wendell Carter Jr.",
     "Jalen Smith",
-    "Bones Hyland"
+    "Bones Hyland",
+    "Devin Vassell"
    ],
    "ir": [],
    "record": {
@@ -186,7 +186,7 @@
      "5": 2
     },
     "misc": 0,
-    "moveToActive": 90,
+    "moveToActive": 93,
     "moveToIR": 10,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -233,7 +233,7 @@
      "4": 1
     },
     "misc": 0,
-    "moveToActive": 80,
+    "moveToActive": 83,
     "moveToIR": 3,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -254,11 +254,11 @@
     "Darryn Peterson",
     "Norman Powell",
     "RJ Barrett",
-    "P.J. Washington",
     "Cade Cunningham",
     "Dillon Brooks",
     "Brook Lopez",
-    "Anthony Black"
+    "Anthony Black",
+    "Mo Bamba"
    ],
    "ir": [
     "Jalen Duren"
@@ -281,7 +281,7 @@
      "5": 2
     },
     "misc": 0,
-    "moveToActive": 87,
+    "moveToActive": 90,
     "moveToIR": 2,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -300,13 +300,13 @@
     "Immanuel Quickley",
     "Jared McCain",
     "Payton Pritchard",
-    "John Collins",
     "Onyeka Okongwu",
     "Kevin Durant",
     "James Harden",
     "VJ Edgecombe",
     "Christian Braun",
-    "Tyrese Proctor"
+    "Tyrese Proctor",
+    "Brice Sensabaugh"
    ],
    "ir": [
     "Anthony Edwards"
@@ -329,7 +329,7 @@
      "5": 2
     },
     "misc": 0,
-    "moveToActive": 95,
+    "moveToActive": 98,
     "moveToIR": 2,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -377,7 +377,7 @@
      "5": 3
     },
     "misc": 0,
-    "moveToActive": 107,
+    "moveToActive": 110,
     "moveToIR": 10,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -397,12 +397,12 @@
     "Jarrett Allen",
     "Alex Sarr",
     "Damian Lillard",
-    "CJ McCollum",
     "Yaxel Lendeborg",
     "Cam Spencer",
     "OG Anunoby",
     "Naji Marshall",
-    "Meleek Thomas"
+    "Meleek Thomas",
+    "Jalen Green"
    ],
    "ir": [
     "Stephen Curry"
@@ -425,7 +425,7 @@
      "5": 1
     },
     "misc": 0,
-    "moveToActive": 81,
+    "moveToActive": 85,
     "moveToIR": 4,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -471,7 +471,7 @@
      "4": 2
     },
     "misc": 0,
-    "moveToActive": 73,
+    "moveToActive": 76,
     "moveToIR": 3,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -494,7 +494,6 @@
    "Kawhi Leonard",
    "Grayson Allen",
    "Stephen Curry",
-   "CJ McCollum",
    "Deni Avdija",
    "Trey Murphy III",
    "Caleb Wilson",
@@ -520,8 +519,8 @@
    "Mark Williams",
    "Dereck Lively II",
    "Kingston Flemings",
-   "Dennis Schroder",
    "Isaiah Stewart",
+   "Dennis Schroder",
    "Maxime Raynaud",
    "Donte DiVincenzo",
    "Bradley Beal",

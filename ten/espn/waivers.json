@@ -1,6 +1,6 @@
 {
- "asOf": "2026-11-18T16:59+09:00",
- "scoringPeriodId": 29,
+ "asOf": "2026-11-18T19:45+09:00",
+ "scoringPeriodId": 30,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
   "waiverHours": 24,
@@ -165,7 +165,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "4437244",
+     "player": "Jalen Green",
      "from": "FA",
      "to": "JYP"
     },
@@ -189,7 +189,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "4395630",
+     "player": "Devin Vassell",
      "from": "FA",
      "to": "GGAM"
     },
@@ -213,7 +213,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "5105839",
+     "player": "Brice Sensabaugh",
      "from": "FA",
      "to": "TBG"
     },
@@ -237,7 +237,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "4277919",
+     "player": "Mo Bamba",
      "from": "FA",
      "to": "Doo"
     },
@@ -1599,126 +1599,6 @@
     }
    ],
    "bid": 0
-  },
-  {
-   "id": "3a3e8742-77cb-4a36-8014-327493e5e3d0",
-   "team": "IYH",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-11 16:41 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Day'Ron Sharpe",
-     "from": "FA",
-     "to": "IYH"
-    },
-    {
-     "type": "DROP",
-     "player": "4437244",
-     "from": "IYH",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "4df10db0-8fd0-417c-b3a4-1df9d68c5e79",
-   "team": "JYP",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-11 06:37 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Andre Drummond",
-     "from": "FA",
-     "to": "JYP"
-    },
-    {
-     "type": "DROP",
-     "player": "Julian Champagnie",
-     "from": "JYP",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "b38518b9-d2cd-4ab1-a46b-6e30de967fb7",
-   "team": "SONG",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-10 22:35 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Daniss Jenkins",
-     "from": "FA",
-     "to": "SONG"
-    },
-    {
-     "type": "DROP",
-     "player": "Tari Eason",
-     "from": "SONG",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "c0bfd9bf-e66e-482c-97eb-8ab601787f6b",
-   "team": "TBG",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-10 21:50 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Payton Pritchard",
-     "from": "FA",
-     "to": "TBG"
-    },
-    {
-     "type": "DROP",
-     "player": "Jeremiah Fears",
-     "from": "TBG",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "578fce7d-2cee-4af8-a1dd-08a636c381be",
-   "team": "GTD",
-   "mine": true,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-10 19:57 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Kyle Kuzma",
-     "from": "FA",
-     "to": "GTD"
-    },
-    {
-     "type": "DROP",
-     "player": "Daniel Gafford",
-     "from": "GTD",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
   }
  ],
  "onWaivers": [
@@ -1797,39 +1677,6 @@
    "droppedBy": {
     "by": "GGAM",
     "at": "2026-11-18 09:26 KST"
-   }
-  },
-  {
-   "id": 5174983,
-   "name": "Aday Mara",
-   "pro": "OKC",
-   "waiverClears": "2026-11-18 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "IYH",
-    "at": "2026-11-17 08:50 KST"
-   }
-  },
-  {
-   "id": 4397424,
-   "name": "Neemias Queta",
-   "pro": "BOS",
-   "waiverClears": "2026-11-18 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "SONG",
-    "at": "2026-11-17 06:25 KST"
-   }
-  },
-  {
-   "id": 4433192,
-   "name": "Tari Eason",
-   "pro": "HOU",
-   "waiverClears": "2026-11-18 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "IYH",
-    "at": "2026-11-17 10:59 KST"
    }
   }
  ],
