@@ -1,7 +1,7 @@
 {
- "planId": "20261116T2229",
+ "planId": "20261119T1410",
  "mode": "dry",
- "at": "2026-11-16T17:29-05:00",
+ "at": "2026-11-19T09:10-05:00",
  "items": [
   {
    "n": 1,
@@ -11,10 +11,10 @@
    ],
    "ok": true,
    "add": {
-    "name": "Robert Williams III",
+    "name": "Alex Sarr",
     "status": "FREEAGENT"
    },
-   "drop": "Jeremiah Fears",
+   "drop": "Zach Edey",
    "ir": null
   },
   {
@@ -25,7 +25,7 @@
    ],
    "ok": true,
    "add": {
-    "name": "Robert Williams III",
+    "name": "Josh Hart",
     "status": "FREEAGENT"
    },
    "drop": "Brandon Miller",
@@ -39,34 +39,16 @@
    ],
    "ok": true,
    "add": {
-    "name": "Mikal Bridges",
+    "name": "Brook Lopez",
     "status": "FREEAGENT"
    },
-   "drop": "Brandon Miller",
-   "ir": null
-  },
-  {
-   "n": 4,
-   "kind": "add/drop",
-   "checks": [
-    "✓ checks passed"
-   ],
-   "ok": true,
-   "add": {
-    "name": "Cam Spencer",
-    "status": "FREEAGENT"
-   },
-   "drop": "Brandon Miller",
+   "drop": "Jeremiah Fears",
    "ir": null
   }
  ],
  "ok": true,
- "scoringPeriodId": 28,
+ "scoringPeriodId": 31,
  "matchupPeriod": 5,
- "addsUsed": 1,
- "rosterMatchesPlan": true,
- "irNotOut": [
-  "Austin Reaves (DAY_TO_DAY)",
-  "Kyrie Irving (DAY_TO_DAY)"
- ]
+ "addsUsed": 3,
+ "rosterMatchesPlan": true
 }
