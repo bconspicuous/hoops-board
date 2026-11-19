@@ -2,7 +2,7 @@
  "date": "2026-11-19",
  "scoringPeriodId": 31,
  "hash": "6bc54d9e3f",
- "createdKST": "2026-11-19T19:47+09:00",
+ "createdKST": "2026-11-20T06:49+09:00",
  "mode": "plan",
  "moves": [],
  "lineup": [
@@ -12,8 +12,8 @@
    "name": "Ryan Rollins",
    "pro": "MIL",
    "game": true,
-   "inj": "OUT",
-   "out": true
+   "inj": "ACTIVE",
+   "out": false
   },
   {
    "slot": "SG",
@@ -84,8 +84,8 @@
    "name": "Andrew Nembhard",
    "pro": "IND",
    "game": false,
-   "inj": "OUT",
-   "out": true
+   "inj": "DAY_TO_DAY",
+   "out": false
   },
   {
    "slot": "UTIL",
@@ -128,6 +128,6 @@
   "Kawhi Leonard"
  ],
  "irReturn": [],
- "playing": 4,
+ "playing": 5,
  "status": "planned"
 }
