@@ -1,7 +1,7 @@
 {
- "createdKST": "2026-11-19T13:49+09:00",
+ "createdKST": "2026-11-19T19:48+09:00",
  "mode": "plan",
- "spid": 30,
+ "spid": 31,
  "matchupPeriod": 5,
  "add": {
   "id": 5174983,
@@ -16,12 +16,12 @@
   "matchup": "3/7"
  },
  "drop": {
-  "id": 3135045,
-  "name": "Grayson Allen",
+  "id": 4278585,
+  "name": "Collin Gillespie",
   "slot": 12,
-  "inj": "DAY_TO_DAY"
+  "inj": "ACTIVE"
  },
- "hash": "8c92a30b43",
+ "hash": "3b6f320eef",
  "errors": [],
  "warnings": [
   "방출 선수는 24시간 웨이버 — 그 사이 다른 팀이 데려갈 수 있어 되돌릴 수 없음"
