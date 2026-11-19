@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-19T17:00+09:00",
+ "asOf": "2026-11-19T19:45+09:00",
  "scoringPeriodId": 31,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -67,16 +67,16 @@
    "acq": 18
   },
   {
-   "team": "IYH",
-   "name": "Jongno Karina",
-   "rank": 9,
-   "acq": 21
-  },
-  {
    "team": "Doo",
    "name": "Helio honeymoons",
-   "rank": 10,
+   "rank": 9,
    "acq": 13
+  },
+  {
+   "team": "IYH",
+   "name": "Jongno Karina",
+   "rank": 10,
+   "acq": 22
   }
  ],
  "myPending": [
@@ -154,6 +154,30 @@
   }
  ],
  "transactions": [
+  {
+   "id": "129d5820-5a13-4f68-95f8-d2ed7d01a8d1",
+   "team": "IYH",
+   "mine": false,
+   "type": "WAIVER",
+   "status": "EXECUTED",
+   "proposed": "2026-11-19 18:08 KST",
+   "processed": "2026-11-19 18:08 KST",
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Wendell Carter Jr.",
+     "from": "FA",
+     "to": "IYH"
+    },
+    {
+     "type": "DROP",
+     "player": "Zach Edey",
+     "from": "IYH",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
   {
    "id": "0d80e555-087e-48ee-a75a-8ca129ea9f11",
    "team": "SMS",
@@ -1495,58 +1519,14 @@
  ],
  "onWaivers": [
   {
-   "id": 2490149,
-   "name": "CJ McCollum",
-   "pro": "ATL",
-   "waiverClears": "2026-11-19 17:00 KST",
-   "inj": "OUT",
-   "droppedBy": {
-    "by": "JYP",
-    "at": "2026-11-18 15:37 KST"
-   }
-  },
-  {
-   "id": 4433247,
-   "name": "Jonathan Kuminga",
-   "pro": "MIN",
-   "waiverClears": "2026-11-19 17:00 KST",
-   "inj": "DAY_TO_DAY",
-   "droppedBy": {
-    "by": "SMS",
-    "at": "2026-11-17 20:14 KST"
-   }
-  },
-  {
-   "id": 4277847,
-   "name": "Wendell Carter Jr.",
-   "pro": "ORL",
-   "waiverClears": "2026-11-19 17:00 KST",
+   "id": 4600663,
+   "name": "Zach Edey",
+   "pro": "MEM",
+   "waiverClears": "2026-11-20 17:00 KST",
    "inj": "ACTIVE",
    "droppedBy": {
-    "by": "GGAM",
-    "at": "2026-11-18 15:27 KST"
-   }
-  },
-  {
-   "id": 3908845,
-   "name": "John Collins",
-   "pro": "DET",
-   "waiverClears": "2026-11-19 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "TBG",
-    "at": "2026-11-18 14:50 KST"
-   }
-  },
-  {
-   "id": 3157465,
-   "name": "Duncan Robinson",
-   "pro": "DET",
-   "waiverClears": "2026-11-19 17:00 KST",
-   "inj": "OUT",
-   "droppedBy": {
-    "by": "GTD",
-    "at": "2026-11-18 07:03 KST"
+    "by": "IYH",
+    "at": "2026-11-19 18:08 KST"
    }
   },
   {
@@ -1558,28 +1538,6 @@
    "droppedBy": {
     "by": "SMS",
     "at": "2026-11-19 14:34 KST"
-   }
-  },
-  {
-   "id": 4278078,
-   "name": "P.J. Washington",
-   "pro": "DAL",
-   "waiverClears": "2026-11-19 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "Doo",
-    "at": "2026-11-18 14:19 KST"
-   }
-  },
-  {
-   "id": 6589,
-   "name": "Draymond Green",
-   "pro": "GSW",
-   "waiverClears": "2026-11-19 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "GGAM",
-    "at": "2026-11-18 09:26 KST"
    }
   },
   {
@@ -1610,7 +1568,6 @@
   "gameId",
   "id",
   "members",
-  "pendingTransactions",
   "scoringPeriodId",
   "seasonId",
   "segmentId",
