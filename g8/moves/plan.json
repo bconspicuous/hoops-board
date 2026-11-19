@@ -1,123 +1,164 @@
 {
  "week": 5,
  "opp": "Zero Sugar",
- "acqLeft": 6,
- "dropCandidates": [],
+ "acqLeft": 4,
+ "dropCandidates": [
+  "Brandon Miller",
+  "Jeremiah Fears",
+  "AJ Dybantsa",
+  "Norman Powell",
+  "Zach Edey"
+ ],
  "base": {
-  "wk": 5.83,
-  "champ": 0.176,
-  "p1": 0.415,
-  "epct": 0.554
+  "wk": 4.723,
+  "champ": 0.2875,
+  "p1": 0.4264,
+  "epct": 0.557
  },
  "protect": [
   "Shai Gilgeous-Alexander",
   "Anthony Davis",
-  "James Harden",
   "Karl-Anthony Towns",
-  "Michael Porter Jr.",
-  "Tyler Herro",
+  "Kyrie Irving",
+  "James Harden",
   "Miles Bridges",
-  "Norman Powell"
+  "Michael Porter Jr.",
+  "Tyler Herro"
  ],
- "droppable": [],
- "flags": [
-  {
-   "kind": "ir-ineligible",
-   "player": "Austin Reaves",
-   "status": "DTD",
-   "note": "IR 선수가 O가 아님 — ESPN이 영입을 막을 수 있음(감독 판단: DTD는 영입 가능). 첫 사례에서 실제 동작을 기록"
-  },
-  {
-   "kind": "ir-ineligible",
-   "player": "Kyrie Irving",
-   "status": "DTD",
-   "note": "IR 선수가 O가 아님 — ESPN이 영입을 막을 수 있음(감독 판단: DTD는 영입 가능). 첫 사례에서 실제 동작을 기록"
-  }
+ "droppable": [
+  "Brandon Miller",
+  "Jeremiah Fears",
+  "AJ Dybantsa",
+  "Norman Powell",
+  "Zach Edey"
  ],
+ "flags": [],
  "items": [
   {
    "n": 1,
    "kind": "add/drop",
-   "add": "Robert Williams III",
-   "addEspnId": 4066211,
+   "add": "Alex Sarr",
+   "addEspnId": 5160992,
    "addOwner": "FA",
-   "drop": "Jeremiah Fears",
+   "drop": "Zach Edey",
    "ir": null,
-   "weekGain": 0.26,
-   "titleGain": 0.133,
-   "p1Gain": 0.263,
-   "conflicts": [
-    2
-   ],
+   "weekGain": 0.352,
+   "titleGain": 0.0879,
+   "p1Gain": 0.1934,
+   "epctGain": 0.0151,
+   "addTeam": "WAS",
+   "addPos": "PF,C",
+   "dropValue": -4.68,
    "status": "proposed",
-   "note": "화요일부터 반영 시 주간 +0.13 · 시즌 효과 변형 15.2/15.7/13.3%p"
+   "conflicts": [],
+   "addHealth": {
+    "status": "정상",
+    "injury": null,
+    "returnDate": null,
+    "report": null,
+    "g": 15,
+    "min": 27.2
+   },
+   "firstProposedAt": "2026-11-19T14:10:16.222Z"
   },
   {
    "n": 2,
    "kind": "add/drop",
-   "add": "Robert Williams III",
-   "addEspnId": 4066211,
+   "add": "Josh Hart",
+   "addEspnId": 3062679,
    "addOwner": "FA",
    "drop": "Brandon Miller",
    "ir": null,
-   "weekGain": 0.4,
-   "titleGain": 0.104,
-   "p1Gain": 0.23,
-   "conflicts": [
-    1,
-    3,
-    4
-   ],
+   "weekGain": 0.442,
+   "titleGain": 0.0379,
+   "p1Gain": 0.1153,
+   "epctGain": 0.0082,
+   "addTeam": "NYK",
+   "addPos": "SG,SF",
+   "dropValue": -4.37,
    "status": "proposed",
-   "note": "화요일부터 +0.26 · 시즌 효과 변형 15.8/16.0/10.4%p"
+   "conflicts": [],
+   "addHealth": {
+    "status": "정상",
+    "injury": null,
+    "returnDate": null,
+    "report": null,
+    "g": 11,
+    "min": 29.8
+   },
+   "firstProposedAt": "2026-11-19T14:10:16.222Z"
   },
   {
    "n": 3,
    "kind": "add/drop",
-   "add": "Mikal Bridges",
-   "addEspnId": 3147657,
+   "add": "Brook Lopez",
+   "addEspnId": 3448,
    "addOwner": "FA",
-   "drop": "Brandon Miller",
+   "drop": "Jeremiah Fears",
    "ir": null,
-   "weekGain": 0.34,
-   "titleGain": 0.025,
-   "p1Gain": 0.012,
-   "conflicts": [
-    2,
-    4
-   ],
+   "weekGain": 0.187,
+   "titleGain": 0.0508,
+   "p1Gain": 0.0897,
+   "epctGain": 0.0054,
+   "addTeam": "LAC",
+   "addPos": "C",
+   "dropValue": -4.48,
    "status": "proposed",
-   "note": "승인 시점 무관 +0.34 · 시즌 변형 2.7/2.5/2.6%p"
-  },
-  {
-   "n": 4,
-   "kind": "add/drop",
-   "add": "Cam Spencer",
-   "addEspnId": 4433083,
-   "addOwner": "FA",
-   "drop": "Brandon Miller",
-   "ir": null,
-   "weekGain": 0.34,
-   "titleGain": 0.011,
-   "p1Gain": 0.015,
-   "conflicts": [
-    2,
-    3
-   ],
-   "status": "proposed",
-   "note": "화요일부터 +0.19 · 시즌 변형 1.1/1.3/1.3%p"
+   "conflicts": [],
+   "addHealth": {
+    "status": "정상",
+    "injury": null,
+    "returnDate": null,
+    "report": null,
+    "g": 13,
+    "min": 24.4
+   },
+   "firstProposedAt": "2026-11-19T14:10:16.222Z"
   }
  ],
- "screened": [],
- "createdAt": "2026-11-16T22:29:10Z",
- "id": "20261116T2229",
- "rosterSig": "AJ Dybantsa|Anthony Davis|Brandon Miller|Darryn Peterson|Day'Ron Sharpe|James Harden|Jeremiah Fears|Karl-Anthony Towns|Michael Porter Jr.|Miles Bridges|Norman Powell|Shai Gilgeous-Alexander|Tyler Herro#Austin Reaves|Kyrie Irving",
+ "screened": [
+  {
+   "add": "Alex Sarr",
+   "drop": "Zach Edey",
+   "ir": null,
+   "wk": 0.352,
+   "title": 0.0879
+  },
+  {
+   "add": "Josh Hart",
+   "drop": "Brandon Miller",
+   "ir": null,
+   "wk": 0.442,
+   "title": 0.0379
+  },
+  {
+   "add": "Brook Lopez",
+   "drop": "Jeremiah Fears",
+   "ir": null,
+   "wk": 0.187,
+   "title": 0.0508
+  },
+  {
+   "add": "Keegan Murray",
+   "drop": "Norman Powell",
+   "ir": null,
+   "wk": 0.081,
+   "title": 0.0262
+  },
+  {
+   "add": "Matas Buzelis",
+   "drop": "AJ Dybantsa",
+   "ir": null,
+   "wk": 0.181,
+   "title": 0.0124
+  }
+ ],
+ "createdAt": "2026-11-19T14:10:16.222Z",
+ "id": "20261119T1410",
+ "rosterSig": "AJ Dybantsa|Anthony Davis|Brandon Miller|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Michael Porter Jr.|Miles Bridges|Norman Powell|Shai Gilgeous-Alexander|Tyler Herro|Zach Edey#Austin Reaves",
  "newItems": [
   1,
   2,
-  3,
-  4
- ],
- "basis": "보수 모드(과대추정 억제): calib 수축 2배 + GP 중립 + 전 팀 동일 스트리밍·팀별 실제 영입 속도; 시즌 효과 = 3개 가정 중 최솟값",
- "note": "감독 요청(2026-11-17): Miller(이번 주 2경기) 자리 영입 후보. 1번은 Claude 대안(Miller 유지, Fears 방출)"
+  3
+ ]
 }
