@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-20T13:45+09:00",
+ "asOf": "2026-11-20T16:50+09:00",
  "scoringPeriodId": 31,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -154,6 +154,24 @@
   }
  ],
  "transactions": [
+  {
+   "id": "0bc7dd92-84c5-4dee-8098-c548745879e2",
+   "team": "GGAM",
+   "mine": false,
+   "type": "ROSTER",
+   "status": "EXECUTED",
+   "proposed": "2026-11-20 15:13 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "DROP",
+     "player": "Bones Hyland",
+     "from": "GGAM",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
   {
    "id": "35e329b8-3591-471b-af80-3d6a88da9a4b",
    "team": "Doo",
@@ -1637,6 +1655,17 @@
    "droppedBy": {
     "by": "TBG",
     "at": "2026-11-19 11:07 KST"
+   }
+  },
+  {
+   "id": 4592492,
+   "name": "Bones Hyland",
+   "pro": "MIN",
+   "waiverClears": "2026-11-21 17:00 KST",
+   "inj": "ACTIVE",
+   "droppedBy": {
+    "by": "GGAM",
+    "at": "2026-11-20 15:13 KST"
    }
   }
  ],
