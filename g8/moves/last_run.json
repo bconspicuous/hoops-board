@@ -1,7 +1,7 @@
 {
- "planId": "20261120T1420",
+ "planId": "20261120T2146",
  "mode": "dry",
- "at": "2026-11-20T09:21-05:00",
+ "at": "2026-11-20T16:47-05:00",
  "items": [
   {
    "n": 1,
@@ -11,28 +11,14 @@
    ],
    "ok": true,
    "add": {
-    "name": "Josh Hart",
+    "name": "Alex Sarr",
     "status": "FREEAGENT"
    },
-   "drop": "Brandon Miller",
+   "drop": "AJ Dybantsa",
    "ir": null
   },
   {
    "n": 2,
-   "kind": "add/drop",
-   "checks": [
-    "✓ checks passed"
-   ],
-   "ok": true,
-   "add": {
-    "name": "Alex Sarr",
-    "status": "FREEAGENT"
-   },
-   "drop": "Matas Buzelis",
-   "ir": null
-  },
-  {
-   "n": 3,
    "kind": "activate",
    "checks": [
     "✓ checks passed"
@@ -46,7 +32,7 @@
  "ok": true,
  "scoringPeriodId": 32,
  "matchupPeriod": 5,
- "addsUsed": 5,
+ "addsUsed": 6,
  "rosterMatchesPlan": true,
  "irNotOut": [
   "Zach Edey (DAY_TO_DAY)"
