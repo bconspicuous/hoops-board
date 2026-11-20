@@ -2,7 +2,7 @@
  "date": "2026-11-19",
  "scoringPeriodId": 31,
  "hash": "6bc54d9e3f",
- "createdKST": "2026-11-20T06:49+09:00",
+ "createdKST": "2026-11-20T13:48+09:00",
  "mode": "plan",
  "moves": [],
  "lineup": [
@@ -39,7 +39,7 @@
    "name": "Toumani Camara",
    "pro": "POR",
    "game": true,
-   "inj": "DAY_TO_DAY",
+   "inj": "ACTIVE",
    "out": false
   },
   {
@@ -111,8 +111,8 @@
    "name": "Grayson Allen",
    "pro": "CHA",
    "game": false,
-   "inj": "DAY_TO_DAY",
-   "out": false
+   "inj": "OUT",
+   "out": true
   },
   {
    "slot": "BE",
