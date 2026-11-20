@@ -26,7 +26,15 @@ t = open("v22/template.html", encoding="utf8").read(); ref = open("ref22.json", 
 es = json.dumps(emb, ensure_ascii=False, separators=(",", ":"))
 assert "</script" not in es.lower() and "</script" not in ref.lower()
 page = t.replace("__REF__", ref).replace("__EMBED__", es)
-open("v22/dashboard.html", "w", encoding="utf8").write(page)
+# 감독 지정(2026-11-20): the claude.ai artifact is titled "8팀 리그 시뮬레이션"
+ART_TITLE = "8팀 리그 시뮬레이션"
+art = page
+for a, b in [("<title>리그 팀별 대시보드 v2.2</title>", f"<title>{ART_TITLE}</title>"),
+             ('<h1><span id="h1-team">Twindragons</span> 시즌 대시보드 <small class="ver">v2.2</small></h1>', f'<h1>{ART_TITLE} <small class="ver" id="h1-team">Twindragons</small></h1>'),
+             ("document.title = `${sh(ME)} · 리그 팀별 대시보드 v2.2`;", f"document.title = \"{ART_TITLE}\";")]:
+    assert art.count(a) == 1, a
+    art = art.replace(a, b)
+open("v22/dashboard.html", "w", encoding="utf8").write(art)
 i = page.index("</style>") + len("</style>")
 head = page[:i].replace('<meta name="claude:viewport-fit-sides" content="cover">\n', "").replace("<style>\n", "<style>\n[hidden] { display: none !important; }\n", 1)
 doc = ('<!doctype html>\n<html lang="ko">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">\n'
