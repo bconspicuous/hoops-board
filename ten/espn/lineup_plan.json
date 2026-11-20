@@ -1,34 +1,34 @@
 {
- "date": "2026-11-19",
- "scoringPeriodId": 31,
- "hash": "6bc54d9e3f",
- "createdKST": "2026-11-20T13:48+09:00",
+ "date": "2026-11-20",
+ "scoringPeriodId": 32,
+ "hash": "56afd27835",
+ "createdKST": "2026-11-20T19:47+09:00",
  "mode": "plan",
  "moves": [],
  "lineup": [
   {
    "slot": "PG",
    "cur": "PG",
-   "name": "Ryan Rollins",
-   "pro": "MIL",
+   "name": "Grayson Allen",
+   "pro": "CHA",
    "game": true,
-   "inj": "ACTIVE",
-   "out": false
+   "inj": "OUT",
+   "out": true
   },
   {
    "slot": "SG",
    "cur": "SG",
-   "name": "Ajay Mitchell",
-   "pro": "OKC",
-   "game": false,
-   "inj": "ACTIVE",
+   "name": "Andrew Nembhard",
+   "pro": "IND",
+   "game": true,
+   "inj": "DAY_TO_DAY",
    "out": false
   },
   {
    "slot": "SF",
    "cur": "SF",
-   "name": "Julian Champagnie",
-   "pro": "SAS",
+   "name": "Miles Bridges",
+   "pro": "PHX",
    "game": true,
    "inj": "ACTIVE",
    "out": false
@@ -36,60 +36,6 @@
   {
    "slot": "PF",
    "cur": "PF",
-   "name": "Toumani Camara",
-   "pro": "POR",
-   "game": true,
-   "inj": "ACTIVE",
-   "out": false
-  },
-  {
-   "slot": "C",
-   "cur": "C",
-   "name": "Karl-Anthony Towns",
-   "pro": "NYK",
-   "game": true,
-   "inj": "ACTIVE",
-   "out": false
-  },
-  {
-   "slot": "G",
-   "cur": "G",
-   "name": "Klay Thompson",
-   "pro": "MIA",
-   "game": false,
-   "inj": "ACTIVE",
-   "out": false
-  },
-  {
-   "slot": "F",
-   "cur": "F",
-   "name": "Keldon Johnson",
-   "pro": "SAS",
-   "game": true,
-   "inj": "ACTIVE",
-   "out": false
-  },
-  {
-   "slot": "UTIL",
-   "cur": "UTIL",
-   "name": "Miles Bridges",
-   "pro": "PHX",
-   "game": false,
-   "inj": "ACTIVE",
-   "out": false
-  },
-  {
-   "slot": "UTIL",
-   "cur": "UTIL",
-   "name": "Andrew Nembhard",
-   "pro": "IND",
-   "game": false,
-   "inj": "DAY_TO_DAY",
-   "out": false
-  },
-  {
-   "slot": "UTIL",
-   "cur": "UTIL",
    "name": "Paul George",
    "pro": "BOS",
    "game": false,
@@ -97,10 +43,64 @@
    "out": false
   },
   {
-   "slot": "BE",
-   "cur": "BE",
+   "slot": "C",
+   "cur": "C",
    "name": "Ivica Zubac",
    "pro": "IND",
+   "game": true,
+   "inj": "ACTIVE",
+   "out": false
+  },
+  {
+   "slot": "G",
+   "cur": "G",
+   "name": "Ajay Mitchell",
+   "pro": "OKC",
+   "game": true,
+   "inj": "ACTIVE",
+   "out": false
+  },
+  {
+   "slot": "F",
+   "cur": "F",
+   "name": "Julian Champagnie",
+   "pro": "SAS",
+   "game": false,
+   "inj": "ACTIVE",
+   "out": false
+  },
+  {
+   "slot": "UTIL",
+   "cur": "UTIL",
+   "name": "Karl-Anthony Towns",
+   "pro": "NYK",
+   "game": false,
+   "inj": "ACTIVE",
+   "out": false
+  },
+  {
+   "slot": "UTIL",
+   "cur": "UTIL",
+   "name": "Klay Thompson",
+   "pro": "MIA",
+   "game": false,
+   "inj": "ACTIVE",
+   "out": false
+  },
+  {
+   "slot": "UTIL",
+   "cur": "UTIL",
+   "name": "Collin Gillespie",
+   "pro": "PHX",
+   "game": true,
+   "inj": "ACTIVE",
+   "out": false
+  },
+  {
+   "slot": "BE",
+   "cur": "BE",
+   "name": "Toumani Camara",
+   "pro": "POR",
    "game": false,
    "inj": "ACTIVE",
    "out": false
@@ -108,17 +108,17 @@
   {
    "slot": "BE",
    "cur": "BE",
-   "name": "Grayson Allen",
-   "pro": "CHA",
+   "name": "Ryan Rollins",
+   "pro": "MIL",
    "game": false,
-   "inj": "OUT",
-   "out": true
+   "inj": "ACTIVE",
+   "out": false
   },
   {
    "slot": "BE",
    "cur": "BE",
-   "name": "Collin Gillespie",
-   "pro": "PHX",
+   "name": "Keldon Johnson",
+   "pro": "SAS",
    "game": false,
    "inj": "ACTIVE",
    "out": false
