@@ -1,20 +1,21 @@
-# 라인업 제안 2026-11-20 (미국 동부) · 5주차 vs Zero Sugar · 상태: nochange-starters · 기준: 프로젝션 오차 보정(실제 기록 반영)
-출전 10명 · 기대 카테고리 승 5.46 (현재 ESPN 라인업 5.46, +0.00)
-벤치(출전 선수 중): 없음
-변경: Shai Gilgeous-Alexander PG→G, James Harden UTIL→PG, Michael Porter Jr. PF→UTIL, Brandon Miller SG→SF, Miles Bridges UTIL→PF, Jeremiah Fears G→SG, Norman Powell SF→UTIL
+# 라인업 제안 2026-11-20 (미국 동부) · 5주차 vs Zero Sugar · 상태: pending · 기준: 프로젝션 오차 보정(실제 기록 반영)
+출전 11명 · 기대 카테고리 승 5.51 (현재 ESPN 라인업 5.46, +0.05)
+벤치(출전 선수 중): AJ Dybantsa
+변경: Michael Porter Jr. PF→F, Miles Bridges BE→PF, AJ Dybantsa UTIL→BE, Matas Buzelis F→UTIL
+차선: 벤치 Jalen Suggs 5.48 / 벤치 Matas Buzelis 5.47 / 벤치 Jeremiah Fears 5.46
 
 | 슬롯 | 선수 |
 |---|---|
-| PG | James Harden |
-| SG | Jeremiah Fears |
-| SF | Brandon Miller |
+| PG | Shai Gilgeous-Alexander |
+| SG | Brandon Miller |
+| SF | Norman Powell |
 | PF | Miles Bridges |
 | C | Anthony Davis |
-| G | Shai Gilgeous-Alexander |
-| F | Matas Buzelis |
-| UTIL | Michael Porter Jr. |
-| UTIL | AJ Dybantsa |
-| UTIL | Norman Powell |
+| G | Jeremiah Fears |
+| F | Michael Porter Jr. |
+| UTIL | James Harden |
+| UTIL | Matas Buzelis |
+| UTIL | Jalen Suggs |
 | BE | Karl-Anthony Towns |
 | BE | Kyrie Irving |
-| BE | Tyler Herro |
+| BE | AJ Dybantsa |

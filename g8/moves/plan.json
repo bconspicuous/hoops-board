@@ -1,19 +1,19 @@
 {
  "week": 5,
  "opp": "Zero Sugar",
- "acqLeft": 2,
+ "acqLeft": 1,
  "dropCandidates": [
   "Brandon Miller",
   "Jeremiah Fears",
   "AJ Dybantsa",
-  "Norman Powell",
-  "Matas Buzelis"
+  "Matas Buzelis",
+  "Jalen Suggs"
  ],
  "base": {
-  "wk": 5.468,
-  "champ": 0.3538,
-  "p1": 0.5016,
-  "epct": 0.5631
+  "wk": 5.601,
+  "champ": 0.354,
+  "p1": 0.5275,
+  "epct": 0.5632
  },
  "protect": [
   "Shai Gilgeous-Alexander",
@@ -23,14 +23,14 @@
   "James Harden",
   "Miles Bridges",
   "Michael Porter Jr.",
-  "Tyler Herro"
+  "Norman Powell"
  ],
  "droppable": [
   "Brandon Miller",
   "Jeremiah Fears",
   "AJ Dybantsa",
-  "Norman Powell",
-  "Matas Buzelis"
+  "Matas Buzelis",
+  "Jalen Suggs"
  ],
  "flags": [
   {
@@ -44,45 +44,18 @@
   {
    "n": 1,
    "kind": "add/drop",
-   "add": "Josh Hart",
-   "addEspnId": 3062679,
-   "addOwner": "FA",
-   "drop": "Brandon Miller",
-   "ir": null,
-   "weekGain": 0.322,
-   "titleGain": 0.0394,
-   "p1Gain": 0.1283,
-   "epctGain": 0.0084,
-   "addTeam": "NYK",
-   "addPos": "SG,SF",
-   "dropValue": -4.35,
-   "status": "proposed",
-   "conflicts": [],
-   "addHealth": {
-    "status": "정상",
-    "injury": null,
-    "returnDate": null,
-    "report": null,
-    "g": 12,
-    "min": 29.7
-   },
-   "firstProposedAt": "2026-11-20T14:20:52.825Z"
-  },
-  {
-   "n": 2,
-   "kind": "add/drop",
    "add": "Alex Sarr",
    "addEspnId": 5160992,
    "addOwner": "FA",
-   "drop": "Matas Buzelis",
+   "drop": "AJ Dybantsa",
    "ir": null,
-   "weekGain": 0.083,
-   "titleGain": 0.0514,
-   "p1Gain": 0.1089,
-   "epctGain": 0.0095,
+   "weekGain": 0.202,
+   "titleGain": 0.0766,
+   "p1Gain": 0.1781,
+   "epctGain": 0.0145,
    "addTeam": "WAS",
    "addPos": "PF,C",
-   "dropValue": -3.62,
+   "dropValue": -3.77,
    "status": "proposed",
    "conflicts": [],
    "addHealth": {
@@ -93,17 +66,17 @@
     "g": 15,
     "min": 27.2
    },
-   "firstProposedAt": "2026-11-20T14:20:52.825Z"
+   "firstProposedAt": "2026-11-20T21:46:12.790Z"
   },
   {
-   "n": 3,
+   "n": 2,
    "kind": "activate",
    "ir": "Zach Edey",
    "drop": "Brandon Miller",
-   "weekGain": -0.041,
-   "titleGain": 0.0711,
-   "p1Gain": 0.1279,
-   "epctGain": 0.0109,
+   "weekGain": 0.012,
+   "titleGain": 0.0388,
+   "p1Gain": 0.0827,
+   "epctGain": 0.0086,
    "dropValue": -4.35,
    "status": "proposed",
    "note": "IR 복귀(상태 DTD)",
@@ -116,52 +89,51 @@
     "g": 12,
     "min": 20.8
    },
-   "firstProposedAt": "2026-11-20T14:20:52.825Z"
+   "firstProposedAt": "2026-11-20T21:46:12.790Z"
   }
  ],
  "screened": [
   {
+   "add": "Alex Sarr",
+   "drop": "AJ Dybantsa",
+   "ir": null,
+   "wk": 0.202,
+   "title": 0.0766
+  },
+  {
    "add": "Josh Hart",
    "drop": "Brandon Miller",
    "ir": null,
-   "wk": 0.322,
-   "title": 0.0394
+   "wk": 0.381,
+   "title": 0.0226
   },
   {
-   "add": "Alex Sarr",
-   "drop": "Matas Buzelis",
+   "add": "John Collins",
+   "drop": "Jeremiah Fears",
    "ir": null,
-   "wk": 0.083,
-   "title": 0.0514
+   "wk": 0.059,
+   "title": 0.0402
+  },
+  {
+   "add": "Derik Queen",
+   "drop": "Jalen Suggs",
+   "ir": null,
+   "wk": 0.076,
+   "title": -0.018
   },
   {
    "add": "P.J. Washington",
-   "drop": "Jeremiah Fears",
+   "drop": "Matas Buzelis",
    "ir": null,
-   "wk": 0.05,
-   "title": 0.0529
-  },
-  {
-   "add": "Jalen Smith",
-   "drop": "Norman Powell",
-   "ir": null,
-   "wk": 0.012,
-   "title": 0.0388
-  },
-  {
-   "add": "Jalen Suggs",
-   "drop": "AJ Dybantsa",
-   "ir": null,
-   "wk": 0.199,
-   "title": 0.0071
+   "wk": 0.103,
+   "title": -0.0376
   }
  ],
- "createdAt": "2026-11-20T14:20:52.825Z",
- "id": "20261120T1420",
- "rosterSig": "AJ Dybantsa|Anthony Davis|Brandon Miller|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Matas Buzelis|Michael Porter Jr.|Miles Bridges|Norman Powell|Shai Gilgeous-Alexander|Tyler Herro#Austin Reaves|Zach Edey",
+ "createdAt": "2026-11-20T21:46:12.790Z",
+ "id": "20261120T2146",
+ "rosterSig": "AJ Dybantsa|Anthony Davis|Brandon Miller|Jalen Suggs|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Matas Buzelis|Michael Porter Jr.|Miles Bridges|Norman Powell|Shai Gilgeous-Alexander#Austin Reaves|Zach Edey",
  "newItems": [
   1,
-  2,
-  3
+  2
  ]
 }
