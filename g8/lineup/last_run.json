@@ -1,112 +1,61 @@
 {
- "planId": "2026-11-16T0543Z",
+ "planId": "2026-11-20T2146Z",
  "mode": "dry",
- "date": "2026-11-16",
- "at": "2026-11-16T00:44-05:00",
+ "date": "2026-11-20",
+ "at": "2026-11-20T16:47-05:00",
  "moves": [
   {
-   "name": "Jeremiah Fears",
-   "from": "BE",
-   "to": "PG"
-  },
-  {
-   "name": "Norman Powell",
-   "from": "BE",
-   "to": "SG"
-  }
- ],
- "skipped": [
-  {
-   "name": "Shai Gilgeous-Alexander",
-   "from": "UTIL",
-   "to": "G",
-   "why": "game started / locked"
-  },
-  {
-   "name": "Karl-Anthony Towns",
-   "from": "C",
-   "to": "UTIL",
-   "why": "game started / locked"
-  },
-  {
-   "name": "Anthony Davis",
+   "name": "Michael Porter Jr.",
    "from": "PF",
-   "to": "C",
-   "why": "game started / locked"
-  },
-  {
-   "name": "Kyrie Irving",
-   "from": "G",
-   "to": "UTIL",
-   "why": "game started / locked"
-  },
-  {
-   "name": "Tyler Herro",
-   "from": "SG",
-   "to": "BE",
-   "why": "game started / locked"
+   "to": "F"
   },
   {
    "name": "Miles Bridges",
-   "from": "SF",
-   "to": "PF",
-   "why": "game started / locked"
-  },
-  {
-   "name": "Darryn Peterson",
-   "from": "PG",
-   "to": "BE",
-   "why": "game started / locked"
+   "from": "BE",
+   "to": "PF"
   },
   {
    "name": "AJ Dybantsa",
    "from": "UTIL",
-   "to": "SF",
-   "why": "game started / locked"
+   "to": "BE"
+  },
+  {
+   "name": "Matas Buzelis",
+   "from": "F",
+   "to": "UTIL"
   }
  ],
- "ok": false,
- "scoringPeriodId": 27,
+ "skipped": [],
+ "ok": true,
+ "scoringPeriodId": 32,
  "finalLineup": [
   [
    "PG",
-   "Jeremiah Fears"
-  ],
-  [
-   "PG",
-   "Darryn Peterson"
+   "Shai Gilgeous-Alexander"
   ],
   [
    "SG",
-   "Tyler Herro"
-  ],
-  [
-   "SG",
-   "Norman Powell"
-  ],
-  [
-   "SF",
-   "Miles Bridges"
-  ],
-  [
-   "PF",
-   "Anthony Davis"
-  ],
-  [
-   "C",
-   "Karl-Anthony Towns"
-  ],
-  [
-   "G",
-   "Kyrie Irving"
-  ],
-  [
-   "F",
    "Brandon Miller"
   ],
   [
-   "UTIL",
-   "Shai Gilgeous-Alexander"
+   "SF",
+   "Norman Powell"
+  ],
+  [
+   "PF",
+   "Miles Bridges"
+  ],
+  [
+   "C",
+   "Anthony Davis"
+  ],
+  [
+   "G",
+   "Jeremiah Fears"
+  ],
+  [
+   "F",
+   "Michael Porter Jr."
   ],
   [
    "UTIL",
@@ -114,6 +63,22 @@
   ],
   [
    "UTIL",
+   "Matas Buzelis"
+  ],
+  [
+   "UTIL",
+   "Jalen Suggs"
+  ],
+  [
+   "BE",
+   "Karl-Anthony Towns"
+  ],
+  [
+   "BE",
+   "Kyrie Irving"
+  ],
+  [
+   "BE",
    "AJ Dybantsa"
   ],
   [
@@ -122,8 +87,8 @@
   ],
   [
    "IR",
-   "Michael Porter Jr."
+   "Zach Edey"
   ]
  ],
- "error": "resulting lineup exceeds slot counts {'SG': 2, 'PG': 2} (a locked player blocks a swap?) — nothing submitted"
+ "note": "dry run — nothing written"
 }
