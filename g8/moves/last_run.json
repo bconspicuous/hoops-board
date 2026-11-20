@@ -1,24 +1,10 @@
 {
- "planId": "20261119T1410",
+ "planId": "20261120T1420",
  "mode": "dry",
- "at": "2026-11-19T09:10-05:00",
+ "at": "2026-11-20T09:21-05:00",
  "items": [
   {
    "n": 1,
-   "kind": "add/drop",
-   "checks": [
-    "✓ checks passed"
-   ],
-   "ok": true,
-   "add": {
-    "name": "Alex Sarr",
-    "status": "FREEAGENT"
-   },
-   "drop": "Zach Edey",
-   "ir": null
-  },
-  {
-   "n": 2,
    "kind": "add/drop",
    "checks": [
     "✓ checks passed"
@@ -32,23 +18,37 @@
    "ir": null
   },
   {
-   "n": 3,
+   "n": 2,
    "kind": "add/drop",
    "checks": [
     "✓ checks passed"
    ],
    "ok": true,
    "add": {
-    "name": "Brook Lopez",
+    "name": "Alex Sarr",
     "status": "FREEAGENT"
    },
-   "drop": "Jeremiah Fears",
+   "drop": "Matas Buzelis",
    "ir": null
+  },
+  {
+   "n": 3,
+   "kind": "activate",
+   "checks": [
+    "✓ checks passed"
+   ],
+   "ok": true,
+   "add": null,
+   "drop": "Brandon Miller",
+   "ir": "Zach Edey"
   }
  ],
  "ok": true,
- "scoringPeriodId": 31,
+ "scoringPeriodId": 32,
  "matchupPeriod": 5,
- "addsUsed": 3,
- "rosterMatchesPlan": true
+ "addsUsed": 5,
+ "rosterMatchesPlan": true,
+ "irNotOut": [
+  "Zach Edey (DAY_TO_DAY)"
+ ]
 }
