@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-20T23:19+09:00",
+ "asOf": "2026-11-21T05:44+09:00",
  "source": "ESPN API sync (GitHub Actions g8-espn)",
  "teams": {
   "Junyoung's Scary Team": {
@@ -53,12 +53,12 @@
     "Kyrie Irving",
     "Michael Porter Jr.",
     "Brandon Miller",
-    "Tyler Herro",
     "Miles Bridges",
     "Jeremiah Fears",
     "AJ Dybantsa",
     "Norman Powell",
-    "Matas Buzelis"
+    "Matas Buzelis",
+    "Jalen Suggs"
    ],
    "ir": [
     "Austin Reaves",
@@ -118,10 +118,10 @@
     "Ausar Thompson",
     "Dylan Harper",
     "Aday Mara",
-    "RJ Barrett",
     "Fred VanVleet",
     "Stephon Castle",
-    "Anthony Black"
+    "Anthony Black",
+    "Ace Bailey"
    ],
    "ir": [
     "Anthony Edwards",
@@ -188,12 +188,12 @@
   "Jalen Duren": "O",
   "Kawhi Leonard": "O",
   "Dylan Harper": "O",
-  "RJ Barrett": "O",
   "Tyrese Haliburton": "O",
   "Caleb Wilson": "O",
   "CJ McCollum": "O",
   "Ty Jerome": "O",
   "Brandon Ingram": "O",
+  "RJ Barrett": "O",
   "Kon Knueppel": "O",
   "Jaren Jackson Jr.": "O",
   "Jalen Williams": "O",
@@ -217,7 +217,6 @@
   "Brandon Williams": "O",
   "Justin Champagnie": "O",
   "Ben Simmons": "O",
-  "Ronald Holland II": "O",
   "Grant Williams": "O",
   "Tyrese Maxey": "DTD",
   "Myles Turner": "DTD",
@@ -226,6 +225,7 @@
   "Deni Avdija": "DTD",
   "Cade Cunningham": "DTD",
   "Andrew Nembhard": "DTD",
+  "Jalen Smith": "DTD",
   "Peyton Watson": "DTD",
   "Draymond Green": "DTD",
   "Precious Achiuwa": "DTD",
@@ -236,14 +236,13 @@
   "De'Andre Hunter": "DTD",
   "Kingston Flemings": "DTD",
   "Robert Williams III": "DTD",
-  "Dean Wade": "DTD"
+  "Ronald Holland II": "DTD"
  },
  "unsigned": [
   "Cam Thomas",
   "Chris Paul",
   "D'Angelo Russell",
   "Kevin Porter Jr.",
-  "Lonzo Ball",
   "Russell Westbrook"
  ],
  "returns": {
@@ -256,15 +255,14 @@
   "Jaylon Tyson": "2026-11-23",
   "Evan Mobley": "2026-11-29",
   "Dereck Lively II": "2026-11-27",
-  "Ronald Holland II": "2026-11-22",
   "Duncan Robinson": "2026-11-27",
   "Jalen Duren": "2026-11-24",
   "Brandon Williams": "2026-11-22",
   "Stephen Curry": "2026-12-12",
   "Kristaps Porzingis": "2027-01-02",
   "Jimmy Butler III": "2027-01-02",
-  "Tyrese Haliburton": "2026-11-28",
-  "Brandon Ingram": "2026-11-21",
+  "Tyrese Haliburton": "2026-12-13",
+  "Brandon Ingram": "2026-11-23",
   "Bradley Beal": "2026-11-29",
   "Austin Reaves": "2026-11-23",
   "Ty Jerome": "2026-11-21",

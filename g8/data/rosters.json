@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-20T23:19+09:00",
+ "asOf": "2026-11-21T05:44+09:00",
  "leagueId": "751654965",
  "season": 2027,
  "teams": [
@@ -94,12 +94,12 @@
     "Kyrie Irving",
     "Michael Porter Jr.",
     "Brandon Miller",
-    "Tyler Herro",
     "Miles Bridges",
     "Jeremiah Fears",
     "AJ Dybantsa",
     "Norman Powell",
-    "Matas Buzelis"
+    "Matas Buzelis",
+    "Jalen Suggs"
    ],
    "ir": [
     "Austin Reaves",
@@ -116,9 +116,9 @@
     "2": 7,
     "3": 6,
     "4": 7,
-    "5": 5
+    "5": 6
    },
-   "acqTotal": 31
+   "acqTotal": 32
   },
   {
    "name": "Zero Sugar",
@@ -212,10 +212,10 @@
     "Ausar Thompson",
     "Dylan Harper",
     "Aday Mara",
-    "RJ Barrett",
     "Fred VanVleet",
     "Stephon Castle",
-    "Anthony Black"
+    "Anthony Black",
+    "Ace Bailey"
    ],
    "ir": [
     "Anthony Edwards",
@@ -231,9 +231,10 @@
     "1": 6,
     "2": 2,
     "3": 1,
-    "4": 7
+    "4": 7,
+    "5": 1
    },
-   "acqTotal": 16
+   "acqTotal": 17
   },
   {
    "name": "Songpa Park kezhang",
@@ -331,12 +332,12 @@
    "Jalen Duren",
    "Kawhi Leonard",
    "Dylan Harper",
-   "RJ Barrett",
    "Tyrese Haliburton",
    "Caleb Wilson",
    "CJ McCollum",
    "Ty Jerome",
    "Brandon Ingram",
+   "RJ Barrett",
    "Kon Knueppel",
    "Jaren Jackson Jr.",
    "Jalen Williams",
@@ -360,7 +361,6 @@
    "Brandon Williams",
    "Justin Champagnie",
    "Ben Simmons",
-   "Ronald Holland II",
    "Grant Williams"
   ],
   "DTD": [
@@ -371,6 +371,7 @@
    "Deni Avdija",
    "Cade Cunningham",
    "Andrew Nembhard",
+   "Jalen Smith",
    "Peyton Watson",
    "Draymond Green",
    "Precious Achiuwa",
@@ -381,7 +382,7 @@
    "De'Andre Hunter",
    "Kingston Flemings",
    "Robert Williams III",
-   "Dean Wade"
+   "Ronald Holland II"
   ]
  }
 }
