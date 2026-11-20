@@ -2,7 +2,7 @@
  "date": "2026-11-20",
  "scoringPeriodId": 32,
  "hash": "56afd27835",
- "createdKST": "2026-11-20T19:47+09:00",
+ "createdKST": "2026-11-21T06:48+09:00",
  "mode": "plan",
  "moves": [],
  "lineup": [
@@ -54,8 +54,8 @@
   {
    "slot": "G",
    "cur": "G",
-   "name": "Ajay Mitchell",
-   "pro": "OKC",
+   "name": "Collin Gillespie",
+   "pro": "PHX",
    "game": true,
    "inj": "ACTIVE",
    "out": false
@@ -72,35 +72,26 @@
   {
    "slot": "UTIL",
    "cur": "UTIL",
-   "name": "Karl-Anthony Towns",
-   "pro": "NYK",
-   "game": false,
-   "inj": "ACTIVE",
-   "out": false
-  },
-  {
-   "slot": "UTIL",
-   "cur": "UTIL",
-   "name": "Klay Thompson",
-   "pro": "MIA",
-   "game": false,
-   "inj": "ACTIVE",
-   "out": false
-  },
-  {
-   "slot": "UTIL",
-   "cur": "UTIL",
-   "name": "Collin Gillespie",
-   "pro": "PHX",
+   "name": "Ajay Mitchell",
+   "pro": "OKC",
    "game": true,
    "inj": "ACTIVE",
    "out": false
   },
   {
-   "slot": "BE",
-   "cur": "BE",
+   "slot": "UTIL",
+   "cur": "UTIL",
    "name": "Toumani Camara",
    "pro": "POR",
+   "game": false,
+   "inj": "ACTIVE",
+   "out": false
+  },
+  {
+   "slot": "UTIL",
+   "cur": "UTIL",
+   "name": "Karl-Anthony Towns",
+   "pro": "NYK",
    "game": false,
    "inj": "ACTIVE",
    "out": false
@@ -110,6 +101,15 @@
    "cur": "BE",
    "name": "Ryan Rollins",
    "pro": "MIL",
+   "game": false,
+   "inj": "ACTIVE",
+   "out": false
+  },
+  {
+   "slot": "BE",
+   "cur": "BE",
+   "name": "Klay Thompson",
+   "pro": "MIA",
    "game": false,
    "inj": "ACTIVE",
    "out": false
