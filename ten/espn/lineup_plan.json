@@ -2,7 +2,7 @@
  "date": "2026-11-21",
  "scoringPeriodId": 33,
  "hash": "832214930f",
- "createdKST": "2026-11-21T19:48+09:00",
+ "createdKST": "2026-11-22T06:49+09:00",
  "mode": "plan",
  "moves": [],
  "lineup": [
@@ -111,8 +111,8 @@
    "name": "Grayson Allen",
    "pro": "CHA",
    "game": false,
-   "inj": "OUT",
-   "out": true
+   "inj": "DAY_TO_DAY",
+   "out": false
   },
   {
    "slot": "BE",
