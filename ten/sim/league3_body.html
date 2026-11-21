@@ -373,6 +373,109 @@ section:not([hidden]) .vchart .bars rect { transform-box: fill-box; transform-or
 .rd-chart svg text { font-family: var(--body); }
 #k-now .kpi .v { font-size: 26px; }
 
+/* ---- tabs from the 4 demo designs (manager choice 2026-11-21): A 매치업 센터 · B 카테고리 랩 · C 스탯 시트 · D 경영진 브리핑 ---- */
+.wrap { grid-template-columns: minmax(0, 1fr); }
+.tabbar > * { min-width: 0; }
+.tabs { max-width: 100%; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+.tabs::-webkit-scrollbar { display: none; }
+.tab .tl { font-family: var(--mono); font-size: 11px; color: var(--muted); margin-right: 5px; }
+@media (max-width: 560px) { .tabs .tab { flex: 0 0 auto; } }
+.xv { display: grid; gap: 16px; }
+.xv h2 { margin: 0; font-size: 17px; font-weight: 650; letter-spacing: -.01em; }
+.xcard { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 16px; min-width: 0; }
+.xrow { display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start; }
+.xmain { flex: 999 1 620px; min-width: 0; display: grid; gap: 16px; }
+.xside { flex: 1 1 300px; min-width: 0; display: grid; gap: 12px; }
+.xscroll { overflow-x: auto; }
+.xhead { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 10px; }
+.xleg { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12px; color: var(--muted); align-items: center; }
+.xleg i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -2px; }
+.xnote { font-size: 12px; color: var(--muted); margin: 8px 0 0; line-height: 1.6; }
+.xprop { display: grid; gap: 6px; }
+.xprop .pt { display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; font-size: 15px; }
+.xprop .n { font-family: var(--mono); font-weight: 700; color: var(--s2); }
+.xprop .ps { font-size: 12.5px; color: var(--muted); }
+.xprop .pm { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; }
+.xprop .pa { font-size: 12px; color: var(--muted); border-top: 1px dashed var(--line); padding-top: 6px; }
+.chip3 { justify-self: end; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 999px; white-space: nowrap; }
+.chip3.win { background: var(--good-soft); color: var(--good); } .chip3.loss { background: var(--bad-soft); color: var(--bad); } .chip3.swing { background: var(--warn-soft); color: var(--warn); }
+.stt { font-size: 11px; font-weight: 700; padding: 1px 6px; border-radius: 999px; margin-left: 6px; background: var(--bad-soft); color: var(--bad); }
+.stt.dtd { background: var(--warn-soft); color: var(--warn); }
+/* A · 매치업 센터 */
+.mc-hero { background: #0f172a; color: #fff; border-radius: var(--radius); padding: 20px 20px 22px; display: grid; gap: 16px; }
+.mc-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 12px; font-size: 12.5px; color: #cbd5e1; }
+.mc-top b { color: #fdba74; letter-spacing: .08em; margin-right: 10px; }
+.mc-sb { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; align-items: center; }
+.mc-team { display: grid; gap: 2px; } .mc-team .k { font-size: 13px; font-weight: 700; color: #fdba74; } .mc-team.r .k { color: #93c5fd; }
+.mc-team .nm { font-size: 24px; font-weight: 800; letter-spacing: -.01em; } .mc-team .rc { font-size: 12.5px; color: #cbd5e1; }
+.mc-team.r { text-align: right; justify-items: end; }
+.mc-score { display: flex; justify-content: center; align-items: baseline; gap: 14px; font-family: "Barlow Condensed", var(--display); font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums; }
+.mc-score .a { font-size: 76px; color: #fdba74; } .mc-score .b { font-size: 76px; color: #93c5fd; } .mc-score .s { font-size: 30px; color: #94a3b8; }
+.mc-chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; } .mc-chips span { font-size: 12.5px; padding: 5px 12px; border-radius: 999px; background: #1e293b; color: #e2e8f0; }
+.mc-cat { display: grid; grid-template-columns: 56px 66px 66px minmax(140px, 1fr) 104px 58px; gap: 10px; align-items: center; padding: 8px 2px; border-top: 1px solid var(--line); }
+.mc-cat.h { font-size: 12px; color: var(--muted); border-top: 0; padding-top: 0; }
+.mc-cat .c { font-family: "Barlow Condensed", var(--mono); font-size: 18px; font-weight: 600; } .mc-cat .c small { font-size: 11px; color: var(--muted); margin-left: 3px; }
+.mc-cat .v { font-family: "Barlow Condensed", var(--mono); font-size: 20px; text-align: right; color: var(--muted); font-variant-numeric: tabular-nums; } .mc-cat .v.lead { color: var(--ink); font-weight: 700; }
+.mc-cat .pj { font-size: 12.5px; color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.mc-bar { display: flex; height: 14px; border-radius: 4px; overflow: hidden; gap: 2px; background: var(--line); }
+.mc-bar .u { background: #e8730c; } .mc-bar .t { background: #94a3b8; } .mc-bar .o { background: #2563eb; flex: 1; }
+.mc-pp { display: flex; justify-content: space-between; font-size: 11.5px; color: var(--muted); margin-top: 3px; font-variant-numeric: tabular-nums; }
+.mc-g { display: grid; grid-template-columns: minmax(150px, 1.7fr) 44px repeat(var(--nd, 7), minmax(40px, 1fr)) 34px; gap: 6px; align-items: center; padding: 5px 0; border-top: 1px solid var(--line); font-size: 13px; }
+.mc-g.h { font-size: 11.5px; color: var(--muted); border-top: 0; text-align: center; } .mc-g.h span:first-child { text-align: left; }
+.mc-g .d { height: 24px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; }
+.mc-g .d.game { background: #c2410c; color: #fff; } .mc-g .d.played { background: color-mix(in srgb, var(--muted) 30%, transparent); }
+.mc-g .d.none { border: 1px dashed var(--line); } .mc-g .d.out { background: var(--bad-soft); color: var(--bad); }
+.mc-g.tot { border-top: 2px solid var(--ink); font-weight: 700; } .mc-g.tot .n { text-align: center; font-family: "Barlow Condensed", var(--mono); font-size: 17px; }
+.mc-g .nm { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } .mc-g .tm { font-size: 12px; color: var(--muted); } .mc-g .r { text-align: right; font-family: "Barlow Condensed", var(--mono); font-size: 17px; font-weight: 700; }
+/* B · 카테고리 랩 */
+.cl-hm { display: grid; grid-template-columns: 120px repeat(11, minmax(38px, 1fr)) 48px; gap: 4px; align-items: center; padding: 3px 4px; border-radius: 6px; }
+.cl-hm.me { outline: 2px solid var(--ink); }
+.cl-hm.h { font-size: 12px; color: var(--muted); } .cl-hm.h span { text-align: center; } .cl-hm.h span:first-child { text-align: left; }
+.cl-hm .k { font-size: 13px; } .cl-hm.me .k { font-weight: 700; } .cl-hm .avg { font-family: var(--mono); font-size: 12.5px; text-align: right; color: var(--muted); }
+.cl-cell { height: 36px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 13px; font-weight: 600; }
+.cl-pr { display: grid; grid-template-columns: minmax(160px, 1.8fr) 44px 58px 34px repeat(11, minmax(40px, 1fr)) 58px; gap: 4px; align-items: center; padding: 2px 0; font-size: 13px; }
+.cl-pr.h { font-size: 12px; color: var(--muted); } .cl-pr.h span { text-align: center; } .cl-pr.h span:first-child { text-align: left; }
+.cl-pr .nm { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } .cl-pr .sm { font-size: 12px; color: var(--muted); }
+.cl-z { height: 32px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 12px; }
+.cl-z.t { justify-content: flex-end; padding-right: 8px; font-weight: 700; font-size: 13px; }
+.cl-bar { display: grid; grid-template-columns: 48px minmax(0, 1fr) 40px; gap: 8px; align-items: center; font-size: 13px; }
+.cl-bar .tr { height: 14px; background: var(--soft); border-radius: 4px; overflow: hidden; } .cl-bar .tr i { display: block; height: 14px; }
+.cl-bar .k { font-family: var(--mono); } .cl-bar .rk { text-align: right; font-family: var(--mono); }
+.cl-sum { font-size: 13px; line-height: 1.65; background: var(--soft2); border: 1px solid var(--line); border-radius: 8px; padding: 12px; }
+/* C · 스탯 시트 */
+.ss { display: grid; gap: 28px; }
+.ss-title { font-family: "Noto Serif KR", Georgia, serif; font-size: clamp(24px, 3vw, 32px); font-weight: 700; margin: 0; letter-spacing: -.01em; }
+.ss-meta { font-size: 14px; line-height: 1.75; margin: 6px 0 0; }
+.ss-nav { display: flex; flex-wrap: wrap; gap: 8px; font-size: 13px; margin-top: 6px; } .ss-nav a { color: var(--s1); }
+.ss h2.ssh { font-family: "Noto Serif KR", Georgia, serif; font-size: 20px; border-bottom: 3px solid var(--ink); padding-bottom: 4px; margin: 0 0 6px; }
+.ss table { border-collapse: collapse; width: 100%; min-width: 600px; font-size: 13px; font-variant-numeric: tabular-nums; }
+.ss th { background: var(--soft); text-align: right; font-size: 12px; padding: 6px 8px; border-bottom: 1px solid var(--muted); white-space: nowrap; font-weight: 700; }
+.ss td { padding: 5px 8px; text-align: right; border-bottom: 1px solid var(--line); white-space: nowrap; }
+.ss th.l, .ss td.l { text-align: left; } .ss th.c, .ss td.c { text-align: center; }
+.ss tr.me td { background: color-mix(in srgb, #facc15 20%, var(--card)); } .ss tr.me td.l { font-weight: 700; }
+.ss td.best { font-weight: 700; text-decoration: underline; } .ss tr.ir td { color: var(--muted); }
+.ss-two { display: flex; flex-wrap: wrap; gap: 28px; } .ss-two > div { flex: 1 1 400px; min-width: 0; }
+/* D · 경영진 브리핑 */
+.eb-hd { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 10px; }
+.eb-hd .ey { font-family: "Space Grotesk", var(--display); font-size: 12.5px; font-weight: 700; letter-spacing: .1em; color: #4f46e5; }
+.eb-hd h2 { font-size: clamp(22px, 2.6vw, 28px); font-weight: 800; }
+.eb-lead { background: var(--primary); color: var(--primary-fg); border-radius: var(--radius); padding: 16px 20px; font-size: 15px; line-height: 1.6; }
+.eb-k { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.eb-k .xcard { display: grid; gap: 4px; align-content: start; } .eb-k .l { font-size: 13px; color: var(--muted); }
+.eb-k .v { font-family: "Space Grotesk", var(--display); font-size: 40px; font-weight: 700; line-height: 1.05; font-variant-numeric: tabular-nums; }
+.eb-k .d { font-size: 12.5px; font-weight: 700; color: var(--muted); } .eb-k .d.up { color: var(--good); } .eb-k .d.down { color: var(--bad); }
+.eb-k .s { font-size: 12px; color: var(--muted); }
+.eb-props { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.eb-bar { display: grid; grid-template-columns: 100px minmax(0, 1fr) 54px; gap: 10px; align-items: center; font-size: 13px; }
+.eb-bar .tr { height: 16px; background: var(--soft); border-radius: 4px; overflow: hidden; } .eb-bar .tr i { display: block; height: 16px; background: color-mix(in srgb, var(--muted) 70%, transparent); }
+.eb-bar.me { font-weight: 700; } .eb-bar.me .tr i { background: #4f46e5; } .eb-bar .p { text-align: right; font-family: "Space Grotesk", var(--mono); font-variant-numeric: tabular-nums; }
+.eb-risk { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); column-gap: 28px; }
+.eb-risk > div { display: grid; grid-template-columns: 56px 1fr 84px; gap: 10px; align-items: center; padding: 8px 0; border-top: 1px solid var(--line); font-size: 13px; }
+.eb-risk b { font-family: "Space Grotesk", var(--mono); } .eb-risk .q { text-align: right; font-weight: 700; font-size: 12px; }
+.eb-chart svg { display: block; width: 100%; height: auto; }
+.eb-chart text { fill: var(--muted); font-size: 11px; font-family: var(--body); }
+.eb-chart .gl { stroke: var(--line); }
+@media (max-width: 560px) { .fresh .pill { white-space: normal; } header.top > * { min-width: 0; } }
 </style>
 <div id="busybar" hidden></div>
 <div class="wrap">
@@ -388,6 +491,10 @@ section:not([hidden]) .vchart .bars rect { transform-box: fill-box; transform-or
       <button class="tab" role="tab" id="tab-now" aria-selected="true" type="button">현황</button>
       <button class="tab" role="tab" id="tab-fc" aria-selected="false" type="button">예측</button>
       <button class="tab" role="tab" id="tab-proj" aria-selected="false" type="button">프로젝션 근거</button>
+      <button class="tab" role="tab" id="tab-mc" aria-selected="false" type="button"><span class="tl">A</span>매치업 센터</button>
+      <button class="tab" role="tab" id="tab-cl" aria-selected="false" type="button"><span class="tl">B</span>카테고리 랩</button>
+      <button class="tab" role="tab" id="tab-ss" aria-selected="false" type="button"><span class="tl">C</span>스탯 시트</button>
+      <button class="tab" role="tab" id="tab-eb" aria-selected="false" type="button"><span class="tl">D</span>경영진 브리핑</button>
     </nav>
     <div class="right">
       <span class="stsel"><label class="lab" for="ver-sel">프로젝션</label><select id="ver-sel"><option value="1">v1 · 회귀+ESPN+주차 가중</option><option value="2">v2 · 시즌 초 회귀</option></select></span>
@@ -533,11 +640,16 @@ section:not([hidden]) .vchart .bars rect { transform-box: fill-box; transform-or
     <p class="note" id="v2note"></p>
   </section>
   </div></section>
+  <section id="view-mc" hidden></section>
+  <section id="view-cl" hidden></section>
+  <section id="view-ss" hidden></section>
+  <section id="view-eb" hidden></section>
   <footer id="foot"></footer>
 </div>
 
 <script type="application/json" id="data">%%DATA%%</script>
 <script type="application/json" id="data2">%%DATA2%%</script>
+<script type="application/json" id="xtra">%%XTRA%%</script>
 <script>%%SIMENG%%</script>
 <script>
 (function () {
@@ -568,12 +680,215 @@ section:not([hidden]) .vchart .bars rect { transform-box: fill-box; transform-or
     <p>${D.w1meta.next ? `${D.period}주차 ${esc(opp.name)} 전 예상 승리 확률 ${pct(w1me)}(권장 교체 전 ${pct(w1.a === ME ? w1.pA0 : w1.pB0)}, 패배 ${pct(w1op)}). ` : `${D.period || 1}주차 ${esc(opp.name)} 전 현재 ${w1.a === ME ? w1.rec[0] : w1.rec[1]}, 승리 확률 ${pct(w1me)}(패배 ${pct(w1op)}, 나머지 무승부). `}${(D.streamPlans || []).length ? `권장 교체안(주 2~3회) 실행 시 4강 ${pct(D.streamPlans[0].sum.plan.p4)}, 주 2회 일반 교체 가정 시 ${pct(me.season.p4)}.` : ""}</p>`;
 
   // ---------- tabs
-  const VIEWS = ["now", "fc", "proj"];
+  const VIEWS = ["now", "fc", "proj", "mc", "cl", "ss", "eb"];
   let view = VIEWS.includes((location.hash || "").slice(1)) ? location.hash.slice(1) : (VIEWS.includes(store.get("l10v5-view")) ? store.get("l10v5-view") : "now");
   function moveInd() { const b = $("tab-" + view), ind = $("tab-ind"); if (!b || !ind) return; ind.style.width = b.offsetWidth + "px"; ind.style.transform = `translateX(${b.offsetLeft - 4}px)`; }
-  function setView(v) { view = v; store.set("l10v5-view", v); VIEWS.forEach(k => { $("view-" + k).hidden = k !== v; $("tab-" + k).setAttribute("aria-selected", String(k === v)); }); moveInd(); if (typeof redrawPending === "function") redrawPending(); if (v === "now") countUp($("k-now")); }
+  function setView(v) { view = v; store.set("l10v5-view", v); VIEWS.forEach(k => { $("view-" + k).hidden = k !== v; $("tab-" + k).setAttribute("aria-selected", String(k === v)); }); moveInd(); if (typeof redrawPending === "function") redrawPending(); if (v === "now") countUp($("k-now")); if (["mc", "cl", "ss", "eb"].includes(v)) renderX10(v); }
   VIEWS.forEach(k => $("tab-" + k).addEventListener("click", () => setView(k)));
   window.addEventListener("resize", moveInd);
+
+  // ---------- tabs from the 4 demo designs (manager choice 2026-11-21): A 매치업 센터 · B 카테고리 랩 · C 스탯 시트 · D 경영진 브리핑 ----------
+  // Same data as the other tabs (D = projection version in use); XT = build-time extras from combine.py: probability history
+  // (trend.json), completed-week results and category totals (ESPN scoreboard), the scheduled task's lineup/roster plans.
+  const XT = (() => { try { return JSON.parse(document.getElementById("xtra").textContent || "{}"); } catch (e) { return {}; } })();
+  const XV = ["mc", "cl", "ss", "eb"], LOWX = { TO: 1 };
+  const xf = (c, v, proj) => v == null || !isFinite(v) ? "—" : (c === "FG" || c === "FT") ? (+v).toFixed(3).replace(/^0/, "") : proj ? (+v).toFixed(0) : String(Math.round(v * 10) / 10);
+  const xP = (x, d = 1) => (x * 100).toFixed(d) + "%";
+  const catSt = p => p >= .8 ? ["확보", "win"] : p <= .2 ? ["상실", "loss"] : ["경합", "swing"];
+  const sgnX = (x, d = 2) => (x >= 0 ? "+" : "−") + Math.abs(x).toFixed(d);
+  const shortN = i => TM[i].name;
+  const stdOf = i => { const s = (D.standings || {})[TM[i].abbr] || [0, 0, 0], n = s[0] + s[1] + s[2]; return { w: s[0], l: s[1], t: s[2], pct: n ? (s[0] + s[2] / 2) / n : 0 }; };
+  const standOrd = () => TM.map((t, i) => i).sort((a, b) => stdOf(b).pct - stdOf(a).pct);
+  const recS = i => { const s = stdOf(i); return `${s.w}-${s.l}-${s.t}`; };
+  const pName = id => (P[id] || {}).n || "";
+  const stX = id => { const p = P[id] || {}; return p.st === "O" ? '<span class="stt">O</span>' : p.st === "DTD" ? '<span class="stt dtd">DTD</span>' : ""; };
+  function wkOf(i) {
+    const w = (D.week1 || []).find(x => x.a === i || x.b === i); if (!w) return null; const A = w.a === i;
+    const cats = w.cats.map(x => { const pw = A ? x.pw : 1 - x.pw - x.pt; return { c: x.c, me: A ? x.curA : x.curB, op: A ? x.curB : x.curA, fm: A ? x.finA : x.finB, fo: A ? x.finB : x.finA, w: pw, t: x.pt, l: Math.max(0, 1 - pw - x.pt) }; });
+    const W = cats.reduce((s, x) => s + x.w, 0), T = cats.reduce((s, x) => s + x.t, 0);
+    return { opp: A ? w.b : w.a, rec: A ? w.rec[0] : w.rec[1], win: A ? w.pA : w.pB, lose: A ? w.pB : w.pA, rem: A ? w.remA : w.remB, remO: A ? w.remB : w.remA, cats, W, T, L: cats.length - W - T };
+  }
+  const leadX = x => { if (x.me == null || x.op == null || x.me === x.op) return 0; return (LOWX[x.c] ? x.me < x.op : x.me > x.op) ? 1 : -1; };
+  function plans10() {
+    const now = ((D.streamPlans || []).find(s => s.rec) || {}).log || [], cur = now.find(x => x.now), next = now.filter(x => !x.now && x.week > D.period).slice(0, 2);
+    const rp = XT.rosterPlan && XT.rosterPlan.status === "planned" && XT.rosterPlan.matchupPeriod === D.period ? XT.rosterPlan : null;
+    const lp = XT.lineupPlan && (XT.lineupPlan.moves || []).length ? XT.lineupPlan : null;
+    return { cur, next, rp, lp };
+  }
+  function propCards10() {
+    if (sel !== ME) return `<p class="xnote">교체·라인업 제안은 내 팀(${esc(TM[ME].name)}) 기준으로만 표시됩니다.</p>`;
+    const { cur, next, rp, lp } = plans10(); let h = "";
+    if (rp) h += `<div class="xcard xprop"><div class="pt"><span class="n">[리포트 실행안]</span><b>영입 ${esc(rp.add.name)} · 방출 ${esc(rp.drop.name)}</b></div>
+      <div class="ps">${esc(rp.add.pro || "")} · ${rp.type === "WAIVER" ? "웨이버 신청" : "즉시 영입"} · 한도 시즌 ${esc(rp.limits.season)} · 이번 매치업 ${esc(rp.limits.matchup)}</div>
+      <div class="pa">승인은 정기 리포트의 번호로 · plan ${esc(rp.hash)}${(rp.warnings || []).length ? ` · ${esc(rp.warnings[0])}` : ""}</div></div>`;
+    if (cur && cur.moves.length) h += `<div class="xcard xprop"><div class="pt"><span class="n">[모델 권장]</span><b>${D.period}주차 남은 경기 교체 ${cur.moves.length}건</b></div>
+      <div class="ps">${cur.moves.map(m => `${esc(m.drop)} → ${esc(m.add)}${m.g != null ? ` (${m.g}경기)` : ""}`).join(" · ")}</div>
+      <div class="pm"><span>이번 주 승리 <b>${xP(cur.winBefore, 0)} → ${xP(cur.winAfter, 0)}</b></span><span>기대 카테고리 <b>${sgnX(cur.after - cur.before)}</b></span></div></div>`;
+    if (lp) h += `<div class="xcard xprop"><div class="pt"><span class="n">[라인업]</span><b>${esc(lp.date)} 라인업 변경</b></div><div class="ps">${(lp.moves || []).map(m => esc(typeof m === "string" ? m : `${m.name || ""} ${m.from || ""}→${m.to || ""}`)).join(", ")}</div><div class="pa">plan ${esc(lp.hash || "")}</div></div>`;
+    if (next.length) h += `<div class="xcard xprop"><div class="pt"><span class="n">[다음 주 예정]</span><b>${next.map(x => `${x.week}주차 vs ${esc(x.opp)}`).join(" · ")}</b></div>
+      <div class="ps">${next.map(x => `${x.week}주: ${x.moves.map(m => `${esc(m.drop)}→${esc(m.add)}`).join(", ")} (승리 ${xP(x.winBefore, 0)}→${xP(x.winAfter, 0)})`).join("<br>")}</div><div class="pa">권장 계획 · 실행 전 해당 주 리포트에서 다시 확인</div></div>`;
+    return h || '<p class="xnote">이번 주 제안된 조치가 없습니다.</p>';
+  }
+
+  // A · 매치업 센터
+  function renderMC10() {
+    const box = $("view-mc"), K = wkOf(sel); if (!K) { box.innerHTML = '<div class="xcard">이번 주 매치업 정보가 없습니다.</div>'; return; }
+    const so = standOrd(), mine = sel === ME, meta = D.w1meta || {};
+    const leads = K.cats.filter(x => leadX(x) > 0).length, trails = K.cats.filter(x => leadX(x) < 0).length;
+    const rows = K.cats.map(x => { const [s, k] = catSt(x.w + x.t / 2), ld = leadX(x);
+      return `<div class="mc-cat"><div class="c">${LAB[x.c]}${LOWX[x.c] ? "<small>↓</small>" : ""}</div><div class="v ${ld > 0 ? "lead" : ""}">${xf(x.c, x.me)}</div><div class="v ${ld < 0 ? "lead" : ""}">${xf(x.c, x.op)}</div>
+        <div><div class="mc-bar" role="img" aria-label="${LAB[x.c]} 승 ${xP(x.w, 0)}, 무 ${xP(x.t, 0)}, 패 ${xP(x.l, 0)}"><div class="u" style="width:${(x.w * 100).toFixed(1)}%"></div>${x.t > .005 ? `<div class="t" style="width:${(x.t * 100).toFixed(1)}%"></div>` : ""}<div class="o"></div></div><div class="mc-pp"><span>${xP(x.w, 0)}</span><span>${xP(x.l, 0)}</span></div></div>
+        <div class="pj">${xf(x.c, x.fm, true)} – ${xf(x.c, x.fo, true)}</div><span class="chip3 ${k}">${s}</span></div>`; }).join("");
+    let grid = '<p class="xnote">일별 라인업은 내 팀만 계산됩니다.</p>';
+    const days = mine && D.lineupWeek ? D.lineupWeek.days || [] : [];
+    if (days.length) {
+      const ros = TM[ME].roster.map(pName), cell = (dd, n) => { const s = (dd.start || []).find(x => x.name === n);
+        return s ? `<div class="d game">${esc(s.slot)}</div>` : (dd.out || []).includes(n) ? '<div class="d out">O</div>' : (dd.bench || []).includes(n) ? '<div class="d played">벤치</div>' : '<div class="d none"></div>'; };
+      const cnt = n => days.filter(dd => (dd.start || []).some(x => x.name === n)).length;
+      const lab = iso => { const t = new Date(iso + "T00:00:00"); return `${"일월화수목금토"[t.getDay()]}<br>${t.getMonth() + 1}/${t.getDate()}`; };
+      grid = `<div class="xscroll"><div style="min-width:${260 + days.length * 56}px; --nd:${days.length}"><div class="mc-g h"><span>선수</span><span>팀</span>${days.map(dd => `<span>${lab(dd.date)}</span>`).join("")}<span>선발</span></div>
+        ${ros.slice().sort((a, b) => cnt(b) - cnt(a) || a.localeCompare(b)).map(n => { const id = TM[ME].roster.find(x => pName(x) === n);
+          return `<div class="mc-g"><span class="nm">${esc(n)}${stX(id)}</span><span class="tm">${esc((P[id] || {}).t || "")}</span>${days.map(dd => cell(dd, n)).join("")}<span class="r">${cnt(n)}</span></div>`; }).join("")}
+        <div class="mc-g tot"><span>선발 인원</span><span></span>${days.map(dd => `<span class="n">${(dd.start || []).length}</span>`).join("")}<span></span></div></div></div>
+        <p class="xnote">남은 날의 추천 라인업(현재 로스터, 일별 상위 10명). 칸의 글자 = 배정 슬롯, 벤치 = 경기는 있으나 슬롯 부족, O = 결장.</p>`;
+    }
+    const sw = K.cats.filter(x => catSt(x.w + x.t / 2)[1] === "swing").map(x => LAB[x.c]), wn = K.cats.filter(x => catSt(x.w + x.t / 2)[1] === "win").map(x => LAB[x.c]), ls = K.cats.filter(x => catSt(x.w + x.t / 2)[1] === "loss").map(x => LAB[x.c]);
+    box.innerHTML = `<div class="xv">
+    <div class="mc-hero"><div class="mc-top"><span><b>MATCHUP CENTER</b>${esc(meta.title || `${D.period}주차`)}</span><span>${esc(D.actualThrough || "")}</span></div>
+      <div class="mc-sb"><div class="mc-team"><span class="k">${mine ? "우리 팀" : "선택 팀"}</span><span class="nm">${esc(TM[sel].name)}</span><span class="rc">${recS(sel)} · 현재 ${so.indexOf(sel) + 1}위</span></div>
+        <div class="mc-score" aria-label="예상 카테고리 ${K.W.toFixed(1)} 대 ${K.L.toFixed(1)}"><span class="a">${K.W.toFixed(1)}</span><span class="s">–</span><span class="b">${K.L.toFixed(1)}</span></div>
+        <div class="mc-team r"><span class="k">상대</span><span class="nm">${esc(TM[K.opp].name)}</span><span class="rc">${recS(K.opp)} · 현재 ${so.indexOf(K.opp) + 1}위</span></div></div>
+      <div class="mc-chips"><span>현재 ${esc(K.rec)}</span><span>매치업 승리 확률 ${xP(K.win, 0)}</span><span>현재 리드 ${leads}–${trails}</span><span>남은 출전 ${K.rem.toFixed(0)} vs ${K.remO.toFixed(0)}경기</span>${mine ? `<span>시즌 영입 ${D.acqUsed || 0}/70</span>` : ""}</div></div>
+    <div class="xrow"><div class="xmain">
+      <section class="xcard"><div class="xhead"><h2>카테고리 스코어보드</h2><div class="xleg"><span><i style="background:#e8730c"></i>${mine ? "우리" : "선택 팀"} 승리 확률</span><span><i style="background:#94a3b8"></i>무</span><span><i style="background:#2563eb"></i>상대</span><span>↓ 낮을수록 유리 · 굵은 숫자 = 현재 리드</span></div></div>
+        <div class="xscroll"><div style="min-width:560px"><div class="mc-cat h"><span>카테고리</span><span style="text-align:right">현재</span><span style="text-align:right">상대</span><span>최종 승리 확률</span><span style="text-align:right">최종 예상</span><span style="text-align:right">판정</span></div>${rows}</div></div></section>
+      <section class="xcard"><div class="xhead"><h2>남은 일정 · 추천 라인업</h2><div class="xleg"><span><i style="background:#c2410c"></i>선발</span><span><i style="background:color-mix(in srgb, var(--muted) 30%, transparent)"></i>벤치</span><span><i style="border:1px dashed var(--line)"></i>경기 없음</span></div></div>${grid}</section>
+    </div><aside class="xside">
+      <div class="xcard"><h2 style="margin-bottom:6px">이번 주 판세</h2><p style="margin:0; font-size:14px; line-height:1.65">${wn.length ? `<b>${wn.join("·")}</b>는 확보권, ` : ""}${ls.length ? `<b>${ls.join("·")}</b>는 상실권. ` : ""}${sw.length ? `승부는 <b>${sw.join("·")}</b>에서 갈립니다.` : "경합 카테고리가 없습니다."}</p></div>
+      <h2 style="margin-top:4px">교체·라인업 제안</h2>${propCards10()}
+      <p class="xnote">참고: ESPN·Yahoo 매치업 화면의 카테고리 대비 구성, 브라우저 확장형 도구의 주간 잔여 경기 표시.</p>
+    </aside></div></div>`;
+  }
+
+  // B · 카테고리 랩
+  const SEQX = ["#0b4f55", "#1d6a6f", "#2f7b7f", "#4a9093", "#6aa6a7", "#8bbdbd", "#a8cfce", "#c4e0df", "#dcedec", "#eef6f5"];
+  function zCol(z) { if (z >= 1.5) return ["#1d4e89", "#fff"]; if (z >= .75) return ["#3f6fae", "#fff"]; if (z >= .25) return ["#b6cbe6", "#0f172a"]; if (z > -.25) return ["#eef0f3", "#0f172a"]; if (z > -.75) return ["#f6cda9", "#0f172a"]; if (z > -1.5) return ["#e08a4c", "#0f172a"]; return ["#9a4412", "#fff"]; }
+  function catRanks() {
+    const T = XT.catTot; if (!T) return null; const rk = {}; Object.keys(T).forEach(a => rk[a] = {});
+    CATS.forEach(c => Object.keys(T).sort((a, b) => LOWX[c] ? T[a][c] - T[b][c] : T[b][c] - T[a][c]).forEach((a, k) => rk[a][c] = k + 1)); return rk;
+  }
+  function zModel10() {
+    const pool = []; TM.forEach(t => t.roster.forEach(id => { const p = P[id], f = p && (p.f || p.b || p.e); if (f && f.FGA > 0) pool.push(p); }));
+    const F = p => p.f || p.b || p.e, sm = k => pool.reduce((s, p) => s + (F(p)[k] || 0), 0), mFG = sm("FGM") / sm("FGA"), mFT = sm("FTM") / Math.max(sm("FTA"), 1e-9);
+    const raw = p => { const f = F(p); return { FG: (f.FGM / f.FGA - mFG) * f.FGA, FT: f.FTA > 0 ? (f.FTM / f.FTA - mFT) * f.FTA : 0, TPM: f.TPM, REB: f.REB, AST: f.AST, STL: f.STL, BLK: f.BLK, TO: f.TO, DD: p.dd || 0, PTS: f.PTS, TW: (p.tw || 0) / 100 }; };
+    const R = pool.map(raw), mu = {}, sd = {};
+    CATS.forEach(c => { const v = R.map(x => x[c] || 0), m = v.reduce((s, x) => s + x, 0) / v.length; mu[c] = m; sd[c] = Math.sqrt(v.reduce((s, x) => s + (x - m) * (x - m), 0) / v.length) || 1; });
+    return { n: pool.length, z: p => { const r = raw(p), z = {}; let s = 0; CATS.forEach(c => { z[c] = (LOWX[c] ? -1 : 1) * ((r[c] || 0) - mu[c]) / sd[c]; s += z[c]; }); z.total = s; return z; } };
+  }
+  function renderCL10() {
+    const box = $("view-cl"), RK = catRanks(), Z = zModel10(), ab = TM[sel].abbr, NTm = TM.length;
+    let hm = '<div class="xcard">완료된 주차 결과가 아직 없습니다.</div>', bars = "", summ = "";
+    const gcols = `grid-template-columns: 130px repeat(${CATS.length}, minmax(38px, 1fr)) 48px`;
+    if (RK) {
+      hm = `<div class="xscroll"><div style="min-width:760px"><div class="cl-hm h" style="${gcols}"><span>팀</span>${CATS.map(c => `<span>${LAB[c]}</span>`).join("")}<span style="text-align:right">평균</span></div>${order.filter(i => RK[TM[i].abbr]).map(i => { const r = RK[TM[i].abbr], avg = CATS.reduce((s, c) => s + r[c], 0) / CATS.length;
+        return `<div class="cl-hm ${i === sel ? "me" : ""}" style="${gcols}"><span class="k">${esc(TM[i].name)}</span>${CATS.map(c => `<div class="cl-cell" style="background:${SEQX[Math.min(9, Math.round((r[c] - 1) * 9 / Math.max(1, NTm - 1)))]};color:${r[c] <= NTm / 2 ? "#fff" : "#0f172a"}" title="${esc(TM[i].name)} ${LAB[c]} ${r[c]}위">${r[c]}</div>`).join("")}<span class="avg">${avg.toFixed(1)}</span></div>`; }).join("")}</div></div>`;
+      const m = RK[ab] || {};
+      bars = CATS.slice().sort((a, b) => m[a] - m[b]).map(c => `<div class="cl-bar"><span class="k">${LAB[c]}</span><div class="tr" role="img" aria-label="${LAB[c]} ${m[c]}위"><i style="width:${((NTm + 1 - m[c]) / NTm * 100).toFixed(0)}%;background:${m[c] <= 3 ? "#1d6a6f" : m[c] <= 6 ? "#8bbdbd" : "#e08a4c"}"></i></div><span class="rk">${m[c]}위</span></div>`).join("");
+      const st = CATS.filter(c => m[c] <= 2).map(c => LAB[c]), wk = CATS.filter(c => m[c] >= NTm - 1).map(c => LAB[c]);
+      summ = `<div class="cl-sum">실제 누적 기준 강점 <b>${st.join("·") || "없음"}</b>(1–2위) · 약점 <b>${wk.join("·") || "없음"}</b>(${NTm - 1}–${NTm}위). 남은 시즌 프로젝션 순위: ${CATS.filter(c => TM[sel].profile.rank[c] <= 3).map(c => LAB[c]).join("·") || "상위 없음"} 상위.</div>`;
+    }
+    const ros = TM[sel].roster.map(id => P[id]).filter(p => p && (p.f || p.b || p.e) && (p.f || p.b || p.e).FGA > 0).map(p => ({ p, z: Z.z(p) })).sort((a, b) => b.z.total - a.z.total);
+    const pc = `grid-template-columns: minmax(160px, 1.8fr) 44px 58px 34px repeat(${CATS.length}, minmax(40px, 1fr)) 58px`;
+    const fz = v => Math.abs(v) < .05 ? "0.0" : (v > 0 ? "+" : "−") + Math.abs(v).toFixed(1);
+    const prow = ros.map(({ p, z }) => { const [tb, tf] = zCol(z.total / 3);
+      return `<div class="cl-pr" style="${pc}"><span class="nm">${esc(p.n)}${stX(p.id)}</span><span class="sm">${esc(p.t || "")}</span><span class="sm">${esc((p.el || "").replace(/,/g, "·"))}</span><span class="sm" style="text-align:right">${(p.a && p.a.G) || 0}</span>${CATS.map(c => { const [b, f] = zCol(z[c]); return `<div class="cl-z" style="background:${b};color:${f}">${fz(z[c])}</div>`; }).join("")}<div class="cl-z t" style="background:${tb};color:${tf}">${fz(z.total)}</div></div>`; }).join("");
+    const zl = [[2, "+1.5 이상"], [1, "+0.75"], [.5, "+0.25"], [0, "평균"], [-.5, "−0.25"], [-1, "−0.75"], [-2, "−1.5 이하"]].map(([v, l]) => `<span><i style="background:${zCol(v)[0]};border:1px solid var(--line)"></i>${l}</span>`).join("");
+    box.innerHTML = `<div class="xv">
+    <div class="xrow"><section class="xcard xmain" style="display:block"><div class="xhead"><h2>리그 카테고리 순위 히트맵</h2><div class="xleg">1위 ${SEQX.filter((_, k) => k % 2 === 0).map(c => `<i style="background:${c};width:18px;margin:0"></i>`).join("")} ${NTm}위</div></div>${hm}
+      <p class="xnote">${RK ? `1–${XT.nWeeks}주 확정 합계 기준(FG%·FT%는 시도 합산) · TO는 적을수록 상위 · 정렬 = 남은 시즌 예상 순위` : ""}</p></section>
+      <aside class="xcard xside"><h2>${esc(TM[sel].name)} 카테고리 프로필</h2><div style="display:grid; gap:8px">${bars}</div>${summ}</aside></div>
+    <section class="xcard"><div class="xhead"><h2>로스터 z-score (리그 보유 선수 ${Z.n}명 기준)</h2><div class="xleg">${zl}</div></div>
+      <div class="xscroll"><div style="min-width:1000px"><div class="cl-pr h" style="${pc}"><span>선수</span><span>팀</span><span>포지션</span><span style="text-align:right">G</span>${CATS.map(c => `<span>${LAB[c]}</span>`).join("")}<span style="text-align:right">합계</span></div>${prow}</div></div>
+      <p class="xnote">현재 프로젝션(${location.hash === "#v2" ? "v2" : "선택 버전"}) 경기당 값 대비 표준편차. FG%·FT%는 시도 수 가중 영향도, TO는 부호 반전, TW는 팀 승률 기준. 참고: z-score 랭킹 도구와 리그 스카우팅 리포트의 색상 표.</p></section>
+    </div>`;
+  }
+
+  // C · 스탯 시트
+  function renderSS10() {
+    const box = $("view-ss"), K = wkOf(sel), ab = TM[sel].abbr, f3 = x => x == null || !isFinite(x) ? "—" : x.toFixed(3).replace(/^0/, ""), so = standOrd();
+    const st = order.map((i, k) => { const t = TM[i], s = t.season, r = stdOf(i);
+      return `<tr class="${i === sel ? "me" : ""}"><td>${k + 1}</td><td class="l">${esc(t.name)} <span style="color:var(--muted)">(${esc(t.abbr)})</span></td><td>${r.w}</td><td>${r.l}</td><td>${r.t}</td><td>${f3(r.pct)}</td><td>${xP(t.ec)}</td><td>${s.W.toFixed(0)}–${s.L.toFixed(0)}–${s.T.toFixed(0)}</td><td>${xP(s.p4)}</td><td>${xP(s.p1)}</td><td>${xP(s.champ)}</td></tr>`; }).join("");
+    const res = ((XT.res || {})[ab] || []).map(x => `<tr><td class="l">${x.w}</td><td class="l">${esc((TM.find(t => t.abbr === x.opp) || {}).name || x.opp)}</td><td>${x.W}</td><td>${x.L}</td><td>${x.T}</td><td class="c"><b>${x.W > x.L ? "승" : x.W < x.L ? "패" : "무"}</b></td></tr>`);
+    if (K) res.push(`<tr class="me"><td class="l">${D.period}</td><td class="l">${esc(TM[K.opp].name)} (진행 중 ${esc(K.rec)})</td><td>${K.W.toFixed(1)}</td><td>${K.L.toFixed(1)}</td><td>${K.T.toFixed(1)}</td><td class="c">예상</td></tr>`);
+    const cur = K ? `<h2 class="ssh">이번 주 카테고리 (${esc((D.w1meta || {}).through || "")})</h2><div class="xscroll"><table style="min-width:440px"><thead><tr><th class="l"></th>${K.cats.map(x => `<th>${LAB[x.c]}</th>`).join("")}</tr></thead><tbody>
+      <tr><td class="l"><b>${esc(TM[sel].abbr)}</b></td>${K.cats.map(x => `<td${leadX(x) > 0 ? ' class="best"' : ""}>${xf(x.c, x.me)}</td>`).join("")}</tr>
+      <tr><td class="l">${esc(TM[K.opp].abbr)}</td>${K.cats.map(x => `<td${leadX(x) < 0 ? ' class="best"' : ""}>${xf(x.c, x.op)}</td>`).join("")}</tr>
+      <tr class="me"><td class="l">승리확률(%)</td>${K.cats.map(x => `<td>${((x.w + x.t / 2) * 100).toFixed(0)}</td>`).join("")}</tr></tbody></table></div><p class="xnote">굵은 밑줄 = 현재 리드 · 승리확률은 남은 경기 반영 최종 기준(무 = 0.5).</p>` : "";
+    let ct = ""; const T = XT.catTot;
+    if (T) { const tl = order.map(i => TM[i].abbr).filter(a => T[a]), best = {}; CATS.forEach(c => { const v = tl.map(a => T[a][c]); best[c] = LOWX[c] ? Math.min(...v) : Math.max(...v); });
+      ct = `<h2 class="ssh">카테고리 누적 합계 (1–${XT.nWeeks}주)</h2><div class="xscroll"><table><thead><tr><th class="l">팀</th>${CATS.map(c => `<th>${LAB[c]}</th>`).join("")}</tr></thead><tbody>${tl.map(a => `<tr class="${a === ab ? "me" : ""}"><td class="l">${esc((TM.find(t => t.abbr === a) || {}).name || a)}</td>${CATS.map(c => `<td${T[a][c] === best[c] ? ' class="best"' : ""}>${c === "FG" || c === "FT" ? f3(T[a][c]) : (+T[a][c]).toFixed(0)}</td>`).join("")}</tr>`).join("")}</tbody></table></div><p class="xnote">굵은 밑줄 = 리그 1위(TO는 최소). FG%·FT%는 시도 합산.</p>`; }
+    const F = p => p.f || p.b || p.e || {};
+    const rr = TM[sel].roster.map(id => P[id]).filter(Boolean).sort((a, b) => (F(b).PTS || 0) - (F(a).PTS || 0)).map(p => { const f = F(p);
+      return `<tr><td class="l">${esc(p.n)}${stX(p.id)}</td><td class="l">${esc(p.t || "")}</td><td class="l">${esc((p.el || "").replace(/,/g, "-"))}</td><td>${(p.a && p.a.G) || 0}</td><td>${f.MP ? f.MP.toFixed(1) : "—"}</td><td>${(f.PTS || 0).toFixed(1)}</td><td>${(f.REB || 0).toFixed(1)}</td><td>${(f.AST || 0).toFixed(1)}</td><td>${(f.STL || 0).toFixed(1)}</td><td>${(f.BLK || 0).toFixed(1)}</td><td>${(f.TPM || 0).toFixed(1)}</td><td>${f.FGA ? f3(f.FGM / f.FGA) : "—"}</td><td>${f.FTA ? f3(f.FTM / f.FTA) : "—"}</td><td>${(f.TO || 0).toFixed(1)}</td><td>${(p.dd || 0).toFixed(2).replace(/^0/, "")}</td><td>${p.tw != null ? (p.tw / 100).toFixed(2).replace(/^0/, "") : "—"}</td></tr>`; }).join("")
+      + (TM[sel].ir || []).map(id => `<tr class="ir"><td class="l">${esc(pName(id))} (IR)${stX(id)}</td><td class="l">${esc((P[id] || {}).t || "")}</td><td class="l">${esc(((P[id] || {}).el || "").replace(/,/g, "-"))}</td>${"<td>—</td>".repeat(13)}</tr>`).join("");
+    const s = TM[sel].season;
+    box.innerHTML = `<div class="xv ss">
+    <header><nav class="ss-nav" aria-label="표 바로가기"><a href="#ss-st">순위·전망</a><span>|</span><a href="#ss-wk">주차별 결과</a><span>|</span><a href="#ss-ct">카테고리 합계</a><span>|</span><a href="#ss-ro">로스터</a></nav>
+      <h2 class="ss-title">2026-27 ${esc(TM[sel].name)} 시즌 기록</h2>
+      <p class="ss-meta"><b>성적:</b> ${recS(sel)} (카테고리), 현재 ${so.indexOf(sel) + 1}위 · ${K ? `<b>이번 주:</b> ${D.period}주차 vs ${esc(TM[K.opp].name)} 현재 ${esc(K.rec)}, 승리 확률 ${xP(K.win, 0)} · ` : ""}<b>4강:</b> ${xP(s.p4)} · <b>우승:</b> ${xP(s.champ)}</p></header>
+    <section id="ss-st"><h2 class="ssh">순위 및 시즌 전망</h2><div class="xscroll"><table><thead><tr><th>예상</th><th class="l">팀</th><th>W</th><th>L</th><th>T</th><th>승률</th><th>카테고리 승률</th><th>예상 W–L–T</th><th>4강</th><th>정규 1위</th><th>우승</th></tr></thead><tbody>${st}</tbody></table></div>
+      <p class="xnote">W·L·T = 누적 카테고리 승패(ESPN). 카테고리 승률·예상 성적·확률 = 남은 시즌 시뮬레이션(전 팀 주 2회 교체 가정).</p></section>
+    <div class="ss-two"><section id="ss-wk"><h2 class="ssh">주차별 결과 · ${esc(TM[sel].abbr)}</h2><div class="xscroll"><table style="min-width:380px"><thead><tr><th class="l">주</th><th class="l">상대</th><th>W</th><th>L</th><th>T</th><th class="c">결과</th></tr></thead><tbody>${res.join("")}</tbody></table></div></section><section>${cur}</section></div>
+    <section id="ss-ct">${ct}</section>
+    <section id="ss-ro"><h2 class="ssh">로스터 경기당 기록 (프로젝션)</h2><div class="xscroll"><table style="min-width:980px"><thead><tr><th class="l">선수</th><th class="l">팀</th><th class="l">Pos</th><th>G</th><th>MP</th><th>PTS</th><th>TRB</th><th>AST</th><th>STL</th><th>BLK</th><th>3P</th><th>FG%</th><th>FT%</th><th>TOV</th><th>DD</th><th>TW</th></tr></thead><tbody>${rr}</tbody></table></div>
+      <p class="xnote">경기당 값 = 현재 프로젝션(최근 15일 · 팀 뎁스 보정). G = 2026-27 실제 출전. DD = 경기당 더블더블 확률, TW = 출전 경기 팀 승리 확률. 참고: 농구 기록 사이트의 밀도 높은 표와 강조 행 구성.</p></section>
+    </div>`;
+  }
+
+  // D · 경영진 브리핑
+  function trendSvgX(pts, keys) {
+    const W = 640, H = 250, pl = 40, pr = 16, pt = 14, pb = 34, n = pts.length;
+    const mx = Math.max(.2, Math.ceil(Math.max(...pts.flatMap(p => keys.map(k => p[k.f] || 0))) * 10) / 10);
+    const x = i => n === 1 ? (pl + W - pr) / 2 : pl + i * (W - pl - pr) / (n - 1), y = v => pt + (1 - v / mx) * (H - pt - pb);
+    const ticks = [0, mx / 2, mx].map(v => `<line class="gl" x1="${pl}" x2="${W - pr}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}"></line><text x="${pl - 6}" y="${(y(v) + 4).toFixed(1)}" text-anchor="end">${Math.round(v * 100)}%</text>`).join("");
+    const step = Math.max(1, Math.ceil(n / 6)), labs = pts.map((p, i) => ((i % step === 0 && n - 1 - i >= step / 2) || i === n - 1) ? `<text x="${x(i).toFixed(1)}" y="${H - 12}" text-anchor="${n > 1 && i === n - 1 ? "end" : n > 1 && i === 0 ? "start" : "middle"}">${esc(p.lab)}</text>` : "").join("");
+    const lines = keys.map(k => `<polyline points="${pts.map((p, i) => `${x(i).toFixed(1)},${y(p[k.f] || 0).toFixed(1)}`).join(" ")}" fill="none" stroke="${k.c}" stroke-width="${k.w || 2}"${k.dash ? ` stroke-dasharray="${k.dash}"` : ""}></polyline>` + pts.map((p, i) => `<circle cx="${x(i).toFixed(1)}" cy="${y(p[k.f] || 0).toFixed(1)}" r="${n > 30 ? 2.5 : 4}" fill="${k.c}" stroke="var(--card)" stroke-width="1.5"><title>${esc(p.lab)} ${k.name} ${xP(p[k.f] || 0)}</title></circle>`).join("")).join("");
+    const last = pts[n - 1], k0 = keys[0];
+    return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(keys.map(k => `${k.name} 최근 ${xP(last[k.f] || 0)}`).join(" / "))}">${ticks}${labs}${lines}<text x="${(x(n - 1) - 6).toFixed(1)}" y="${(y(last[k0.f]) - 10).toFixed(1)}" text-anchor="end" style="fill:var(--ink);font-weight:700;font-size:12px">${xP(last[k0.f])}</text></svg>`;
+  }
+  function renderEB10() {
+    const box = $("view-eb"), t = TM[sel], s = t.season, ab = t.abbr, K = wkOf(sel), mine = sel === ME;
+    const byC = TM.map((x, i) => i).sort((a, b) => TM[b].season.champ - TM[a].season.champ), rk4 = TM.map((x, i) => i).sort((a, b) => TM[b].season.p4 - TM[a].season.p4).indexOf(sel) + 1;
+    const rival = byC.find(i => i !== sel), tr = (XT.trend || []).filter(p => p.teams && p.teams[ab]), asOf = D.asOf || "";
+    const prev = tr.filter(p => p.asOf < asOf).pop(), plan = mine ? (D.streamPlans || []).find(x => x.rec) : null;
+    const dl = (cur, k, lab) => { if (!prev || prev.teams[ab][k] == null) return '<span class="d">비교할 이전 리포트 없음</span>'; const d = cur - prev.teams[ab][k]; return Math.abs(d) < .0005 ? `<span class="d">변화 없음 · ${lab}</span>` : `<span class="d ${d > 0 ? "up" : "down"}">${d > 0 ? "▲" : "▼"} ${Math.abs(d * 100).toFixed(1)}%p · ${lab}</span>`; };
+    const plab = prev ? `${prev.asOf.slice(5, 10).replace("-", "/")} ${prev.asOf.slice(11, 16)} 대비` : "";
+    const sw = K ? K.cats.filter(x => catSt(x.w + x.t / 2)[1] === "swing").map(x => LAB[x.c]) : [];
+    const kp = [`<div class="xcard"><span class="l">4강 진출</span><span class="v">${xP(s.p4)}</span>${dl(s.p4, "p4", plab)}<span class="s">4강 확률 리그 ${rk4}위 · 현재 ${standOrd().indexOf(sel) + 1}위</span></div>`,
+      `<div class="xcard"><span class="l">우승 확률</span><span class="v">${xP(s.champ)}</span>${dl(s.champ, "champ", plab)}<span class="s">최대 경쟁 ${esc(TM[rival].name)} ${xP(TM[rival].season.champ)}</span></div>`,
+      K ? `<div class="xcard"><span class="l">이번 주 (vs ${esc(TM[K.opp].abbr)})</span><span class="v">${xP(K.win, 0)}</span><span class="d ${K.win >= .5 ? "up" : "down"}">현재 ${esc(K.rec)} · 예상 ${K.W.toFixed(1)}–${K.L.toFixed(1)}</span><span class="s">경합 ${sw.length}개${sw.length ? `: ${sw.join("·")}` : ""}</span></div>` : "",
+      plan ? `<div class="xcard"><span class="l">권장 교체안 실행 시 4강</span><span class="v">${xP(plan.sum.plan.p4)}</span><span class="d up">현재 경로 ${xP(s.p4)} 대비 ${sgnX((plan.sum.plan.p4 - s.p4) * 100, 1)}%p</span><span class="s">남은 영입 ${plan.sum.budget}회 중 ${plan.sum.used}회 사용 계획</span></div>`
+        : `<div class="xcard"><span class="l">정규 1위</span><span class="v">${xP(s.p1)}</span><span class="d">평균 순위 ${s.avgRank.toFixed(1)}위</span><span class="s">예상 ${s.W.toFixed(0)}–${s.L.toFixed(0)}–${s.T.toFixed(0)}</span></div>`].join("");
+    const lead = `<b>핵심:</b> 4강 확률 ${xP(s.p4)}(리그 ${rk4}위), 우승 ${xP(s.champ)}${prev ? `, 직전 리포트 대비 4강 ${sgnX((s.p4 - prev.teams[ab].p4) * 100, 1)}%p` : ""}.${plan ? ` 권장 교체안을 실행하면 4강 ${xP(plan.sum.plan.p4)}.` : ""} ${K ? `이번 주 ${esc(TM[K.opp].name)} 상대 승리 확률 ${xP(K.win, 0)}${sw.length ? `, 승부처 ${sw.join("·")}` : ""}.` : ""}`;
+    const pts = tr.map(p => ({ lab: `${p.asOf.slice(5, 10).replace("-", "/")} ${p.asOf.slice(11, 13)}시`, p4: p.teams[ab].p4, ch: p.teams[ab].champ, rv: (p.teams[TM[rival].abbr] || {}).champ || 0 }));
+    if (!pts.length || tr[tr.length - 1].asOf < asOf) pts.push({ lab: "현재", p4: s.p4, ch: s.champ, rv: TM[rival].season.champ });
+    const chart = trendSvgX(pts, [{ f: "p4", c: "#4f46e5", w: 2.5, name: `${ab} 4강` }, { f: "ch", c: "#818cf8", dash: "6 4", name: `${ab} 우승` }, { f: "rv", c: "#c2410c", name: `${TM[rival].abbr} 우승` }]);
+    const bars = byC.map(i => `<div class="eb-bar ${i === sel ? "me" : ""}"><span>${esc(TM[i].abbr)}</span><div class="tr"><i style="width:${(TM[i].season.champ / Math.max(TM[byC[0]].season.champ, 1e-9) * 100).toFixed(1)}%"></i></div><span class="p">${xP(TM[i].season.champ)}</span></div>`).join("");
+    const risk = K ? K.cats.filter(x => catSt(x.w + x.t / 2)[1] !== "win").map(x => { const q = x.w + x.t / 2, [sx, k] = catSt(q); return `<div><b>${LAB[x.c]}</b><span style="color:var(--muted)">${xf(x.c, x.me)} vs ${xf(x.c, x.op)}</span><span class="q" style="color:var(--${k === "loss" ? "bad" : "warn"})">${sx} ${(q * 100).toFixed(0)}%</span></div>`; }).join("") : "";
+    box.innerHTML = `<div class="xv">
+    <div class="eb-hd"><div><div class="ey">EXECUTIVE BRIEF</div><h2>${esc(t.name)} · 오늘의 판단 요약</h2></div><div class="fresh"><span class="pill">${esc(asOf.slice(5, 16).replace("T", " "))} 데이터</span></div></div>
+    <div class="eb-lead">${lead}</div>
+    <div class="eb-k">${kp}</div>
+    <section style="display:grid; gap:12px"><h2>결정 필요</h2><div class="eb-props">${propCards10()}</div></section>
+    <div class="xrow"><section class="xcard xmain eb-chart" style="display:block"><div class="xhead"><h2>확률 추이 (프로젝션 기준 변경 11/13 이후)</h2><div class="xleg"><span><i style="background:#4f46e5"></i>${esc(ab)} 4강</span><span><i style="background:none;border-top:3px dashed #818cf8;height:0;border-radius:0"></i>${esc(ab)} 우승</span><span><i style="background:#c2410c"></i>${esc(TM[rival].abbr)} 우승</span></div></div>${chart}
+      <p class="xnote">기록 = 시뮬레이션 실행 시점(현재 경로 = 전 팀 주 2회 교체 가정). 모델 확률은 며칠 사이 크게 움직일 수 있어 범위로 해석합니다.</p></section>
+      <section class="xcard xside"><h2>팀별 우승 확률</h2><div style="display:grid; gap:9px">${bars}</div></section></div>
+    ${K ? `<section class="xcard"><h2 style="margin-bottom:6px">이번 주 리스크 카테고리 (vs ${esc(TM[K.opp].name)})</h2><div class="eb-risk">${risk || '<p class="xnote">상실·경합 카테고리 없음</p>'}</div></section>` : ""}
+    <p class="xnote">참고: 커뮤니티가 ESPN·Yahoo 리그 데이터로 만든 Streamlit·Dash 대시보드의 지표 카드·추이 구성을 경영 보고 형식으로 재구성.</p>
+    </div>`;
+  }
+  function renderX10(v) { try { if (v === "mc") renderMC10(); else if (v === "cl") renderCL10(); else if (v === "ss") renderSS10(); else if (v === "eb") renderEB10(); } catch (e) { const b = $("view-" + v); if (b) b.innerHTML = `<div class="xcard">이 탭을 그리는 중 오류가 발생했습니다: ${esc(e.message)}</div>`; } }
+
 
   // ---------- outlook
   function renderPower() {
@@ -701,7 +1016,7 @@ section:not([hidden]) .vchart .bars rect { transform-box: fill-box; transform-or
   ["pq", "pown", "psort"].forEach(id => $(id).addEventListener("input", renderProj));
 
   $("team-sel").innerHTML = order.map(i => `<option value="${i}">${esc(TM[i].name)}${TM[i].me ? " (내 팀)" : ""}</option>`).join("");
-  $("team-sel").addEventListener("change", e => { sel = +e.target.value; store.set("l10v2-team", sel); rdOpp = null; renderPower(); renderTeam(); renderNow(); });
+  $("team-sel").addEventListener("change", e => { sel = +e.target.value; store.set("l10v2-team", sel); rdOpp = null; renderPower(); renderTeam(); renderNow(); if (["mc", "cl", "ss", "eb"].includes(view)) renderX10(view); });
   $("foot").innerHTML = D.foot.map(x => `<span>${x}</span>`).join("");
 
   // ---------- radar (SVG, shadcn Radar chart styling)

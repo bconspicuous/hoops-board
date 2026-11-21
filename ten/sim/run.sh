@@ -73,3 +73,12 @@ python3 -I -c "
 pre='<!doctype html>\n<html lang=\"ko\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1,viewport-fit=cover\"><meta name=\"robots\" content=\"noindex\"><style>:root{color-scheme:light}body{margin:0}[hidden]{display:none!important}</style>'
 open('../index.html','w').write(pre+open('league10.html').read())"
 python3 -I summary.py
+# probability history for the dashboard's 경영진 브리핑 tab (one point per data snapshot, newest wins)
+python3 -I - <<'PY'
+import json, os
+s = json.load(open('out/summary.json')); tp = 'trend.json'
+tr = json.load(open(tp)) if os.path.exists(tp) else {'points': []}
+pt = {'asOf': s['asOf'], 'teams': {t['abbr']: {'p4': round(t['p4'], 4), 'champ': round(t['champ'], 4)} for t in s['teams']}, 'planP4': round(((s.get('plans') or {}).get('rec') or {}).get('p4', 0), 4)}
+tr['points'] = sorted([p for p in tr.get('points', []) if p['asOf'] != pt['asOf']] + [pt], key=lambda p: p['asOf'])[-150:]
+json.dump(tr, open(tp, 'w'), ensure_ascii=False, indent=1)
+PY
