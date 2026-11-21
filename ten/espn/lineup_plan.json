@@ -2,7 +2,7 @@
  "date": "2026-11-20",
  "scoringPeriodId": 32,
  "hash": "56afd27835",
- "createdKST": "2026-11-21T06:48+09:00",
+ "createdKST": "2026-11-21T13:48+09:00",
  "mode": "plan",
  "moves": [],
  "lineup": [
@@ -21,7 +21,7 @@
    "name": "Andrew Nembhard",
    "pro": "IND",
    "game": true,
-   "inj": "DAY_TO_DAY",
+   "inj": "ACTIVE",
    "out": false
   },
   {
