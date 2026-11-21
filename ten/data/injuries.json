@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-21T13:44+09:00",
+ "asOf": "2026-11-21T16:46+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -562,6 +562,20 @@
    "fantasyStatus": "OUT",
    "short": "Capela (ankle) is out for Friday's game against Denver.",
    "long": "Capela hasn't taken the court since suffering a right ankle sprain against the Thunder on Oct. 31. His next opportunity to return will arrive Monday against the Clippers."
+  },
+  {
+   "player": "T.J. McConnell",
+   "team": "IND",
+   "status": "Out",
+   "date": "2026-11-21T04:58Z",
+   "type": "out",
+   "returnDate": "2026-11-22",
+   "detail": null,
+   "side": "Left",
+   "injury": "Hamstring",
+   "fantasyStatus": "OUT",
+   "short": "Rick Carlisle revealed during his postgame interview that McConnell exited Friday's 128-119 loss with a left hamstring issue, Tony East of Forbes.com reports.",
+   "long": "McConnell missed the beginning of the season recovering from a right hamstring strain, but now he's having trouble in the other hamstring. Carlisle would not speculate on the severity of McConnell's injury, but with Sunday's game in New York being the first of a back-to-back set, we wouldn't expect to see McConnell in uniform for that one. Quenton Jackson will see a boost if McConnell needs to miss time."
   },
   {
    "player": "Tyrese Haliburton",
