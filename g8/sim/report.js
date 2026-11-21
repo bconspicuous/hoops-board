@@ -60,6 +60,11 @@ let pw; try { pw = require(process.env.PW || '/opt/node-tools/node_modules/playw
   lines.push('', '| 팀 | 성적 | 기대승률 | PO | 1위 | 우승 |', '|---|---|---|---|---|---|');
   d.season.forEach(s => lines.push(`| ${s.team} | ${s.rec} | ${pct(s.epct)} | ${pct(s.po)} | ${pct(s.p1)} | ${pct(s.champ)} |`));
   const md = lines.join('\n');
-  fs.writeFileSync(path.join(__dirname, 'report.md'), md + '\n'); fs.writeFileSync(lastP, JSON.stringify(Object.assign(d, { at: new Date().toISOString() }), null, 1));
+  fs.writeFileSync(path.join(__dirname, 'report.md'), md + '\n');
+  /* probability history for the dashboard's 경영진 브리핑 tab (one point per data snapshot, newest wins) */
+  try { const tp = path.join(__dirname, 'trend.json'), tr = fs.existsSync(tp) ? JSON.parse(fs.readFileSync(tp, 'utf8')) : { points: [] };
+    const pt = { asOf: d.asOf, teams: Object.fromEntries(d.season.map(s => [s.team, { champ: +s.champ.toFixed(4), p1: +s.p1.toFixed(4), epct: +s.epct.toFixed(4) }])) };
+    tr.points = (tr.points || []).filter(x => x.asOf !== pt.asOf).concat([pt]).sort((a, b) => a.asOf < b.asOf ? -1 : 1).slice(-120);
+    fs.writeFileSync(tp, JSON.stringify(tr, null, 1)); } catch (e) { console.error('trend.json not updated:', e.message); } fs.writeFileSync(lastP, JSON.stringify(Object.assign(d, { at: new Date().toISOString() }), null, 1));
   console.log(md); if (errs.length) console.log('page errors:', errs);
 })();

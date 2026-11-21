@@ -1,0 +1,230 @@
+{
+ "note": "보수 모드 도입(2026-11-17) 이후 정기 시뮬레이션의 팀별 우승·정규 1위 확률 기록. g8/sim/report.js가 실행마다 추가",
+ "points": [
+  {
+   "asOf": "2026-11-17T07:32+09:00",
+   "teams": {
+    "Garak Twindragons": {
+     "champ": 0.1759,
+     "p1": 0.4148,
+     "epct": 0.5537
+    },
+    "ChaRDaddy": {
+     "champ": 0.4488,
+     "p1": 0.2513,
+     "epct": 0.5427
+    },
+    "Zero Sugar": {
+     "champ": 0.0404,
+     "p1": 0.1751,
+     "epct": 0.5347
+    },
+    "Gatori Team": {
+     "champ": 0.2703,
+     "p1": 0.1212,
+     "epct": 0.527
+    },
+    "Brand_New_Neo_HJ": {
+     "champ": 0.0404,
+     "p1": 0.0314,
+     "epct": 0.5026
+    },
+    "Junyoung's Scary Team": {
+     "champ": 0.0115,
+     "p1": 0.0059,
+     "epct": 0.4776
+    },
+    "Songpa Park Kezhang": {
+     "champ": 0.0121,
+     "p1": 0.0005,
+     "epct": 0.4547
+    },
+    "Kunhyo's Chokeslam": {
+     "champ": 0.0004,
+     "p1": 0,
+     "epct": 0.407
+    }
+   }
+  },
+  {
+   "asOf": "2026-11-19T23:08+09:00",
+   "teams": {
+    "Garak Twindragons": {
+     "champ": 0.2875,
+     "p1": 0.4264,
+     "epct": 0.557
+    },
+    "Zero Sugar": {
+     "champ": 0.1111,
+     "p1": 0.3404,
+     "epct": 0.552
+    },
+    "Gatori Team": {
+     "champ": 0.3365,
+     "p1": 0.1268,
+     "epct": 0.5319
+    },
+    "Brand_New_Neo_HJ": {
+     "champ": 0.0798,
+     "p1": 0.0526,
+     "epct": 0.5155
+    },
+    "ChaRDaddy": {
+     "champ": 0.1545,
+     "p1": 0.0461,
+     "epct": 0.5134
+    },
+    "Junyoung's Scary Team": {
+     "champ": 0.0193,
+     "p1": 0.0075,
+     "epct": 0.4859
+    },
+    "Songpa Park Kezhang": {
+     "champ": 0.0112,
+     "p1": 0.0003,
+     "epct": 0.4527
+    },
+    "Kunhyo's Chokeslam": {
+     "champ": 0.0001,
+     "p1": 0,
+     "epct": 0.3916
+    }
+   }
+  },
+  {
+   "asOf": "2026-11-20T23:19+09:00",
+   "teams": {
+    "Garak Twindragons": {
+     "champ": 0.3538,
+     "p1": 0.5016,
+     "epct": 0.5631
+    },
+    "Zero Sugar": {
+     "champ": 0.1125,
+     "p1": 0.3176,
+     "epct": 0.5521
+    },
+    "Gatori Team": {
+     "champ": 0.2974,
+     "p1": 0.0865,
+     "epct": 0.5255
+    },
+    "ChaRDaddy": {
+     "champ": 0.1509,
+     "p1": 0.0546,
+     "epct": 0.5186
+    },
+    "Brand_New_Neo_HJ": {
+     "champ": 0.0549,
+     "p1": 0.0307,
+     "epct": 0.5077
+    },
+    "Junyoung's Scary Team": {
+     "champ": 0.0198,
+     "p1": 0.0089,
+     "epct": 0.4891
+    },
+    "Songpa Park Kezhang": {
+     "champ": 0.0106,
+     "p1": 0.0002,
+     "epct": 0.4544
+    },
+    "Kunhyo's Chokeslam": {
+     "champ": 0.0003,
+     "p1": 0,
+     "epct": 0.3896
+    }
+   }
+  },
+  {
+   "asOf": "2026-11-21T06:44+09:00",
+   "teams": {
+    "Garak Twindragons": {
+     "champ": 0.354,
+     "p1": 0.5275,
+     "epct": 0.5632
+    },
+    "Zero Sugar": {
+     "champ": 0.1114,
+     "p1": 0.267,
+     "epct": 0.547
+    },
+    "Gatori Team": {
+     "champ": 0.2964,
+     "p1": 0.0943,
+     "epct": 0.5263
+    },
+    "ChaRDaddy": {
+     "champ": 0.1548,
+     "p1": 0.0604,
+     "epct": 0.5177
+    },
+    "Brand_New_Neo_HJ": {
+     "champ": 0.0518,
+     "p1": 0.0373,
+     "epct": 0.5086
+    },
+    "Junyoung's Scary Team": {
+     "champ": 0.0236,
+     "p1": 0.0134,
+     "epct": 0.4953
+    },
+    "Songpa Park Kezhang": {
+     "champ": 0.0078,
+     "p1": 0.0002,
+     "epct": 0.4492
+    },
+    "Kunhyo's Chokeslam": {
+     "champ": 0.0001,
+     "p1": 0,
+     "epct": 0.3926
+    }
+   }
+  },
+  {
+   "asOf": "2026-11-21T13:45+09:00",
+   "teams": {
+    "Garak Twindragons": {
+     "champ": 0.312,
+     "p1": 0.4039,
+     "epct": 0.5572
+    },
+    "Zero Sugar": {
+     "champ": 0.1506,
+     "p1": 0.3725,
+     "epct": 0.5558
+    },
+    "Gatori Team": {
+     "champ": 0.3064,
+     "p1": 0.1124,
+     "epct": 0.5303
+    },
+    "ChaRDaddy": {
+     "champ": 0.1449,
+     "p1": 0.0603,
+     "epct": 0.5187
+    },
+    "Brand_New_Neo_HJ": {
+     "champ": 0.0594,
+     "p1": 0.0416,
+     "epct": 0.5109
+    },
+    "Junyoung's Scary Team": {
+     "champ": 0.017,
+     "p1": 0.0091,
+     "epct": 0.4895
+    },
+    "Songpa Park Kezhang": {
+     "champ": 0.0096,
+     "p1": 0.0002,
+     "epct": 0.451
+    },
+    "Kunhyo's Chokeslam": {
+     "champ": 0.0001,
+     "p1": 0,
+     "epct": 0.3866
+    }
+   }
+  }
+ ]
+}

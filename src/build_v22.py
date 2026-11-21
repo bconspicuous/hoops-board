@@ -22,6 +22,14 @@ if _cfg.get("simBasis") == "actual" and docs.get("league/meta") is not None:
     docs["league/meta"] = dict(docs["league/meta"], actualWeights=[[1, 99, 1.0]],
                                actualWeightsNote="감독 지정(2026-11-10): 2026-27 실제 경기당 기록 100%(기록 없는 선수만 프로젝션) — g8/config.json simBasis=actual")
 emb = {"asOf": docs["league/rosters"]["asOf"], "docs": docs}
+# extra (2026-11-21): proposals and probability history for the four demo-derived tabs; always from the build snapshot
+def _j(rel):
+    try: return json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", rel), encoding="utf8"))
+    except Exception: return None
+_mv, _lu, _tr = _j("g8/moves/plan.json"), _j("g8/lineup/plan.json"), _j("g8/sim/trend.json")
+emb["extra"] = {"moves": {k: _mv.get(k) for k in ("week", "opp", "acqLeft", "items", "createdAt")} if _mv else None,
+                "lineup": {k: _lu.get(k) for k in ("date", "week", "status", "moves", "expected", "bench")} if _lu else None,
+                "trend": (_tr or {}).get("points", [])}
 t = open("v22/template.html", encoding="utf8").read(); ref = open("ref22.json", encoding="utf8").read().strip()
 es = json.dumps(emb, ensure_ascii=False, separators=(",", ":"))
 assert "</script" not in es.lower() and "</script" not in ref.lower()
