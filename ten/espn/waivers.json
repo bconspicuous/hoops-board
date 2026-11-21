@@ -1,6 +1,6 @@
 {
- "asOf": "2026-11-21T16:47+09:00",
- "scoringPeriodId": 32,
+ "asOf": "2026-11-21T17:45+09:00",
+ "scoringPeriodId": 33,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
   "waiverHours": 24,
@@ -165,7 +165,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "5174983",
+     "player": "Aday Mara",
      "from": "FA",
      "to": "Doo"
     },
@@ -189,7 +189,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "4600663",
+     "player": "Zach Edey",
      "from": "FA",
      "to": "Doo"
     },
@@ -213,7 +213,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "4433247",
+     "player": "Jonathan Kuminga",
      "from": "FA",
      "to": "GTD"
     },
@@ -237,7 +237,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "4397424",
+     "player": "Neemias Queta",
      "from": "FA",
      "to": "IYH"
     },
@@ -369,7 +369,7 @@
     },
     {
      "type": "DROP",
-     "player": "4600663",
+     "player": "Zach Edey",
      "from": "IYH",
      "to": "FA"
     }
@@ -603,7 +603,7 @@
     },
     {
      "type": "DROP",
-     "player": "4433247",
+     "player": "Jonathan Kuminga",
      "from": "SMS",
      "to": "FA"
     }
@@ -669,13 +669,13 @@
    "items": [
     {
      "type": "ADD",
-     "player": "4600663",
+     "player": "Zach Edey",
      "from": "FA",
      "to": "IYH"
     },
     {
      "type": "DROP",
-     "player": "5174983",
+     "player": "Aday Mara",
      "from": "IYH",
      "to": "FA"
     }
@@ -699,7 +699,7 @@
     },
     {
      "type": "DROP",
-     "player": "4397424",
+     "player": "Neemias Queta",
      "from": "SONG",
      "to": "FA"
     }
@@ -747,7 +747,7 @@
     },
     {
      "type": "DROP",
-     "player": "5174983",
+     "player": "Aday Mara",
      "from": "IYH",
      "to": "FA"
     }
@@ -819,7 +819,7 @@
     },
     {
      "type": "DROP",
-     "player": "4397424",
+     "player": "Neemias Queta",
      "from": "SONG",
      "to": "FA"
     }
@@ -1095,7 +1095,7 @@
     },
     {
      "type": "DROP",
-     "player": "4600663",
+     "player": "Zach Edey",
      "from": "KWNG",
      "to": "FA"
     }
@@ -1185,7 +1185,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "4397424",
+     "player": "Neemias Queta",
      "from": "FA",
      "to": "SONG"
     },
@@ -1287,308 +1287,9 @@
     }
    ],
    "bid": 0
-  },
-  {
-   "id": "eeb22cfe-5660-4318-b6f0-e1f9d9d364e1",
-   "team": "Doo",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-14 16:29 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Egor Demin",
-     "from": "FA",
-     "to": "Doo"
-    },
-    {
-     "type": "DROP",
-     "player": "Keldon Johnson",
-     "from": "Doo",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "5bcb3d66-6a1a-4c62-ac8b-cddbed93c502",
-   "team": "IYH",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-14 12:55 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Danny Wolf",
-     "from": "FA",
-     "to": "IYH"
-    },
-    {
-     "type": "DROP",
-     "player": "Brayden Burries",
-     "from": "IYH",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "a5b1c053-9d56-4de9-bf7a-f069d63ffcd8",
-   "team": "GTD",
-   "mine": true,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-14 11:57 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Ryan Rollins",
-     "from": "FA",
-     "to": "GTD"
-    },
-    {
-     "type": "DROP",
-     "player": "Dejounte Murray",
-     "from": "GTD",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "6d95f901-5b8e-4072-9973-074ba5f61af2",
-   "team": "SONG",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-14 09:00 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Daniel Gafford",
-     "from": "FA",
-     "to": "SONG"
-    },
-    {
-     "type": "DROP",
-     "player": "Robert Williams III",
-     "from": "SONG",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "7a4e6212-ba25-48b2-b7c8-9cb5a33e08b3",
-   "team": "SMS",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-14 08:30 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Tristan da Silva",
-     "from": "FA",
-     "to": "SMS"
-    },
-    {
-     "type": "DROP",
-     "player": "Klay Thompson",
-     "from": "SMS",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "6771be77-66d5-497d-b21c-4f9e6c0df303",
-   "team": "TBG",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-14 08:29 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Christian Braun",
-     "from": "FA",
-     "to": "TBG"
-    },
-    {
-     "type": "DROP",
-     "player": "Pelle Larsson",
-     "from": "TBG",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "d9251ff1-1ade-4e36-8b20-acc902636d0c",
-   "team": "KOO",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-14 07:31 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Jalen Suggs",
-     "from": "FA",
-     "to": "KOO"
-    },
-    {
-     "type": "DROP",
-     "player": "Coby White",
-     "from": "KOO",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "cf271b34-a337-4f8e-982d-2a860df3cbb6",
-   "team": "SONG",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-14 04:27 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Robert Williams III",
-     "from": "FA",
-     "to": "SONG"
-    },
-    {
-     "type": "DROP",
-     "player": "Ja Morant",
-     "from": "SONG",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "061dcbff-55c2-4be9-bf3d-e5cf6b59957e",
-   "team": "SMS",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-14 03:55 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Klay Thompson",
-     "from": "FA",
-     "to": "SMS"
-    },
-    {
-     "type": "DROP",
-     "player": "Ja'Kobe Walter",
-     "from": "SMS",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "5ac9897b-f7be-453a-acd2-3aed76ceee04",
-   "team": "JYP",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-14 03:03 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Meleek Thomas",
-     "from": "FA",
-     "to": "JYP"
-    },
-    {
-     "type": "DROP",
-     "player": "Collin Gillespie",
-     "from": "JYP",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "7b086f88-95da-4d3a-bd28-27b88d3d45be",
-   "team": "Doo",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-13 21:35 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Jaylen Wells",
-     "from": "FA",
-     "to": "Doo"
-    },
-    {
-     "type": "DROP",
-     "player": "Aaron Gordon",
-     "from": "Doo",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "5bb496e4-7f21-4c15-ab64-2cc4aa155dee",
-   "team": "Doo",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-13 19:06 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Keldon Johnson",
-     "from": "FA",
-     "to": "Doo"
-    },
-    {
-     "type": "DROP",
-     "player": "Collin Murray-Boyles",
-     "from": "Doo",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
   }
  ],
  "onWaivers": [
-  {
-   "id": 4395625,
-   "name": "RJ Barrett",
-   "pro": "TOR",
-   "waiverClears": "2026-11-21 17:00 KST",
-   "inj": "OUT",
-   "droppedBy": {
-    "by": "Doo",
-    "at": "2026-11-20 09:47 KST"
-   }
-  },
   {
    "id": 3908845,
    "name": "John Collins",
@@ -1631,17 +1332,6 @@
    "droppedBy": {
     "by": "Doo",
     "at": "2026-11-21 12:12 KST"
-   }
-  },
-  {
-   "id": 4592492,
-   "name": "Bones Hyland",
-   "pro": "MIN",
-   "waiverClears": "2026-11-21 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "GGAM",
-    "at": "2026-11-20 15:13 KST"
    }
   }
  ],

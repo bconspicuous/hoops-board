@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-21T16:46+09:00",
+ "asOf": "2026-11-21T17:43+09:00",
  "leagueId": "504060248",
  "season": 2027,
  "teams": [
@@ -17,11 +17,11 @@
     "Brandin Podziemski",
     "Ace Bailey",
     "Rudy Gobert",
-    "Day'Ron Sharpe",
     "Jeremiah Fears",
     "Coby White",
     "Josh Hart",
-    "Wendell Carter Jr."
+    "Wendell Carter Jr.",
+    "Neemias Queta"
    ],
    "ir": [
     "Evan Mobley"
@@ -44,7 +44,7 @@
      "5": 6
     },
     "misc": 0,
-    "moveToActive": 178,
+    "moveToActive": 184,
     "moveToIR": 6,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -60,16 +60,16 @@
     "Nikola Jokic",
     "Jalen Brunson",
     "Trae Young",
-    "Joel Embiid",
     "Keyonte George",
     "Ausar Thompson",
     "Fred VanVleet",
     "Jakob Poeltl",
-    "Isaiah Hartenstein",
-    "Matas Buzelis",
     "Tristan da Silva",
     "Moussa Diabate",
-    "Sidy Cissoko"
+    "Sidy Cissoko",
+    "Ryan Rollins",
+    "Miles Bridges",
+    "Karl-Anthony Towns"
    ],
    "ir": [
     "Paolo Banchero"
@@ -92,7 +92,7 @@
      "5": 2
     },
     "misc": 0,
-    "moveToActive": 100,
+    "moveToActive": 105,
     "moveToIR": 1,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -140,7 +140,7 @@
      "5": 2
     },
     "misc": 0,
-    "moveToActive": 131,
+    "moveToActive": 135,
     "moveToIR": 3,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -161,14 +161,14 @@
     "Franz Wagner",
     "Zion Williamson",
     "Darius Acuff Jr.",
+    "Myles Turner",
     "Jaime Jaquez Jr.",
-    "Jalen Smith",
     "Devin Vassell",
     "Kasparas Jakucionis",
     "Quentin Grimes"
    ],
    "ir": [
-    "Myles Turner"
+    "Jalen Smith"
    ],
    "record": {
     "wins": 25,
@@ -188,7 +188,7 @@
      "5": 4
     },
     "misc": 0,
-    "moveToActive": 101,
+    "moveToActive": 105,
     "moveToIR": 12,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -235,7 +235,7 @@
      "4": 1
     },
     "misc": 0,
-    "moveToActive": 89,
+    "moveToActive": 92,
     "moveToIR": 3,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -259,8 +259,8 @@
     "Dillon Brooks",
     "Brook Lopez",
     "Anthony Black",
-    "Mo Bamba",
-    "John Collins"
+    "Zach Edey",
+    "Aday Mara"
    ],
    "ir": [
     "Jalen Duren"
@@ -283,7 +283,7 @@
      "5": 6
     },
     "misc": 0,
-    "moveToActive": 100,
+    "moveToActive": 104,
     "moveToIR": 2,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -331,7 +331,7 @@
      "5": 3
     },
     "misc": 0,
-    "moveToActive": 103,
+    "moveToActive": 106,
     "moveToIR": 2,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -347,16 +347,16 @@
     "Ivica Zubac",
     "Ajay Mitchell",
     "Toumani Camara",
-    "Miles Bridges",
-    "Karl-Anthony Towns",
     "Andrew Nembhard",
     "Grayson Allen",
     "Paul George",
     "Julian Champagnie",
-    "Ryan Rollins",
     "Klay Thompson",
-    "Collin Gillespie",
-    "Keldon Johnson"
+    "Keldon Johnson",
+    "Joel Embiid",
+    "Isaiah Hartenstein",
+    "Matas Buzelis",
+    "Jonathan Kuminga"
    ],
    "ir": [
     "Kawhi Leonard"
@@ -379,7 +379,7 @@
      "5": 4
     },
     "misc": 0,
-    "moveToActive": 116,
+    "moveToActive": 121,
     "moveToIR": 10,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -427,7 +427,7 @@
      "5": 1
     },
     "misc": 0,
-    "moveToActive": 90,
+    "moveToActive": 93,
     "moveToIR": 4,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -473,7 +473,7 @@
      "4": 2
     },
     "misc": 0,
-    "moveToActive": 81,
+    "moveToActive": 84,
     "moveToIR": 3,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -516,6 +516,7 @@
    "Alex Caruso",
    "Collin Murray-Boyles",
    "Nolan Traore",
+   "Jerami Grant",
    "Scotty Pippen Jr.",
    "T.J. McConnell",
    "Jusuf Nurkic",
@@ -555,7 +556,6 @@
    "Deni Avdija",
    "P.J. Washington",
    "Draymond Green",
-   "Jerami Grant",
    "Walter Clayton Jr."
   ]
  }
