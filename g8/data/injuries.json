@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-21T16:43+09:00",
+ "asOf": "2026-11-21T17:49+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -121,7 +121,7 @@
    "status": "Out",
    "date": "2026-11-21T02:25Z",
    "type": "out",
-   "returnDate": "2026-11-20",
+   "returnDate": "2026-11-23",
    "detail": null,
    "side": "Right",
    "injury": "Hamstring",
@@ -676,6 +676,20 @@
    "long": "Reaves will miss his fourth straight game Friday, but it sounds like he'll be back next week. Quentin Grimes and Collin Sexton will continue to pick up the slack while Reaves is out, and Luka Doncic will be operating with a hefty usage rate."
   },
   {
+   "player": "Jerami Grant",
+   "team": "MEM",
+   "status": "Out",
+   "date": "2026-11-21T08:08Z",
+   "type": "out",
+   "returnDate": "2026-11-23",
+   "detail": "Not Specified",
+   "side": "Left",
+   "injury": "Calf",
+   "fantasyStatus": "OUT",
+   "short": "Grant (calf) is out for Saturday's game against the Timberwolves.",
+   "long": "Grant went down early in Thursday's win over the Warriors, and he's now dealing with a strained left calf that could cost him multiple contests. With Cameron Boozer (ankle) also sidelined, Taylor Hendricks and Olivier-Maxence Prosper are both worthy of streaming consideration in fantasy leagues."
+  },
+  {
    "player": "Javon Small",
    "team": "MEM",
    "status": "Out",
@@ -716,20 +730,6 @@
    "fantasyStatus": "GTD",
    "short": "Jerome (hip) is probable for Saturday's game in Minnesota.",
    "long": "Jerome is set to return from a three-game layoff Saturday, which will likely shift Cam Spencer back to the second unit. Jerome has gotten off to a hot start this season, averaging 25.4 points, 5.3 assists and 2.5 triples per contest on 48.5 percent shooting from the field and 90.2 percent at the line."
-  },
-  {
-   "player": "Jerami Grant",
-   "team": "MEM",
-   "status": "Day-To-Day",
-   "date": "2026-11-20T02:08Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-21",
-   "detail": "Not Specified",
-   "side": "Left",
-   "injury": "Calf",
-   "fantasyStatus": "GTD",
-   "short": "Grant won't return to Thursday's game against the Warriors due to a left calf injury. He'll finish with three points (1-2 FG, 1-1 3Pt) across five minutes.",
-   "long": "Grant limped to the locker room in the second quarter and was ruled out for the remainder of the contest shortly thereafter. If he's forced to miss additional time, Kris Murray and Olivier-Maxence Prosper would be candidates for increased minutes. Grant's next chance to play will come Saturday at Minnesota."
   },
   {
    "player": "GG Jackson",
