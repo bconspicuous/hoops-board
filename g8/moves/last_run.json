@@ -1,7 +1,7 @@
 {
- "planId": "20261120T2146",
+ "planId": "20261121T0446",
  "mode": "dry",
- "at": "2026-11-20T16:47-05:00",
+ "at": "2026-11-20T23:46-05:00",
  "items": [
   {
    "n": 1,
@@ -14,7 +14,7 @@
     "name": "Alex Sarr",
     "status": "FREEAGENT"
    },
-   "drop": "AJ Dybantsa",
+   "drop": "Matas Buzelis",
    "ir": null
   },
   {
@@ -35,6 +35,6 @@
  "addsUsed": 6,
  "rosterMatchesPlan": true,
  "irNotOut": [
-  "Zach Edey (DAY_TO_DAY)"
+  "Zach Edey (ACTIVE)"
  ]
 }
