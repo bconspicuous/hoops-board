@@ -5,15 +5,15 @@
  "dropCandidates": [
   "Brandon Miller",
   "Jeremiah Fears",
-  "AJ Dybantsa",
+  "Norman Powell",
   "Matas Buzelis",
   "Jalen Suggs"
  ],
  "base": {
-  "wk": 5.601,
-  "champ": 0.354,
-  "p1": 0.5275,
-  "epct": 0.5632
+  "wk": 5.571,
+  "champ": 0.312,
+  "p1": 0.4039,
+  "epct": 0.5572
  },
  "protect": [
   "Shai Gilgeous-Alexander",
@@ -23,12 +23,12 @@
   "James Harden",
   "Miles Bridges",
   "Michael Porter Jr.",
-  "Norman Powell"
+  "AJ Dybantsa"
  ],
  "droppable": [
   "Brandon Miller",
   "Jeremiah Fears",
-  "AJ Dybantsa",
+  "Norman Powell",
   "Matas Buzelis",
   "Jalen Suggs"
  ],
@@ -36,7 +36,7 @@
   {
    "kind": "ir-ineligible",
    "player": "Zach Edey",
-   "status": "DTD",
+   "status": "정상",
    "note": "IR 선수가 O가 아님 — ESPN이 영입을 막을 수 있음(감독 판단: DTD는 영입 가능). 첫 사례에서 실제 동작을 기록"
   }
  ],
@@ -47,15 +47,15 @@
    "add": "Alex Sarr",
    "addEspnId": 5160992,
    "addOwner": "FA",
-   "drop": "AJ Dybantsa",
+   "drop": "Matas Buzelis",
    "ir": null,
-   "weekGain": 0.202,
-   "titleGain": 0.0766,
-   "p1Gain": 0.1781,
-   "epctGain": 0.0145,
+   "weekGain": 0.135,
+   "titleGain": 0.0846,
+   "p1Gain": 0.1297,
+   "epctGain": 0.0129,
    "addTeam": "WAS",
    "addPos": "PF,C",
-   "dropValue": -3.77,
+   "dropValue": -3.89,
    "status": "proposed",
    "conflicts": [],
    "addHealth": {
@@ -63,29 +63,29 @@
     "injury": null,
     "returnDate": null,
     "report": null,
-    "g": 15,
-    "min": 27.2
+    "g": 16,
+    "min": 26.8
    },
-   "firstProposedAt": "2026-11-20T21:46:12.790Z"
+   "firstProposedAt": "2026-11-21T04:46:11.247Z"
   },
   {
    "n": 2,
    "kind": "activate",
    "ir": "Zach Edey",
    "drop": "Brandon Miller",
-   "weekGain": 0.012,
-   "titleGain": 0.0388,
-   "p1Gain": 0.0827,
-   "epctGain": 0.0086,
-   "dropValue": -4.35,
+   "weekGain": 0.044,
+   "titleGain": 0.0883,
+   "p1Gain": 0.131,
+   "epctGain": 0.0122,
+   "dropValue": -4.3,
    "status": "proposed",
-   "note": "IR 복귀(상태 DTD)",
+   "note": "IR 복귀(상태 정상)",
    "addHealth": null,
    "irHealth": {
-    "status": "DTD",
-    "injury": "Ankle",
-    "returnDate": "2026-11-21",
-    "report": "Edey (hip) has been ruled out for Thursday's game against the Warriors.",
+    "status": "정상",
+    "injury": null,
+    "returnDate": null,
+    "report": null,
     "g": 12,
     "min": 20.8
    },
@@ -95,45 +95,44 @@
  "screened": [
   {
    "add": "Alex Sarr",
-   "drop": "AJ Dybantsa",
+   "drop": "Matas Buzelis",
    "ir": null,
-   "wk": 0.202,
-   "title": 0.0766
+   "wk": 0.135,
+   "title": 0.0846
   },
   {
    "add": "Josh Hart",
    "drop": "Brandon Miller",
    "ir": null,
    "wk": 0.381,
-   "title": 0.0226
+   "title": 0.0336
   },
   {
    "add": "John Collins",
    "drop": "Jeremiah Fears",
    "ir": null,
-   "wk": 0.059,
-   "title": 0.0402
+   "wk": 0.049,
+   "title": 0.0592
   },
   {
    "add": "Derik Queen",
    "drop": "Jalen Suggs",
    "ir": null,
-   "wk": 0.076,
-   "title": -0.018
+   "wk": 0.077,
+   "title": 0.047
   },
   {
-   "add": "P.J. Washington",
-   "drop": "Matas Buzelis",
+   "add": "Andrew Nembhard",
+   "drop": "Norman Powell",
    "ir": null,
-   "wk": 0.103,
-   "title": -0.0376
+   "wk": 0.118,
+   "title": 0.0315
   }
  ],
- "createdAt": "2026-11-20T21:46:12.790Z",
- "id": "20261120T2146",
+ "createdAt": "2026-11-21T04:46:11.247Z",
+ "id": "20261121T0446",
  "rosterSig": "AJ Dybantsa|Anthony Davis|Brandon Miller|Jalen Suggs|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Matas Buzelis|Michael Porter Jr.|Miles Bridges|Norman Powell|Shai Gilgeous-Alexander#Austin Reaves|Zach Edey",
  "newItems": [
-  1,
-  2
+  1
  ]
 }
