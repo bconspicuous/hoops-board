@@ -10,10 +10,10 @@
   "Jalen Suggs"
  ],
  "base": {
-  "wk": 5.141,
-  "champ": 0.2776,
-  "p1": 0.2879,
-  "epct": 0.5444
+  "wk": 5.023,
+  "champ": 0.2898,
+  "p1": 0.3029,
+  "epct": 0.5455
  },
  "protect": [
   "Shai Gilgeous-Alexander",
@@ -42,13 +42,13 @@
    "addOwner": "FA",
    "drop": "Brandon Miller",
    "ir": null,
-   "weekGain": 0.576,
-   "titleGain": 0.0326,
-   "p1Gain": 0.096,
-   "epctGain": 0.0073,
+   "weekGain": 0.566,
+   "titleGain": 0.0364,
+   "p1Gain": 0.1005,
+   "epctGain": 0.0083,
    "addTeam": "NYK",
    "addPos": "SG,SF",
-   "dropValue": -4.3,
+   "dropValue": -4.29,
    "status": "proposed",
    "conflicts": [],
    "addHealth": {
@@ -67,40 +67,40 @@
    "add": "Josh Hart",
    "drop": "Brandon Miller",
    "ir": null,
-   "wk": 0.576,
-   "title": 0.0326
+   "wk": 0.566,
+   "title": 0.0364
   },
   {
    "add": "P.J. Washington",
    "drop": "Zach Edey",
    "ir": null,
-   "wk": 0.295,
-   "title": 0.0448
+   "wk": 0.296,
+   "title": 0.0492
   },
   {
    "add": "Tyler Herro",
    "drop": "Jalen Suggs",
    "ir": null,
-   "wk": 0.071,
-   "title": 0.0586
+   "wk": 0.084,
+   "title": 0.0692
   },
   {
    "add": "Daniel Gafford",
    "drop": "Jeremiah Fears",
    "ir": null,
-   "wk": 0.121,
-   "title": 0.0524
+   "wk": 0.134,
+   "title": 0.0519
   },
   {
    "add": "Andrew Nembhard",
    "drop": "Matas Buzelis",
    "ir": null,
-   "wk": 0.019,
-   "title": -0.0102
+   "wk": 0.008,
+   "title": -0.0174
   }
  ],
- "createdAt": "2026-11-21T10:46:14.767Z",
- "id": "20261121T1046",
+ "createdAt": "2026-11-21T21:45:57.029Z",
+ "id": "20261121T2145",
  "rosterSig": "AJ Dybantsa|Anthony Davis|Brandon Miller|Jalen Suggs|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Matas Buzelis|Michael Porter Jr.|Norman Powell|Shai Gilgeous-Alexander|Zach Edey#Austin Reaves",
  "newItems": []
 }
