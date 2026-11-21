@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-21T13:45+09:00",
+ "asOf": "2026-11-21T16:43+09:00",
  "source": "ESPN API sync (GitHub Actions g8-espn)",
  "teams": {
   "Junyoung's Scary Team": {
@@ -206,6 +206,7 @@
   "Collin Murray-Boyles": "O",
   "Nolan Traore": "O",
   "Scotty Pippen Jr.": "O",
+  "T.J. McConnell": "O",
   "Jusuf Nurkic": "O",
   "Cason Wallace": "O",
   "Bennedict Mathurin": "O",
@@ -263,6 +264,7 @@
   "Stephen Curry": "2026-12-12",
   "Kristaps Porzingis": "2027-01-02",
   "Jimmy Butler III": "2027-01-02",
+  "T.J. McConnell": "2026-11-22",
   "Tyrese Haliburton": "2026-12-13",
   "Brandon Ingram": "2026-11-23",
   "Bradley Beal": "2026-11-29",
