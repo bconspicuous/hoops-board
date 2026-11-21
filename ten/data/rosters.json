@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-21T19:44+09:00",
+ "asOf": "2026-11-22T04:50+09:00",
  "leagueId": "504060248",
  "season": 2027,
  "teams": [
@@ -444,18 +444,17 @@
     "Bam Adebayo",
     "Deni Avdija",
     "Naz Reid",
+    "Trey Murphy III",
     "Derik Queen",
     "Zach LaVine",
     "Ayo Dosunmu",
     "Aaron Wiggins",
     "Saddiq Bey",
     "Tyler Herro",
-    "Dylan Harper",
-    "Cameron Johnson",
-    "De'Andre Hunter"
+    "Cameron Johnson"
    ],
    "ir": [
-    "Trey Murphy III"
+    "Dylan Harper"
    ],
    "record": {
     "wins": 21,
@@ -466,15 +465,15 @@
    "transactions": {
     "acquisitionBudgetSpent": 0,
     "acquisitions": 5,
-    "drops": 4,
+    "drops": 5,
     "matchupAcquisitionTotals": {
      "2": 2,
      "3": 1,
      "4": 2
     },
     "misc": 0,
-    "moveToActive": 84,
-    "moveToIR": 3,
+    "moveToActive": 85,
+    "moveToIR": 4,
     "paid": 0.0,
     "teamCharges": 0.0,
     "trades": 1
@@ -486,20 +485,18 @@
    "Evan Mobley",
    "Paolo Banchero",
    "Austin Reaves",
-   "Ty Jerome",
    "Brandon Ingram",
-   "Jalen Smith",
    "Tyrese Haliburton",
    "Jalen Duren",
    "Cameron Boozer",
    "Anthony Edwards",
    "Jaylen Brown",
    "Kawhi Leonard",
-   "Grayson Allen",
    "Stephen Curry",
+   "Trey Murphy III",
    "Dylan Harper",
-   "RJ Barrett",
    "Ja Morant",
+   "RJ Barrett",
    "Caleb Wilson",
    "Kon Knueppel",
    "Dejounte Murray",
@@ -507,18 +504,13 @@
    "Chet Holmgren",
    "CJ McCollum",
    "Jaren Jackson Jr.",
-   "Duncan Robinson",
    "Jalen Williams",
    "Tobias Harris",
+   "Duncan Robinson",
    "Kristaps Porzingis",
    "Jimmy Butler III",
-   "Precious Achiuwa",
-   "Alex Caruso",
-   "Collin Murray-Boyles",
-   "Nolan Traore",
    "Jerami Grant",
    "Scotty Pippen Jr.",
-   "T.J. McConnell",
    "Jusuf Nurkic",
    "Cason Wallace",
    "Bennedict Mathurin",
@@ -538,9 +530,7 @@
    "Justin Champagnie",
    "Ben Simmons",
    "Ronald Holland II",
-   "Ryan Dunn",
    "Jordan Clarkson",
-   "Grant Williams",
    "Sergio de Larrea",
    "Vit Krejci",
    "Adem Bona",
@@ -550,13 +540,22 @@
   ],
   "DTD": [
    "Jayson Tatum",
+   "Karl-Anthony Towns",
+   "Jalen Smith",
    "Derrick White",
-   "Tyrese Maxey",
+   "Grayson Allen",
    "OG Anunoby",
    "Deni Avdija",
    "P.J. Washington",
    "Draymond Green",
-   "Walter Clayton Jr."
+   "Precious Achiuwa",
+   "Alex Caruso",
+   "Collin Murray-Boyles",
+   "Nolan Traore",
+   "T.J. McConnell",
+   "Walter Clayton Jr.",
+   "Ryan Dunn",
+   "Grant Williams"
   ]
  }
 }
