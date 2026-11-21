@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-21T06:45+09:00",
+ "asOf": "2026-11-21T13:45+09:00",
  "scoringPeriodId": 32,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -52,7 +52,7 @@
    "team": "GTD",
    "name": "Garak Twindragons",
    "rank": 6,
-   "acq": 20
+   "acq": 21
   },
   {
    "team": "SMS",
@@ -64,13 +64,13 @@
    "team": "Doo",
    "name": "Helio honeymoons",
    "rank": 8,
-   "acq": 15
+   "acq": 17
   },
   {
    "team": "IYH",
    "name": "Jongno Karina",
    "rank": 9,
-   "acq": 22
+   "acq": 23
   },
   {
    "team": "GGAM",
@@ -154,6 +154,102 @@
   }
  ],
  "transactions": [
+  {
+   "id": "dcc8623d-b890-498f-b1db-65ccc8f21a56",
+   "team": "Doo",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-21 12:12 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "5174983",
+     "from": "FA",
+     "to": "Doo"
+    },
+    {
+     "type": "DROP",
+     "player": "Mo Bamba",
+     "from": "Doo",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "c8acb049-50f3-4f23-9faa-90b9af96f784",
+   "team": "Doo",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-21 11:07 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "4600663",
+     "from": "FA",
+     "to": "Doo"
+    },
+    {
+     "type": "DROP",
+     "player": "John Collins",
+     "from": "Doo",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "65ca5aa3-8119-472c-8107-13777b793cbc",
+   "team": "GTD",
+   "mine": true,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-21 10:47 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "4433247",
+     "from": "FA",
+     "to": "GTD"
+    },
+    {
+     "type": "DROP",
+     "player": "Collin Gillespie",
+     "from": "GTD",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "92298ffd-a60b-4a39-94ea-16a91c51c423",
+   "team": "IYH",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-21 09:00 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "4397424",
+     "from": "FA",
+     "to": "IYH"
+    },
+    {
+     "type": "DROP",
+     "player": "Day'Ron Sharpe",
+     "from": "IYH",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
   {
    "id": "166de6ea-19f7-4f94-ad2d-b4301f3c72e5",
    "team": "GGAM",
@@ -273,7 +369,7 @@
     },
     {
      "type": "DROP",
-     "player": "Zach Edey",
+     "player": "4600663",
      "from": "IYH",
      "to": "FA"
     }
@@ -507,7 +603,7 @@
     },
     {
      "type": "DROP",
-     "player": "Jonathan Kuminga",
+     "player": "4433247",
      "from": "SMS",
      "to": "FA"
     }
@@ -573,13 +669,13 @@
    "items": [
     {
      "type": "ADD",
-     "player": "Zach Edey",
+     "player": "4600663",
      "from": "FA",
      "to": "IYH"
     },
     {
      "type": "DROP",
-     "player": "Aday Mara",
+     "player": "5174983",
      "from": "IYH",
      "to": "FA"
     }
@@ -603,7 +699,7 @@
     },
     {
      "type": "DROP",
-     "player": "Neemias Queta",
+     "player": "4397424",
      "from": "SONG",
      "to": "FA"
     }
@@ -651,7 +747,7 @@
     },
     {
      "type": "DROP",
-     "player": "Aday Mara",
+     "player": "5174983",
      "from": "IYH",
      "to": "FA"
     }
@@ -723,7 +819,7 @@
     },
     {
      "type": "DROP",
-     "player": "Neemias Queta",
+     "player": "4397424",
      "from": "SONG",
      "to": "FA"
     }
@@ -999,7 +1095,7 @@
     },
     {
      "type": "DROP",
-     "player": "Zach Edey",
+     "player": "4600663",
      "from": "KWNG",
      "to": "FA"
     }
@@ -1089,7 +1185,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "Neemias Queta",
+     "player": "4397424",
      "from": "FA",
      "to": "SONG"
     },
@@ -1494,6 +1590,50 @@
    }
   },
   {
+   "id": 3908845,
+   "name": "John Collins",
+   "pro": "DET",
+   "waiverClears": "2026-11-22 17:00 KST",
+   "inj": "ACTIVE",
+   "droppedBy": {
+    "by": "Doo",
+    "at": "2026-11-21 11:07 KST"
+   }
+  },
+  {
+   "id": 4278585,
+   "name": "Collin Gillespie",
+   "pro": "PHX",
+   "waiverClears": "2026-11-22 17:00 KST",
+   "inj": "ACTIVE",
+   "droppedBy": {
+    "by": "GTD",
+    "at": "2026-11-21 10:47 KST"
+   }
+  },
+  {
+   "id": 4432194,
+   "name": "Day'Ron Sharpe",
+   "pro": "BKN",
+   "waiverClears": "2026-11-22 17:00 KST",
+   "inj": "ACTIVE",
+   "droppedBy": {
+    "by": "IYH",
+    "at": "2026-11-21 09:00 KST"
+   }
+  },
+  {
+   "id": 4277919,
+   "name": "Mo Bamba",
+   "pro": "UTA",
+   "waiverClears": "2026-11-22 17:00 KST",
+   "inj": "ACTIVE",
+   "droppedBy": {
+    "by": "Doo",
+    "at": "2026-11-21 12:12 KST"
+   }
+  },
+  {
    "id": 4592492,
    "name": "Bones Hyland",
    "pro": "MIN",
@@ -1510,7 +1650,6 @@
   "gameId",
   "id",
   "members",
-  "pendingTransactions",
   "scoringPeriodId",
   "seasonId",
   "segmentId",
