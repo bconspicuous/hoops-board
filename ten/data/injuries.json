@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-22T04:50+09:00",
+ "asOf": "2026-11-22T06:45+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -88,32 +88,46 @@
    "long": "Veesaar suffered the injury during a workout on Sept. 15, and an MRI confirmed the diagnosis. The No. 52 overall pick in the 2026 NBA Draft, Veesaar was expected to spend a lot of time with Atlanta's G League affiliate this season."
   },
   {
-   "player": "Jayson Tatum",
+   "player": "Mitchell Robinson",
    "team": "BOS",
-   "status": "Day-To-Day",
-   "date": "2026-11-21T01:07Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-21",
+   "status": "Out",
+   "date": "2026-11-21T20:55Z",
+   "type": "out",
+   "returnDate": "2026-11-22",
    "detail": null,
    "side": null,
-   "injury": "Rest",
-   "fantasyStatus": "GTD",
-   "short": "Tatum (rest) is listed as questionable for Saturday's game against Sacramento.",
-   "long": "Tatum might not play Saturday against the Kings, the first game of a back-to-back. If he doesn't suit up, it could result in more work for Luka Garza, Sam Hauser and Jordan Walsh."
+   "injury": "Illness",
+   "fantasyStatus": "OUT",
+   "short": "Robinson (illness) has been ruled out for Saturday's game against the Kings, Keith Smith of Spotrac.com reports.",
+   "long": "Robinson is under the weather and will not play in the front end of Boston's back-to-back set, but he could be available for Sunday night's game against the Warriors. With Robinson sidelined, Luka Garza and Chris Cenac should both see a bump in minutes behind starting center Neemias Queta."
   },
   {
    "player": "Derrick White",
    "team": "BOS",
-   "status": "Day-To-Day",
-   "date": "2026-11-21T01:00Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-21",
+   "status": "Out",
+   "date": "2026-11-21T20:53Z",
+   "type": "out",
+   "returnDate": "2026-11-22",
    "detail": null,
    "side": "Left",
    "injury": "Shoulder",
-   "fantasyStatus": "GTD",
-   "short": "White (shoulder) is questionable to play in Saturday's game against Sacramento.",
-   "long": "White is dealing with a left AC joint contusion, and the ailment could force him to miss his first outing of the season. Across 15 games in 2026-27, White is averaging 12.7 points, 3.0 rebounds, 5.0 assists, 1.1 steals, 0.7 blocks and 1.7 three-pointers in 29.9 minutes. If he's unable to play, Payton Pritchard may join the starting lineup, while Hugo Gonzalez and Baylor Scheierman should see a bump in minutes off the bench."
+   "fantasyStatus": "OUT",
+   "short": "White (shoulder) has been ruled out for Saturday's game against Sacramento.",
+   "long": "White drew the questionable tag for Saturday's game due to left AC joint sprain in his shoulder. The veteran guard will be in street clothes for the first leg of the Celtics' back-to-back set, but he could make his return Sunday against the Warriors. With Jayson Tatum (rest) also out, Payton Pritchard and Paul George will carry the workload for the Celtics, and there will be more opportunities for the likes of Sam Hauser, Hugo Gonzalez, Baylor Scheierman and Jordan Walsh."
+  },
+  {
+   "player": "Jayson Tatum",
+   "team": "BOS",
+   "status": "Out",
+   "date": "2026-11-21T20:51Z",
+   "type": "out",
+   "returnDate": "2026-11-22",
+   "detail": null,
+   "side": null,
+   "injury": "Rest",
+   "fantasyStatus": "OUT",
+   "short": "Tatum (rest) has been ruled out for Saturday's game against the Kings.",
+   "long": "Tatum will be rested for the first leg of the Celtics' back-to-back set, so he should be back on the floor for Sunday's game against the Warriors. With both Tatum and Derrick White (shoulder) sidelined, the Celtics will rely more heavily on Paul George, Payton Pritchard, Baylor Scheierman, Hugo Gonzalez and Sam Hauser to carry the scoring load against Sacramento."
   },
   {
    "player": "Nolan Traore",
@@ -763,15 +777,29 @@
    "player": "Myron Gardner",
    "team": "MIA",
    "status": "Day-To-Day",
-   "date": "2026-11-19T14:45Z",
+   "date": "2026-11-21T20:35Z",
    "type": "day-to-day",
    "returnDate": "2026-11-22",
    "detail": null,
    "side": null,
    "injury": "Hamstring",
    "fantasyStatus": "GTD",
-   "short": "Gardner (hamstring) is out for Wednesday's game against the Bucks.",
-   "long": "Gardner was already in line to hit the bench in Pelle Larsson's (illness) return. He'll have some extra time to recover ahead of Sunday's showdown with the Thunder."
+   "short": "Gardner (hamstring) is probable for Sunday's game against the Thunder.",
+   "long": "The probable tag suggests Gardner is on the verge of returning to the hardwood after a one-game absence due to injury. He's been in and out of the starting five, but he started his last three games before missing Wednesday's win over the Bucks. He's averaging 3.0 points, 2.3 rebounds and 1.1 assists per game this season, so even if he's cleared to play Sunday, he shouldn't carry a ton of fantasy appeal."
+  },
+  {
+   "player": "Giannis Antetokounmpo",
+   "team": "MIA",
+   "status": "Day-To-Day",
+   "date": "2026-11-21T20:33Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-22",
+   "detail": null,
+   "side": null,
+   "injury": "Groin",
+   "fantasyStatus": "GTD",
+   "short": "Antetokounmpo (groin) is listed as questionable for Sunday's game against Oklahoma City, Ira Winderman of the South Florida Sun Sentinel reports.",
+   "long": "Antetokounmpo previously dealt with a wrist injury in November, and he's now working through a groin issue that puts his status for Sunday's game up in the air. He has yet to miss a game this season, but if he's not cleared to play against Oklahoma City, then Andrew Wiggins and Bobby Portis would be the top candidates to enter Miami's starting lineup."
   },
   {
    "player": "Ousmane Dieng",
@@ -1026,6 +1054,20 @@
    "long": "Williams suffered the injury during Sunday's meeting with the Clippers and was taken off the court on a stretcher. It's unknown when the 25-year-old will be cleared to return, though the Thunder will presumably be overly cautious moving forward. Williams, who signed a five-year extension in July of 2025, has had a productive career, averaging 17.9 points, 4.6 rebounds, 4.4 assists and 1.3 steals over 30.9 minutes per contest. However, after playing at least 69 regular-season games in his first three years in the league, he has appeared in just 36 in the last two seasons combined. With the Thunder having one of the deepest rosters in the NBA, the team may look for more minutes from Jared McCain, Jaylin Williams, and Kenrich Williams for the remainder of the 2026-27 campaign."
   },
   {
+   "player": "Jonathan Isaac",
+   "team": "ORL",
+   "status": "Out",
+   "date": "2026-11-21T21:09Z",
+   "type": "out",
+   "returnDate": "2026-11-29",
+   "detail": "Not Specified",
+   "side": "Left",
+   "injury": "Knee",
+   "fantasyStatus": "GTD",
+   "short": "Isaac (knee) is out for Sunday's game against the Wizards.",
+   "long": "Isaac continues to deal with a knee injury that has kept him out of action for the entire 2026-27 season. He should continue to be considered week to week until the Magic offer an update on his recovery process."
+  },
+  {
    "player": "Izaiyah Nelson",
    "team": "ORL",
    "status": "Out",
@@ -1040,30 +1082,16 @@
    "long": "Nelson underwent surgery this offseason to repair a fractured left ankle. It's encouraging to hear that he's made some progress, but the two-way player can still be considered week-to-week moving forward."
   },
   {
-   "player": "Jonathan Isaac",
-   "team": "ORL",
-   "status": "Out",
-   "date": "2026-11-15T18:22Z",
-   "type": "out",
-   "returnDate": "2026-11-22",
-   "detail": "Not Specified",
-   "side": "Left",
-   "injury": "Knee",
-   "fantasyStatus": "GTD",
-   "short": "Isaac (knee) has been ruled out for Monday's game against the Celtics.",
-   "long": "Isaac's 2026-27 season debut will have to wait, as he's still working his way back from a left knee injury. He should be considered week-to-week until Orlando provides a clear update for his return."
-  },
-  {
    "player": "Noah Penda",
    "team": "ORL",
    "status": "Out",
    "date": "2026-11-14T17:33Z",
    "type": "out",
-   "returnDate": "2026-11-22",
+   "returnDate": "2026-11-29",
    "detail": "Strain",
    "side": "Right",
    "injury": "Hamstring",
-   "fantasyStatus": "GTD",
+   "fantasyStatus": "OUT",
    "short": "Penda (hamstring) is making progress but remains without a timetable to return to game action, Jason Beede of the Orlando Sentinel reports.",
    "long": "Penda suffered a partially torn hamstring in the preseason and can still be considered week-to-week moving forward. With the second-year forward and Paolo Banchero (ankle) both sidelined, Tristan da Silva and Jamal Cain should continue seeing increased minutes."
   },
@@ -1239,15 +1267,15 @@
    "player": "Precious Achiuwa",
    "team": "SAC",
    "status": "Day-To-Day",
-   "date": "2026-11-21T14:55Z",
+   "date": "2026-11-21T21:19Z",
    "type": "day-to-day",
    "returnDate": "2026-11-21",
    "detail": "Bruise",
    "side": "Left",
    "injury": "Lower Leg",
    "fantasyStatus": "GTD",
-   "short": "Achiuwa (lower leg) has been ruled out for Friday's game against the Lakers.",
-   "long": "Achiuwa will miss the front end of this back-to-back set due to a lower-leg contusion, and his next chance to play will come against Boston on Saturday. With the 27-year-old sidelined, Dylan Cardwell and Alex Karaban are candidates for increased playing time."
+   "short": "Achiuwa (lower leg) is questionable for Saturday's game against the Celtics.",
+   "long": "Achiuwa has missed three of the Kings' last four games while recovering from a left lower leg contusion, but there's a chance that the veteran forward is available for Saturday's contest. If he's cleared to play, then Dylan Cardwell would likely see a drop in playing time."
   },
   {
    "player": "Maxime Raynaud",
