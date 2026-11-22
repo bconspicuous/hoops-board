@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-23T05:00+09:00",
+ "asOf": "2026-11-23T06:45+09:00",
  "scoringPeriodId": 34,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -64,7 +64,7 @@
    "team": "IYH",
    "name": "Jongno Karina",
    "rank": 8,
-   "acq": 23
+   "acq": 24
   },
   {
    "team": "GGAM",
@@ -154,6 +154,48 @@
   }
  ],
  "transactions": [
+  {
+   "id": "b7e133c3-e2f2-460c-a6ed-2235e62f4f28",
+   "team": "SONG",
+   "mine": false,
+   "type": "ROSTER",
+   "status": "EXECUTED",
+   "proposed": "2026-11-23 06:20 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "DROP",
+     "player": "Kevin Huerter",
+     "from": "SONG",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "4a2f2aa0-ac38-4163-889a-2370f6b4e54e",
+   "team": "IYH",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-23 06:10 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "4432194",
+     "from": "FA",
+     "to": "IYH"
+    },
+    {
+     "type": "DROP",
+     "player": "Josh Hart",
+     "from": "IYH",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
   {
    "id": "df780cb6-2cd4-4520-b1f7-409aa5c09466",
    "team": "SMS",
@@ -411,7 +453,7 @@
     },
     {
      "type": "DROP",
-     "player": "Day'Ron Sharpe",
+     "player": "4432194",
      "from": "IYH",
      "to": "FA"
     }
@@ -1249,6 +1291,17 @@
  ],
  "onWaivers": [
   {
+   "id": 3062679,
+   "name": "Josh Hart",
+   "pro": "NYK",
+   "waiverClears": "2026-11-24 17:00 KST",
+   "inj": "ACTIVE",
+   "droppedBy": {
+    "by": "IYH",
+    "at": "2026-11-23 06:10 KST"
+   }
+  },
+  {
    "id": 4432848,
    "name": "Jaime Jaquez Jr.",
    "pro": "MIL",
@@ -1279,6 +1332,17 @@
    "droppedBy": {
     "by": "SONG",
     "at": "2026-11-22 12:40 KST"
+   }
+  },
+  {
+   "id": 4066372,
+   "name": "Kevin Huerter",
+   "pro": "DET",
+   "waiverClears": "2026-11-24 17:00 KST",
+   "inj": "ACTIVE",
+   "droppedBy": {
+    "by": "SONG",
+    "at": "2026-11-23 06:20 KST"
    }
   },
   {

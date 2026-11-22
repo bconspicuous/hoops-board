@@ -37,7 +37,7 @@
   ],
   "standingsUpdateDate": 1795338434714,
   "teamsJoined": 10,
-  "transactionScoringPeriod": 34,
+  "transactionScoringPeriod": 35,
   "waiverLastExecutionDate": 1795338434700,
   "waiverProcessStatus": {
    "2026-10-22T07:20:10.595+00:00": 8,
@@ -53,7 +53,7 @@
  },
  "samplePlayer": {
   "fullName": "Jayson Tatum",
-  "injuryStatus": "DAY_TO_DAY",
+  "injuryStatus": "ACTIVE",
   "stats": [
    {
     "externalId": "401910028",
