@@ -1,48 +1,51 @@
 {
- "date": "2026-11-21",
+ "date": "2026-11-22",
  "week": 5,
  "opp": "Zero Sugar",
  "status": "nochange-starters",
- "playing": 4,
+ "playing": 6,
  "starters": [
-  "Karl-Anthony Towns",
-  "Kyrie Irving",
-  "Jeremiah Fears",
-  "Zach Edey"
+  "Shai Gilgeous-Alexander",
+  "Anthony Davis",
+  "AJ Dybantsa",
+  "Norman Powell",
+  "Matas Buzelis",
+  "Jalen Suggs"
  ],
  "bench": [],
  "dtd": [
-  "Karl-Anthony Towns"
+  "Shai Gilgeous-Alexander",
+  "Norman Powell"
  ],
  "expected": {
-  "best": 5.008,
-  "current": 5.008,
+  "best": 3.433,
+  "current": 3.433,
   "gain": 0,
   "pcBest": {
-   "FG": 0.995,
+   "FG": 0.993,
    "FT": 0,
-   "TPM": 0.441,
-   "REB": 0.998,
-   "AST": 0.113,
-   "STL": 0.077,
-   "BLK": 0.674,
+   "TPM": 0.032,
+   "REB": 0.943,
+   "AST": 0.03,
+   "STL": 0.024,
+   "BLK": 0.033,
    "TO": 0,
-   "DD": 0.717,
-   "PTS": 0.992,
-   "PF": 0
+   "DD": 0.411,
+   "PTS": 0.966,
+   "PF": 0.001
   },
   "pcCurrent": {
-   "FG": 0.995,
+   "FG": 0.993,
    "FT": 0,
-   "TPM": 0.441,
-   "REB": 0.998,
-   "AST": 0.113,
-   "STL": 0.077,
-   "BLK": 0.674,
+   "TPM": 0.032,
+   "REB": 0.943,
+   "AST": 0.03,
+   "STL": 0.024,
+   "BLK": 0.033,
    "TO": 0,
-   "DD": 0.717,
-   "PTS": 0.992,
-   "PF": 0
+   "DD": 0.411,
+   "PTS": 0.966,
+   "PF": 0.001
   }
  },
  "alternatives": [],
@@ -50,27 +53,27 @@
  "sameStarters": true,
  "moves": [
   {
-   "name": "Norman Powell",
+   "name": "James Harden",
    "from": "UTIL",
-   "to": "F"
+   "to": "G"
   },
   {
-   "name": "Matas Buzelis",
-   "from": "F",
+   "name": "Kyrie Irving",
+   "from": "G",
    "to": "UTIL"
   }
  ],
  "slots": [
   {
-   "name": "Kyrie Irving",
+   "name": "Shai Gilgeous-Alexander",
    "slot": "PG"
   },
   {
-   "name": "Jeremiah Fears",
+   "name": "Norman Powell",
    "slot": "SG"
   },
   {
-   "name": "Michael Porter Jr.",
+   "name": "Matas Buzelis",
    "slot": "SF"
   },
   {
@@ -78,27 +81,27 @@
    "slot": "PF"
   },
   {
-   "name": "Karl-Anthony Towns",
+   "name": "Zach Edey",
    "slot": "C"
   },
   {
-   "name": "Shai Gilgeous-Alexander",
+   "name": "James Harden",
    "slot": "G"
   },
   {
-   "name": "Norman Powell",
+   "name": "AJ Dybantsa",
    "slot": "F"
   },
   {
-   "name": "James Harden",
+   "name": "Kyrie Irving",
    "slot": "UTIL"
   },
   {
-   "name": "Zach Edey",
+   "name": "Michael Porter Jr.",
    "slot": "UTIL"
   },
   {
-   "name": "Matas Buzelis",
+   "name": "Jalen Suggs",
    "slot": "UTIL"
   },
   {
@@ -106,14 +109,14 @@
    "slot": "BE"
   },
   {
-   "name": "AJ Dybantsa",
+   "name": "Jeremiah Fears",
    "slot": "BE"
   },
   {
-   "name": "Jalen Suggs",
+   "name": "Tyler Herro",
    "slot": "BE"
   }
  ],
- "id": "2026-11-21T2146Z",
- "createdAt": "2026-11-21T21:46:03.600Z"
+ "id": "2026-11-22T1046Z",
+ "createdAt": "2026-11-22T10:46:20.752Z"
 }
