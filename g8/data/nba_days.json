@@ -1,5 +1,5 @@
 {
- "asOfET": "2026-11-21T16:44-05:00",
+ "asOfET": "2026-11-21T23:44-05:00",
  "days": {
   "2026-11-20": [
    {
@@ -68,31 +68,31 @@
     "id": "401910024",
     "start": "2026-11-22T00:30Z",
     "name": "POR @ NY",
-    "state": "pre"
+    "state": "post"
    },
    {
     "id": "401910025",
     "start": "2026-11-22T01:00Z",
     "name": "LAC @ DAL",
-    "state": "pre"
+    "state": "post"
    },
    {
     "id": "401910026",
     "start": "2026-11-22T01:00Z",
     "name": "MEM @ MIN",
-    "state": "pre"
+    "state": "post"
    },
    {
     "id": "401910027",
     "start": "2026-11-22T01:00Z",
     "name": "NO @ SA",
-    "state": "pre"
+    "state": "post"
    },
    {
     "id": "401910028",
     "start": "2026-11-22T03:00Z",
     "name": "BOS @ SAC",
-    "state": "pre"
+    "state": "in"
    }
   ]
  },

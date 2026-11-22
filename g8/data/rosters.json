@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-22T06:44+09:00",
+ "asOf": "2026-11-22T13:44+09:00",
  "leagueId": "751654965",
  "season": 2027,
  "teams": [
@@ -308,9 +308,9 @@
     "2": 7,
     "3": 3,
     "4": 3,
-    "5": 1
+    "5": 2
    },
-   "acqTotal": 20
+   "acqTotal": 21
   }
  ],
  "status": {
@@ -318,6 +318,7 @@
    "Derrick White",
    "Dejounte Murray",
    "Paolo Banchero",
+   "Zion Williamson",
    "Stephen Curry",
    "Evan Mobley",
    "Lauri Markkanen",
@@ -340,13 +341,16 @@
    "RJ Barrett",
    "Kon Knueppel",
    "Jaren Jackson Jr.",
-   "Jalen Williams",
    "Tobias Harris",
+   "Jalen Williams",
+   "P.J. Washington",
    "Kristaps Porzingis",
    "Jimmy Butler III",
+   "Alex Caruso",
    "Mitchell Robinson",
    "Jerami Grant",
    "Scotty Pippen Jr.",
+   "T.J. McConnell",
    "Jusuf Nurkic",
    "Cason Wallace",
    "Bennedict Mathurin",
@@ -355,35 +359,34 @@
    "Dereck Lively II",
    "Kingston Flemings",
    "Dennis Schroder",
-   "Javon Small",
    "Jaylon Tyson",
+   "Javon Small",
    "Maxime Raynaud",
    "Donte DiVincenzo",
    "Bradley Beal",
+   "Jaylin Williams",
    "Dean Wade",
    "GG Jackson",
    "Brandon Williams",
    "Justin Champagnie",
    "Ben Simmons",
-   "Ronald Holland II",
-   "Jordan Clarkson"
+   "Ronald Holland II"
   ],
   "DTD": [
    "Giannis Antetokounmpo",
+   "Shai Gilgeous-Alexander",
    "Karl-Anthony Towns",
+   "Norman Powell",
    "Grayson Allen",
-   "Deni Avdija",
+   "Pascal Siakam",
+   "Cade Cunningham",
    "OG Anunoby",
    "Jalen Smith",
-   "P.J. Washington",
    "Draymond Green",
-   "Precious Achiuwa",
-   "Alex Caruso",
    "Collin Murray-Boyles",
    "Nolan Traore",
-   "T.J. McConnell",
-   "Walter Clayton Jr.",
-   "Ryan Dunn"
+   "Ryan Dunn",
+   "Jordan Clarkson"
   ]
  }
 }
