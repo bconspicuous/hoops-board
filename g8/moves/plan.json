@@ -10,10 +10,10 @@
   "Jalen Suggs"
  ],
  "base": {
-  "wk": 5.023,
-  "champ": 0.2898,
-  "p1": 0.3029,
-  "epct": 0.5455
+  "wk": 4.895,
+  "champ": 0.2667,
+  "p1": 0.3144,
+  "epct": 0.5458
  },
  "protect": [
   "Shai Gilgeous-Alexander",
@@ -42,13 +42,13 @@
    "addOwner": "FA",
    "drop": "Brandon Miller",
    "ir": null,
-   "weekGain": 0.566,
-   "titleGain": 0.0364,
-   "p1Gain": 0.1005,
-   "epctGain": 0.0083,
+   "weekGain": 0.544,
+   "titleGain": 0.0542,
+   "p1Gain": 0.1049,
+   "epctGain": 0.0099,
    "addTeam": "NYK",
    "addPos": "SG,SF",
-   "dropValue": -4.29,
+   "dropValue": -4.31,
    "status": "proposed",
    "conflicts": [],
    "addHealth": {
@@ -56,8 +56,8 @@
     "injury": null,
     "returnDate": null,
     "report": null,
-    "g": 12,
-    "min": 29.7
+    "g": 13,
+    "min": 30.1
    },
    "firstProposedAt": "2026-11-21T09:14:21.389Z"
   }
@@ -67,40 +67,40 @@
    "add": "Josh Hart",
    "drop": "Brandon Miller",
    "ir": null,
-   "wk": 0.566,
-   "title": 0.0364
-  },
-  {
-   "add": "P.J. Washington",
-   "drop": "Zach Edey",
-   "ir": null,
-   "wk": 0.296,
-   "title": 0.0492
+   "wk": 0.544,
+   "title": 0.0542
   },
   {
    "add": "Tyler Herro",
    "drop": "Jalen Suggs",
    "ir": null,
-   "wk": 0.084,
-   "title": 0.0692
+   "wk": 0.085,
+   "title": 0.089
   },
   {
    "add": "Daniel Gafford",
+   "drop": "Zach Edey",
+   "ir": null,
+   "wk": 0.282,
+   "title": 0.0658
+  },
+  {
+   "add": "Neemias Queta",
    "drop": "Jeremiah Fears",
    "ir": null,
-   "wk": 0.134,
-   "title": 0.0519
+   "wk": 0.13,
+   "title": 0.0668
   },
   {
    "add": "Andrew Nembhard",
    "drop": "Matas Buzelis",
    "ir": null,
-   "wk": 0.008,
-   "title": -0.0174
+   "wk": -0.008,
+   "title": -0.0155
   }
  ],
- "createdAt": "2026-11-21T21:45:57.029Z",
- "id": "20261121T2145",
+ "createdAt": "2026-11-22T04:45:44.465Z",
+ "id": "20261122T0445",
  "rosterSig": "AJ Dybantsa|Anthony Davis|Brandon Miller|Jalen Suggs|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Matas Buzelis|Michael Porter Jr.|Norman Powell|Shai Gilgeous-Alexander|Zach Edey#Austin Reaves",
  "newItems": []
 }
