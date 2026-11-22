@@ -1,26 +1,26 @@
 {
- "planId": "20261122T0445",
+ "planId": "20261122T1046",
  "mode": "dry",
- "at": "2026-11-21T23:46-05:00",
+ "at": "2026-11-22T05:46-05:00",
  "items": [
   {
    "n": 1,
-   "kind": "add/drop",
+   "kind": "activate",
    "checks": [
     "✓ checks passed"
    ],
    "ok": true,
-   "add": {
-    "name": "Josh Hart",
-    "status": "FREEAGENT"
-   },
+   "add": null,
    "drop": "Brandon Miller",
-   "ir": null
+   "ir": "Karl-Anthony Towns"
   }
  ],
  "ok": true,
- "scoringPeriodId": 33,
+ "scoringPeriodId": 34,
  "matchupPeriod": 5,
- "addsUsed": 6,
- "rosterMatchesPlan": true
+ "addsUsed": 7,
+ "rosterMatchesPlan": true,
+ "irNotOut": [
+  "Karl-Anthony Towns (DAY_TO_DAY)"
+ ]
 }
