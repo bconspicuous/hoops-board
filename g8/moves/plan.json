@@ -10,20 +10,20 @@
   "Jalen Suggs"
  ],
  "base": {
-  "wk": 3.439,
-  "champ": 0.0847,
-  "p1": 0.0573,
-  "epct": 0.5159
+  "wk": 3.459,
+  "champ": 0.3303,
+  "p1": 0.2266,
+  "epct": 0.5518
  },
  "protect": [
   "Shai Gilgeous-Alexander",
   "Anthony Davis",
+  "Karl-Anthony Towns",
   "Kyrie Irving",
   "James Harden",
   "Tyler Herro",
   "Michael Porter Jr.",
-  "AJ Dybantsa",
-  "Norman Powell"
+  "AJ Dybantsa"
  ],
  "droppable": [
   "Brandon Miller",
@@ -32,80 +32,47 @@
   "Matas Buzelis",
   "Jalen Suggs"
  ],
- "flags": [
-  {
-   "kind": "ir-ineligible",
-   "player": "Karl-Anthony Towns",
-   "status": "DTD",
-   "note": "IR 선수가 O가 아님 — ESPN이 영입을 막을 수 있음(감독 판단: DTD는 영입 가능). 첫 사례에서 실제 동작을 기록"
-  }
- ],
- "items": [
-  {
-   "n": 1,
-   "kind": "activate",
-   "ir": "Karl-Anthony Towns",
-   "drop": "Brandon Miller",
-   "weekGain": 0.296,
-   "titleGain": 0.1245,
-   "p1Gain": 0.1346,
-   "epctGain": 0.0348,
-   "dropValue": -4.31,
-   "status": "proposed",
-   "note": "IR 복귀(상태 DTD)",
-   "addHealth": null,
-   "irHealth": {
-    "status": "DTD",
-    "injury": "Illness",
-    "returnDate": "2026-11-22",
-    "report": "Towns (illness) won't play in Saturday's game versus the Trail Blazers.",
-    "g": 15,
-    "min": 32.7
-   },
-   "firstProposedAt": "2026-11-22T10:46:12.169Z"
-  }
- ],
+ "flags": [],
+ "items": [],
  "screened": [
   {
    "add": "Alex Sarr",
    "drop": "Brandon Miller",
    "ir": null,
-   "wk": 0.281,
-   "title": 0.0392
+   "wk": 0.233,
+   "title": 0.0882
   },
   {
    "add": "Daniel Gafford",
-   "drop": "Jeremiah Fears",
-   "ir": null,
-   "wk": 0.234,
-   "title": 0.0241
-  },
-  {
-   "add": "Andrew Nembhard",
    "drop": "Zach Edey",
    "ir": null,
-   "wk": 0.219,
-   "title": 0.0038
+   "wk": 0.202,
+   "title": 0.0582
   },
   {
-   "add": "P.J. Washington",
-   "drop": "Jalen Suggs",
+   "add": "John Collins",
+   "drop": "Jeremiah Fears",
    "ir": null,
-   "wk": 0.065,
-   "title": 0.0153
+   "wk": 0.147,
+   "title": 0.0463
   },
   {
    "add": "Josh Hart",
+   "drop": "Jalen Suggs",
+   "ir": null,
+   "wk": 0.049,
+   "title": 0.0341
+  },
+  {
+   "add": "Bobby Portis",
    "drop": "Matas Buzelis",
    "ir": null,
-   "wk": 0.038,
-   "title": -0.0006
+   "wk": -0.008,
+   "title": -0.0117
   }
  ],
- "createdAt": "2026-11-22T10:46:12.169Z",
- "id": "20261122T1046",
- "rosterSig": "AJ Dybantsa|Anthony Davis|Brandon Miller|Jalen Suggs|James Harden|Jeremiah Fears|Kyrie Irving|Matas Buzelis|Michael Porter Jr.|Norman Powell|Shai Gilgeous-Alexander|Tyler Herro|Zach Edey#Austin Reaves|Karl-Anthony Towns",
- "newItems": [
-  1
- ]
+ "createdAt": "2026-11-22T21:46:05.829Z",
+ "id": "20261122T2146",
+ "rosterSig": "AJ Dybantsa|Anthony Davis|Brandon Miller|Jalen Suggs|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Matas Buzelis|Michael Porter Jr.|Shai Gilgeous-Alexander|Tyler Herro|Zach Edey#Austin Reaves|Norman Powell",
+ "newItems": []
 }

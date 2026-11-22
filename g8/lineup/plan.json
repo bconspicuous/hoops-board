@@ -3,49 +3,47 @@
  "week": 5,
  "opp": "Zero Sugar",
  "status": "nochange-starters",
- "playing": 6,
+ "playing": 5,
  "starters": [
-  "Shai Gilgeous-Alexander",
+  "Karl-Anthony Towns",
   "Anthony Davis",
   "AJ Dybantsa",
-  "Norman Powell",
   "Matas Buzelis",
   "Jalen Suggs"
  ],
  "bench": [],
  "dtd": [
-  "Shai Gilgeous-Alexander",
-  "Norman Powell"
+  "Karl-Anthony Towns"
  ],
  "expected": {
-  "best": 3.433,
-  "current": 3.433,
+  "best": 3.445,
+  "current": 3.445,
   "gain": 0,
   "pcBest": {
-   "FG": 0.993,
+   "FG": 0.996,
    "FT": 0,
-   "TPM": 0.032,
-   "REB": 0.943,
-   "AST": 0.03,
-   "STL": 0.024,
-   "BLK": 0.033,
+   "TPM": 0.008,
+   "REB": 0.949,
+   "AST": 0.014,
+   "STL": 0.007,
+   "BLK": 0.02,
    "TO": 0,
-   "DD": 0.411,
-   "PTS": 0.966,
-   "PF": 0.001
+   "DD": 0.524,
+   "PTS": 0.924,
+   "PF": 0.002
   },
   "pcCurrent": {
-   "FG": 0.993,
+   "FG": 0.996,
    "FT": 0,
-   "TPM": 0.032,
-   "REB": 0.943,
-   "AST": 0.03,
-   "STL": 0.024,
-   "BLK": 0.033,
+   "TPM": 0.008,
+   "REB": 0.949,
+   "AST": 0.014,
+   "STL": 0.007,
+   "BLK": 0.02,
    "TO": 0,
-   "DD": 0.411,
-   "PTS": 0.966,
-   "PF": 0.001
+   "DD": 0.524,
+   "PTS": 0.924,
+   "PF": 0.002
   }
  },
  "alternatives": [],
@@ -69,7 +67,7 @@
    "slot": "PG"
   },
   {
-   "name": "Norman Powell",
+   "name": "Jalen Suggs",
    "slot": "SG"
   },
   {
@@ -81,7 +79,7 @@
    "slot": "PF"
   },
   {
-   "name": "Zach Edey",
+   "name": "Karl-Anthony Towns",
    "slot": "C"
   },
   {
@@ -101,7 +99,7 @@
    "slot": "UTIL"
   },
   {
-   "name": "Jalen Suggs",
+   "name": "Tyler Herro",
    "slot": "UTIL"
   },
   {
@@ -113,10 +111,10 @@
    "slot": "BE"
   },
   {
-   "name": "Tyler Herro",
+   "name": "Zach Edey",
    "slot": "BE"
   }
  ],
- "id": "2026-11-22T1046Z",
- "createdAt": "2026-11-22T10:46:20.752Z"
+ "id": "2026-11-22T2146Z",
+ "createdAt": "2026-11-22T21:46:12.475Z"
 }
