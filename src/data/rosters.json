@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-22T16:28+09:00",
+ "asOf": "2026-11-22T19:44+09:00",
  "source": "ESPN API sync (GitHub Actions g8-espn)",
  "teams": {
   "Junyoung's Scary Team": {
@@ -47,7 +47,6 @@
   "Garak Twindragons": {
    "active": [
     "Shai Gilgeous-Alexander",
-    "Karl-Anthony Towns",
     "Anthony Davis",
     "James Harden",
     "Kyrie Irving",
@@ -58,9 +57,11 @@
     "Norman Powell",
     "Zach Edey",
     "Matas Buzelis",
-    "Jalen Suggs"
+    "Jalen Suggs",
+    "Tyler Herro"
    ],
    "ir": [
+    "Karl-Anthony Towns",
     "Austin Reaves"
    ]
   },
@@ -150,10 +151,10 @@
   },
   "Brand_New_Neo_HJ": {
    "active": [
-    "Jayson Tatum",
     "Cooper Flagg",
     "LaMelo Ball",
     "Kevin Durant",
+    "Ty Jerome",
     "Ivica Zubac",
     "Donovan Clingan",
     "Jaden McDaniels",
@@ -162,10 +163,10 @@
     "Davion Mitchell",
     "Daniss Jenkins",
     "Keyonte George",
-    "Tari Eason"
+    "Moussa Diabate"
    ],
    "ir": [
-    "Ty Jerome",
+    "Jayson Tatum",
     "Brandon Ingram"
    ]
   }
@@ -247,6 +248,7 @@
   "Chris Paul",
   "D'Angelo Russell",
   "Kevin Porter Jr.",
+  "Lonzo Ball",
   "Russell Westbrook"
  ],
  "returns": {
