@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-23T04:58+09:00",
+ "asOf": "2026-11-23T06:44+09:00",
  "leagueId": "751654965",
  "season": 2027,
  "teams": [
@@ -88,6 +88,7 @@
    "me": true,
    "players": [
     "Shai Gilgeous-Alexander",
+    "Karl-Anthony Towns",
     "Anthony Davis",
     "James Harden",
     "Kyrie Irving",
@@ -95,15 +96,14 @@
     "Brandon Miller",
     "Jeremiah Fears",
     "AJ Dybantsa",
-    "Norman Powell",
     "Zach Edey",
     "Matas Buzelis",
     "Jalen Suggs",
     "Tyler Herro"
    ],
    "ir": [
-    "Karl-Anthony Towns",
-    "Austin Reaves"
+    "Austin Reaves",
+    "Norman Powell"
    ],
    "record": {
     "wins": 28,
@@ -116,9 +116,10 @@
     "2": 7,
     "3": 6,
     "4": 7,
-    "5": 7
+    "5": 7,
+    "6": 1
    },
-   "acqTotal": 33
+   "acqTotal": 34
   },
   {
    "name": "Zero Sugar",
@@ -321,6 +322,7 @@
    "Stephen Curry",
    "Evan Mobley",
    "Lauri Markkanen",
+   "Shai Gilgeous-Alexander",
    "Austin Reaves",
    "Norman Powell",
    "Chet Holmgren",
@@ -333,22 +335,26 @@
    "Dylan Harper",
    "Tyrese Haliburton",
    "Caleb Wilson",
+   "Paul George",
    "CJ McCollum",
    "Brandon Ingram",
    "RJ Barrett",
    "Kon Knueppel",
    "Jaren Jackson Jr.",
+   "Nic Claxton",
    "Tobias Harris",
    "Jalen Williams",
    "Kristaps Porzingis",
    "Jimmy Butler III",
    "Alex Caruso",
+   "Mitchell Robinson",
+   "Nolan Traore",
    "Scotty Pippen Jr.",
    "T.J. McConnell",
    "Jusuf Nurkic",
    "Cason Wallace",
-   "Shaedon Sharpe",
    "Bennedict Mathurin",
+   "Shaedon Sharpe",
    "Mark Williams",
    "Dereck Lively II",
    "Dennis Schroder",
@@ -365,25 +371,18 @@
   ],
   "DTD": [
    "Giannis Antetokounmpo",
-   "Derrick White",
    "Zion Williamson",
    "Trey Murphy III",
-   "Shai Gilgeous-Alexander",
    "Karl-Anthony Towns",
    "Grayson Allen",
    "Pascal Siakam",
    "Jaylen Brown",
-   "Cade Cunningham",
    "Cameron Boozer",
-   "Jayson Tatum",
    "Jalen Smith",
-   "Nic Claxton",
    "P.J. Washington",
    "Collin Murray-Boyles",
-   "Mitchell Robinson",
    "Jerami Grant",
    "Deandre Ayton",
-   "Nolan Traore",
    "Walter Clayton Jr.",
    "Javon Small",
    "Bub Carrington",
