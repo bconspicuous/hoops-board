@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-22T06:46+09:00",
+ "asOf": "2026-11-22T13:45+09:00",
  "scoringPeriodId": 33,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -22,7 +22,7 @@
    "team": "KWNG",
    "name": "Saving PakPaks",
    "rank": 1,
-   "acq": 5
+   "acq": 6
   },
   {
    "team": "TBG",
@@ -40,7 +40,7 @@
    "team": "SONG",
    "name": "Kfinco_ThePianist",
    "rank": 4,
-   "acq": 23
+   "acq": 24
   },
   {
    "team": "JYP",
@@ -64,7 +64,7 @@
    "team": "Doo",
    "name": "Helio honeymoons",
    "rank": 8,
-   "acq": 17
+   "acq": 18
   },
   {
    "team": "IYH",
@@ -76,7 +76,7 @@
    "team": "GGAM",
    "name": "Garibong CHaRdaddy",
    "rank": 10,
-   "acq": 17
+   "acq": 19
   }
  ],
  "myPending": [
@@ -145,7 +145,7 @@
     },
     {
      "type": "DROP",
-     "player": "Paul Reed",
+     "player": "4278562",
      "from": "GTD",
      "to": "FA"
     }
@@ -154,6 +154,132 @@
   }
  ],
  "transactions": [
+  {
+   "id": "f636eb04-7d65-42ae-82d4-272b8490d41e",
+   "team": "SONG",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-22 12:40 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "4397077",
+     "from": "FA",
+     "to": "SONG"
+    },
+    {
+     "type": "DROP",
+     "player": "Yves Missi",
+     "from": "SONG",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "fac374b5-0a87-4651-a737-79fc6fa387ed",
+   "team": "Doo",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-22 12:11 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "4592829",
+     "from": "FA",
+     "to": "Doo"
+    },
+    {
+     "type": "DROP",
+     "player": "Zach Edey",
+     "from": "Doo",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "12ca7768-9c44-4809-abaa-6afd29ffa66f",
+   "team": "KWNG",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-22 10:31 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "3064290",
+     "from": "FA",
+     "to": "KWNG"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "004c3cb4-7719-4f78-8259-07a09fd6ecc4",
+   "team": "GGAM",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-22 09:07 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "4278067",
+     "from": "FA",
+     "to": "GGAM"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "ca073361-8833-4ea4-879c-1a52a0437a1d",
+   "team": "GGAM",
+   "mine": false,
+   "type": "ROSTER",
+   "status": "EXECUTED",
+   "proposed": "2026-11-22 09:06 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "DROP",
+     "player": "Jaime Jaquez Jr.",
+     "from": "GGAM",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "a7f10929-edf2-4276-83e1-7b34e581c15e",
+   "team": "GGAM",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-22 09:05 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "4278562",
+     "from": "FA",
+     "to": "GGAM"
+    },
+    {
+     "type": "DROP",
+     "player": "Kasparas Jakucionis",
+     "from": "GGAM",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
   {
    "id": "3c7d763a-0227-46fe-afd7-58f3cd9bacc5",
    "team": "KWNG",
@@ -981,7 +1107,7 @@
     },
     {
      "type": "DROP",
-     "player": "Paul Reed",
+     "player": "4278562",
      "from": "GTD",
      "to": "FA"
     }
@@ -1005,7 +1131,7 @@
     },
     {
      "type": "DROP",
-     "player": "Paul Reed",
+     "player": "4278562",
      "from": "GTD",
      "to": "FA"
     }
@@ -1029,7 +1155,7 @@
     },
     {
      "type": "DROP",
-     "player": "Paul Reed",
+     "player": "4278562",
      "from": "GTD",
      "to": "FA"
     }
@@ -1089,7 +1215,7 @@
    "items": [
     {
      "type": "DROP",
-     "player": "Nic Claxton",
+     "player": "4278067",
      "from": "GGAM",
      "to": "FA"
     }
@@ -1309,6 +1435,17 @@
  ],
  "onWaivers": [
   {
+   "id": 4432848,
+   "name": "Jaime Jaquez Jr.",
+   "pro": "MIL",
+   "waiverClears": "2026-11-23 17:00 KST",
+   "inj": "ACTIVE",
+   "droppedBy": {
+    "by": "GGAM",
+    "at": "2026-11-22 09:06 KST"
+   }
+  },
+  {
    "id": 3908845,
    "name": "John Collins",
    "pro": "DET",
@@ -1317,6 +1454,17 @@
    "droppedBy": {
     "by": "Doo",
     "at": "2026-11-21 11:07 KST"
+   }
+  },
+  {
+   "id": 4600663,
+   "name": "Zach Edey",
+   "pro": "MEM",
+   "waiverClears": "2026-11-23 17:00 KST",
+   "inj": "ACTIVE",
+   "droppedBy": {
+    "by": "Doo",
+    "at": "2026-11-22 12:11 KST"
    }
   },
   {
@@ -1342,6 +1490,17 @@
    }
   },
   {
+   "id": 5061589,
+   "name": "Yves Missi",
+   "pro": "NOP",
+   "waiverClears": "2026-11-23 17:00 KST",
+   "inj": "ACTIVE",
+   "droppedBy": {
+    "by": "SONG",
+    "at": "2026-11-22 12:40 KST"
+   }
+  },
+  {
    "id": 4277919,
    "name": "Mo Bamba",
    "pro": "UTA",
@@ -1362,6 +1521,17 @@
     "by": "KWNG",
     "at": "2026-11-21 22:11 KST"
    }
+  },
+  {
+   "id": 5214640,
+   "name": "Kasparas Jakucionis",
+   "pro": "MIL",
+   "waiverClears": "2026-11-23 17:00 KST",
+   "inj": "ACTIVE",
+   "droppedBy": {
+    "by": "GGAM",
+    "at": "2026-11-22 09:05 KST"
+   }
   }
  ],
  "responseKeys": [
@@ -1369,6 +1539,7 @@
   "gameId",
   "id",
   "members",
+  "pendingTransactions",
   "scoringPeriodId",
   "seasonId",
   "segmentId",
