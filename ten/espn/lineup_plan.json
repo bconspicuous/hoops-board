@@ -1,8 +1,8 @@
 {
- "date": "2026-11-21",
- "scoringPeriodId": 33,
- "hash": "832214930f",
- "createdKST": "2026-11-22T13:47+09:00",
+ "date": "2026-11-22",
+ "scoringPeriodId": 34,
+ "hash": "d019269e4d",
+ "createdKST": "2026-11-22T19:48+09:00",
  "mode": "plan",
  "moves": [],
  "lineup": [
@@ -11,7 +11,7 @@
    "cur": "PG",
    "name": "Ajay Mitchell",
    "pro": "OKC",
-   "game": false,
+   "game": true,
    "inj": "ACTIVE",
    "out": false
   },
@@ -20,15 +20,15 @@
    "cur": "SG",
    "name": "Klay Thompson",
    "pro": "MIA",
-   "game": false,
+   "game": true,
    "inj": "ACTIVE",
    "out": false
   },
   {
    "slot": "SF",
    "cur": "SF",
-   "name": "Jonathan Kuminga",
-   "pro": "MIN",
+   "name": "Paul George",
+   "pro": "BOS",
    "game": true,
    "inj": "ACTIVE",
    "out": false
@@ -36,8 +36,8 @@
   {
    "slot": "PF",
    "cur": "PF",
-   "name": "Toumani Camara",
-   "pro": "POR",
+   "name": "Matas Buzelis",
+   "pro": "CHI",
    "game": true,
    "inj": "ACTIVE",
    "out": false
@@ -45,8 +45,8 @@
   {
    "slot": "C",
    "cur": "C",
-   "name": "Joel Embiid",
-   "pro": "PHI",
+   "name": "Isaiah Hartenstein",
+   "pro": "OKC",
    "game": true,
    "inj": "ACTIVE",
    "out": false
@@ -56,7 +56,7 @@
    "cur": "G",
    "name": "Andrew Nembhard",
    "pro": "IND",
-   "game": false,
+   "game": true,
    "inj": "ACTIVE",
    "out": false
   },
@@ -65,42 +65,33 @@
    "cur": "F",
    "name": "Julian Champagnie",
    "pro": "SAS",
-   "game": true,
-   "inj": "ACTIVE",
-   "out": false
-  },
-  {
-   "slot": "UTIL",
-   "cur": "UTIL",
-   "name": "Paul George",
-   "pro": "BOS",
-   "game": true,
-   "inj": "ACTIVE",
-   "out": false
-  },
-  {
-   "slot": "UTIL",
-   "cur": "UTIL",
-   "name": "Keldon Johnson",
-   "pro": "SAS",
-   "game": true,
-   "inj": "ACTIVE",
-   "out": false
-  },
-  {
-   "slot": "UTIL",
-   "cur": "UTIL",
-   "name": "Isaiah Hartenstein",
-   "pro": "OKC",
    "game": false,
    "inj": "ACTIVE",
    "out": false
   },
   {
-   "slot": "BE",
-   "cur": "BE",
+   "slot": "UTIL",
+   "cur": "UTIL",
    "name": "Ivica Zubac",
    "pro": "IND",
+   "game": true,
+   "inj": "ACTIVE",
+   "out": false
+  },
+  {
+   "slot": "UTIL",
+   "cur": "UTIL",
+   "name": "Toumani Camara",
+   "pro": "POR",
+   "game": false,
+   "inj": "ACTIVE",
+   "out": false
+  },
+  {
+   "slot": "UTIL",
+   "cur": "UTIL",
+   "name": "Joel Embiid",
+   "pro": "PHI",
    "game": false,
    "inj": "ACTIVE",
    "out": false
@@ -117,8 +108,17 @@
   {
    "slot": "BE",
    "cur": "BE",
-   "name": "Matas Buzelis",
-   "pro": "CHI",
+   "name": "Keldon Johnson",
+   "pro": "SAS",
+   "game": false,
+   "inj": "ACTIVE",
+   "out": false
+  },
+  {
+   "slot": "BE",
+   "cur": "BE",
+   "name": "Jonathan Kuminga",
+   "pro": "MIN",
    "game": false,
    "inj": "ACTIVE",
    "out": false
@@ -128,6 +128,6 @@
   "Kawhi Leonard"
  ],
  "irReturn": [],
- "playing": 6,
+ "playing": 7,
  "status": "planned"
 }
