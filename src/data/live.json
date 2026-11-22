@@ -1,7 +1,7 @@
 {
- "asOf": "2026-11-21T17:49+09:00",
+ "asOf": "2026-11-22T16:28+09:00",
  "week": 5,
- "through": "2026-11-20",
+ "through": "2026-11-21",
  "source": "ESPN API sync — current matchup totals through yesterday (US Eastern)",
  "cats": {
   "Junyoung's Scary Team": {
@@ -117,6 +117,6 @@
   "ChaRDaddy": 3,
   "Kunhyo's Chokeslam": 1,
   "Songpa Park Kezhang": 1,
-  "Brand_New_Neo_HJ": 1
+  "Brand_New_Neo_HJ": 2
  }
 }
