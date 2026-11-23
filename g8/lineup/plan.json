@@ -2,9 +2,10 @@
  "date": "2026-11-23",
  "week": 6,
  "opp": "ChaRDaddy",
- "status": "nochange",
- "playing": 8,
+ "status": "nochange-starters",
+ "playing": 9,
  "starters": [
+  "Shai Gilgeous-Alexander",
   "James Harden",
   "Michael Porter Jr.",
   "Brandon Miller",
@@ -19,51 +20,72 @@
   "Brandon Miller"
  ],
  "expected": {
-  "best": 4.978,
-  "current": 4.978,
+  "best": 5.326,
+  "current": 5.326,
   "gain": 0,
   "pcBest": {
-   "FG": 0.152,
-   "FT": 0.837,
-   "TPM": 0.63,
-   "REB": 0.299,
-   "AST": 0.018,
-   "STL": 0.207,
-   "BLK": 0.463,
-   "TO": 0.877,
-   "DD": 0.473,
-   "PTS": 0.079,
-   "PF": 0.942
+   "FG": 0.256,
+   "FT": 0.849,
+   "TPM": 0.54,
+   "REB": 0.378,
+   "AST": 0.024,
+   "STL": 0.204,
+   "BLK": 0.486,
+   "TO": 0.86,
+   "DD": 0.55,
+   "PTS": 0.222,
+   "PF": 0.956
   },
   "pcCurrent": {
-   "FG": 0.152,
-   "FT": 0.837,
-   "TPM": 0.63,
-   "REB": 0.299,
-   "AST": 0.018,
-   "STL": 0.207,
-   "BLK": 0.463,
-   "TO": 0.877,
-   "DD": 0.473,
-   "PTS": 0.079,
-   "PF": 0.942
+   "FG": 0.256,
+   "FT": 0.849,
+   "TPM": 0.54,
+   "REB": 0.378,
+   "AST": 0.024,
+   "STL": 0.204,
+   "BLK": 0.486,
+   "TO": 0.86,
+   "DD": 0.55,
+   "PTS": 0.222,
+   "PF": 0.956
   }
  },
  "alternatives": [],
  "currentBench": [],
  "sameStarters": true,
- "moves": [],
- "slots": [
+ "moves": [
+  {
+   "name": "Shai Gilgeous-Alexander",
+   "from": "PG",
+   "to": "G"
+  },
+  {
+   "name": "James Harden",
+   "from": "G",
+   "to": "SG"
+  },
+  {
+   "name": "Jeremiah Fears",
+   "from": "UTIL",
+   "to": "PG"
+  },
   {
    "name": "Tyler Herro",
+   "from": "SG",
+   "to": "UTIL"
+  }
+ ],
+ "slots": [
+  {
+   "name": "Jeremiah Fears",
    "slot": "PG"
   },
   {
-   "name": "Brandon Miller",
+   "name": "James Harden",
    "slot": "SG"
   },
   {
-   "name": "Miles Bridges",
+   "name": "Brandon Miller",
    "slot": "SF"
   },
   {
@@ -75,7 +97,7 @@
    "slot": "C"
   },
   {
-   "name": "Jeremiah Fears",
+   "name": "Shai Gilgeous-Alexander",
    "slot": "G"
   },
   {
@@ -87,11 +109,11 @@
    "slot": "UTIL"
   },
   {
-   "name": "James Harden",
+   "name": "Tyler Herro",
    "slot": "UTIL"
   },
   {
-   "name": "Norman Powell",
+   "name": "Miles Bridges",
    "slot": "UTIL"
   },
   {
@@ -107,6 +129,6 @@
    "slot": "BE"
   }
  ],
- "id": "2026-11-23T1046Z",
- "createdAt": "2026-11-23T10:46:20.208Z"
+ "id": "2026-11-23T2146Z",
+ "createdAt": "2026-11-23T21:46:28.622Z"
 }
