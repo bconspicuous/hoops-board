@@ -2,7 +2,7 @@
  "date": "2026-11-23",
  "scoringPeriodId": 35,
  "hash": "5d9ca9ee14",
- "createdKST": "2026-11-23T19:49+09:00",
+ "createdKST": "2026-11-24T06:48+09:00",
  "mode": "plan",
  "moves": [],
  "lineup": [
@@ -93,7 +93,7 @@
    "name": "Joel Embiid",
    "pro": "PHI",
    "game": true,
-   "inj": "ACTIVE",
+   "inj": "DAY_TO_DAY",
    "out": false
   },
   {
@@ -111,8 +111,8 @@
    "name": "Paul George",
    "pro": "BOS",
    "game": false,
-   "inj": "OUT",
-   "out": true
+   "inj": "ACTIVE",
+   "out": false
   },
   {
    "slot": "BE",
