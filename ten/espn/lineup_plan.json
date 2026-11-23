@@ -1,16 +1,16 @@
 {
- "date": "2026-11-22",
- "scoringPeriodId": 34,
- "hash": "d019269e4d",
- "createdKST": "2026-11-23T13:48+09:00",
+ "date": "2026-11-23",
+ "scoringPeriodId": 35,
+ "hash": "5d9ca9ee14",
+ "createdKST": "2026-11-23T19:49+09:00",
  "mode": "plan",
  "moves": [],
  "lineup": [
   {
    "slot": "PG",
    "cur": "PG",
-   "name": "Ajay Mitchell",
-   "pro": "OKC",
+   "name": "Collin Gillespie",
+   "pro": "PHX",
    "game": true,
    "inj": "ACTIVE",
    "out": false
@@ -18,8 +18,8 @@
   {
    "slot": "SG",
    "cur": "SG",
-   "name": "Klay Thompson",
-   "pro": "MIA",
+   "name": "Ajay Mitchell",
+   "pro": "OKC",
    "game": true,
    "inj": "ACTIVE",
    "out": false
@@ -27,11 +27,11 @@
   {
    "slot": "SF",
    "cur": "SF",
-   "name": "Paul George",
-   "pro": "BOS",
+   "name": "Jonathan Kuminga",
+   "pro": "MIN",
    "game": true,
-   "inj": "OUT",
-   "out": true
+   "inj": "ACTIVE",
+   "out": false
   },
   {
    "slot": "PF",
@@ -65,7 +65,7 @@
    "cur": "F",
    "name": "Julian Champagnie",
    "pro": "SAS",
-   "game": false,
+   "game": true,
    "inj": "ACTIVE",
    "out": false
   },
@@ -83,7 +83,7 @@
    "cur": "UTIL",
    "name": "Toumani Camara",
    "pro": "POR",
-   "game": false,
+   "game": true,
    "inj": "ACTIVE",
    "out": false
   },
@@ -92,7 +92,7 @@
    "cur": "UTIL",
    "name": "Joel Embiid",
    "pro": "PHI",
-   "game": false,
+   "game": true,
    "inj": "ACTIVE",
    "out": false
   },
@@ -101,6 +101,15 @@
    "cur": "BE",
    "name": "Grayson Allen",
    "pro": "CHA",
+   "game": true,
+   "inj": "OUT",
+   "out": true
+  },
+  {
+   "slot": "BE",
+   "cur": "BE",
+   "name": "Paul George",
+   "pro": "BOS",
    "game": false,
    "inj": "OUT",
    "out": true
@@ -108,17 +117,8 @@
   {
    "slot": "BE",
    "cur": "BE",
-   "name": "Keldon Johnson",
-   "pro": "SAS",
-   "game": false,
-   "inj": "ACTIVE",
-   "out": false
-  },
-  {
-   "slot": "BE",
-   "cur": "BE",
-   "name": "Jonathan Kuminga",
-   "pro": "MIN",
+   "name": "Klay Thompson",
+   "pro": "MIA",
    "game": false,
    "inj": "ACTIVE",
    "out": false
@@ -128,6 +128,6 @@
   "Kawhi Leonard"
  ],
  "irReturn": [],
- "playing": 6,
+ "playing": 10,
  "status": "planned"
 }
