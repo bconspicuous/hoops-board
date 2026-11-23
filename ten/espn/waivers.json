@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-23T06:45+09:00",
+ "asOf": "2026-11-23T13:45+09:00",
  "scoringPeriodId": 34,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -22,7 +22,7 @@
    "team": "KWNG",
    "name": "Saving PakPaks",
    "rank": 1,
-   "acq": 6
+   "acq": 7
   },
   {
    "team": "TBG",
@@ -40,7 +40,7 @@
    "team": "SONG",
    "name": "Kfinco_ThePianist",
    "rank": 4,
-   "acq": 24
+   "acq": 26
   },
   {
    "team": "JYP",
@@ -52,7 +52,7 @@
    "team": "GTD",
    "name": "Garak Twindragons",
    "rank": 6,
-   "acq": 21
+   "acq": 22
   },
   {
    "team": "Doo",
@@ -80,6 +80,30 @@
   }
  ],
  "myPending": [
+  {
+   "id": "77bc6bdd-304b-49ac-b907-b05d1657dbe8",
+   "team": "GTD",
+   "mine": true,
+   "type": "WAIVER",
+   "status": "PENDING",
+   "proposed": "2026-11-23 12:31 KST",
+   "processed": "2026-11-24 17:00 KST",
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Josh Hart",
+     "from": "FA",
+     "to": "GTD"
+    },
+    {
+     "type": "DROP",
+     "player": "Julian Champagnie",
+     "from": "GTD",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
   {
    "id": "d9248653-bad4-4a4e-8bea-c8d097bb804f",
    "team": "GTD",
@@ -154,6 +178,132 @@
   }
  ],
  "transactions": [
+  {
+   "id": "56c43b16-d69d-446a-aab8-cdbab4bd7680",
+   "team": "KWNG",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-23 13:21 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "4711272",
+     "from": "FA",
+     "to": "KWNG"
+    },
+    {
+     "type": "DROP",
+     "player": "Aaron Gordon",
+     "from": "KWNG",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "77bc6bdd-304b-49ac-b907-b05d1657dbe8",
+   "team": "GTD",
+   "mine": true,
+   "type": "WAIVER",
+   "status": "PENDING",
+   "proposed": "2026-11-23 12:31 KST",
+   "processed": "2026-11-24 17:00 KST",
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Josh Hart",
+     "from": "FA",
+     "to": "GTD"
+    },
+    {
+     "type": "DROP",
+     "player": "Julian Champagnie",
+     "from": "GTD",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "8cf9b82e-4fd6-4f19-a31f-db93fc6f9bf0",
+   "team": "GTD",
+   "mine": true,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-23 11:51 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "4278585",
+     "from": "FA",
+     "to": "GTD"
+    },
+    {
+     "type": "DROP",
+     "player": "Keldon Johnson",
+     "from": "GTD",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "ed79c4aa-8232-4f1b-97aa-6976f5bd709b",
+   "team": "SONG",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-23 11:48 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "4432847",
+     "from": "FA",
+     "to": "SONG"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "428c3bba-d52a-4232-bd69-924b7804492f",
+   "team": "SONG",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-23 11:45 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "4576087",
+     "from": "FA",
+     "to": "SONG"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "20858854-9d7f-4366-94c1-bfcae62ba931",
+   "team": "SONG",
+   "mine": false,
+   "type": "ROSTER",
+   "status": "EXECUTED",
+   "proposed": "2026-11-23 11:45 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "DROP",
+     "player": "Jaxson Hayes",
+     "from": "SONG",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
   {
    "id": "b7e133c3-e2f2-460c-a6ed-2235e62f4f28",
    "team": "SONG",
@@ -429,7 +579,7 @@
     },
     {
      "type": "DROP",
-     "player": "Collin Gillespie",
+     "player": "4278585",
      "from": "GTD",
      "to": "FA"
     }
@@ -1047,7 +1197,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "Collin Gillespie",
+     "player": "4278585",
      "from": "FA",
      "to": "GTD"
     },
@@ -1313,6 +1463,17 @@
    }
   },
   {
+   "id": 3064290,
+   "name": "Aaron Gordon",
+   "pro": "DEN",
+   "waiverClears": "2026-11-24 17:00 KST",
+   "inj": "ACTIVE",
+   "droppedBy": {
+    "by": "KWNG",
+    "at": "2026-11-23 13:21 KST"
+   }
+  },
+  {
    "id": 4600663,
    "name": "Zach Edey",
    "pro": "MEM",
@@ -1343,6 +1504,17 @@
    "droppedBy": {
     "by": "SONG",
     "at": "2026-11-23 06:20 KST"
+   }
+  },
+  {
+   "id": 4395723,
+   "name": "Keldon Johnson",
+   "pro": "SAS",
+   "waiverClears": "2026-11-24 17:00 KST",
+   "inj": "ACTIVE",
+   "droppedBy": {
+    "by": "GTD",
+    "at": "2026-11-23 11:51 KST"
    }
   },
   {
@@ -1384,6 +1556,7 @@
   "gameId",
   "id",
   "members",
+  "pendingTransactions",
   "scoringPeriodId",
   "seasonId",
   "segmentId",
