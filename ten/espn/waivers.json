@@ -1,6 +1,6 @@
 {
- "asOf": "2026-11-23T13:45+09:00",
- "scoringPeriodId": 34,
+ "asOf": "2026-11-23T17:21+09:00",
+ "scoringPeriodId": 35,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
   "waiverHours": 24,
@@ -103,78 +103,6 @@
     }
    ],
    "bid": 0
-  },
-  {
-   "id": "d9248653-bad4-4a4e-8bea-c8d097bb804f",
-   "team": "GTD",
-   "mine": true,
-   "type": "WAIVER",
-   "status": "PENDING",
-   "proposed": "2026-11-16 08:13 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Anthony Black",
-     "from": "FA",
-     "to": "GTD"
-    },
-    {
-     "type": "DROP",
-     "player": "Julian Champagnie",
-     "from": "GTD",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "2120313e-18f3-4ee9-abff-67a6146847ca",
-   "team": "GTD",
-   "mine": true,
-   "type": "WAIVER",
-   "status": "PENDING",
-   "proposed": "2026-11-16 07:16 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Anthony Black",
-     "from": "FA",
-     "to": "GTD"
-    },
-    {
-     "type": "DROP",
-     "player": "Ryan Rollins",
-     "from": "GTD",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "7aa16e06-4b0a-4248-a757-80d52511e716",
-   "team": "GTD",
-   "mine": true,
-   "type": "WAIVER",
-   "status": "PENDING",
-   "proposed": "2026-11-16 07:10 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Anthony Black",
-     "from": "FA",
-     "to": "GTD"
-    },
-    {
-     "type": "DROP",
-     "player": "Paul Reed",
-     "from": "GTD",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
   }
  ],
  "transactions": [
@@ -189,7 +117,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "4711272",
+     "player": "Reed Sheppard",
      "from": "FA",
      "to": "KWNG"
     },
@@ -237,7 +165,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "4278585",
+     "player": "Collin Gillespie",
      "from": "FA",
      "to": "GTD"
     },
@@ -261,7 +189,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "4432847",
+     "player": "Terrence Shannon Jr.",
      "from": "FA",
      "to": "SONG"
     }
@@ -279,7 +207,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "4576087",
+     "player": "Peyton Watson",
      "from": "FA",
      "to": "SONG"
     }
@@ -333,7 +261,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "4432194",
+     "player": "Day'Ron Sharpe",
      "from": "FA",
      "to": "IYH"
     },
@@ -579,7 +507,7 @@
     },
     {
      "type": "DROP",
-     "player": "4278585",
+     "player": "Collin Gillespie",
      "from": "GTD",
      "to": "FA"
     }
@@ -603,7 +531,7 @@
     },
     {
      "type": "DROP",
-     "player": "4432194",
+     "player": "Day'Ron Sharpe",
      "from": "IYH",
      "to": "FA"
     }
@@ -1157,282 +1085,6 @@
      "type": "DROP",
      "player": "Julian Champagnie",
      "from": "GTD",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "1e03ca99-1fbc-42b6-b9fe-5c429d6b6e07",
-   "team": "SONG",
-   "mine": false,
-   "type": "WAIVER",
-   "status": "CANCELED",
-   "proposed": "2026-11-16 13:25 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Anthony Black",
-     "from": "FA",
-     "to": "SONG"
-    },
-    {
-     "type": "DROP",
-     "player": "Neemias Queta",
-     "from": "SONG",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "026f889f-3cbb-4d19-9c44-e7c0263d77b0",
-   "team": "GTD",
-   "mine": true,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-16 10:29 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "4278585",
-     "from": "FA",
-     "to": "GTD"
-    },
-    {
-     "type": "DROP",
-     "player": "Josh Hart",
-     "from": "GTD",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "bfdd3f1b-3054-45df-98a1-0b794349d1de",
-   "team": "GTD",
-   "mine": true,
-   "type": "WAIVER",
-   "status": "CANCELED",
-   "proposed": "2026-11-16 08:13 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Anthony Black",
-     "from": "FA",
-     "to": "GTD"
-    },
-    {
-     "type": "DROP",
-     "player": "Ryan Rollins",
-     "from": "GTD",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "d9248653-bad4-4a4e-8bea-c8d097bb804f",
-   "team": "GTD",
-   "mine": true,
-   "type": "WAIVER",
-   "status": "PENDING",
-   "proposed": "2026-11-16 08:13 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Anthony Black",
-     "from": "FA",
-     "to": "GTD"
-    },
-    {
-     "type": "DROP",
-     "player": "Julian Champagnie",
-     "from": "GTD",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "8555a360-3a18-4d19-9781-4d6b68ad1272",
-   "team": "TBG",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-16 07:40 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Tyrese Proctor",
-     "from": "FA",
-     "to": "TBG"
-    },
-    {
-     "type": "DROP",
-     "player": "Obi Toppin",
-     "from": "TBG",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "2120313e-18f3-4ee9-abff-67a6146847ca",
-   "team": "GTD",
-   "mine": true,
-   "type": "WAIVER",
-   "status": "PENDING",
-   "proposed": "2026-11-16 07:16 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Anthony Black",
-     "from": "FA",
-     "to": "GTD"
-    },
-    {
-     "type": "DROP",
-     "player": "Ryan Rollins",
-     "from": "GTD",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "197fbbcb-4396-40b4-a1e6-121f489d59cf",
-   "team": "GTD",
-   "mine": true,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-16 07:12 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Klay Thompson",
-     "from": "FA",
-     "to": "GTD"
-    },
-    {
-     "type": "DROP",
-     "player": "Paul Reed",
-     "from": "GTD",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "fd69c5d6-070a-4b42-ae19-f6a6d4e3d04c",
-   "team": "GTD",
-   "mine": true,
-   "type": "WAIVER",
-   "status": "CANCELED",
-   "proposed": "2026-11-16 07:12 KST",
-   "processed": "2026-11-16 17:00 KST",
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Anthony Black",
-     "from": "FA",
-     "to": "GTD"
-    },
-    {
-     "type": "DROP",
-     "player": "Paul Reed",
-     "from": "GTD",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "7aa16e06-4b0a-4248-a757-80d52511e716",
-   "team": "GTD",
-   "mine": true,
-   "type": "WAIVER",
-   "status": "PENDING",
-   "proposed": "2026-11-16 07:10 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Anthony Black",
-     "from": "FA",
-     "to": "GTD"
-    },
-    {
-     "type": "DROP",
-     "player": "Paul Reed",
-     "from": "GTD",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "afd31a51-5c37-4952-8b9e-0a936667a57f",
-   "team": "IYH",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-16 03:00 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Coby White",
-     "from": "FA",
-     "to": "IYH"
-    },
-    {
-     "type": "DROP",
-     "player": "Kel'el Ware",
-     "from": "IYH",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "f8d48757-707a-4626-997b-7a0201ef5f66",
-   "team": "GGAM",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-15 22:26 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Andre Drummond",
-     "from": "FA",
-     "to": "GGAM"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "1719f9db-9df0-4d8b-9a30-748c6c235008",
-   "team": "GGAM",
-   "mine": false,
-   "type": "ROSTER",
-   "status": "EXECUTED",
-   "proposed": "2026-11-15 22:20 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "DROP",
-     "player": "Nic Claxton",
-     "from": "GGAM",
      "to": "FA"
     }
    ],

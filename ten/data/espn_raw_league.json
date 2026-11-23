@@ -1,7 +1,7 @@
 {
  "id": 504060248,
  "seasonId": 2027,
- "scoringPeriodId": 34,
+ "scoringPeriodId": 35,
  "status": {
   "activatedDate": 1792386090779,
   "createdAsLeagueType": 3,
@@ -11,7 +11,7 @@
    "source": "{D40DB729-E3D7-45D1-B889-83B14025F5C7}"
   },
   "currentLeagueType": 0,
-  "currentMatchupPeriod": 5,
+  "currentMatchupPeriod": 6,
   "finalScoringPeriod": 174,
   "firstScoringPeriod": 1,
   "isActive": true,
@@ -23,10 +23,10 @@
   "isWaiverOrderEdited": false,
   "lastUpdateInfo": {
    "clientAddress": null,
-   "platform": "lm-processor",
-   "source": "NightlyLeagueUpdateTaskProcessor"
+   "platform": "espn-fantasy-app-android",
+   "source": "{D40DB729-E3D7-45D1-B889-83B14025F5C7}"
   },
-  "latestScoringPeriod": 34,
+  "latestScoringPeriod": 35,
   "previousSeasons": [
    2021,
    2022,
@@ -35,7 +35,7 @@
    2025,
    2026
   ],
-  "standingsUpdateDate": 1795338434714,
+  "standingsUpdateDate": 1795420810260,
   "teamsJoined": 10,
   "transactionScoringPeriod": 35,
   "waiverLastExecutionDate": 1795338434700,
@@ -55,21 +55,6 @@
   "fullName": "Jayson Tatum",
   "injuryStatus": "ACTIVE",
   "stats": [
-   {
-    "externalId": "401910028",
-    "id": "05401910028",
-    "lastUpdateInfo": {
-     "clientAddress": null,
-     "platform": "lm-processor",
-     "source": "ProGamePoller"
-    },
-    "proTeamId": 2,
-    "scoringPeriodId": 33,
-    "seasonId": 2027,
-    "statSourceId": 0,
-    "statSplitTypeId": 5,
-    "stats": {}
-   },
    {
     "averageStats": {
      "0": 27.357142857142858,
@@ -377,6 +362,67 @@
      "42": 4.0,
      "43": 1.0,
      "44": 0.25301205
+    }
+   },
+   {
+    "externalId": "401910035",
+    "id": "05401910035",
+    "lastUpdateInfo": {
+     "clientAddress": null,
+     "platform": null,
+     "source": null
+    },
+    "proTeamId": 2,
+    "scoringPeriodId": 34,
+    "seasonId": 2027,
+    "statSourceId": 0,
+    "statSplitTypeId": 5,
+    "stats": {
+     "0": 27.0,
+     "1": 0.0,
+     "2": 1.0,
+     "3": 6.0,
+     "4": 1.0,
+     "5": 9.0,
+     "6": 10.0,
+     "7": 0.0,
+     "8": 0.0,
+     "9": 0.0,
+     "10": 0.0,
+     "11": 4.0,
+     "12": 0.0,
+     "13": 8.0,
+     "14": 20.0,
+     "15": 7.0,
+     "16": 8.0,
+     "17": 4.0,
+     "18": 11.0,
+     "19": 0.4,
+     "20": 0.875,
+     "21": 0.36363998413085935,
+     "22": 0.5,
+     "23": 12.0,
+     "24": 1.0,
+     "25": 7.0,
+     "26": 6.0,
+     "27": 0.0,
+     "28": 38.0,
+     "29": 27.0,
+     "30": 10.0,
+     "31": 1.0,
+     "32": 4.0,
+     "33": 4.0,
+     "34": 0.7105263157894737,
+     "35": 1.5,
+     "36": 0.25,
+     "37": 1.0,
+     "38": 0.0,
+     "39": 0.0,
+     "40": 38.0,
+     "41": 1.0,
+     "42": 1.0,
+     "43": 0.0,
+     "44": 0.4
     }
    }
   ]

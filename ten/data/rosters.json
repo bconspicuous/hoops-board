@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-23T13:44+09:00",
+ "asOf": "2026-11-23T17:20+09:00",
  "leagueId": "504060248",
  "season": 2027,
  "teams": [
@@ -19,18 +19,18 @@
     "Rudy Gobert",
     "Jeremiah Fears",
     "Coby White",
-    "Josh Hart",
     "Wendell Carter Jr.",
-    "Neemias Queta"
+    "Neemias Queta",
+    "Day'Ron Sharpe"
    ],
    "ir": [
     "Evan Mobley"
    ],
    "record": {
-    "wins": 15,
-    "losses": 29,
+    "wins": 20,
+    "losses": 35,
     "ties": 0,
-    "percentage": 0.3409090909090909
+    "percentage": 0.36363636363636365
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
@@ -45,7 +45,7 @@
      "6": 1
     },
     "misc": 0,
-    "moveToActive": 187,
+    "moveToActive": 195,
     "moveToIR": 6,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -76,10 +76,10 @@
     "Paolo Banchero"
    ],
    "record": {
-    "wins": 30,
-    "losses": 14,
+    "wins": 38,
+    "losses": 17,
     "ties": 0,
-    "percentage": 0.6818181818181818
+    "percentage": 0.6909090909090909
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
@@ -93,7 +93,7 @@
      "5": 3
     },
     "misc": 0,
-    "moveToActive": 107,
+    "moveToActive": 112,
     "moveToIR": 1,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -108,26 +108,26 @@
    "players": [
     "Victor Wembanyama",
     "Anthony Davis",
-    "Austin Reaves",
     "Michael Porter Jr.",
     "Kyrie Irving",
     "Desmond Bane",
     "Ty Jerome",
+    "Brandon Ingram",
     "Davion Mitchell",
     "Kyshawn George",
     "Cedric Coward",
     "Daniss Jenkins",
-    "Kevin Huerter",
-    "Jaxson Hayes"
+    "Peyton Watson",
+    "Terrence Shannon Jr."
    ],
    "ir": [
-    "Brandon Ingram"
+    "Austin Reaves"
    ],
    "record": {
-    "wins": 28,
-    "losses": 13,
+    "wins": 31,
+    "losses": 21,
     "ties": 3,
-    "percentage": 0.6704545454545454
+    "percentage": 0.5909090909090909
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
@@ -142,7 +142,7 @@
      "6": 2
     },
     "misc": 0,
-    "moveToActive": 143,
+    "moveToActive": 150,
     "moveToIR": 4,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -161,22 +161,22 @@
     "Pascal Siakam",
     "De'Aaron Fox",
     "Franz Wagner",
+    "Zion Williamson",
     "Darius Acuff Jr.",
     "Myles Turner",
     "Jalen Smith",
     "Devin Vassell",
     "Quentin Grimes",
-    "Paul Reed",
-    "Nic Claxton"
+    "Paul Reed"
    ],
    "ir": [
-    "Zion Williamson"
+    "Nic Claxton"
    ],
    "record": {
-    "wins": 25,
-    "losses": 17,
+    "wins": 31,
+    "losses": 22,
     "ties": 2,
-    "percentage": 0.5909090909090909
+    "percentage": 0.5818181818181818
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
@@ -190,8 +190,8 @@
      "5": 6
     },
     "misc": 0,
-    "moveToActive": 111,
-    "moveToIR": 13,
+    "moveToActive": 115,
+    "moveToIR": 14,
     "paid": 0.0,
     "teamCharges": 0.0,
     "trades": 0
@@ -221,10 +221,10 @@
     "Tyrese Haliburton"
    ],
    "record": {
-    "wins": 28,
-    "losses": 16,
+    "wins": 37,
+    "losses": 18,
     "ties": 0,
-    "percentage": 0.6363636363636364
+    "percentage": 0.6727272727272727
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
@@ -268,10 +268,10 @@
     "Jalen Duren"
    ],
    "record": {
-    "wins": 15,
-    "losses": 28,
+    "wins": 21,
+    "losses": 33,
     "ties": 1,
-    "percentage": 0.3522727272727273
+    "percentage": 0.39090909090909093
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
@@ -316,10 +316,10 @@
     "Anthony Edwards"
    ],
    "record": {
-    "wins": 15,
-    "losses": 26,
+    "wins": 22,
+    "losses": 30,
     "ties": 3,
-    "percentage": 0.375
+    "percentage": 0.42727272727272725
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
@@ -333,7 +333,7 @@
      "5": 3
     },
     "misc": 0,
-    "moveToActive": 108,
+    "moveToActive": 113,
     "moveToIR": 2,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -354,20 +354,20 @@
     "Paul George",
     "Julian Champagnie",
     "Klay Thompson",
-    "Keldon Johnson",
     "Joel Embiid",
     "Isaiah Hartenstein",
     "Matas Buzelis",
-    "Jonathan Kuminga"
+    "Jonathan Kuminga",
+    "Collin Gillespie"
    ],
    "ir": [
     "Kawhi Leonard"
    ],
    "record": {
-    "wins": 14,
-    "losses": 30,
+    "wins": 18,
+    "losses": 37,
     "ties": 0,
-    "percentage": 0.3181818181818182
+    "percentage": 0.32727272727272727
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
@@ -382,7 +382,7 @@
      "6": 1
     },
     "misc": 0,
-    "moveToActive": 123,
+    "moveToActive": 125,
     "moveToIR": 10,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -413,10 +413,10 @@
     "Stephen Curry"
    ],
    "record": {
-    "wins": 22,
-    "losses": 20,
+    "wins": 27,
+    "losses": 26,
     "ties": 2,
-    "percentage": 0.5227272727272727
+    "percentage": 0.509090909090909
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
@@ -455,16 +455,16 @@
     "Saddiq Bey",
     "Tyler Herro",
     "Cameron Johnson",
-    "Aaron Gordon"
+    "Reed Sheppard"
    ],
    "ir": [
     "Dylan Harper"
    ],
    "record": {
-    "wins": 21,
-    "losses": 20,
+    "wins": 23,
+    "losses": 29,
     "ties": 3,
-    "percentage": 0.5113636363636364
+    "percentage": 0.44545454545454544
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
@@ -478,7 +478,7 @@
      "6": 1
     },
     "misc": 0,
-    "moveToActive": 88,
+    "moveToActive": 89,
     "moveToIR": 4,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -491,7 +491,6 @@
    "Evan Mobley",
    "Paolo Banchero",
    "Austin Reaves",
-   "Jaxson Hayes",
    "Nic Claxton",
    "Tyrese Haliburton",
    "Giannis Antetokounmpo",
@@ -508,8 +507,8 @@
    "Shai Gilgeous-Alexander",
    "Dylan Harper",
    "Ja Morant",
-   "RJ Barrett",
    "Caleb Wilson",
+   "RJ Barrett",
    "Kon Knueppel",
    "Chet Holmgren",
    "Dejounte Murray",
@@ -554,6 +553,7 @@
    "Moses Moody"
   ],
   "DTD": [
+   "Victor Wembanyama",
    "De'Aaron Fox",
    "Zion Williamson",
    "Brandon Miller",
