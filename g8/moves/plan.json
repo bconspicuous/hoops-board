@@ -1,78 +1,164 @@
 {
- "week": 5,
- "opp": "Zero Sugar",
- "acqLeft": 0,
+ "week": 6,
+ "opp": "ChaRDaddy",
+ "acqLeft": 6,
  "dropCandidates": [
   "Brandon Miller",
   "Jeremiah Fears",
+  "AJ Dybantsa",
   "Zach Edey",
-  "Matas Buzelis",
-  "Jalen Suggs"
+  "Matas Buzelis"
  ],
  "base": {
-  "wk": 3.523,
-  "champ": 0.2872,
-  "p1": 0.1912,
-  "epct": 0.5478
+  "wk": 4.974,
+  "champ": 0.2467,
+  "p1": 0.1478,
+  "epct": 0.5361
  },
  "protect": [
-  "Shai Gilgeous-Alexander",
   "Anthony Davis",
   "Karl-Anthony Towns",
   "Kyrie Irving",
   "James Harden",
+  "Miles Bridges",
   "Tyler Herro",
   "Michael Porter Jr.",
-  "AJ Dybantsa"
+  "Norman Powell"
  ],
  "droppable": [
   "Brandon Miller",
   "Jeremiah Fears",
+  "AJ Dybantsa",
   "Zach Edey",
-  "Matas Buzelis",
-  "Jalen Suggs"
+  "Matas Buzelis"
  ],
  "flags": [],
- "items": [],
+ "items": [
+  {
+   "n": 1,
+   "kind": "add/drop",
+   "add": "Robert Williams III",
+   "addEspnId": 4066211,
+   "addOwner": "FA",
+   "drop": "AJ Dybantsa",
+   "ir": null,
+   "weekGain": 0.581,
+   "titleGain": 0.0859,
+   "p1Gain": 0.0586,
+   "epctGain": 0.0104,
+   "addTeam": "POR",
+   "addPos": "C",
+   "dropValue": -3.58,
+   "status": "proposed",
+   "conflicts": [],
+   "addHealth": {
+    "status": "정상",
+    "injury": null,
+    "returnDate": null,
+    "report": null,
+    "g": 13,
+    "min": 16.3
+   },
+   "firstProposedAt": "2026-11-23T10:46:12.495Z"
+  },
+  {
+   "n": 2,
+   "kind": "add/drop",
+   "add": "Jalen Smith",
+   "addEspnId": 4397189,
+   "addOwner": "FA",
+   "drop": "Jeremiah Fears",
+   "ir": null,
+   "weekGain": 0.261,
+   "titleGain": 0.0866,
+   "p1Gain": 0.0597,
+   "epctGain": 0.0082,
+   "addTeam": "CHI",
+   "addPos": "PF,C",
+   "dropValue": -4.39,
+   "status": "proposed",
+   "conflicts": [],
+   "addHealth": {
+    "status": "정상",
+    "injury": null,
+    "returnDate": null,
+    "report": null,
+    "g": 14,
+    "min": 25.3
+   },
+   "firstProposedAt": "2026-11-23T10:46:12.495Z"
+  },
+  {
+   "n": 3,
+   "kind": "add/drop",
+   "add": "Rudy Gobert",
+   "addEspnId": 3032976,
+   "addOwner": "FA",
+   "drop": "Zach Edey",
+   "ir": null,
+   "weekGain": 0.338,
+   "titleGain": 0.0706,
+   "p1Gain": 0.051,
+   "epctGain": 0.0084,
+   "addTeam": "MIN",
+   "addPos": "C",
+   "dropValue": -4.66,
+   "status": "proposed",
+   "conflicts": [],
+   "addHealth": {
+    "status": "정상",
+    "injury": null,
+    "returnDate": null,
+    "report": null,
+    "g": 16,
+    "min": 29.4
+   },
+   "firstProposedAt": "2026-11-23T10:46:12.495Z"
+  }
+ ],
  "screened": [
   {
-   "add": "Alex Sarr",
-   "drop": "Brandon Miller",
+   "add": "Robert Williams III",
+   "drop": "AJ Dybantsa",
    "ir": null,
-   "wk": 0.222,
-   "title": 0.0988
+   "wk": 0.581,
+   "title": 0.0859
   },
   {
    "add": "Jalen Smith",
    "drop": "Jeremiah Fears",
    "ir": null,
-   "wk": 0.157,
-   "title": 0.0953
+   "wk": 0.261,
+   "title": 0.0866
   },
   {
-   "add": "Daniel Gafford",
+   "add": "Rudy Gobert",
    "drop": "Zach Edey",
    "ir": null,
-   "wk": 0.189,
-   "title": 0.0639
+   "wk": 0.338,
+   "title": 0.0706
   },
   {
-   "add": "John Collins",
-   "drop": "Jalen Suggs",
+   "add": "Julian Champagnie",
+   "drop": "Brandon Miller",
    "ir": null,
-   "wk": 0.054,
-   "title": 0.0565
+   "wk": 0.336,
+   "title": 0.0343
   },
   {
-   "add": "Josh Hart",
+   "add": "Devin Vassell",
    "drop": "Matas Buzelis",
    "ir": null,
-   "wk": 0.02,
-   "title": 0.0096
+   "wk": 0.088,
+   "title": -0.0147
   }
  ],
- "createdAt": "2026-11-23T04:45:35.601Z",
- "id": "20261123T0445",
- "rosterSig": "AJ Dybantsa|Anthony Davis|Brandon Miller|Jalen Suggs|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Matas Buzelis|Michael Porter Jr.|Shai Gilgeous-Alexander|Tyler Herro|Zach Edey#Austin Reaves|Norman Powell",
- "newItems": []
+ "createdAt": "2026-11-23T10:46:12.495Z",
+ "id": "20261123T1046",
+ "rosterSig": "AJ Dybantsa|Anthony Davis|Brandon Miller|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Matas Buzelis|Michael Porter Jr.|Miles Bridges|Norman Powell|Tyler Herro|Zach Edey#Austin Reaves|Shai Gilgeous-Alexander",
+ "newItems": [
+  1,
+  2,
+  3
+ ]
 }
