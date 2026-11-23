@@ -1,7 +1,7 @@
 {
- "planId": "20261123T1046",
+ "planId": "20261123T2146",
  "mode": "dry",
- "at": "2026-11-23T05:47-05:00",
+ "at": "2026-11-23T16:47-05:00",
  "items": [
   {
    "n": 1,
@@ -25,10 +25,10 @@
    ],
    "ok": true,
    "add": {
-    "name": "Jalen Smith",
-    "status": "FREEAGENT"
+    "name": "Rudy Gobert",
+    "status": "WAIVERS"
    },
-   "drop": "Jeremiah Fears",
+   "drop": "Zach Edey",
    "ir": null
   },
   {
@@ -39,10 +39,10 @@
    ],
    "ok": true,
    "add": {
-    "name": "Rudy Gobert",
+    "name": "Julian Champagnie",
     "status": "WAIVERS"
    },
-   "drop": "Zach Edey",
+   "drop": "Brandon Miller",
    "ir": null
   }
  ],
