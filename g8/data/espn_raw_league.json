@@ -1,7 +1,7 @@
 {
  "id": 751654965,
  "seasonId": 2027,
- "scoringPeriodId": 34,
+ "scoringPeriodId": 35,
  "status": {
   "activatedDate": 1791950491863,
   "createdAsLeagueType": 3,
@@ -11,7 +11,7 @@
    "source": "{7B5886BF-7290-43F1-BF8F-7FF0BC6D576C}"
   },
   "currentLeagueType": 0,
-  "currentMatchupPeriod": 5,
+  "currentMatchupPeriod": 6,
   "finalScoringPeriod": 139,
   "firstScoringPeriod": 1,
   "isActive": true,
@@ -23,12 +23,12 @@
   "isWaiverOrderEdited": false,
   "lastUpdateInfo": {
    "clientAddress": null,
-   "platform": "lm-processor",
-   "source": "NightlyLeagueUpdateTaskProcessor"
+   "platform": "espn-fantasy-app-android",
+   "source": "{CF79271D-E3B9-4072-8CB1-E55525D876F2}"
   },
-  "latestScoringPeriod": 34,
+  "latestScoringPeriod": 35,
   "previousSeasons": [],
-  "standingsUpdateDate": 1795337566081,
+  "standingsUpdateDate": 1795420946513,
   "teamsJoined": 8,
   "transactionScoringPeriod": 35,
   "waiverLastExecutionDate": 1795337566074,
@@ -155,8 +155,8 @@
     "id": "05401910030",
     "lastUpdateInfo": {
      "clientAddress": null,
-     "platform": "lm-processor",
-     "source": "ProGamePoller"
+     "platform": null,
+     "source": null
     },
     "proTeamId": 14,
     "scoringPeriodId": 34,

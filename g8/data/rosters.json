@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-23T13:44+09:00",
+ "asOf": "2026-11-23T17:16+09:00",
  "leagueId": "751654965",
  "season": 2027,
  "teams": [
@@ -28,10 +28,10 @@
     "Paolo Banchero"
    ],
    "record": {
-    "wins": 18,
-    "losses": 26,
+    "wins": 26,
+    "losses": 29,
     "ties": 0,
-    "percentage": 0.4090909090909091
+    "percentage": 0.4727272727272727
    },
    "acqByPeriod": {
     "1": 4,
@@ -67,10 +67,10 @@
     "Lauri Markkanen"
    ],
    "record": {
-    "wins": 20,
-    "losses": 23,
+    "wins": 23,
+    "losses": 31,
     "ties": 1,
-    "percentage": 0.4659090909090909
+    "percentage": 0.42727272727272725
    },
    "acqByPeriod": {
     "1": 4,
@@ -87,7 +87,6 @@
    "espnId": 3,
    "me": true,
    "players": [
-    "Shai Gilgeous-Alexander",
     "Karl-Anthony Towns",
     "Anthony Davis",
     "James Harden",
@@ -96,20 +95,21 @@
     "Brandon Miller",
     "Jeremiah Fears",
     "AJ Dybantsa",
+    "Norman Powell",
     "Zach Edey",
     "Matas Buzelis",
-    "Jalen Suggs",
-    "Tyler Herro"
+    "Tyler Herro",
+    "Miles Bridges"
    ],
    "ir": [
-    "Austin Reaves",
-    "Norman Powell"
+    "Shai Gilgeous-Alexander",
+    "Austin Reaves"
    ],
    "record": {
-    "wins": 28,
-    "losses": 16,
-    "ties": 0,
-    "percentage": 0.6363636363636364
+    "wins": 31,
+    "losses": 23,
+    "ties": 1,
+    "percentage": 0.5727272727272728
    },
    "acqByPeriod": {
     "1": 6,
@@ -146,10 +146,10 @@
     "Duncan Robinson"
    ],
    "record": {
-    "wins": 30,
-    "losses": 13,
-    "ties": 1,
-    "percentage": 0.6931818181818182
+    "wins": 37,
+    "losses": 16,
+    "ties": 2,
+    "percentage": 0.6909090909090909
    },
    "acqByPeriod": {
     "2": 2,
@@ -184,10 +184,10 @@
     "Ja Morant"
    ],
    "record": {
-    "wins": 23,
-    "losses": 21,
-    "ties": 0,
-    "percentage": 0.5227272727272727
+    "wins": 27,
+    "losses": 27,
+    "ties": 1,
+    "percentage": 0.5
    },
    "acqByPeriod": {
     "1": 6,
@@ -223,10 +223,10 @@
     "Jalen Duren"
    ],
    "record": {
-    "wins": 15,
-    "losses": 28,
+    "wins": 18,
+    "losses": 36,
     "ties": 1,
-    "percentage": 0.3522727272727273
+    "percentage": 0.33636363636363636
    },
    "acqByPeriod": {
     "1": 6,
@@ -262,10 +262,10 @@
     "Caleb Wilson"
    ],
    "record": {
-    "wins": 17,
-    "losses": 26,
-    "ties": 1,
-    "percentage": 0.3977272727272727
+    "wins": 23,
+    "losses": 30,
+    "ties": 2,
+    "percentage": 0.43636363636363634
    },
    "acqByPeriod": {
     "2": 2,
@@ -281,29 +281,26 @@
    "espnId": 8,
    "me": false,
    "players": [
+    "Jayson Tatum",
     "Cooper Flagg",
     "LaMelo Ball",
     "Kevin Durant",
     "Ty Jerome",
     "Ivica Zubac",
     "Donovan Clingan",
+    "Brandon Ingram",
     "Jaden McDaniels",
     "Yaxel Lendeborg",
-    "Kyshawn George",
     "Davion Mitchell",
-    "Daniss Jenkins",
     "Keyonte George",
     "Moussa Diabate"
    ],
-   "ir": [
-    "Jayson Tatum",
-    "Brandon Ingram"
-   ],
+   "ir": [],
    "record": {
-    "wins": 23,
-    "losses": 21,
+    "wins": 31,
+    "losses": 24,
     "ties": 0,
-    "percentage": 0.5227272727272727
+    "percentage": 0.5636363636363636
    },
    "acqByPeriod": {
     "1": 6,
@@ -381,6 +378,7 @@
    "Trey Murphy III",
    "De'Aaron Fox",
    "Brandon Miller",
+   "Victor Wembanyama",
    "Jaylen Brown",
    "Collin Murray-Boyles",
    "Dean Wade",
