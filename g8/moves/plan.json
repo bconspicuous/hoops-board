@@ -10,10 +10,10 @@
   "Jalen Suggs"
  ],
  "base": {
-  "wk": 3.459,
-  "champ": 0.3303,
-  "p1": 0.2266,
-  "epct": 0.5518
+  "wk": 3.523,
+  "champ": 0.2872,
+  "p1": 0.1912,
+  "epct": 0.5478
  },
  "protect": [
   "Shai Gilgeous-Alexander",
@@ -39,40 +39,40 @@
    "add": "Alex Sarr",
    "drop": "Brandon Miller",
    "ir": null,
-   "wk": 0.233,
-   "title": 0.0882
+   "wk": 0.222,
+   "title": 0.0988
+  },
+  {
+   "add": "Jalen Smith",
+   "drop": "Jeremiah Fears",
+   "ir": null,
+   "wk": 0.157,
+   "title": 0.0953
   },
   {
    "add": "Daniel Gafford",
    "drop": "Zach Edey",
    "ir": null,
-   "wk": 0.202,
-   "title": 0.0582
+   "wk": 0.189,
+   "title": 0.0639
   },
   {
    "add": "John Collins",
-   "drop": "Jeremiah Fears",
+   "drop": "Jalen Suggs",
    "ir": null,
-   "wk": 0.147,
-   "title": 0.0463
+   "wk": 0.054,
+   "title": 0.0565
   },
   {
    "add": "Josh Hart",
-   "drop": "Jalen Suggs",
-   "ir": null,
-   "wk": 0.049,
-   "title": 0.0341
-  },
-  {
-   "add": "Bobby Portis",
    "drop": "Matas Buzelis",
    "ir": null,
-   "wk": -0.008,
-   "title": -0.0117
+   "wk": 0.02,
+   "title": 0.0096
   }
  ],
- "createdAt": "2026-11-22T21:46:05.829Z",
- "id": "20261122T2146",
+ "createdAt": "2026-11-23T04:45:35.601Z",
+ "id": "20261123T0445",
  "rosterSig": "AJ Dybantsa|Anthony Davis|Brandon Miller|Jalen Suggs|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Matas Buzelis|Michael Porter Jr.|Shai Gilgeous-Alexander|Tyler Herro|Zach Edey#Austin Reaves|Norman Powell",
  "newItems": []
 }
