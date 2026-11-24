@@ -10,10 +10,10 @@
   "Kyshawn George"
  ],
  "base": {
-  "wk": 5.301,
-  "champ": 0.455,
-  "p1": 0.4224,
-  "epct": 0.561
+  "wk": 5.366,
+  "champ": 0.4588,
+  "p1": 0.4336,
+  "epct": 0.562
  },
  "protect": [
   "Shai Gilgeous-Alexander",
@@ -42,10 +42,10 @@
    "addOwner": "FA",
    "drop": "Kyshawn George",
    "ir": null,
-   "weekGain": 0.411,
-   "titleGain": 0.1144,
+   "weekGain": 0.441,
+   "titleGain": 0.1163,
    "p1Gain": 0.1691,
-   "epctGain": 0.0117,
+   "epctGain": 0.0122,
    "addTeam": "POR",
    "addPos": "C",
    "dropValue": -5.44,
@@ -64,45 +64,18 @@
   {
    "n": 2,
    "kind": "add/drop",
-   "add": "Devin Vassell",
-   "addEspnId": 4395630,
-   "addOwner": "FA",
-   "drop": "Brandon Miller",
-   "ir": null,
-   "weekGain": 0.248,
-   "titleGain": 0.0385,
-   "p1Gain": 0.0493,
-   "epctGain": 0.0051,
-   "addTeam": "SAS",
-   "addPos": "SG,SF",
-   "dropValue": -4.43,
-   "status": "proposed",
-   "conflicts": [],
-   "addHealth": {
-    "status": "정상",
-    "injury": null,
-    "returnDate": null,
-    "report": null,
-    "g": 16,
-    "min": 30.3
-   },
-   "firstProposedAt": "2026-11-24T10:45:47.282Z"
-  },
-  {
-   "n": 3,
-   "kind": "add/drop",
    "add": "Brook Lopez",
    "addEspnId": 3448,
    "addOwner": "FA",
-   "drop": "AJ Dybantsa",
+   "drop": "Jeremiah Fears",
    "ir": null,
-   "weekGain": 0.226,
-   "titleGain": 0.0274,
-   "p1Gain": 0.0403,
-   "epctGain": 0.0042,
+   "weekGain": 0.301,
+   "titleGain": 0.0436,
+   "p1Gain": 0.0794,
+   "epctGain": 0.008,
    "addTeam": "LAC",
    "addPos": "C",
-   "dropValue": -3.56,
+   "dropValue": -4.54,
    "status": "proposed",
    "conflicts": [],
    "addHealth": {
@@ -113,7 +86,34 @@
     "g": 16,
     "min": 24.4
    },
-   "firstProposedAt": "2026-11-24T10:45:47.282Z"
+   "firstProposedAt": "2026-11-24T21:46:23.708Z"
+  },
+  {
+   "n": 3,
+   "kind": "add/drop",
+   "add": "Julian Champagnie",
+   "addEspnId": 4592479,
+   "addOwner": "FA",
+   "drop": "Brandon Miller",
+   "ir": null,
+   "weekGain": 0.249,
+   "titleGain": 0.0273,
+   "p1Gain": 0.0366,
+   "epctGain": 0.0028,
+   "addTeam": "SAS",
+   "addPos": "SF,PF",
+   "dropValue": -4.43,
+   "status": "proposed",
+   "conflicts": [],
+   "addHealth": {
+    "status": "정상",
+    "injury": null,
+    "returnDate": null,
+    "report": null,
+    "g": 18,
+    "min": 26.6
+   },
+   "firstProposedAt": "2026-11-24T21:46:23.708Z"
   }
  ],
  "screened": [
@@ -121,43 +121,42 @@
    "add": "Robert Williams III",
    "drop": "Kyshawn George",
    "ir": null,
-   "wk": 0.411,
-   "title": 0.1144
-  },
-  {
-   "add": "Devin Vassell",
-   "drop": "Brandon Miller",
-   "ir": null,
-   "wk": 0.248,
-   "title": 0.0385
+   "wk": 0.441,
+   "title": 0.1163
   },
   {
    "add": "Brook Lopez",
-   "drop": "AJ Dybantsa",
+   "drop": "Jeremiah Fears",
    "ir": null,
-   "wk": 0.226,
-   "title": 0.0274
+   "wk": 0.301,
+   "title": 0.0436
   },
   {
    "add": "Julian Champagnie",
-   "drop": "Jeremiah Fears",
+   "drop": "Brandon Miller",
    "ir": null,
-   "wk": 0.291,
-   "title": 0.0197
+   "wk": 0.249,
+   "title": 0.0273
   },
   {
-   "add": "Cam Spencer",
+   "add": "Devin Vassell",
+   "drop": "AJ Dybantsa",
+   "ir": null,
+   "wk": 0.22,
+   "title": 0.0136
+  },
+  {
+   "add": "John Collins",
    "drop": "Matas Buzelis",
    "ir": null,
-   "wk": 0.152,
-   "title": 0.0274
+   "wk": 0.154,
+   "title": 0.0131
   }
  ],
- "createdAt": "2026-11-24T10:45:47.282Z",
- "id": "20261124T1045",
+ "createdAt": "2026-11-24T21:46:23.708Z",
+ "id": "20261124T2146",
  "rosterSig": "AJ Dybantsa|Anthony Davis|Brandon Miller|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Kyshawn George|Matas Buzelis|Michael Porter Jr.|Miles Bridges|Shai Gilgeous-Alexander|Tyler Herro#Austin Reaves|Norman Powell",
  "newItems": [
-  1,
   2,
   3
  ]

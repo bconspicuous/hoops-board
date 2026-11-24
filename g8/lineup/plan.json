@@ -2,7 +2,7 @@
  "date": "2026-11-24",
  "week": 6,
  "opp": "ChaRDaddy",
- "status": "pending",
+ "status": "nochange-starters",
  "playing": 4,
  "starters": [
   "Anthony Davis",
@@ -13,41 +13,39 @@
  "bench": [],
  "dtd": [],
  "expected": {
-  "best": 5.307,
-  "current": 5.22,
-  "gain": 0.087,
+  "best": 5.373,
+  "current": 5.373,
+  "gain": 0,
   "pcBest": {
-   "FG": 0.126,
-   "FT": 0.771,
-   "TPM": 0.708,
-   "REB": 0.592,
-   "AST": 0.072,
-   "STL": 0.484,
-   "BLK": 0.648,
-   "TO": 0.479,
-   "DD": 0.697,
-   "PTS": 0.18,
-   "PF": 0.549
+   "FG": 0.103,
+   "FT": 0.794,
+   "TPM": 0.775,
+   "REB": 0.566,
+   "AST": 0.066,
+   "STL": 0.418,
+   "BLK": 0.566,
+   "TO": 0.532,
+   "DD": 0.709,
+   "PTS": 0.182,
+   "PF": 0.662
   },
   "pcCurrent": {
-   "FG": 0.128,
-   "FT": 0.776,
-   "TPM": 0.662,
-   "REB": 0.542,
-   "AST": 0.051,
-   "STL": 0.446,
-   "BLK": 0.59,
-   "TO": 0.545,
-   "DD": 0.695,
-   "PTS": 0.142,
-   "PF": 0.643
+   "FG": 0.103,
+   "FT": 0.794,
+   "TPM": 0.775,
+   "REB": 0.566,
+   "AST": 0.066,
+   "STL": 0.418,
+   "BLK": 0.566,
+   "TO": 0.532,
+   "DD": 0.709,
+   "PTS": 0.182,
+   "PF": 0.662
   }
  },
  "alternatives": [],
- "currentBench": [
-  "Kyshawn George"
- ],
- "sameStarters": false,
+ "currentBench": [],
+ "sameStarters": true,
  "moves": [
   {
    "name": "Michael Porter Jr.",
@@ -55,19 +53,9 @@
    "to": "F"
   },
   {
-   "name": "Tyler Herro",
-   "from": "SG",
-   "to": "UTIL"
-  },
-  {
    "name": "Miles Bridges",
    "from": "F",
-   "to": "BE"
-  },
-  {
-   "name": "Kyshawn George",
-   "from": "BE",
-   "to": "SG"
+   "to": "UTIL"
   }
  ],
  "slots": [
@@ -104,11 +92,11 @@
    "slot": "UTIL"
   },
   {
-   "name": "Jeremiah Fears",
+   "name": "Tyler Herro",
    "slot": "UTIL"
   },
   {
-   "name": "Tyler Herro",
+   "name": "Miles Bridges",
    "slot": "UTIL"
   },
   {
@@ -116,14 +104,14 @@
    "slot": "BE"
   },
   {
-   "name": "Matas Buzelis",
+   "name": "Jeremiah Fears",
    "slot": "BE"
   },
   {
-   "name": "Miles Bridges",
+   "name": "Matas Buzelis",
    "slot": "BE"
   }
  ],
- "id": "2026-11-24T1045Z",
- "createdAt": "2026-11-24T10:45:52.403Z"
+ "id": "2026-11-24T2146Z",
+ "createdAt": "2026-11-24T21:46:29.979Z"
 }
