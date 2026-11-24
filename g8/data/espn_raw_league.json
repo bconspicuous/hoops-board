@@ -155,8 +155,8 @@
     "id": "05401910030",
     "lastUpdateInfo": {
      "clientAddress": null,
-     "platform": null,
-     "source": null
+     "platform": "lm-processor",
+     "source": "ProGamePoller"
     },
     "proTeamId": 14,
     "scoringPeriodId": 34,
