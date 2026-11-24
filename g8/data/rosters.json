@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-24T06:45+09:00",
+ "asOf": "2026-11-24T09:23+09:00",
  "leagueId": "751654965",
  "season": 2027,
  "teams": [
@@ -20,8 +20,8 @@
     "Yves Missi",
     "Ayo Dosunmu",
     "Wendell Carter Jr.",
-    "Meleek Thomas",
-    "Jrue Holiday"
+    "Jrue Holiday",
+    "Rui Hachimura"
    ],
    "ir": [
     "Dejounte Murray",
@@ -38,9 +38,10 @@
     "2": 3,
     "3": 2,
     "4": 5,
-    "5": 2
+    "5": 2,
+    "6": 1
    },
-   "acqTotal": 16
+   "acqTotal": 17
   },
   {
    "name": "Gatori Team",
@@ -332,6 +333,7 @@
    "Dylan Harper",
    "Aday Mara",
    "Tyrese Haliburton",
+   "Joel Embiid",
    "Caleb Wilson",
    "CJ McCollum",
    "RJ Barrett",
@@ -349,9 +351,9 @@
    "T.J. McConnell",
    "Jusuf Nurkic",
    "Cason Wallace",
-   "Nolan Traore",
    "Shaedon Sharpe",
    "Bennedict Mathurin",
+   "Nolan Traore",
    "Mark Williams",
    "Dereck Lively II",
    "Aaron Nesmith",
@@ -371,17 +373,10 @@
    "Giannis Antetokounmpo",
    "Zion Williamson",
    "De'Aaron Fox",
-   "Brandon Miller",
    "Victor Wembanyama",
-   "Pascal Siakam",
-   "Jaylen Brown",
+   "Cade Cunningham",
    "OG Anunoby",
-   "Joel Embiid",
-   "Jalen Smith",
-   "Nic Claxton",
    "P.J. Washington",
-   "Collin Murray-Boyles",
-   "Dean Wade",
    "Miles McBride"
   ]
  }
