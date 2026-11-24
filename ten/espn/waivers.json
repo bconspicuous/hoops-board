@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-25T06:45+09:00",
+ "asOf": "2026-11-25T07:48+09:00",
  "scoringPeriodId": 36,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -130,6 +130,30 @@
   }
  ],
  "transactions": [
+  {
+   "id": "69b096a2-b568-4934-890c-73a16fffba8f",
+   "team": "TBG",
+   "mine": false,
+   "type": "WAIVER",
+   "status": "CANCELED",
+   "proposed": "2026-11-25 07:37 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Quentin Grimes",
+     "from": "FA",
+     "to": "TBG"
+    },
+    {
+     "type": "DROP",
+     "player": "Brice Sensabaugh",
+     "from": "TBG",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
   {
    "id": "daec7077-2eb3-4b19-967e-c42513798c08",
    "team": "KWNG",
@@ -1307,7 +1331,6 @@
   "gameId",
   "id",
   "members",
-  "pendingTransactions",
   "scoringPeriodId",
   "seasonId",
   "segmentId",
