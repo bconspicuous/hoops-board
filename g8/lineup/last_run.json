@@ -1,57 +1,57 @@
 {
- "planId": "2026-11-20T2146Z",
+ "planId": "2026-11-24T1045Z",
  "mode": "dry",
- "date": "2026-11-20",
- "at": "2026-11-20T16:47-05:00",
+ "date": "2026-11-24",
+ "at": "2026-11-24T05:46-05:00",
  "moves": [
   {
    "name": "Michael Porter Jr.",
-   "from": "PF",
+   "from": "UTIL",
    "to": "F"
   },
   {
-   "name": "Miles Bridges",
-   "from": "BE",
-   "to": "PF"
+   "name": "Tyler Herro",
+   "from": "SG",
+   "to": "UTIL"
   },
   {
-   "name": "AJ Dybantsa",
-   "from": "UTIL",
+   "name": "Miles Bridges",
+   "from": "F",
    "to": "BE"
   },
   {
-   "name": "Matas Buzelis",
-   "from": "F",
-   "to": "UTIL"
+   "name": "Kyshawn George",
+   "from": "BE",
+   "to": "SG"
   }
  ],
  "skipped": [],
  "ok": true,
- "scoringPeriodId": 32,
+ "scoringPeriodId": 36,
  "finalLineup": [
   [
    "PG",
-   "Shai Gilgeous-Alexander"
+   "Kyrie Irving"
   ],
   [
    "SG",
-   "Brandon Miller"
+   "Kyshawn George"
   ],
   [
    "SF",
-   "Norman Powell"
+   "AJ Dybantsa"
   ],
   [
    "PF",
-   "Miles Bridges"
-  ],
-  [
-   "C",
    "Anthony Davis"
   ],
   [
+   "C",
+   "Karl-Anthony Towns"
+  ],
+  [
    "G",
-   "Jeremiah Fears"
+   "Shai Gilgeous-Alexander"
   ],
   [
    "F",
@@ -63,23 +63,23 @@
   ],
   [
    "UTIL",
-   "Matas Buzelis"
+   "Jeremiah Fears"
   ],
   [
    "UTIL",
-   "Jalen Suggs"
+   "Tyler Herro"
   ],
   [
    "BE",
-   "Karl-Anthony Towns"
+   "Brandon Miller"
   ],
   [
    "BE",
-   "Kyrie Irving"
+   "Matas Buzelis"
   ],
   [
    "BE",
-   "AJ Dybantsa"
+   "Miles Bridges"
   ],
   [
    "IR",
@@ -87,7 +87,7 @@
   ],
   [
    "IR",
-   "Zach Edey"
+   "Norman Powell"
   ]
  ],
  "note": "dry run — nothing written"
