@@ -1,6 +1,6 @@
 {
- "asOf": "2026-11-24T13:45+09:00",
- "scoringPeriodId": 35,
+ "asOf": "2026-11-24T19:29+09:00",
+ "scoringPeriodId": 36,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
   "waiverHours": 24,
@@ -49,34 +49,34 @@
    "acq": 13
   },
   {
-   "team": "GTD",
-   "name": "Garak Twindragons",
-   "rank": 6,
-   "acq": 22
-  },
-  {
    "team": "IYH",
    "name": "Jongno Karina",
-   "rank": 7,
+   "rank": 6,
    "acq": 24
   },
   {
    "team": "GGAM",
    "name": "Garibong CHaRdaddy",
-   "rank": 8,
-   "acq": 20
+   "rank": 7,
+   "acq": 21
   },
   {
    "team": "SMS",
    "name": "Samseong Homeless",
-   "rank": 9,
+   "rank": 8,
    "acq": 20
   },
   {
    "team": "Doo",
    "name": "Helio honeymoons",
-   "rank": 10,
+   "rank": 9,
    "acq": 20
+  },
+  {
+   "team": "GTD",
+   "name": "Garak Twindragons",
+   "rank": 10,
+   "acq": 23
   }
  ],
  "myPending": [
@@ -87,7 +87,7 @@
    "type": "WAIVER",
    "status": "PENDING",
    "proposed": "2026-11-24 13:33 KST",
-   "processed": "2026-11-24 17:00 KST",
+   "processed": null,
    "items": [
     {
      "type": "ADD",
@@ -131,13 +131,73 @@
  ],
  "transactions": [
   {
+   "id": "9d095c3a-361e-46f2-9676-03242f5edbd5",
+   "team": "GGAM",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-24 18:23 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Aaron Gordon",
+     "from": "FA",
+     "to": "GGAM"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "de8c2bcd-2ea6-4cbb-a8c1-f230b5574adc",
+   "team": "GGAM",
+   "mine": false,
+   "type": "ROSTER",
+   "status": "EXECUTED",
+   "proposed": "2026-11-24 18:18 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "DROP",
+     "player": "Quentin Grimes",
+     "from": "GGAM",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "c1eb3474-3341-4881-8aa5-09416b402876",
+   "team": "GTD",
+   "mine": true,
+   "type": "WAIVER",
+   "status": "EXECUTED",
+   "proposed": "2026-11-24 17:28 KST",
+   "processed": "2026-11-24 17:28 KST",
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Josh Hart",
+     "from": "FA",
+     "to": "GTD"
+    },
+    {
+     "type": "DROP",
+     "player": "Toumani Camara",
+     "from": "GTD",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
    "id": "f1659327-5fef-4cc8-b55f-9d2e3300cc8a",
    "team": "GTD",
    "mine": true,
    "type": "WAIVER",
    "status": "PENDING",
    "proposed": "2026-11-24 13:33 KST",
-   "processed": "2026-11-24 17:00 KST",
+   "processed": null,
    "items": [
     {
      "type": "ADD",
@@ -189,7 +249,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "4278049",
+     "player": "Daniel Gafford",
      "from": "FA",
      "to": "GGAM"
     }
@@ -1137,174 +1197,6 @@
     }
    ],
    "bid": 0
-  },
-  {
-   "id": "cc2db4f0-f4e7-47ed-882b-b74fb20573d3",
-   "team": "IYH",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-17 10:59 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Collin Murray-Boyles",
-     "from": "FA",
-     "to": "IYH"
-    },
-    {
-     "type": "DROP",
-     "player": "Tari Eason",
-     "from": "IYH",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "d8f3cb1e-00fc-410c-9f84-c672ac2542e2",
-   "team": "IYH",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-17 08:50 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Zach Edey",
-     "from": "FA",
-     "to": "IYH"
-    },
-    {
-     "type": "DROP",
-     "player": "Aday Mara",
-     "from": "IYH",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "96496036-180c-4cd1-b0e4-436b4cbe5f83",
-   "team": "SONG",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-17 06:25 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Joan Beringer",
-     "from": "FA",
-     "to": "SONG"
-    },
-    {
-     "type": "DROP",
-     "player": "Neemias Queta",
-     "from": "SONG",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "03468e6b-245c-463a-834b-2f4b15a12a01",
-   "team": "GGAM",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-16 19:45 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Bones Hyland",
-     "from": "FA",
-     "to": "GGAM"
-    },
-    {
-     "type": "DROP",
-     "player": "Andre Drummond",
-     "from": "GGAM",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "6f541c26-1570-4c1d-8b27-2951a2808b7a",
-   "team": "IYH",
-   "mine": false,
-   "type": "WAIVER",
-   "status": "FAILED_INVALIDPLAYERSOURCE",
-   "proposed": "2026-11-16 17:07 KST",
-   "processed": "2026-11-16 17:07 KST",
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Anthony Black",
-     "from": "FA",
-     "to": "IYH"
-    },
-    {
-     "type": "DROP",
-     "player": "Aday Mara",
-     "from": "IYH",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "bbec379b-9b89-42d3-a0f3-6a0fcfa2bcf4",
-   "team": "Doo",
-   "mine": false,
-   "type": "WAIVER",
-   "status": "EXECUTED",
-   "proposed": "2026-11-16 17:07 KST",
-   "processed": "2026-11-16 17:07 KST",
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Anthony Black",
-     "from": "FA",
-     "to": "Doo"
-    },
-    {
-     "type": "DROP",
-     "player": "Sandro Mamukelashvili",
-     "from": "Doo",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "9a335e13-1829-4fcf-95cf-a4e8c26fdbb0",
-   "team": "GTD",
-   "mine": true,
-   "type": "WAIVER",
-   "status": "FAILED_INVALIDPLAYERSOURCE",
-   "proposed": "2026-11-16 17:07 KST",
-   "processed": "2026-11-16 17:07 KST",
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Anthony Black",
-     "from": "FA",
-     "to": "GTD"
-    },
-    {
-     "type": "DROP",
-     "player": "Julian Champagnie",
-     "from": "GTD",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
   }
  ],
  "onWaivers": [
@@ -1331,25 +1223,14 @@
    }
   },
   {
-   "id": 3062679,
-   "name": "Josh Hart",
-   "pro": "NYK",
-   "waiverClears": "2026-11-24 17:00 KST",
+   "id": 4397014,
+   "name": "Quentin Grimes",
+   "pro": "LAL",
+   "waiverClears": "2026-11-26 17:00 KST",
    "inj": "ACTIVE",
    "droppedBy": {
-    "by": "IYH",
-    "at": "2026-11-23 06:10 KST"
-   }
-  },
-  {
-   "id": 3064290,
-   "name": "Aaron Gordon",
-   "pro": "DEN",
-   "waiverClears": "2026-11-24 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "KWNG",
-    "at": "2026-11-23 13:21 KST"
+    "by": "GGAM",
+    "at": "2026-11-24 18:18 KST"
    }
   },
   {
@@ -1364,25 +1245,14 @@
    }
   },
   {
-   "id": 4395723,
-   "name": "Keldon Johnson",
-   "pro": "SAS",
-   "waiverClears": "2026-11-24 17:00 KST",
+   "id": 4431736,
+   "name": "Toumani Camara",
+   "pro": "POR",
+   "waiverClears": "2026-11-25 17:00 KST",
    "inj": "ACTIVE",
    "droppedBy": {
     "by": "GTD",
-    "at": "2026-11-23 11:51 KST"
-   }
-  },
-  {
-   "id": 4066372,
-   "name": "Kevin Huerter",
-   "pro": "DET",
-   "waiverClears": "2026-11-24 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "SONG",
-    "at": "2026-11-23 06:20 KST"
+    "at": "2026-11-24 17:28 KST"
    }
   },
   {
@@ -1394,17 +1264,6 @@
    "droppedBy": {
     "by": "SMS",
     "at": "2026-11-24 05:14 KST"
-   }
-  },
-  {
-   "id": 4592829,
-   "name": "Quenton Jackson",
-   "pro": "IND",
-   "waiverClears": "2026-11-24 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "Doo",
-    "at": "2026-11-23 18:10 KST"
    }
   }
  ],

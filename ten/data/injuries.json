@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-24T13:44+09:00",
+ "asOf": "2026-11-24T19:29+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -559,7 +559,7 @@
    "detail": "Bruise",
    "side": "Left",
    "injury": "Heel",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Coach JJ Redick stated Monday that the team is optimistic Reaves (heel) will return for Friday's game against San Antonio, Daniel Starkand of LakersNation.com reports.",
    "long": "Reaves has already been downgraded to out for Monday's clash against Utah, which will mark his fifth straight absence due to a bruised left heel. However, the sharpshooter managed to take part in a stay-ready game earlier in the day Monday and was moving well, per Benjamin Royer of The Orange County Register. Reaves figures to be in line to take the court Friday as long as he continues to show progress throughout the week."
   },
@@ -944,9 +944,9 @@
   {
    "player": "Joel Embiid",
    "team": "PHI",
-   "status": "Out",
-   "date": "2026-11-23T22:49Z",
-   "type": "out",
+   "status": "Day-To-Day",
+   "date": "2026-11-24T04:33Z",
+   "type": "day-to-day",
    "returnDate": "2026-11-25",
    "detail": null,
    "side": null,
@@ -1068,32 +1068,32 @@
    "long": "Simmons had a quality preseason, averaging 10.5 points, 4.0 rebounds and 4.0 assists over 17.4 minutes per contest (two games). The 30-year-old was on track to suit up for the Kings on opening night, though those plans were halted after he suffered a torn Achilles tendon during practice. Now, Simmons will focus on rehab. However, it's unknown what the future holds regarding his career in the NBA."
   },
   {
-   "player": "De'Aaron Fox",
-   "team": "SA",
-   "status": "Out",
-   "date": "2026-11-24T01:24Z",
-   "type": "out",
-   "returnDate": "2026-11-25",
-   "detail": "Bruise",
-   "side": "Right",
-   "injury": "Lower Leg",
-   "fantasyStatus": "OUT",
-   "short": "Fox (shin) has been ruled out for Monday's game against the Kings, Jeff McDonald of the San Antonio Express-News reports.",
-   "long": "Fox will miss his second outing of the regular season due to a right shin contusion. Stephon Castle will operate as the primary ballhandler with Dylan Harper (hip) also sidelined, while Jordan McLaughlin should see increased burn off the Spurs' bench."
-  },
-  {
    "player": "Victor Wembanyama",
    "team": "SA",
-   "status": "Out",
-   "date": "2026-11-24T01:24Z",
-   "type": "out",
+   "status": "Day-To-Day",
+   "date": "2026-11-24T06:06Z",
+   "type": "day-to-day",
    "returnDate": "2026-11-25",
    "detail": null,
    "side": null,
    "injury": "Back",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Wembanyama (back) won't play Monday against the Kings, Jeff McDonald of the San Antonio Express-News reports.",
    "long": "Wembanyama is dealing with some back pain and will sit out Monday's game against the 1-14 Kings, but he's expected to return for Wednesday's NBA Cup game in Portland. Luka Kornet will likely get the start with Wembanyama unavailable, and Stephon Castle should see a sizeable uptick in usage."
+  },
+  {
+   "player": "De'Aaron Fox",
+   "team": "SA",
+   "status": "Day-To-Day",
+   "date": "2026-11-24T06:06Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-25",
+   "detail": "Bruise",
+   "side": "Right",
+   "injury": "Lower Leg",
+   "fantasyStatus": "GTD",
+   "short": "Fox (shin) has been ruled out for Monday's game against the Kings, Jeff McDonald of the San Antonio Express-News reports.",
+   "long": "Fox will miss his second outing of the regular season due to a right shin contusion. Stephon Castle will operate as the primary ballhandler with Dylan Harper (hip) also sidelined, while Jordan McLaughlin should see increased burn off the Spurs' bench."
   },
   {
    "player": "Dylan Harper",
@@ -1182,14 +1182,14 @@
   {
    "player": "Jaxson Hayes",
    "team": "UTAH",
-   "status": "Out",
-   "date": "2026-11-23T21:04Z",
-   "type": "out",
+   "status": "Day-To-Day",
+   "date": "2026-11-24T06:07Z",
+   "type": "day-to-day",
    "returnDate": "2026-11-27",
    "detail": "Not Specified",
    "side": "Left",
    "injury": "Knee",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Hayes (knee) has been ruled out for Monday's game against the Lakers.",
    "long": "Hayes left Sunday's tilt against the Mavericks with what's now being described as a left knee strain, and it's not yet known how much time he may miss beyond Monday. Mo Bamba should start at center for the Jazz and is worthy of streaming consideration in all fantasy leagues."
   },

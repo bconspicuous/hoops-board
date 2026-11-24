@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-24T13:44+09:00",
+ "asOf": "2026-11-24T19:29+09:00",
  "leagueId": "504060248",
  "season": 2027,
  "teams": [
@@ -45,7 +45,7 @@
      "6": 1
     },
     "misc": 0,
-    "moveToActive": 195,
+    "moveToActive": 198,
     "moveToIR": 6,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -94,7 +94,7 @@
      "6": 1
     },
     "misc": 0,
-    "moveToActive": 113,
+    "moveToActive": 116,
     "moveToIR": 1,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -143,7 +143,7 @@
      "6": 2
     },
     "misc": 0,
-    "moveToActive": 150,
+    "moveToActive": 155,
     "moveToIR": 4,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -160,17 +160,19 @@
     "Domantas Sabonis",
     "Devin Booker",
     "Pascal Siakam",
-    "De'Aaron Fox",
     "Franz Wagner",
     "Zion Williamson",
     "Darius Acuff Jr.",
     "Myles Turner",
     "Jalen Smith",
     "Devin Vassell",
-    "Quentin Grimes",
-    "Nic Claxton"
+    "Nic Claxton",
+    "Daniel Gafford",
+    "Aaron Gordon"
    ],
-   "ir": [],
+   "ir": [
+    "De'Aaron Fox"
+   ],
    "record": {
     "wins": 31,
     "losses": 22,
@@ -179,18 +181,18 @@
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
-    "acquisitions": 20,
-    "drops": 19,
+    "acquisitions": 21,
+    "drops": 20,
     "matchupAcquisitionTotals": {
      "1": 6,
      "2": 2,
      "3": 1,
      "4": 4,
      "5": 6,
-     "6": 1
+     "6": 2
     },
     "misc": 0,
-    "moveToActive": 116,
+    "moveToActive": 120,
     "moveToIR": 15,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -237,7 +239,7 @@
      "4": 1
     },
     "misc": 0,
-    "moveToActive": 96,
+    "moveToActive": 99,
     "moveToIR": 3,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -286,7 +288,7 @@
      "6": 2
     },
     "misc": 0,
-    "moveToActive": 112,
+    "moveToActive": 115,
     "moveToIR": 2,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -335,7 +337,7 @@
      "6": 1
     },
     "misc": 0,
-    "moveToActive": 116,
+    "moveToActive": 120,
     "moveToIR": 2,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -350,7 +352,6 @@
    "players": [
     "Ivica Zubac",
     "Ajay Mitchell",
-    "Toumani Camara",
     "Andrew Nembhard",
     "Grayson Allen",
     "Paul George",
@@ -360,7 +361,8 @@
     "Isaiah Hartenstein",
     "Matas Buzelis",
     "Jonathan Kuminga",
-    "Collin Gillespie"
+    "Collin Gillespie",
+    "Josh Hart"
    ],
    "ir": [
     "Kawhi Leonard"
@@ -373,18 +375,18 @@
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
-    "acquisitions": 22,
-    "drops": 21,
+    "acquisitions": 23,
+    "drops": 22,
     "matchupAcquisitionTotals": {
      "1": 4,
      "2": 6,
      "3": 2,
      "4": 5,
      "5": 4,
-     "6": 1
+     "6": 2
     },
     "misc": 0,
-    "moveToActive": 125,
+    "moveToActive": 126,
     "moveToIR": 10,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -432,7 +434,7 @@
      "5": 1
     },
     "misc": 0,
-    "moveToActive": 97,
+    "moveToActive": 100,
     "moveToIR": 4,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -480,7 +482,7 @@
      "6": 1
     },
     "misc": 0,
-    "moveToActive": 92,
+    "moveToActive": 95,
     "moveToIR": 4,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -492,9 +494,7 @@
   "O": [
    "Evan Mobley",
    "Paolo Banchero",
-   "Victor Wembanyama",
    "Austin Reaves",
-   "De'Aaron Fox",
    "Tyrese Haliburton",
    "Jalen Duren",
    "Norman Powell",
@@ -519,7 +519,6 @@
    "Kristaps Porzingis",
    "Jimmy Butler III",
    "Alex Caruso",
-   "Jaxson Hayes",
    "Mitchell Robinson",
    "Scotty Pippen Jr.",
    "Jerami Grant",
@@ -527,8 +526,8 @@
    "Cason Wallace",
    "Shaedon Sharpe",
    "Bennedict Mathurin",
-   "Nolan Traore",
    "Mark Williams",
+   "Nolan Traore",
    "Dereck Lively II",
    "Dennis Schroder",
    "Maxime Raynaud",
@@ -544,12 +543,15 @@
    "Moses Moody"
   ],
   "DTD": [
+   "Victor Wembanyama",
+   "De'Aaron Fox",
    "Giannis Antetokounmpo",
    "Cade Cunningham",
    "Aday Mara",
    "Joel Embiid",
    "OG Anunoby",
    "P.J. Washington",
+   "Jaxson Hayes",
    "T.J. McConnell",
    "Aaron Nesmith",
    "Ryan Kalkbrenner",
