@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-24T19:45+09:00",
+ "asOf": "2026-11-25T06:45+09:00",
  "scoringPeriodId": 36,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -22,7 +22,7 @@
    "team": "KWNG",
    "name": "Saving PakPaks",
    "rank": 1,
-   "acq": 7
+   "acq": 8
   },
   {
    "team": "TBG",
@@ -130,6 +130,30 @@
   }
  ],
  "transactions": [
+  {
+   "id": "daec7077-2eb3-4b19-967e-c42513798c08",
+   "team": "KWNG",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-25 01:22 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Zaccharie Risacher",
+     "from": "FA",
+     "to": "KWNG"
+    },
+    {
+     "type": "DROP",
+     "player": "Reed Sheppard",
+     "from": "KWNG",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
   {
    "id": "9d095c3a-361e-46f2-9676-03242f5edbd5",
    "team": "GGAM",
@@ -1220,6 +1244,17 @@
    "droppedBy": {
     "by": "TBG",
     "at": "2026-11-23 19:44 KST"
+   }
+  },
+  {
+   "id": 4711272,
+   "name": "Reed Sheppard",
+   "pro": "HOU",
+   "waiverClears": "2026-11-26 17:00 KST",
+   "inj": "ACTIVE",
+   "droppedBy": {
+    "by": "KWNG",
+    "at": "2026-11-25 01:22 KST"
    }
   },
   {
