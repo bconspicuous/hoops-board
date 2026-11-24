@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-24T09:26+09:00",
+ "asOf": "2026-11-24T13:45+09:00",
  "scoringPeriodId": 35,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -64,7 +64,7 @@
    "team": "GGAM",
    "name": "Garibong CHaRdaddy",
    "rank": 8,
-   "acq": 19
+   "acq": 20
   },
   {
    "team": "SMS",
@@ -81,13 +81,37 @@
  ],
  "myPending": [
   {
+   "id": "f1659327-5fef-4cc8-b55f-9d2e3300cc8a",
+   "team": "GTD",
+   "mine": true,
+   "type": "WAIVER",
+   "status": "PENDING",
+   "proposed": "2026-11-24 13:33 KST",
+   "processed": "2026-11-24 17:00 KST",
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Josh Hart",
+     "from": "FA",
+     "to": "GTD"
+    },
+    {
+     "type": "DROP",
+     "player": "Toumani Camara",
+     "from": "GTD",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
    "id": "77bc6bdd-304b-49ac-b907-b05d1657dbe8",
    "team": "GTD",
    "mine": true,
    "type": "WAIVER",
    "status": "PENDING",
    "proposed": "2026-11-23 12:31 KST",
-   "processed": "2026-11-24 17:00 KST",
+   "processed": null,
    "items": [
     {
      "type": "ADD",
@@ -106,6 +130,72 @@
   }
  ],
  "transactions": [
+  {
+   "id": "f1659327-5fef-4cc8-b55f-9d2e3300cc8a",
+   "team": "GTD",
+   "mine": true,
+   "type": "WAIVER",
+   "status": "PENDING",
+   "proposed": "2026-11-24 13:33 KST",
+   "processed": "2026-11-24 17:00 KST",
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Josh Hart",
+     "from": "FA",
+     "to": "GTD"
+    },
+    {
+     "type": "DROP",
+     "player": "Toumani Camara",
+     "from": "GTD",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "ad066af6-dba8-4b4c-8c19-7ea961a1057e",
+   "team": "GTD",
+   "mine": true,
+   "type": "WAIVER",
+   "status": "CANCELED",
+   "proposed": "2026-11-24 13:32 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Josh Hart",
+     "from": "FA",
+     "to": "GTD"
+    },
+    {
+     "type": "DROP",
+     "player": "Julian Champagnie",
+     "from": "GTD",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "ea2a5c65-b841-4151-a864-36e07635a160",
+   "team": "GGAM",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-24 13:28 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "4278049",
+     "from": "FA",
+     "to": "GGAM"
+    }
+   ],
+   "bid": 0
+  },
   {
    "id": "30585355-3a84-4470-b950-d111c95448c4",
    "team": "GGAM",
@@ -263,7 +353,7 @@
    "type": "WAIVER",
    "status": "PENDING",
    "proposed": "2026-11-23 12:31 KST",
-   "processed": "2026-11-24 17:00 KST",
+   "processed": null,
    "items": [
     {
      "type": "ADD",
