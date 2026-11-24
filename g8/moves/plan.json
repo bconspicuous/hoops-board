@@ -1,19 +1,19 @@
 {
  "week": 6,
  "opp": "ChaRDaddy",
- "acqLeft": 6,
+ "acqLeft": 5,
  "dropCandidates": [
   "Brandon Miller",
   "Jeremiah Fears",
   "AJ Dybantsa",
-  "Zach Edey",
-  "Matas Buzelis"
+  "Matas Buzelis",
+  "Kyshawn George"
  ],
  "base": {
-  "wk": 5.528,
-  "champ": 0.4934,
-  "p1": 0.4555,
-  "epct": 0.568
+  "wk": 5.301,
+  "champ": 0.455,
+  "p1": 0.4224,
+  "epct": 0.561
  },
  "protect": [
   "Shai Gilgeous-Alexander",
@@ -29,8 +29,8 @@
   "Brandon Miller",
   "Jeremiah Fears",
   "AJ Dybantsa",
-  "Zach Edey",
-  "Matas Buzelis"
+  "Matas Buzelis",
+  "Kyshawn George"
  ],
  "flags": [],
  "items": [
@@ -40,15 +40,15 @@
    "add": "Robert Williams III",
    "addEspnId": 4066211,
    "addOwner": "FA",
-   "drop": "AJ Dybantsa",
+   "drop": "Kyshawn George",
    "ir": null,
-   "weekGain": 0.481,
-   "titleGain": 0.1073,
-   "p1Gain": 0.1155,
-   "epctGain": 0.0113,
+   "weekGain": 0.411,
+   "titleGain": 0.1144,
+   "p1Gain": 0.1691,
+   "epctGain": 0.0117,
    "addTeam": "POR",
    "addPos": "C",
-   "dropValue": -3.56,
+   "dropValue": -5.44,
    "status": "proposed",
    "conflicts": [],
    "addHealth": {
@@ -59,23 +59,23 @@
     "g": 14,
     "min": 16.3
    },
-   "firstProposedAt": "2026-11-23T21:46:23.227Z"
+   "firstProposedAt": "2026-11-24T10:45:47.282Z"
   },
   {
    "n": 2,
    "kind": "add/drop",
-   "add": "Rudy Gobert",
-   "addEspnId": 3032976,
+   "add": "Devin Vassell",
+   "addEspnId": 4395630,
    "addOwner": "FA",
-   "drop": "Zach Edey",
+   "drop": "Brandon Miller",
    "ir": null,
-   "weekGain": 0.334,
-   "titleGain": 0.0671,
-   "p1Gain": 0.1071,
-   "epctGain": 0.0073,
-   "addTeam": "MIN",
-   "addPos": "C",
-   "dropValue": -4.75,
+   "weekGain": 0.248,
+   "titleGain": 0.0385,
+   "p1Gain": 0.0493,
+   "epctGain": 0.0051,
+   "addTeam": "SAS",
+   "addPos": "SG,SF",
+   "dropValue": -4.43,
    "status": "proposed",
    "conflicts": [],
    "addHealth": {
@@ -83,26 +83,26 @@
     "injury": null,
     "returnDate": null,
     "report": null,
-    "g": 17,
-    "min": 29.3
+    "g": 16,
+    "min": 30.3
    },
-   "firstProposedAt": "2026-11-23T21:46:23.227Z"
+   "firstProposedAt": "2026-11-24T10:45:47.282Z"
   },
   {
    "n": 3,
    "kind": "add/drop",
-   "add": "Julian Champagnie",
-   "addEspnId": 4592479,
+   "add": "Brook Lopez",
+   "addEspnId": 3448,
    "addOwner": "FA",
-   "drop": "Jeremiah Fears",
+   "drop": "AJ Dybantsa",
    "ir": null,
-   "weekGain": 0.322,
-   "titleGain": 0.0092,
-   "p1Gain": -0.0045,
-   "epctGain": 0.0004,
-   "addTeam": "SAS",
-   "addPos": "SF,PF",
-   "dropValue": -4.55,
+   "weekGain": 0.226,
+   "titleGain": 0.0274,
+   "p1Gain": 0.0403,
+   "epctGain": 0.0042,
+   "addTeam": "LAC",
+   "addPos": "C",
+   "dropValue": -3.56,
    "status": "proposed",
    "conflicts": [],
    "addHealth": {
@@ -110,53 +110,55 @@
     "injury": null,
     "returnDate": null,
     "report": null,
-    "g": 18,
-    "min": 26.1
+    "g": 16,
+    "min": 24.4
    },
-   "firstProposedAt": "2026-11-24T04:46:00.410Z"
+   "firstProposedAt": "2026-11-24T10:45:47.282Z"
   }
  ],
  "screened": [
   {
    "add": "Robert Williams III",
-   "drop": "AJ Dybantsa",
+   "drop": "Kyshawn George",
    "ir": null,
-   "wk": 0.481,
-   "title": 0.1073
-  },
-  {
-   "add": "Rudy Gobert",
-   "drop": "Zach Edey",
-   "ir": null,
-   "wk": 0.334,
-   "title": 0.0671
-  },
-  {
-   "add": "Julian Champagnie",
-   "drop": "Jeremiah Fears",
-   "ir": null,
-   "wk": 0.322,
-   "title": 0.0092
+   "wk": 0.411,
+   "title": 0.1144
   },
   {
    "add": "Devin Vassell",
    "drop": "Brandon Miller",
    "ir": null,
-   "wk": 0.201,
-   "title": 0.0107
+   "wk": 0.248,
+   "title": 0.0385
   },
   {
-   "add": "Derrick Jones Jr.",
+   "add": "Brook Lopez",
+   "drop": "AJ Dybantsa",
+   "ir": null,
+   "wk": 0.226,
+   "title": 0.0274
+  },
+  {
+   "add": "Julian Champagnie",
+   "drop": "Jeremiah Fears",
+   "ir": null,
+   "wk": 0.291,
+   "title": 0.0197
+  },
+  {
+   "add": "Cam Spencer",
    "drop": "Matas Buzelis",
    "ir": null,
-   "wk": 0.104,
-   "title": 0.0014
+   "wk": 0.152,
+   "title": 0.0274
   }
  ],
- "createdAt": "2026-11-24T04:46:00.410Z",
- "id": "20261124T0446",
- "rosterSig": "AJ Dybantsa|Anthony Davis|Brandon Miller|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Matas Buzelis|Michael Porter Jr.|Miles Bridges|Shai Gilgeous-Alexander|Tyler Herro|Zach Edey#Austin Reaves|Norman Powell",
+ "createdAt": "2026-11-24T10:45:47.282Z",
+ "id": "20261124T1045",
+ "rosterSig": "AJ Dybantsa|Anthony Davis|Brandon Miller|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Kyshawn George|Matas Buzelis|Michael Porter Jr.|Miles Bridges|Shai Gilgeous-Alexander|Tyler Herro#Austin Reaves|Norman Powell",
  "newItems": [
+  1,
+  2,
   3
  ]
 }
