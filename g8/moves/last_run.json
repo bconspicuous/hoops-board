@@ -1,7 +1,7 @@
 {
- "planId": "20261123T2146",
+ "planId": "20261124T0446",
  "mode": "dry",
- "at": "2026-11-23T16:47-05:00",
+ "at": "2026-11-23T23:46-05:00",
  "items": [
   {
    "n": 1,
@@ -42,7 +42,7 @@
     "name": "Julian Champagnie",
     "status": "WAIVERS"
    },
-   "drop": "Brandon Miller",
+   "drop": "Jeremiah Fears",
    "ir": null
   }
  ],
