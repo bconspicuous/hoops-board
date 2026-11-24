@@ -1,7 +1,7 @@
 {
- "planId": "20261124T0446",
+ "planId": "20261124T1045",
  "mode": "dry",
- "at": "2026-11-23T23:46-05:00",
+ "at": "2026-11-24T05:46-05:00",
  "items": [
   {
    "n": 1,
@@ -14,7 +14,7 @@
     "name": "Robert Williams III",
     "status": "FREEAGENT"
    },
-   "drop": "AJ Dybantsa",
+   "drop": "Kyshawn George",
    "ir": null
   },
   {
@@ -25,10 +25,10 @@
    ],
    "ok": true,
    "add": {
-    "name": "Rudy Gobert",
-    "status": "WAIVERS"
+    "name": "Devin Vassell",
+    "status": "FREEAGENT"
    },
-   "drop": "Zach Edey",
+   "drop": "Brandon Miller",
    "ir": null
   },
   {
@@ -39,16 +39,16 @@
    ],
    "ok": true,
    "add": {
-    "name": "Julian Champagnie",
-    "status": "WAIVERS"
+    "name": "Brook Lopez",
+    "status": "FREEAGENT"
    },
-   "drop": "Jeremiah Fears",
+   "drop": "AJ Dybantsa",
    "ir": null
   }
  ],
  "ok": true,
- "scoringPeriodId": 35,
+ "scoringPeriodId": 36,
  "matchupPeriod": 6,
- "addsUsed": 1,
+ "addsUsed": 2,
  "rosterMatchesPlan": true
 }
