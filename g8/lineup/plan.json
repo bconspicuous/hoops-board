@@ -10,43 +10,43 @@
   "James Harden",
   "Michael Porter Jr.",
   "Brandon Miller",
-  "Matas Buzelis",
   "Tyler Herro",
-  "Miles Bridges"
+  "Miles Bridges",
+  "Cam Spencer"
  ],
  "bench": [],
  "dtd": [
   "Karl-Anthony Towns"
  ],
  "expected": {
-  "best": 5.883,
-  "current": 5.883,
+  "best": 5.587,
+  "current": 5.587,
   "gain": 0,
   "pcBest": {
-   "FG": 0.053,
-   "FT": 0.743,
-   "TPM": 0.741,
-   "REB": 0.918,
-   "AST": 0.042,
-   "STL": 0.474,
-   "BLK": 0.558,
-   "TO": 0.555,
-   "DD": 0.842,
-   "PTS": 0.233,
-   "PF": 0.724
+   "FG": 0.048,
+   "FT": 0.834,
+   "TPM": 0.674,
+   "REB": 0.688,
+   "AST": 0.123,
+   "STL": 0.415,
+   "BLK": 0.232,
+   "TO": 0.747,
+   "DD": 0.834,
+   "PTS": 0.098,
+   "PF": 0.896
   },
   "pcCurrent": {
-   "FG": 0.053,
-   "FT": 0.743,
-   "TPM": 0.741,
-   "REB": 0.918,
-   "AST": 0.042,
-   "STL": 0.474,
-   "BLK": 0.558,
-   "TO": 0.555,
-   "DD": 0.842,
-   "PTS": 0.233,
-   "PF": 0.724
+   "FG": 0.048,
+   "FT": 0.834,
+   "TPM": 0.674,
+   "REB": 0.688,
+   "AST": 0.123,
+   "STL": 0.415,
+   "BLK": 0.232,
+   "TO": 0.747,
+   "DD": 0.834,
+   "PTS": 0.098,
+   "PF": 0.896
   }
  },
  "alternatives": [],
@@ -67,7 +67,7 @@
    "slot": "SF"
   },
   {
-   "name": "Matas Buzelis",
+   "name": "Michael Porter Jr.",
    "slot": "PF"
   },
   {
@@ -79,7 +79,7 @@
    "slot": "G"
   },
   {
-   "name": "Michael Porter Jr.",
+   "name": "Miles Bridges",
    "slot": "F"
   },
   {
@@ -91,7 +91,7 @@
    "slot": "UTIL"
   },
   {
-   "name": "Miles Bridges",
+   "name": "Cam Spencer",
    "slot": "UTIL"
   },
   {
@@ -107,6 +107,6 @@
    "slot": "BE"
   }
  ],
- "id": "2026-11-25T1046Z",
- "createdAt": "2026-11-25T10:46:08.029Z"
+ "id": "2026-11-25T2146Z",
+ "createdAt": "2026-11-25T21:46:53.023Z"
 }

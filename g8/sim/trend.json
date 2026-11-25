@@ -810,6 +810,51 @@
      "epct": 0.3701
     }
    }
+  },
+  {
+   "asOf": "2026-11-26T06:45+09:00",
+   "teams": {
+    "Garak Twindragons": {
+     "champ": 0.4495,
+     "p1": 0.4518,
+     "epct": 0.5624
+    },
+    "Zero Sugar": {
+     "champ": 0.0799,
+     "p1": 0.3948,
+     "epct": 0.5591
+    },
+    "Brand_New_Neo_HJ": {
+     "champ": 0.1179,
+     "p1": 0.0887,
+     "epct": 0.5287
+    },
+    "Gatori Team": {
+     "champ": 0.2109,
+     "p1": 0.0381,
+     "epct": 0.5172
+    },
+    "ChaRDaddy": {
+     "champ": 0.1181,
+     "p1": 0.0144,
+     "epct": 0.5007
+    },
+    "Junyoung's Scary Team": {
+     "champ": 0.0126,
+     "p1": 0.0118,
+     "epct": 0.5
+    },
+    "Songpa Park Kezhang": {
+     "champ": 0.0111,
+     "p1": 0.0004,
+     "epct": 0.4652
+    },
+    "Kunhyo's Chokeslam": {
+     "champ": 0,
+     "p1": 0,
+     "epct": 0.3667
+    }
+   }
   }
  ]
 }

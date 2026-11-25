@@ -1,19 +1,19 @@
 {
  "week": 6,
  "opp": "ChaRDaddy",
- "acqLeft": 5,
+ "acqLeft": 4,
  "dropCandidates": [
+  "Michael Porter Jr.",
   "Brandon Miller",
   "Jeremiah Fears",
   "AJ Dybantsa",
-  "Matas Buzelis",
   "Kyshawn George"
  ],
  "base": {
-  "wk": 5.873,
-  "champ": 0.4355,
-  "p1": 0.3955,
-  "epct": 0.5573
+  "wk": 5.578,
+  "champ": 0.4495,
+  "p1": 0.4518,
+  "epct": 0.5624
  },
  "protect": [
   "Shai Gilgeous-Alexander",
@@ -23,13 +23,13 @@
   "Kyrie Irving",
   "Tyler Herro",
   "Miles Bridges",
-  "Michael Porter Jr."
+  "Cam Spencer"
  ],
  "droppable": [
+  "Michael Porter Jr.",
   "Brandon Miller",
   "Jeremiah Fears",
   "AJ Dybantsa",
-  "Matas Buzelis",
   "Kyshawn George"
  ],
  "flags": [],
@@ -42,10 +42,10 @@
    "addOwner": "FA",
    "drop": "Kyshawn George",
    "ir": null,
-   "weekGain": 0.338,
-   "titleGain": 0.1175,
-   "p1Gain": 0.1509,
-   "epctGain": 0.014,
+   "weekGain": 0.524,
+   "titleGain": 0.0542,
+   "p1Gain": 0.1583,
+   "epctGain": 0.0123,
    "addTeam": "POR",
    "addPos": "C",
    "dropValue": -5.2,
@@ -59,7 +59,7 @@
     "g": 14,
     "min": 16.3
    },
-   "firstProposedAt": "2026-11-24T10:45:47.282Z"
+   "firstProposedAt": "2026-11-25T21:46:47.040Z"
   },
   {
    "n": 2,
@@ -69,10 +69,10 @@
    "addOwner": "FA",
    "drop": "AJ Dybantsa",
    "ir": null,
-   "weekGain": 0.298,
-   "titleGain": 0.0259,
-   "p1Gain": 0.043,
-   "epctGain": 0.0041,
+   "weekGain": 0.473,
+   "titleGain": 0.0252,
+   "p1Gain": 0.0657,
+   "epctGain": 0.0062,
    "addTeam": "LAC",
    "addPos": "C",
    "dropValue": -3.41,
@@ -86,22 +86,22 @@
     "g": 16,
     "min": 24.4
    },
-   "firstProposedAt": "2026-11-25T10:46:01.269Z"
+   "firstProposedAt": "2026-11-25T21:46:47.040Z"
   },
   {
    "n": 3,
    "kind": "add/drop",
-   "add": "Andrew Wiggins",
-   "addEspnId": 3059319,
+   "add": "Collin Gillespie",
+   "addEspnId": 4278585,
    "addOwner": "FA",
    "drop": "Jeremiah Fears",
    "ir": null,
-   "weekGain": 0.229,
-   "titleGain": 0.0305,
-   "p1Gain": 0.0348,
-   "epctGain": 0.0035,
-   "addTeam": "MIA",
-   "addPos": "SF,PF",
+   "weekGain": 0.253,
+   "titleGain": 0.0265,
+   "p1Gain": 0.049,
+   "epctGain": 0.0039,
+   "addTeam": "PHO",
+   "addPos": "PG",
    "dropValue": -4.55,
    "status": "proposed",
    "conflicts": [],
@@ -111,9 +111,9 @@
     "returnDate": null,
     "report": null,
     "g": 16,
-    "min": 26.3
+    "min": 24.8
    },
-   "firstProposedAt": "2026-11-25T10:46:01.269Z"
+   "firstProposedAt": "2026-11-25T21:46:47.040Z"
   }
  ],
  "screened": [
@@ -121,42 +121,43 @@
    "add": "Robert Williams III",
    "drop": "Kyshawn George",
    "ir": null,
-   "wk": 0.338,
-   "title": 0.1175
+   "wk": 0.524,
+   "title": 0.0542
   },
   {
    "add": "Brook Lopez",
    "drop": "AJ Dybantsa",
    "ir": null,
-   "wk": 0.298,
-   "title": 0.0259
-  },
-  {
-   "add": "Andrew Wiggins",
-   "drop": "Jeremiah Fears",
-   "ir": null,
-   "wk": 0.229,
-   "title": 0.0305
+   "wk": 0.473,
+   "title": 0.0252
   },
   {
    "add": "Collin Gillespie",
+   "drop": "Jeremiah Fears",
+   "ir": null,
+   "wk": 0.253,
+   "title": 0.0265
+  },
+  {
+   "add": "Andrew Wiggins",
    "drop": "Brandon Miller",
    "ir": null,
-   "wk": 0.148,
-   "title": 0.0305
+   "wk": 0.2,
+   "title": 0.0313
   },
   {
    "add": "Derrick Jones Jr.",
-   "drop": "Matas Buzelis",
+   "drop": "Michael Porter Jr.",
    "ir": null,
-   "wk": 0.103,
-   "title": -0.0014
+   "wk": -0.008,
+   "title": -0.0515
   }
  ],
- "createdAt": "2026-11-25T10:46:01.269Z",
- "id": "20261125T1046",
- "rosterSig": "AJ Dybantsa|Anthony Davis|Brandon Miller|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Kyshawn George|Matas Buzelis|Michael Porter Jr.|Miles Bridges|Shai Gilgeous-Alexander|Tyler Herro#Austin Reaves|Norman Powell",
+ "createdAt": "2026-11-25T21:46:47.040Z",
+ "id": "20261125T2146",
+ "rosterSig": "AJ Dybantsa|Anthony Davis|Brandon Miller|Cam Spencer|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Kyshawn George|Michael Porter Jr.|Miles Bridges|Shai Gilgeous-Alexander|Tyler Herro#Austin Reaves|Norman Powell",
  "newItems": [
+  1,
   2,
   3
  ]
