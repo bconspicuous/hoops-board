@@ -1,7 +1,7 @@
 {
- "planId": "20261125T0446",
+ "planId": "20261125T1046",
  "mode": "dry",
- "at": "2026-11-25T05:46-05:00",
+ "at": "2026-11-25T05:47-05:00",
  "items": [
   {
    "n": 1,
@@ -25,29 +25,28 @@
    ],
    "ok": true,
    "add": {
-    "name": "Zach Edey",
+    "name": "Brook Lopez",
     "status": "FREEAGENT"
    },
-   "drop": "Jeremiah Fears",
+   "drop": "AJ Dybantsa",
    "ir": null
   },
   {
    "n": 3,
    "kind": "add/drop",
    "checks": [
-    "✗ Julian Champagnie is no longer available (ONTEAM, team 6)",
-    "✗ not executable"
+    "✓ checks passed"
    ],
-   "ok": false,
+   "ok": true,
    "add": {
-    "name": "Julian Champagnie",
-    "status": "ONTEAM"
+    "name": "Andrew Wiggins",
+    "status": "FREEAGENT"
    },
-   "drop": "Brandon Miller",
+   "drop": "Jeremiah Fears",
    "ir": null
   }
  ],
- "ok": false,
+ "ok": true,
  "scoringPeriodId": 37,
  "matchupPeriod": 6,
  "addsUsed": 2,
