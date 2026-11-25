@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-26T06:44+09:00",
+ "asOf": "2026-11-26T07:00+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -732,6 +732,20 @@
    "long": "This was the expectation after the star guard requested a trade from the Pelicans earlier Friday. Given his standing with the club, Murray can be tentatively considered doubtful for future contests while New Orleans tries to find him another home."
   },
   {
+   "player": "Jalen Brunson",
+   "team": "NY",
+   "status": "Day-To-Day",
+   "date": "2026-11-25T21:35Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-25",
+   "detail": null,
+   "side": null,
+   "injury": "Illness",
+   "fantasyStatus": "GTD",
+   "short": "Brunson (illness) is probable for Wednesday's game against Cleveland.",
+   "long": "Brunson is under the weather but is expected to play through the ailment. The superstar floor general is looking to extend his streak of 20-point, five-assist performances to eight Wednesday."
+  },
+  {
    "player": "Josh Hart",
    "team": "NY",
    "status": "Day-To-Day",
@@ -772,20 +786,6 @@
    "fantasyStatus": "GTD",
    "short": "Towns (knee) is probable for Wednesday's game against Cleveland.",
    "long": "Towns appears on track to play despite dealing with right knee inflammation. His expected availability would provide a significant boost to New York's frontcourt, though fantasy managers should monitor his status ahead of the 7:30 p.m. ET tipoff."
-  },
-  {
-   "player": "Jalen Brunson",
-   "team": "NY",
-   "status": "Day-To-Day",
-   "date": "2026-11-25T17:53Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-25",
-   "detail": null,
-   "side": null,
-   "injury": "Illness",
-   "fantasyStatus": "GTD",
-   "short": "Brunson (illness) has been downgraded to questionable for Wednesday's game against the Cavaliers.",
-   "long": "Brunson is under the weather and was a late addition to the injury report. If the star floor general joins Miles McBride (adductor) on the inactive list, Jose Alvarado and Tyler Kolek would be candidates for a significant uptick in minutes. Brunson has scored at least 21 points in 10 straight games, averaging 27.9 points, 6.4 assists, 3.4 rebounds and 0.7 steals in 33.9 minutes per contest during that span."
   },
   {
    "player": "Jordan Clarkson",
@@ -1068,6 +1068,20 @@
    "long": "It's a tough blow to the Trail Blazers' depth on the wing ahead of training camp. Sharpe, who is now likely to be sidelined until after the All-Star break, had been ticketed for a reserve role behind Toumani Camara following an injury-plagued 2025-26 campaign, which saw average a career-high 20.8 points, 1.4 steals and 2.1 three-pointers per game over 50 regular-season appearances. The door is now open for Vit Krejci and Jeremy Sochan to compete for bench minutes during camp."
   },
   {
+   "player": "Maxime Raynaud",
+   "team": "SAC",
+   "status": "Out",
+   "date": "2026-11-25T21:38Z",
+   "type": "out",
+   "returnDate": "2026-12-02",
+   "detail": "Dislocated",
+   "side": "Right",
+   "injury": "Knee",
+   "fantasyStatus": "OUT",
+   "short": "Raynaud (knee) was recalled from the G League's Stockton Kings on Wednesday, Marc J. Spears of ESPN.com reports.",
+   "long": "Raynaud presumably joined the G League Kings for practice Wednesday. He's recovering from a right patellar subluxation and remains without a timetable to return, and while it's encouraging that he's getting reps with Stockton, the big man can be considered week-to-week until the Kings offer another update on his status."
+  },
+  {
    "player": "Zach LaVine",
    "team": "SAC",
    "status": "Day-To-Day",
@@ -1080,20 +1094,6 @@
    "fantasyStatus": "GTD",
    "short": "LaVine (knee) has been downgraded to questionable for Wednesday's game against Golden State.",
    "long": "LaVine was a late addition to the injury report due to right knee soreness. If the veteran swingman is unable to suit up, Emanuel Sharp, Malik Monk and Gabe Vincent would all be candidates for increased playing time."
-  },
-  {
-   "player": "Maxime Raynaud",
-   "team": "SAC",
-   "status": "Out",
-   "date": "2026-11-25T16:25Z",
-   "type": "out",
-   "returnDate": "2026-12-02",
-   "detail": "Dislocated",
-   "side": "Right",
-   "injury": "Knee",
-   "fantasyStatus": "OUT",
-   "short": "Raynaud (knee) was assigned to the G League's Stockton Kings on Wednesday, James Ham of ESPN 1320 Sacramento reports.",
-   "long": "Raynaud is presumably joining the G League Kings for practice, which is an encouraging sign in his recovery from a right patellar subluxation. Until the big man is cleared to return, Dylan Cardwell and Precious Achiuwa are candidates for more minutes."
   },
   {
    "player": "Ben Simmons",
