@@ -1,15 +1,16 @@
 {
  "planId": "20261125T1046",
  "mode": "dry",
- "at": "2026-11-25T05:47-05:00",
+ "at": "2026-11-25T16:47-05:00",
  "items": [
   {
    "n": 1,
    "kind": "add/drop",
    "checks": [
-    "✓ checks passed"
+    "✗ our ESPN roster changed since the plan was made — re-plan",
+    "✗ not executable"
    ],
-   "ok": true,
+   "ok": false,
    "add": {
     "name": "Robert Williams III",
     "status": "FREEAGENT"
@@ -21,9 +22,10 @@
    "n": 2,
    "kind": "add/drop",
    "checks": [
-    "✓ checks passed"
+    "✗ our ESPN roster changed since the plan was made — re-plan",
+    "✗ not executable"
    ],
-   "ok": true,
+   "ok": false,
    "add": {
     "name": "Brook Lopez",
     "status": "FREEAGENT"
@@ -35,9 +37,10 @@
    "n": 3,
    "kind": "add/drop",
    "checks": [
-    "✓ checks passed"
+    "✗ our ESPN roster changed since the plan was made — re-plan",
+    "✗ not executable"
    ],
-   "ok": true,
+   "ok": false,
    "add": {
     "name": "Andrew Wiggins",
     "status": "FREEAGENT"
@@ -46,9 +49,9 @@
    "ir": null
   }
  ],
- "ok": true,
+ "ok": false,
  "scoringPeriodId": 37,
  "matchupPeriod": 6,
- "addsUsed": 2,
- "rosterMatchesPlan": true
+ "addsUsed": 3,
+ "rosterMatchesPlan": false
 }
