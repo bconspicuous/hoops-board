@@ -1,6 +1,6 @@
 {
- "asOf": "2026-11-25T13:46+09:00",
- "scoringPeriodId": 36,
+ "asOf": "2026-11-25T18:17+09:00",
+ "scoringPeriodId": 37,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
   "waiverHours": 24,
@@ -213,7 +213,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "5082206",
+     "player": "Brayden Burries",
      "from": "FA",
      "to": "SONG"
     },
@@ -1035,7 +1035,7 @@
     },
     {
      "type": "DROP",
-     "player": "5082206",
+     "player": "Brayden Burries",
      "from": "Doo",
      "to": "FA"
     }
@@ -1053,7 +1053,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "5082206",
+     "player": "Brayden Burries",
      "from": "FA",
      "to": "Doo"
     },
@@ -1179,217 +1179,9 @@
     }
    ],
    "bid": 0
-  },
-  {
-   "id": "5419977a-f6c6-4862-8f5d-50211f7f1d53",
-   "team": "JYP",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-18 15:37 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Jalen Green",
-     "from": "FA",
-     "to": "JYP"
-    },
-    {
-     "type": "DROP",
-     "player": "CJ McCollum",
-     "from": "JYP",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "05264064-20f9-4c63-8e8c-098d4b52f506",
-   "team": "GGAM",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-18 15:27 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Devin Vassell",
-     "from": "FA",
-     "to": "GGAM"
-    },
-    {
-     "type": "DROP",
-     "player": "Wendell Carter Jr.",
-     "from": "GGAM",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "34243780-179a-4933-969f-d337db46416d",
-   "team": "TBG",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-18 14:50 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Brice Sensabaugh",
-     "from": "FA",
-     "to": "TBG"
-    },
-    {
-     "type": "DROP",
-     "player": "John Collins",
-     "from": "TBG",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "c6d3a537-c597-41f8-86a7-ca42ed45774f",
-   "team": "Doo",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-18 14:19 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Mo Bamba",
-     "from": "FA",
-     "to": "Doo"
-    },
-    {
-     "type": "DROP",
-     "player": "P.J. Washington",
-     "from": "Doo",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "1f7268b0-a26f-4314-b4ba-06f7f820778a",
-   "team": "GGAM",
-   "mine": false,
-   "type": "ROSTER",
-   "status": "EXECUTED",
-   "proposed": "2026-11-18 09:26 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "DROP",
-     "player": "Draymond Green",
-     "from": "GGAM",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "f03ad3e4-3a0b-4290-8984-d279aaf6303f",
-   "team": "GTD",
-   "mine": true,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-18 07:03 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Keldon Johnson",
-     "from": "FA",
-     "to": "GTD"
-    },
-    {
-     "type": "DROP",
-     "player": "Duncan Robinson",
-     "from": "GTD",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "a7892b8a-3b31-47d0-b80a-1f10f9ce7268",
-   "team": "SMS",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-17 20:14 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Quentin Grimes",
-     "from": "FA",
-     "to": "SMS"
-    },
-    {
-     "type": "DROP",
-     "player": "Jonathan Kuminga",
-     "from": "SMS",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "f12323d0-06ef-4ec0-9fc3-a340ea16fcb7",
-   "team": "SONG",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-17 20:05 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Kevin Huerter",
-     "from": "FA",
-     "to": "SONG"
-    },
-    {
-     "type": "DROP",
-     "player": "Joan Beringer",
-     "from": "SONG",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
   }
  ],
  "onWaivers": [
-  {
-   "id": 5041935,
-   "name": "Cameron Boozer",
-   "pro": "MEM",
-   "waiverClears": "2026-11-25 17:00 KST",
-   "inj": "OUT",
-   "droppedBy": {
-    "by": "Doo",
-    "at": "2026-11-24 08:46 KST"
-   }
-  },
-  {
-   "id": 3147657,
-   "name": "Mikal Bridges",
-   "pro": "NYK",
-   "waiverClears": "2026-11-25 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "TBG",
-    "at": "2026-11-23 19:44 KST"
-   }
-  },
   {
    "id": 4711272,
    "name": "Reed Sheppard",
@@ -1413,17 +1205,6 @@
    }
   },
   {
-   "id": 4278562,
-   "name": "Paul Reed",
-   "pro": "DET",
-   "waiverClears": "2026-11-25 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "GGAM",
-    "at": "2026-11-24 08:48 KST"
-   }
-  },
-  {
    "id": 5107199,
    "name": "Daniss Jenkins",
    "pro": "DET",
@@ -1443,28 +1224,6 @@
    "droppedBy": {
     "by": "Doo",
     "at": "2026-11-25 08:32 KST"
-   }
-  },
-  {
-   "id": 4431736,
-   "name": "Toumani Camara",
-   "pro": "POR",
-   "waiverClears": "2026-11-25 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "GTD",
-    "at": "2026-11-24 17:28 KST"
-   }
-  },
-  {
-   "id": 4702382,
-   "name": "Tristan da Silva",
-   "pro": "ORL",
-   "waiverClears": "2026-11-25 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "SMS",
-    "at": "2026-11-24 05:14 KST"
    }
   }
  ],

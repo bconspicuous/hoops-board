@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-25T13:45+09:00",
+ "asOf": "2026-11-25T18:16+09:00",
  "leagueId": "504060248",
  "season": 2027,
  "teams": [
@@ -45,7 +45,7 @@
      "6": 1
     },
     "misc": 0,
-    "moveToActive": 198,
+    "moveToActive": 205,
     "moveToIR": 6,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -94,7 +94,7 @@
      "6": 1
     },
     "misc": 0,
-    "moveToActive": 116,
+    "moveToActive": 118,
     "moveToIR": 1,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -117,9 +117,9 @@
     "Davion Mitchell",
     "Kyshawn George",
     "Cedric Coward",
-    "Daniss Jenkins",
     "Peyton Watson",
-    "Terrence Shannon Jr."
+    "Terrence Shannon Jr.",
+    "Brayden Burries"
    ],
    "ir": [
     "Austin Reaves"
@@ -143,7 +143,7 @@
      "6": 3
     },
     "misc": 0,
-    "moveToActive": 155,
+    "moveToActive": 161,
     "moveToIR": 4,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -192,7 +192,7 @@
      "6": 2
     },
     "misc": 0,
-    "moveToActive": 120,
+    "moveToActive": 122,
     "moveToIR": 15,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -239,7 +239,7 @@
      "4": 1
     },
     "misc": 0,
-    "moveToActive": 99,
+    "moveToActive": 101,
     "moveToIR": 3,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -288,7 +288,7 @@
      "6": 3
     },
     "misc": 0,
-    "moveToActive": 118,
+    "moveToActive": 121,
     "moveToIR": 2,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -337,7 +337,7 @@
      "6": 1
     },
     "misc": 0,
-    "moveToActive": 120,
+    "moveToActive": 122,
     "moveToIR": 2,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -386,7 +386,7 @@
      "6": 2
     },
     "misc": 0,
-    "moveToActive": 126,
+    "moveToActive": 129,
     "moveToIR": 10,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -434,7 +434,7 @@
      "5": 1
     },
     "misc": 0,
-    "moveToActive": 100,
+    "moveToActive": 103,
     "moveToIR": 4,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -482,7 +482,7 @@
      "6": 2
     },
     "misc": 0,
-    "moveToActive": 95,
+    "moveToActive": 97,
     "moveToIR": 4,
     "paid": 0.0,
     "teamCharges": 0.0,
