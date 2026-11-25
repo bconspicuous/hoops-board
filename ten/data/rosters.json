@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-25T19:45+09:00",
+ "asOf": "2026-11-26T06:44+09:00",
  "leagueId": "504060248",
  "season": 2027,
  "teams": [
@@ -160,6 +160,7 @@
     "Domantas Sabonis",
     "Devin Booker",
     "Pascal Siakam",
+    "De'Aaron Fox",
     "Franz Wagner",
     "Zion Williamson",
     "Darius Acuff Jr.",
@@ -167,12 +168,9 @@
     "Jalen Smith",
     "Devin Vassell",
     "Nic Claxton",
-    "Daniel Gafford",
-    "Aaron Gordon"
+    "Daniel Gafford"
    ],
-   "ir": [
-    "De'Aaron Fox"
-   ],
+   "ir": [],
    "record": {
     "wins": 31,
     "losses": 22,
@@ -182,7 +180,7 @@
    "transactions": {
     "acquisitionBudgetSpent": 0,
     "acquisitions": 21,
-    "drops": 20,
+    "drops": 21,
     "matchupAcquisitionTotals": {
      "1": 6,
      "2": 2,
@@ -192,7 +190,7 @@
      "6": 2
     },
     "misc": 0,
-    "moveToActive": 122,
+    "moveToActive": 123,
     "moveToIR": 15,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -312,8 +310,8 @@
     "James Harden",
     "VJ Edgecombe",
     "Christian Braun",
-    "Brice Sensabaugh",
-    "Rui Hachimura"
+    "Rui Hachimura",
+    "Buddy Hield"
    ],
    "ir": [
     "Anthony Edwards"
@@ -326,18 +324,18 @@
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
-    "acquisitions": 19,
-    "drops": 18,
+    "acquisitions": 20,
+    "drops": 19,
     "matchupAcquisitionTotals": {
      "1": 3,
      "2": 5,
      "3": 2,
      "4": 5,
      "5": 3,
-     "6": 1
+     "6": 2
     },
     "misc": 0,
-    "moveToActive": 122,
+    "moveToActive": 123,
     "moveToIR": 2,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -498,10 +496,10 @@
    "Tyrese Haliburton",
    "Jalen Duren",
    "Norman Powell",
-   "Cade Cunningham",
    "Anthony Edwards",
    "Kawhi Leonard",
    "Grayson Allen",
+   "Joel Embiid",
    "Stephen Curry",
    "OG Anunoby",
    "Dylan Harper",
@@ -518,8 +516,8 @@
    "Tobias Harris",
    "Jalen Williams",
    "Duncan Robinson",
-   "Aday Mara",
    "Kristaps Porzingis",
+   "Aday Mara",
    "Jimmy Butler III",
    "Mitchell Robinson",
    "Scotty Pippen Jr.",
@@ -534,31 +532,32 @@
    "Dennis Schroder",
    "Donte DiVincenzo",
    "Maxime Raynaud",
+   "Ryan Kalkbrenner",
    "Bradley Beal",
    "Jaylin Williams",
+   "Miles McBride",
    "GG Jackson",
    "Brandon Williams",
    "Justin Champagnie",
    "Ben Simmons",
    "Jordan Clarkson",
-   "Sergio de Larrea",
    "Vit Krejci",
+   "Sergio de Larrea",
    "Moses Moody"
   ],
   "DTD": [
+   "Jalen Brunson",
    "Karl-Anthony Towns",
    "Victor Wembanyama",
    "De'Aaron Fox",
    "Jalen Smith",
-   "Giannis Antetokounmpo",
-   "Joel Embiid",
+   "Cade Cunningham",
    "Josh Hart",
    "Yaxel Lendeborg",
+   "Zach LaVine",
    "Jaxson Hayes",
    "T.J. McConnell",
    "Aaron Nesmith",
-   "Ryan Kalkbrenner",
-   "Miles McBride",
    "Sion James"
   ]
  }
