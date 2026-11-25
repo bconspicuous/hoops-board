@@ -2,7 +2,7 @@
  "date": "2026-11-24",
  "scoringPeriodId": 36,
  "hash": "c8339f47f7",
- "createdKST": "2026-11-25T06:48+09:00",
+ "createdKST": "2026-11-25T13:48+09:00",
  "mode": "plan",
  "moves": [],
  "lineup": [
@@ -120,7 +120,7 @@
    "name": "Josh Hart",
    "pro": "NYK",
    "game": false,
-   "inj": "ACTIVE",
+   "inj": "DAY_TO_DAY",
    "out": false
   }
  ],
