@@ -1,78 +1,73 @@
 {
- "date": "2026-11-24",
+ "date": "2026-11-25",
  "week": 6,
  "opp": "ChaRDaddy",
- "status": "nochange-starters",
- "playing": 4,
+ "status": "nochange",
+ "playing": 8,
  "starters": [
-  "Anthony Davis",
-  "Kyrie Irving",
-  "AJ Dybantsa",
-  "Kyshawn George"
+  "Shai Gilgeous-Alexander",
+  "Karl-Anthony Towns",
+  "James Harden",
+  "Michael Porter Jr.",
+  "Brandon Miller",
+  "Matas Buzelis",
+  "Tyler Herro",
+  "Miles Bridges"
  ],
  "bench": [],
- "dtd": [],
+ "dtd": [
+  "Karl-Anthony Towns"
+ ],
  "expected": {
-  "best": 5.373,
-  "current": 5.373,
+  "best": 5.883,
+  "current": 5.883,
   "gain": 0,
   "pcBest": {
-   "FG": 0.103,
-   "FT": 0.794,
-   "TPM": 0.775,
-   "REB": 0.566,
-   "AST": 0.066,
-   "STL": 0.418,
-   "BLK": 0.566,
-   "TO": 0.532,
-   "DD": 0.709,
-   "PTS": 0.182,
-   "PF": 0.662
+   "FG": 0.053,
+   "FT": 0.743,
+   "TPM": 0.741,
+   "REB": 0.918,
+   "AST": 0.042,
+   "STL": 0.474,
+   "BLK": 0.558,
+   "TO": 0.555,
+   "DD": 0.842,
+   "PTS": 0.233,
+   "PF": 0.724
   },
   "pcCurrent": {
-   "FG": 0.103,
-   "FT": 0.794,
-   "TPM": 0.775,
-   "REB": 0.566,
-   "AST": 0.066,
-   "STL": 0.418,
-   "BLK": 0.566,
-   "TO": 0.532,
-   "DD": 0.709,
-   "PTS": 0.182,
-   "PF": 0.662
+   "FG": 0.053,
+   "FT": 0.743,
+   "TPM": 0.741,
+   "REB": 0.918,
+   "AST": 0.042,
+   "STL": 0.474,
+   "BLK": 0.558,
+   "TO": 0.555,
+   "DD": 0.842,
+   "PTS": 0.233,
+   "PF": 0.724
   }
  },
  "alternatives": [],
  "currentBench": [],
  "sameStarters": true,
- "moves": [
-  {
-   "name": "Michael Porter Jr.",
-   "from": "UTIL",
-   "to": "F"
-  },
-  {
-   "name": "Miles Bridges",
-   "from": "F",
-   "to": "UTIL"
-  }
- ],
+ "moves": [],
  "slots": [
   {
-   "name": "Kyrie Irving",
+   "name": "Shai Gilgeous-Alexander",
    "slot": "PG"
   },
   {
-   "name": "Kyshawn George",
+   "name": "James Harden",
    "slot": "SG"
   },
   {
-   "name": "AJ Dybantsa",
+   "name": "Brandon Miller",
    "slot": "SF"
   },
   {
-   "name": "Anthony Davis",
+   "name": "Matas Buzelis",
    "slot": "PF"
   },
   {
@@ -80,7 +75,7 @@
    "slot": "C"
   },
   {
-   "name": "Shai Gilgeous-Alexander",
+   "name": "Tyler Herro",
    "slot": "G"
   },
   {
@@ -88,11 +83,11 @@
    "slot": "F"
   },
   {
-   "name": "James Harden",
+   "name": "Anthony Davis",
    "slot": "UTIL"
   },
   {
-   "name": "Tyler Herro",
+   "name": "Kyrie Irving",
    "slot": "UTIL"
   },
   {
@@ -100,18 +95,18 @@
    "slot": "UTIL"
   },
   {
-   "name": "Brandon Miller",
-   "slot": "BE"
-  },
-  {
    "name": "Jeremiah Fears",
    "slot": "BE"
   },
   {
-   "name": "Matas Buzelis",
+   "name": "AJ Dybantsa",
+   "slot": "BE"
+  },
+  {
+   "name": "Kyshawn George",
    "slot": "BE"
   }
  ],
- "id": "2026-11-24T2146Z",
- "createdAt": "2026-11-24T21:46:29.979Z"
+ "id": "2026-11-25T1046Z",
+ "createdAt": "2026-11-25T10:46:08.029Z"
 }

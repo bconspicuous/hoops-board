@@ -10,10 +10,10 @@
   "Kyshawn George"
  ],
  "base": {
-  "wk": 5.291,
-  "champ": 0.4491,
-  "p1": 0.4026,
-  "epct": 0.5589
+  "wk": 5.873,
+  "champ": 0.4355,
+  "p1": 0.3955,
+  "epct": 0.5573
  },
  "protect": [
   "Shai Gilgeous-Alexander",
@@ -42,13 +42,13 @@
    "addOwner": "FA",
    "drop": "Kyshawn George",
    "ir": null,
-   "weekGain": 0.438,
-   "titleGain": 0.1211,
-   "p1Gain": 0.1616,
-   "epctGain": 0.0139,
+   "weekGain": 0.338,
+   "titleGain": 0.1175,
+   "p1Gain": 0.1509,
+   "epctGain": 0.014,
    "addTeam": "POR",
    "addPos": "C",
-   "dropValue": -5.19,
+   "dropValue": -5.2,
    "status": "proposed",
    "conflicts": [],
    "addHealth": {
@@ -64,17 +64,44 @@
   {
    "n": 2,
    "kind": "add/drop",
-   "add": "Zach Edey",
-   "addEspnId": 4600663,
+   "add": "Brook Lopez",
+   "addEspnId": 3448,
+   "addOwner": "FA",
+   "drop": "AJ Dybantsa",
+   "ir": null,
+   "weekGain": 0.298,
+   "titleGain": 0.0259,
+   "p1Gain": 0.043,
+   "epctGain": 0.0041,
+   "addTeam": "LAC",
+   "addPos": "C",
+   "dropValue": -3.41,
+   "status": "proposed",
+   "conflicts": [],
+   "addHealth": {
+    "status": "정상",
+    "injury": null,
+    "returnDate": null,
+    "report": null,
+    "g": 16,
+    "min": 24.4
+   },
+   "firstProposedAt": "2026-11-25T10:46:01.269Z"
+  },
+  {
+   "n": 3,
+   "kind": "add/drop",
+   "add": "Andrew Wiggins",
+   "addEspnId": 3059319,
    "addOwner": "FA",
    "drop": "Jeremiah Fears",
    "ir": null,
-   "weekGain": 0.327,
-   "titleGain": 0.0552,
-   "p1Gain": 0.0656,
-   "epctGain": 0.007,
-   "addTeam": "MEM",
-   "addPos": "C",
+   "weekGain": 0.229,
+   "titleGain": 0.0305,
+   "p1Gain": 0.0348,
+   "epctGain": 0.0035,
+   "addTeam": "MIA",
+   "addPos": "SF,PF",
    "dropValue": -4.55,
    "status": "proposed",
    "conflicts": [],
@@ -83,37 +110,10 @@
     "injury": null,
     "returnDate": null,
     "report": null,
-    "g": 14,
-    "min": 21.1
+    "g": 16,
+    "min": 26.3
    },
-   "firstProposedAt": "2026-11-25T04:46:09.294Z"
-  },
-  {
-   "n": 3,
-   "kind": "add/drop",
-   "add": "Julian Champagnie",
-   "addEspnId": 4592479,
-   "addOwner": "FA",
-   "drop": "Brandon Miller",
-   "ir": null,
-   "weekGain": 0.256,
-   "titleGain": 0.0323,
-   "p1Gain": 0.0543,
-   "epctGain": 0.0049,
-   "addTeam": "SAS",
-   "addPos": "SF,PF",
-   "dropValue": -4.43,
-   "status": "proposed",
-   "conflicts": [],
-   "addHealth": {
-    "status": "정상",
-    "injury": null,
-    "returnDate": null,
-    "report": null,
-    "g": 18,
-    "min": 26.6
-   },
-   "firstProposedAt": "2026-11-24T21:46:23.708Z"
+   "firstProposedAt": "2026-11-25T10:46:01.269Z"
   }
  ],
  "screened": [
@@ -121,42 +121,43 @@
    "add": "Robert Williams III",
    "drop": "Kyshawn George",
    "ir": null,
-   "wk": 0.438,
-   "title": 0.1211
+   "wk": 0.338,
+   "title": 0.1175
   },
   {
-   "add": "Zach Edey",
-   "drop": "Jeremiah Fears",
-   "ir": null,
-   "wk": 0.327,
-   "title": 0.0552
-  },
-  {
-   "add": "Julian Champagnie",
-   "drop": "Brandon Miller",
-   "ir": null,
-   "wk": 0.256,
-   "title": 0.0323
-  },
-  {
-   "add": "John Collins",
+   "add": "Brook Lopez",
    "drop": "AJ Dybantsa",
    "ir": null,
-   "wk": 0.226,
-   "title": 0.0121
+   "wk": 0.298,
+   "title": 0.0259
   },
   {
-   "add": "Devin Vassell",
+   "add": "Andrew Wiggins",
+   "drop": "Jeremiah Fears",
+   "ir": null,
+   "wk": 0.229,
+   "title": 0.0305
+  },
+  {
+   "add": "Collin Gillespie",
+   "drop": "Brandon Miller",
+   "ir": null,
+   "wk": 0.148,
+   "title": 0.0305
+  },
+  {
+   "add": "Derrick Jones Jr.",
    "drop": "Matas Buzelis",
    "ir": null,
-   "wk": 0.161,
-   "title": 0.0109
+   "wk": 0.103,
+   "title": -0.0014
   }
  ],
- "createdAt": "2026-11-25T04:46:09.294Z",
- "id": "20261125T0446",
+ "createdAt": "2026-11-25T10:46:01.269Z",
+ "id": "20261125T1046",
  "rosterSig": "AJ Dybantsa|Anthony Davis|Brandon Miller|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Kyshawn George|Matas Buzelis|Michael Porter Jr.|Miles Bridges|Shai Gilgeous-Alexander|Tyler Herro#Austin Reaves|Norman Powell",
  "newItems": [
-  2
+  2,
+  3
  ]
 }

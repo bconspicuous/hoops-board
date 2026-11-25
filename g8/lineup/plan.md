@@ -1,20 +1,20 @@
-# 라인업 제안 2026-11-24 (미국 동부) · 6주차 vs ChaRDaddy · 상태: nochange-starters · 기준: 프로젝션 오차 보정(실제 기록 반영)
-출전 4명 · 기대 카테고리 승 5.37 (현재 ESPN 라인업 5.37, +0.00)
-벤치(출전 선수 중): 없음
-변경: Michael Porter Jr. UTIL→F, Miles Bridges F→UTIL
+# 라인업 제안 2026-11-25 (미국 동부) · 6주차 vs ChaRDaddy · 상태: nochange · 기준: 프로젝션 오차 보정(실제 기록 반영)
+출전 8명 · 기대 카테고리 승 5.88 (현재 ESPN 라인업 5.88, +0.00)
+벤치(출전 선수 중): 없음 · DTD: Karl-Anthony Towns
+변경: 없음
 
 | 슬롯 | 선수 |
 |---|---|
-| PG | Kyrie Irving |
-| SG | Kyshawn George |
-| SF | AJ Dybantsa |
-| PF | Anthony Davis |
+| PG | Shai Gilgeous-Alexander |
+| SG | James Harden |
+| SF | Brandon Miller |
+| PF | Matas Buzelis |
 | C | Karl-Anthony Towns |
-| G | Shai Gilgeous-Alexander |
+| G | Tyler Herro |
 | F | Michael Porter Jr. |
-| UTIL | James Harden |
-| UTIL | Tyler Herro |
+| UTIL | Anthony Davis |
+| UTIL | Kyrie Irving |
 | UTIL | Miles Bridges |
-| BE | Brandon Miller |
 | BE | Jeremiah Fears |
-| BE | Matas Buzelis |
+| BE | AJ Dybantsa |
+| BE | Kyshawn George |
