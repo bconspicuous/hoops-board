@@ -1,8 +1,8 @@
 {
- "date": "2026-11-24",
- "scoringPeriodId": 36,
- "hash": "c8339f47f7",
- "createdKST": "2026-11-25T13:48+09:00",
+ "date": "2026-11-25",
+ "scoringPeriodId": 37,
+ "hash": "5976f87d5b",
+ "createdKST": "2026-11-25T19:48+09:00",
  "mode": "plan",
  "moves": [],
  "lineup": [
@@ -11,7 +11,7 @@
    "cur": "PG",
    "name": "Collin Gillespie",
    "pro": "PHX",
-   "game": false,
+   "game": true,
    "inj": "ACTIVE",
    "out": false
   },
@@ -20,7 +20,7 @@
    "cur": "SG",
    "name": "Ajay Mitchell",
    "pro": "OKC",
-   "game": false,
+   "game": true,
    "inj": "ACTIVE",
    "out": false
   },
@@ -29,7 +29,7 @@
    "cur": "SF",
    "name": "Jonathan Kuminga",
    "pro": "MIN",
-   "game": false,
+   "game": true,
    "inj": "ACTIVE",
    "out": false
   },
@@ -38,7 +38,7 @@
    "cur": "PF",
    "name": "Matas Buzelis",
    "pro": "CHI",
-   "game": false,
+   "game": true,
    "inj": "ACTIVE",
    "out": false
   },
@@ -47,42 +47,33 @@
    "cur": "C",
    "name": "Isaiah Hartenstein",
    "pro": "OKC",
-   "game": false,
+   "game": true,
    "inj": "ACTIVE",
    "out": false
   },
   {
    "slot": "G",
    "cur": "G",
-   "name": "Andrew Nembhard",
-   "pro": "IND",
-   "game": false,
-   "inj": "ACTIVE",
-   "out": false
+   "name": "Grayson Allen",
+   "pro": "CHA",
+   "game": true,
+   "inj": "OUT",
+   "out": true
   },
   {
    "slot": "F",
    "cur": "F",
    "name": "Julian Champagnie",
    "pro": "SAS",
-   "game": false,
+   "game": true,
    "inj": "ACTIVE",
    "out": false
   },
   {
    "slot": "UTIL",
    "cur": "UTIL",
-   "name": "Ivica Zubac",
-   "pro": "IND",
-   "game": false,
-   "inj": "ACTIVE",
-   "out": false
-  },
-  {
-   "slot": "UTIL",
-   "cur": "UTIL",
-   "name": "Paul George",
-   "pro": "BOS",
+   "name": "Klay Thompson",
+   "pro": "MIA",
    "game": true,
    "inj": "ACTIVE",
    "out": false
@@ -92,24 +83,24 @@
    "cur": "UTIL",
    "name": "Joel Embiid",
    "pro": "PHI",
-   "game": false,
+   "game": true,
+   "inj": "DAY_TO_DAY",
+   "out": false
+  },
+  {
+   "slot": "UTIL",
+   "cur": "UTIL",
+   "name": "Josh Hart",
+   "pro": "NYK",
+   "game": true,
    "inj": "DAY_TO_DAY",
    "out": false
   },
   {
    "slot": "BE",
    "cur": "BE",
-   "name": "Grayson Allen",
-   "pro": "CHA",
-   "game": false,
-   "inj": "OUT",
-   "out": true
-  },
-  {
-   "slot": "BE",
-   "cur": "BE",
-   "name": "Klay Thompson",
-   "pro": "MIA",
+   "name": "Ivica Zubac",
+   "pro": "IND",
    "game": false,
    "inj": "ACTIVE",
    "out": false
@@ -117,10 +108,19 @@
   {
    "slot": "BE",
    "cur": "BE",
-   "name": "Josh Hart",
-   "pro": "NYK",
+   "name": "Andrew Nembhard",
+   "pro": "IND",
    "game": false,
-   "inj": "DAY_TO_DAY",
+   "inj": "ACTIVE",
+   "out": false
+  },
+  {
+   "slot": "BE",
+   "cur": "BE",
+   "name": "Paul George",
+   "pro": "BOS",
+   "game": false,
+   "inj": "ACTIVE",
    "out": false
   }
  ],
@@ -128,6 +128,6 @@
   "Kawhi Leonard"
  ],
  "irReturn": [],
- "playing": 1,
+ "playing": 9,
  "status": "planned"
 }
