@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-25T19:44+09:00",
+ "asOf": "2026-11-26T06:45+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -83,7 +83,7 @@
    "detail": null,
    "side": null,
    "injury": "Illness",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Robinson (illness) is out for Tuesday's game against Washington, Taylor Snow of the Celtics' official site reports.",
    "long": "With Robinson set to miss a third contest due to an illness, Boston will again be without one of its primary center options. His absence should continue to leave more frontcourt minutes available for Neemias Queta and Luka Garza on Tuesday, with the former being in line to see the lion's share of the playing time."
   },
@@ -104,16 +104,30 @@
   {
    "player": "Ryan Kalkbrenner",
    "team": "CHA",
-   "status": "Day-To-Day",
-   "date": "2026-11-24T22:33Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-25",
+   "status": "Out",
+   "date": "2026-11-25T17:41Z",
+   "type": "out",
+   "returnDate": "2026-11-28",
    "detail": "Soreness",
    "side": "Left",
    "injury": "Hip",
-   "fantasyStatus": "GTD",
-   "short": "Kalkbrenner (hip) is doubtful to play Wednesday against the Bulls.",
-   "long": "Kalkbrenner suffered the hip injury during Monday's 117-111 loss to the Bulls and is now in danger of missing Wednesday's game. If he's out, Hannes Steinbach will have a chance to get into the rotation."
+   "fantasyStatus": "OUT",
+   "short": "Kalkbrenner (hip) has been ruled out for Wednesday's matchup with Chicago.",
+   "long": "Kalkbrenner exited Monday's loss to Memphis early with left hip soreness and is now set to miss Wednesday's contest. His next chance to play will come Saturday against the Nets. With the big man sidelined, Hannes Steinbach could see meaningful playing time behind Moussa Diabate."
+  },
+  {
+   "player": "Grayson Allen",
+   "team": "CHA",
+   "status": "Out",
+   "date": "2026-11-25T17:39Z",
+   "type": "out",
+   "returnDate": "2026-11-28",
+   "detail": null,
+   "side": null,
+   "injury": "Concussion",
+   "fantasyStatus": "OUT",
+   "short": "Allen (concussion) has been ruled out for Wednesday's game against Chicago.",
+   "long": "Allen will miss a fourth consecutive contest due to a concussion. With the veteran swingman sidelined, Sion James (thigh), Grant Williams and Royce O'Neale are candidates for increased playing time. Allen's next chance to play will come Saturday against Brooklyn."
   },
   {
    "player": "Dennis Schroder",
@@ -142,20 +156,6 @@
    "fantasyStatus": "GTD",
    "short": "James is probable for Wednesday's game against the Bulls due to general soreness.",
    "long": "James is experiencing some soreness on the left side of his body, but he's expected to power through it Wednesday. James is averaging 5.8 points, 3.8 rebounds, 3.1 assists and 1.1 triples per game this season."
-  },
-  {
-   "player": "Grayson Allen",
-   "team": "CHA",
-   "status": "Out",
-   "date": "2026-11-24T22:29Z",
-   "type": "out",
-   "returnDate": "2026-11-25",
-   "detail": null,
-   "side": null,
-   "injury": "Concussion",
-   "fantasyStatus": "GTD",
-   "short": "Allen (concussion) is listed as questionable for Wednesday's game versus Chicago.",
-   "long": "Allen has missed the last three games. While it appears he's working toward returning, he's not a lock to get back on the floor Wednesday against the Bulls. If Allen remains on the shelf, Sion James (thigh) and Christian Anderson may continue to see more minutes."
   },
   {
    "player": "Kon Knueppel",
@@ -251,7 +251,7 @@
    "detail": null,
    "side": "Right",
    "injury": "Groin",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Lawal (groin) is out for Tuesday's game against Denver.",
    "long": "Lawal is slated for a fourth consecutive absence due to a right groin strain. His next opportunity to return will arrive Friday in Phoenix."
   },
@@ -265,7 +265,7 @@
    "detail": "Surgery",
    "side": "Right",
    "injury": "Foot",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Head coach Dusty May said Friday that Lively (foot) is moving well and progressing in his recovery, and the big man told May he's \"close\" to returning, Mike Curtis of The Dallas Morning News reports.",
    "long": "Lively hasn't seen game action since Nov. 21, 2025, and he remains without a firm timetable to return after undergoing right foot surgery last December. However, this update suggests that the big man is trending in the right direction."
   },
@@ -279,7 +279,7 @@
    "detail": "Strain",
    "side": "Right",
    "injury": "Knee",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "De Larrea (knee) is listed as out for Wednesday's game against the Warriors.",
    "long": "De Larrea has only played four games during the 2026-27 campaign. There hasn't been any indication of when he will be cleared to return, so he should be considered week-to-week for now."
   },
@@ -293,21 +293,21 @@
    "detail": "Inflammation",
    "side": "Right",
    "injury": "Heel",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Biberovic (heel) is out for Wednesday's game against the Warriors.",
    "long": "Biberovic has yet to debut for the Mavs this season due to a right heel bursitis issue, and the fact that he continues to get ruled out a full day in advance of tipoff suggests he's still not close. Biberovic should be considered week-to-week moving forward."
   },
   {
    "player": "Cade Cunningham",
    "team": "DET",
-   "status": "Out",
-   "date": "2026-11-24T23:36Z",
-   "type": "out",
+   "status": "Day-To-Day",
+   "date": "2026-11-25T19:00Z",
+   "type": "day-to-day",
    "returnDate": "2026-11-27",
    "detail": null,
    "side": null,
    "injury": "Knee",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Cunningham (knee) is listed as out for Tuesday's game against Orlando.",
    "long": "Cunningham was listed as probable, so his absence for Tuesday's meeting with the Magic is concerning. Head coach J.B. Bickerstaff indicated that the knee has been giving the two-time All-Star some trouble of late, and while he's mostly played through it, he will now miss his second game of the 2026-27 campaign. Without Cunningham, Isaiah Joe will enter the starting lineup."
   },
@@ -349,7 +349,7 @@
    "detail": "Strain",
    "side": "Left",
    "injury": "Quadriceps",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Robinson (quadriceps) is considered day-to-day as he progresses in his rehab, Eric Vincent of ClutchPoints.com reports.",
    "long": "Robinson will miss a fifth consecutive contest Tuesday due to a left quadriceps strain, though he can be considered questionable for Friday's game against Milwaukee until the Pistons provide an update on his status. Kevin Huerter will likely continue seeing increased playing time for as long as Robinson is sidelined."
   },
@@ -553,15 +553,15 @@
    "player": "Austin Reaves",
    "team": "LAL",
    "status": "Out",
-   "date": "2026-11-24T01:31Z",
+   "date": "2026-11-25T20:33Z",
    "type": "out",
    "returnDate": "2026-11-27",
    "detail": "Bruise",
    "side": "Left",
    "injury": "Heel",
    "fantasyStatus": "GTD",
-   "short": "Coach JJ Redick stated Monday that the team is optimistic Reaves (heel) will return for Friday's game against San Antonio, Daniel Starkand of LakersNation.com reports.",
-   "long": "Reaves has already been downgraded to out for Monday's clash against Utah, which will mark his fifth straight absence due to a bruised left heel. However, the sharpshooter managed to take part in a stay-ready game earlier in the day Monday and was moving well, per Benjamin Royer of The Orange County Register. Reaves figures to be in line to take the court Friday as long as he continues to show progress throughout the week."
+   "short": "Reaves (heel) was a full participant in Wednesday's practice, Daniel Starkand of LakersNation.com reports.",
+   "long": "Reaves has missed the last five games with a left heel contusion but is trending in the right direction ahead of Friday's game at San Antonio. The Lakers will provide an update on his status by Thursday night, and the 28-year-old shooting guard's return would leave fewer minutes available for Quentin Grimes, Collin Sexton and Jake LaRavia."
   },
   {
    "player": "Scotty Pippen Jr.",
@@ -634,20 +634,6 @@
    "long": "Saunders is still on the mend from a torn right ACL that he suffered during his final year at BYU. However, he has been cleared for on-court activities and will be allowed to practice with the Grizzlies now that he's officially signed with the team."
   },
   {
-   "player": "Giannis Antetokounmpo",
-   "team": "MIA",
-   "status": "Day-To-Day",
-   "date": "2026-11-24T22:07Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-25",
-   "detail": null,
-   "side": null,
-   "injury": "Groin",
-   "fantasyStatus": "GTD",
-   "short": "Antetokounmpo (groin) is questionable for Wednesday's game in Philadelphia.",
-   "long": "Antetokounmpo missed Sunday's 123-113 win over the Thunder due to right groin tendinitis, but he was able to get through most of Tuesday's practice, so he's trending in the right direction. If he's cleared to return, Bobby Portis would likely head back to the second unit."
-  },
-  {
    "player": "Donte DiVincenzo",
    "team": "MIN",
    "status": "Out",
@@ -688,6 +674,20 @@
    "fantasyStatus": "OUT",
    "short": "Edwards underwent a successful arthroscopic procedure on his right knee Thursday, the Timberwolves announced.",
    "long": "Edwards underwent debridement surgery in Minnesota, though the team did not provide a timetable for his return. The star guard is expected to make a full recovery, with additional updates coming as he progresses through rehabilitation. Based on previous reporting from ESPN's Shams Charania, Edwards could miss up to two months. Edwards was off to a scorching start this season, averaging 33.3 points, 4.8 rebounds, 3.5 assists and 2.0 steals across four appearances."
+  },
+  {
+   "player": "Julian Reese",
+   "team": "NO",
+   "status": "Day-To-Day",
+   "date": "2026-11-25T16:11Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-25",
+   "detail": null,
+   "side": "Right",
+   "injury": "Knee",
+   "fantasyStatus": "GTD",
+   "short": "The Pelicans transferred Reese from the G League's Laketown Squadron, and he will be available for New Orleans' game against the Warriors on Monday.",
+   "long": "Reese dropped a 15-point, 15-rebound double-double in the Squadron's win over the Mexico City Capitanes on Saturday and will return to the parent club ahead of its game Monday. Through five regular-season appearances at the NBA level this season, the big man is averaging 1.2 points and 1.0 rebounds in 5.4 minutes per tilt."
   },
   {
    "player": "Trendon Watford",
@@ -732,18 +732,60 @@
    "long": "This was the expectation after the star guard requested a trade from the Pelicans earlier Friday. Given his standing with the club, Murray can be tentatively considered doubtful for future contests while New Orleans tries to find him another home."
   },
   {
-   "player": "Miles McBride",
+   "player": "Jalen Brunson",
    "team": "NY",
    "status": "Day-To-Day",
-   "date": "2026-11-24T21:56Z",
+   "date": "2026-11-25T21:35Z",
    "type": "day-to-day",
    "returnDate": "2026-11-25",
+   "detail": null,
+   "side": null,
+   "injury": "Illness",
+   "fantasyStatus": "GTD",
+   "short": "Brunson (illness) is probable for Wednesday's game against Cleveland.",
+   "long": "Brunson is under the weather but is expected to play through the ailment. The superstar floor general is looking to extend his streak of 20-point, five-assist performances to eight Wednesday."
+  },
+  {
+   "player": "Josh Hart",
+   "team": "NY",
+   "status": "Day-To-Day",
+   "date": "2026-11-25T17:57Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-25",
+   "detail": "Sprain",
+   "side": "Right",
+   "injury": "Shoulder",
+   "fantasyStatus": "GTD",
+   "short": "Hart (shoulder) has been upgraded to probable for Wednesday's game against the Cavaliers.",
+   "long": "Hart is dealing with a right shoulder sprain, though he's also trending toward suiting up for an eighth straight game. He posted a triple-double in his last time out and has averaged 5.2 points, 6.8 rebounds, 4.4 assists and 1.2 steals while shooting 29.7 percent from the field in 31.8 minutes per game over his last five outings."
+  },
+  {
+   "player": "Miles McBride",
+   "team": "NY",
+   "status": "Out",
+   "date": "2026-11-25T17:57Z",
+   "type": "out",
+   "returnDate": "2026-11-27",
    "detail": "Soreness",
    "side": "Left",
    "injury": "Groin",
+   "fantasyStatus": "OUT",
+   "short": "McBride (adductor) has been ruled out for Wednesday's game against the Cavaliers.",
+   "long": "McBride will miss his second consecutive contest despite participating in Tuesday's practice. With Jordan Clarkson (foot) also sidelined, Tyler Kolek and other reserve guards could see additional opportunities in New York's backcourt."
+  },
+  {
+   "player": "Karl-Anthony Towns",
+   "team": "NY",
+   "status": "Day-To-Day",
+   "date": "2026-11-25T17:54Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-25",
+   "detail": "Inflammation",
+   "side": "Right",
+   "injury": "Knee",
    "fantasyStatus": "GTD",
-   "short": "McBride (adductor) is listed as questionable for Wednesday's game versus Cleveland.",
-   "long": "McBride could miss a second straight game due to left adductor tightness, though he was able to participate in Tuesday's practice. If the 26-year-old guard remains sidelined, Tyler Kolek, Jose Alvarado and Pacome Dadiet would be candidates for increased playing time."
+   "short": "Towns (knee) is probable for Wednesday's game against Cleveland.",
+   "long": "Towns appears on track to play despite dealing with right knee inflammation. His expected availability would provide a significant boost to New York's frontcourt, though fantasy managers should monitor his status ahead of the 7:30 p.m. ET tipoff."
   },
   {
    "player": "Jordan Clarkson",
@@ -760,20 +802,6 @@
    "long": "The veteran guard is missing a fourth consecutive contest with plantar fasciitis in his right foot. Clarkson didn't practice Tuesday and lacks a timeline for his return."
   },
   {
-   "player": "Josh Hart",
-   "team": "NY",
-   "status": "Day-To-Day",
-   "date": "2026-11-24T21:54Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-25",
-   "detail": "Sprain",
-   "side": "Right",
-   "injury": "Shoulder",
-   "fantasyStatus": "GTD",
-   "short": "Hart (shoulder) is listed as questionable for Wednesday's game against Cleveland.",
-   "long": "Hart is dealing with a right shoulder sprain after dropping a triple-double in Sunday's win over Indiana. If the veteran wing joins OG Anunoby (calf) on the inactive list Wednesday, Mohamed Diawara and Pacome Dadiet would be candidates for an uptick in minutes."
-  },
-  {
    "player": "OG Anunoby",
    "team": "NY",
    "status": "Out",
@@ -786,20 +814,6 @@
    "fantasyStatus": "OUT",
    "short": "Anunoby (calf) is out for Wednesday's game against Cleveland.",
    "long": "Wednesday marks a third consecutive absence for Anunoby, who was unable to practice Tuesday because of a sore left calf. His continued void in the lineup should keep Landry Shamet in the streaming conversation in most fantasy leagues Wednesday."
-  },
-  {
-   "player": "Karl-Anthony Towns",
-   "team": "NY",
-   "status": "Day-To-Day",
-   "date": "2026-11-24T21:50Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-25",
-   "detail": null,
-   "side": null,
-   "injury": "Knee",
-   "fantasyStatus": "GTD",
-   "short": "Towns (knee) is questionable for Wednesday's game against Cleveland.",
-   "long": "Towns is at risk of sitting out for the second time in New York's last three contests. Andre Drummond would be a plug-and-play fantasy option at center in most settings if Towns is ultimately unable to play Wednesday."
   },
   {
    "player": "Nikola Topic",
@@ -958,16 +972,16 @@
   {
    "player": "Joel Embiid",
    "team": "PHI",
-   "status": "Day-To-Day",
-   "date": "2026-11-24T22:09Z",
-   "type": "day-to-day",
+   "status": "Out",
+   "date": "2026-11-25T20:07Z",
+   "type": "out",
    "returnDate": "2026-11-27",
    "detail": null,
    "side": null,
    "injury": "Illness",
-   "fantasyStatus": "GTD",
-   "short": "Embiid (illness) is listed as doubtful for Wednesday's game versus Miami.",
-   "long": "Embiid missed Monday's 128-111 loss to Portland and doesn't appear to be on track to return Wednesday against the Heat. As a result, Jabari Walker could make another start, with more minutes available for Adem Bona and Dominick Barlow."
+   "fantasyStatus": "OUT",
+   "short": "Embiid (illness) is out for Wednesday's game against Miami, Ira Winderman of the South Florida Sun Sentinel reports.",
+   "long": "With Embiid set to miss a second straight game due to illness after previously being listed as doubtful, Philadelphia will again need to cover his vacated minutes at center. His absence removes one of the 76ers' top offensive options and should leave added frontcourt work available to the likes of Jabari Walker, Dominick Barlow and Adem Bona."
   },
   {
    "player": "Ariel Hukporti",
@@ -1057,15 +1071,29 @@
    "player": "Maxime Raynaud",
    "team": "SAC",
    "status": "Out",
-   "date": "2026-11-25T04:21Z",
+   "date": "2026-11-25T21:38Z",
    "type": "out",
    "returnDate": "2026-12-02",
    "detail": "Dislocated",
    "side": "Right",
    "injury": "Knee",
    "fantasyStatus": "OUT",
-   "short": "Raynaud (knee) is out for Wednesday's game against the Warriors.",
-   "long": "The Kings have not provided any updates on Raynaud, and he continues to get ruled out 24 hours in advance of tipoff, suggesting he's still not close. Raynaud should be considered week-to-week."
+   "short": "Raynaud (knee) was recalled from the G League's Stockton Kings on Wednesday, Marc J. Spears of ESPN.com reports.",
+   "long": "Raynaud presumably joined the G League Kings for practice Wednesday. He's recovering from a right patellar subluxation and remains without a timetable to return, and while it's encouraging that he's getting reps with Stockton, the big man can be considered week-to-week until the Kings offer another update on his status."
+  },
+  {
+   "player": "Zach LaVine",
+   "team": "SAC",
+   "status": "Day-To-Day",
+   "date": "2026-11-25T20:49Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-25",
+   "detail": "Soreness",
+   "side": "Right",
+   "injury": "Knee",
+   "fantasyStatus": "GTD",
+   "short": "LaVine (knee) has been downgraded to questionable for Wednesday's game against Golden State.",
+   "long": "LaVine was a late addition to the injury report due to right knee soreness. If the veteran swingman is unable to suit up, Emanuel Sharp, Malik Monk and Gabe Vincent would all be candidates for increased playing time."
   },
   {
    "player": "Ben Simmons",

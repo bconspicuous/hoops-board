@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-25T19:44+09:00",
+ "asOf": "2026-11-26T06:45+09:00",
  "leagueId": "751654965",
  "season": 2027,
  "teams": [
@@ -97,10 +97,10 @@
     "Brandon Miller",
     "Jeremiah Fears",
     "AJ Dybantsa",
-    "Matas Buzelis",
     "Tyler Herro",
     "Miles Bridges",
-    "Kyshawn George"
+    "Kyshawn George",
+    "Cam Spencer"
    ],
    "ir": [
     "Austin Reaves",
@@ -118,9 +118,9 @@
     "3": 6,
     "4": 7,
     "5": 7,
-    "6": 2
+    "6": 3
    },
-   "acqTotal": 35
+   "acqTotal": 36
   },
   {
    "name": "Zero Sugar",
@@ -172,16 +172,15 @@
     "Devin Booker",
     "Pascal Siakam",
     "Deni Avdija",
+    "Jaylen Brown",
     "Julius Randle",
     "Zach LaVine",
     "Jabari Smith Jr.",
     "Christian Braun",
-    "Andrew Nembhard",
     "Ajay Mitchell",
     "Pelle Larsson"
    ],
    "ir": [
-    "Jaylen Brown",
     "Ja Morant"
    ],
    "record": {
@@ -329,7 +328,6 @@
    "Duncan Robinson",
    "Ja Morant",
    "Anthony Edwards",
-   "Cade Cunningham",
    "Jalen Duren",
    "Kawhi Leonard",
    "OG Anunoby",
@@ -337,6 +335,7 @@
    "Dylan Harper",
    "Aday Mara",
    "Tyrese Haliburton",
+   "Joel Embiid",
    "Caleb Wilson",
    "CJ McCollum",
    "Kon Knueppel",
@@ -359,8 +358,10 @@
    "Dennis Schroder",
    "Donte DiVincenzo",
    "Maxime Raynaud",
+   "Ryan Kalkbrenner",
    "Bradley Beal",
    "Jaylin Williams",
+   "Miles McBride",
    "GG Jackson",
    "Brandon Williams",
    "Justin Champagnie",
@@ -368,19 +369,18 @@
    "Jordan Clarkson"
   ],
   "DTD": [
-   "Giannis Antetokounmpo",
    "De'Aaron Fox",
    "Karl-Anthony Towns",
    "Victor Wembanyama",
-   "Joel Embiid",
+   "Jalen Brunson",
+   "Zach LaVine",
+   "Cade Cunningham",
    "Yaxel Lendeborg",
    "Josh Hart",
    "Jalen Smith",
    "Jaxson Hayes",
    "T.J. McConnell",
-   "Aaron Nesmith",
-   "Ryan Kalkbrenner",
-   "Miles McBride"
+   "Aaron Nesmith"
   ]
  }
 }
