@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-27T06:44+09:00",
+ "asOf": "2026-11-27T06:58+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -760,6 +760,20 @@
    "long": "This was the expectation after the star guard requested a trade from the Pelicans earlier Friday. Given his standing with the club, Murray can be tentatively considered doubtful for future contests while New Orleans tries to find him another home."
   },
   {
+   "player": "Andre Drummond",
+   "team": "NY",
+   "status": "Day-To-Day",
+   "date": "2026-11-26T21:51Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-27",
+   "detail": "Not Specified",
+   "side": null,
+   "injury": "Head",
+   "fantasyStatus": "GTD",
+   "short": "Drummond (head) is questionable for Friday's game against the Heat.",
+   "long": "Drummond exited Wednesday's win over the Cavaliers due to a head injury, and a decision on his availability Friday will be made closer to the 7 p.m. ET tipoff. Drummond adds depth at center behind Karl-Anthony Towns, so if he doesn't play, look for Mohamed Diawara and James Wiseman to see an uptick in playing time."
+  },
+  {
    "player": "Miles McBride",
    "team": "NY",
    "status": "Day-To-Day",
@@ -772,20 +786,6 @@
    "fantasyStatus": "GTD",
    "short": "McBride (adductor) has been ruled out for Wednesday's game against the Cavaliers.",
    "long": "McBride will miss his second consecutive contest despite participating in Tuesday's practice. With Jordan Clarkson (foot) also sidelined, Tyler Kolek and other reserve guards could see additional opportunities in New York's backcourt."
-  },
-  {
-   "player": "Andre Drummond",
-   "team": "NY",
-   "status": "Day-To-Day",
-   "date": "2026-11-26T03:40Z",
-   "type": "day-to-day",
-   "returnDate": "2026-11-27",
-   "detail": "Not Specified",
-   "side": null,
-   "injury": "Head",
-   "fantasyStatus": "GTD",
-   "short": "Drummond (head) did not return to Wednesday's 121-102 win over the Cavaliers.",
-   "long": "Drummond played nine minutes off New York's bench, finishing with three points (1-1 FG, 1-1 3Pt) and two rebounds. Pacome Dadiet, Tyler Nickel and James Wiseman could all see a boost in playing time if Drummond is forced to miss any time. His next chance to suit up will come against the Heat on Friday."
   },
   {
    "player": "OG Anunoby",
