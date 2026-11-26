@@ -1,29 +1,30 @@
 {
- "createdKST": "2026-11-26T13:51+09:00",
+ "createdKST": "2026-11-26T19:50+09:00",
  "mode": "plan",
- "spid": 37,
+ "spid": 38,
  "matchupPeriod": 6,
  "add": {
-  "id": 4066211,
-  "name": "Robert Williams III",
+  "id": 3157465,
+  "name": "Duncan Robinson",
   "status": "FREEAGENT",
-  "pro": "POR",
-  "inj": "ACTIVE"
+  "pro": "DET",
+  "inj": "OUT"
  },
  "type": "FREEAGENT",
  "limits": {
-  "season": "23/70",
-  "matchup": "2/7"
+  "season": "24/70",
+  "matchup": "3/7"
  },
  "drop": {
   "id": 3135045,
   "name": "Grayson Allen",
-  "slot": 5,
+  "slot": 12,
   "inj": "OUT"
  },
- "hash": "18a74c4f42",
+ "hash": "eb8b27b635",
  "errors": [],
  "warnings": [
+  "Duncan Robinson 현재 OUT",
   "방출 선수는 24시간 웨이버 — 그 사이 다른 팀이 데려갈 수 있어 되돌릴 수 없음"
  ],
  "status": "planned"
