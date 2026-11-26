@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-26T13:45+09:00",
+ "asOf": "2026-11-26T17:57+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -118,14 +118,14 @@
   {
    "player": "Ryan Kalkbrenner",
    "team": "CHA",
-   "status": "Out",
-   "date": "2026-11-25T17:41Z",
-   "type": "out",
+   "status": "Day-To-Day",
+   "date": "2026-11-26T05:30Z",
+   "type": "day-to-day",
    "returnDate": "2026-11-28",
    "detail": "Soreness",
    "side": "Left",
    "injury": "Hip",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Kalkbrenner (hip) has been ruled out for Wednesday's matchup with Chicago.",
    "long": "Kalkbrenner exited Monday's loss to Memphis early with left hip soreness and is now set to miss Wednesday's contest. His next chance to play will come Saturday against the Nets. With the big man sidelined, Hannes Steinbach could see meaningful playing time behind Moussa Diabate."
   },
@@ -139,7 +139,7 @@
    "detail": null,
    "side": null,
    "injury": "Concussion",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Allen (concussion) has been ruled out for Wednesday's game against Chicago.",
    "long": "Allen will miss a fourth consecutive contest due to a concussion. With the veteran swingman sidelined, Sion James (thigh), Grant Williams and Royce O'Neale are candidates for increased playing time. Allen's next chance to play will come Saturday against Brooklyn."
   },
@@ -174,14 +174,14 @@
   {
    "player": "Jalen Smith",
    "team": "CHI",
-   "status": "Out",
-   "date": "2026-11-25T22:07Z",
-   "type": "out",
+   "status": "Day-To-Day",
+   "date": "2026-11-26T05:29Z",
+   "type": "day-to-day",
    "returnDate": "2026-11-28",
    "detail": null,
    "side": null,
    "injury": "Illness",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Smith (illness) is listed as out for Wednesday's game against Charlotte.",
    "long": "Smith is dealing with a gastrointestinal illness, so he won't suit up Wednesday versus the Hornets. Without him, Nic Claxton will presumably enter the starting lineup. Zach Collins might also be more involved."
   },
@@ -681,7 +681,7 @@
    "status": "Day-To-Day",
    "date": "2026-11-25T16:11Z",
    "type": "day-to-day",
-   "returnDate": "2026-11-25",
+   "returnDate": "2026-12-01",
    "detail": null,
    "side": "Right",
    "injury": "Knee",
@@ -732,6 +732,20 @@
    "long": "This was the expectation after the star guard requested a trade from the Pelicans earlier Friday. Given his standing with the club, Murray can be tentatively considered doubtful for future contests while New Orleans tries to find him another home."
   },
   {
+   "player": "Miles McBride",
+   "team": "NY",
+   "status": "Day-To-Day",
+   "date": "2026-11-26T05:31Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-27",
+   "detail": "Soreness",
+   "side": "Left",
+   "injury": "Groin",
+   "fantasyStatus": "GTD",
+   "short": "McBride (adductor) has been ruled out for Wednesday's game against the Cavaliers.",
+   "long": "McBride will miss his second consecutive contest despite participating in Tuesday's practice. With Jordan Clarkson (foot) also sidelined, Tyler Kolek and other reserve guards could see additional opportunities in New York's backcourt."
+  },
+  {
    "player": "Andre Drummond",
    "team": "NY",
    "status": "Day-To-Day",
@@ -755,23 +769,9 @@
    "detail": "Soreness",
    "side": "Left",
    "injury": "Calf",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Anunoby (calf) participated in on-court work for the first time since sustaining the injury, Ian Begley of SportsNet New York reports.",
    "long": "Anunoby has missed New York's last two games due to soreness in his left calf, and he's slated to miss his third consecutive regular-season outing Wednesday against Cleveland. However, this is a positive sign for the 29-year-old, and the Knicks will continue to provide updates on his status when they are available. Anunoby's next chance to take the court will come Friday versus Miami."
-  },
-  {
-   "player": "Miles McBride",
-   "team": "NY",
-   "status": "Out",
-   "date": "2026-11-25T17:57Z",
-   "type": "out",
-   "returnDate": "2026-11-27",
-   "detail": "Soreness",
-   "side": "Left",
-   "injury": "Groin",
-   "fantasyStatus": "OUT",
-   "short": "McBride (adductor) has been ruled out for Wednesday's game against the Cavaliers.",
-   "long": "McBride will miss his second consecutive contest despite participating in Tuesday's practice. With Jordan Clarkson (foot) also sidelined, Tyler Kolek and other reserve guards could see additional opportunities in New York's backcourt."
   },
   {
    "player": "Jordan Clarkson",
@@ -783,7 +783,7 @@
    "detail": "Plantar Fasciitis",
    "side": "Right",
    "injury": "Foot",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Clarkson (foot) is out for Wednesday's game against Cleveland.",
    "long": "The veteran guard is missing a fourth consecutive contest with plantar fasciitis in his right foot. Clarkson didn't practice Tuesday and lacks a timeline for his return."
   },
@@ -797,7 +797,7 @@
    "detail": "Strain",
    "side": "Left",
    "injury": "Hip",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Topic (hip) is listed as out for Wednesday's game versus Minnesota.",
    "long": "Topic has appeared in only three games for the Thunder this season. He's missed the last three contests because of a hip strain, with his next opportunity to suit up coming Saturday in Milwaukee. Without Topic, Bennett Stirtz and Josh Dix could continue to receive more playing time."
   },
@@ -825,7 +825,7 @@
    "detail": "Bruise",
    "side": "Right",
    "injury": "Lower Leg",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Mara (leg) is out for Wednesday's game versus the Timberwolves.",
    "long": "This will be Mara's third straight game on the inactive list, and for now, he should be considered questionable at best for Saturday's game in Milwaukee. With Jaylin Williams (back) also unavailable, Micah Peavy and Kenrich Williams will help back up Isaiah Hartenstein at the center position."
   },
@@ -1056,14 +1056,14 @@
   {
    "player": "Zach LaVine",
    "team": "SAC",
-   "status": "Out",
-   "date": "2026-11-25T22:40Z",
-   "type": "out",
+   "status": "Day-To-Day",
+   "date": "2026-11-26T05:33Z",
+   "type": "day-to-day",
    "returnDate": "2026-11-29",
    "detail": "Soreness",
    "side": "Right",
    "injury": "Knee",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "LaVine (knee) is listed as out for Wednesday's game versus the Warriors.",
    "long": "LaVine will miss his second game of the 2026-27 campaign. His next opportunity to play will come Sunday against the Timberwolves. In the meantime, Leaky Black, Emanuel Sharp and Malik Monk are candidates for more minutes, with one of those players expected to move into the starting lineup."
   },
@@ -1098,14 +1098,14 @@
   {
    "player": "De'Aaron Fox",
    "team": "SA",
-   "status": "Out",
-   "date": "2026-11-26T02:20Z",
-   "type": "out",
+   "status": "Day-To-Day",
+   "date": "2026-11-26T06:01Z",
+   "type": "day-to-day",
    "returnDate": "2026-11-27",
    "detail": "Bruise",
    "side": "Right",
    "injury": "Lower Leg",
-   "fantasyStatus": "OUT",
+   "fantasyStatus": "GTD",
    "short": "Fox (shin) has been ruled out for Wednesday's game against Portland, Jeff McDonald of the San Antonio Express-News reports.",
    "long": "Fox will miss consecutive games for the first time in 2026-27. He's dealing with a right shin contusion, and his next chance to suit up will come Friday against the Lakers. Stephon Castle will continue running the Spurs' offense while Jordan McLaughlin gets additional run in the second unit."
   },
