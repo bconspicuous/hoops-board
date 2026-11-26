@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-26T17:58+09:00",
+ "asOf": "2026-11-26T19:46+09:00",
  "scoringPeriodId": 38,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -37,46 +37,46 @@
    "acq": 8
   },
   {
-   "team": "SONG",
-   "name": "Kfinco_ThePianist",
-   "rank": 4,
-   "acq": 27
-  },
-  {
    "team": "JYP",
    "name": "PaloAlto Wenoja",
-   "rank": 5,
+   "rank": 4,
    "acq": 14
   },
   {
    "team": "IYH",
    "name": "Jongno Karina",
-   "rank": 6,
+   "rank": 5,
    "acq": 24
   },
   {
    "team": "GGAM",
    "name": "Garibong CHaRdaddy",
-   "rank": 7,
+   "rank": 6,
    "acq": 22
   },
   {
    "team": "SMS",
    "name": "Samseong Homeless",
-   "rank": 8,
+   "rank": 7,
    "acq": 20
   },
   {
    "team": "Doo",
    "name": "Helio honeymoons",
-   "rank": 9,
+   "rank": 8,
    "acq": 21
   },
   {
    "team": "GTD",
    "name": "Garak Twindragons",
+   "rank": 9,
+   "acq": 24
+  },
+  {
+   "team": "SONG",
+   "name": "Kfinco_ThePianist",
    "rank": 10,
-   "acq": 23
+   "acq": 29
   }
  ],
  "myPending": [
@@ -87,7 +87,7 @@
    "type": "WAIVER",
    "status": "PENDING",
    "proposed": "2026-11-26 13:16 KST",
-   "processed": "2026-11-26 17:00 KST",
+   "processed": null,
    "items": [
     {
      "type": "ADD",
@@ -227,13 +227,103 @@
  ],
  "transactions": [
   {
+   "id": "9b9e0548-6b46-4d79-b0ec-27f7649ce478",
+   "team": "GTD",
+   "mine": true,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-26 18:11 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Quentin Grimes",
+     "from": "FA",
+     "to": "GTD"
+    },
+    {
+     "type": "DROP",
+     "player": "Collin Gillespie",
+     "from": "GTD",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "a88277ef-b669-422c-87de-b5d7e28c9dce",
+   "team": "GTD",
+   "mine": true,
+   "type": "WAIVER",
+   "status": "FAILED_INVALIDPLAYERSOURCE",
+   "proposed": "2026-11-26 17:59 KST",
+   "processed": "2026-11-26 17:59 KST",
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Daniss Jenkins",
+     "from": "FA",
+     "to": "GTD"
+    },
+    {
+     "type": "DROP",
+     "player": "Klay Thompson",
+     "from": "GTD",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "e7b3ec5a-c48e-4684-9c08-52fd9d2b7322",
+   "team": "SONG",
+   "mine": false,
+   "type": "WAIVER",
+   "status": "EXECUTED",
+   "proposed": "2026-11-26 17:59 KST",
+   "processed": "2026-11-26 17:59 KST",
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Daniss Jenkins",
+     "from": "FA",
+     "to": "SONG"
+    },
+    {
+     "type": "DROP",
+     "player": "Brayden Burries",
+     "from": "SONG",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "51d61108-3ecd-4651-a349-fc623fb47433",
+   "team": "SONG",
+   "mine": false,
+   "type": "WAIVER",
+   "status": "EXECUTED",
+   "proposed": "2026-11-26 17:59 KST",
+   "processed": "2026-11-26 17:59 KST",
+   "items": [
+    {
+     "type": "ADD",
+     "player": "Aday Mara",
+     "from": "FA",
+     "to": "SONG"
+    }
+   ],
+   "bid": 0
+  },
+  {
    "id": "81315183-dc79-4fe2-b3dd-bb09b8229588",
    "team": "GTD",
    "mine": true,
    "type": "WAIVER",
    "status": "PENDING",
    "proposed": "2026-11-26 13:16 KST",
-   "processed": "2026-11-26 17:00 KST",
+   "processed": null,
    "items": [
     {
      "type": "ADD",
@@ -1447,17 +1537,6 @@
  ],
  "onWaivers": [
   {
-   "id": 4711272,
-   "name": "Reed Sheppard",
-   "pro": "HOU",
-   "waiverClears": "2026-11-26 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "KWNG",
-    "at": "2026-11-25 01:22 KST"
-   }
-  },
-  {
    "id": 3064290,
    "name": "Aaron Gordon",
    "pro": "DEN",
@@ -1466,28 +1545,6 @@
    "droppedBy": {
     "by": "GGAM",
     "at": "2026-11-25 23:02 KST"
-   }
-  },
-  {
-   "id": 4397014,
-   "name": "Quentin Grimes",
-   "pro": "LAL",
-   "waiverClears": "2026-11-26 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "GGAM",
-    "at": "2026-11-24 18:18 KST"
-   }
-  },
-  {
-   "id": 5107199,
-   "name": "Daniss Jenkins",
-   "pro": "DET",
-   "waiverClears": "2026-11-26 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "SONG",
-    "at": "2026-11-25 09:07 KST"
    }
   },
   {
@@ -1502,14 +1559,25 @@
    }
   },
   {
-   "id": 5174983,
-   "name": "Aday Mara",
-   "pro": "OKC",
-   "waiverClears": "2026-11-26 17:00 KST",
-   "inj": "OUT",
+   "id": 4278585,
+   "name": "Collin Gillespie",
+   "pro": "PHX",
+   "waiverClears": "2026-11-28 17:00 KST",
+   "inj": "ACTIVE",
    "droppedBy": {
-    "by": "Doo",
-    "at": "2026-11-25 08:32 KST"
+    "by": "GTD",
+    "at": "2026-11-26 18:11 KST"
+   }
+  },
+  {
+   "id": 5082206,
+   "name": "Brayden Burries",
+   "pro": "MIL",
+   "waiverClears": "2026-11-27 17:00 KST",
+   "inj": "ACTIVE",
+   "droppedBy": {
+    "by": "SONG",
+    "at": "2026-11-26 17:59 KST"
    }
   },
   {
@@ -1551,7 +1619,6 @@
   "gameId",
   "id",
   "members",
-  "pendingTransactions",
   "scoringPeriodId",
   "seasonId",
   "segmentId",

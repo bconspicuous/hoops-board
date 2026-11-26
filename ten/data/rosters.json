@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-26T17:57+09:00",
+ "asOf": "2026-11-26T19:45+09:00",
  "leagueId": "504060248",
  "season": 2027,
  "teams": [
@@ -109,6 +109,7 @@
    "players": [
     "Victor Wembanyama",
     "Anthony Davis",
+    "Austin Reaves",
     "Michael Porter Jr.",
     "Kyrie Irving",
     "Desmond Bane",
@@ -118,10 +119,10 @@
     "Kyshawn George",
     "Cedric Coward",
     "Terrence Shannon Jr.",
-    "Brayden Burries"
+    "Daniss Jenkins"
    ],
    "ir": [
-    "Austin Reaves"
+    "Aday Mara"
    ],
    "record": {
     "wins": 31,
@@ -131,19 +132,19 @@
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
-    "acquisitions": 27,
-    "drops": 27,
+    "acquisitions": 29,
+    "drops": 28,
     "matchupAcquisitionTotals": {
      "1": 4,
      "2": 5,
      "3": 5,
      "4": 7,
      "5": 3,
-     "6": 3
+     "6": 5
     },
     "misc": 0,
-    "moveToActive": 161,
-    "moveToIR": 4,
+    "moveToActive": 164,
+    "moveToIR": 5,
     "paid": 0.0,
     "teamCharges": 0.0,
     "trades": 0
@@ -360,8 +361,8 @@
     "Isaiah Hartenstein",
     "Matas Buzelis",
     "Jonathan Kuminga",
-    "Collin Gillespie",
-    "Josh Hart"
+    "Josh Hart",
+    "Quentin Grimes"
    ],
    "ir": [
     "Kawhi Leonard"
@@ -374,18 +375,18 @@
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
-    "acquisitions": 23,
-    "drops": 22,
+    "acquisitions": 24,
+    "drops": 23,
     "matchupAcquisitionTotals": {
      "1": 4,
      "2": 6,
      "3": 2,
      "4": 5,
      "5": 4,
-     "6": 2
+     "6": 3
     },
     "misc": 0,
-    "moveToActive": 129,
+    "moveToActive": 131,
     "moveToIR": 10,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -495,6 +496,7 @@
    "Evan Mobley",
    "Paolo Banchero",
    "Austin Reaves",
+   "Aday Mara",
    "Tyrese Haliburton",
    "Jalen Duren",
    "Norman Powell",
@@ -518,7 +520,6 @@
    "Jalen Williams",
    "Duncan Robinson",
    "Kristaps Porzingis",
-   "Aday Mara",
    "Jimmy Butler III",
    "Mitchell Robinson",
    "Scotty Pippen Jr.",
