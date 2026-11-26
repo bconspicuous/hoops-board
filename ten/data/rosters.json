@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-26T07:00+09:00",
+ "asOf": "2026-11-26T13:45+09:00",
  "leagueId": "504060248",
  "season": 2027,
  "teams": [
@@ -133,7 +133,7 @@
    "transactions": {
     "acquisitionBudgetSpent": 0,
     "acquisitions": 27,
-    "drops": 26,
+    "drops": 27,
     "matchupAcquisitionTotals": {
      "1": 4,
      "2": 5,
@@ -179,7 +179,7 @@
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
-    "acquisitions": 21,
+    "acquisitions": 22,
     "drops": 21,
     "matchupAcquisitionTotals": {
      "1": 6,
@@ -187,11 +187,11 @@
      "3": 1,
      "4": 4,
      "5": 6,
-     "6": 2
+     "6": 3
     },
     "misc": 0,
     "moveToActive": 123,
-    "moveToIR": 15,
+    "moveToIR": 16,
     "paid": 0.0,
     "teamCharges": 0.0,
     "trades": 0
@@ -422,14 +422,15 @@
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
-    "acquisitions": 13,
-    "drops": 12,
+    "acquisitions": 14,
+    "drops": 13,
     "matchupAcquisitionTotals": {
      "1": 4,
      "2": 2,
      "3": 2,
      "4": 4,
-     "5": 1
+     "5": 1,
+     "6": 1
     },
     "misc": 0,
     "moveToActive": 103,
@@ -470,14 +471,14 @@
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
-    "acquisitions": 8,
-    "drops": 7,
+    "acquisitions": 9,
+    "drops": 8,
     "matchupAcquisitionTotals": {
      "2": 2,
      "3": 1,
      "4": 2,
      "5": 1,
-     "6": 2
+     "6": 3
     },
     "misc": 0,
     "moveToActive": 97,
@@ -493,15 +494,17 @@
    "Evan Mobley",
    "Paolo Banchero",
    "Austin Reaves",
+   "De'Aaron Fox",
+   "Jalen Smith",
    "Tyrese Haliburton",
    "Jalen Duren",
    "Norman Powell",
    "Anthony Edwards",
    "Kawhi Leonard",
    "Grayson Allen",
-   "Joel Embiid",
    "Stephen Curry",
    "OG Anunoby",
+   "Zach LaVine",
    "Dylan Harper",
    "Cameron Boozer",
    "Ja Morant",
@@ -534,31 +537,27 @@
    "Maxime Raynaud",
    "Ryan Kalkbrenner",
    "Bradley Beal",
+   "Moritz Wagner",
    "Jaylin Williams",
    "Miles McBride",
    "GG Jackson",
-   "Brandon Williams",
    "Justin Champagnie",
    "Ben Simmons",
    "Jordan Clarkson",
-   "Vit Krejci",
    "Sergio de Larrea",
+   "Vit Krejci",
    "Moses Moody"
   ],
   "DTD": [
-   "Jalen Brunson",
-   "Karl-Anthony Towns",
-   "Victor Wembanyama",
-   "De'Aaron Fox",
-   "Jalen Smith",
    "Cade Cunningham",
-   "Josh Hart",
-   "Yaxel Lendeborg",
-   "Zach LaVine",
+   "Jaylen Brown",
+   "Joel Embiid",
+   "LaMelo Ball",
+   "Zach Edey",
    "Jaxson Hayes",
    "T.J. McConnell",
-   "Aaron Nesmith",
-   "Sion James"
+   "Andre Drummond",
+   "Aaron Nesmith"
   ]
  }
 }
