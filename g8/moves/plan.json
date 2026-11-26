@@ -11,8 +11,8 @@
  ],
  "base": {
   "wk": 5.768,
-  "champ": 0.4082,
-  "p1": 0.4117,
+  "champ": 0.4072,
+  "p1": 0.4109,
   "epct": 0.5558
  },
  "protect": [
@@ -43,7 +43,7 @@
    "drop": "Jeremiah Fears",
    "ir": null,
    "weekGain": 0.163,
-   "titleGain": 0.1009,
+   "titleGain": 0.1008,
    "p1Gain": 0.1473,
    "epctGain": 0.0125,
    "addTeam": "POR",
@@ -70,8 +70,8 @@
    "drop": "Kyshawn George",
    "ir": null,
    "weekGain": 0.324,
-   "titleGain": 0.0469,
-   "p1Gain": 0.0608,
+   "titleGain": 0.0468,
+   "p1Gain": 0.0617,
    "epctGain": 0.0074,
    "addTeam": "LAL",
    "addPos": "SF",
@@ -97,8 +97,8 @@
    "drop": "Brandon Miller",
    "ir": null,
    "weekGain": 0.228,
-   "titleGain": 0.0346,
-   "p1Gain": 0.0761,
+   "titleGain": 0.0328,
+   "p1Gain": 0.0759,
    "epctGain": 0.0044,
    "addTeam": "LAC",
    "addPos": "C",
@@ -122,43 +122,39 @@
    "drop": "Jeremiah Fears",
    "ir": null,
    "wk": 0.163,
-   "title": 0.1009
+   "title": 0.1008
   },
   {
    "add": "Matisse Thybulle",
    "drop": "Kyshawn George",
    "ir": null,
    "wk": 0.324,
-   "title": 0.0469
+   "title": 0.0468
   },
   {
    "add": "Brook Lopez",
    "drop": "Brandon Miller",
    "ir": null,
    "wk": 0.228,
-   "title": 0.0346
+   "title": 0.0328
   },
   {
    "add": "Josh Hart",
    "drop": "Michael Porter Jr.",
    "ir": null,
    "wk": 0.036,
-   "title": 0.0462
+   "title": 0.0469
   },
   {
    "add": "Collin Gillespie",
    "drop": "AJ Dybantsa",
    "ir": null,
    "wk": 0.251,
-   "title": -0.0082
+   "title": -0.0062
   }
  ],
- "createdAt": "2026-11-26T10:46:29.738Z",
- "id": "20261126T1046",
+ "createdAt": "2026-11-26T21:46:14.387Z",
+ "id": "20261126T2146",
  "rosterSig": "AJ Dybantsa|Anthony Davis|Brandon Miller|Cam Spencer|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Kyshawn George|Michael Porter Jr.|Miles Bridges|Shai Gilgeous-Alexander|Tyler Herro#Austin Reaves|Norman Powell",
- "newItems": [
-  1,
-  2,
-  3
- ]
+ "newItems": []
 }
