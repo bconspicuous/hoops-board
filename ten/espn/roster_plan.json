@@ -1,30 +1,24 @@
 {
- "createdKST": "2026-11-26T06:49+09:00",
+ "createdKST": "2026-11-26T13:50+09:00",
  "mode": "plan",
  "spid": 37,
  "matchupPeriod": 6,
- "add": {
-  "id": 4600663,
-  "name": "Zach Edey",
-  "status": "FREEAGENT",
-  "pro": "MEM",
-  "inj": "ACTIVE"
- },
- "type": "FREEAGENT",
  "limits": {
   "season": "23/70",
   "matchup": "2/7"
  },
  "drop": {
-  "id": 4395712,
-  "name": "Andrew Nembhard",
-  "slot": 12,
-  "inj": "ACTIVE"
+  "id": 3135045,
+  "name": "Grayson Allen",
+  "slot": 5,
+  "inj": "OUT"
  },
- "hash": "7c11324fe2",
- "errors": [],
+ "hash": "fa743efa3d",
+ "errors": [
+  "영입 대상 Kel'el Ware: FA·웨이버 명단에 없음(다른 팀 소속이거나 이름 불일치)"
+ ],
  "warnings": [
   "방출 선수는 24시간 웨이버 — 그 사이 다른 팀이 데려갈 수 있어 되돌릴 수 없음"
  ],
- "status": "planned"
+ "status": "invalid"
 }
