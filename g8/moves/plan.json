@@ -10,10 +10,10 @@
   "Kyshawn George"
  ],
  "base": {
-  "wk": 6.076,
-  "champ": 0.4386,
-  "p1": 0.453,
-  "epct": 0.5609
+  "wk": 5.768,
+  "champ": 0.4082,
+  "p1": 0.4117,
+  "epct": 0.5558
  },
  "protect": [
   "Shai Gilgeous-Alexander",
@@ -40,41 +40,14 @@
    "add": "Robert Williams III",
    "addEspnId": 4066211,
    "addOwner": "FA",
-   "drop": "Kyshawn George",
-   "ir": null,
-   "weekGain": 0.433,
-   "titleGain": 0.1153,
-   "p1Gain": 0.1415,
-   "epctGain": 0.0143,
-   "addTeam": "POR",
-   "addPos": "C",
-   "dropValue": -5.19,
-   "status": "proposed",
-   "conflicts": [],
-   "addHealth": {
-    "status": "정상",
-    "injury": null,
-    "returnDate": null,
-    "report": null,
-    "g": 15,
-    "min": 16.1
-   },
-   "firstProposedAt": "2026-11-25T21:46:47.040Z"
-  },
-  {
-   "n": 2,
-   "kind": "add/drop",
-   "add": "Kevin Porter Jr.",
-   "addEspnId": 4397140,
-   "addOwner": "FA",
    "drop": "Jeremiah Fears",
    "ir": null,
-   "weekGain": 0.253,
-   "titleGain": 0.0459,
-   "p1Gain": 0.0978,
-   "epctGain": 0.0092,
-   "addTeam": "MIL",
-   "addPos": "PG,SG",
+   "weekGain": 0.163,
+   "titleGain": 0.1009,
+   "p1Gain": 0.1473,
+   "epctGain": 0.0125,
+   "addTeam": "POR",
+   "addPos": "C",
    "dropValue": -4.55,
    "status": "proposed",
    "conflicts": [],
@@ -83,10 +56,37 @@
     "injury": null,
     "returnDate": null,
     "report": null,
-    "g": null,
-    "min": null
+    "g": 15,
+    "min": 16.6
    },
-   "firstProposedAt": "2026-11-26T04:47:03.155Z"
+   "firstProposedAt": "2026-11-26T10:46:29.738Z"
+  },
+  {
+   "n": 2,
+   "kind": "add/drop",
+   "add": "Matisse Thybulle",
+   "addEspnId": 3907498,
+   "addOwner": "FA",
+   "drop": "Kyshawn George",
+   "ir": null,
+   "weekGain": 0.324,
+   "titleGain": 0.0469,
+   "p1Gain": 0.0608,
+   "epctGain": 0.0074,
+   "addTeam": "LAL",
+   "addPos": "SF",
+   "dropValue": -5.19,
+   "status": "proposed",
+   "conflicts": [],
+   "addHealth": {
+    "status": "정상",
+    "injury": null,
+    "returnDate": null,
+    "report": null,
+    "g": 18,
+    "min": 24.9
+   },
+   "firstProposedAt": "2026-11-26T10:46:29.738Z"
   },
   {
    "n": 3,
@@ -94,15 +94,15 @@
    "add": "Brook Lopez",
    "addEspnId": 3448,
    "addOwner": "FA",
-   "drop": "AJ Dybantsa",
+   "drop": "Brandon Miller",
    "ir": null,
-   "weekGain": 0.4,
-   "titleGain": 0.0228,
-   "p1Gain": 0.0607,
-   "epctGain": 0.0058,
+   "weekGain": 0.228,
+   "titleGain": 0.0346,
+   "p1Gain": 0.0761,
+   "epctGain": 0.0044,
    "addTeam": "LAC",
    "addPos": "C",
-   "dropValue": -3.41,
+   "dropValue": -4.14,
    "status": "proposed",
    "conflicts": [],
    "addHealth": {
@@ -113,50 +113,52 @@
     "g": 17,
     "min": 24
    },
-   "firstProposedAt": "2026-11-25T21:46:47.040Z"
+   "firstProposedAt": "2026-11-26T10:46:29.738Z"
   }
  ],
  "screened": [
   {
    "add": "Robert Williams III",
-   "drop": "Kyshawn George",
-   "ir": null,
-   "wk": 0.433,
-   "title": 0.1153
-  },
-  {
-   "add": "Kevin Porter Jr.",
    "drop": "Jeremiah Fears",
    "ir": null,
-   "wk": 0.253,
-   "title": 0.0459
+   "wk": 0.163,
+   "title": 0.1009
+  },
+  {
+   "add": "Matisse Thybulle",
+   "drop": "Kyshawn George",
+   "ir": null,
+   "wk": 0.324,
+   "title": 0.0469
   },
   {
    "add": "Brook Lopez",
-   "drop": "AJ Dybantsa",
+   "drop": "Brandon Miller",
    "ir": null,
-   "wk": 0.4,
-   "title": 0.0228
+   "wk": 0.228,
+   "title": 0.0346
   },
   {
    "add": "Josh Hart",
    "drop": "Michael Porter Jr.",
    "ir": null,
-   "wk": 0.049,
-   "title": 0.0455
+   "wk": 0.036,
+   "title": 0.0462
   },
   {
    "add": "Collin Gillespie",
-   "drop": "Brandon Miller",
+   "drop": "AJ Dybantsa",
    "ir": null,
-   "wk": 0.22,
-   "title": -0.0055
+   "wk": 0.251,
+   "title": -0.0082
   }
  ],
- "createdAt": "2026-11-26T04:47:03.155Z",
- "id": "20261126T0447",
+ "createdAt": "2026-11-26T10:46:29.738Z",
+ "id": "20261126T1046",
  "rosterSig": "AJ Dybantsa|Anthony Davis|Brandon Miller|Cam Spencer|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Kyshawn George|Michael Porter Jr.|Miles Bridges|Shai Gilgeous-Alexander|Tyler Herro#Austin Reaves|Norman Powell",
  "newItems": [
-  2
+  1,
+  2,
+  3
  ]
 }

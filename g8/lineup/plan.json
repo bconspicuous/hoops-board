@@ -1,89 +1,22 @@
 {
- "date": "2026-11-25",
+ "date": "2026-11-26",
  "week": 6,
- "opp": "ChaRDaddy",
- "status": "nochange",
- "playing": 8,
- "starters": [
-  "Shai Gilgeous-Alexander",
-  "Karl-Anthony Towns",
-  "James Harden",
-  "Michael Porter Jr.",
-  "Brandon Miller",
-  "Tyler Herro",
-  "Miles Bridges",
-  "Cam Spencer"
- ],
- "bench": [],
- "dtd": [
-  "Karl-Anthony Towns"
- ],
- "expected": {
-  "best": 5.587,
-  "current": 5.587,
-  "gain": 0,
-  "pcBest": {
-   "FG": 0.048,
-   "FT": 0.834,
-   "TPM": 0.674,
-   "REB": 0.688,
-   "AST": 0.123,
-   "STL": 0.415,
-   "BLK": 0.232,
-   "TO": 0.747,
-   "DD": 0.834,
-   "PTS": 0.098,
-   "PF": 0.896
-  },
-  "pcCurrent": {
-   "FG": 0.048,
-   "FT": 0.834,
-   "TPM": 0.674,
-   "REB": 0.688,
-   "AST": 0.123,
-   "STL": 0.415,
-   "BLK": 0.232,
-   "TO": 0.747,
-   "DD": 0.834,
-   "PTS": 0.098,
-   "PF": 0.896
-  }
- },
- "alternatives": [],
- "currentBench": [],
- "sameStarters": true,
- "moves": [],
- "slots": [
+ "status": "no-games",
+ "roster": [
   {
    "name": "Shai Gilgeous-Alexander",
    "slot": "PG"
-  },
-  {
-   "name": "James Harden",
-   "slot": "SG"
-  },
-  {
-   "name": "Brandon Miller",
-   "slot": "SF"
-  },
-  {
-   "name": "Michael Porter Jr.",
-   "slot": "PF"
   },
   {
    "name": "Karl-Anthony Towns",
    "slot": "C"
   },
   {
-   "name": "Tyler Herro",
-   "slot": "G"
-  },
-  {
-   "name": "Miles Bridges",
-   "slot": "F"
-  },
-  {
    "name": "Anthony Davis",
+   "slot": "PF"
+  },
+  {
+   "name": "James Harden",
    "slot": "UTIL"
   },
   {
@@ -91,8 +24,12 @@
    "slot": "UTIL"
   },
   {
-   "name": "Cam Spencer",
+   "name": "Michael Porter Jr.",
    "slot": "UTIL"
+  },
+  {
+   "name": "Brandon Miller",
+   "slot": "BE"
   },
   {
    "name": "Jeremiah Fears",
@@ -103,10 +40,22 @@
    "slot": "BE"
   },
   {
+   "name": "Tyler Herro",
+   "slot": "G"
+  },
+  {
+   "name": "Miles Bridges",
+   "slot": "SF"
+  },
+  {
    "name": "Kyshawn George",
-   "slot": "BE"
+   "slot": "F"
+  },
+  {
+   "name": "Cam Spencer",
+   "slot": "SG"
   }
  ],
- "id": "2026-11-25T2146Z",
- "createdAt": "2026-11-25T21:46:53.023Z"
+ "id": "2026-11-26T1046Z",
+ "createdAt": "2026-11-26T10:46:37.009Z"
 }
