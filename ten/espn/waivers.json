@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-26T19:46+09:00",
+ "asOf": "2026-11-27T06:45+09:00",
  "scoringPeriodId": 38,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -251,25 +251,19 @@
    "bid": 0
   },
   {
-   "id": "a88277ef-b669-422c-87de-b5d7e28c9dce",
-   "team": "GTD",
-   "mine": true,
+   "id": "51d61108-3ecd-4651-a349-fc623fb47433",
+   "team": "SONG",
+   "mine": false,
    "type": "WAIVER",
-   "status": "FAILED_INVALIDPLAYERSOURCE",
+   "status": "EXECUTED",
    "proposed": "2026-11-26 17:59 KST",
    "processed": "2026-11-26 17:59 KST",
    "items": [
     {
      "type": "ADD",
-     "player": "Daniss Jenkins",
+     "player": "Aday Mara",
      "from": "FA",
-     "to": "GTD"
-    },
-    {
-     "type": "DROP",
-     "player": "Klay Thompson",
-     "from": "GTD",
-     "to": "FA"
+     "to": "SONG"
     }
    ],
    "bid": 0
@@ -299,19 +293,25 @@
    "bid": 0
   },
   {
-   "id": "51d61108-3ecd-4651-a349-fc623fb47433",
-   "team": "SONG",
-   "mine": false,
+   "id": "a88277ef-b669-422c-87de-b5d7e28c9dce",
+   "team": "GTD",
+   "mine": true,
    "type": "WAIVER",
-   "status": "EXECUTED",
+   "status": "FAILED_INVALIDPLAYERSOURCE",
    "proposed": "2026-11-26 17:59 KST",
    "processed": "2026-11-26 17:59 KST",
    "items": [
     {
      "type": "ADD",
-     "player": "Aday Mara",
+     "player": "Daniss Jenkins",
      "from": "FA",
-     "to": "SONG"
+     "to": "GTD"
+    },
+    {
+     "type": "DROP",
+     "player": "Klay Thompson",
+     "from": "GTD",
+     "to": "FA"
     }
    ],
    "bid": 0

@@ -1,4 +1,4 @@
-# 10팀 리그 시뮬레이션 · 2026-11-26 19:45 KST
+# 10팀 리그 시뮬레이션 · 2026-11-27 06:44 KST
 - 프로젝션: 2026-27 최근 15일 · 팀 뎁스 보정(분당 생산성 × 현재 로테이션 기준 예상 출전시간)
 
 ## 우리 팀 예상 순위: 권장 교체안 실행 시 5위 · 일반 교체 가정 시 9위 (현재 10위, 18-37-0)
@@ -10,7 +10,7 @@
 
 ## 이번 주 교체 플랜
 - 권장(남은 경기 기준): Grayson Allen → Duncan Robinson(DET, 2경기), Matas Buzelis → Robert Williams III(POR, 2경기) · 승리 76% → 89%
-- 7주차(11/30~) vs IYH: Grayson Allen → Alex Caruso, Jonathan Kuminga → Jusuf Nurkic · 승리 35% → 50%
+- 7주차(11/30~) vs IYH: Grayson Allen → Alex Caruso, Jonathan Kuminga → Jusuf Nurkic · 승리 35% → 49%
 - 8주차(12/07~) vs SONG: Quentin Grimes → Caleb Wilson, Andrew Nembhard → Tobias Harris, Joel Embiid → Duncan Robinson · 승리 22% → 31% · IR 복귀로 Matas Buzelis 방출
 
 ## 추천 라인업 (6주차 vs Doo, 현재 로스터)
@@ -24,7 +24,7 @@
 | 3 | Kfinco_ThePianist (SONG) | 31-21-3 (3위) | 132-103-7 | 87% | 17.0% |
 | 4 | Garibong CHaRdaddy (GGAM) | 31-22-2 (4위) | 117-118-7 | 37% | 2.4% |
 | 5 | Saving PakPaks (KWNG) | 23-29-3 (6위) | 113-121-8 | 26% | 5.3% |
-| 6 | Jongno Karina (IYH) | 20-35-0 (9위) | 112-125-4 | 17% | 1.0% |
+| 6 | Jongno Karina (IYH) | 20-35-0 (9위) | 113-125-4 | 17% | 1.0% |
 | 7 | Team Bbang Guns (TBG) | 22-30-3 (7위) | 112-123-7 | 21% | 3.0% |
 | 8 | PaloAlto Wenoja (JYP) | 27-26-2 (5위) | 110-125-7 | 14% | 0.9% |
 | 9 | **Garak Twindragons (GTD)** | 18-37-0 (10위) | 97-140-5 | 1% | 0.1% |
