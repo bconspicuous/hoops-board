@@ -1,7 +1,7 @@
 {
- "planId": "20261125T2146",
+ "planId": "20261126T0447",
  "mode": "dry",
- "at": "2026-11-25T16:47-05:00",
+ "at": "2026-11-25T23:47-05:00",
  "items": [
   {
    "n": 1,
@@ -25,10 +25,10 @@
    ],
    "ok": true,
    "add": {
-    "name": "Brook Lopez",
+    "name": "Kevin Porter Jr.",
     "status": "FREEAGENT"
    },
-   "drop": "AJ Dybantsa",
+   "drop": "Jeremiah Fears",
    "ir": null
   },
   {
@@ -39,10 +39,10 @@
    ],
    "ok": true,
    "add": {
-    "name": "Collin Gillespie",
+    "name": "Brook Lopez",
     "status": "FREEAGENT"
    },
-   "drop": "Jeremiah Fears",
+   "drop": "AJ Dybantsa",
    "ir": null
   }
  ],
