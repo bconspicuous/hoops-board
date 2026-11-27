@@ -1,63 +1,75 @@
 {
- "asOfET": "2026-11-26T23:45-05:00",
+ "asOfET": "2026-11-27T04:06-05:00",
  "days": {
-  "2026-11-25": [
+  "2026-11-26": [],
+  "2026-11-27": [
    {
-    "id": "401909317",
-    "start": "2026-11-25T22:00Z",
-    "name": "MIA @ PHI",
-    "state": "post"
+    "id": "401909326",
+    "start": "2026-11-28T00:00Z",
+    "name": "MIA @ NY",
+    "state": "pre"
    },
    {
-    "id": "401909318",
-    "start": "2026-11-26T00:00Z",
-    "name": "CHI @ CHA",
-    "state": "post"
+    "id": "401909327",
+    "start": "2026-11-28T00:30Z",
+    "name": "MIL @ DET",
+    "state": "pre"
    },
    {
-    "id": "401909319",
-    "start": "2026-11-26T00:30Z",
-    "name": "CLE @ NY",
-    "state": "post"
+    "id": "401909328",
+    "start": "2026-11-28T00:30Z",
+    "name": "PHI @ IND",
+    "state": "pre"
    },
    {
-    "id": "401909320",
-    "start": "2026-11-26T00:30Z",
-    "name": "MIN @ OKC",
-    "state": "post"
+    "id": "401909329",
+    "start": "2026-11-28T00:30Z",
+    "name": "BKN @ TOR",
+    "state": "pre"
    },
    {
-    "id": "401909321",
-    "start": "2026-11-26T01:00Z",
-    "name": "LAC @ MEM",
-    "state": "post"
+    "id": "401909330",
+    "start": "2026-11-28T01:00Z",
+    "name": "ATL @ BOS",
+    "state": "pre"
    },
    {
-    "id": "401909322",
-    "start": "2026-11-26T01:00Z",
-    "name": "BKN @ MIL",
-    "state": "post"
+    "id": "401909331",
+    "start": "2026-11-28T01:30Z",
+    "name": "MEM @ MIN",
+    "state": "pre"
    },
    {
-    "id": "401909323",
-    "start": "2026-11-26T01:30Z",
-    "name": "PHX @ HOU",
-    "state": "post"
+    "id": "401909332",
+    "start": "2026-11-28T02:00Z",
+    "name": "DAL @ PHX",
+    "state": "pre"
    },
    {
-    "id": "401909324",
-    "start": "2026-11-26T03:00Z",
-    "name": "SAC @ GS",
-    "state": "post"
+    "id": "401909333",
+    "start": "2026-11-28T02:30Z",
+    "name": "LAL @ SA",
+    "state": "pre"
    },
    {
-    "id": "401909325",
-    "start": "2026-11-26T03:00Z",
-    "name": "SA @ POR",
-    "state": "post"
+    "id": "401909334",
+    "start": "2026-11-28T02:30Z",
+    "name": "DEN @ UTAH",
+    "state": "pre"
+   },
+   {
+    "id": "401909335",
+    "start": "2026-11-28T02:30Z",
+    "name": "NO @ LAC",
+    "state": "pre"
+   },
+   {
+    "id": "401909336",
+    "start": "2026-11-28T02:30Z",
+    "name": "GS @ POR",
+    "state": "pre"
    }
-  ],
-  "2026-11-26": []
+  ]
  },
  "source": "https://site.web.api.espn.com"
 }
