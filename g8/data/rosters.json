@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-27T19:45+09:00",
+ "asOf": "2026-11-28T06:39+09:00",
  "leagueId": "751654965",
  "season": 2027,
  "teams": [
@@ -177,7 +177,8 @@
     "Jabari Smith Jr.",
     "Christian Braun",
     "Ajay Mitchell",
-    "Pelle Larsson"
+    "Pelle Larsson",
+    "Andrew Nembhard"
    ],
    "ir": [
     "Jaylen Brown",
@@ -194,9 +195,10 @@
     "2": 7,
     "3": 6,
     "4": 7,
-    "5": 7
+    "5": 7,
+    "6": 1
    },
-   "acqTotal": 33
+   "acqTotal": 34
   },
   {
    "name": "Kunhyo's Chokeslam",
@@ -216,7 +218,7 @@
     "Stephon Castle",
     "Anthony Black",
     "Julian Champagnie",
-    "Devin Vassell"
+    "Josh Hart"
    ],
    "ir": [
     "Anthony Edwards",
@@ -234,9 +236,9 @@
     "3": 1,
     "4": 7,
     "5": 1,
-    "6": 3
+    "6": 4
    },
-   "acqTotal": 20
+   "acqTotal": 21
   },
   {
    "name": "Songpa Park kezhang",
@@ -285,7 +287,6 @@
    "players": [
     "Jayson Tatum",
     "Cooper Flagg",
-    "LaMelo Ball",
     "Kevin Durant",
     "Ty Jerome",
     "Ivica Zubac",
@@ -295,9 +296,12 @@
     "Yaxel Lendeborg",
     "Davion Mitchell",
     "Keyonte George",
-    "Moussa Diabate"
+    "Moussa Diabate",
+    "Matisse Thybulle"
    ],
-   "ir": [],
+   "ir": [
+    "LaMelo Ball"
+   ],
    "record": {
     "wins": 31,
     "losses": 24,
@@ -309,19 +313,20 @@
     "2": 7,
     "3": 3,
     "4": 3,
-    "5": 2
+    "5": 2,
+    "6": 1
    },
-   "acqTotal": 21
+   "acqTotal": 22
   }
  ],
  "status": {
   "O": [
    "Dejounte Murray",
    "Paolo Banchero",
+   "Damian Lillard",
    "Stephen Curry",
    "Evan Mobley",
    "Lauri Markkanen",
-   "Austin Reaves",
    "Norman Powell",
    "Chet Holmgren",
    "Grayson Allen",
@@ -339,17 +344,20 @@
    "Tyrese Haliburton",
    "Caleb Wilson",
    "CJ McCollum",
+   "LaMelo Ball",
    "Kon Knueppel",
    "RJ Barrett",
    "Jaren Jackson Jr.",
+   "Kevin Porter Jr.",
    "Tobias Harris",
    "Jalen Williams",
    "Kristaps Porzingis",
    "Jimmy Butler III",
    "Mitchell Robinson",
-   "Scotty Pippen Jr.",
    "Jusuf Nurkic",
+   "Scotty Pippen Jr.",
    "Jerami Grant",
+   "Andre Drummond",
    "Cason Wallace",
    "Shaedon Sharpe",
    "Bennedict Mathurin",
@@ -358,30 +366,33 @@
    "Nolan Traore",
    "Dennis Schroder",
    "Donte DiVincenzo",
+   "Kasparas Jakucionis",
    "Maxime Raynaud",
    "Bradley Beal",
    "Jaylin Williams",
    "Moritz Wagner",
    "GG Jackson",
+   "Miles McBride",
    "Justin Champagnie",
-   "Ben Simmons"
+   "Ben Simmons",
+   "Jordan Clarkson"
   ],
   "DTD": [
    "Giannis Antetokounmpo",
    "De'Aaron Fox",
+   "Karl-Anthony Towns",
+   "Kyrie Irving",
    "Zach LaVine",
+   "Anthony Black",
    "Joel Embiid",
-   "LaMelo Ball",
    "Jalen Smith",
-   "Andrew Wiggins",
    "Zach Edey",
    "Kelly Oubre Jr.",
+   "Mo Bamba",
    "Jaxson Hayes",
    "T.J. McConnell",
-   "Andre Drummond",
    "Isaiah Stewart",
-   "Ryan Kalkbrenner",
-   "Miles McBride"
+   "Ryan Kalkbrenner"
   ]
  }
 }
