@@ -10,10 +10,10 @@
   "Day'Ron Sharpe"
  ],
  "base": {
-  "wk": 5.778,
-  "champ": 0.4468,
-  "p1": 0.3734,
-  "epct": 0.5577
+  "wk": 5.78,
+  "champ": 0.4471,
+  "p1": 0.3745,
+  "epct": 0.5578
  },
  "protect": [
   "Shai Gilgeous-Alexander",
@@ -43,8 +43,8 @@
    "drop": "Kyshawn George",
    "ir": null,
    "weekGain": 0.288,
-   "titleGain": 0.0424,
-   "p1Gain": 0.0763,
+   "titleGain": 0.043,
+   "p1Gain": 0.0759,
    "epctGain": 0.0068,
    "addTeam": "LAL",
    "addPos": "SF",
@@ -70,8 +70,8 @@
    "drop": "Brandon Miller",
    "ir": null,
    "weekGain": 0.165,
-   "titleGain": 0.0396,
-   "p1Gain": 0.1018,
+   "titleGain": 0.0403,
+   "p1Gain": 0.1023,
    "epctGain": 0.0063,
    "addTeam": "MEM",
    "addPos": "PG,SG",
@@ -97,8 +97,8 @@
    "drop": "Jeremiah Fears",
    "ir": null,
    "weekGain": 0.114,
-   "titleGain": 0.0365,
-   "p1Gain": 0.0324,
+   "titleGain": 0.0359,
+   "p1Gain": 0.0329,
    "epctGain": 0.003,
    "addTeam": "GSW",
    "addPos": "PF,C",
@@ -122,43 +122,39 @@
    "drop": "Kyshawn George",
    "ir": null,
    "wk": 0.288,
-   "title": 0.0424
+   "title": 0.043
   },
   {
    "add": "Cam Spencer",
    "drop": "Brandon Miller",
    "ir": null,
    "wk": 0.165,
-   "title": 0.0396
+   "title": 0.0403
   },
   {
    "add": "Al Horford",
    "drop": "Jeremiah Fears",
    "ir": null,
    "wk": 0.114,
-   "title": 0.0365
+   "title": 0.0359
   },
   {
    "add": "Collin Gillespie",
    "drop": "AJ Dybantsa",
    "ir": null,
-   "wk": 0.241,
-   "title": 0.0217
+   "wk": 0.24,
+   "title": 0.0218
   },
   {
    "add": "Brook Lopez",
    "drop": "Day'Ron Sharpe",
    "ir": null,
-   "wk": 0.152,
-   "title": -0.0095
+   "wk": 0.151,
+   "title": -0.0102
   }
  ],
- "createdAt": "2026-11-27T04:46:04.608Z",
- "id": "20261127T0446",
+ "createdAt": "2026-11-27T10:46:22.288Z",
+ "id": "20261127T1046",
  "rosterSig": "AJ Dybantsa|Anthony Davis|Brandon Miller|Day'Ron Sharpe|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Kyshawn George|Michael Porter Jr.|Miles Bridges|Shai Gilgeous-Alexander|Tyler Herro#Austin Reaves|Norman Powell",
- "newItems": [
-  1,
-  2,
-  3
- ]
+ "newItems": []
 }

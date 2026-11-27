@@ -1,30 +1,94 @@
 {
- "date": "2026-11-26",
+ "date": "2026-11-27",
  "week": 6,
- "status": "no-games",
- "roster": [
+ "opp": "ChaRDaddy",
+ "status": "nochange",
+ "playing": 7,
+ "starters": [
+  "Karl-Anthony Towns",
+  "Kyrie Irving",
+  "Michael Porter Jr.",
+  "Jeremiah Fears",
+  "Tyler Herro",
+  "Miles Bridges",
+  "Day'Ron Sharpe"
+ ],
+ "bench": [],
+ "dtd": [],
+ "expected": {
+  "best": 5.788,
+  "current": 5.788,
+  "gain": 0,
+  "pcBest": {
+   "FG": 0.018,
+   "FT": 0.989,
+   "TPM": 0.479,
+   "REB": 0.907,
+   "AST": 0.075,
+   "STL": 0.423,
+   "BLK": 0.786,
+   "TO": 0.338,
+   "DD": 0.905,
+   "PTS": 0.139,
+   "PF": 0.73
+  },
+  "pcCurrent": {
+   "FG": 0.018,
+   "FT": 0.989,
+   "TPM": 0.479,
+   "REB": 0.907,
+   "AST": 0.075,
+   "STL": 0.423,
+   "BLK": 0.786,
+   "TO": 0.338,
+   "DD": 0.905,
+   "PTS": 0.139,
+   "PF": 0.73
+  }
+ },
+ "alternatives": [],
+ "currentBench": [],
+ "sameStarters": true,
+ "moves": [],
+ "slots": [
   {
-   "name": "Shai Gilgeous-Alexander",
+   "name": "Tyler Herro",
    "slot": "PG"
+  },
+  {
+   "name": "Jeremiah Fears",
+   "slot": "SG"
+  },
+  {
+   "name": "Miles Bridges",
+   "slot": "SF"
+  },
+  {
+   "name": "Michael Porter Jr.",
+   "slot": "PF"
   },
   {
    "name": "Karl-Anthony Towns",
    "slot": "C"
   },
   {
+   "name": "Kyrie Irving",
+   "slot": "G"
+  },
+  {
    "name": "Anthony Davis",
-   "slot": "PF"
+   "slot": "F"
+  },
+  {
+   "name": "Shai Gilgeous-Alexander",
+   "slot": "UTIL"
   },
   {
    "name": "James Harden",
    "slot": "UTIL"
   },
   {
-   "name": "Kyrie Irving",
-   "slot": "UTIL"
-  },
-  {
-   "name": "Michael Porter Jr.",
+   "name": "Day'Ron Sharpe",
    "slot": "UTIL"
   },
   {
@@ -32,30 +96,14 @@
    "slot": "BE"
   },
   {
-   "name": "Jeremiah Fears",
-   "slot": "BE"
-  },
-  {
    "name": "AJ Dybantsa",
    "slot": "BE"
   },
   {
-   "name": "Tyler Herro",
-   "slot": "G"
-  },
-  {
-   "name": "Miles Bridges",
-   "slot": "SF"
-  },
-  {
    "name": "Kyshawn George",
-   "slot": "F"
-  },
-  {
-   "name": "Cam Spencer",
-   "slot": "SG"
+   "slot": "BE"
   }
  ],
- "id": "2026-11-26T2146Z",
- "createdAt": "2026-11-26T21:46:19.415Z"
+ "id": "2026-11-27T1046Z",
+ "createdAt": "2026-11-27T10:46:29.328Z"
 }
