@@ -1,6 +1,6 @@
 {
- "asOf": "2026-11-27T13:45+09:00",
- "scoringPeriodId": 38,
+ "asOf": "2026-11-27T18:10+09:00",
+ "scoringPeriodId": 39,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
   "waiverHours": 24,
@@ -1425,139 +1425,9 @@
     }
    ],
    "bid": 0
-  },
-  {
-   "id": "0bc7dd92-84c5-4dee-8098-c548745879e2",
-   "team": "GGAM",
-   "mine": false,
-   "type": "ROSTER",
-   "status": "EXECUTED",
-   "proposed": "2026-11-20 15:13 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "DROP",
-     "player": "Bones Hyland",
-     "from": "GGAM",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "35e329b8-3591-471b-af80-3d6a88da9a4b",
-   "team": "Doo",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-20 10:27 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "John Collins",
-     "from": "FA",
-     "to": "Doo"
-    },
-    {
-     "type": "DROP",
-     "player": "Brayden Burries",
-     "from": "Doo",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "cd003584-e3b5-47fa-a779-c8b30b13e4e3",
-   "team": "Doo",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-20 09:47 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Brayden Burries",
-     "from": "FA",
-     "to": "Doo"
-    },
-    {
-     "type": "DROP",
-     "player": "RJ Barrett",
-     "from": "Doo",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "072954a7-4c16-49d3-880d-3ff0a0f8ab4b",
-   "team": "GGAM",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-20 09:02 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Kasparas Jakucionis",
-     "from": "FA",
-     "to": "GGAM"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "129d5820-5a13-4f68-95f8-d2ed7d01a8d1",
-   "team": "IYH",
-   "mine": false,
-   "type": "WAIVER",
-   "status": "EXECUTED",
-   "proposed": "2026-11-19 18:08 KST",
-   "processed": "2026-11-19 18:08 KST",
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Wendell Carter Jr.",
-     "from": "FA",
-     "to": "IYH"
-    },
-    {
-     "type": "DROP",
-     "player": "Zach Edey",
-     "from": "IYH",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
   }
  ],
  "onWaivers": [
-  {
-   "id": 3064290,
-   "name": "Aaron Gordon",
-   "pro": "DEN",
-   "waiverClears": "2026-11-27 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "GGAM",
-    "at": "2026-11-25 23:02 KST"
-   }
-  },
-  {
-   "id": 4576087,
-   "name": "Peyton Watson",
-   "pro": "CLE",
-   "waiverClears": "2026-11-27 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "SONG",
-    "at": "2026-11-26 09:01 KST"
-   }
-  },
   {
    "id": 4278585,
    "name": "Collin Gillespie",
@@ -1567,50 +1437,6 @@
    "droppedBy": {
     "by": "GTD",
     "at": "2026-11-26 18:11 KST"
-   }
-  },
-  {
-   "id": 5082206,
-   "name": "Brayden Burries",
-   "pro": "MIL",
-   "waiverClears": "2026-11-27 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "SONG",
-    "at": "2026-11-26 17:59 KST"
-   }
-  },
-  {
-   "id": 5041951,
-   "name": "Meleek Thomas",
-   "pro": "CLE",
-   "waiverClears": "2026-11-27 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "JYP",
-    "at": "2026-11-26 12:14 KST"
-   }
-  },
-  {
-   "id": 5211175,
-   "name": "Zaccharie Risacher",
-   "pro": "DAL",
-   "waiverClears": "2026-11-27 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "KWNG",
-    "at": "2026-11-26 11:06 KST"
-   }
-  },
-  {
-   "id": 5105839,
-   "name": "Brice Sensabaugh",
-   "pro": "UTA",
-   "waiverClears": "2026-11-27 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "TBG",
-    "at": "2026-11-25 22:47 KST"
    }
   }
  ],

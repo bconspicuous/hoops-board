@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-27T13:45+09:00",
+ "asOf": "2026-11-27T18:09+09:00",
  "leagueId": "504060248",
  "season": 2027,
  "teams": [
@@ -45,7 +45,7 @@
      "6": 1
     },
     "misc": 0,
-    "moveToActive": 208,
+    "moveToActive": 213,
     "moveToIR": 6,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -94,7 +94,7 @@
      "6": 1
     },
     "misc": 0,
-    "moveToActive": 120,
+    "moveToActive": 122,
     "moveToIR": 1,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -143,7 +143,7 @@
      "6": 5
     },
     "misc": 0,
-    "moveToActive": 168,
+    "moveToActive": 171,
     "moveToIR": 5,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -192,7 +192,7 @@
      "6": 3
     },
     "misc": 0,
-    "moveToActive": 126,
+    "moveToActive": 128,
     "moveToIR": 16,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -239,7 +239,7 @@
      "4": 1
     },
     "misc": 0,
-    "moveToActive": 102,
+    "moveToActive": 104,
     "moveToIR": 3,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -288,7 +288,7 @@
      "6": 3
     },
     "misc": 0,
-    "moveToActive": 123,
+    "moveToActive": 124,
     "moveToIR": 2,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -337,7 +337,7 @@
      "6": 2
     },
     "misc": 0,
-    "moveToActive": 125,
+    "moveToActive": 126,
     "moveToIR": 2,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -386,7 +386,7 @@
      "6": 3
     },
     "misc": 0,
-    "moveToActive": 131,
+    "moveToActive": 133,
     "moveToIR": 10,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -435,7 +435,7 @@
      "6": 1
     },
     "misc": 0,
-    "moveToActive": 105,
+    "moveToActive": 108,
     "moveToIR": 4,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -483,7 +483,7 @@
      "6": 3
     },
     "misc": 0,
-    "moveToActive": 98,
+    "moveToActive": 100,
     "moveToIR": 4,
     "paid": 0.0,
     "teamCharges": 0.0,
