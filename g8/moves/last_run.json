@@ -1,7 +1,7 @@
 {
- "planId": "20261127T1046",
+ "planId": "20261127T2146",
  "mode": "dry",
- "at": "2026-11-27T05:47-05:00",
+ "at": "2026-11-27T16:47-05:00",
  "items": [
   {
    "n": 1,
@@ -11,10 +11,10 @@
    ],
    "ok": true,
    "add": {
-    "name": "Matisse Thybulle",
+    "name": "Robert Williams III",
     "status": "FREEAGENT"
    },
-   "drop": "Kyshawn George",
+   "drop": "Brandon Miller",
    "ir": null
   },
   {
@@ -25,10 +25,10 @@
    ],
    "ok": true,
    "add": {
-    "name": "Cam Spencer",
+    "name": "Devin Vassell",
     "status": "WAIVERS"
    },
-   "drop": "Brandon Miller",
+   "drop": "Kyshawn George",
    "ir": null
   },
   {
@@ -39,16 +39,30 @@
    ],
    "ok": true,
    "add": {
-    "name": "Al Horford",
+    "name": "Rudy Gobert",
     "status": "FREEAGENT"
    },
-   "drop": "Jeremiah Fears",
+   "drop": "Day'Ron Sharpe",
    "ir": null
+  },
+  {
+   "n": 4,
+   "kind": "activate",
+   "checks": [
+    "✓ checks passed"
+   ],
+   "ok": true,
+   "add": null,
+   "drop": "Kyshawn George",
+   "ir": "Austin Reaves"
   }
  ],
  "ok": true,
  "scoringPeriodId": 39,
  "matchupPeriod": 6,
  "addsUsed": 4,
- "rosterMatchesPlan": true
+ "rosterMatchesPlan": true,
+ "irNotOut": [
+  "Austin Reaves (ACTIVE)"
+ ]
 }
