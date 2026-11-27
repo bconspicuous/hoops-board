@@ -1,19 +1,19 @@
 {
  "week": 6,
  "opp": "ChaRDaddy",
- "acqLeft": 4,
+ "acqLeft": 3,
  "dropCandidates": [
-  "Michael Porter Jr.",
   "Brandon Miller",
   "Jeremiah Fears",
   "AJ Dybantsa",
-  "Kyshawn George"
+  "Kyshawn George",
+  "Day'Ron Sharpe"
  ],
  "base": {
-  "wk": 5.768,
-  "champ": 0.4072,
-  "p1": 0.4109,
-  "epct": 0.5558
+  "wk": 5.778,
+  "champ": 0.4468,
+  "p1": 0.3734,
+  "epct": 0.5577
  },
  "protect": [
   "Shai Gilgeous-Alexander",
@@ -23,56 +23,29 @@
   "James Harden",
   "Tyler Herro",
   "Miles Bridges",
-  "Cam Spencer"
+  "Michael Porter Jr."
  ],
  "droppable": [
-  "Michael Porter Jr.",
   "Brandon Miller",
   "Jeremiah Fears",
   "AJ Dybantsa",
-  "Kyshawn George"
+  "Kyshawn George",
+  "Day'Ron Sharpe"
  ],
  "flags": [],
  "items": [
   {
    "n": 1,
    "kind": "add/drop",
-   "add": "Robert Williams III",
-   "addEspnId": 4066211,
-   "addOwner": "FA",
-   "drop": "Jeremiah Fears",
-   "ir": null,
-   "weekGain": 0.163,
-   "titleGain": 0.1008,
-   "p1Gain": 0.1473,
-   "epctGain": 0.0125,
-   "addTeam": "POR",
-   "addPos": "C",
-   "dropValue": -4.55,
-   "status": "proposed",
-   "conflicts": [],
-   "addHealth": {
-    "status": "정상",
-    "injury": null,
-    "returnDate": null,
-    "report": null,
-    "g": 15,
-    "min": 16.6
-   },
-   "firstProposedAt": "2026-11-26T10:46:29.738Z"
-  },
-  {
-   "n": 2,
-   "kind": "add/drop",
    "add": "Matisse Thybulle",
    "addEspnId": 3907498,
    "addOwner": "FA",
    "drop": "Kyshawn George",
    "ir": null,
-   "weekGain": 0.324,
-   "titleGain": 0.0468,
-   "p1Gain": 0.0617,
-   "epctGain": 0.0074,
+   "weekGain": 0.288,
+   "titleGain": 0.0424,
+   "p1Gain": 0.0763,
+   "epctGain": 0.0068,
    "addTeam": "LAL",
    "addPos": "SF",
    "dropValue": -5.19,
@@ -86,22 +59,22 @@
     "g": 18,
     "min": 24.9
    },
-   "firstProposedAt": "2026-11-26T10:46:29.738Z"
+   "firstProposedAt": "2026-11-27T04:46:04.608Z"
   },
   {
-   "n": 3,
+   "n": 2,
    "kind": "add/drop",
-   "add": "Brook Lopez",
-   "addEspnId": 3448,
+   "add": "Cam Spencer",
+   "addEspnId": 4433083,
    "addOwner": "FA",
    "drop": "Brandon Miller",
    "ir": null,
-   "weekGain": 0.228,
-   "titleGain": 0.0328,
-   "p1Gain": 0.0759,
-   "epctGain": 0.0044,
-   "addTeam": "LAC",
-   "addPos": "C",
+   "weekGain": 0.165,
+   "titleGain": 0.0396,
+   "p1Gain": 0.1018,
+   "epctGain": 0.0063,
+   "addTeam": "MEM",
+   "addPos": "PG,SG",
    "dropValue": -4.14,
    "status": "proposed",
    "conflicts": [],
@@ -110,51 +83,82 @@
     "injury": null,
     "returnDate": null,
     "report": null,
-    "g": 17,
-    "min": 24
+    "g": 19,
+    "min": 22.9
    },
-   "firstProposedAt": "2026-11-26T10:46:29.738Z"
+   "firstProposedAt": "2026-11-27T04:46:04.608Z"
+  },
+  {
+   "n": 3,
+   "kind": "add/drop",
+   "add": "Al Horford",
+   "addEspnId": 3213,
+   "addOwner": "FA",
+   "drop": "Jeremiah Fears",
+   "ir": null,
+   "weekGain": 0.114,
+   "titleGain": 0.0365,
+   "p1Gain": 0.0324,
+   "epctGain": 0.003,
+   "addTeam": "GSW",
+   "addPos": "PF,C",
+   "dropValue": -4.55,
+   "status": "proposed",
+   "conflicts": [],
+   "addHealth": {
+    "status": "정상",
+    "injury": null,
+    "returnDate": null,
+    "report": null,
+    "g": 15,
+    "min": 16.7
+   },
+   "firstProposedAt": "2026-11-27T04:46:04.608Z"
   }
  ],
  "screened": [
   {
-   "add": "Robert Williams III",
-   "drop": "Jeremiah Fears",
-   "ir": null,
-   "wk": 0.163,
-   "title": 0.1008
-  },
-  {
    "add": "Matisse Thybulle",
    "drop": "Kyshawn George",
    "ir": null,
-   "wk": 0.324,
-   "title": 0.0468
+   "wk": 0.288,
+   "title": 0.0424
   },
   {
-   "add": "Brook Lopez",
+   "add": "Cam Spencer",
    "drop": "Brandon Miller",
    "ir": null,
-   "wk": 0.228,
-   "title": 0.0328
+   "wk": 0.165,
+   "title": 0.0396
   },
   {
-   "add": "Josh Hart",
-   "drop": "Michael Porter Jr.",
+   "add": "Al Horford",
+   "drop": "Jeremiah Fears",
    "ir": null,
-   "wk": 0.036,
-   "title": 0.0469
+   "wk": 0.114,
+   "title": 0.0365
   },
   {
    "add": "Collin Gillespie",
    "drop": "AJ Dybantsa",
    "ir": null,
-   "wk": 0.251,
-   "title": -0.0062
+   "wk": 0.241,
+   "title": 0.0217
+  },
+  {
+   "add": "Brook Lopez",
+   "drop": "Day'Ron Sharpe",
+   "ir": null,
+   "wk": 0.152,
+   "title": -0.0095
   }
  ],
- "createdAt": "2026-11-26T21:46:14.387Z",
- "id": "20261126T2146",
- "rosterSig": "AJ Dybantsa|Anthony Davis|Brandon Miller|Cam Spencer|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Kyshawn George|Michael Porter Jr.|Miles Bridges|Shai Gilgeous-Alexander|Tyler Herro#Austin Reaves|Norman Powell",
- "newItems": []
+ "createdAt": "2026-11-27T04:46:04.608Z",
+ "id": "20261127T0446",
+ "rosterSig": "AJ Dybantsa|Anthony Davis|Brandon Miller|Day'Ron Sharpe|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Kyshawn George|Michael Porter Jr.|Miles Bridges|Shai Gilgeous-Alexander|Tyler Herro#Austin Reaves|Norman Powell",
+ "newItems": [
+  1,
+  2,
+  3
+ ]
 }
