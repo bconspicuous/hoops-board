@@ -1,24 +1,10 @@
 {
- "planId": "20261126T2146",
+ "planId": "20261127T0446",
  "mode": "dry",
- "at": "2026-11-26T16:46-05:00",
+ "at": "2026-11-26T23:46-05:00",
  "items": [
   {
    "n": 1,
-   "kind": "add/drop",
-   "checks": [
-    "✓ checks passed"
-   ],
-   "ok": true,
-   "add": {
-    "name": "Robert Williams III",
-    "status": "FREEAGENT"
-   },
-   "drop": "Jeremiah Fears",
-   "ir": null
-  },
-  {
-   "n": 2,
    "kind": "add/drop",
    "checks": [
     "✓ checks passed"
@@ -32,6 +18,20 @@
    "ir": null
   },
   {
+   "n": 2,
+   "kind": "add/drop",
+   "checks": [
+    "✓ checks passed"
+   ],
+   "ok": true,
+   "add": {
+    "name": "Cam Spencer",
+    "status": "WAIVERS"
+   },
+   "drop": "Brandon Miller",
+   "ir": null
+  },
+  {
    "n": 3,
    "kind": "add/drop",
    "checks": [
@@ -39,16 +39,16 @@
    ],
    "ok": true,
    "add": {
-    "name": "Brook Lopez",
+    "name": "Al Horford",
     "status": "FREEAGENT"
    },
-   "drop": "Brandon Miller",
+   "drop": "Jeremiah Fears",
    "ir": null
   }
  ],
  "ok": true,
  "scoringPeriodId": 38,
  "matchupPeriod": 6,
- "addsUsed": 3,
+ "addsUsed": 4,
  "rosterMatchesPlan": true
 }
