@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-28T13:45+09:00",
+ "asOf": "2026-11-28T17:28+09:00",
  "source": "site.api.espn.com nba/injuries",
  "error": null,
  "injuries": [
@@ -254,6 +254,20 @@
    "fantasyStatus": "OUT",
    "short": "Mobley will receive treatment and participate in rehab after the team confirmed a diagnosis of a right great toe sprain, and he'll be re-evaluated in the next 7-to-10 days.",
    "long": "Mobley is set to miss his third straight game Monday since suffering the injury, and he's slated to miss at least the next week while on the mend. The Cavs should have a better idea on when he'll return to the court as he begins to progress through the treatment and rehab phase."
+  },
+  {
+   "player": "Caleb Martin",
+   "team": "DAL",
+   "status": "Day-To-Day",
+   "date": "2026-11-28T05:35Z",
+   "type": "day-to-day",
+   "returnDate": "2026-11-30",
+   "detail": "Sprain",
+   "side": "Left",
+   "injury": "Ankle",
+   "fantasyStatus": "GTD",
+   "short": "Martin didn't return for the second half of Friday's win over the Suns due to a left ankle sprain, Grant Afseth of DallasHoopsJournal.com reports.",
+   "long": "Martin finished the game with five points (2-6 FG, 1-5 3Pt), three rebounds, four assists and a steal across 14 minutes. Further tests will be needed to determine the severity of the injury, but Martin should be considered questionable to face the Celtics on Monday."
   },
   {
    "player": "Kyrie Irving",
@@ -1010,6 +1024,34 @@
    "fantasyStatus": "OUT",
    "short": "Banchero is expected to be sidelined for the next four-to-six weeks due to a right high-ankle sprain, Shams Charania of ESPN reports.",
    "long": "Banchero left during Friday's loss against the Timberwolves due to an ankle injury, and follow-up tests have confirmed a high-ankle sprain for the fifth-year forward. With an extended absence expected, the Magic will have to rely more heavily on Franz Wagner and Desmond Bane offensively, and Tristan da Silva figures to be the top candidate to enter the Magic's starting lineup for as long as Banchero is sidelined."
+  },
+  {
+   "player": "Joel Embiid",
+   "team": "PHI",
+   "status": "Out",
+   "date": "2026-11-28T05:48Z",
+   "type": "out",
+   "returnDate": "2026-12-01",
+   "detail": "Plantar Fasciitis",
+   "side": "Right",
+   "injury": "Foot",
+   "fantasyStatus": "OUT",
+   "short": "Embiid has been ruled out for Saturday's game against the Rockets due to right foot plantar fasciitis management, Kris Rhim of ESPN.com reports.",
+   "long": "Embiid missed two games due to an illness before returning to the floor Friday to face the Pacers, but he is now in line for yet another absence to close out this back-to-back set. Jaylen Brown (hamstring) and LeBron James (back) have also been ruled out for Saturday's contest, leaving Tyrese Maxey and VJ Edgecombe as the team's top remaining scoring options."
+  },
+  {
+   "player": "LeBron James",
+   "team": "PHI",
+   "status": "Out",
+   "date": "2026-11-28T05:46Z",
+   "type": "out",
+   "returnDate": "2026-12-01",
+   "detail": null,
+   "side": null,
+   "injury": "Back",
+   "fantasyStatus": "OUT",
+   "short": "James (back injury management) won't be available for Saturday's game against the Rockets, according to Kris Rhim of ESPN.",
+   "long": "James will sit out the second leg of this back-to-back set after impressing in Friday's win over the Pacers, tallying 21 points (8-13 FG, 3-6 3Pt, 3-4 FT), seven rebounds, six assists and a block over 27 minutes. Dean Wade (hamstring) is questionable, while Joel Embiid (foot) and Jaylen Brown (hamstring) are out, so the 76ers will be depleted Saturday. Tyrese Maxey and VJ Edgecombe will have bigger roles on offense, while Jabari Walker, Dominick Barlow and Kentavious Caldwell-Pope will all see more minutes with James on the shelf."
   },
   {
    "player": "Dean Wade",
