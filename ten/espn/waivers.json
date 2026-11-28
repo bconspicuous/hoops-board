@@ -1,6 +1,6 @@
 {
- "asOf": "2026-11-28T13:45+09:00",
- "scoringPeriodId": 39,
+ "asOf": "2026-11-28T17:31+09:00",
+ "scoringPeriodId": 40,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
   "waiverHours": 24,
@@ -255,7 +255,7 @@
    "items": [
     {
      "type": "ADD",
-     "player": "4702382",
+     "player": "Tristan da Silva",
      "from": "FA",
      "to": "GGAM"
     },
@@ -987,7 +987,7 @@
     },
     {
      "type": "DROP",
-     "player": "4702382",
+     "player": "Tristan da Silva",
      "from": "SMS",
      "to": "FA"
     }
@@ -1377,120 +1377,6 @@
     }
    ],
    "bid": 0
-  },
-  {
-   "id": "dcc8623d-b890-498f-b1db-65ccc8f21a56",
-   "team": "Doo",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-21 12:12 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Aday Mara",
-     "from": "FA",
-     "to": "Doo"
-    },
-    {
-     "type": "DROP",
-     "player": "Mo Bamba",
-     "from": "Doo",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "c8acb049-50f3-4f23-9faa-90b9af96f784",
-   "team": "Doo",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-21 11:07 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Zach Edey",
-     "from": "FA",
-     "to": "Doo"
-    },
-    {
-     "type": "DROP",
-     "player": "John Collins",
-     "from": "Doo",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "65ca5aa3-8119-472c-8107-13777b793cbc",
-   "team": "GTD",
-   "mine": true,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-21 10:47 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Jonathan Kuminga",
-     "from": "FA",
-     "to": "GTD"
-    },
-    {
-     "type": "DROP",
-     "player": "Collin Gillespie",
-     "from": "GTD",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "92298ffd-a60b-4a39-94ea-16a91c51c423",
-   "team": "IYH",
-   "mine": false,
-   "type": "FREEAGENT",
-   "status": "EXECUTED",
-   "proposed": "2026-11-21 09:00 KST",
-   "processed": null,
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Neemias Queta",
-     "from": "FA",
-     "to": "IYH"
-    },
-    {
-     "type": "DROP",
-     "player": "Day'Ron Sharpe",
-     "from": "IYH",
-     "to": "FA"
-    }
-   ],
-   "bid": 0
-  },
-  {
-   "id": "166de6ea-19f7-4f94-ad2d-b4301f3c72e5",
-   "team": "GGAM",
-   "mine": false,
-   "type": "WAIVER",
-   "status": "EXECUTED",
-   "proposed": "2026-11-20 18:01 KST",
-   "processed": "2026-11-20 18:01 KST",
-   "items": [
-    {
-     "type": "ADD",
-     "player": "Quentin Grimes",
-     "from": "FA",
-     "to": "GGAM"
-    }
-   ],
-   "bid": 0
   }
  ],
  "onWaivers": [
@@ -1514,17 +1400,6 @@
    "droppedBy": {
     "by": "GGAM",
     "at": "2026-11-28 09:01 KST"
-   }
-  },
-  {
-   "id": 4278585,
-   "name": "Collin Gillespie",
-   "pro": "PHX",
-   "waiverClears": "2026-11-28 17:00 KST",
-   "inj": "ACTIVE",
-   "droppedBy": {
-    "by": "GTD",
-    "at": "2026-11-26 18:11 KST"
    }
   }
  ],
