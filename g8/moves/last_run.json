@@ -1,7 +1,7 @@
 {
  "planId": "20261127T2146",
  "mode": "dry",
- "at": "2026-11-27T16:47-05:00",
+ "at": "2026-11-27T23:46-05:00",
  "items": [
   {
    "n": 1,
@@ -35,32 +35,22 @@
    "n": 3,
    "kind": "add/drop",
    "checks": [
-    "✓ checks passed"
+    "✗ Rudy Gobert is no longer available (ONTEAM, team 7)",
+    "✗ not executable"
    ],
-   "ok": true,
+   "ok": false,
    "add": {
     "name": "Rudy Gobert",
-    "status": "FREEAGENT"
+    "status": "ONTEAM"
    },
    "drop": "Day'Ron Sharpe",
    "ir": null
-  },
-  {
-   "n": 4,
-   "kind": "activate",
-   "checks": [
-    "✓ checks passed"
-   ],
-   "ok": true,
-   "add": null,
-   "drop": "Kyshawn George",
-   "ir": "Austin Reaves"
   }
  ],
- "ok": true,
+ "ok": false,
  "scoringPeriodId": 39,
  "matchupPeriod": 6,
- "addsUsed": 4,
+ "addsUsed": 5,
  "rosterMatchesPlan": true,
  "irNotOut": [
   "Austin Reaves (ACTIVE)"
