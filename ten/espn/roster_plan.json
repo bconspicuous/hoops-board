@@ -4,10 +4,10 @@
  "spid": 40,
  "matchupPeriod": 6,
  "add": {
-  "id": 4277956,
-  "name": "Jordan Poole",
+  "id": 4395702,
+  "name": "Isaiah Joe",
   "status": "FREEAGENT",
-  "pro": "NOP",
+  "pro": "DET",
   "inj": "ACTIVE"
  },
  "type": "FREEAGENT",
@@ -16,12 +16,12 @@
   "matchup": "3/7"
  },
  "drop": {
-  "id": 4433247,
-  "name": "Jonathan Kuminga",
+  "id": 4397014,
+  "name": "Quentin Grimes",
   "slot": 12,
   "inj": "ACTIVE"
  },
- "hash": "509ad7f5e5",
+ "hash": "ac941416bb",
  "errors": [],
  "warnings": [
   "방출 선수는 24시간 웨이버 — 그 사이 다른 팀이 데려갈 수 있어 되돌릴 수 없음"
