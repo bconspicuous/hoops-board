@@ -1,13 +1,13 @@
 {
- "createdKST": "2026-11-28T13:50+09:00",
+ "createdKST": "2026-11-28T19:49+09:00",
  "mode": "plan",
- "spid": 39,
+ "spid": 40,
  "matchupPeriod": 6,
  "add": {
-  "id": 3102530,
-  "name": "Jusuf Nurkic",
+  "id": 4277956,
+  "name": "Jordan Poole",
   "status": "FREEAGENT",
-  "pro": "UTA",
+  "pro": "NOP",
   "inj": "ACTIVE"
  },
  "type": "FREEAGENT",
@@ -16,12 +16,12 @@
   "matchup": "3/7"
  },
  "drop": {
-  "id": 4711294,
-  "name": "Matas Buzelis",
+  "id": 4433247,
+  "name": "Jonathan Kuminga",
   "slot": 12,
   "inj": "ACTIVE"
  },
- "hash": "c7ee2d3179",
+ "hash": "509ad7f5e5",
  "errors": [],
  "warnings": [
   "방출 선수는 24시간 웨이버 — 그 사이 다른 팀이 데려갈 수 있어 되돌릴 수 없음"
