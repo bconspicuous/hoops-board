@@ -1,7 +1,7 @@
 {
- "planId": "20261127T2146",
+ "planId": "20261128T0446",
  "mode": "dry",
- "at": "2026-11-27T23:46-05:00",
+ "at": "2026-11-27T23:47-05:00",
  "items": [
   {
    "n": 1,
@@ -11,7 +11,7 @@
    ],
    "ok": true,
    "add": {
-    "name": "Robert Williams III",
+    "name": "Al Horford",
     "status": "FREEAGENT"
    },
    "drop": "Brandon Miller",
@@ -25,29 +25,25 @@
    ],
    "ok": true,
    "add": {
-    "name": "Devin Vassell",
-    "status": "WAIVERS"
+    "name": "Collin Gillespie",
+    "status": "FREEAGENT"
    },
-   "drop": "Kyshawn George",
+   "drop": "AJ Dybantsa",
    "ir": null
   },
   {
    "n": 3,
-   "kind": "add/drop",
+   "kind": "activate",
    "checks": [
-    "✗ Rudy Gobert is no longer available (ONTEAM, team 7)",
-    "✗ not executable"
+    "✓ checks passed"
    ],
-   "ok": false,
-   "add": {
-    "name": "Rudy Gobert",
-    "status": "ONTEAM"
-   },
-   "drop": "Day'Ron Sharpe",
-   "ir": null
+   "ok": true,
+   "add": null,
+   "drop": "Kyshawn George",
+   "ir": "Austin Reaves"
   }
  ],
- "ok": false,
+ "ok": true,
  "scoringPeriodId": 39,
  "matchupPeriod": 6,
  "addsUsed": 5,
