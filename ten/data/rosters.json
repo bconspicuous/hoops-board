@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-28T06:45+09:00",
+ "asOf": "2026-11-28T13:45+09:00",
  "leagueId": "504060248",
  "season": 2027,
  "teams": [
@@ -160,7 +160,6 @@
     "Domantas Sabonis",
     "Devin Booker",
     "Pascal Siakam",
-    "De'Aaron Fox",
     "Franz Wagner",
     "Zion Williamson",
     "Darius Acuff Jr.",
@@ -168,7 +167,8 @@
     "Devin Vassell",
     "Nic Claxton",
     "Daniel Gafford",
-    "Kelly Oubre Jr."
+    "Kelly Oubre Jr.",
+    "P.J. Washington"
    ],
    "ir": [
     "Jalen Smith"
@@ -181,18 +181,18 @@
    },
    "transactions": {
     "acquisitionBudgetSpent": 0,
-    "acquisitions": 22,
-    "drops": 21,
+    "acquisitions": 24,
+    "drops": 24,
     "matchupAcquisitionTotals": {
      "1": 6,
      "2": 2,
      "3": 1,
      "4": 4,
      "5": 6,
-     "6": 3
+     "6": 5
     },
     "misc": 0,
-    "moveToActive": 128,
+    "moveToActive": 129,
     "moveToIR": 16,
     "paid": 0.0,
     "teamCharges": 0.0,
@@ -495,6 +495,7 @@
   "O": [
    "Evan Mobley",
    "Paolo Banchero",
+   "Kyrie Irving",
    "Aday Mara",
    "Tyrese Haliburton",
    "Jalen Duren",
@@ -508,7 +509,6 @@
    "Stephen Curry",
    "Damian Lillard",
    "OG Anunoby",
-   "Dylan Harper",
    "Cameron Boozer",
    "Ja Morant",
    "Caleb Wilson",
@@ -519,15 +519,17 @@
    "Dejounte Murray",
    "CJ McCollum",
    "Jaren Jackson Jr.",
-   "Kevin Porter Jr.",
    "Tobias Harris",
+   "Kevin Porter Jr.",
    "Jalen Williams",
    "Duncan Robinson",
    "Kristaps Porzingis",
    "Jimmy Butler III",
+   "Ja'Kobe Walter",
+   "Mo Bamba",
    "Mitchell Robinson",
-   "Jusuf Nurkic",
    "Scotty Pippen Jr.",
+   "T.J. McConnell",
    "Jerami Grant",
    "Andre Drummond",
    "Cason Wallace",
@@ -536,38 +538,30 @@
    "Mark Williams",
    "Dereck Lively II",
    "Nolan Traore",
+   "Isaiah Stewart",
    "Dennis Schroder",
    "Donte DiVincenzo",
    "Kasparas Jakucionis",
    "Maxime Raynaud",
    "Bradley Beal",
    "Jaylin Williams",
+   "Dean Wade",
+   "Gui Santos",
    "Moritz Wagner",
    "GG Jackson",
    "Miles McBride",
    "Justin Champagnie",
    "Ben Simmons",
+   "Yanic Konan Niederhauser",
    "Jordan Clarkson",
    "Sergio de Larrea",
    "Vit Krejci",
-   "Moses Moody",
-   "Jayden Quaintance"
+   "Moses Moody"
   ],
   "DTD": [
-   "Karl-Anthony Towns",
-   "Kyrie Irving",
-   "De'Aaron Fox",
    "Jalen Smith",
-   "Kelly Oubre Jr.",
-   "Giannis Antetokounmpo",
    "Anthony Black",
-   "Joel Embiid",
    "Zach LaVine",
-   "Zach Edey",
-   "Mo Bamba",
-   "Jaxson Hayes",
-   "T.J. McConnell",
-   "Isaiah Stewart",
    "Ryan Kalkbrenner"
   ]
  }

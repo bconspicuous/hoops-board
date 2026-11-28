@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-28T06:46+09:00",
+ "asOf": "2026-11-28T13:45+09:00",
  "scoringPeriodId": 39,
  "rules": {
   "acquisitionType": "WAIVERS_TRADITIONAL",
@@ -52,7 +52,7 @@
    "team": "GGAM",
    "name": "Garibong CHaRdaddy",
    "rank": 6,
-   "acq": 22
+   "acq": 24
   },
   {
    "team": "SMS",
@@ -226,6 +226,72 @@
   }
  ],
  "transactions": [
+  {
+   "id": "e7069045-a977-49be-a63a-3ed8bcadbdf7",
+   "team": "GGAM",
+   "mine": false,
+   "type": "ROSTER",
+   "status": "EXECUTED",
+   "proposed": "2026-11-28 13:37 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "DROP",
+     "player": "P.J. Washington",
+     "from": "GGAM",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "77c03b4f-b8ad-4472-8a1d-09c0e293056d",
+   "team": "GGAM",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-28 09:01 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "4702382",
+     "from": "FA",
+     "to": "GGAM"
+    },
+    {
+     "type": "DROP",
+     "player": "Daniel Gafford",
+     "from": "GGAM",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
+  {
+   "id": "d73de676-94aa-4fa6-a699-9a20562334e1",
+   "team": "GGAM",
+   "mine": false,
+   "type": "FREEAGENT",
+   "status": "EXECUTED",
+   "proposed": "2026-11-28 08:49 KST",
+   "processed": null,
+   "items": [
+    {
+     "type": "ADD",
+     "player": "P.J. Washington",
+     "from": "FA",
+     "to": "GGAM"
+    },
+    {
+     "type": "DROP",
+     "player": "De'Aaron Fox",
+     "from": "GGAM",
+     "to": "FA"
+    }
+   ],
+   "bid": 0
+  },
   {
    "id": "9b9e0548-6b46-4d79-b0ec-27f7649ce478",
    "team": "GTD",
@@ -921,7 +987,7 @@
     },
     {
      "type": "DROP",
-     "player": "Tristan da Silva",
+     "player": "4702382",
      "from": "SMS",
      "to": "FA"
     }
@@ -1428,6 +1494,28 @@
   }
  ],
  "onWaivers": [
+  {
+   "id": 4066259,
+   "name": "De'Aaron Fox",
+   "pro": "SAS",
+   "waiverClears": "2026-11-29 17:00 KST",
+   "inj": "ACTIVE",
+   "droppedBy": {
+    "by": "GGAM",
+    "at": "2026-11-28 08:49 KST"
+   }
+  },
+  {
+   "id": 4278049,
+   "name": "Daniel Gafford",
+   "pro": "DAL",
+   "waiverClears": "2026-11-29 17:00 KST",
+   "inj": "ACTIVE",
+   "droppedBy": {
+    "by": "GGAM",
+    "at": "2026-11-28 09:01 KST"
+   }
+  },
   {
    "id": 4278585,
    "name": "Collin Gillespie",
