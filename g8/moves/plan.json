@@ -7,21 +7,21 @@
   "Jeremiah Fears",
   "AJ Dybantsa",
   "Kyshawn George",
-  "Day'Ron Sharpe"
+  "Fred VanVleet"
  ],
  "base": {
-  "wk": 5.602,
-  "champ": 0.4057,
-  "p1": 0.4169,
-  "epct": 0.5583
+  "wk": 5.203,
+  "champ": 0.3706,
+  "p1": 0.3888,
+  "epct": 0.5542
  },
  "protect": [
   "Shai Gilgeous-Alexander",
   "Anthony Davis",
   "Karl-Anthony Towns",
-  "Kyrie Irving",
   "James Harden",
   "Tyler Herro",
+  "Austin Reaves",
   "Miles Bridges",
   "Michael Porter Jr."
  ],
@@ -30,32 +30,25 @@
   "Jeremiah Fears",
   "AJ Dybantsa",
   "Kyshawn George",
-  "Day'Ron Sharpe"
+  "Fred VanVleet"
  ],
- "flags": [
-  {
-   "kind": "ir-ineligible",
-   "player": "Austin Reaves",
-   "status": "정상",
-   "note": "IR 선수가 O가 아님 — ESPN이 영입을 막을 수 있음(감독 판단: DTD는 영입 가능). 첫 사례에서 실제 동작을 기록"
-  }
- ],
+ "flags": [],
  "items": [
   {
    "n": 1,
    "kind": "add/drop",
-   "add": "Al Horford",
-   "addEspnId": 3213,
+   "add": "Nikola Vucevic",
+   "addEspnId": 6478,
    "addOwner": "FA",
-   "drop": "Brandon Miller",
+   "drop": "Jeremiah Fears",
    "ir": null,
-   "weekGain": 0.187,
-   "titleGain": 0.0333,
-   "p1Gain": 0.0393,
-   "epctGain": 0.0042,
-   "addTeam": "GSW",
-   "addPos": "PF,C",
-   "dropValue": -4.15,
+   "weekGain": 0.142,
+   "titleGain": 0.0343,
+   "p1Gain": -0.0109,
+   "epctGain": 0.0033,
+   "addTeam": "ORL",
+   "addPos": "C",
+   "dropValue": -4.7,
    "status": "proposed",
    "conflicts": [],
    "addHealth": {
@@ -63,10 +56,10 @@
     "injury": null,
     "returnDate": null,
     "report": null,
-    "g": 16,
-    "min": 16.6
+    "g": 14,
+    "min": 11.4
    },
-   "firstProposedAt": "2026-11-28T04:46:20.706Z"
+   "firstProposedAt": "2026-11-28T10:46:20.501Z"
   },
   {
    "n": 2,
@@ -74,15 +67,15 @@
    "add": "Collin Gillespie",
    "addEspnId": 4278585,
    "addOwner": "FA",
-   "drop": "AJ Dybantsa",
+   "drop": "Brandon Miller",
    "ir": null,
-   "weekGain": 0.25,
-   "titleGain": 0.0166,
-   "p1Gain": 0.0365,
-   "epctGain": 0.0015,
+   "weekGain": 0.06,
+   "titleGain": 0.0148,
+   "p1Gain": -0.0265,
+   "epctGain": 0.0002,
    "addTeam": "PHO",
    "addPos": "PG",
-   "dropValue": -3.41,
+   "dropValue": -4.15,
    "status": "proposed",
    "conflicts": [],
    "addHealth": {
@@ -93,72 +86,49 @@
     "g": 18,
     "min": 24.9
    },
-   "firstProposedAt": "2026-11-28T04:46:20.706Z"
-  },
-  {
-   "n": 3,
-   "kind": "activate",
-   "ir": "Austin Reaves",
-   "drop": "Kyshawn George",
-   "weekGain": 0.213,
-   "titleGain": 0.0665,
-   "p1Gain": 0.1143,
-   "epctGain": 0.0084,
-   "dropValue": -5.19,
-   "status": "proposed",
-   "note": "IR 복귀(상태 정상)",
-   "addHealth": null,
-   "irHealth": {
-    "status": "정상",
-    "injury": null,
-    "returnDate": null,
-    "report": null,
-    "g": 13,
-    "min": 34.9
-   },
-   "firstProposedAt": "2026-11-27T21:46:47.020Z"
+   "firstProposedAt": "2026-11-28T10:46:20.501Z"
   }
  ],
  "screened": [
   {
-   "add": "Al Horford",
-   "drop": "Brandon Miller",
+   "add": "Nikola Vucevic",
+   "drop": "Jeremiah Fears",
    "ir": null,
-   "wk": 0.187,
-   "title": 0.0333
+   "wk": 0.142,
+   "title": 0.0343
   },
   {
    "add": "Collin Gillespie",
-   "drop": "AJ Dybantsa",
+   "drop": "Brandon Miller",
    "ir": null,
-   "wk": 0.25,
-   "title": 0.0166
+   "wk": 0.06,
+   "title": 0.0148
   },
   {
-   "add": "Andrew Wiggins",
-   "drop": "Jeremiah Fears",
+   "add": "Tristan da Silva",
+   "drop": "Kyshawn George",
    "ir": null,
-   "wk": 0.145,
-   "title": 0.0214
+   "wk": 0.21,
+   "title": -0.0022
   },
   {
    "add": "Devin Vassell",
-   "drop": "Kyshawn George",
+   "drop": "AJ Dybantsa",
    "ir": null,
-   "wk": 0.268,
-   "title": 0.0089
+   "wk": 0.084,
+   "title": -0.0054
   },
   {
-   "add": "Brook Lopez",
-   "drop": "Day'Ron Sharpe",
+   "add": "Reed Sheppard",
+   "drop": "Fred VanVleet",
    "ir": null,
-   "wk": 0.149,
-   "title": -0.024
+   "wk": 0.033,
+   "title": -0.015
   }
  ],
- "createdAt": "2026-11-28T04:46:20.706Z",
- "id": "20261128T0446",
- "rosterSig": "AJ Dybantsa|Anthony Davis|Brandon Miller|Day'Ron Sharpe|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyrie Irving|Kyshawn George|Michael Porter Jr.|Miles Bridges|Shai Gilgeous-Alexander|Tyler Herro#Austin Reaves|Norman Powell",
+ "createdAt": "2026-11-28T10:46:20.501Z",
+ "id": "20261128T1046",
+ "rosterSig": "AJ Dybantsa|Anthony Davis|Austin Reaves|Brandon Miller|Fred VanVleet|James Harden|Jeremiah Fears|Karl-Anthony Towns|Kyshawn George|Michael Porter Jr.|Miles Bridges|Shai Gilgeous-Alexander|Tyler Herro#Kyrie Irving|Norman Powell",
  "newItems": [
   1,
   2

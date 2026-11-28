@@ -1,52 +1,50 @@
 {
- "date": "2026-11-27",
+ "date": "2026-11-28",
  "week": 6,
  "opp": "ChaRDaddy",
  "status": "nochange",
- "playing": 7,
+ "playing": 8,
  "starters": [
-  "Karl-Anthony Towns",
-  "Kyrie Irving",
+  "Shai Gilgeous-Alexander",
+  "Anthony Davis",
   "Michael Porter Jr.",
-  "Jeremiah Fears",
+  "Brandon Miller",
+  "AJ Dybantsa",
   "Tyler Herro",
-  "Miles Bridges",
-  "Day'Ron Sharpe"
+  "Kyshawn George",
+  "Fred VanVleet"
  ],
  "bench": [],
- "dtd": [
-  "Karl-Anthony Towns",
-  "Kyrie Irving"
- ],
+ "dtd": [],
  "expected": {
-  "best": 5.544,
-  "current": 5.544,
+  "best": 5.211,
+  "current": 5.211,
   "gain": 0,
   "pcBest": {
-   "FG": 0.015,
-   "FT": 0.993,
-   "TPM": 0.375,
-   "REB": 0.752,
-   "AST": 0.072,
-   "STL": 0.506,
-   "BLK": 0.751,
-   "TO": 0.381,
-   "DD": 0.864,
-   "PTS": 0.068,
-   "PF": 0.769
+   "FG": 0.017,
+   "FT": 0.962,
+   "TPM": 0.461,
+   "REB": 0.722,
+   "AST": 0.02,
+   "STL": 0.411,
+   "BLK": 0.889,
+   "TO": 0.21,
+   "DD": 0.98,
+   "PTS": 0.023,
+   "PF": 0.516
   },
   "pcCurrent": {
-   "FG": 0.015,
-   "FT": 0.993,
-   "TPM": 0.375,
-   "REB": 0.752,
-   "AST": 0.072,
-   "STL": 0.506,
-   "BLK": 0.751,
-   "TO": 0.381,
-   "DD": 0.864,
-   "PTS": 0.068,
-   "PF": 0.769
+   "FG": 0.017,
+   "FT": 0.962,
+   "TPM": 0.461,
+   "REB": 0.722,
+   "AST": 0.02,
+   "STL": 0.411,
+   "BLK": 0.889,
+   "TO": 0.21,
+   "DD": 0.98,
+   "PTS": 0.023,
+   "PF": 0.516
   }
  },
  "alternatives": [],
@@ -55,15 +53,15 @@
  "moves": [],
  "slots": [
   {
-   "name": "Tyler Herro",
+   "name": "Shai Gilgeous-Alexander",
    "slot": "PG"
   },
   {
-   "name": "Jeremiah Fears",
+   "name": "Brandon Miller",
    "slot": "SG"
   },
   {
-   "name": "Miles Bridges",
+   "name": "Kyshawn George",
    "slot": "SF"
   },
   {
@@ -71,42 +69,42 @@
    "slot": "PF"
   },
   {
-   "name": "Karl-Anthony Towns",
+   "name": "Anthony Davis",
    "slot": "C"
   },
   {
-   "name": "Kyrie Irving",
+   "name": "Tyler Herro",
    "slot": "G"
   },
   {
-   "name": "Anthony Davis",
+   "name": "AJ Dybantsa",
    "slot": "F"
   },
   {
-   "name": "Shai Gilgeous-Alexander",
+   "name": "Karl-Anthony Towns",
+   "slot": "UTIL"
+  },
+  {
+   "name": "Miles Bridges",
+   "slot": "UTIL"
+  },
+  {
+   "name": "Fred VanVleet",
    "slot": "UTIL"
   },
   {
    "name": "James Harden",
-   "slot": "UTIL"
-  },
-  {
-   "name": "Day'Ron Sharpe",
-   "slot": "UTIL"
-  },
-  {
-   "name": "Brandon Miller",
    "slot": "BE"
   },
   {
-   "name": "AJ Dybantsa",
+   "name": "Austin Reaves",
    "slot": "BE"
   },
   {
-   "name": "Kyshawn George",
+   "name": "Jeremiah Fears",
    "slot": "BE"
   }
  ],
- "id": "2026-11-27T2146Z",
- "createdAt": "2026-11-27T21:46:54.103Z"
+ "id": "2026-11-28T1046Z",
+ "createdAt": "2026-11-28T10:46:25.685Z"
 }
